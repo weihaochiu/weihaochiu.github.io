@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://sandorchiu.github.io/sitemap.xml
+
+Sitemap: https://weihaochiu.github.io/sitemap.xml

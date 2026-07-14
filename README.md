@@ -1,28 +1,23 @@
-# Wei-Hao Chiu Academic Profile v17
+# Wei-Hao Chiu Academic Profile — v19
 
-Multi-page GitHub Pages edition migrated from v16.
+Production multi-page GitHub Pages website for **https://weihaochiu.github.io/**.
 
 ## Pages
 
-- `index.html` — Home
-- `experience.html` — Experience
-- `education.html` — Education
-- `research.html` — Research
-- `publications.html` — Publications
-- `patents.html` — Patents
-- `projects.html` — Research projects
-- `awards.html` — Awards
+Home, Experience, Education, Research, Publications, Patents, Projects and Awards.
 
-## GitHub Pages deployment
+## v19 additions
 
-Upload all files and folders to the root of the public repository `SandorChiu/SandorChiu.github.io`. In repository Settings → Pages, choose **Deploy from a branch**, branch `main`, folder `/ (root)`. The website URL will be `https://sandorchiu.github.io/`.
+- Verified canonical URLs, sitemap and robots configuration for the production domain.
+- Favicon, Apple touch icon, web manifest and social-sharing metadata.
+- Accessible light/dark theme control and improved mobile navigation.
+- Role-first professional timeline and compact searchable research-output pages.
+- Annual output charts for publications, patents, projects and awards.
+- Separate website-content and Google Scholar successful-update dates.
+- Best-effort Google Scholar workflow scheduled every Monday at 12:00 Asia/Taipei (04:00 UTC), with safeguards that preserve the last valid values when retrieval fails.
 
-## Local preview
+## Deployment
 
-Because records are loaded from JSON files, preview through a local web server rather than double-clicking the HTML file:
+Upload the contents of this folder to the root of the public repository `weihaochiu/weihaochiu.github.io`, then use GitHub Pages from the `main` branch and `/ (root)`.
 
-```bash
-python -m http.server 8000
-```
-
-Then open `http://localhost:8000`.
+For the Scholar workflow, set **Settings → Actions → General → Workflow permissions → Read and write permissions**.

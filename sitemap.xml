@@ -1,11 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://sandorchiu.github.io/</loc><lastmod>2026-07-14</lastmod></url>
-<url><loc>https://sandorchiu.github.io/experience.html</loc><lastmod>2026-07-14</lastmod></url>
-<url><loc>https://sandorchiu.github.io/education.html</loc><lastmod>2026-07-14</lastmod></url>
-<url><loc>https://sandorchiu.github.io/research.html</loc><lastmod>2026-07-14</lastmod></url>
-<url><loc>https://sandorchiu.github.io/publications.html</loc><lastmod>2026-07-14</lastmod></url>
-<url><loc>https://sandorchiu.github.io/patents.html</loc><lastmod>2026-07-14</lastmod></url>
-<url><loc>https://sandorchiu.github.io/projects.html</loc><lastmod>2026-07-14</lastmod></url>
-<url><loc>https://sandorchiu.github.io/awards.html</loc><lastmod>2026-07-14</lastmod></url>
+  <url>
+    <loc>https://weihaochiu.github.io/</loc>
+    <lastmod>2026-07-14</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://weihaochiu.github.io/experience.html</loc>
+    <lastmod>2026-07-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://weihaochiu.github.io/education.html</loc>
+    <lastmod>2026-07-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://weihaochiu.github.io/research.html</loc>
+    <lastmod>2026-07-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://weihaochiu.github.io/publications.html</loc>
+    <lastmod>2026-07-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://weihaochiu.github.io/patents.html</loc>
+    <lastmod>2026-07-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://weihaochiu.github.io/projects.html</loc>
+    <lastmod>2026-07-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://weihaochiu.github.io/awards.html</loc>
+    <lastmod>2026-07-14</lastmod>
+    <priority>0.8</priority>
+  </url>
 </urlset>
