@@ -7,75 +7,168 @@
     "Other": "Other Research"
   },
   "themeOptions": [
-    {"value": "", "label": "All"},
-    {"value": "category:DSSC", "label": "Dye-Sensitized Solar Cells (DSSC)"},
-    {"value": "subtopic:DSSC: Photoanodes", "label": "DSSC: Photoanodes"},
-    {"value": "subtopic:DSSC: Flexible DSSCs", "label": "DSSC: Flexible DSSCs"},
-    {"value": "subtopic:DSSC: Electrolytes", "label": "DSSC: Electrolytes"},
-    {"value": "subtopic:DSSC: Counter Electrodes", "label": "DSSC: Counter Electrodes"},
-    {"value": "subtopic:DSSC: Large-Area Modules", "label": "DSSC: Large-Area Modules"},
-    {"value": "subtopic:DSSC: Stability", "label": "DSSC: Stability"},
-    {"value": "category:PSC", "label": "Perovskite Solar Cells (PSC)"},
-    {"value": "subtopic:PSC: Device Engineering", "label": "PSC: Device Engineering"},
-    {"value": "subtopic:PSC: Hole-Transporting Materials", "label": "PSC: Hole-Transporting Materials"},
-    {"value": "subtopic:PSC: Scalable Processing", "label": "PSC: Scalable Processing"},
-    {"value": "subtopic:PSC: Interface Engineering", "label": "PSC: Interface Engineering"},
-    {"value": "subtopic:PSC: Stability & Reliability", "label": "PSC: Stability & Reliability"},
-    {"value": "subtopic:PSC: Space Applications", "label": "PSC: Space Applications"},
-    {"value": "subtopic:PSC: Tandem Solar Cells", "label": "PSC: Tandem Solar Cells"},
-    {"value": "category:RFB", "label": "Redox Flow Batteries (RFB)"},
-    {"value": "subtopic:VRFB: Electrodes", "label": "VRFB: Electrodes"},
-    {"value": "subtopic:RFB: Membranes", "label": "RFB: Membranes"},
-    {"value": "category:Other", "label": "Other Research"}
+    {
+      "value": "",
+      "label": "All"
+    },
+    {
+      "value": "category:DSSC",
+      "label": "Dye-Sensitized Solar Cells (DSSC)"
+    },
+    {
+      "value": "subtopic:DSSC: Photoanodes",
+      "label": "DSSC: Photoanodes"
+    },
+    {
+      "value": "subtopic:DSSC: Flexible DSSCs",
+      "label": "DSSC: Flexible DSSCs"
+    },
+    {
+      "value": "subtopic:DSSC: Electrolytes",
+      "label": "DSSC: Electrolytes"
+    },
+    {
+      "value": "subtopic:DSSC: Counter Electrodes",
+      "label": "DSSC: Counter Electrodes"
+    },
+    {
+      "value": "subtopic:DSSC: Large-Area Modules",
+      "label": "DSSC: Large-Area Modules"
+    },
+    {
+      "value": "subtopic:DSSC: Stability",
+      "label": "DSSC: Stability"
+    },
+    {
+      "value": "category:PSC",
+      "label": "Perovskite Solar Cells (PSC)"
+    },
+    {
+      "value": "subtopic:PSC: Device Engineering",
+      "label": "PSC: Device Engineering"
+    },
+    {
+      "value": "subtopic:PSC: Hole-Transporting Materials",
+      "label": "PSC: Hole-Transporting Materials"
+    },
+    {
+      "value": "subtopic:PSC: Scalable Processing",
+      "label": "PSC: Scalable Processing"
+    },
+    {
+      "value": "subtopic:PSC: Interface Engineering",
+      "label": "PSC: Interface Engineering"
+    },
+    {
+      "value": "subtopic:PSC: Stability & Reliability",
+      "label": "PSC: Stability & Reliability"
+    },
+    {
+      "value": "subtopic:PSC: Space Applications",
+      "label": "PSC: Space Applications"
+    },
+    {
+      "value": "subtopic:PSC: Tandem Solar Cells",
+      "label": "PSC: Tandem Solar Cells"
+    },
+    {
+      "value": "category:RFB",
+      "label": "Redox Flow Batteries (RFB)"
+    },
+    {
+      "value": "subtopic:VRFB: Electrodes",
+      "label": "VRFB: Electrodes"
+    },
+    {
+      "value": "subtopic:RFB: Membranes",
+      "label": "RFB: Membranes"
+    },
+    {
+      "value": "category:Other",
+      "label": "Other Research"
+    }
   ],
   "publications": {
     "10.1016/j.cej.2026.177494": {
       "category": "PSC",
-      "subtopics": ["PSC: Interface Engineering", "PSC: Stability & Reliability", "PSC: Space Applications"]
+      "subtopics": [
+        "PSC: Interface Engineering",
+        "PSC: Stability & Reliability",
+        "PSC: Space Applications"
+      ]
     },
     "10.1016/j.mtener.2026.102359": {
       "category": "PSC",
-      "subtopics": ["PSC: Stability & Reliability", "PSC: Space Applications", "PSC: Tandem Solar Cells"]
+      "subtopics": [
+        "PSC: Stability & Reliability",
+        "PSC: Space Applications",
+        "PSC: Tandem Solar Cells"
+      ]
     },
     "10.1016/j.solener.2026.114430": {
       "category": "PSC",
-      "subtopics": ["PSC: Device Engineering"]
+      "subtopics": [
+        "PSC: Device Engineering"
+      ]
     },
     "10.1016/j.jpowsour.2025.239216": {
       "category": "RFB",
-      "subtopics": ["VRFB: Electrodes"]
+      "subtopics": [
+        "VRFB: Electrodes"
+      ]
     },
     "10.1016/j.solmat.2025.114015": {
       "category": "PSC",
-      "subtopics": ["PSC: Stability & Reliability", "PSC: Space Applications"]
+      "subtopics": [
+        "PSC: Stability & Reliability",
+        "PSC: Space Applications"
+      ]
     },
     "10.1002/asia.70245": {
       "category": "PSC",
-      "subtopics": ["PSC: Hole-Transporting Materials"]
+      "subtopics": [
+        "PSC: Hole-Transporting Materials"
+      ]
     },
     "10.1016/j.seppur.2025.134157": {
       "category": "RFB",
-      "subtopics": ["RFB: Membranes"]
+      "subtopics": [
+        "RFB: Membranes"
+      ]
     },
     "10.1002/solr.202500538": {
       "category": "PSC",
-      "subtopics": ["PSC: Scalable Processing"]
+      "subtopics": [
+        "PSC: Scalable Processing"
+      ]
     },
     "10.1002/asia.202500719": {
       "category": "PSC",
-      "subtopics": ["PSC: Hole-Transporting Materials"]
+      "subtopics": [
+        "PSC: Hole-Transporting Materials"
+      ]
     },
     "10.1002/advs.202410666": {
       "category": "PSC",
-      "subtopics": ["PSC: Hole-Transporting Materials", "PSC: Stability & Reliability"]
+      "subtopics": [
+        "PSC: Hole-Transporting Materials",
+        "PSC: Stability & Reliability"
+      ]
     },
     "10.1016/j.mtchem.2024.102329": {
       "category": "PSC",
-      "subtopics": ["PSC: Device Engineering", "PSC: Interface Engineering"]
+      "subtopics": [
+        "PSC: Device Engineering",
+        "PSC: Interface Engineering"
+      ]
     },
     "10.1016/j.cej.2024.153974": {
       "category": "PSC",
-      "subtopics": ["PSC: Interface Engineering", "PSC: Stability & Reliability", "PSC: Space Applications"]
+      "subtopics": [
+        "PSC: Interface Engineering",
+        "PSC: Stability & Reliability",
+        "PSC: Space Applications"
+      ]
     },
     "10.1016/j.jece.2023.111741": {
       "category": "Other",
@@ -83,43 +176,69 @@
     },
     "10.1002/solr.202300988": {
       "category": "PSC",
-      "subtopics": ["PSC: Hole-Transporting Materials", "PSC: Scalable Processing"]
+      "subtopics": [
+        "PSC: Hole-Transporting Materials",
+        "PSC: Scalable Processing"
+      ]
     },
     "10.1039/d3cc04699k": {
       "category": "PSC",
-      "subtopics": ["PSC: Hole-Transporting Materials"]
+      "subtopics": [
+        "PSC: Hole-Transporting Materials"
+      ]
     },
     "10.1016/j.jpowsour.2023.233496": {
       "category": "PSC",
-      "subtopics": ["PSC: Hole-Transporting Materials"]
+      "subtopics": [
+        "PSC: Hole-Transporting Materials"
+      ]
     },
     "10.1002/asia.202300681": {
-      "category": "Other",
-      "subtopics": []
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Hole-Transporting Materials"
+      ]
     },
     "10.1016/j.orgel.2023.106847": {
       "category": "PSC",
-      "subtopics": ["PSC: Device Engineering", "PSC: Stability & Reliability"]
+      "subtopics": [
+        "PSC: Device Engineering",
+        "PSC: Stability & Reliability"
+      ]
     },
     "10.1002/adfm.202306367": {
       "category": "PSC",
-      "subtopics": ["PSC: Hole-Transporting Materials"]
+      "subtopics": [
+        "PSC: Hole-Transporting Materials"
+      ]
     },
     "10.1016/j.cej.2022.139926": {
       "category": "PSC",
-      "subtopics": ["PSC: Hole-Transporting Materials", "PSC: Stability & Reliability"]
+      "subtopics": [
+        "PSC: Hole-Transporting Materials",
+        "PSC: Stability & Reliability"
+      ]
     },
     "10.3390/nano12152651": {
       "category": "PSC",
-      "subtopics": ["PSC: Device Engineering", "PSC: Scalable Processing"]
+      "subtopics": [
+        "PSC: Device Engineering",
+        "PSC: Scalable Processing"
+      ]
     },
     "10.3390/polym14081580": {
       "category": "PSC",
-      "subtopics": ["PSC: Hole-Transporting Materials"]
+      "subtopics": [
+        "PSC: Hole-Transporting Materials"
+      ]
     },
     "10.1016/j.cej.2021.131609": {
       "category": "PSC",
-      "subtopics": ["PSC: Hole-Transporting Materials", "PSC: Scalable Processing", "PSC: Stability & Reliability"]
+      "subtopics": [
+        "PSC: Hole-Transporting Materials",
+        "PSC: Scalable Processing",
+        "PSC: Stability & Reliability"
+      ]
     },
     "10.3390/polym13234246": {
       "category": "Other",
@@ -127,51 +246,84 @@
     },
     "10.3390/nano11082125": {
       "category": "DSSC",
-      "subtopics": ["DSSC: Photoanodes", "DSSC: Large-Area Modules", "DSSC: Stability"]
+      "subtopics": [
+        "DSSC: Photoanodes",
+        "DSSC: Large-Area Modules",
+        "DSSC: Stability"
+      ]
     },
     "10.3390/nano11061607": {
       "category": "PSC",
-      "subtopics": ["PSC: Device Engineering"]
+      "subtopics": [
+        "PSC: Device Engineering"
+      ]
     },
     "10.1016/j.jpowsour.2012.12.094": {
       "category": "DSSC",
-      "subtopics": ["DSSC: Photoanodes", "DSSC: Flexible DSSCs"]
+      "subtopics": [
+        "DSSC: Photoanodes",
+        "DSSC: Flexible DSSCs"
+      ]
     },
     "10.1016/j.jpowsour.2012.05.079": {
       "category": "DSSC",
-      "subtopics": ["DSSC: Photoanodes", "DSSC: Electrolytes"]
+      "subtopics": [
+        "DSSC: Photoanodes",
+        "DSSC: Electrolytes"
+      ]
     },
     "10.1016/j.jpowsour.2011.06.049": {
       "category": "DSSC",
-      "subtopics": ["DSSC: Flexible DSSCs", "DSSC: Stability"]
+      "subtopics": [
+        "DSSC: Flexible DSSCs",
+        "DSSC: Stability"
+      ]
     },
     "10.1016/j.jpowsour.2010.12.063": {
       "category": "DSSC",
-      "subtopics": ["DSSC: Photoanodes", "DSSC: Flexible DSSCs"]
+      "subtopics": [
+        "DSSC: Photoanodes",
+        "DSSC: Flexible DSSCs"
+      ]
     },
     "10.1039/c0jm04099a": {
       "category": "DSSC",
-      "subtopics": ["DSSC: Photoanodes", "DSSC: Flexible DSSCs"]
+      "subtopics": [
+        "DSSC: Photoanodes",
+        "DSSC: Flexible DSSCs"
+      ]
     },
     "10.1016/j.electacta.2010.07.061": {
       "category": "DSSC",
-      "subtopics": ["DSSC: Photoanodes", "DSSC: Electrolytes"]
+      "subtopics": [
+        "DSSC: Photoanodes",
+        "DSSC: Electrolytes"
+      ]
     },
     "10.1016/j.tsf.2009.11.058": {
       "category": "DSSC",
-      "subtopics": ["DSSC: Counter Electrodes"]
+      "subtopics": [
+        "DSSC: Counter Electrodes"
+      ]
     },
     "10.1016/j.solmat.2009.07.017": {
       "category": "DSSC",
-      "subtopics": ["DSSC: Photoanodes", "DSSC: Electrolytes"]
+      "subtopics": [
+        "DSSC: Photoanodes",
+        "DSSC: Electrolytes"
+      ]
     },
     "10.1039/b902595m": {
       "category": "DSSC",
-      "subtopics": ["DSSC: Photoanodes"]
+      "subtopics": [
+        "DSSC: Photoanodes"
+      ]
     },
     "10.1021/jp805239k": {
       "category": "DSSC",
-      "subtopics": ["DSSC: Photoanodes"]
+      "subtopics": [
+        "DSSC: Photoanodes"
+      ]
     },
     "10.1016/j.optcom.2004.10.003": {
       "category": "Other",
