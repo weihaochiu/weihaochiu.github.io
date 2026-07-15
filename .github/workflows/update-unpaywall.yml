@@ -1,0 +1,49 @@
+name: Update Unpaywall Open Access Links
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    # 每週一凌晨 2:00（台灣時間）執行
+    - cron: "0 18 * * 0"
+
+  push:
+    paths:
+      - "data/publications.json"
+      - "scripts/update_unpaywall.py"
+      - ".github/workflows/update-unpaywall.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  update-unpaywall:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Update Unpaywall data
+        env:
+          UNPAYWALL_EMAIL: ${{ secrets.UNPAYWALL_EMAIL }}
+        run: python scripts/update_unpaywall.py
+
+      - name: Commit updated Unpaywall data
+        run: |
+          if git diff --quiet -- data/unpaywall.json; then
+            echo "No Unpaywall changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add data/unpaywall.json
+          git commit -m "Update Unpaywall open-access links"
+          git push
