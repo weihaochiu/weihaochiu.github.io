@@ -1,0 +1,35 @@
+name: Test Mendeley API
+
+on:
+  workflow_dispatch:
+    inputs:
+      doi:
+        description: DOI to test against the Mendeley Catalog
+        required: true
+        default: 10.1016/j.cej.2024.153974
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  test-mendeley-api:
+    name: OAuth and Catalog test
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Test Mendeley OAuth and Catalog API
+        env:
+          MENDELEY_CLIENT_ID: ${{ secrets.MENDELEY_CLIENT_ID }}
+          MENDELEY_CLIENT_SECRET: ${{ secrets.MENDELEY_CLIENT_SECRET }}
+          MENDELEY_TEST_DOI: ${{ inputs.doi }}
+        run: python scripts/test_mendeley_api.py
