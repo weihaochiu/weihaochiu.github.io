@@ -34,15 +34,20 @@ function setNavigation(){
 }
 
 async function initMeta(){
-  try{
-    const [m,s]=await Promise.all([loadData('site_meta'),loadData('scholar_metrics')]);
-    $$('[data-site-updated]').forEach(e=>e.textContent=formatDate(m.lastUpdated));
-    $$('[data-site-version]').forEach(e=>e.textContent=m.version||'v20');
-    $$('[data-scholar-updated]').forEach(e=>e.textContent=formatDate(s.lastSuccessfulUpdate));
-    $$('[data-scholar-citations]').forEach(e=>e.textContent=Number(s.citations).toLocaleString());
-    $$('[data-scholar-h]').forEach(e=>e.textContent=s.hIndex);
-    $$('[data-scholar-i10]').forEach(e=>e.textContent=s.i10Index);
-  }catch(e){console.warn(e)}
+  const [m,s,md]=await Promise.all([
+    loadData('site_meta').catch(()=>({})),
+    loadData('scholar_metrics').catch(()=>({})),
+    loadData('mendeley_metrics').catch(()=>({}))
+  ]);
+  $$('[data-site-updated]').forEach(e=>e.textContent=formatDate(m.lastUpdated));
+  $$('[data-site-version]').forEach(e=>e.textContent=m.version||'v20');
+  $$('[data-scholar-updated]').forEach(e=>e.textContent=formatDate(s.lastSuccessfulUpdate));
+  if(s.citations!==undefined&&s.citations!==null)$$('[data-scholar-citations]').forEach(e=>e.textContent=Number(s.citations).toLocaleString());
+  if(s.hIndex!==undefined&&s.hIndex!==null)$$('[data-scholar-h]').forEach(e=>e.textContent=s.hIndex);
+  if(s.i10Index!==undefined&&s.i10Index!==null)$$('[data-scholar-i10]').forEach(e=>e.textContent=s.i10Index);
+  if(md.totalReaders!==undefined&&md.totalReaders!==null){
+    $$('[data-mendeley-readers]').forEach(e=>e.textContent=Number(md.totalReaders).toLocaleString());
+  }
 }
 
 const FALLBACK_CATEGORY_LABELS={
@@ -60,14 +65,16 @@ function inferPublicationCategory(p){
   if(/dye-sensitized|dssc/.test(text))return 'DSSC';
   return 'Other';
 }
-function enrichPublications(rows,taxonomy={}){
+function enrichPublications(rows,taxonomy={},mendeley={}){
   const map=taxonomy.publications||{};
+  const metricMap=mendeley.records||{};
   const labels={...FALLBACK_CATEGORY_LABELS,...(taxonomy.categoryLabels||{})};
   return rows.map(p=>{
-    const entry=map[publicationKey(p)]||{};
+    const key=publicationKey(p);
+    const entry=map[key]||{};
     const category=entry.category||inferPublicationCategory(p);
     const subtopics=Array.isArray(entry.subtopics)?[...new Set(entry.subtopics)]:[];
-    return {...p,category,categoryLabel:labels[category]||category,subtopics};
+    return {...p,category,categoryLabel:labels[category]||category,subtopics,mendeley:metricMap[key]||null};
   });
 }
 function fillPublicationThemeSelect(el,taxonomy={}){
@@ -103,15 +110,33 @@ function normalizeScholarUrl(value){
   }catch(e){return ''}
 }
 
+function normalizeMendeleyUrl(value){
+  const url=String(value||'').trim();
+  if(!url)return '';
+  try{
+    const parsed=new URL(url);
+    const host=parsed.hostname.toLowerCase();
+    if(parsed.protocol!=='https:'||!(host==='mendeley.com'||host.endsWith('.mendeley.com')))return '';
+    return parsed.toString();
+  }catch(e){return ''}
+}
+const MENDELEY_READER_ICON='<svg class="metric-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11a2 2 0 0 1 2 2v15a3.8 3.8 0 0 0-3.2-1.7H6.5A2.5 2.5 0 0 1 4 15.8Z"></path><path d="M20 5.5A2.5 2.5 0 0 0 17.5 3H13a2 2 0 0 0-2 2v15a3.8 3.8 0 0 1 3.2-1.7h3.3a2.5 2.5 0 0 0 2.5-2.5Z"></path></svg>';
+
 function publicationCard(p){
   const authors=(p.authors||[]).map(highlightAuthor).join(', ');
   const n=Number(p.citationCount||0);
   const scholarUrl=normalizeScholarUrl(p.scholarCitedByUrl)||normalizeScholarUrl(p.citedByUrl);
   const cited=n>0&&scholarUrl
-    ?`<a class="action" href="${esc(scholarUrl)}" target="_blank" rel="noopener">${n} Google Scholar citation${n===1?'':'s'} ↗</a>`
+    ?`<a class="action" href="${esc(scholarUrl)}" target="_blank" rel="noopener noreferrer">${n} Google Scholar citation${n===1?'':'s'} ↗</a>`
     :`<span class="action">${n} Google Scholar citation${n===1?'':'s'}</span>`;
+  const metric=p.mendeley||{};
+  const readerCount=Number(metric.readerCount);
+  const mendeleyUrl=normalizeMendeleyUrl(metric.url);
+  const readers=metric.status==='verified'&&Number.isFinite(readerCount)&&readerCount>=0&&mendeleyUrl
+    ?`<a class="action metric-action" href="${esc(mendeleyUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${readerCount} Mendeley reader${readerCount===1?'':'s'}; open Mendeley record">${MENDELEY_READER_ICON}<span>${readerCount} Mendeley reader${readerCount===1?'':'s'} ↗</span></a>`
+    :'';
   const labels=[p.categoryLabel,...(p.subtopics||[])].filter(Boolean);
-  return `<article class="collection-card"><div class="card-heading"><h4><a href="${esc(p.doiUrl)}" target="_blank" rel="noopener">${esc(p.title)}</a></h4><span class="date-badge">${esc(p.date)}</span></div><p class="authors">${authors}</p><p class="journal"><em>${esc(p.journal)}</em>${p.volume?`, ${esc(p.volume)}`:''}${p.pages?`, ${esc(p.pages)}`:''} (${p.year}).</p><div class="card-labels">${labels.map(label=>`<span class="card-label">${esc(label)}</span>`).join('')}</div><div class="card-actions"><a class="action" href="${esc(p.doiUrl)}" target="_blank" rel="noopener">DOI ↗</a>${cited}</div></article>`;
+  return `<article class="collection-card"><div class="card-heading"><h4><a href="${esc(p.doiUrl)}" target="_blank" rel="noopener">${esc(p.title)}</a></h4><span class="date-badge">${esc(p.date)}</span></div><p class="authors">${authors}</p><p class="journal"><em>${esc(p.journal)}</em>${p.volume?`, ${esc(p.volume)}`:''}${p.pages?`, ${esc(p.pages)}`:''} (${p.year}).</p><div class="card-labels">${labels.map(label=>`<span class="card-label">${esc(label)}</span>`).join('')}</div><div class="card-actions"><a class="action" href="${esc(p.doiUrl)}" target="_blank" rel="noopener">DOI ↗</a>${cited}${readers}</div></article>`;
 }
 function patentCard(p){return `<article class="collection-card"><div class="card-heading"><h4><a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.titleEn)}</a></h4><span class="date-badge">${esc(p.date)}</span></div>${p.titleZh?`<div class="local-title" lang="zh-Hant">${esc(p.titleZh)}</div>`:''}<div class="card-labels"><span class="card-label">${esc(p.number)}</span><span class="card-label">${esc(p.jurisdiction)}</span><span class="card-label">${esc(p.status)}</span></div><div class="meta-row">Inventors: ${(p.inventorsEn||[]).map(highlightAuthor).join(', ')}</div>${p.inventorsZh?`<div class="meta-row" lang="zh-Hant">發明人／創作人：${esc(p.inventorsZh)}</div>`:''}<div class="meta-row">Assignee: ${esc(p.assigneeEn)}</div><div class="card-actions"><a class="action" href="${esc(p.url)}" target="_blank" rel="noopener">Patent record ↗</a></div></article>`}
 function projectCard(p){return `<article class="collection-card"><div class="card-heading"><h4>${p.url?`<a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.titleEn)}</a>`:esc(p.titleEn)}</h4><span class="date-badge">${esc(p.period||p.startYear)}</span></div><div class="local-title" lang="zh-Hant">${esc(p.titleZh)}</div><div class="card-labels"><span class="card-label">${esc(p.status)}</span><span class="card-label">${esc(p.role)} · ${esc(p.roleZh)}</span>${p.number?`<span class="card-label">${esc(p.number)}</span>`:''}</div><p>${esc(p.agencyEn)}</p><p class="summary">${esc(p.scopeEn)}</p>${p.url?`<div class="card-actions"><a class="action" href="${esc(p.url)}" target="_blank" rel="noopener">Project record ↗</a></div>`:''}</article>`}
@@ -197,8 +222,10 @@ async function initCollection(){
   const root=$('[data-collection]');if(!root)return;
   const name=root.dataset.collection;
   const rawRows=await loadData(name);
-  const taxonomy=name==='publications'?await loadData('publication_taxonomy').catch(()=>({})):{};
-  const rows=name==='publications'?enrichPublications(rawRows,taxonomy):rawRows;
+  const [taxonomy,mendeley]=name==='publications'
+    ?await Promise.all([loadData('publication_taxonomy').catch(()=>({})),loadData('mendeley_metrics').catch(()=>({}))])
+    :[{},{}];
+  const rows=name==='publications'?enrichPublications(rawRows,taxonomy,mendeley):rawRows;
   const search=$('#searchInput'),year=$('#yearFilter'),topic=$('#topicFilter'),sort=$('#sortFilter'),count=$('#resultCount'),container=$('#collectionContainer'),empty=$('#emptyState');
   fillSelect(year,rows.map(yearOf),'All years','numeric-desc');
   if(topic){

@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "source": "Mendeley Catalog API",
+  "status": "pending",
+  "lastAttemptedUpdate": "",
+  "lastSuccessfulUpdate": "",
+  "totalReaders": null,
+  "publicationCount": 0,
+  "matchedPublications": 0,
+  "freshPublications": 0,
+  "stalePublications": 0,
+  "notFoundPublications": 0,
+  "errorPublications": 0,
+  "note": "Run the Update Mendeley Reader Metrics workflow once after installation. Total readers is the sum of per-publication reader counts and is not a count of unique people.",
+  "records": {}
+}
