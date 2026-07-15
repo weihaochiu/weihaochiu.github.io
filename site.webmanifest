@@ -1,10 +1,10 @@
 {
   "name": "Wei-Hao Chiu Academic Profile",
   "short_name": "Wei-Hao Chiu",
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
-  "background_color": "#f7f8f6",
-  "theme_color": "#075d5b",
+  "background_color": "#f5f7f9",
+  "theme_color": "#234a70",
   "icons": [
     {
       "src": "assets/images/apple-touch-icon.png",

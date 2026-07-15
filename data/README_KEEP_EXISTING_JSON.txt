@@ -1,0 +1,1 @@
+IMPORTANT: Preserve the existing publications.json, patents.json, projects.json and awards.json files when uploading V20. This update ZIP intentionally does not duplicate those large verified data files.

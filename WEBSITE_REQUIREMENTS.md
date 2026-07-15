@@ -1,12 +1,18 @@
-# Website Requirements — v19
+# Wei-Hao Chiu Academic Website — Requirements and Maintenance Record
 
-- Production URL: https://weihaochiu.github.io/
-- Multi-page academic profile; do not collapse all records into one long page.
-- Keep publications, patents, projects and awards in JSON and render searchable, sortable, year-grouped lists.
-- Keep annual charts for publications, patents, projects and awards.
-- Use official/bilingual information for Taiwanese patents and awards where available.
-- Do not display AI-status or template filler sentences below page titles.
-- Display website-content update date separately from the last successful Scholar update.
-- Run Scholar update every Monday at 12:00 Asia/Taipei; failed retrieval must retain previous valid metrics and must never replace metrics with zero.
-- Maintain responsive navigation, keyboard focus, reduced-motion support, SEO metadata, sitemap, robots, favicon and social preview metadata.
-- Current release: v19, based on the complete v18 dataset.
+## V20 approved information architecture
+
+- Primary navigation: About, Research, Publications, Patents, Projects.
+- The site name links to the homepage; Home is not repeated in the navigation.
+- About consolidates Experience, Education and Awards.
+- Publications, Patents and Projects retain dedicated searchable pages.
+- Homepage uses a long-scrolling profile layout with concise section summaries.
+- The annual chart defaults to Publications and can switch to All outputs.
+- Research-theme filters are alphabetized; years remain newest first.
+- Formal affiliation is displayed with the role, not as a photograph caption.
+- Google Scholar metrics are obtained only from profile ID `ZYbNQb8AAAAJ` and retain the last valid values if retrieval fails.
+- Social preview metadata uses a dedicated 1200 × 630 image.
+
+## Data preservation
+
+Verified collection files in `data/` remain authoritative. Do not replace them with inferred or generated content.
