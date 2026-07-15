@@ -29,3 +29,17 @@
 ## Data preservation
 
 Verified collection files in `data/` remain authoritative. Do not replace them with inferred or generated content.
+
+## Publication Open Access and sharing — 15 July 2026
+
+- The website is hosted on GitHub Pages, not Google Sites.
+- Each publication DOI is checked through the official Unpaywall API by GitHub Actions.
+- A publication displays `Open Access PDF` only when Unpaywall supplies a direct legal PDF URL.
+- When Unpaywall supplies only a legal OA landing page, display `Open Access Version` instead.
+- A non-OA publication must not display an OA button or an empty placeholder.
+- OA links open in a new tab and must not attempt a forced cross-origin download.
+- Each publication has a compact `Share` action rather than a permanently expanded social-media list.
+- Use the native Web Share interface when supported; otherwise provide Copy link, Email, LinkedIn, X (Twitter), and Facebook.
+- Shared links must target a stable DOI-derived publication anchor on `publications.html`.
+- Opening a shared publication URL must scroll to and temporarily highlight the target record.
+- Unpaywall data are stored separately in `data/unpaywall.json`; verified publication records in `data/publications.json` remain unchanged.

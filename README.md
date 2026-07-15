@@ -30,3 +30,9 @@ Because the records are loaded from JSON, preview through a web server:
 ```bash
 python -m http.server 8000
 ```
+
+## V21 additions
+
+- Unpaywall-powered legal OA links on the Publications page.
+- Compact per-publication sharing with stable DOI-derived anchors.
+- See `UNPAYWALL_SHARE_SETUP.md` for the first workflow run and optional email override.

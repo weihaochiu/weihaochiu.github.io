@@ -58,6 +58,24 @@ const FALLBACK_CATEGORY_LABELS={
 };
 
 function publicationKey(p){return String(p.doi||'').trim().toLowerCase()}
+function publicationAnchor(p){
+  const source=publicationKey(p)||String(p.title||'publication').toLowerCase();
+  const slug=source.replace(/^https?:\/\/(dx\.)?doi\.org\//,'').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
+  return `pub-${slug||'record'}`;
+}
+function normalizeExternalUrl(value){
+  const url=String(value||'').trim();
+  if(!url)return '';
+  try{
+    const parsed=new URL(url);
+    return /^(https?:)$/.test(parsed.protocol)?parsed.toString():'';
+  }catch(e){return ''}
+}
+function publicationShareUrl(anchor){
+  const url=new URL(window.location.href);
+  url.hash=anchor;
+  return url.toString();
+}
 function inferPublicationCategory(p){
   const text=`${p.topic||''} ${p.title||''} ${(p.tags||[]).join(' ')}`.toLowerCase();
   if(/redox flow|flow batter|vrfb/.test(text))return 'RFB';
@@ -65,16 +83,17 @@ function inferPublicationCategory(p){
   if(/dye-sensitized|dssc/.test(text))return 'DSSC';
   return 'Other';
 }
-function enrichPublications(rows,taxonomy={},mendeley={}){
+function enrichPublications(rows,taxonomy={},mendeley={},unpaywall={}){
   const map=taxonomy.publications||{};
   const metricMap=mendeley.records||{};
+  const oaMap=unpaywall.records||{};
   const labels={...FALLBACK_CATEGORY_LABELS,...(taxonomy.categoryLabels||{})};
   return rows.map(p=>{
     const key=publicationKey(p);
     const entry=map[key]||{};
     const category=entry.category||inferPublicationCategory(p);
     const subtopics=Array.isArray(entry.subtopics)?[...new Set(entry.subtopics)]:[];
-    return {...p,category,categoryLabel:labels[category]||category,subtopics,mendeley:metricMap[key]||null};
+    return {...p,category,categoryLabel:labels[category]||category,subtopics,mendeley:metricMap[key]||null,openAccess:oaMap[key]||null};
   });
 }
 function fillPublicationThemeSelect(el,taxonomy={}){
@@ -121,6 +140,8 @@ function normalizeMendeleyUrl(value){
   }catch(e){return ''}
 }
 const MENDELEY_READER_ICON='<svg class="metric-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11a2 2 0 0 1 2 2v15a3.8 3.8 0 0 0-3.2-1.7H6.5A2.5 2.5 0 0 1 4 15.8Z"></path><path d="M20 5.5A2.5 2.5 0 0 0 17.5 3H13a2 2 0 0 0-2 2v15a3.8 3.8 0 0 1 3.2-1.7h3.3a2.5 2.5 0 0 0 2.5-2.5Z"></path></svg>';
+const OPEN_ACCESS_ICON='<svg class="action-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M7 10V7a5 5 0 0 1 9.7-1.7"></path><rect x="5" y="10" width="14" height="10" rx="2"></rect><path d="M12 14v2"></path></svg>';
+const SHARE_ICON='<svg class="action-icon" aria-hidden="true" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="m8.7 10.7 6.6-4.1M8.7 13.3l6.6 4.1"></path></svg>';
 
 function publicationCard(p){
   const authors=(p.authors||[]).map(highlightAuthor).join(', ');
@@ -135,8 +156,25 @@ function publicationCard(p){
   const readers=metric.status==='verified'&&Number.isFinite(readerCount)&&readerCount>=0&&mendeleyUrl
     ?`<a class="action metric-action" href="${esc(mendeleyUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${readerCount} Mendeley reader${readerCount===1?'':'s'}; open Mendeley record">${MENDELEY_READER_ICON}<span>${readerCount} Mendeley reader${readerCount===1?'':'s'} ↗</span></a>`
     :'';
+  const oa=p.openAccess||{};
+  const pdfUrl=normalizeExternalUrl(oa.urlForPdf);
+  const versionUrl=normalizeExternalUrl(oa.landingPageUrl||oa.url);
+  const oaAction=oa.isOa&&pdfUrl
+    ?`<a class="action oa-action" href="${esc(pdfUrl)}" target="_blank" rel="noopener noreferrer" title="Legal open-access PDF identified by Unpaywall">${OPEN_ACCESS_ICON}<span>Open Access PDF ↗</span></a>`
+    :oa.isOa&&versionUrl
+      ?`<a class="action oa-action" href="${esc(versionUrl)}" target="_blank" rel="noopener noreferrer" title="Legal open-access version identified by Unpaywall">${OPEN_ACCESS_ICON}<span>Open Access Version ↗</span></a>`
+      :'';
   const labels=[p.categoryLabel,...(p.subtopics||[])].filter(Boolean);
-  return `<article class="collection-card"><div class="card-heading"><h4><a href="${esc(p.doiUrl)}" target="_blank" rel="noopener">${esc(p.title)}</a></h4><span class="date-badge">${esc(p.date)}</span></div><p class="authors">${authors}</p><p class="journal"><em>${esc(p.journal)}</em>${p.volume?`, ${esc(p.volume)}`:''}${p.pages?`, ${esc(p.pages)}`:''} (${p.year}).</p><div class="card-labels">${labels.map(label=>`<span class="card-label">${esc(label)}</span>`).join('')}</div><div class="card-actions"><a class="action" href="${esc(p.doiUrl)}" target="_blank" rel="noopener">DOI ↗</a>${cited}${readers}</div></article>`;
+  const anchor=publicationAnchor(p);
+  const shareUrl=publicationShareUrl(anchor);
+  const shareText=`${p.title}\n${p.journal||''}${p.year?`, ${p.year}`:''}\nDOI: ${p.doi||''}`;
+  const emailUrl=`mailto:?subject=${encodeURIComponent(p.title||'Publication')}&body=${encodeURIComponent(`${shareText}\n\n${shareUrl}`)}`;
+  const linkedinUrl=`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`;
+  const xUrl=`https://twitter.com/intent/tweet?text=${encodeURIComponent(`${p.title}${p.doi?` | DOI: ${p.doi}`:''}`)}&url=${encodeURIComponent(shareUrl)}`;
+  const facebookUrl=`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
+  const shareMenuId=`share-menu-${anchor}`;
+  const share=`<span class="share-wrap"><button class="action action-button share-trigger" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="${esc(shareMenuId)}" data-share-title="${esc(p.title)}" data-share-text="${esc(shareText)}" data-share-url="${esc(shareUrl)}">${SHARE_ICON}<span>Share</span></button><span class="share-menu" id="${esc(shareMenuId)}" role="menu" hidden><button type="button" role="menuitem" data-copy-share-url="${esc(shareUrl)}">Copy link</button><a role="menuitem" href="${esc(emailUrl)}">Email</a><a role="menuitem" href="${esc(linkedinUrl)}" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a role="menuitem" href="${esc(xUrl)}" target="_blank" rel="noopener noreferrer">X (Twitter) ↗</a><a role="menuitem" href="${esc(facebookUrl)}" target="_blank" rel="noopener noreferrer">Facebook ↗</a></span></span>`;
+  return `<article class="collection-card publication-card" id="${esc(anchor)}"><div class="card-heading"><h4><a href="${esc(p.doiUrl)}" target="_blank" rel="noopener">${esc(p.title)}</a></h4><span class="date-badge">${esc(p.date)}</span></div><p class="authors">${authors}</p><p class="journal"><em>${esc(p.journal)}</em>${p.volume?`, ${esc(p.volume)}`:''}${p.pages?`, ${esc(p.pages)}`:''} (${p.year}).</p><div class="card-labels">${labels.map(label=>`<span class="card-label">${esc(label)}</span>`).join('')}</div><div class="card-actions"><a class="action" href="${esc(p.doiUrl)}" target="_blank" rel="noopener">DOI ↗</a>${oaAction}${cited}${readers}${share}</div></article>`;
 }
 function patentCard(p){return `<article class="collection-card"><div class="card-heading"><h4><a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.titleEn)}</a></h4><span class="date-badge">${esc(p.date)}</span></div>${p.titleZh?`<div class="local-title" lang="zh-Hant">${esc(p.titleZh)}</div>`:''}<div class="card-labels"><span class="card-label">${esc(p.number)}</span><span class="card-label">${esc(p.jurisdiction)}</span><span class="card-label">${esc(p.status)}</span></div><div class="meta-row">Inventors: ${(p.inventorsEn||[]).map(highlightAuthor).join(', ')}</div>${p.inventorsZh?`<div class="meta-row" lang="zh-Hant">發明人／創作人：${esc(p.inventorsZh)}</div>`:''}<div class="meta-row">Assignee: ${esc(p.assigneeEn)}</div><div class="card-actions"><a class="action" href="${esc(p.url)}" target="_blank" rel="noopener">Patent record ↗</a></div></article>`}
 function projectCard(p){return `<article class="collection-card"><div class="card-heading"><h4>${p.url?`<a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.titleEn)}</a>`:esc(p.titleEn)}</h4><span class="date-badge">${esc(p.period||p.startYear)}</span></div><div class="local-title" lang="zh-Hant">${esc(p.titleZh)}</div><div class="card-labels"><span class="card-label">${esc(p.status)}</span><span class="card-label">${esc(p.role)} · ${esc(p.roleZh)}</span>${p.number?`<span class="card-label">${esc(p.number)}</span>`:''}</div><p>${esc(p.agencyEn)}</p><p class="summary">${esc(p.scopeEn)}</p>${p.url?`<div class="card-actions"><a class="action" href="${esc(p.url)}" target="_blank" rel="noopener">Project record ↗</a></div>`:''}</article>`}
@@ -222,10 +260,10 @@ async function initCollection(){
   const root=$('[data-collection]');if(!root)return;
   const name=root.dataset.collection;
   const rawRows=await loadData(name);
-  const [taxonomy,mendeley]=name==='publications'
-    ?await Promise.all([loadData('publication_taxonomy').catch(()=>({})),loadData('mendeley_metrics').catch(()=>({}))])
-    :[{},{}];
-  const rows=name==='publications'?enrichPublications(rawRows,taxonomy,mendeley):rawRows;
+  const [taxonomy,mendeley,unpaywall]=name==='publications'
+    ?await Promise.all([loadData('publication_taxonomy').catch(()=>({})),loadData('mendeley_metrics').catch(()=>({})),loadData('unpaywall').catch(()=>({}))])
+    :[{},{},{}];
+  const rows=name==='publications'?enrichPublications(rawRows,taxonomy,mendeley,unpaywall):rawRows;
   const search=$('#searchInput'),year=$('#yearFilter'),topic=$('#topicFilter'),sort=$('#sortFilter'),count=$('#resultCount'),container=$('#collectionContainer'),empty=$('#emptyState');
   fillSelect(year,rows.map(yearOf),'All years','numeric-desc');
   if(topic){
@@ -255,10 +293,91 @@ async function initCollection(){
     if(empty)empty.hidden=!!list.length;
     const g=list.reduce((o,x)=>((o[yearOf(x)]??=[]).push(x),o),{});
     container.innerHTML=Object.keys(g).sort((a,b)=>mode==='date-asc'?a-b:b-a).map(y=>`<section class="year-group"><div class="year-heading"><h3>${y}</h3><span>${g[y].length} record${g[y].length===1?'':'s'}</span></div><div class="collection-list">${g[y].map(card).join('')}</div></section>`).join('');
+    if(name==='publications')requestAnimationFrame(focusHashPublication);
   }
   [search,year,topic,sort].filter(Boolean).forEach(e=>e.addEventListener(e===search?'input':'change',render));
   $('#clearFilters')?.addEventListener('click',()=>{if(search)search.value='';if(year)year.value='';if(topic)topic.value='';if(sort)sort.value='date-desc';render()});
   render();
+}
+
+async function copyText(value){
+  if(navigator.clipboard&&window.isSecureContext){
+    await navigator.clipboard.writeText(value);
+    return;
+  }
+  const area=document.createElement('textarea');
+  area.value=value;
+  area.setAttribute('readonly','');
+  area.style.position='fixed';
+  area.style.opacity='0';
+  document.body.appendChild(area);
+  area.select();
+  const ok=document.execCommand('copy');
+  area.remove();
+  if(!ok)throw new Error('Copy failed');
+}
+function closeShareMenus(except=null){
+  $$('.share-menu:not([hidden])').forEach(menu=>{
+    if(menu===except)return;
+    menu.hidden=true;
+    menu.closest('.share-wrap')?.querySelector('.share-trigger')?.setAttribute('aria-expanded','false');
+  });
+}
+function publicationInteractions(){
+  document.addEventListener('click',async event=>{
+    const trigger=event.target.closest('[data-share-url]');
+    if(trigger){
+      event.preventDefault();
+      const title=trigger.dataset.shareTitle||document.title;
+      const text=trigger.dataset.shareText||'';
+      const url=trigger.dataset.shareUrl||window.location.href;
+      if(typeof navigator.share==='function'){
+        try{await navigator.share({title,text,url});return}
+        catch(error){if(error?.name==='AbortError')return}
+      }
+      const menu=document.getElementById(trigger.getAttribute('aria-controls'));
+      if(!menu)return;
+      const opening=menu.hidden;
+      closeShareMenus(menu);
+      menu.hidden=!opening;
+      trigger.setAttribute('aria-expanded',String(opening));
+      if(opening)menu.querySelector('[role="menuitem"]')?.focus();
+      return;
+    }
+    const copyButton=event.target.closest('[data-copy-share-url]');
+    if(copyButton){
+      event.preventDefault();
+      const original=copyButton.textContent;
+      try{
+        await copyText(copyButton.dataset.copyShareUrl||window.location.href);
+        copyButton.textContent='✓ Link copied';
+      }catch(error){
+        copyButton.textContent='Copy failed';
+      }
+      setTimeout(()=>{copyButton.textContent=original;closeShareMenus()},1500);
+      return;
+    }
+    if(!event.target.closest('.share-wrap'))closeShareMenus();
+  });
+  document.addEventListener('keydown',event=>{
+    if(event.key!=='Escape')return;
+    const open=$('.share-menu:not([hidden])');
+    const trigger=open?.closest('.share-wrap')?.querySelector('.share-trigger');
+    closeShareMenus();
+    trigger?.focus();
+  });
+  window.addEventListener('hashchange',focusHashPublication);
+}
+function focusHashPublication(){
+  let id='';
+  try{id=decodeURIComponent(window.location.hash.slice(1))}catch(error){return}
+  if(!id||!id.startsWith('pub-'))return;
+  const target=document.getElementById(id);
+  if(!target)return;
+  $$('.publication-card.shared-target').forEach(card=>card.classList.remove('shared-target'));
+  target.classList.add('shared-target');
+  target.scrollIntoView({behavior:'smooth',block:'center'});
+  window.setTimeout(()=>target.classList.remove('shared-target'),5000);
 }
 
 function navigationInteractions(){
@@ -271,6 +390,7 @@ function navigationInteractions(){
 document.addEventListener('DOMContentLoaded',()=>{
   setNavigation();
   navigationInteractions();
+  publicationInteractions();
   initMeta();
   combinedChart().catch(console.error);
   researchCharts().catch(console.error);

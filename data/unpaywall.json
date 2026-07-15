@@ -1,0 +1,9 @@
+{
+  "source": "Unpaywall",
+  "apiVersion": "v2",
+  "lastSuccessfulUpdate": null,
+  "lastAttempt": null,
+  "status": "Awaiting the first GitHub Actions update",
+  "publicationCount": 37,
+  "records": {}
+}
