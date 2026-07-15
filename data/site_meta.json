@@ -1,5 +1,5 @@
 {
-  "version": "v21",
-  "lastUpdated": "2026-07-15",
-  "notes": "V21 adds Unpaywall open-access links and per-publication sharing."
+  "version": "v22",
+  "lastUpdated": "2026-07-16",
+  "notes": "V22 adds llms.txt for AI-oriented website discovery and records the updated contact emails."
 }
