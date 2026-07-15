@@ -1,0 +1,47 @@
+# Wei-Hao Chiu Academic Website
+
+> Official academic website of Wei-Hao Chiu, Ph.D., Associate Researcher at the Center for Sustainability and Energy Technologies, Chang Gung University.
+
+## Main Pages
+
+- [Home](https://weihaochiu.github.io/)
+- [About](https://weihaochiu.github.io/about.html)
+- [Research](https://weihaochiu.github.io/research.html)
+- [Publications](https://weihaochiu.github.io/publications.html)
+- [Patents](https://weihaochiu.github.io/patents.html)
+- [Projects](https://weihaochiu.github.io/projects.html)
+
+## Research Expertise
+
+- Perovskite solar cells
+- Tin and tin-lead perovskite photovoltaics
+- Scalable perovskite processing
+- Vacuum-flash crystallization
+- Blade coating and slot-die coating
+- Charge-transport layers and interface engineering
+- Self-assembled monolayers
+- Photoluminescence, electroluminescence, and QFLS analysis
+- Photovoltaic reliability and encapsulation
+- Vacuum, radiation, and space photovoltaic environments
+- Tandem solar cells
+- Vanadium redox flow batteries
+
+## Academic Profiles
+
+- [Google Scholar](https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en)
+- [ORCID](https://orcid.org/0000-0003-4484-3117)
+- [Scopus](https://www.scopus.com/authid/detail.uri?authorId=7201503537)
+- [Web of Science](https://www.webofscience.com/wos/author/record/JCE-6812-2023)
+- [Chang Gung University Pure](https://pure.lib.cgu.edu.tw/en/persons/wei-hao-chiu/publications/)
+- [Chang Gung University Profile](https://www.cgu.edu.tw/cset-en/FullTimeProfessorManagement/Detail/e3d82caf-b69a-4ee3-ac95-0d1558e22d83?nodeId=17439)
+- [ResearchGate](https://www.researchgate.net/profile/Wei-Hao-Chiu)
+- [LinkedIn](https://www.linkedin.com/in/wei-hao-chiu-a208a9b0/)
+- [OpenAlex](https://openalex.org/works?filter=authorships.author.id:a5007707999)
+
+## Contact
+
+- Email: weihchiu@mail.cgu.edu.tw
+
+## Website Information
+
+This website presents the academic profile, research expertise, publications, patents, projects, awards, and professional experience of Wei-Hao Chiu.
