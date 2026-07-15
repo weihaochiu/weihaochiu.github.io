@@ -1,6 +1,6 @@
 # Wei-Hao Chiu Academic Website
 
-> Official academic website of Wei-Hao Chiu, Ph.D., Associate Researcher at the Center for Sustainability and Energy Technologies, Chang Gung University.
+> Official academic website of Wei-Hao Chiu, Ph.D., Associate Researcher at Chang Gung University.
 
 ## Main Pages
 
@@ -11,38 +11,64 @@
 - [Patents](https://weihaochiu.github.io/patents.html)
 - [Projects](https://weihaochiu.github.io/projects.html)
 
-## Research Expertise
-
-- Perovskite solar cells
-- Tin and tin-lead perovskite photovoltaics
-- Scalable perovskite processing
-- Vacuum-flash crystallization
-- Blade coating and slot-die coating
-- Charge-transport layers and interface engineering
-- Self-assembled monolayers
-- Photoluminescence, electroluminescence, and QFLS analysis
-- Photovoltaic reliability and encapsulation
-- Vacuum, radiation, and space photovoltaic environments
-- Tandem solar cells
-- Vanadium redox flow batteries
-
-## Academic Profiles
-
-- [Google Scholar](https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en)
-- [ORCID](https://orcid.org/0000-0003-4484-3117)
-- [Scopus](https://www.scopus.com/authid/detail.uri?authorId=7201503537)
-- [Web of Science](https://www.webofscience.com/wos/author/record/JCE-6812-2023)
-- [Chang Gung University Pure](https://pure.lib.cgu.edu.tw/en/persons/wei-hao-chiu/publications/)
-- [Chang Gung University Profile](https://www.cgu.edu.tw/cset-en/FullTimeProfessorManagement/Detail/e3d82caf-b69a-4ee3-ac95-0d1558e22d83?nodeId=17439)
-- [ResearchGate](https://www.researchgate.net/profile/Wei-Hao-Chiu)
-- [LinkedIn](https://www.linkedin.com/in/wei-hao-chiu-a208a9b0/)
-- [OpenAlex](https://openalex.org/works?filter=authorships.author.id:a5007707999)
-
 ## Contact
 
 - Personal email: weihao.chiu@gmail.com
 - Chang Gung University email: d000019005@cgu.edu.tw
 
-## Website Information
+## Research Expertise
 
-This website presents the academic profile, research expertise, publications, patents, projects, awards, and professional experience of Wei-Hao Chiu.
+- Perovskite solar cells
+- Tin and tin-lead perovskite photovoltaics
+- Scalable photovoltaic manufacturing
+- Vacuum-flash crystallization
+- Blade coating
+- Slot-die coating
+- Charge-transport layers
+- Self-assembled monolayers
+- Photoluminescence and electroluminescence
+- Quasi-Fermi level splitting
+- Photovoltaic reliability
+- Space photovoltaics
+- Tandem solar cells
+- Vanadium redox flow batteries
+
+## Publications
+
+- [Reliability enhancement of PVDF-HFP modified perovskite solar cells under synergistic space-relevant stress conditions](https://weihaochiu.github.io/publications/10-1016-j-cej-2026-177494.html) — Chemical Engineering Journal, 2026; DOI: 10.1016/j.cej.2026.177494
+- [2T Perovskite Tandem Solar Cells in Space: Failure Mechanisms and Design Strategies](https://weihaochiu.github.io/publications/10-1016-j-mtener-2026-102359.html) — Materials Today Energy, 2026; DOI: 10.1016/j.mtener.2026.102359
+- [Synergistic preheating and moderate temperature liquid medium annealing for high performance perovskite solar cells](https://weihaochiu.github.io/publications/10-1016-j-solener-2026-114430.html) — Solar Energy, 2026; DOI: 10.1016/j.solener.2026.114430
+- [Heterogeneous graphite felt electrodes decorated with nanostructured graphitic carbon nitride for enhanced redox kinetics in vanadium redox flow batteries](https://weihaochiu.github.io/publications/10-1016-j-jpowsour-2025-239216.html) — Journal of Power Sources, 2026; DOI: 10.1016/j.jpowsour.2025.239216
+- [Impact of proton radiation on the performance of single-junction perovskite solar cells for space applications](https://weihaochiu.github.io/publications/10-1016-j-solmat-2025-114015.html) — Solar Energy Materials and Solar Cells, 2026; DOI: 10.1016/j.solmat.2025.114015
+- [Fused Dithienoheterocycle‐Based Hole‐Transporting Materials for Efficient Perovskite Solar Cells](https://weihaochiu.github.io/publications/10-1002-asia-70245.html) — Chemistry–An Asian Journal, 2026; DOI: 10.1002/asia.70245
+- [MOF-& COF-integrated composite separators/membranes: innovations for sustainable and high-performance redox flow batteries](https://weihaochiu.github.io/publications/10-1016-j-seppur-2025-134157.html) — Separation and Purification Technology, 2025; DOI: 10.1016/j.seppur.2025.134157
+- [Round-Robin Interlaboratory Comparison of Large-Area Organic Thin-Film and Perovskite Solar Cells](https://weihaochiu.github.io/publications/10-1002-solr-202500538.html) — Solar RRL, 2025; DOI: 10.1002/solr.202500538
+- [Asymmetric Fluorinated Cyclopenta [2, 1‐b: 3, 4‐b'] Dithiophene‐Based Hole‐Transporting Materials for Perovskite Solar Cell](https://weihaochiu.github.io/publications/10-1002-asia-202500719.html) — Chemistry–An Asian Journal, 2025; DOI: 10.1002/asia.202500719
+- [Judicious Molecular Design of 5H‑Dithieno[3,2‑b:2′,3′‑d]Pyran-based Hole-Transporting Materials for Highly Efficient and Stable Perovskite Solar Cells](https://weihaochiu.github.io/publications/10-1002-advs-202410666.html) — Advanced Science, 2025; DOI: 10.1002/advs.202410666
+- [Exploring the efficiency enhancement of perovskite solar cells by chemical bath depositing SnO2 on mesoporous TiO2 electrode](https://weihaochiu.github.io/publications/10-1016-j-mtchem-2024-102329.html) — Materials Today Chemistry, 2024; DOI: 10.1016/j.mtchem.2024.102329
+- [A systematic investigation of PVDF-HFP in perovskite solar cells for improved space mission reliability](https://weihaochiu.github.io/publications/10-1016-j-cej-2024-153974.html) — Chemical Engineering Journal, 2024; DOI: 10.1016/j.cej.2024.153974
+- [Additive-free electroless deposition on graphene/copper foil: Photo-induced and defect-assisted approach for environmentally friendly plating](https://weihaochiu.github.io/publications/10-1016-j-jece-2023-111741.html) — Journal of Environmental Chemical Engineering, 2024; DOI: 10.1016/j.jece.2023.111741
+- [Fluorination of Star-Shaped Cyclopenta[2,1-b;3,4-b′]dithiophene Derivatives and Its Application as Hole-Transporting Materials in Scalable Perovskite Solar Cell Fabrication by Bar Coating](https://weihaochiu.github.io/publications/10-1002-solr-202300988.html) — Solar RRL, 2024; DOI: 10.1002/solr.202300988
+- [Fluorination on cyclopentadithiophene-based hole-transport material for high-performance perovskite solar cells](https://weihaochiu.github.io/publications/10-1039-d3cc04699k.html) — Chemical Communications, 2023; DOI: 10.1039/D3CC04699K
+- [Ladder-type dihydronaphtho [1, 2, 3, 4-rst] pentaphene as building block to construct hole-transporting materials for perovskite solar cells](https://weihaochiu.github.io/publications/10-1016-j-jpowsour-2023-233496.html) — Journal of Power Sources, 2023; DOI: 10.1016/j.jpowsour.2023.233496
+- [New Molecular Design, Step‐Saving Synthesis, and Applications of Indolocarbazole Core‐Based Oligo (hetero) arenes](https://weihaochiu.github.io/publications/10-1002-asia-202300681.html) — Chemistry–An Asian Journal, 2023; DOI: 10.1002/asia.202300681
+- [Enhancing efficiency and stability of perovskite solar cells through two-step deposition method with the addition of cesium halides to PbI2 precursor](https://weihaochiu.github.io/publications/10-1016-j-orgel-2023-106847.html) — Organic Electronics, 2023; DOI: 10.1016/j.orgel.2023.106847
+- [Fluorinated Pentafulvalene‐Fused Hole‐Transporting Material Enhances the Performance of Perovskite Solar Cells with Efficiency Exceeding 23%](https://weihaochiu.github.io/publications/10-1002-adfm-202306367.html) — Advanced Functional Materials, 2023; DOI: 10.1002/adfm.202306367
+- [Facile synthesis of spiro-core-based hole-transporting material for high-performance and stable perovskite solar cells](https://weihaochiu.github.io/publications/10-1016-j-cej-2022-139926.html) — Chemical Engineering Journal, 2023; DOI: 10.1016/j.cej.2022.139926
+- [Surfactant Tween 20 Controlled Perovskite Film Fabricated by Thermal Blade Coating for Efficient Perovskite Solar Cells](https://weihaochiu.github.io/publications/10-3390-nano12152651.html) — Nanomaterials, 2022; DOI: 10.3390/nano12152651
+- [Effect of Thiophene Insertion on X-Shaped Anthracene-Based Hole-Transporting Materials in Perovskite Solar Cells](https://weihaochiu.github.io/publications/10-3390-polym14081580.html) — Polymers, 2022; DOI: 10.3390/polym14081580
+- [High-performance perovskite solar cells based on dopant-free hole-transporting material fabricated by a thermal-assisted blade-coating method with efficiency exceeding 21%](https://weihaochiu.github.io/publications/10-1016-j-cej-2021-131609.html) — Chemical Engineering Journal, 2022; DOI: 10.1016/j.cej.2021.131609
+- [Microstructure and Biological Properties of Electrospun In Situ Polymerization of Polycaprolactone-Graft-Polyacrylic Acid Nanofibers and Its Composite Nanofiber Dressings](https://weihaochiu.github.io/publications/10-3390-polym13234246.html) — Polymers, 2021; DOI: 10.3390/polym13234246
+- [Controlled Photoanode Properties for Large-Area Efficient and Stable Dye-Sensitized Photovoltaic Modules](https://weihaochiu.github.io/publications/10-3390-nano11082125.html) — Nanomaterials, 2021; DOI: 10.3390/nano11082125
+- [Reducing defects in organic-lead halide perovskite film by delayed thermal annealing combined with KI/I2 for efficient perovskite solar cells](https://weihaochiu.github.io/publications/10-3390-nano11061607.html) — Nanomaterials, 2021; DOI: 10.3390/nano11061607
+- [Enhanced efficiency of bifacial and back-illuminated Ti foil based flexible dye-sensitized solar cells by decoration of mesoporous SiO2 layer on TiO2 anode](https://weihaochiu.github.io/publications/10-1016-j-jpowsour-2012-12-094.html) — Journal of Power Sources, 2013; DOI: 10.1016/j.jpowsour.2012.12.094
+- [Ionic liquid diffusion properties in tetrapod-like ZnO photoanode for dye-sensitized solar cells](https://weihaochiu.github.io/publications/10-1016-j-jpowsour-2012-05-079.html) — Journal of Power Sources, 2012; DOI: 10.1016/j.jpowsour.2012.05.079
+- [Improvement on the long-term stability of flexible plastic dye-sensitized solar cells](https://weihaochiu.github.io/publications/10-1016-j-jpowsour-2011-06-049.html) — Journal of Power Sources, 2011; DOI: 10.1016/j.jpowsour.2011.06.049
+- [High efficiency flexible dye-sensitized solar cells by multiple electrophoretic depositions](https://weihaochiu.github.io/publications/10-1016-j-jpowsour-2010-12-063.html) — Journal of Power Sources, 2011; DOI: 10.1016/j.jpowsour.2010.12.063
+- [Improved performance of flexible dye-sensitized solar cells by introducing an interfacial layer on Ti substrates](https://weihaochiu.github.io/publications/10-1039-c0jm04099a.html) — Journal of Materials Chemistry, 2011; DOI: 10.1039/C0JM04099A
+- [The influence of tetrapod-like ZnO morphology and electrolytes on energy conversion efficiency of dye-sensitized solar cells](https://weihaochiu.github.io/publications/10-1016-j-electacta-2010-07-061.html) — Electrochimica Acta, 2010; DOI: 10.1016/j.electacta.2010.07.061
+- [Effects of mesoscopic poly (3, 4-ethylenedioxythiophene) films as counter electrodes for dye-sensitized solar cells](https://weihaochiu.github.io/publications/10-1016-j-tsf-2009-11-058.html) — Thin Solid Films, 2010; DOI: 10.1016/j.tsf.2009.11.058
+- [Dye-sensitized solar cells with a micro-porous TiO2 electrode and gel polymer electrolytes prepared by in situ cross-link reaction](https://weihaochiu.github.io/publications/10-1016-j-solmat-2009-07-017.html) — Solar Energy Materials and Solar Cells, 2009; DOI: 10.1016/j.solmat.2009.07.017
+- [Efficient electron transport in tetrapod-like ZnO metal-free dye-sensitized solar cells](https://weihaochiu.github.io/publications/10-1039-b902595m.html) — Energy & Environmental Science, 2009; DOI: 10.1039/B902595M
+- [Formation of branched ZnO nanowires from solvothermal method and dye-sensitized solar cells applications](https://weihaochiu.github.io/publications/10-1021-jp805239k.html) — The Journal of Physical Chemistry C, 2008; DOI: 10.1021/jp805239k
+- [Transverse excess noise factor and transverse mode locking in a gain-guided laser](https://weihaochiu.github.io/publications/10-1016-j-optcom-2004-10-003.html) — Optics Communications, 2005; DOI: 10.1016/j.optcom.2004.10.003
