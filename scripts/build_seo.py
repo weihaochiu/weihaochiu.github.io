@@ -1,0 +1,98 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+import html, json, re
+from datetime import date
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+SITE_URL = 'https://weihaochiu.github.io'
+TODAY = date.today().isoformat()
+EMAIL_LINKS = '<a href="mailto:weihao.chiu@gmail.com">Personal Email</a><a href="mailto:d000019005@cgu.edu.tw">CGU Email</a>'
+
+PERSON = {
+  '@context': 'https://schema.org', '@type': 'Person', '@id': SITE_URL + '/#person',
+  'name': 'Wei-Hao Chiu', 'alternateName': ['邱偉豪', 'Chiu, Wei-Hao'],
+  'honorificSuffix': 'Ph.D.', 'url': SITE_URL + '/',
+  'image': SITE_URL + '/assets/images/profile.jpg', 'jobTitle': 'Associate Researcher',
+  'email': ['mailto:weihao.chiu@gmail.com', 'mailto:d000019005@cgu.edu.tw'],
+  'affiliation': {'@type':'Organization','name':'Chang Gung University','url':'https://www.cgu.edu.tw/'},
+  'worksFor': {'@type':'Organization','name':'Center for Sustainability and Energy Technologies, Chang Gung University'},
+  'knowsAbout': ['Perovskite solar cells','Tin and tin-lead perovskite photovoltaics','Scalable photovoltaic manufacturing','Vacuum-flash crystallization','Blade coating','Slot-die coating','Charge-transport layers','Self-assembled monolayers','Photoluminescence and electroluminescence','Quasi-Fermi level splitting','Photovoltaic reliability','Space photovoltaics','Tandem solar cells','Vanadium redox flow batteries'],
+  'sameAs': ['https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en','https://orcid.org/0000-0003-4484-3117','https://www.scopus.com/authid/detail.uri?authorId=7201503537','https://www.webofscience.com/wos/author/record/JCE-6812-2023','https://pure.lib.cgu.edu.tw/en/persons/wei-hao-chiu/publications/','https://www.cgu.edu.tw/cset-en/FullTimeProfessorManagement/Detail/e3d82caf-b69a-4ee3-ac95-0d1558e22d83?nodeId=17439','https://www.researchgate.net/profile/Wei-Hao-Chiu','https://www.linkedin.com/in/wei-hao-chiu-a208a9b0/','https://openalex.org/works?filter=authorships.author.id:a5007707999']
+}
+
+def esc(v): return html.escape(str(v or ''), quote=True)
+def slugify(doi): return re.sub(r'[^a-z0-9]+','-',str(doi).lower()).strip('-') or 'publication'
+
+def article_schema(p, url):
+  obj = {'@type':'ScholarlyArticle','@id':url+'#article','url':url,'mainEntityOfPage':url,'headline':p.get('title',''),'name':p.get('title',''),'datePublished':p.get('date') or str(p.get('year','')),'author':[{'@type':'Person','name':a} for a in p.get('authors',[])],'isPartOf':{'@type':'Periodical','name':p.get('journal','')},'publisher':{'@type':'Organization','name':p.get('publisher','')},'identifier':[{'@type':'PropertyValue','propertyID':'DOI','value':p.get('doi','')},p.get('doiUrl','')],'sameAs':p.get('doiUrl',''),'citation':p.get('citation',''),'keywords':p.get('tags',[]),'about':p.get('topic',''),'pagination':p.get('pages',''),'volumeNumber':p.get('volume',''),'issueNumber':p.get('issue',''),'inLanguage':'en'}
+  return {k:v for k,v in obj.items() if v not in ('',[],None)}
+
+def citation_meta(p):
+  out=[]
+  for a in p.get('authors',[]): out.append(f'<meta name="citation_author" content="{esc(a)}"/>')
+  fields=[('citation_title',p.get('title')),('citation_publication_date',p.get('date') or p.get('year')),('citation_journal_title',p.get('journal')),('citation_volume',p.get('volume')),('citation_issue',p.get('issue')),('citation_firstpage',p.get('pages')),('citation_doi',p.get('doi')),('citation_abstract_html_url',p.get('doiUrl'))]
+  out += [f'<meta name="{n}" content="{esc(v)}"/>' for n,v in fields if v not in ('',None)]
+  return '\n'.join(out)
+
+def replace_person_schema(text):
+  block='<script type="application/ld+json" id="person-schema">'+json.dumps(PERSON,ensure_ascii=False,separators=(',',':'))+'</script>'
+  pat=re.compile(r'<script type="application/ld\+json"(?:\s+id="person-schema")?>.*?</script>',re.S)
+  return pat.sub(block,text,count=1) if pat.search(text) else text.replace('</head>',block+'</head>',1)
+
+def replace_emails(text):
+  text=re.sub(r'<a href="mailto:[^"]+">Contact</a>', '<a class="button ghost" href="mailto:weihao.chiu@gmail.com">Contact</a>', text)
+  text=re.sub(r'<div class="footer-links">.*?</div>', '<div class="footer-links">'+EMAIL_LINKS+'<a href="https://scholar.google.com.tw/citations?user=ZYbNQb8AAAAJ&amp;hl=zh-TW" rel="noopener" target="_blank">Google Scholar</a><a href="https://orcid.org/0000-0003-4484-3117" rel="noopener" target="_blank">ORCID</a></div>', text, flags=re.S)
+  text=text.replace('weihchiu@mail.cgu.edu.tw','weihao.chiu@gmail.com')
+  return text
+
+def static_card(p):
+  doi=p.get('doi',''); slug=slugify(doi); local='publications/'+slug+'.html'
+  authors=', '.join('<strong class="me">'+esc(a)+'</strong>' if a in ('Chiu, Wei-Hao','Wei-Hao Chiu') else esc(a) for a in p.get('authors',[]))
+  journal='<em>'+esc(p.get('journal'))+'</em>'
+  if p.get('volume'): journal += ', '+esc(p.get('volume'))
+  if p.get('pages'): journal += ', '+esc(p.get('pages'))
+  journal += ' ('+esc(p.get('year'))+').'
+  labels=[p.get('topic')]+list(p.get('tags',[]))
+  labels_html=''.join('<span class="card-label">'+esc(x)+'</span>' for x in labels if x)
+  n=int(p.get('citationCount') or 0)
+  return '<article class="collection-card publication-card seo-static-card" id="pub-'+slug+'" itemscope itemtype="https://schema.org/ScholarlyArticle"><meta itemprop="identifier" content="'+esc(doi)+'"/><div class="card-heading"><h4 itemprop="headline"><a href="'+esc(local)+'">'+esc(p.get('title'))+'</a></h4><span class="date-badge" itemprop="datePublished">'+esc(p.get('date'))+'</span></div><p class="authors" itemprop="author">'+authors+'</p><p class="journal" itemprop="isPartOf">'+journal+'</p><div class="card-labels">'+labels_html+'</div><div class="card-actions"><a class="action" href="'+esc(p.get('doiUrl'))+'" target="_blank" rel="noopener">DOI ↗</a><a class="action" href="'+esc(local)+'">Metadata &amp; share →</a><span class="action">'+str(n)+' Google Scholar citation'+('s' if n!=1 else '')+'</span></div></article>'
+
+def publication_page(p):
+  doi=p.get('doi',''); slug=slugify(doi); url=SITE_URL+'/publications/'+slug+'.html'
+  title=esc(p.get('title')); desc=esc(p.get('citation')); authors=', '.join(esc(a) for a in p.get('authors',[]))
+  graph={'@context':'https://schema.org','@graph':[PERSON,article_schema(p,url)]}
+  vol=', '+esc(p.get('volume')) if p.get('volume') else ''
+  pages=', '+esc(p.get('pages')) if p.get('pages') else ''
+  return '''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>{title} | Wei-Hao Chiu</title><meta name="description" content="{desc}"/><link rel="canonical" href="{url}"/><meta property="og:type" content="article"/><meta property="og:title" content="{title}"/><meta property="og:description" content="{desc}"/><meta property="og:url" content="{url}"/><meta property="og:image" content="{site}/assets/images/og-profile.jpg"/><meta property="article:published_time" content="{date}"/><meta property="article:author" content="{site}/"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="{title}"/><meta name="twitter:description" content="{desc}"/><meta name="twitter:image" content="{site}/assets/images/og-profile.jpg"/>{citation}<script type="application/ld+json">{schema}</script><link href="../assets/css/styles.css" rel="stylesheet"/></head><body><header class="site-header"><div class="shell nav-shell"><a class="brand" href="../index.html"><span>Wei-Hao Chiu</span><small>Academic Profile</small></a><nav aria-label="Main navigation" class="site-nav"><a href="../about.html">About</a><a href="../research.html">Research</a><a href="../publications.html">Publications</a><a href="../patents.html">Patents</a><a href="../projects.html">Projects</a></nav></div></header><main class="content shell"><article class="collection-card publication-card" itemscope itemtype="https://schema.org/ScholarlyArticle"><p class="kicker">Scholarly article</p><h1 itemprop="headline">{title}</h1><p class="authors" itemprop="author">{authors}</p><p class="journal"><em>{journal}</em>{vol}{pages} ({year}).</p><p><strong>DOI:</strong> <a itemprop="sameAs" href="{doiurl}" target="_blank" rel="noopener">{doi}</a></p><p><strong>Research topic:</strong> {topic}</p><p><strong>Google Scholar citations recorded by this website:</strong> {count}</p><div class="card-actions"><a class="action" href="{doiurl}" target="_blank" rel="noopener">Open DOI ↗</a><a class="action" href="../publications.html#pub-{slug}">Return to publications</a></div></article></main><footer class="site-footer"><div class="shell footer-grid"><div><strong>Wei-Hao Chiu, Ph.D.</strong><p>Associate Researcher<br/>Center for Sustainability and Energy Technologies<br/>Chang Gung University</p></div><div class="footer-links">{emails}</div></div></footer></body></html>'''.format(title=title,desc=desc,url=url,site=SITE_URL,date=esc(p.get('date')),citation=citation_meta(p),schema=json.dumps(graph,ensure_ascii=False,separators=(',',':')),authors=authors,journal=esc(p.get('journal')),vol=vol,pages=pages,year=esc(p.get('year')),doiurl=esc(p.get('doiUrl')),doi=esc(doi),topic=esc(p.get('topic')),count=esc(p.get('citationCount',0)),slug=slug,emails=EMAIL_LINKS)
+
+def main():
+  pubs=json.loads((ROOT/'data/publications.json').read_text(encoding='utf-8'))
+  if len(pubs)!=37: raise SystemExit(f'Expected 37 publications, found {len(pubs)}')
+  for path in ROOT.glob('*.html'):
+    text=path.read_text(encoding='utf-8'); text=replace_person_schema(text); text=replace_emails(text); path.write_text(text,encoding='utf-8')
+  pubpath=ROOT/'publications.html'; text=pubpath.read_text(encoding='utf-8')
+  cards='\n'.join(static_card(p) for p in pubs)
+  text=re.sub(r'<div id="collectionContainer">.*?</div>', '<div id="collectionContainer" data-static-publications="37">\n'+cards+'\n</div>', text, count=1, flags=re.S)
+  graph={'@context':'https://schema.org','@graph':[PERSON]+[article_schema(p,SITE_URL+'/publications/'+slugify(p.get('doi',''))+'.html') for p in pubs]}
+  schema='<script type="application/ld+json" id="publications-schema">'+json.dumps(graph,ensure_ascii=False,separators=(',',':'))+'</script>'
+  text=re.sub(r'<script type="application/ld\+json" id="publications-schema">.*?</script>','',text,flags=re.S)
+  text=text.replace('</head>','\n'.join(citation_meta(p) for p in pubs)+'\n'+schema+'\n</head>',1)
+  pubpath.write_text(text,encoding='utf-8')
+  pdir=ROOT/'publications'; pdir.mkdir(exist_ok=True)
+  for f in pdir.glob('*.html'): f.unlink()
+  for p in pubs: (pdir/(slugify(p.get('doi',''))+'.html')).write_text(publication_page(p),encoding='utf-8')
+  app=ROOT/'assets/js/app.js'; js=app.read_text(encoding='utf-8')
+  js=re.sub(r'function publicationShareUrl\(anchor\)\{.*?\n\}', "function publicationShareUrl(anchor){\n  const slug=String(anchor||'').replace(/^pub-/,'');\n  return new URL(`publications/${slug}.html`,window.location.href).toString();\n}", js, count=1, flags=re.S)
+  app.write_text(js,encoding='utf-8')
+  (ROOT/'robots.txt').write_text('''User-agent: *\nAllow: /\n\nUser-agent: Googlebot\nAllow: /\n\nUser-agent: Bingbot\nAllow: /\n\nUser-agent: OAI-SearchBot\nAllow: /\n\nUser-agent: GPTBot\nAllow: /\n\nUser-agent: ChatGPT-User\nAllow: /\n\nUser-agent: ClaudeBot\nAllow: /\n\nUser-agent: Claude-SearchBot\nAllow: /\n\nUser-agent: PerplexityBot\nAllow: /\n\nUser-agent: Google-Extended\nAllow: /\n\nUser-agent: Applebot-Extended\nAllow: /\n\nSitemap: https://weihaochiu.github.io/sitemap.xml\n''',encoding='utf-8')
+  urls=['','about.html','research.html','publications.html','patents.html','projects.html','llms.txt']+['publications/'+slugify(p.get('doi',''))+'.html' for p in pubs]
+  rows='\n'.join('  <url><loc>'+SITE_URL+'/'+esc(u)+'</loc><lastmod>'+TODAY+'</lastmod></url>' for u in urls)
+  (ROOT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+rows+'\n</urlset>\n',encoding='utf-8')
+  lines=['# Wei-Hao Chiu Academic Website','', '> Official academic website of Wei-Hao Chiu, Ph.D., Associate Researcher at Chang Gung University.','','## Main Pages','',f'- [Home]({SITE_URL}/)',f'- [About]({SITE_URL}/about.html)',f'- [Research]({SITE_URL}/research.html)',f'- [Publications]({SITE_URL}/publications.html)',f'- [Patents]({SITE_URL}/patents.html)',f'- [Projects]({SITE_URL}/projects.html)','','## Contact','','- Personal email: weihao.chiu@gmail.com','- Chang Gung University email: d000019005@cgu.edu.tw','','## Research Expertise','']
+  lines += ['- '+x for x in PERSON['knowsAbout']]; lines += ['','## Publications','']
+  for p in pubs: lines.append(f"- [{p.get('title')}]({SITE_URL}/publications/{slugify(p.get('doi',''))}.html) — {p.get('journal')}, {p.get('year')}; DOI: {p.get('doi')}")
+  (ROOT/'llms.txt').write_text('\n'.join(lines)+'\n',encoding='utf-8')
+  mp=ROOT/'data/site_meta.json'; meta=json.loads(mp.read_text(encoding='utf-8')); meta.update({'version':'v23','lastUpdated':TODAY,'notes':'V23 adds static crawler-readable publications, 37 ScholarlyArticle records, upgraded Person schema, corrected email links on every page, article-specific citation and Open Graph metadata, expanded llms.txt, and crawler-aware robots and sitemap files.'}); mp.write_text(json.dumps(meta,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+
+if __name__=='__main__': main()
