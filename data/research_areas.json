@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "featuredPublicationCount": 3,
+  "areas": [
+    {
+      "key": "PSC",
+      "category": "PSC",
+      "title": "Perovskite Solar Cells",
+      "description": [
+        "Research on perovskite solar cells focuses on controlling film formation, charge transport, and interfacial recombination to improve both photovoltaic efficiency and operational stability. The work investigates crystallization strategies ranging from delayed thermal annealing with halide additives and cesium-assisted two-step deposition to preheating combined with moderate-temperature liquid-medium annealing. These approaches regulate nucleation and crystal growth, promote compact and uniform absorber layers, reduce defect-assisted non-radiative recombination, and improve the reproducibility of device performance. Device engineering also includes chemically deposited SnO₂ on mesoporous TiO₂ electrodes and the molecular design of dopant-free and fluorinated hole-transporting materials, with emphasis on energy-level alignment, carrier extraction, thermal stability, and compatibility with scalable fabrication methods such as blade and bar coating.",
+        "A parallel research direction addresses reliability under demanding terrestrial and space-relevant conditions. Polymer modification with PVDF-HFP has been used to reinforce perovskite films and interfaces, suppress degradation, and retain performance under combined illumination, heat, and vacuum stresses. Proton-radiation effects are examined to identify performance losses and material responses relevant to orbital operation, while studies of two-terminal perovskite tandem cells connect radiation, vacuum, thermal cycling, and low-intensity low-temperature operation with failure mechanisms at the material, interface, and device levels. Collectively, this research links materials chemistry, scalable processing, advanced electrical and optical characterization, and accelerated reliability testing to the development of efficient, reproducible, and durable perovskite photovoltaic technologies. This integrated perspective bridges laboratory-scale performance gains with the process control, validation, and environmental tolerance required for practical photovoltaic deployment."
+      ]
+    },
+    {
+      "key": "RFB",
+      "category": "RFB",
+      "title": "Redox Flow Batteries",
+      "description": [
+        "Research on redox flow batteries centers on improving the reaction kinetics, transport behavior, and long-term efficiency of vanadium redox flow battery components. A principal direction is the functionalization of graphite-felt electrodes, whose large surface area and three-dimensional porous structure are attractive for flow systems but whose intrinsic catalytic activity can limit vanadium redox reactions. Nanostructured graphitic carbon nitride is introduced onto graphite felt to create nitrogen-rich active sites, improve electrolyte accessibility, and strengthen electrode–electrolyte interactions. The resulting heterogeneous electrode architecture is designed to accelerate the VO²⁺/VO₂⁺ and V²⁺/V³⁺ redox processes, reduce electrochemical polarization, and enhance charge-transfer performance while preserving the permeability required for electrolyte circulation.",
+        "The second direction concerns selective separators and membranes, which must simultaneously provide high proton or ion conductivity, suppress vanadium crossover, and maintain chemical and mechanical stability in strongly acidic electrolytes. Research evaluates the potential of metal–organic framework and covalent organic framework materials as tunable porous components for composite membranes. Their controllable pore structures, surface functionalities, and chemical architectures offer routes to balance ion selectivity and transport resistance more effectively than conventional dense polymers alone. By integrating electrode catalysis with membrane design and electrochemical diagnostics, this research addresses the coupled losses that determine coulombic, voltage, and energy efficiency. The broader objective is to establish durable material strategies for high-performance, long-duration flow-battery systems suitable for stationary renewable-energy storage. Particular attention is given to material compatibility, transport–reaction coupling, and performance retention under repeated charge–discharge operation."
+      ]
+    },
+    {
+      "key": "DSSC",
+      "category": "DSSC",
+      "title": "Dye-Sensitized Solar Cells",
+      "description": [
+        "Research on dye-sensitized solar cells examines how photoanode architecture, interfacial design, electrolyte transport, and flexible-device processing govern charge generation and collection. Early studies developed branched and tetrapod-like ZnO nanostructures through solvothermal synthesis, using their high surface area to increase dye adsorption while retaining direct pathways for electron transport. The influence of ZnO morphology and electrolyte composition was evaluated alongside ionic-liquid diffusion within porous photoanodes, linking pore geometry and mass transport to charge-transfer resistance and photovoltaic output. Related work investigated microporous TiO₂ electrodes, gel-polymer electrolytes formed by in situ cross-linking, and mesoscopic conducting-polymer counter electrodes to improve ionic retention, catalytic activity, and device stability.",
+        "A major emphasis was placed on flexible and large-area configurations. Interfacial layers between titanium substrates and porous semiconductor films were introduced to improve electrical contact and suppress recombination, while repeated electrophoretic deposition enabled thicker and more uniform photoanodes with increased dye loading. Flexible plastic devices were further studied through low-temperature electrode processing, sealing, electrolyte retention, and degradation control. For bifacial and back-illuminated cells, mesoporous SiO₂ decoration was used to enhance light management and reduce interfacial losses. These concepts were subsequently extended to large-area dye-sensitized photovoltaic modules, where controlled photoanode thickness, porosity, adhesion, and transport properties were correlated with efficiency, uniformity, and long-term stability. Together, the research established processing–structure–transport relationships that support efficient, flexible, and scalable dye-sensitized photovoltaic devices. The accumulated findings provide a coherent basis for translating nanoscale electrode design into mechanically adaptable cells and reliable photovoltaic modules."
+      ]
+    }
+  ]
+}
