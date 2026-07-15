@@ -1,0 +1,53 @@
+name: Update Mendeley Reader Metrics
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "20 4 * * 1"
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/update-mendeley.yml"
+      - "scripts/update_mendeley.py"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-mendeley-reader-metrics
+  cancel-in-progress: true
+
+jobs:
+  update-mendeley:
+    name: Update reader counts
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Update Mendeley reader metrics
+        env:
+          MENDELEY_CLIENT_ID: ${{ secrets.MENDELEY_CLIENT_ID }}
+          MENDELEY_CLIENT_SECRET: ${{ secrets.MENDELEY_CLIENT_SECRET }}
+        run: python scripts/update_mendeley.py
+
+      - name: Commit updated metrics
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/mendeley_metrics.json
+          if git diff --cached --quiet; then
+            echo "No Mendeley reader metric changes to commit."
+          else
+            git commit -m "Update Mendeley reader metrics"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
