@@ -1,0 +1,471 @@
+{
+  "schemaVersion": 1,
+  "source": "OpenAlex Works API",
+  "status": "success",
+  "lastSuccessfulUpdate": "2026-07-16T08:22:32.895614Z",
+  "workCount": 37,
+  "totalCitationsFromHistory": 251,
+  "totalCitationsFromPublicationMetrics": 985,
+  "validationDifference": -734,
+  "citationsByYear": [
+    {
+      "year": 2007,
+      "citations": 1
+    },
+    {
+      "year": 2010,
+      "citations": 13
+    },
+    {
+      "year": 2011,
+      "citations": 6
+    },
+    {
+      "year": 2012,
+      "citations": 7
+    },
+    {
+      "year": 2013,
+      "citations": 55
+    },
+    {
+      "year": 2014,
+      "citations": 32
+    },
+    {
+      "year": 2017,
+      "citations": 6
+    },
+    {
+      "year": 2022,
+      "citations": 20
+    },
+    {
+      "year": 2023,
+      "citations": 12
+    },
+    {
+      "year": 2024,
+      "citations": 38
+    },
+    {
+      "year": 2025,
+      "citations": 36
+    },
+    {
+      "year": 2026,
+      "citations": 25
+    }
+  ],
+  "works": {
+    "W1970095316": {
+      "doi": "10.1016/j.jpowsour.2011.06.049",
+      "title": "Improvement on the long-term stability of flexible plastic dye-sensitized solar cells",
+      "currentCitationCount": 38,
+      "citationsByYear": [
+        {
+          "year": 2017,
+          "citations": 6
+        }
+      ],
+      "historyTotal": 6
+    },
+    "W2022329244": {
+      "doi": "10.1016/j.optcom.2004.10.003",
+      "title": "Transverse excess noise factor and transverse mode locking in a gain-guided laser",
+      "currentCitationCount": 5,
+      "citationsByYear": [
+        {
+          "year": 2007,
+          "citations": 1
+        }
+      ],
+      "historyTotal": 1
+    },
+    "W2026340393": {
+      "doi": "10.1016/j.jpowsour.2012.05.079",
+      "title": "Ionic liquid diffusion properties in tetrapod-like ZnO photoanode for dye-sensitized solar cells",
+      "currentCitationCount": 16,
+      "citationsByYear": [
+        {
+          "year": 2014,
+          "citations": 3
+        }
+      ],
+      "historyTotal": 3
+    },
+    "W2053005710": {
+      "doi": "10.1016/j.solmat.2009.07.017",
+      "title": "Dye-sensitized solar cells with a micro-porous TiO2 electrode and gel polymer electrolytes prepared by in situ cross-link reaction",
+      "currentCitationCount": 40,
+      "citationsByYear": [
+        {
+          "year": 2011,
+          "citations": 6
+        }
+      ],
+      "historyTotal": 6
+    },
+    "W2053567920": {
+      "doi": "10.1016/j.jpowsour.2010.12.063",
+      "title": "High efficiency flexible dye-sensitized solar cells by multiple electrophoretic depositions",
+      "currentCitationCount": 72,
+      "citationsByYear": [
+        {
+          "year": 2014,
+          "citations": 15
+        }
+      ],
+      "historyTotal": 15
+    },
+    "W2055166593": {
+      "doi": "10.1021/jp805239k",
+      "title": "Formation of Branched ZnO Nanowires from Solvothermal Method and Dye-Sensitized Solar Cells Applications",
+      "currentCitationCount": 266,
+      "citationsByYear": [
+        {
+          "year": 2013,
+          "citations": 42
+        }
+      ],
+      "historyTotal": 42
+    },
+    "W2055510369": {
+      "doi": "10.1016/j.tsf.2009.11.058",
+      "title": "Effects of mesoscopic poly(3,4-ethylenedioxythiophene) films as counter electrodes for dye-sensitized solar cells",
+      "currentCitationCount": 89,
+      "citationsByYear": [
+        {
+          "year": 2013,
+          "citations": 13
+        }
+      ],
+      "historyTotal": 13
+    },
+    "W2075277742": {
+      "doi": "10.1039/c0jm04099a",
+      "title": "Improved performance of flexible dye-sensitized solar cells by introducing an interfacial layer on Ti substrates",
+      "currentCitationCount": 57,
+      "citationsByYear": [
+        {
+          "year": 2014,
+          "citations": 10
+        }
+      ],
+      "historyTotal": 10
+    },
+    "W2088552273": {
+      "doi": "10.1016/j.electacta.2010.07.061",
+      "title": "The influence of tetrapod-like ZnO morphology and electrolytes on energy conversion efficiency of dye-sensitized solar cells",
+      "currentCitationCount": 39,
+      "citationsByYear": [
+        {
+          "year": 2012,
+          "citations": 7
+        }
+      ],
+      "historyTotal": 7
+    },
+    "W2145010429": {
+      "doi": "10.1039/b902595m",
+      "title": "Efficient electron transport in tetrapod-like ZnO metal-free dye-sensitized solar cells",
+      "currentCitationCount": 81,
+      "citationsByYear": [
+        {
+          "year": 2010,
+          "citations": 13
+        }
+      ],
+      "historyTotal": 13
+    },
+    "W2149766360": {
+      "doi": "10.1016/j.jpowsour.2012.12.094",
+      "title": "Enhanced efficiency of bifacial and back-illuminated Ti foil based flexible dye-sensitized solar cells by decoration of mesoporous SiO2 layer on TiO2 anode",
+      "currentCitationCount": 14,
+      "citationsByYear": [
+        {
+          "year": 2014,
+          "citations": 4
+        }
+      ],
+      "historyTotal": 4
+    },
+    "W3174093177": {
+      "doi": "10.3390/nano11061607",
+      "title": "Reducing Defects in Organic-Lead Halide Perovskite Film by Delayed Thermal Annealing Combined with KI/I2 for Efficient Perovskite Solar Cells",
+      "currentCitationCount": 8,
+      "citationsByYear": [
+        {
+          "year": 2022,
+          "citations": 4
+        }
+      ],
+      "historyTotal": 4
+    },
+    "W3187467581": {
+      "doi": "10.1016/j.cej.2021.131609",
+      "title": "High-performance perovskite solar cells based on dopant-free hole-transporting material fabricated by a thermal-assisted blade-coating method with efficiency exceeding 21%",
+      "currentCitationCount": 58,
+      "citationsByYear": [
+        {
+          "year": 2022,
+          "citations": 16
+        }
+      ],
+      "historyTotal": 16
+    },
+    "W3195032786": {
+      "doi": "10.3390/nano11082125",
+      "title": "Controlled Photoanode Properties for Large-Area Efficient and Stable Dye-Sensitized Photovoltaic Modules",
+      "currentCitationCount": 11,
+      "citationsByYear": [
+        {
+          "year": 2023,
+          "citations": 4
+        }
+      ],
+      "historyTotal": 4
+    },
+    "W4200568401": {
+      "doi": "10.3390/polym13234246",
+      "title": "Microstructure and Biological Properties of Electrospun In Situ Polymerization of Polycaprolactone-Graft-Polyacrylic Acid Nanofibers and Its Composite Nanofiber Dressings",
+      "currentCitationCount": 18,
+      "citationsByYear": [
+        {
+          "year": 2023,
+          "citations": 6
+        }
+      ],
+      "historyTotal": 6
+    },
+    "W4224023899": {
+      "doi": "10.3390/polym14081580",
+      "title": "Effect of Thiophene Insertion on X-Shaped Anthracene-Based Hole-Transporting Materials in Perovskite Solar Cells",
+      "currentCitationCount": 3,
+      "citationsByYear": [
+        {
+          "year": 2023,
+          "citations": 2
+        }
+      ],
+      "historyTotal": 2
+    },
+    "W4289524742": {
+      "doi": "10.3390/nano12152651",
+      "title": "Surfactant Tween 20 Controlled Perovskite Film Fabricated by Thermal Blade Coating for Efficient Perovskite Solar Cells",
+      "currentCitationCount": 10,
+      "citationsByYear": [
+        {
+          "year": 2024,
+          "citations": 5
+        }
+      ],
+      "historyTotal": 5
+    },
+    "W4308038509": {
+      "doi": "10.1016/j.cej.2022.139926",
+      "title": "Facile synthesis of spiro-core-based hole-transporting material for high-performance and stable perovskite solar cells",
+      "currentCitationCount": 33,
+      "citationsByYear": [
+        {
+          "year": 2024,
+          "citations": 13
+        }
+      ],
+      "historyTotal": 13
+    },
+    "W4376619834": {
+      "doi": "10.1016/j.orgel.2023.106847",
+      "title": "Enhancing efficiency and stability of perovskite solar cells through two-step deposition method with the addition of cesium halides to PbI2 precursor",
+      "currentCitationCount": 11,
+      "citationsByYear": [
+        {
+          "year": 2025,
+          "citations": 4
+        }
+      ],
+      "historyTotal": 4
+    },
+    "W4385381207": {
+      "doi": "10.1002/adfm.202306367",
+      "title": "Fluorinated Pentafulvalene‐Fused Hole‐Transporting Material Enhances the Performance of Perovskite Solar Cells with Efficiency Exceeding 23%",
+      "currentCitationCount": 36,
+      "citationsByYear": [
+        {
+          "year": 2024,
+          "citations": 20
+        }
+      ],
+      "historyTotal": 20
+    },
+    "W4385773304": {
+      "doi": "10.1016/j.jpowsour.2023.233496",
+      "title": "Ladder-type dihydronaphtho[1,2,3,4-rst]pentaphene as building block to construct hole-transporting materials for perovskite solar cells",
+      "currentCitationCount": 10,
+      "citationsByYear": [
+        {
+          "year": 2026,
+          "citations": 5
+        }
+      ],
+      "historyTotal": 5
+    },
+    "W4386592311": {
+      "doi": "10.1002/asia.202300681",
+      "title": "New Molecular Design, Step‐Saving Synthesis, and Applications of Indolocarbazole Core‐Based Oligo(hetero)arenes",
+      "currentCitationCount": 0,
+      "citationsByYear": [],
+      "historyTotal": 0
+    },
+    "W4388655704": {
+      "doi": "10.1039/d3cc04699k",
+      "title": "Fluorination on cyclopentadithiophene-based hole-transport materials for high-performance perovskite solar cells",
+      "currentCitationCount": 10,
+      "citationsByYear": [
+        {
+          "year": 2025,
+          "citations": 8
+        }
+      ],
+      "historyTotal": 8
+    },
+    "W4389856655": {
+      "doi": "10.1016/j.jece.2023.111741",
+      "title": "Additive-free electroless deposition on graphene/copper foil: Photo-induced and defect-assisted approach for environmentally friendly plating",
+      "currentCitationCount": 0,
+      "citationsByYear": [],
+      "historyTotal": 0
+    },
+    "W4391230843": {
+      "doi": "10.1002/solr.202300988",
+      "title": "Fluorination of Star‐Shaped Cyclopenta[2,1‐b;3,4‐b′]dithiophene Derivatives and Its Application as Hole‐Transporting Materials in Scalable Perovskite Solar Cell Fabrication by Bar Coating",
+      "currentCitationCount": 10,
+      "citationsByYear": [
+        {
+          "year": 2025,
+          "citations": 7
+        }
+      ],
+      "historyTotal": 7
+    },
+    "W4400613411": {
+      "doi": "10.1016/j.cej.2024.153974",
+      "title": "A systematic investigation of PVDF-HFP in perovskite solar cells for improved space mission reliability",
+      "currentCitationCount": 13,
+      "citationsByYear": [
+        {
+          "year": 2026,
+          "citations": 7
+        }
+      ],
+      "historyTotal": 7
+    },
+    "W4402883453": {
+      "doi": "10.1016/j.mtchem.2024.102329",
+      "title": "Exploring the efficiency enhancement of perovskite solar cells by chemical bath depositing SnO2 on mesoporous TiO2 electrode",
+      "currentCitationCount": 7,
+      "citationsByYear": [
+        {
+          "year": 2025,
+          "citations": 5
+        }
+      ],
+      "historyTotal": 5
+    },
+    "W4404830134": {
+      "doi": "10.1002/advs.202410666",
+      "title": "Judicious Molecular Design of 5<i>H</i>‑Dithieno[3,2‑b:2′,3′‑d]Pyran‐based Hole‐Transporting Materials for Highly Efficient and Stable Perovskite Solar Cells",
+      "currentCitationCount": 15,
+      "citationsByYear": [
+        {
+          "year": 2025,
+          "citations": 12
+        }
+      ],
+      "historyTotal": 12
+    },
+    "W4411365246": {
+      "doi": "10.1002/asia.202500719",
+      "title": "Asymmetric Fluorinated Cyclopenta[2,1‐b:3,4‐b']Dithiophene‐Based Hole‐Transporting Materials for Perovskite Solar Cell",
+      "currentCitationCount": 0,
+      "citationsByYear": [],
+      "historyTotal": 0
+    },
+    "W4411847970": {
+      "doi": "10.1016/j.seppur.2025.134157",
+      "title": "MOF- &amp; COF-integrated composite separators/membranes: innovations for sustainable and high-performance redox flow batteries",
+      "currentCitationCount": 5,
+      "citationsByYear": [
+        {
+          "year": 2026,
+          "citations": 4
+        }
+      ],
+      "historyTotal": 4
+    },
+    "W4413117344": {
+      "doi": "10.1002/asia.70245",
+      "title": "Fused Dithienoheterocycle‐Based Hole‐Transporting Materials for Efficient Perovskite Solar Cells",
+      "currentCitationCount": 0,
+      "citationsByYear": [],
+      "historyTotal": 0
+    },
+    "W4415028078": {
+      "doi": "10.1002/solr.202500538",
+      "title": "Round‐Robin Interlaboratory Comparison of Large‐Area Organic Thin‐Film and Perovskite Solar Cells",
+      "currentCitationCount": 1,
+      "citationsByYear": [
+        {
+          "year": 2026,
+          "citations": 1
+        }
+      ],
+      "historyTotal": 1
+    },
+    "W4415443362": {
+      "doi": "10.1016/j.solmat.2025.114015",
+      "title": "Impact of proton radiation on the performance of single-junction perovskite solar cells for space applications",
+      "currentCitationCount": 8,
+      "citationsByYear": [
+        {
+          "year": 2026,
+          "citations": 7
+        }
+      ],
+      "historyTotal": 7
+    },
+    "W7118007754": {
+      "doi": "10.1016/j.jpowsour.2025.239216",
+      "title": "Heterogeneous graphite felt electrodes decorated with nanostructured graphitic carbon nitride for enhanced redox kinetics in vanadium redox flow batteries",
+      "currentCitationCount": 1,
+      "citationsByYear": [
+        {
+          "year": 2026,
+          "citations": 1
+        }
+      ],
+      "historyTotal": 1
+    },
+    "W7131315395": {
+      "doi": "10.1016/j.solener.2026.114430",
+      "title": "Synergistic preheating and moderate temperature liquid medium annealing for high performance perovskite solar cells",
+      "currentCitationCount": 0,
+      "citationsByYear": [],
+      "historyTotal": 0
+    },
+    "W7161569160": {
+      "doi": "10.1016/j.cej.2026.177494",
+      "title": "Reliability enhancement of PVDF-HFP modified perovskite solar cells under synergistic space-relevant stress conditions",
+      "currentCitationCount": 0,
+      "citationsByYear": [],
+      "historyTotal": 0
+    },
+    "W7168190148": {
+      "doi": "10.1016/j.mtener.2026.102359",
+      "title": "2T Perovskite Tandem Solar Cells in Space: Failure Mechanisms and Design Strategies",
+      "currentCitationCount": 0,
+      "citationsByYear": [],
+      "historyTotal": 0
+    }
+  }
+}

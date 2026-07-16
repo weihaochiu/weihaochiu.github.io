@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "source": "Google Scholar via SerpAPI",
+  "status": "success",
+  "profileId": "ZYbNQb8AAAAJ",
+  "profileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en",
+  "lastSuccessfulUpdate": "2026-07-16T08:22:14.848699Z",
+  "totalCitations": 1205,
+  "hIndex": 15,
+  "i10Index": 23,
+  "citationsByYear": [
+    {
+      "year": 2008,
+      "citations": 4
+    },
+    {
+      "year": 2009,
+      "citations": 16
+    },
+    {
+      "year": 2010,
+      "citations": 43
+    },
+    {
+      "year": 2011,
+      "citations": 85
+    },
+    {
+      "year": 2012,
+      "citations": 73
+    },
+    {
+      "year": 2013,
+      "citations": 122
+    },
+    {
+      "year": 2014,
+      "citations": 118
+    },
+    {
+      "year": 2015,
+      "citations": 100
+    },
+    {
+      "year": 2016,
+      "citations": 71
+    },
+    {
+      "year": 2017,
+      "citations": 50
+    },
+    {
+      "year": 2018,
+      "citations": 49
+    },
+    {
+      "year": 2019,
+      "citations": 42
+    },
+    {
+      "year": 2020,
+      "citations": 24
+    },
+    {
+      "year": 2021,
+      "citations": 17
+    },
+    {
+      "year": 2022,
+      "citations": 55
+    },
+    {
+      "year": 2023,
+      "citations": 76
+    },
+    {
+      "year": 2024,
+      "citations": 71
+    },
+    {
+      "year": 2025,
+      "citations": 111
+    },
+    {
+      "year": 2026,
+      "citations": 68
+    }
+  ]
+}
