@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "lastUpdated": null,
-  "journalCount": 0,
-  "activeJournalCount": 0,
+  "lastUpdated": "2026-07-16T09:26:10.436459Z",
+  "journalCount": 22,
+  "activeJournalCount": 22,
   "sourcePolicy": {
     "basicMetadata": [
       "Crossref",
@@ -14,5 +14,1299 @@
     ],
     "note": "Journal Impact Factor and JCR values are secondary-source data and should be checked against Clarivate for formal use."
   },
-  "journals": {}
+  "journals": {
+    "advanced-functional-materials": {
+      "journalId": "advanced-functional-materials",
+      "title": "Advanced Functional Materials",
+      "aliases": [
+        "Advanced Functional Materials",
+        "Adv Funct Materials"
+      ],
+      "metricsByYear": {},
+      "abbreviation": "Adv Funct Materials",
+      "publisher": "Wiley",
+      "issn": "1616-301X",
+      "eissn": "1616-3028",
+      "issnL": "1616-301X",
+      "allIssns": [
+        "1616-301X",
+        "1616-3028"
+      ],
+      "homepage": "http://onlinelibrary.wiley.com/journal/10.1002/(ISSN)1616-3028",
+      "countryCode": "DE",
+      "journalType": "journal",
+      "isOpenAccess": false,
+      "isInDoaj": false,
+      "subjects": [],
+      "openAlexId": "S135204980",
+      "openAlexUrl": "https://openalex.org/S135204980",
+      "openAlexStats": {
+        "worksCount": 42579,
+        "citedByCount": 2513233,
+        "twoYearMeanCitedness": 14.326441143754499,
+        "hIndex": 476,
+        "i10Index": 26960
+      },
+      "foundedYear": 2001,
+      "publicationCount": 1,
+      "publicationYears": [
+        2023
+      ],
+      "firstPublicationYear": 2023,
+      "latestPublicationYear": 2023,
+      "sampleDoi": "10.1002/adfm.202306367",
+      "sources": {
+        "crossref": {
+          "name": "Crossref REST API",
+          "url": "https://api.crossref.org/works/10.1002/adfm.202306367",
+          "retrievedAt": "2026-07-16T09:24:43.887662Z"
+        },
+        "openalex": {
+          "name": "OpenAlex Sources API",
+          "url": "https://openalex.org/S135204980",
+          "retrievedAt": "2026-07-16T09:24:44.976266Z"
+        },
+        "manusights": {
+          "name": "Manusights",
+          "type": "secondary-source",
+          "urls": [
+            "https://manusights.com/journals/advanced-functional-materials",
+            "https://manusights.com/blog/advanced-functional-materials-impact-factor"
+          ],
+          "retrievedAt": "2026-07-16T09:24:46.730280Z",
+          "verificationStatus": "secondary-source"
+        }
+      },
+      "currentlyUsedInPublications": true
+    },
+    "advanced-science": {
+      "journalId": "advanced-science",
+      "title": "Advanced Science",
+      "aliases": [
+        "Advanced Science"
+      ],
+      "metricsByYear": {},
+      "abbreviation": "Advanced Science",
+      "publisher": "Wiley",
+      "issn": "2198-3844",
+      "eissn": "2198-3844",
+      "issnL": "2198-3844",
+      "allIssns": [
+        "2198-3844"
+      ],
+      "homepage": "https://onlinelibrary.wiley.com/journal/21983844",
+      "countryCode": "DE",
+      "journalType": "journal",
+      "isOpenAccess": true,
+      "isInDoaj": true,
+      "subjects": [],
+      "openAlexId": "S2737737698",
+      "openAlexUrl": "https://openalex.org/S2737737698",
+      "openAlexStats": {
+        "worksCount": 20660,
+        "citedByCount": 649332,
+        "twoYearMeanCitedness": 8.428092002946714,
+        "hIndex": 276,
+        "i10Index": 10024
+      },
+      "publicationCount": 1,
+      "publicationYears": [
+        2025
+      ],
+      "firstPublicationYear": 2025,
+      "latestPublicationYear": 2025,
+      "sampleDoi": "10.1002/advs.202410666",
+      "sources": {
+        "crossref": {
+          "name": "Crossref REST API",
+          "url": "https://api.crossref.org/works/10.1002/advs.202410666",
+          "retrievedAt": "2026-07-16T09:24:47.399999Z"
+        },
+        "openalex": {
+          "name": "OpenAlex Sources API",
+          "url": "https://openalex.org/S2737737698",
+          "retrievedAt": "2026-07-16T09:24:48.365587Z"
+        },
+        "manusights": {
+          "name": "Manusights",
+          "type": "secondary-source",
+          "urls": [
+            "https://manusights.com/blog/advanced-science-impact-factor"
+          ],
+          "retrievedAt": "2026-07-16T09:24:50.603613Z",
+          "verificationStatus": "secondary-source"
+        }
+      },
+      "currentlyUsedInPublications": true
+    },
+    "chemical-communications": {
+      "journalId": "chemical-communications",
+      "title": "Chemical Communications",
+      "aliases": [
+        "Chemical Communications",
+        "Chem. Commun."
+      ],
+      "metricsByYear": {
+        "2024": {
+          "impactFactor": 9.6,
+          "fiveYearImpactFactor": 10.1,
+          "totalCites": 165423,
+          "citeScore": 7.2,
+          "bestQuartile": "Q2",
+          "categories": [
+            {
+              "quartile": "Q2",
+              "rank": 84,
+              "totalJournals": 239
+            }
+          ],
+          "jcrReleaseYear": 2026,
+          "sourceType": "secondary-source",
+          "sourceName": "Manusights",
+          "sourceUrls": [
+            "https://manusights.com/journals/chemical-communications",
+            "https://manusights.com/blog/chemical-communications-impact-factor"
+          ],
+          "verificationStatus": "secondary-source",
+          "retrievedAt": "2026-07-16T09:24:53.994766Z"
+        }
+      },
+      "abbreviation": "Chem. Commun.",
+      "publisher": "Royal Society of Chemistry",
+      "issn": "1359-7345",
+      "eissn": "1364-548X",
+      "issnL": "1359-7345",
+      "allIssns": [
+        "1359-7345",
+        "1364-548X"
+      ],
+      "homepage": "http://www.rsc.org/chemcomm",
+      "countryCode": "GB",
+      "journalType": "journal",
+      "isOpenAccess": false,
+      "isInDoaj": false,
+      "subjects": [],
+      "openAlexId": "S152760256",
+      "openAlexUrl": "https://openalex.org/S152760256",
+      "openAlexStats": {
+        "worksCount": 78063,
+        "citedByCount": 3202977,
+        "twoYearMeanCitedness": 3.92135231316726,
+        "hIndex": 401,
+        "i10Index": 54837
+      },
+      "foundedYear": 1996,
+      "publicationCount": 1,
+      "publicationYears": [
+        2023
+      ],
+      "firstPublicationYear": 2023,
+      "latestPublicationYear": 2023,
+      "sampleDoi": "10.1039/d3cc04699k",
+      "sources": {
+        "crossref": {
+          "name": "Crossref REST API",
+          "url": "https://api.crossref.org/works/10.1039/d3cc04699k",
+          "retrievedAt": "2026-07-16T09:24:51.271699Z"
+        },
+        "openalex": {
+          "name": "OpenAlex Sources API",
+          "url": "https://openalex.org/S152760256",
+          "retrievedAt": "2026-07-16T09:24:52.211905Z"
+        },
+        "manusights": {
+          "name": "Manusights",
+          "type": "secondary-source",
+          "urls": [
+            "https://manusights.com/journals/chemical-communications",
+            "https://manusights.com/blog/chemical-communications-impact-factor"
+          ],
+          "retrievedAt": "2026-07-16T09:24:53.994688Z",
+          "verificationStatus": "secondary-source"
+        }
+      },
+      "latestMetricYear": 2024,
+      "currentlyUsedInPublications": true
+    },
+    "chemical-engineering-journal": {
+      "journalId": "chemical-engineering-journal",
+      "title": "Chemical Engineering Journal",
+      "aliases": [
+        "Chemical Engineering Journal"
+      ],
+      "metricsByYear": {
+        "2025": {
+          "impactFactor": 12.5,
+          "fiveYearImpactFactor": 12.8,
+          "jci": 1.59,
+          "totalCites": 591800,
+          "citeScore": 20.6,
+          "bestQuartile": "Q1",
+          "categories": [
+            {
+              "quartile": "Q1"
+            }
+          ],
+          "jcrReleaseYear": 2026,
+          "sourceType": "secondary-source",
+          "sourceName": "Manusights",
+          "sourceUrls": [
+            "https://manusights.com/journals/chemical-engineering-journal",
+            "https://manusights.com/blog/chemical-engineering-journal-impact-factor"
+          ],
+          "verificationStatus": "secondary-source",
+          "retrievedAt": "2026-07-16T09:24:57.249628Z"
+        }
+      },
+      "abbreviation": "Chemical Engineering Journal",
+      "publisher": "Elsevier BV",
+      "issn": "1385-8947",
+      "eissn": "",
+      "issnL": "1385-8947",
+      "allIssns": [
+        "1385-8947",
+        "1873-3212"
+      ],
+      "homepage": "https://www.journals.elsevier.com/chemical-engineering-journal",
+      "countryCode": "CH",
+      "journalType": "journal",
+      "isOpenAccess": false,
+      "isInDoaj": false,
+      "subjects": [],
+      "openAlexId": "S149937609",
+      "openAlexUrl": "https://openalex.org/S149937609",
+      "openAlexStats": {
+        "worksCount": 77095,
+        "citedByCount": 3360830,
+        "twoYearMeanCitedness": 10.45493964987218,
+        "hIndex": 389,
+        "i10Index": 52300
+      },
+      "publicationCount": 4,
+      "publicationYears": [
+        2022,
+        2023,
+        2024,
+        2026
+      ],
+      "firstPublicationYear": 2022,
+      "latestPublicationYear": 2026,
+      "sampleDoi": "10.1016/j.cej.2026.177494",
+      "sources": {
+        "crossref": {
+          "name": "Crossref REST API",
+          "url": "https://api.crossref.org/works/10.1016/j.cej.2026.177494",
+          "retrievedAt": "2026-07-16T09:24:54.675862Z"
+        },
+        "openalex": {
+          "name": "OpenAlex Sources API",
+          "url": "https://openalex.org/S149937609",
+          "retrievedAt": "2026-07-16T09:24:55.649985Z"
+        },
+        "manusights": {
+          "name": "Manusights",
+          "type": "secondary-source",
+          "urls": [
+            "https://manusights.com/journals/chemical-engineering-journal",
+            "https://manusights.com/blog/chemical-engineering-journal-impact-factor"
+          ],
+          "retrievedAt": "2026-07-16T09:24:57.249532Z",
+          "verificationStatus": "secondary-source"
+        }
+      },
+      "latestMetricYear": 2025,
+      "currentlyUsedInPublications": true
+    },
+    "chemistry-an-asian-journal": {
+      "journalId": "chemistry-an-asian-journal",
+      "title": "Chemistry - An Asian Journal",
+      "aliases": [
+        "Chemistry–An Asian Journal",
+        "Chemistry – An Asian Journal",
+        "Chemistry - An Asian Journal",
+        "Chemistry  An Asian Journal"
+      ],
+      "metricsByYear": {},
+      "abbreviation": "Chemistry  An Asian Journal",
+      "publisher": "Wiley",
+      "issn": "1861-4728",
+      "eissn": "1861-471X",
+      "issnL": "1861-471X",
+      "allIssns": [
+        "1861-4728",
+        "1861-471X"
+      ],
+      "homepage": "https://onlinelibrary.wiley.com/journal/1861471X",
+      "countryCode": "DE",
+      "journalType": "journal",
+      "isOpenAccess": false,
+      "isInDoaj": false,
+      "subjects": [],
+      "openAlexId": "S188582317",
+      "openAlexUrl": "https://openalex.org/S188582317",
+      "openAlexStats": {
+        "worksCount": 10257,
+        "citedByCount": 217019,
+        "twoYearMeanCitedness": 3.0481181515007147,
+        "hIndex": 145,
+        "i10Index": 5261
+      },
+      "publicationCount": 3,
+      "publicationYears": [
+        2023,
+        2025,
+        2026
+      ],
+      "firstPublicationYear": 2023,
+      "latestPublicationYear": 2026,
+      "sampleDoi": "10.1002/asia.70245",
+      "sources": {
+        "crossref": {
+          "name": "Crossref REST API",
+          "url": "https://api.crossref.org/works/10.1002/asia.70245",
+          "retrievedAt": "2026-07-16T09:24:57.917698Z"
+        },
+        "openalex": {
+          "name": "OpenAlex Sources API",
+          "url": "https://openalex.org/S188582317",
+          "retrievedAt": "2026-07-16T09:24:58.902984Z"
+        }
+      },
+      "currentlyUsedInPublications": true
+    },
+    "electrochimica-acta": {
+      "journalId": "electrochimica-acta",
+      "title": "Electrochimica Acta",
+      "aliases": [
+        "Electrochimica Acta"
+      ],
+      "metricsByYear": {},
+      "abbreviation": "Electrochimica Acta",
+      "publisher": "Elsevier BV",
+      "issn": "0013-4686",
+      "eissn": "",
+      "issnL": "0013-4686",
+      "allIssns": [
+        "0013-4686",
+        "1873-3859"
+      ],
+      "homepage": "http://www.elsevier.com/wps/find/journaldescription.cws_home/205/description#description",
+      "countryCode": "GB",
+      "journalType": "journal",
+      "isOpenAccess": false,
+      "isInDoaj": false,
+      "subjects": [],
+      "openAlexId": "S198339081",
+      "openAlexUrl": "https://openalex.org/S198339081",
+      "openAlexStats": {
+        "worksCount": 53809,
+        "citedByCount": 2016844,
+        "twoYearMeanCitedness": 4.705252525252526,
+        "hIndex": 325,
+        "i10Index": 36882
+      },
+      "publicationCount": 1,
+      "publicationYears": [
+        2010
+      ],
+      "firstPublicationYear": 2010,
+      "latestPublicationYear": 2010,
+      "sampleDoi": "10.1016/j.electacta.2010.07.061",
+      "sources": {
+        "crossref": {
+          "name": "Crossref REST API",
+          "url": "https://api.crossref.org/works/10.1016/j.electacta.2010.07.061",
+          "retrievedAt": "2026-07-16T09:25:01.818892Z"
+        },
+        "openalex": {
+          "name": "OpenAlex Sources API",
+          "url": "https://openalex.org/S198339081",
+          "retrievedAt": "2026-07-16T09:25:02.807705Z"
+        }
+      },
+      "currentlyUsedInPublications": true
+    },
+    "energy-and-environmental-science": {
+      "journalId": "energy-and-environmental-science",
+      "title": "Energy & Environmental Science",
+      "aliases": [
+        "Energy & Environmental Science",
+        "Energy &amp; Environmental Science",
+        "Energy Environ. Sci."
+      ],
+      "metricsByYear": {},
+      "abbreviation": "Energy Environ. Sci.",
+      "publisher": "Royal Society of Chemistry",
+      "issn": "1754-5692",
+      "eissn": "1754-5706",
+      "issnL": "1754-5692",
+      "allIssns": [
+        "1754-5692",
+        "1754-5706"
+      ],
+      "homepage": "http://www.rsc.org/Publishing/Journals/EE/index.asp",
+      "countryCode": "GB",
+      "journalType": "journal",
+      "isOpenAccess": false,
+      "isInDoaj": false,
+      "subjects": [],
+      "openAlexId": "S117082959",
+      "openAlexUrl": "https://openalex.org/S117082959",
+      "openAlexStats": {
+        "worksCount": 8236,
+        "citedByCount": 1324291,
+        "twoYearMeanCitedness": 28.764614588722193,
+        "hIndex": 519,
+        "i10Index": 6371
+      },
+      "publicationCount": 1,
+      "publicationYears": [
+        2009
+      ],
+      "firstPublicationYear": 2009,
+      "latestPublicationYear": 2009,
+      "sampleDoi": "10.1039/b902595m",
+      "sources": {
+        "crossref": {
+          "name": "Crossref REST API",
+          "url": "https://api.crossref.org/works/10.1039/b902595m",
+          "retrievedAt": "2026-07-16T09:25:05.892435Z"
+        },
+        "openalex": {
+          "name": "OpenAlex Sources API",
+          "url": "https://openalex.org/S117082959",
+          "retrievedAt": "2026-07-16T09:25:06.889132Z"
+        }
+      },
+      "currentlyUsedInPublications": true
+    },
+    "journal-of-environmental-chemical-engineering": {
+      "journalId": "journal-of-environmental-chemical-engineering",
+      "title": "Journal of environmental chemical engineering",
+      "aliases": [
+        "Journal of Environmental Chemical Engineering"
+      ],
+      "metricsByYear": {},
+      "abbreviation": "Journal of Environmental Chemical Engineering",
+      "publisher": "Elsevier BV",
+      "issn": "2213-3437",
+      "eissn": "",
+      "issnL": "2213-2929",
+      "allIssns": [
+        "2213-3437",
+        "2213-2929"
+      ],
+      "homepage": "https://www.journals.elsevier.com/journal-of-environmental-chemical-engineering",
+      "countryCode": "NL",
+      "journalType": "journal",
+      "isOpenAccess": false,
+      "isInDoaj": false,
+      "subjects": [],
+      "openAlexId": "S2764859491",
+      "openAlexUrl": "https://openalex.org/S2764859491",
+      "openAlexStats": {
+        "worksCount": 24098,
+        "citedByCount": 531753,
+        "twoYearMeanCitedness": 5.603214751958225,
+        "hIndex": 187,
+        "i10Index": 12383
+      },
+      "publicationCount": 1,
+      "publicationYears": [
+        2024
+      ],
+      "firstPublicationYear": 2024,
+      "latestPublicationYear": 2024,
+      "sampleDoi": "10.1016/j.jece.2023.111741",
+      "sources": {
+        "crossref": {
+          "name": "Crossref REST API",
+          "url": "https://api.crossref.org/works/10.1016/j.jece.2023.111741",
+          "retrievedAt": "2026-07-16T09:25:09.671418Z"
+        },
+        "openalex": {
+          "name": "OpenAlex Sources API",
+          "url": "https://openalex.org/S2764859491",
+          "retrievedAt": "2026-07-16T09:25:10.628228Z"
+        }
+      },
+      "currentlyUsedInPublications": true
+    },
+    "journal-of-materials-chemistry": {
+      "journalId": "journal-of-materials-chemistry",
+      "title": "Journal of Materials Chemistry",
+      "aliases": [
+        "Journal of Materials Chemistry",
+        "J. Mater. Chem."
+      ],
+      "metricsByYear": {},
+      "abbreviation": "J. Mater. Chem.",
+      "publisher": "Royal Society of Chemistry",
+      "issn": "0959-9428",
+      "eissn": "1364-5501",
+      "issnL": "0959-9428",
+      "allIssns": [
+        "0959-9428",
+        "1364-5501"
+      ],
+      "homepage": "http://www.rsc.org/Publishing/Journals/jm/",
+      "countryCode": "GB",
+      "journalType": "journal",
+      "isOpenAccess": false,
+      "isInDoaj": false,
+      "subjects": [],
+      "openAlexId": "S45305740",
+      "openAlexUrl": "https://openalex.org/S45305740",
+      "openAlexStats": {
+        "worksCount": 18793,
+        "citedByCount": 1191850,
+        "twoYearMeanCitedness": 26.0,
+        "hIndex": 361,
+        "i10Index": 14932
+      },
+      "publicationCount": 1,
+      "publicationYears": [
+        2011
+      ],
+      "firstPublicationYear": 2011,
+      "latestPublicationYear": 2011,
+      "sampleDoi": "10.1039/c0jm04099a",
+      "sources": {
+        "crossref": {
+          "name": "Crossref REST API",
+          "url": "https://api.crossref.org/works/10.1039/c0jm04099a",
+          "retrievedAt": "2026-07-16T09:25:17.152344Z"
+        },
+        "openalex": {
+          "name": "OpenAlex Sources API",
+          "url": "https://openalex.org/S45305740",
+          "retrievedAt": "2026-07-16T09:25:18.296161Z"
+        },
+        "manusights": {
+          "name": "Manusights",
+          "type": "secondary-source",
+          "urls": [
+            "https://manusights.com/journals"
+          ],
+          "retrievedAt": "2026-07-16T09:25:20.482828Z",
+          "verificationStatus": "secondary-source"
+        }
+      },
+      "currentlyUsedInPublications": true
+    },
+    "journal-of-power-sources": {
+      "journalId": "journal-of-power-sources",
+      "title": "Journal of Power Sources",
+      "aliases": [
+        "Journal of Power Sources"
+      ],
+      "metricsByYear": {
+        "2025": {
+          "impactFactor": 8.4,
+          "fiveYearImpactFactor": 8.4,
+          "citeScore": 14.9,
+          "bestQuartile": "Q1",
+          "categories": [
+            {
+              "name": "energy-related categories",
+              "quartile": "Q1"
+            }
+          ],
+          "jcrReleaseYear": 2026,
+          "sourceType": "secondary-source",
+          "sourceName": "Manusights",
+          "sourceUrls": [
+            "https://manusights.com/journals/journal-of-power-sources",
+            "https://manusights.com/blog/journal-of-power-sources-impact-factor"
+          ],
+          "verificationStatus": "secondary-source",
+          "retrievedAt": "2026-07-16T09:25:23.807019Z"
+        }
+      },
+      "abbreviation": "Journal of Power Sources",
+      "publisher": "Elsevier BV",
+      "issn": "0378-7753",
+      "eissn": "1873-2755",
+      "issnL": "0378-7753",
+      "allIssns": [
+        "0378-7753",
+        "1873-2755"
+      ],
+      "homepage": "http://www.elsevier.com/wps/find/journaldescription.cws_home/504093/description",
+      "countryCode": "NL",
+      "journalType": "journal",
+      "isOpenAccess": false,
+      "isInDoaj": false,
+      "subjects": [],
+      "openAlexId": "S177147899",
+      "openAlexUrl": "https://openalex.org/S177147899",
+      "openAlexStats": {
+        "worksCount": 41214,
+        "citedByCount": 2236915,
+        "twoYearMeanCitedness": 7.36117381489842,
+        "hIndex": 412,
+        "i10Index": 30311
+      },
+      "foundedYear": 1976,
+      "publicationCount": 6,
+      "publicationYears": [
+        2011,
+        2012,
+        2013,
+        2023,
+        2026
+      ],
+      "firstPublicationYear": 2011,
+      "latestPublicationYear": 2026,
+      "sampleDoi": "10.1016/j.jpowsour.2025.239216",
+      "sources": {
+        "crossref": {
+          "name": "Crossref REST API",
+          "url": "https://api.crossref.org/works/10.1016/j.jpowsour.2025.239216",
+          "retrievedAt": "2026-07-16T09:25:21.172550Z"
+        },
+        "openalex": {
+          "name": "OpenAlex Sources API",
+          "url": "https://openalex.org/S177147899",
+          "retrievedAt": "2026-07-16T09:25:22.224834Z"
+        },
+        "manusights": {
+          "name": "Manusights",
+          "type": "secondary-source",
+          "urls": [
+            "https://manusights.com/journals/journal-of-power-sources",
+            "https://manusights.com/blog/journal-of-power-sources-impact-factor"
+          ],
+          "retrievedAt": "2026-07-16T09:25:23.806910Z",
+          "verificationStatus": "secondary-source"
+        }
+      },
+      "latestMetricYear": 2025,
+      "currentlyUsedInPublications": true
+    },
+    "materials-today-chemistry": {
+      "journalId": "materials-today-chemistry",
+      "title": "Materials Today Chemistry",
+      "aliases": [
+        "Materials Today Chemistry"
+      ],
+      "metricsByYear": {},
+      "abbreviation": "Materials Today Chemistry",
+      "publisher": "Elsevier BV",
+      "issn": "2468-5194",
+      "eissn": "",
+      "issnL": "2468-5194",
+      "allIssns": [
+        "2468-5194"
+      ],
+      "homepage": "https://www.journals.elsevier.com/materials-today-chemistry",
+      "countryCode": "GB",
+      "journalType": "journal",
+      "isOpenAccess": false,
+      "isInDoaj": false,
+      "subjects": [],
+      "openAlexId": "S2898120712",
+      "openAlexUrl": "https://openalex.org/S2898120712",
+      "openAlexStats": {
+        "worksCount": 3793,
+        "citedByCount": 65310,
+        "twoYearMeanCitedness": 4.765968318855391,
+        "hIndex": 95,
+        "i10Index": 1677
+      },
+      "publicationCount": 1,
+      "publicationYears": [
+        2024
+      ],
+      "firstPublicationYear": 2024,
+      "latestPublicationYear": 2024,
+      "sampleDoi": "10.1016/j.mtchem.2024.102329",
+      "sources": {
+        "crossref": {
+          "name": "Crossref REST API",
+          "url": "https://api.crossref.org/works/10.1016/j.mtchem.2024.102329",
+          "retrievedAt": "2026-07-16T09:25:24.477033Z"
+        },
+        "openalex": {
+          "name": "OpenAlex Sources API",
+          "url": "https://openalex.org/S2898120712",
+          "retrievedAt": "2026-07-16T09:25:25.437729Z"
+        }
+      },
+      "currentlyUsedInPublications": true
+    },
+    "materials-today-energy": {
+      "journalId": "materials-today-energy",
+      "title": "Materials Today Energy",
+      "aliases": [
+        "Materials Today Energy"
+      ],
+      "metricsByYear": {},
+      "abbreviation": "Materials Today Energy",
+      "publisher": "Elsevier BV",
+      "issn": "2468-6069",
+      "eissn": "",
+      "issnL": "2468-6069",
+      "allIssns": [
+        "2468-6069"
+      ],
+      "homepage": "https://www.journals.elsevier.com/materials-today-energy",
+      "countryCode": "GB",
+      "journalType": "journal",
+      "isOpenAccess": false,
+      "isInDoaj": false,
+      "subjects": [],
+      "openAlexId": "S2898308537",
+      "openAlexUrl": "https://openalex.org/S2898308537",
+      "openAlexStats": {
+        "worksCount": 2305,
+        "citedByCount": 59513,
+        "twoYearMeanCitedness": 5.438763376932224,
+        "hIndex": 96,
+        "i10Index": 1379
+      },
+      "publicationCount": 1,
+      "publicationYears": [
+        2026
+      ],
+      "firstPublicationYear": 2026,
+      "latestPublicationYear": 2026,
+      "sampleDoi": "10.1016/j.mtener.2026.102359",
+      "sources": {
+        "crossref": {
+          "name": "Crossref REST API",
+          "url": "https://api.crossref.org/works/10.1016/j.mtener.2026.102359",
+          "retrievedAt": "2026-07-16T09:25:28.259811Z"
+        },
+        "openalex": {
+          "name": "OpenAlex Sources API",
+          "url": "https://openalex.org/S2898308537",
+          "retrievedAt": "2026-07-16T09:25:29.247339Z"
+        }
+      },
+      "currentlyUsedInPublications": true
+    },
+    "nanomaterials": {
+      "journalId": "nanomaterials",
+      "title": "Nanomaterials",
+      "aliases": [
+        "Nanomaterials"
+      ],
+      "metricsByYear": {},
+      "abbreviation": "Nanomaterials",
+      "publisher": "Multidisciplinary Digital Publishing Institute",
+      "issn": "2079-4991",
+      "eissn": "2079-4991",
+      "issnL": "2079-4991",
+      "allIssns": [
+        "2079-4991"
+      ],
+      "homepage": "http://www.mdpi.com/journal/nanomaterials",
+      "countryCode": "CH",
+      "journalType": "journal",
+      "isOpenAccess": true,
+      "isInDoaj": true,
+      "subjects": [],
+      "openAlexId": "S2764646681",
+      "openAlexUrl": "https://openalex.org/S2764646681",
+      "openAlexStats": {
+        "worksCount": 22630,
+        "citedByCount": 529907,
+        "twoYearMeanCitedness": 5.815175922000848,
+        "hIndex": 200,
+        "i10Index": 13052
+      },
+      "publicationCount": 3,
+      "publicationYears": [
+        2021,
+        2022
+      ],
+      "firstPublicationYear": 2021,
+      "latestPublicationYear": 2022,
+      "sampleDoi": "10.3390/nano12152651",
+      "sources": {
+        "crossref": {
+          "name": "Crossref REST API",
+          "url": "https://api.crossref.org/works/10.3390/nano12152651",
+          "retrievedAt": "2026-07-16T09:25:32.059431Z"
+        },
+        "openalex": {
+          "name": "OpenAlex Sources API",
+          "url": "https://openalex.org/S2764646681",
+          "retrievedAt": "2026-07-16T09:25:33.032669Z"
+        }
+      },
+      "currentlyUsedInPublications": true
+    },
+    "optics-communications": {
+      "journalId": "optics-communications",
+      "title": "Optics Communications",
+      "aliases": [
+        "Optics Communications"
+      ],
+      "metricsByYear": {},
+      "abbreviation": "Optics Communications",
+      "publisher": "Elsevier BV",
+      "issn": "0030-4018",
+      "eissn": "",
+      "issnL": "0030-4018",
+      "allIssns": [
+        "0030-4018",
+        "1873-0310"
+      ],
+      "homepage": "http://www.elsevier.com/wps/find/journaldescription.cws_home/505711/description",
+      "countryCode": "NL",
+      "journalType": "journal",
+      "isOpenAccess": false,
+      "isInDoaj": false,
+      "subjects": [],
+      "openAlexId": "S186881120",
+      "openAlexUrl": "https://openalex.org/S186881120",
+      "openAlexStats": {
+        "worksCount": 40313,
+        "citedByCount": 675068,
+        "twoYearMeanCitedness": 2.6452397498262683,
+        "hIndex": 190,
+        "i10Index": 17744
+      },
+      "publicationCount": 1,
+      "publicationYears": [
+        2005
+      ],
+      "firstPublicationYear": 2005,
+      "latestPublicationYear": 2005,
+      "sampleDoi": "10.1016/j.optcom.2004.10.003",
+      "sources": {
+        "crossref": {
+          "name": "Crossref REST API",
+          "url": "https://api.crossref.org/works/10.1016/j.optcom.2004.10.003",
+          "retrievedAt": "2026-07-16T09:25:35.781031Z"
+        },
+        "openalex": {
+          "name": "OpenAlex Sources API",
+          "url": "https://openalex.org/S186881120",
+          "retrievedAt": "2026-07-16T09:25:36.747098Z"
+        }
+      },
+      "currentlyUsedInPublications": true
+    },
+    "organic-electronics": {
+      "journalId": "organic-electronics",
+      "title": "Organic Electronics",
+      "aliases": [
+        "Organic Electronics"
+      ],
+      "metricsByYear": {},
+      "abbreviation": "Organic Electronics",
+      "publisher": "Elsevier BV",
+      "issn": "1566-1199",
+      "eissn": "",
+      "issnL": "1566-1199",
+      "allIssns": [
+        "1566-1199",
+        "1878-5530"
+      ],
+      "homepage": "https://www.journals.elsevier.com/organic-electronics",
+      "countryCode": "NL",
+      "journalType": "journal",
+      "isOpenAccess": false,
+      "isInDoaj": false,
+      "subjects": [],
+      "openAlexId": "S99846442",
+      "openAlexUrl": "https://openalex.org/S99846442",
+      "openAlexStats": {
+        "worksCount": 7705,
+        "citedByCount": 189336,
+        "twoYearMeanCitedness": 3.3137254901960786,
+        "hIndex": 126,
+        "i10Index": 5002
+      },
+      "publicationCount": 1,
+      "publicationYears": [
+        2023
+      ],
+      "firstPublicationYear": 2023,
+      "latestPublicationYear": 2023,
+      "sampleDoi": "10.1016/j.orgel.2023.106847",
+      "sources": {
+        "crossref": {
+          "name": "Crossref REST API",
+          "url": "https://api.crossref.org/works/10.1016/j.orgel.2023.106847",
+          "retrievedAt": "2026-07-16T09:25:39.841770Z"
+        },
+        "openalex": {
+          "name": "OpenAlex Sources API",
+          "url": "https://openalex.org/S99846442",
+          "retrievedAt": "2026-07-16T09:25:40.844769Z"
+        }
+      },
+      "currentlyUsedInPublications": true
+    },
+    "polymers": {
+      "journalId": "polymers",
+      "title": "Polymers",
+      "aliases": [
+        "Polymers"
+      ],
+      "metricsByYear": {},
+      "abbreviation": "Polymers",
+      "publisher": "Multidisciplinary Digital Publishing Institute",
+      "issn": "2073-4360",
+      "eissn": "2073-4360",
+      "issnL": "2073-4360",
+      "allIssns": [
+        "2073-4360"
+      ],
+      "homepage": "http://www.mdpi.com/journal/polymers/",
+      "countryCode": "CH",
+      "journalType": "journal",
+      "isOpenAccess": true,
+      "isInDoaj": false,
+      "subjects": [],
+      "openAlexId": "S123288148",
+      "openAlexUrl": "https://openalex.org/S123288148",
+      "openAlexStats": {
+        "worksCount": 32188,
+        "citedByCount": 768503,
+        "twoYearMeanCitedness": 6.591121495327103,
+        "hIndex": 227,
+        "i10Index": 18731
+      },
+      "publicationCount": 2,
+      "publicationYears": [
+        2021,
+        2022
+      ],
+      "firstPublicationYear": 2021,
+      "latestPublicationYear": 2022,
+      "sampleDoi": "10.3390/polym14081580",
+      "sources": {
+        "crossref": {
+          "name": "Crossref REST API",
+          "url": "https://api.crossref.org/works/10.3390/polym14081580",
+          "retrievedAt": "2026-07-16T09:25:43.608473Z"
+        },
+        "openalex": {
+          "name": "OpenAlex Sources API",
+          "url": "https://openalex.org/S123288148",
+          "retrievedAt": "2026-07-16T09:25:44.561417Z"
+        }
+      },
+      "currentlyUsedInPublications": true
+    },
+    "separation-and-purification-technology": {
+      "journalId": "separation-and-purification-technology",
+      "title": "Separation and Purification Technology",
+      "aliases": [
+        "Separation and Purification Technology"
+      ],
+      "metricsByYear": {},
+      "abbreviation": "Separation and Purification Technology",
+      "publisher": "Elsevier BV",
+      "issn": "1383-5866",
+      "eissn": "",
+      "issnL": "1383-5866",
+      "allIssns": [
+        "1383-5866",
+        "1873-3794"
+      ],
+      "homepage": "https://www.journals.elsevier.com/separation-and-purification-technology",
+      "countryCode": "NL",
+      "journalType": "journal",
+      "isOpenAccess": false,
+      "isInDoaj": false,
+      "subjects": [],
+      "openAlexId": "S69753523",
+      "openAlexUrl": "https://openalex.org/S69753523",
+      "openAlexStats": {
+        "worksCount": 30955,
+        "citedByCount": 959945,
+        "twoYearMeanCitedness": 8.911527257594674,
+        "hIndex": 235,
+        "i10Index": 19939
+      },
+      "publicationCount": 1,
+      "publicationYears": [
+        2025
+      ],
+      "firstPublicationYear": 2025,
+      "latestPublicationYear": 2025,
+      "sampleDoi": "10.1016/j.seppur.2025.134157",
+      "sources": {
+        "crossref": {
+          "name": "Crossref REST API",
+          "url": "https://api.crossref.org/works/10.1016/j.seppur.2025.134157",
+          "retrievedAt": "2026-07-16T09:25:47.841311Z"
+        },
+        "openalex": {
+          "name": "OpenAlex Sources API",
+          "url": "https://openalex.org/S69753523",
+          "retrievedAt": "2026-07-16T09:25:48.858926Z"
+        }
+      },
+      "currentlyUsedInPublications": true
+    },
+    "solar-energy": {
+      "journalId": "solar-energy",
+      "title": "Solar Energy",
+      "aliases": [
+        "Solar Energy"
+      ],
+      "metricsByYear": {},
+      "abbreviation": "Solar Energy",
+      "publisher": "Elsevier BV",
+      "issn": "0038-092X",
+      "eissn": "",
+      "issnL": "0038-092X",
+      "allIssns": [
+        "0038-092X",
+        "1471-1257"
+      ],
+      "homepage": "https://www.journals.elsevier.com/solar-energy",
+      "countryCode": "US",
+      "journalType": "journal",
+      "isOpenAccess": false,
+      "isInDoaj": false,
+      "subjects": [],
+      "openAlexId": "S5745031",
+      "openAlexUrl": "https://openalex.org/S5745031",
+      "openAlexStats": {
+        "worksCount": 20258,
+        "citedByCount": 843560,
+        "twoYearMeanCitedness": 7.691446484549933,
+        "hIndex": 286,
+        "i10Index": 13085
+      },
+      "publicationCount": 1,
+      "publicationYears": [
+        2026
+      ],
+      "firstPublicationYear": 2026,
+      "latestPublicationYear": 2026,
+      "sampleDoi": "10.1016/j.solener.2026.114430",
+      "sources": {
+        "crossref": {
+          "name": "Crossref REST API",
+          "url": "https://api.crossref.org/works/10.1016/j.solener.2026.114430",
+          "retrievedAt": "2026-07-16T09:25:51.706609Z"
+        },
+        "openalex": {
+          "name": "OpenAlex Sources API",
+          "url": "https://openalex.org/S5745031",
+          "retrievedAt": "2026-07-16T09:25:52.714764Z"
+        }
+      },
+      "currentlyUsedInPublications": true
+    },
+    "solar-energy-materials-and-solar-cells": {
+      "journalId": "solar-energy-materials-and-solar-cells",
+      "title": "Solar Energy Materials and Solar Cells",
+      "aliases": [
+        "Solar Energy Materials and Solar Cells"
+      ],
+      "metricsByYear": {},
+      "abbreviation": "Solar Energy Materials and Solar Cells",
+      "publisher": "Elsevier BV",
+      "issn": "0927-0248",
+      "eissn": "",
+      "issnL": "0927-0248",
+      "allIssns": [
+        "0927-0248",
+        "1879-3398"
+      ],
+      "homepage": "https://www.sciencedirect.com/journal/solar-energy-materials-and-solar-cellsnals&journal=09270248",
+      "countryCode": "NL",
+      "journalType": "journal",
+      "isOpenAccess": false,
+      "isInDoaj": false,
+      "subjects": [],
+      "openAlexId": "S166040772",
+      "openAlexUrl": "https://openalex.org/S166040772",
+      "openAlexStats": {
+        "worksCount": 13982,
+        "citedByCount": 599134,
+        "twoYearMeanCitedness": 6.855108359133127,
+        "hIndex": 248,
+        "i10Index": 9851
+      },
+      "publicationCount": 2,
+      "publicationYears": [
+        2009,
+        2026
+      ],
+      "firstPublicationYear": 2009,
+      "latestPublicationYear": 2026,
+      "sampleDoi": "10.1016/j.solmat.2025.114015",
+      "sources": {
+        "crossref": {
+          "name": "Crossref REST API",
+          "url": "https://api.crossref.org/works/10.1016/j.solmat.2025.114015",
+          "retrievedAt": "2026-07-16T09:25:55.915082Z"
+        },
+        "openalex": {
+          "name": "OpenAlex Sources API",
+          "url": "https://openalex.org/S166040772",
+          "retrievedAt": "2026-07-16T09:25:56.899995Z"
+        }
+      },
+      "currentlyUsedInPublications": true
+    },
+    "solar-rrl": {
+      "journalId": "solar-rrl",
+      "title": "Solar RRL",
+      "aliases": [
+        "Solar RRL"
+      ],
+      "metricsByYear": {},
+      "abbreviation": "Solar RRL",
+      "publisher": "Wiley",
+      "issn": "2367-198X",
+      "eissn": "2367-198X",
+      "issnL": "2367-198X",
+      "allIssns": [
+        "2367-198X"
+      ],
+      "homepage": "https://onlinelibrary.wiley.com/journal/2367198X",
+      "countryCode": "DE",
+      "journalType": "journal",
+      "isOpenAccess": false,
+      "isInDoaj": false,
+      "subjects": [],
+      "openAlexId": "S4210176222",
+      "openAlexUrl": "https://openalex.org/S4210176222",
+      "openAlexStats": {
+        "worksCount": 3999,
+        "citedByCount": 77797,
+        "twoYearMeanCitedness": 4.127118644067797,
+        "hIndex": 99,
+        "i10Index": 2045
+      },
+      "publicationCount": 2,
+      "publicationYears": [
+        2024,
+        2025
+      ],
+      "firstPublicationYear": 2024,
+      "latestPublicationYear": 2025,
+      "sampleDoi": "10.1002/solr.202500538",
+      "sources": {
+        "crossref": {
+          "name": "Crossref REST API",
+          "url": "https://api.crossref.org/works/10.1002/solr.202500538",
+          "retrievedAt": "2026-07-16T09:25:59.847578Z"
+        },
+        "openalex": {
+          "name": "OpenAlex Sources API",
+          "url": "https://openalex.org/S4210176222",
+          "retrievedAt": "2026-07-16T09:26:00.812704Z"
+        }
+      },
+      "currentlyUsedInPublications": true
+    },
+    "the-journal-of-physical-chemistry-c": {
+      "journalId": "the-journal-of-physical-chemistry-c",
+      "title": "The Journal of Physical Chemistry C",
+      "aliases": [
+        "The Journal of Physical Chemistry C",
+        "J. Phys. Chem. C"
+      ],
+      "metricsByYear": {},
+      "abbreviation": "J. Phys. Chem. C",
+      "publisher": "American Chemical Society",
+      "issn": "1932-7447",
+      "eissn": "1932-7455",
+      "issnL": "1932-7447",
+      "allIssns": [
+        "1932-7447",
+        "1932-7455"
+      ],
+      "homepage": "http://pubs.acs.org/journals/jpccck/index.html",
+      "countryCode": "US",
+      "journalType": "journal",
+      "isOpenAccess": false,
+      "isInDoaj": false,
+      "subjects": [],
+      "openAlexId": "S95739953",
+      "openAlexUrl": "https://openalex.org/S95739953",
+      "openAlexStats": {
+        "worksCount": 59307,
+        "citedByCount": 2335717,
+        "twoYearMeanCitedness": 3.508450197770586,
+        "hIndex": 370,
+        "i10Index": 42475
+      },
+      "publicationCount": 1,
+      "publicationYears": [
+        2008
+      ],
+      "firstPublicationYear": 2008,
+      "latestPublicationYear": 2008,
+      "sampleDoi": "10.1021/jp805239k",
+      "sources": {
+        "crossref": {
+          "name": "Crossref REST API",
+          "url": "https://api.crossref.org/works/10.1021/jp805239k",
+          "retrievedAt": "2026-07-16T09:26:03.521040Z"
+        },
+        "openalex": {
+          "name": "OpenAlex Sources API",
+          "url": "https://openalex.org/S95739953",
+          "retrievedAt": "2026-07-16T09:26:04.503551Z"
+        }
+      },
+      "currentlyUsedInPublications": true
+    },
+    "thin-solid-films": {
+      "journalId": "thin-solid-films",
+      "title": "Thin Solid Films",
+      "aliases": [
+        "Thin Solid Films"
+      ],
+      "metricsByYear": {},
+      "abbreviation": "Thin Solid Films",
+      "publisher": "Elsevier BV",
+      "issn": "0040-6090",
+      "eissn": "",
+      "issnL": "0040-6090",
+      "allIssns": [
+        "0040-6090",
+        "1879-2731"
+      ],
+      "homepage": "http://www.journals.elsevier.com/thin-solid-films/",
+      "countryCode": "NL",
+      "journalType": "journal",
+      "isOpenAccess": false,
+      "isInDoaj": false,
+      "subjects": [],
+      "openAlexId": "S84339699",
+      "openAlexUrl": "https://openalex.org/S84339699",
+      "openAlexStats": {
+        "worksCount": 47358,
+        "citedByCount": 1104589,
+        "twoYearMeanCitedness": 2.5737951807228914,
+        "hIndex": 253,
+        "i10Index": 26382
+      },
+      "publicationCount": 1,
+      "publicationYears": [
+        2010
+      ],
+      "firstPublicationYear": 2010,
+      "latestPublicationYear": 2010,
+      "sampleDoi": "10.1016/j.tsf.2009.11.058",
+      "sources": {
+        "crossref": {
+          "name": "Crossref REST API",
+          "url": "https://api.crossref.org/works/10.1016/j.tsf.2009.11.058",
+          "retrievedAt": "2026-07-16T09:26:07.353080Z"
+        },
+        "openalex": {
+          "name": "OpenAlex Sources API",
+          "url": "https://openalex.org/S84339699",
+          "retrievedAt": "2026-07-16T09:26:08.362813Z"
+        }
+      },
+      "currentlyUsedInPublications": true
+    }
+  }
 }
