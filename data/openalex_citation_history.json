@@ -2,59 +2,96 @@
   "schemaVersion": 1,
   "source": "OpenAlex Works API",
   "status": "success",
-  "lastSuccessfulUpdate": "2026-07-16T08:22:32.895614Z",
+  "lastSuccessfulUpdate": "2026-07-16T08:28:27.257222Z",
   "workCount": 37,
-  "totalCitationsFromHistory": 251,
+  "totalCitationsFromHistory": 985,
   "totalCitationsFromPublicationMetrics": 985,
-  "validationDifference": -734,
+  "validationDifference": 0,
+  "unassignedCitationCount": 0,
   "citationsByYear": [
+    {
+      "year": 1987,
+      "citations": 1
+    },
     {
       "year": 2007,
       "citations": 1
     },
     {
+      "year": 2008,
+      "citations": 2
+    },
+    {
+      "year": 2009,
+      "citations": 15
+    },
+    {
       "year": 2010,
-      "citations": 13
+      "citations": 39
     },
     {
       "year": 2011,
-      "citations": 6
+      "citations": 61
     },
     {
       "year": 2012,
-      "citations": 7
+      "citations": 83
     },
     {
       "year": 2013,
-      "citations": 55
+      "citations": 93
     },
     {
       "year": 2014,
-      "citations": 32
+      "citations": 97
+    },
+    {
+      "year": 2015,
+      "citations": 70
+    },
+    {
+      "year": 2016,
+      "citations": 48
     },
     {
       "year": 2017,
-      "citations": 6
+      "citations": 46
+    },
+    {
+      "year": 2018,
+      "citations": 32
+    },
+    {
+      "year": 2019,
+      "citations": 34
+    },
+    {
+      "year": 2020,
+      "citations": 17
+    },
+    {
+      "year": 2021,
+      "citations": 18
     },
     {
       "year": 2022,
-      "citations": 20
+      "citations": 43
     },
     {
       "year": 2023,
-      "citations": 12
+      "citations": 65
     },
     {
       "year": 2024,
-      "citations": 38
+      "citations": 78
     },
     {
       "year": 2025,
-      "citations": 36
+      "citations": 91
     },
     {
       "year": 2026,
-      "citations": 25
+      "citations": 51
     }
   ],
   "works": {
@@ -64,11 +101,56 @@
       "currentCitationCount": 38,
       "citationsByYear": [
         {
+          "year": 2012,
+          "citations": 4
+        },
+        {
+          "year": 2013,
+          "citations": 4
+        },
+        {
+          "year": 2014,
+          "citations": 5
+        },
+        {
+          "year": 2015,
+          "citations": 5
+        },
+        {
+          "year": 2016,
+          "citations": 2
+        },
+        {
           "year": 2017,
           "citations": 6
+        },
+        {
+          "year": 2018,
+          "citations": 3
+        },
+        {
+          "year": 2019,
+          "citations": 1
+        },
+        {
+          "year": 2020,
+          "citations": 1
+        },
+        {
+          "year": 2021,
+          "citations": 1
+        },
+        {
+          "year": 2023,
+          "citations": 4
+        },
+        {
+          "year": 2024,
+          "citations": 2
         }
       ],
-      "historyTotal": 6
+      "historyTotal": 38,
+      "unassignedCitationCount": 0
     },
     "W2022329244": {
       "doi": "10.1016/j.optcom.2004.10.003",
@@ -78,9 +160,26 @@
         {
           "year": 2007,
           "citations": 1
+        },
+        {
+          "year": 2008,
+          "citations": 1
+        },
+        {
+          "year": 2014,
+          "citations": 1
+        },
+        {
+          "year": 2019,
+          "citations": 1
+        },
+        {
+          "year": 2020,
+          "citations": 1
         }
       ],
-      "historyTotal": 1
+      "historyTotal": 5,
+      "unassignedCitationCount": 0
     },
     "W2026340393": {
       "doi": "10.1016/j.jpowsour.2012.05.079",
@@ -90,9 +189,46 @@
         {
           "year": 2014,
           "citations": 3
+        },
+        {
+          "year": 2015,
+          "citations": 2
+        },
+        {
+          "year": 2016,
+          "citations": 3
+        },
+        {
+          "year": 2017,
+          "citations": 1
+        },
+        {
+          "year": 2019,
+          "citations": 2
+        },
+        {
+          "year": 2020,
+          "citations": 1
+        },
+        {
+          "year": 2021,
+          "citations": 1
+        },
+        {
+          "year": 2022,
+          "citations": 1
+        },
+        {
+          "year": 2023,
+          "citations": 1
+        },
+        {
+          "year": 2024,
+          "citations": 1
         }
       ],
-      "historyTotal": 3
+      "historyTotal": 16,
+      "unassignedCitationCount": 0
     },
     "W2053005710": {
       "doi": "10.1016/j.solmat.2009.07.017",
@@ -100,11 +236,60 @@
       "currentCitationCount": 40,
       "citationsByYear": [
         {
+          "year": 2009,
+          "citations": 1
+        },
+        {
+          "year": 2010,
+          "citations": 4
+        },
+        {
           "year": 2011,
           "citations": 6
+        },
+        {
+          "year": 2012,
+          "citations": 5
+        },
+        {
+          "year": 2013,
+          "citations": 6
+        },
+        {
+          "year": 2014,
+          "citations": 6
+        },
+        {
+          "year": 2015,
+          "citations": 1
+        },
+        {
+          "year": 2016,
+          "citations": 1
+        },
+        {
+          "year": 2017,
+          "citations": 3
+        },
+        {
+          "year": 2018,
+          "citations": 3
+        },
+        {
+          "year": 2019,
+          "citations": 2
+        },
+        {
+          "year": 2021,
+          "citations": 1
+        },
+        {
+          "year": 2023,
+          "citations": 1
         }
       ],
-      "historyTotal": 6
+      "historyTotal": 40,
+      "unassignedCitationCount": 0
     },
     "W2053567920": {
       "doi": "10.1016/j.jpowsour.2010.12.063",
@@ -112,11 +297,60 @@
       "currentCitationCount": 72,
       "citationsByYear": [
         {
+          "year": 2011,
+          "citations": 2
+        },
+        {
+          "year": 2012,
+          "citations": 9
+        },
+        {
+          "year": 2013,
+          "citations": 8
+        },
+        {
           "year": 2014,
           "citations": 15
+        },
+        {
+          "year": 2015,
+          "citations": 9
+        },
+        {
+          "year": 2016,
+          "citations": 5
+        },
+        {
+          "year": 2017,
+          "citations": 5
+        },
+        {
+          "year": 2018,
+          "citations": 5
+        },
+        {
+          "year": 2019,
+          "citations": 4
+        },
+        {
+          "year": 2021,
+          "citations": 2
+        },
+        {
+          "year": 2022,
+          "citations": 3
+        },
+        {
+          "year": 2023,
+          "citations": 3
+        },
+        {
+          "year": 2024,
+          "citations": 2
         }
       ],
-      "historyTotal": 15
+      "historyTotal": 72,
+      "unassignedCitationCount": 0
     },
     "W2055166593": {
       "doi": "10.1021/jp805239k",
@@ -124,11 +358,80 @@
       "currentCitationCount": 266,
       "citationsByYear": [
         {
+          "year": 2009,
+          "citations": 13
+        },
+        {
+          "year": 2010,
+          "citations": 19
+        },
+        {
+          "year": 2011,
+          "citations": 27
+        },
+        {
+          "year": 2012,
+          "citations": 31
+        },
+        {
           "year": 2013,
           "citations": 42
+        },
+        {
+          "year": 2014,
+          "citations": 29
+        },
+        {
+          "year": 2015,
+          "citations": 20
+        },
+        {
+          "year": 2016,
+          "citations": 20
+        },
+        {
+          "year": 2017,
+          "citations": 12
+        },
+        {
+          "year": 2018,
+          "citations": 10
+        },
+        {
+          "year": 2019,
+          "citations": 13
+        },
+        {
+          "year": 2020,
+          "citations": 6
+        },
+        {
+          "year": 2021,
+          "citations": 3
+        },
+        {
+          "year": 2022,
+          "citations": 8
+        },
+        {
+          "year": 2023,
+          "citations": 6
+        },
+        {
+          "year": 2024,
+          "citations": 5
+        },
+        {
+          "year": 2025,
+          "citations": 1
+        },
+        {
+          "year": 2026,
+          "citations": 1
         }
       ],
-      "historyTotal": 42
+      "historyTotal": 266,
+      "unassignedCitationCount": 0
     },
     "W2055510369": {
       "doi": "10.1016/j.tsf.2009.11.058",
@@ -136,11 +439,72 @@
       "currentCitationCount": 89,
       "citationsByYear": [
         {
+          "year": 2010,
+          "citations": 3
+        },
+        {
+          "year": 2011,
+          "citations": 10
+        },
+        {
+          "year": 2012,
+          "citations": 8
+        },
+        {
           "year": 2013,
           "citations": 13
+        },
+        {
+          "year": 2014,
+          "citations": 11
+        },
+        {
+          "year": 2015,
+          "citations": 9
+        },
+        {
+          "year": 2016,
+          "citations": 3
+        },
+        {
+          "year": 2017,
+          "citations": 5
+        },
+        {
+          "year": 2018,
+          "citations": 4
+        },
+        {
+          "year": 2019,
+          "citations": 6
+        },
+        {
+          "year": 2020,
+          "citations": 3
+        },
+        {
+          "year": 2021,
+          "citations": 3
+        },
+        {
+          "year": 2022,
+          "citations": 2
+        },
+        {
+          "year": 2023,
+          "citations": 2
+        },
+        {
+          "year": 2025,
+          "citations": 5
+        },
+        {
+          "year": 2026,
+          "citations": 2
         }
       ],
-      "historyTotal": 13
+      "historyTotal": 89,
+      "unassignedCitationCount": 0
     },
     "W2075277742": {
       "doi": "10.1039/c0jm04099a",
@@ -148,11 +512,64 @@
       "currentCitationCount": 57,
       "citationsByYear": [
         {
+          "year": 1987,
+          "citations": 1
+        },
+        {
+          "year": 2011,
+          "citations": 5
+        },
+        {
+          "year": 2012,
+          "citations": 8
+        },
+        {
+          "year": 2013,
+          "citations": 7
+        },
+        {
           "year": 2014,
           "citations": 10
+        },
+        {
+          "year": 2015,
+          "citations": 9
+        },
+        {
+          "year": 2016,
+          "citations": 5
+        },
+        {
+          "year": 2017,
+          "citations": 3
+        },
+        {
+          "year": 2018,
+          "citations": 1
+        },
+        {
+          "year": 2019,
+          "citations": 2
+        },
+        {
+          "year": 2020,
+          "citations": 1
+        },
+        {
+          "year": 2022,
+          "citations": 2
+        },
+        {
+          "year": 2023,
+          "citations": 2
+        },
+        {
+          "year": 2024,
+          "citations": 1
         }
       ],
-      "historyTotal": 10
+      "historyTotal": 57,
+      "unassignedCitationCount": 0
     },
     "W2088552273": {
       "doi": "10.1016/j.electacta.2010.07.061",
@@ -160,11 +577,64 @@
       "currentCitationCount": 39,
       "citationsByYear": [
         {
+          "year": 2011,
+          "citations": 2
+        },
+        {
           "year": 2012,
           "citations": 7
+        },
+        {
+          "year": 2013,
+          "citations": 3
+        },
+        {
+          "year": 2014,
+          "citations": 3
+        },
+        {
+          "year": 2015,
+          "citations": 6
+        },
+        {
+          "year": 2016,
+          "citations": 4
+        },
+        {
+          "year": 2017,
+          "citations": 3
+        },
+        {
+          "year": 2018,
+          "citations": 2
+        },
+        {
+          "year": 2019,
+          "citations": 2
+        },
+        {
+          "year": 2020,
+          "citations": 2
+        },
+        {
+          "year": 2021,
+          "citations": 1
+        },
+        {
+          "year": 2022,
+          "citations": 1
+        },
+        {
+          "year": 2025,
+          "citations": 2
+        },
+        {
+          "year": 2026,
+          "citations": 1
         }
       ],
-      "historyTotal": 7
+      "historyTotal": 39,
+      "unassignedCitationCount": 0
     },
     "W2145010429": {
       "doi": "10.1039/b902595m",
@@ -172,11 +642,72 @@
       "currentCitationCount": 81,
       "citationsByYear": [
         {
+          "year": 2008,
+          "citations": 1
+        },
+        {
+          "year": 2009,
+          "citations": 1
+        },
+        {
           "year": 2010,
           "citations": 13
+        },
+        {
+          "year": 2011,
+          "citations": 9
+        },
+        {
+          "year": 2012,
+          "citations": 11
+        },
+        {
+          "year": 2013,
+          "citations": 9
+        },
+        {
+          "year": 2014,
+          "citations": 10
+        },
+        {
+          "year": 2015,
+          "citations": 5
+        },
+        {
+          "year": 2016,
+          "citations": 4
+        },
+        {
+          "year": 2017,
+          "citations": 7
+        },
+        {
+          "year": 2018,
+          "citations": 2
+        },
+        {
+          "year": 2019,
+          "citations": 1
+        },
+        {
+          "year": 2020,
+          "citations": 2
+        },
+        {
+          "year": 2021,
+          "citations": 3
+        },
+        {
+          "year": 2023,
+          "citations": 2
+        },
+        {
+          "year": 2025,
+          "citations": 1
         }
       ],
-      "historyTotal": 13
+      "historyTotal": 81,
+      "unassignedCitationCount": 0
     },
     "W2149766360": {
       "doi": "10.1016/j.jpowsour.2012.12.094",
@@ -184,11 +715,36 @@
       "currentCitationCount": 14,
       "citationsByYear": [
         {
+          "year": 2013,
+          "citations": 1
+        },
+        {
           "year": 2014,
           "citations": 4
+        },
+        {
+          "year": 2015,
+          "citations": 4
+        },
+        {
+          "year": 2016,
+          "citations": 1
+        },
+        {
+          "year": 2017,
+          "citations": 1
+        },
+        {
+          "year": 2018,
+          "citations": 2
+        },
+        {
+          "year": 2023,
+          "citations": 1
         }
       ],
-      "historyTotal": 4
+      "historyTotal": 14,
+      "unassignedCitationCount": 0
     },
     "W3174093177": {
       "doi": "10.3390/nano11061607",
@@ -196,11 +752,24 @@
       "currentCitationCount": 8,
       "citationsByYear": [
         {
+          "year": 2021,
+          "citations": 1
+        },
+        {
           "year": 2022,
           "citations": 4
+        },
+        {
+          "year": 2023,
+          "citations": 2
+        },
+        {
+          "year": 2026,
+          "citations": 1
         }
       ],
-      "historyTotal": 4
+      "historyTotal": 8,
+      "unassignedCitationCount": 0
     },
     "W3187467581": {
       "doi": "10.1016/j.cej.2021.131609",
@@ -208,11 +777,32 @@
       "currentCitationCount": 58,
       "citationsByYear": [
         {
+          "year": 2021,
+          "citations": 2
+        },
+        {
           "year": 2022,
           "citations": 16
+        },
+        {
+          "year": 2023,
+          "citations": 16
+        },
+        {
+          "year": 2024,
+          "citations": 11
+        },
+        {
+          "year": 2025,
+          "citations": 10
+        },
+        {
+          "year": 2026,
+          "citations": 3
         }
       ],
-      "historyTotal": 16
+      "historyTotal": 58,
+      "unassignedCitationCount": 0
     },
     "W3195032786": {
       "doi": "10.3390/nano11082125",
@@ -220,11 +810,28 @@
       "currentCitationCount": 11,
       "citationsByYear": [
         {
+          "year": 2022,
+          "citations": 1
+        },
+        {
           "year": 2023,
           "citations": 4
+        },
+        {
+          "year": 2024,
+          "citations": 2
+        },
+        {
+          "year": 2025,
+          "citations": 2
+        },
+        {
+          "year": 2026,
+          "citations": 2
         }
       ],
-      "historyTotal": 4
+      "historyTotal": 11,
+      "unassignedCitationCount": 0
     },
     "W4200568401": {
       "doi": "10.3390/polym13234246",
@@ -232,11 +839,24 @@
       "currentCitationCount": 18,
       "citationsByYear": [
         {
+          "year": 2022,
+          "citations": 4
+        },
+        {
           "year": 2023,
           "citations": 6
+        },
+        {
+          "year": 2024,
+          "citations": 5
+        },
+        {
+          "year": 2025,
+          "citations": 3
         }
       ],
-      "historyTotal": 6
+      "historyTotal": 18,
+      "unassignedCitationCount": 0
     },
     "W4224023899": {
       "doi": "10.3390/polym14081580",
@@ -246,9 +866,14 @@
         {
           "year": 2023,
           "citations": 2
+        },
+        {
+          "year": 2026,
+          "citations": 1
         }
       ],
-      "historyTotal": 2
+      "historyTotal": 3,
+      "unassignedCitationCount": 0
     },
     "W4289524742": {
       "doi": "10.3390/nano12152651",
@@ -256,11 +881,20 @@
       "currentCitationCount": 10,
       "citationsByYear": [
         {
+          "year": 2023,
+          "citations": 2
+        },
+        {
           "year": 2024,
           "citations": 5
+        },
+        {
+          "year": 2025,
+          "citations": 3
         }
       ],
-      "historyTotal": 5
+      "historyTotal": 10,
+      "unassignedCitationCount": 0
     },
     "W4308038509": {
       "doi": "10.1016/j.cej.2022.139926",
@@ -268,11 +902,28 @@
       "currentCitationCount": 33,
       "citationsByYear": [
         {
+          "year": 2022,
+          "citations": 1
+        },
+        {
+          "year": 2023,
+          "citations": 7
+        },
+        {
           "year": 2024,
           "citations": 13
+        },
+        {
+          "year": 2025,
+          "citations": 7
+        },
+        {
+          "year": 2026,
+          "citations": 5
         }
       ],
-      "historyTotal": 13
+      "historyTotal": 33,
+      "unassignedCitationCount": 0
     },
     "W4376619834": {
       "doi": "10.1016/j.orgel.2023.106847",
@@ -280,11 +931,24 @@
       "currentCitationCount": 11,
       "citationsByYear": [
         {
+          "year": 2023,
+          "citations": 1
+        },
+        {
+          "year": 2024,
+          "citations": 3
+        },
+        {
           "year": 2025,
           "citations": 4
+        },
+        {
+          "year": 2026,
+          "citations": 3
         }
       ],
-      "historyTotal": 4
+      "historyTotal": 11,
+      "unassignedCitationCount": 0
     },
     "W4385381207": {
       "doi": "10.1002/adfm.202306367",
@@ -292,11 +956,20 @@
       "currentCitationCount": 36,
       "citationsByYear": [
         {
+          "year": 2023,
+          "citations": 3
+        },
+        {
           "year": 2024,
           "citations": 20
+        },
+        {
+          "year": 2025,
+          "citations": 13
         }
       ],
-      "historyTotal": 20
+      "historyTotal": 36,
+      "unassignedCitationCount": 0
     },
     "W4385773304": {
       "doi": "10.1016/j.jpowsour.2023.233496",
@@ -304,18 +977,28 @@
       "currentCitationCount": 10,
       "citationsByYear": [
         {
+          "year": 2024,
+          "citations": 3
+        },
+        {
+          "year": 2025,
+          "citations": 2
+        },
+        {
           "year": 2026,
           "citations": 5
         }
       ],
-      "historyTotal": 5
+      "historyTotal": 10,
+      "unassignedCitationCount": 0
     },
     "W4386592311": {
       "doi": "10.1002/asia.202300681",
       "title": "New Molecular Design, Step‐Saving Synthesis, and Applications of Indolocarbazole Core‐Based Oligo(hetero)arenes",
       "currentCitationCount": 0,
       "citationsByYear": [],
-      "historyTotal": 0
+      "historyTotal": 0,
+      "unassignedCitationCount": 0
     },
     "W4388655704": {
       "doi": "10.1039/d3cc04699k",
@@ -323,18 +1006,24 @@
       "currentCitationCount": 10,
       "citationsByYear": [
         {
+          "year": 2024,
+          "citations": 2
+        },
+        {
           "year": 2025,
           "citations": 8
         }
       ],
-      "historyTotal": 8
+      "historyTotal": 10,
+      "unassignedCitationCount": 0
     },
     "W4389856655": {
       "doi": "10.1016/j.jece.2023.111741",
       "title": "Additive-free electroless deposition on graphene/copper foil: Photo-induced and defect-assisted approach for environmentally friendly plating",
       "currentCitationCount": 0,
       "citationsByYear": [],
-      "historyTotal": 0
+      "historyTotal": 0,
+      "unassignedCitationCount": 0
     },
     "W4391230843": {
       "doi": "10.1002/solr.202300988",
@@ -342,11 +1031,20 @@
       "currentCitationCount": 10,
       "citationsByYear": [
         {
+          "year": 2024,
+          "citations": 1
+        },
+        {
           "year": 2025,
           "citations": 7
+        },
+        {
+          "year": 2026,
+          "citations": 2
         }
       ],
-      "historyTotal": 7
+      "historyTotal": 10,
+      "unassignedCitationCount": 0
     },
     "W4400613411": {
       "doi": "10.1016/j.cej.2024.153974",
@@ -354,11 +1052,20 @@
       "currentCitationCount": 13,
       "citationsByYear": [
         {
+          "year": 2024,
+          "citations": 2
+        },
+        {
+          "year": 2025,
+          "citations": 4
+        },
+        {
           "year": 2026,
           "citations": 7
         }
       ],
-      "historyTotal": 7
+      "historyTotal": 13,
+      "unassignedCitationCount": 0
     },
     "W4402883453": {
       "doi": "10.1016/j.mtchem.2024.102329",
@@ -368,9 +1075,14 @@
         {
           "year": 2025,
           "citations": 5
+        },
+        {
+          "year": 2026,
+          "citations": 2
         }
       ],
-      "historyTotal": 5
+      "historyTotal": 7,
+      "unassignedCitationCount": 0
     },
     "W4404830134": {
       "doi": "10.1002/advs.202410666",
@@ -380,16 +1092,22 @@
         {
           "year": 2025,
           "citations": 12
+        },
+        {
+          "year": 2026,
+          "citations": 3
         }
       ],
-      "historyTotal": 12
+      "historyTotal": 15,
+      "unassignedCitationCount": 0
     },
     "W4411365246": {
       "doi": "10.1002/asia.202500719",
       "title": "Asymmetric Fluorinated Cyclopenta[2,1‐b:3,4‐b']Dithiophene‐Based Hole‐Transporting Materials for Perovskite Solar Cell",
       "currentCitationCount": 0,
       "citationsByYear": [],
-      "historyTotal": 0
+      "historyTotal": 0,
+      "unassignedCitationCount": 0
     },
     "W4411847970": {
       "doi": "10.1016/j.seppur.2025.134157",
@@ -397,18 +1115,24 @@
       "currentCitationCount": 5,
       "citationsByYear": [
         {
+          "year": 2025,
+          "citations": 1
+        },
+        {
           "year": 2026,
           "citations": 4
         }
       ],
-      "historyTotal": 4
+      "historyTotal": 5,
+      "unassignedCitationCount": 0
     },
     "W4413117344": {
       "doi": "10.1002/asia.70245",
       "title": "Fused Dithienoheterocycle‐Based Hole‐Transporting Materials for Efficient Perovskite Solar Cells",
       "currentCitationCount": 0,
       "citationsByYear": [],
-      "historyTotal": 0
+      "historyTotal": 0,
+      "unassignedCitationCount": 0
     },
     "W4415028078": {
       "doi": "10.1002/solr.202500538",
@@ -420,7 +1144,8 @@
           "citations": 1
         }
       ],
-      "historyTotal": 1
+      "historyTotal": 1,
+      "unassignedCitationCount": 0
     },
     "W4415443362": {
       "doi": "10.1016/j.solmat.2025.114015",
@@ -428,11 +1153,16 @@
       "currentCitationCount": 8,
       "citationsByYear": [
         {
+          "year": 2025,
+          "citations": 1
+        },
+        {
           "year": 2026,
           "citations": 7
         }
       ],
-      "historyTotal": 7
+      "historyTotal": 8,
+      "unassignedCitationCount": 0
     },
     "W7118007754": {
       "doi": "10.1016/j.jpowsour.2025.239216",
@@ -444,28 +1174,32 @@
           "citations": 1
         }
       ],
-      "historyTotal": 1
+      "historyTotal": 1,
+      "unassignedCitationCount": 0
     },
     "W7131315395": {
       "doi": "10.1016/j.solener.2026.114430",
       "title": "Synergistic preheating and moderate temperature liquid medium annealing for high performance perovskite solar cells",
       "currentCitationCount": 0,
       "citationsByYear": [],
-      "historyTotal": 0
+      "historyTotal": 0,
+      "unassignedCitationCount": 0
     },
     "W7161569160": {
       "doi": "10.1016/j.cej.2026.177494",
       "title": "Reliability enhancement of PVDF-HFP modified perovskite solar cells under synergistic space-relevant stress conditions",
       "currentCitationCount": 0,
       "citationsByYear": [],
-      "historyTotal": 0
+      "historyTotal": 0,
+      "unassignedCitationCount": 0
     },
     "W7168190148": {
       "doi": "10.1016/j.mtener.2026.102359",
       "title": "2T Perovskite Tandem Solar Cells in Space: Failure Mechanisms and Design Strategies",
       "currentCitationCount": 0,
       "citationsByYear": [],
-      "historyTotal": 0
+      "historyTotal": 0,
+      "unassignedCitationCount": 0
     }
   }
 }
