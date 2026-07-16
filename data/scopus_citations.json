@@ -1,9 +1,12 @@
 {
   "source": "Scopus",
   "api": "Scopus Citation Count Metadata API",
-  "lastAttempt": "2026-07-16T08:31:58+08:00",
+  "lastAttempt": "2026-07-16T08:39:58+08:00",
   "lastSuccessfulUpdate": null,
-  "status": "configuration required: add SCOPUS_API_KEY to GitHub Actions secrets",
+  "status": "update skipped; previous verified values retained",
   "verifiedRecords": 0,
-  "records": {}
+  "records": {},
+  "warnings": [
+    "Scopus API denied access (403)"
+  ]
 }
