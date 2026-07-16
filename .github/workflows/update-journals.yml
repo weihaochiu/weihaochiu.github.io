@@ -1,0 +1,94 @@
+name: Update journal metadata
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "data/publications.json"
+  schedule:
+    # 03:17 UTC on the first day of each month = 11:17 Asia/Taipei.
+    - cron: "17 3 1 * *"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Update mode"
+        required: true
+        default: "refresh"
+        type: choice
+        options:
+          - refresh
+          - missing
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-journal-metadata
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install requests beautifulsoup4
+
+      - name: Select update mode
+        id: update-mode
+        shell: bash
+        run: |
+          if [[ "${{ github.event_name }}" == "push" ]]; then
+            MODE="missing"
+          elif [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            MODE="${{ inputs.mode }}"
+          else
+            MODE="refresh"
+          fi
+          echo "mode=${MODE}" >> "$GITHUB_OUTPUT"
+          echo "Selected mode: ${MODE}"
+
+      - name: Update journals JSON
+        env:
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+          CONTACT_EMAIL: "weihao.chiu@gmail.com"
+        run: |
+          python scripts/update_journals.py \
+            --mode "${{ steps.update-mode.outputs.mode }}" \
+            --report "/tmp/journal_update_report.json"
+
+      - name: Upload update report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: journal-update-report
+          path: /tmp/journal_update_report.json
+          if-no-files-found: ignore
+          retention-days: 30
+
+      - name: Commit journal data when changed
+        shell: bash
+        run: |
+          git add data/journals.json
+          if git diff --cached --quiet; then
+            echo "No journal metadata changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update journal metadata"
+          git push
