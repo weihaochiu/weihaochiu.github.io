@@ -10,6 +10,9 @@ on:
     paths:
       - ".github/workflows/update-openalex-stats.yml"
       - "scripts/update_openalex_stats.py"
+      - "scripts/update_openalex_publications.py"
+      - "assets/js/openalex-publications.js"
+      - "data/publications.json"
 
 permissions:
   contents: write
@@ -23,10 +26,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
@@ -36,14 +39,25 @@ jobs:
           OPENALEX_MAILTO: ${{ secrets.OPENALEX_MAILTO }}
         run: python scripts/update_openalex_stats.py
 
+      - name: Fetch per-publication OpenAlex citations
+        env:
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+          OPENALEX_MAILTO: ${{ secrets.OPENALEX_MAILTO }}
+        run: python scripts/update_openalex_publications.py
+
       - name: Commit updated metrics when changed
         run: |
-          if git diff --quiet -- data/openalex_metrics.json; then
+          FILES=(
+            data/openalex_metrics.json
+            data/openalex_publication_metrics.json
+            publications.html
+          )
+          if [ -z "$(git status --porcelain -- "${FILES[@]}")" ]; then
             echo "OpenAlex metrics have not changed."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/openalex_metrics.json
-          git commit -m "Update OpenAlex author metrics"
+          git add "${FILES[@]}"
+          git commit -m "Update OpenAlex author and publication metrics"
           git push
