@@ -1,18 +1,19 @@
 from __future__ import annotations
 
 import argparse
+import copy
 import hashlib
 import json
 import os
 import re
 import time
 import unicodedata
-from collections import defaultdict
+from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from difflib import SequenceMatcher
 from pathlib import Path
 from typing import Any
-from urllib.parse import urljoin
+from urllib.parse import quote_plus, urljoin
 
 import requests
 from bs4 import BeautifulSoup
@@ -25,17 +26,31 @@ JOURNALS_PATH = Path("data/journals.json")
 
 CROSSREF_WORKS_URL = "https://api.crossref.org/works"
 OPENALEX_SOURCES_URL = "https://api.openalex.org/sources"
+JOURNALMETRICS_BASE_URL = "https://www.journalmetrics.org"
+BIOXBIO_BASE_URL = "https://www.bioxbio.com"
 MANUSIGHTS_BASE_URL = "https://manusights.com"
+JOURNALSEARCHES_URL = "https://journalsearches.com/journal.php"
 
 CONTACT_EMAIL = os.environ.get("CONTACT_EMAIL", "weihao.chiu@gmail.com").strip()
 OPENALEX_API_KEY = os.environ.get("OPENALEX_API_KEY", "").strip()
-
-REQUEST_DELAY_SECONDS = 0.65
+REQUEST_DELAY_SECONDS = 0.55
 USER_AGENT = (
-    "Wei-Hao-Chiu-Academic-Website/1.0 "
+    "Wei-Hao-Chiu-Academic-Website/2.0 "
     f"(journal metadata updater; mailto:{CONTACT_EMAIL})"
 )
 
+SOURCE_PRIORITY = {
+    "JournalMetrics.org": 100,
+    "Bioxbio": 90,
+    "Manusights": 80,
+    "JournalSearches": 60,
+    "existing": 10,
+}
+
+
+# ---------------------------------------------------------------------------
+# Generic helpers
+# ---------------------------------------------------------------------------
 
 def utc_now() -> str:
     return datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
@@ -47,31 +62,30 @@ def compact_whitespace(value: Any) -> str:
 
 def ascii_text(value: Any) -> str:
     text = unicodedata.normalize("NFKD", compact_whitespace(value))
-    return "".join(character for character in text if not unicodedata.combining(character))
+    return "".join(
+        character for character in text if not unicodedata.combining(character)
+    )
 
 
 def normalize_name(value: Any) -> str:
-    text = ascii_text(value).lower()
-    text = text.replace("&", " and ")
+    text = ascii_text(value).lower().replace("&", " and ")
     return re.sub(r"[^a-z0-9]+", "", text)
 
 
 def slugify(value: Any) -> str:
     text = ascii_text(value).lower().replace("&", " and ")
-    text = re.sub(r"[^a-z0-9]+", "-", text).strip("-")
-    return text or "journal"
+    return re.sub(r"[^a-z0-9]+", "-", text).strip("-") or "journal"
 
 
 def normalize_doi(value: Any) -> str:
     text = compact_whitespace(value).lower()
-    prefixes = (
+    for prefix in (
         "https://doi.org/",
         "http://doi.org/",
         "https://dx.doi.org/",
         "http://dx.doi.org/",
         "doi:",
-    )
-    for prefix in prefixes:
+    ):
         if text.startswith(prefix):
             text = text[len(prefix):]
             break
@@ -113,6 +127,16 @@ def unique_strings(values: list[Any]) -> list[str]:
     return output
 
 
+def similarity(left: Any, right: Any) -> float:
+    left_normalized = normalize_name(left)
+    right_normalized = normalize_name(right)
+    if not left_normalized or not right_normalized:
+        return 0.0
+    if left_normalized == right_normalized:
+        return 1.0
+    return SequenceMatcher(None, left_normalized, right_normalized).ratio()
+
+
 def load_json(path: Path, default: Any = None) -> Any:
     if not path.exists():
         return default
@@ -127,6 +151,31 @@ def write_json_atomic(path: Path, payload: Any) -> None:
         encoding="utf-8",
     )
     temporary.replace(path)
+
+
+def clean_nulls(value: Any) -> Any:
+    if isinstance(value, dict):
+        return {
+            key: clean_nulls(item)
+            for key, item in value.items()
+            if item is not None
+        }
+    if isinstance(value, list):
+        return [clean_nulls(item) for item in value]
+    return value
+
+
+def semantic_copy(payload: Any) -> Any:
+    """Remove volatile timestamps before deciding whether data changed."""
+    if isinstance(payload, dict):
+        return {
+            key: semantic_copy(value)
+            for key, value in payload.items()
+            if key not in {"lastUpdated", "retrievedAt", "lastCheckedAt"}
+        }
+    if isinstance(payload, list):
+        return [semantic_copy(value) for value in payload]
+    return payload
 
 
 def build_session() -> requests.Session:
@@ -156,11 +205,11 @@ def safe_get(
     url: str,
     *,
     params: dict[str, Any] | None = None,
-    timeout: int = 45,
+    timeout: int = 50,
 ) -> requests.Response | None:
     try:
         response = session.get(url, params=params, timeout=timeout)
-        if response.status_code == 404:
+        if response.status_code in {403, 404, 410}:
             return None
         response.raise_for_status()
         return response
@@ -171,21 +220,48 @@ def safe_get(
         time.sleep(REQUEST_DELAY_SECONDS)
 
 
+def source_info(name: str, url: str, **extra: Any) -> dict[str, Any]:
+    return clean_nulls(
+        {
+            "name": name,
+            "url": url,
+            "type": "secondary-source",
+            "verificationStatus": "secondary-source",
+            "retrievedAt": utc_now(),
+            **extra,
+        }
+    )
+
+
+def merge_source_snapshot(
+    existing_sources: dict[str, Any],
+    key: str,
+    new_source: dict[str, Any] | None,
+) -> None:
+    if not new_source:
+        return
+    previous = existing_sources.get(key)
+    if previous and semantic_copy(previous) == semantic_copy(new_source):
+        return
+    existing_sources[key] = new_source
+
+
+# ---------------------------------------------------------------------------
+# Publication-derived journal list
+# ---------------------------------------------------------------------------
+
 def load_publication_groups() -> dict[str, dict[str, Any]]:
     rows = load_json(PUBLICATIONS_PATH)
     if not isinstance(rows, list):
         raise RuntimeError(f"{PUBLICATIONS_PATH} must contain a JSON array.")
 
     groups: dict[str, dict[str, Any]] = {}
-
     for row in rows:
         if not isinstance(row, dict):
             continue
-
         title = compact_whitespace(row.get("journal"))
         if not title:
             continue
-
         normalized = normalize_name(title)
         if not normalized:
             continue
@@ -197,41 +273,28 @@ def load_publication_groups() -> dict[str, dict[str, Any]]:
                 "publishers": [],
                 "years": [],
                 "dois": [],
-                "articleTitles": [],
             },
         )
-
         group["titleCandidates"].append(title)
         group["publishers"].append(row.get("publisher"))
         year = as_int(row.get("year"))
         if year and 1800 <= year <= 2200:
             group["years"].append(year)
-
         doi = normalize_doi(row.get("doi") or row.get("doiUrl"))
         if doi:
             group["dois"].append(doi)
 
-        article_title = compact_whitespace(row.get("title"))
-        if article_title:
-            group["articleTitles"].append(article_title)
-
-    for normalized, group in groups.items():
-        title_counts: dict[str, int] = defaultdict(int)
-        for title in group["titleCandidates"]:
-            title_counts[title] += 1
-
+    for group in groups.values():
+        title_counts = Counter(group["titleCandidates"])
         canonical_title = sorted(
             title_counts,
             key=lambda item: (-title_counts[item], -len(item), item.casefold()),
         )[0]
-
         years = sorted(set(group["years"]))
         dois = unique_strings(group["dois"])
         publishers = unique_strings(group["publishers"])
-
         group.update(
             {
-                "normalizedName": normalized,
                 "canonicalTitle": canonical_title,
                 "aliases": unique_strings(group["titleCandidates"]),
                 "publisherFromPublications": publishers[0] if publishers else "",
@@ -240,10 +303,8 @@ def load_publication_groups() -> dict[str, dict[str, Any]]:
                 "firstPublicationYear": years[0] if years else None,
                 "latestPublicationYear": years[-1] if years else None,
                 "sampleDoi": dois[0] if dois else "",
-                "dois": dois,
             }
         )
-
     return groups
 
 
@@ -262,25 +323,23 @@ def existing_index(existing: dict[str, Any]) -> dict[str, str]:
     journals = existing.get("journals", {})
     if not isinstance(journals, dict):
         return index
-
     for journal_id, record in journals.items():
         if not isinstance(record, dict):
             continue
-        names = [record.get("title"), *(record.get("aliases") or [])]
-        for name in names:
+        for name in [record.get("title"), *(record.get("aliases") or [])]:
             normalized = normalize_name(name)
             if normalized:
                 index[normalized] = journal_id
     return index
 
 
-def crossref_metadata(
-    session: requests.Session,
-    doi: str,
-) -> dict[str, Any]:
+# ---------------------------------------------------------------------------
+# Crossref and OpenAlex basic metadata
+# ---------------------------------------------------------------------------
+
+def crossref_metadata(session: requests.Session, doi: str) -> dict[str, Any]:
     if not doi:
         return {}
-
     response = safe_get(
         session,
         f"{CROSSREF_WORKS_URL}/{doi}",
@@ -288,33 +347,24 @@ def crossref_metadata(
     )
     if response is None:
         return {}
-
     try:
         message = response.json().get("message", {})
     except ValueError:
         return {}
-
     if not isinstance(message, dict):
         return {}
 
-    issn_types = message.get("issn-type") or []
     print_issn = ""
     electronic_issn = ""
-
-    if isinstance(issn_types, list):
-        for item in issn_types:
-            if not isinstance(item, dict):
-                continue
-            value = normalize_issn(item.get("value"))
-            issn_type = compact_whitespace(item.get("type")).lower()
-            if issn_type == "print" and value:
-                print_issn = value
-            elif issn_type == "electronic" and value:
-                electronic_issn = value
-
-    all_issns = unique_strings(
-        [normalize_issn(value) for value in (message.get("ISSN") or [])]
-    )
+    for item in message.get("issn-type") or []:
+        if not isinstance(item, dict):
+            continue
+        value = normalize_issn(item.get("value"))
+        item_type = compact_whitespace(item.get("type")).lower()
+        if item_type == "print" and value:
+            print_issn = value
+        elif item_type == "electronic" and value:
+            electronic_issn = value
 
     return {
         "title": compact_whitespace((message.get("container-title") or [""])[0]),
@@ -324,9 +374,10 @@ def crossref_metadata(
         "publisher": compact_whitespace(message.get("publisher")),
         "issn": print_issn,
         "eissn": electronic_issn,
-        "allIssns": all_issns,
+        "allIssns": unique_strings(
+            [normalize_issn(value) for value in (message.get("ISSN") or [])]
+        ),
         "subjects": unique_strings(message.get("subject") or []),
-        "articleUrl": compact_whitespace(message.get("URL")),
         "source": {
             "name": "Crossref REST API",
             "url": f"https://api.crossref.org/works/{doi}",
@@ -341,17 +392,17 @@ def openalex_candidates(
     title: str,
     issns: list[str],
 ) -> list[dict[str, Any]]:
-    common_params: dict[str, Any] = {"per-page": 10}
+    params: dict[str, Any] = {"per-page": 10}
     if OPENALEX_API_KEY:
-        common_params["api_key"] = OPENALEX_API_KEY
+        params["api_key"] = OPENALEX_API_KEY
     elif CONTACT_EMAIL:
-        common_params["mailto"] = CONTACT_EMAIL
+        params["mailto"] = CONTACT_EMAIL
 
     for issn in issns:
         response = safe_get(
             session,
             OPENALEX_SOURCES_URL,
-            params={**common_params, "filter": f"issn:{issn}"},
+            params={**params, "filter": f"issn:{issn}"},
         )
         if response is None:
             continue
@@ -365,29 +416,17 @@ def openalex_candidates(
     response = safe_get(
         session,
         OPENALEX_SOURCES_URL,
-        params={**common_params, "search": title},
+        params={**params, "search": title},
     )
     if response is None:
         return []
-
     try:
         return [
-            item
-            for item in response.json().get("results", [])
+            item for item in response.json().get("results", [])
             if isinstance(item, dict)
         ]
     except ValueError:
         return []
-
-
-def similarity(left: str, right: str) -> float:
-    left_normalized = normalize_name(left)
-    right_normalized = normalize_name(right)
-    if not left_normalized or not right_normalized:
-        return 0.0
-    if left_normalized == right_normalized:
-        return 1.0
-    return SequenceMatcher(None, left_normalized, right_normalized).ratio()
 
 
 def select_openalex_source(
@@ -398,38 +437,30 @@ def select_openalex_source(
 ) -> dict[str, Any] | None:
     normalized_issns = {normalize_issn(value) for value in issns if value}
     scored: list[tuple[float, dict[str, Any]]] = []
-
     for candidate in candidates:
         candidate_issns = {
             normalize_issn(value)
             for value in (candidate.get("issn") or [])
             if value
         }
-        issn_match = bool(normalized_issns & candidate_issns)
-        name_score = similarity(title, candidate.get("display_name", ""))
-        score = name_score + (1.0 if issn_match else 0.0)
+        score = similarity(title, candidate.get("display_name", ""))
+        if normalized_issns & candidate_issns:
+            score += 1.0
         scored.append((score, candidate))
-
     if not scored:
         return None
-
     score, best = max(scored, key=lambda item: item[0])
-    if score < 0.72:
-        return None
-    return best
+    return best if score >= 0.72 else None
 
 
 def openalex_metadata(source: dict[str, Any] | None) -> dict[str, Any]:
     if not source:
         return {}
-
-    summary_stats = source.get("summary_stats") or {}
-    host_name = compact_whitespace(source.get("host_organization_name"))
-    if not host_name:
+    summary = source.get("summary_stats") or {}
+    publisher = compact_whitespace(source.get("host_organization_name"))
+    if not publisher:
         lineage = source.get("host_organization_lineage_names") or []
-        if lineage:
-            host_name = compact_whitespace(lineage[-1])
-
+        publisher = compact_whitespace(lineage[-1]) if lineage else ""
     return {
         "openAlexId": compact_whitespace(source.get("id")).rsplit("/", 1)[-1],
         "openAlexUrl": compact_whitespace(source.get("id")),
@@ -440,18 +471,16 @@ def openalex_metadata(source: dict[str, Any] | None) -> dict[str, Any]:
             [normalize_issn(value) for value in (source.get("issn") or [])]
         ),
         "homepage": compact_whitespace(source.get("homepage_url")),
-        "publisher": host_name,
+        "publisher": publisher,
         "countryCode": compact_whitespace(source.get("country_code")),
         "sourceType": compact_whitespace(source.get("type")),
         "isOpenAccess": bool(source.get("is_oa")),
         "isInDoaj": bool(source.get("is_in_doaj")),
         "worksCount": as_int(source.get("works_count")),
         "citedByCount": as_int(source.get("cited_by_count")),
-        "twoYearMeanCitedness": as_float(
-            summary_stats.get("2yr_mean_citedness")
-        ),
-        "hIndex": as_int(summary_stats.get("h_index")),
-        "i10Index": as_int(summary_stats.get("i10_index")),
+        "twoYearMeanCitedness": as_float(summary.get("2yr_mean_citedness")),
+        "hIndex": as_int(summary.get("h_index")),
+        "i10Index": as_int(summary.get("i10_index")),
         "source": {
             "name": "OpenAlex Sources API",
             "url": compact_whitespace(source.get("id")),
@@ -460,18 +489,341 @@ def openalex_metadata(source: dict[str, Any] | None) -> dict[str, Any]:
     }
 
 
-def find_value(text: str, patterns: list[str], cast: str = "str") -> Any:
-    for pattern in patterns:
-        match = re.search(pattern, text, flags=re.IGNORECASE)
-        if not match:
+# ---------------------------------------------------------------------------
+# Metric source 1: JournalMetrics.org (primary current JIF/JCR source)
+# ---------------------------------------------------------------------------
+
+def journalmetrics_url(title: str) -> str:
+    return f"{JOURNALMETRICS_BASE_URL}/{slugify(title)}-impact-factor"
+
+
+def parse_journalmetrics_document(
+    html: str,
+    *,
+    page_url: str,
+    expected_title: str,
+    expected_issns: list[str],
+) -> dict[str, Any]:
+    soup = BeautifulSoup(html, "html.parser")
+    heading = compact_whitespace(
+        soup.find("h1").get_text(" ", strip=True) if soup.find("h1") else ""
+    )
+    text = compact_whitespace(soup.get_text(" ", strip=True))
+    page_issns = unique_strings(
+        [normalize_issn(value) for value in re.findall(r"\b\d{4}-[\dXx]{4}\b", text)]
+    )
+    issn_match = bool(set(expected_issns) & set(page_issns))
+    if similarity(expected_title, heading) < 0.42 and not issn_match:
+        return {}
+
+    release_match = re.search(
+        r"newest impact factor is\s*([0-9]+(?:\.[0-9]+)?),\s*"
+        r"released\s+([A-Za-z]+\s+\d{1,2},\s+(20\d{2}))\s+"
+        r"and based on\s+(20\d{2})\s+citation data",
+        text,
+        flags=re.IGNORECASE,
+    )
+    impact_factor = as_float(release_match.group(1)) if release_match else None
+    release_date = compact_whitespace(release_match.group(2)) if release_match else ""
+    release_year = as_int(release_match.group(3)) if release_match else None
+    metric_year = as_int(release_match.group(4)) if release_match else None
+
+    if impact_factor is None:
+        match = re.search(
+            r"(?:Impact Factor|newest impact factor)\s*(?:is|:)\s*"
+            r"([0-9]+(?:\.[0-9]+)?)",
+            text,
+            flags=re.IGNORECASE,
+        )
+        impact_factor = as_float(match.group(1)) if match else None
+
+    if release_year is None:
+        match = re.search(r"\b(20\d{2})\s+Impact Factor\b", heading, re.I)
+        release_year = as_int(match.group(1)) if match else None
+    if metric_year is None and release_year:
+        metric_year = release_year - 1
+
+    quartile_match = re.search(r"\bJCR\s+(Q[1-4])\b", text, re.I)
+    quartile = quartile_match.group(1).upper() if quartile_match else None
+
+    category = ""
+    if quartile_match:
+        tail = text[quartile_match.end():]
+        category_match = re.match(
+            r"\s*([^|]{3,120}?)(?=\s+(?:CAS:|Nature is|Compare |About |Publisher:))",
+            tail,
+            flags=re.IGNORECASE,
+        )
+        category = compact_whitespace(category_match.group(1)) if category_match else ""
+
+    publisher_match = re.search(
+        r"Publisher:\s*(.+?)(?=\s+Founded:|\s+Frequency:|\s+ISSN:)",
+        text,
+        flags=re.IGNORECASE,
+    )
+    founded_match = re.search(r"Founded:\s*(\d{4})", text, re.I)
+    frequency_match = re.search(
+        r"Frequency:\s*(.+?)(?=\s+ISSN:|\s+Subject Areas:|\s+Language:)",
+        text,
+        re.I,
+    )
+    subject_match = re.search(
+        r"Subject Areas:\s*(.+?)(?=\s+Language:|\s+Why |\s+About )",
+        text,
+        re.I,
+    )
+
+    if impact_factor is None or metric_year is None:
+        return {}
+
+    fields: dict[str, Any] = {"impactFactor": impact_factor}
+    if quartile:
+        fields["bestQuartile"] = quartile
+    if release_year:
+        fields["jcrReleaseYear"] = release_year
+    if release_date:
+        fields["releaseDate"] = release_date
+
+    category_record: dict[str, Any] = {}
+    if category:
+        category_record["name"] = category
+    if quartile:
+        category_record["quartile"] = quartile
+
+    return clean_nulls(
+        {
+            "title": expected_title,
+            "issn": page_issns[0] if page_issns else "",
+            "publisher": compact_whitespace(publisher_match.group(1)) if publisher_match else "",
+            "foundedYear": as_int(founded_match.group(1)) if founded_match else None,
+            "frequency": compact_whitespace(frequency_match.group(1)) if frequency_match else "",
+            "subjects": [compact_whitespace(subject_match.group(1))] if subject_match else [],
+            "metricCandidates": [
+                {
+                    "metricYear": metric_year,
+                    "fields": fields,
+                    "categories": [category_record] if category_record else [],
+                    "source": source_info(
+                        "JournalMetrics.org",
+                        page_url,
+                        priority=SOURCE_PRIORITY["JournalMetrics.org"],
+                    ),
+                }
+            ],
+            "source": source_info(
+                "JournalMetrics.org",
+                page_url,
+                priority=SOURCE_PRIORITY["JournalMetrics.org"],
+            ),
+        }
+    )
+
+
+def journalmetrics_metadata(
+    session: requests.Session,
+    *,
+    title: str,
+    issns: list[str],
+) -> dict[str, Any]:
+    url = journalmetrics_url(title)
+    response = safe_get(session, url)
+    if response is None:
+        return {}
+    return parse_journalmetrics_document(
+        response.text,
+        page_url=response.url,
+        expected_title=title,
+        expected_issns=issns,
+    )
+
+
+# ---------------------------------------------------------------------------
+# Metric source 2: Bioxbio (historical JIF series)
+# ---------------------------------------------------------------------------
+
+def bioxbio_tokens(title: str, abbreviation: str) -> list[str]:
+    candidates: list[str] = []
+    abbreviation_map = {
+        "advanced": "ADV",
+        "applied": "APPL",
+        "chemical": "CHEM",
+        "chemistry": "CHEM",
+        "communications": "COMMUN",
+        "engineering": "ENG",
+        "energy": "ENERG",
+        "environmental": "ENVIRON",
+        "functional": "FUNCT",
+        "international": "INT",
+        "journal": "J",
+        "materials": "MATER",
+        "nanotechnology": "NANOTECHNOL",
+        "organic": "ORG",
+        "physical": "PHYS",
+        "physics": "PHYS",
+        "power": "POWER",
+        "purification": "PURIF",
+        "research": "RES",
+        "reviews": "REV",
+        "science": "SCI",
+        "separation": "SEP",
+        "solar": "SOL",
+        "technology": "TECHNOL",
+    }
+
+    for value in [abbreviation, title]:
+        token = re.sub(r"[^A-Za-z0-9]+", "-", ascii_text(value).upper()).strip("-")
+        if token:
+            candidates.append(token)
+
+    title_words = re.findall(r"[A-Za-z0-9]+", ascii_text(title).lower())
+    if title_words:
+        compact_token = "-".join(
+            abbreviation_map.get(word, word.upper()) for word in title_words
+        )
+        candidates.insert(0, compact_token)
+
+    return unique_strings(candidates)
+
+
+def parse_bioxbio_document(
+    html: str,
+    *,
+    page_url: str,
+    expected_title: str,
+    expected_issns: list[str],
+) -> dict[str, Any]:
+    soup = BeautifulSoup(html, "html.parser")
+    heading = compact_whitespace(
+        soup.find("h1").get_text(" ", strip=True) if soup.find("h1") else ""
+    )
+    text = compact_whitespace(soup.get_text(" ", strip=True))
+    issn_match = re.search(r"Journal ISSN:\s*(\d{4}-[\dXx]{4})", text, re.I)
+    page_issn = normalize_issn(issn_match.group(1)) if issn_match else ""
+    if similarity(expected_title, heading) < 0.42 and page_issn not in expected_issns:
+        return {}
+
+    abbreviation_match = re.search(
+        r"Journal Abbreviation:\s*(.+?)(?=\s+Journal ISSN:)", text, re.I
+    )
+    candidates: list[dict[str, Any]] = []
+
+    for row in soup.find_all("tr"):
+        cells = [compact_whitespace(cell.get_text(" ", strip=True)) for cell in row.find_all(["th", "td"])]
+        if len(cells) < 2:
             continue
-        value = match.group(1)
-        if cast == "float":
-            return as_float(value)
-        if cast == "int":
-            return as_int(value)
-        return compact_whitespace(value)
-    return None
+        year_match = re.match(
+            r"^(20\d{2})(?:\s*\((20\d{2})\s+update\))?$",
+            cells[0],
+            flags=re.IGNORECASE,
+        )
+        if not year_match:
+            continue
+        metric_year = as_int(year_match.group(1))
+        release_year = as_int(year_match.group(2)) if year_match.group(2) else None
+        impact_factor = as_float(cells[1])
+        if metric_year is None or impact_factor is None:
+            continue
+        total_articles = as_int(cells[2]) if len(cells) > 2 and cells[2] != "-" else None
+        total_cites = as_int(cells[3]) if len(cells) > 3 and cells[3] != "-" else None
+        fields: dict[str, Any] = {"impactFactor": impact_factor}
+        if total_articles is not None:
+            fields["totalArticles"] = total_articles
+        if total_cites is not None:
+            fields["totalCites"] = total_cites
+        if release_year is not None:
+            fields["jcrReleaseYear"] = release_year
+        candidates.append(
+            {
+                "metricYear": metric_year,
+                "fields": fields,
+                "source": source_info(
+                    "Bioxbio",
+                    page_url,
+                    priority=SOURCE_PRIORITY["Bioxbio"],
+                ),
+            }
+        )
+
+    if not candidates:
+        # Fallback for pages whose table markup is flattened unusually.
+        pattern = re.compile(
+            r"\b(20\d{2})(?:\s*\((20\d{2})\s+update\))?\s+"
+            r"([0-9]+(?:\.[0-9]+)?)\s+(-|[0-9,]+)\s+(-|[0-9,]+)"
+        )
+        for match in pattern.finditer(text):
+            fields = {"impactFactor": as_float(match.group(3))}
+            articles = as_int(match.group(4)) if match.group(4) != "-" else None
+            cites = as_int(match.group(5)) if match.group(5) != "-" else None
+            if articles is not None:
+                fields["totalArticles"] = articles
+            if cites is not None:
+                fields["totalCites"] = cites
+            release_year = as_int(match.group(2))
+            if release_year:
+                fields["jcrReleaseYear"] = release_year
+            candidates.append(
+                {
+                    "metricYear": as_int(match.group(1)),
+                    "fields": fields,
+                    "source": source_info(
+                        "Bioxbio",
+                        page_url,
+                        priority=SOURCE_PRIORITY["Bioxbio"],
+                    ),
+                }
+            )
+
+    if not candidates:
+        return {}
+
+    return clean_nulls(
+        {
+            "title": heading,
+            "abbreviation": compact_whitespace(abbreviation_match.group(1)) if abbreviation_match else "",
+            "issn": page_issn,
+            "metricCandidates": candidates,
+            "source": source_info(
+                "Bioxbio",
+                page_url,
+                priority=SOURCE_PRIORITY["Bioxbio"],
+            ),
+        }
+    )
+
+
+def bioxbio_metadata(
+    session: requests.Session,
+    *,
+    title: str,
+    abbreviation: str,
+    issns: list[str],
+) -> dict[str, Any]:
+    for token in bioxbio_tokens(title, abbreviation):
+        url = f"{BIOXBIO_BASE_URL}/journal/{token}"
+        response = safe_get(session, url)
+        if response is None:
+            continue
+        parsed = parse_bioxbio_document(
+            response.text,
+            page_url=response.url,
+            expected_title=title,
+            expected_issns=issns,
+        )
+        if parsed:
+            return parsed
+    return {}
+
+
+# ---------------------------------------------------------------------------
+# Metric source 3: Manusights (five-year JIF/JCI/rank backup)
+# ---------------------------------------------------------------------------
+
+def manusights_urls(title: str) -> list[str]:
+    slug = slugify(title)
+    return [
+        f"{MANUSIGHTS_BASE_URL}/journals/{slug}",
+        f"{MANUSIGHTS_BASE_URL}/blog/{slug}-impact-factor",
+    ]
 
 
 def parse_manusights_document(
@@ -481,154 +833,146 @@ def parse_manusights_document(
     expected_title: str,
 ) -> dict[str, Any]:
     soup = BeautifulSoup(html, "html.parser")
-    page_title = compact_whitespace(soup.title.get_text(" ", strip=True) if soup.title else "")
     heading = compact_whitespace(
         soup.find("h1").get_text(" ", strip=True) if soup.find("h1") else ""
     )
-    full_text = compact_whitespace(soup.get_text(" ", strip=True))
-
-    if max(similarity(expected_title, page_title), similarity(expected_title, heading)) < 0.45:
+    text = compact_whitespace(soup.get_text(" ", strip=True))
+    if similarity(expected_title, heading) < 0.38:
         return {}
 
-    metric_match = re.search(
-        r"\b(20\d{2})\s+(?:Journal\s+)?Impact Factor"
-        r"(?:\s*\(\s*(20\d{2})\s+(?:Journal Citation Reports|JCR)\s+release\s*\))?"
-        r"\s*([0-9]+(?:\.[0-9]+)?)",
-        full_text,
+    quick = re.search(
+        r"has a\s+(20\d{2})\s+Journal Impact Factor of\s*"
+        r"([0-9]+(?:\.[0-9]+)?)\s+in the\s+(20\d{2})\s+"
+        r"Journal Citation Reports release,\s+with a\s+five-year JIF of\s*"
+        r"([0-9]+(?:\.[0-9]+)?),\s*(Q[1-4])\s+status,\s+and a\s+"
+        r"(\d+)\s*/\s*(\d+)\s+rank in\s+(.+?)\.",
+        text,
         flags=re.IGNORECASE,
     )
 
-    metric_year = as_int(metric_match.group(1)) if metric_match else None
-    release_year = as_int(metric_match.group(2)) if metric_match and metric_match.group(2) else None
-    impact_factor = as_float(metric_match.group(3)) if metric_match else None
+    metric_year = as_int(quick.group(1)) if quick else None
+    impact_factor = as_float(quick.group(2)) if quick else None
+    release_year = as_int(quick.group(3)) if quick else None
+    five_year_if = as_float(quick.group(4)) if quick else None
+    quartile = quick.group(5).upper() if quick else None
+    rank = as_int(quick.group(6)) if quick else None
+    total_journals = as_int(quick.group(7)) if quick else None
+    category = compact_whitespace(quick.group(8)) if quick else ""
 
     if impact_factor is None:
-        impact_factor = find_value(
-            full_text,
-            [
-                r"\bIF\s+([0-9]+(?:\.[0-9]+)?)\b",
-                r"\bImpact Factor\s+([0-9]+(?:\.[0-9]+)?)\b",
-            ],
-            "float",
+        match = re.search(
+            rf"{re.escape(expected_title)}(?:'s)?\s+impact factor is\s*"
+            r"([0-9]+(?:\.[0-9]+)?)",
+            text,
+            flags=re.IGNORECASE,
         )
+        impact_factor = as_float(match.group(1)) if match else None
+    if impact_factor is None:
+        match = re.search(
+            r"Impact factor\s*([0-9]+(?:\.[0-9]+)?)\s+Current JIF",
+            text,
+            flags=re.IGNORECASE,
+        )
+        impact_factor = as_float(match.group(1)) if match else None
 
-    five_year_if = find_value(
-        full_text,
-        [
-            r"\b5[- ]Year\s+(?:Impact Factor|JIF)"
-            r"(?:\s*\([^)]*\))?\s*([0-9]+(?:\.[0-9]+)?)",
-            r"\bFive[- ]year impact factor\s*[:：]?\s*([0-9]+(?:\.[0-9]+)?)",
-        ],
-        "float",
-    )
+    if five_year_if is None:
+        match = re.search(
+            r"Five-year impact factor:\s*([0-9]+(?:\.[0-9]+)?)",
+            text,
+            re.I,
+        )
+        five_year_if = as_float(match.group(1)) if match else None
 
-    jci = find_value(
-        full_text,
-        [r"\bJCI(?:\s*\([^)]*\))?\s*([0-9]+(?:\.[0-9]+)?)"],
-        "float",
-    )
-    total_cites = find_value(
-        full_text,
-        [r"\bTotal Cites(?:\s*\([^)]*\))?\s*([0-9,]+)"],
-        "int",
-    )
-    citescore = find_value(
-        full_text,
-        [r"\bCiteScore(?:\s*\([^)]*\))?\s*([0-9]+(?:\.[0-9]+)?)"],
-        "float",
-    )
+    if metric_year is None:
+        match = re.search(r"\b(20\d{2})\s+Journal Impact Factor of\b", text, re.I)
+        metric_year = as_int(match.group(1)) if match else None
+    if release_year is None:
+        match = re.search(r"\b(20\d{2})\s+Journal Citation Reports release\b", text, re.I)
+        release_year = as_int(match.group(1)) if match else None
+    if metric_year is None and release_year:
+        metric_year = release_year - 1
 
-    quartile = find_value(
-        full_text,
-        [
-            r"\bQuartile\s*(Q[1-4])\b",
-            r"\b(Q[1-4])\s+(?:status|placement)\b",
-        ],
-    )
+    if quartile is None:
+        match = re.search(r"\b(Q[1-4])\s+status\b", text, re.I)
+        quartile = match.group(1).upper() if match else None
+    if rank is None or total_journals is None:
+        match = re.search(r"\b(\d+)\s*/\s*(\d+)\s+rank in\s+(.+?)(?:\.|,)", text, re.I)
+        if match:
+            rank = as_int(match.group(1))
+            total_journals = as_int(match.group(2))
+            category = compact_whitespace(match.group(3))
 
-    rank_match = re.search(
-        r"\bCategory Rank\s*(\d+)\s*/\s*(\d+)",
-        full_text,
-        flags=re.IGNORECASE,
+    jci_match = re.search(r"\bJCI(?:\s*\([^)]*\))?\s*([0-9]+(?:\.[0-9]+)?)", text, re.I)
+    total_cites_match = re.search(r"\bTotal Cites(?:\s*\([^)]*\))?\s*([0-9,]+)", text, re.I)
+    citescore_match = re.search(r"\bCiteScore\s*([0-9]+(?:\.[0-9]+)?)", text, re.I)
+    publisher_match = re.search(
+        r"\bPublisher\s+(.+?)(?=\s+(?:Founded|ISSN|Publication|Open access|Article Types)\b)",
+        text,
+        re.I,
     )
-    rank = as_int(rank_match.group(1)) if rank_match else None
-    category_total = as_int(rank_match.group(2)) if rank_match else None
+    issn_match = re.search(r"\bISSN\s+(\d{4}-[\dXx]{4})\b", text, re.I)
+    eissn_match = re.search(r"\b(?:E-?ISSN|Online ISSN)\s+(\d{4}-[\dXx]{4})\b", text, re.I)
+    founded_match = re.search(r"\bFounded\s+(\d{4})\b", text, re.I)
 
-    category = find_value(
-        full_text,
-        [
-            r"\bwithin\s+([^,.]{3,120}?),\s+[^.]{0,80}?\b\d+\s*/\s*\d+\s+rank",
-            r"\branked?\s+\d+\s*/\s*\d+\s+in\s+([^,.]{3,120})",
-            r"\bQ[1-4]\s+(?:status|placement)\s+in\s+([^,.]{3,120})",
-        ],
-    )
-
-    publisher = find_value(
-        full_text,
-        [r"\bPublisher\s+([A-Za-z0-9&.,'’\- ]{2,80}?)(?=\s+(?:Founded|ISSN|Publication|Open access|Article Types|Before you submit)\b)"],
-    )
-    founded = find_value(full_text, [r"\bFounded\s+(\d{4})\b"], "int")
-    issn = find_value(full_text, [r"\bISSN\s+(\d{4}-[\dXx]{4})\b"])
-    eissn = find_value(
-        full_text,
-        [
-            r"\bE-?ISSN\s+(\d{4}-[\dXx]{4})\b",
-            r"\bOnline ISSN\s+(\d{4}-[\dXx]{4})\b",
-        ],
-    )
-
-    release_year = release_year or find_value(
-        full_text,
-        [r"\b(20\d{2})\s+(?:Journal Citation Reports|JCR)\s+release\b"],
-        "int",
-    )
-
-    result: dict[str, Any] = {
-        "pageUrl": page_url,
-        "pageTitle": page_title,
-        "publisher": publisher,
-        "foundedYear": founded,
-        "issn": normalize_issn(issn),
-        "eissn": normalize_issn(eissn),
-        "metricYear": metric_year,
-        "jcrReleaseYear": release_year,
+    fields: dict[str, Any] = {}
+    for key, value in {
         "impactFactor": impact_factor,
         "fiveYearImpactFactor": five_year_if,
-        "jci": jci,
-        "totalCites": total_cites,
-        "citeScore": citescore,
-        "bestQuartile": quartile.upper() if quartile else None,
-        "category": category,
-        "categoryRank": rank,
-        "categoryJournalCount": category_total,
-    }
+        "jci": as_float(jci_match.group(1)) if jci_match else None,
+        "totalCites": as_int(total_cites_match.group(1)) if total_cites_match else None,
+        "citeScore": as_float(citescore_match.group(1)) if citescore_match else None,
+        "bestQuartile": quartile,
+        "jcrReleaseYear": release_year,
+    }.items():
+        if value is not None:
+            fields[key] = value
 
-    return {key: value for key, value in result.items() if value not in (None, "", [])}
+    category_record: dict[str, Any] = {}
+    if category:
+        category_record["name"] = category
+    if quartile:
+        category_record["quartile"] = quartile
+    if rank is not None:
+        category_record["rank"] = rank
+    if total_journals is not None:
+        category_record["totalJournals"] = total_journals
+
+    if not fields or metric_year is None:
+        return {}
+
+    return clean_nulls(
+        {
+            "publisher": compact_whitespace(publisher_match.group(1)) if publisher_match else "",
+            "issn": normalize_issn(issn_match.group(1)) if issn_match else "",
+            "eissn": normalize_issn(eissn_match.group(1)) if eissn_match else "",
+            "foundedYear": as_int(founded_match.group(1)) if founded_match else None,
+            "metricCandidates": [
+                {
+                    "metricYear": metric_year,
+                    "fields": fields,
+                    "categories": [category_record] if category_record else [],
+                    "source": source_info(
+                        "Manusights",
+                        page_url,
+                        priority=SOURCE_PRIORITY["Manusights"],
+                    ),
+                }
+            ],
+            "source": source_info(
+                "Manusights",
+                page_url,
+                priority=SOURCE_PRIORITY["Manusights"],
+            ),
+        }
+    )
 
 
-def manuscripts_urls(title: str) -> list[str]:
-    slug = slugify(title)
-    return [
-        f"{MANUSIGHTS_BASE_URL}/journals/{slug}",
-        f"{MANUSIGHTS_BASE_URL}/blog/{slug}-impact-factor",
-    ]
-
-
-def manuscripts_metadata(
-    session: requests.Session,
-    title: str,
-) -> dict[str, Any]:
+def manusights_metadata(session: requests.Session, *, title: str) -> dict[str, Any]:
     documents: list[dict[str, Any]] = []
-    fetched_urls: set[str] = set()
-
-    for url in manuscripts_urls(title):
-        if url in fetched_urls:
-            continue
+    for url in manusights_urls(title):
         response = safe_get(session, url)
         if response is None:
             continue
-        fetched_urls.add(response.url)
-
         parsed = parse_manusights_document(
             response.text,
             page_url=response.url,
@@ -636,54 +980,243 @@ def manuscripts_metadata(
         )
         if parsed:
             documents.append(parsed)
-
-        soup = BeautifulSoup(response.text, "html.parser")
-        for anchor in soup.find_all("a", href=True):
-            href = urljoin(response.url, anchor["href"])
-            anchor_text = compact_whitespace(anchor.get_text(" ", strip=True))
-            if (
-                "manusights.com/" in href
-                and "impact-factor" in href
-                and (
-                    similarity(anchor_text, title) >= 0.35
-                    or normalize_name(title) in normalize_name(anchor_text)
-                )
-                and href not in fetched_urls
-            ):
-                linked = safe_get(session, href)
-                if linked is not None:
-                    fetched_urls.add(linked.url)
-                    linked_parsed = parse_manusights_document(
-                        linked.text,
-                        page_url=linked.url,
-                        expected_title=title,
-                    )
-                    if linked_parsed:
-                        documents.append(linked_parsed)
-                break
-
     if not documents:
         return {}
 
-    merged: dict[str, Any] = {}
+    result: dict[str, Any] = {"metricCandidates": []}
     source_urls: list[str] = []
-
     for document in documents:
-        source_urls.append(document.get("pageUrl", ""))
-        for key, value in document.items():
-            if key in {"pageUrl", "pageTitle"}:
-                continue
-            if value not in (None, "", []) and merged.get(key) in (None, "", []):
-                merged[key] = value
+        result["metricCandidates"].extend(document.get("metricCandidates") or [])
+        for key in ["publisher", "issn", "eissn", "foundedYear"]:
+            if result.get(key) in (None, "") and document.get(key) not in (None, ""):
+                result[key] = document[key]
+        source_urls.append((document.get("source") or {}).get("url", ""))
+    result["source"] = source_info(
+        "Manusights",
+        source_urls[0] if source_urls else manusights_urls(title)[0],
+        urls=unique_strings(source_urls),
+        priority=SOURCE_PRIORITY["Manusights"],
+    )
+    return clean_nulls(result)
 
-    merged["source"] = {
-        "name": "Manusights",
-        "type": "secondary-source",
-        "urls": unique_strings(source_urls),
-        "retrievedAt": utc_now(),
-        "verificationStatus": "secondary-source",
-    }
-    return merged
+
+# ---------------------------------------------------------------------------
+# Metric source 4: JournalSearches (last-resort IF/basic/Scopus metadata)
+# ---------------------------------------------------------------------------
+
+def parse_journalsearches_document(
+    html: str,
+    *,
+    page_url: str,
+    expected_title: str,
+    expected_issns: list[str],
+) -> dict[str, Any]:
+    soup = BeautifulSoup(html, "html.parser")
+    heading = compact_whitespace(
+        soup.find("h1").get_text(" ", strip=True) if soup.find("h1") else ""
+    )
+    text = compact_whitespace(soup.get_text(" ", strip=True))
+    raw_issns = re.findall(r"\b\d{8}\b|\b\d{4}-[\dXx]{4}\b", text)
+    page_issns = unique_strings([normalize_issn(value) for value in raw_issns])
+    if similarity(expected_title, heading) < 0.42 and not (set(page_issns) & set(expected_issns)):
+        return {}
+
+    release_match = re.search(r"Impact Factor(?:[^0-9]{0,80})(20\d{2})", heading, re.I)
+    if release_match is None:
+        release_match = re.search(r"\((20\d{2})\)\s*$", heading)
+    release_year = as_int(release_match.group(1)) if release_match else None
+    metric_year = release_year - 1 if release_year else None
+    if_match = re.search(r"\bImpact Factor:\s*([0-9]+(?:\.[0-9]+)?)", text, re.I)
+    impact_factor = as_float(if_match.group(1)) if if_match else None
+    five_match = re.search(r"\b5-Year JIF:\s*([0-9]+(?:\.[0-9]+)?)", text, re.I)
+    five_year_if = as_float(five_match.group(1)) if five_match else None
+
+    publisher_match = re.search(r"Journal Title:\s*.+?\s+Publisher:\s*(.+?)\s+ISSN:", text, re.I)
+    scope_match = re.search(r"Journal Scope:\s*(.+?)\s+Country of Publisher:", text, re.I)
+    country_match = re.search(r"Country of Publisher:\s*(.+?)\s+Scopus CiteScore:", text, re.I)
+    citescore_match = re.search(r"Scopus CiteScore:\s*([0-9]+(?:\.[0-9]+)?)", text, re.I)
+    hindex_match = re.search(r"H-Index:\s*([0-9,]+)", text, re.I)
+    sjr_match = re.search(r"SJR:\s*([0-9]+(?:\.[0-9]+)?)", text, re.I)
+    quartile_match = re.search(r"Quartile:\s*(?:[^()]{0,120}\()?\s*(Q[1-4])\)?", text, re.I)
+    open_access_match = re.search(r"Open Access:\s*(Yes|No)", text, re.I)
+
+    metric_candidates: list[dict[str, Any]] = []
+    if impact_factor is not None and metric_year is not None:
+        fields: dict[str, Any] = {"impactFactor": impact_factor, "jcrReleaseYear": release_year}
+        if five_year_if is not None:
+            fields["fiveYearImpactFactor"] = five_year_if
+        metric_candidates.append(
+            {
+                "metricYear": metric_year,
+                "fields": fields,
+                "source": source_info(
+                    "JournalSearches",
+                    page_url,
+                    priority=SOURCE_PRIORITY["JournalSearches"],
+                    note="Backup JIF source; quartile is stored separately as Scopus quartile.",
+                ),
+            }
+        )
+
+    scopus: dict[str, Any] = {}
+    if citescore_match:
+        scopus["citeScore"] = as_float(citescore_match.group(1))
+    if hindex_match:
+        scopus["hIndex"] = as_int(hindex_match.group(1))
+    if sjr_match:
+        scopus["sjr"] = as_float(sjr_match.group(1))
+    if quartile_match:
+        scopus["quartile"] = quartile_match.group(1).upper()
+    if release_year:
+        scopus["releaseYear"] = release_year
+    if scopus:
+        scopus["source"] = source_info(
+            "JournalSearches",
+            page_url,
+            priority=SOURCE_PRIORITY["JournalSearches"],
+            metricSystem="Scopus/SCImago",
+        )
+
+    return clean_nulls(
+        {
+            "publisher": compact_whitespace(publisher_match.group(1)) if publisher_match else "",
+            "issns": page_issns,
+            "subjects": [compact_whitespace(scope_match.group(1))] if scope_match else [],
+            "country": compact_whitespace(country_match.group(1)) if country_match else "",
+            "isOpenAccess": open_access_match.group(1).lower() == "yes" if open_access_match else None,
+            "metricCandidates": metric_candidates,
+            "scopusLatest": scopus,
+            "source": source_info(
+                "JournalSearches",
+                page_url,
+                priority=SOURCE_PRIORITY["JournalSearches"],
+            ),
+        }
+    )
+
+
+def journalsearches_metadata(
+    session: requests.Session,
+    *,
+    title: str,
+    issns: list[str],
+) -> dict[str, Any]:
+    response = safe_get(session, JOURNALSEARCHES_URL, params={"title": title})
+    if response is None:
+        return {}
+    return parse_journalsearches_document(
+        response.text,
+        page_url=response.url,
+        expected_title=title,
+        expected_issns=issns,
+    )
+
+
+# ---------------------------------------------------------------------------
+# Merge rules and reporting
+# ---------------------------------------------------------------------------
+
+def metric_source_priority(source: Any) -> int:
+    if isinstance(source, dict):
+        explicit = as_int(source.get("priority"))
+        if explicit is not None:
+            return explicit
+        return SOURCE_PRIORITY.get(compact_whitespace(source.get("name")), 0)
+    return 0
+
+
+def merge_categories(
+    existing: list[dict[str, Any]],
+    incoming: list[dict[str, Any]],
+    *,
+    overwrite: bool,
+) -> list[dict[str, Any]]:
+    if incoming and overwrite:
+        return clean_nulls(incoming)
+    if not incoming:
+        return existing
+    output = [dict(item) for item in existing if isinstance(item, dict)]
+    index = {normalize_name(item.get("name")): item for item in output if item.get("name")}
+    for item in incoming:
+        if not isinstance(item, dict):
+            continue
+        key = normalize_name(item.get("name"))
+        if key and key in index:
+            for field, value in item.items():
+                if value not in (None, "") and index[key].get(field) in (None, ""):
+                    index[key][field] = value
+        else:
+            output.append(dict(item))
+    return clean_nulls(output)
+
+
+def apply_metric_candidate(
+    metrics_by_year: dict[str, Any],
+    candidate: dict[str, Any],
+    report_conflicts: list[dict[str, Any]],
+    journal_title: str,
+) -> None:
+    metric_year = as_int(candidate.get("metricYear"))
+    if metric_year is None:
+        return
+    year_key = str(metric_year)
+    entry = dict(metrics_by_year.get(year_key) or {})
+    field_sources = dict(entry.get("fieldSources") or {})
+    incoming_source = dict(candidate.get("source") or {})
+    incoming_priority = metric_source_priority(incoming_source)
+
+    for field, incoming_value in (candidate.get("fields") or {}).items():
+        if incoming_value in (None, ""):
+            continue
+        current_value = entry.get(field)
+        current_source = field_sources.get(field) or {
+            "name": entry.get("sourceName", "existing"),
+            "priority": SOURCE_PRIORITY["existing"],
+        }
+        current_priority = metric_source_priority(current_source)
+
+        if current_value not in (None, "") and current_value != incoming_value:
+            report_conflicts.append(
+                {
+                    "journal": journal_title,
+                    "metricYear": metric_year,
+                    "field": field,
+                    "existingValue": current_value,
+                    "existingSource": current_source.get("name", "existing"),
+                    "incomingValue": incoming_value,
+                    "incomingSource": incoming_source.get("name", "unknown"),
+                    "selectedSource": (
+                        incoming_source.get("name", "unknown")
+                        if incoming_priority >= current_priority
+                        else current_source.get("name", "existing")
+                    ),
+                }
+            )
+
+        if current_value in (None, "") or incoming_priority >= current_priority:
+            if current_value != incoming_value:
+                entry[field] = incoming_value
+                field_sources[field] = incoming_source
+            elif field not in field_sources:
+                field_sources[field] = incoming_source
+
+    incoming_categories = candidate.get("categories") or []
+    category_source = field_sources.get("categories") or {}
+    category_overwrite = incoming_priority >= metric_source_priority(category_source)
+    if incoming_categories:
+        old_categories = entry.get("categories") or []
+        merged = merge_categories(
+            old_categories,
+            incoming_categories,
+            overwrite=category_overwrite,
+        )
+        if merged != old_categories:
+            entry["categories"] = merged
+            field_sources["categories"] = incoming_source
+
+    entry["fieldSources"] = field_sources
+    entry["verificationStatus"] = "secondary-source"
+    metrics_by_year[year_key] = clean_nulls(entry)
 
 
 def merge_basic_metadata(
@@ -692,25 +1225,31 @@ def merge_basic_metadata(
     group: dict[str, Any],
     crossref: dict[str, Any],
     openalex: dict[str, Any],
-    manuscripts: dict[str, Any],
+    source_documents: list[dict[str, Any]],
 ) -> dict[str, Any]:
+    document_titles = [document.get("title") for document in source_documents]
     title = (
         openalex.get("title")
         or crossref.get("title")
         or record.get("title")
         or group["canonicalTitle"]
     )
-
     aliases = unique_strings(
         [
             *(record.get("aliases") or []),
             *group["aliases"],
+            *document_titles,
             crossref.get("title"),
             openalex.get("title"),
             crossref.get("abbreviation"),
             openalex.get("abbreviation"),
         ]
     )
+
+    document_issns: list[Any] = []
+    for document in source_documents:
+        document_issns.extend(document.get("issns") or [])
+        document_issns.extend([document.get("issn"), document.get("eissn")])
 
     all_issns = unique_strings(
         [
@@ -720,203 +1259,205 @@ def merge_basic_metadata(
             crossref.get("issn"),
             crossref.get("eissn"),
             openalex.get("issnL"),
-            manuscripts.get("issn"),
-            manuscripts.get("eissn"),
+            *document_issns,
         ]
     )
 
+    publishers = [
+        openalex.get("publisher"),
+        crossref.get("publisher"),
+        *(document.get("publisher") for document in source_documents),
+        group.get("publisherFromPublications"),
+        record.get("publisher"),
+    ]
+    publisher = next((compact_whitespace(value) for value in publishers if compact_whitespace(value)), "")
+
+    sources = dict(record.get("sources") or {})
+    merge_source_snapshot(sources, "crossref", crossref.get("source"))
+    merge_source_snapshot(sources, "openalex", openalex.get("source"))
+    for document in source_documents:
+        source = document.get("source") or {}
+        name = compact_whitespace(source.get("name")).lower()
+        if name:
+            merge_source_snapshot(sources, re.sub(r"[^a-z0-9]+", "", name), source)
+
+    subjects = list(record.get("subjects") or [])
+    subjects.extend(crossref.get("subjects") or [])
+    for document in source_documents:
+        subjects.extend(document.get("subjects") or [])
+
     print_issn = (
         crossref.get("issn")
-        or manuscripts.get("issn")
         or record.get("issn")
         or (all_issns[0] if all_issns else "")
     )
-    eissn = (
-        crossref.get("eissn")
-        or manuscripts.get("eissn")
-        or record.get("eissn")
+    electronic_issn = crossref.get("eissn") or record.get("eissn") or ""
+
+    founded_year = record.get("foundedYear")
+    frequency = record.get("frequency") or ""
+    country = record.get("country") or ""
+    is_open_access = record.get("isOpenAccess")
+    for document in source_documents:
+        if founded_year is None and document.get("foundedYear") is not None:
+            founded_year = document.get("foundedYear")
+        if not frequency and document.get("frequency"):
+            frequency = document.get("frequency")
+        if not country and document.get("country"):
+            country = document.get("country")
+        if is_open_access is None and document.get("isOpenAccess") is not None:
+            is_open_access = document.get("isOpenAccess")
+
+    return clean_nulls(
+        {
+            **record,
+            "title": title,
+            "abbreviation": (
+                openalex.get("abbreviation")
+                or crossref.get("abbreviation")
+                or record.get("abbreviation")
+                or ""
+            ),
+            "aliases": aliases,
+            "publisher": publisher,
+            "issn": print_issn,
+            "eissn": electronic_issn,
+            "issnL": openalex.get("issnL") or record.get("issnL") or "",
+            "allIssns": all_issns,
+            "homepage": openalex.get("homepage") or record.get("homepage") or "",
+            "countryCode": openalex.get("countryCode") or record.get("countryCode") or "",
+            "country": country,
+            "journalType": openalex.get("sourceType") or record.get("journalType") or "journal",
+            "isOpenAccess": (
+                openalex.get("isOpenAccess")
+                if "isOpenAccess" in openalex
+                else is_open_access
+            ),
+            "isInDoaj": (
+                openalex.get("isInDoaj")
+                if "isInDoaj" in openalex
+                else record.get("isInDoaj")
+            ),
+            "subjects": unique_strings(subjects),
+            "openAlexId": openalex.get("openAlexId") or record.get("openAlexId") or "",
+            "openAlexUrl": openalex.get("openAlexUrl") or record.get("openAlexUrl") or "",
+            "openAlexStats": {
+                "worksCount": openalex.get("worksCount", (record.get("openAlexStats") or {}).get("worksCount")),
+                "citedByCount": openalex.get("citedByCount", (record.get("openAlexStats") or {}).get("citedByCount")),
+                "twoYearMeanCitedness": openalex.get("twoYearMeanCitedness", (record.get("openAlexStats") or {}).get("twoYearMeanCitedness")),
+                "hIndex": openalex.get("hIndex", (record.get("openAlexStats") or {}).get("hIndex")),
+                "i10Index": openalex.get("i10Index", (record.get("openAlexStats") or {}).get("i10Index")),
+            },
+            "foundedYear": founded_year,
+            "frequency": frequency,
+            "publicationCount": group["publicationCount"],
+            "publicationYears": group["publicationYears"],
+            "firstPublicationYear": group["firstPublicationYear"],
+            "latestPublicationYear": group["latestPublicationYear"],
+            "sampleDoi": group["sampleDoi"],
+            "sources": sources,
+        }
     )
 
-    publisher = (
-        openalex.get("publisher")
-        or crossref.get("publisher")
-        or manuscripts.get("publisher")
-        or group.get("publisherFromPublications")
-        or record.get("publisher")
-        or ""
-    )
 
-    sources = dict(record.get("sources") or {})
-    if crossref.get("source"):
-        sources["crossref"] = crossref["source"]
-    if openalex.get("source"):
-        sources["openalex"] = openalex["source"]
-    if manuscripts.get("source"):
-        sources["manusights"] = manuscripts["source"]
-
-    merged = {
-        **record,
-        "title": title,
-        "abbreviation": (
-            openalex.get("abbreviation")
-            or crossref.get("abbreviation")
-            or record.get("abbreviation")
-            or ""
-        ),
-        "aliases": aliases,
-        "publisher": publisher,
-        "issn": print_issn,
-        "eissn": eissn or "",
-        "issnL": openalex.get("issnL") or record.get("issnL") or "",
-        "allIssns": all_issns,
-        "homepage": openalex.get("homepage") or record.get("homepage") or "",
-        "countryCode": openalex.get("countryCode") or record.get("countryCode") or "",
-        "journalType": openalex.get("sourceType") or record.get("journalType") or "journal",
-        "isOpenAccess": (
-            openalex.get("isOpenAccess")
-            if "isOpenAccess" in openalex
-            else record.get("isOpenAccess")
-        ),
-        "isInDoaj": (
-            openalex.get("isInDoaj")
-            if "isInDoaj" in openalex
-            else record.get("isInDoaj")
-        ),
-        "subjects": unique_strings(
-            [*(record.get("subjects") or []), *(crossref.get("subjects") or [])]
-        ),
-        "openAlexId": openalex.get("openAlexId") or record.get("openAlexId") or "",
-        "openAlexUrl": openalex.get("openAlexUrl") or record.get("openAlexUrl") or "",
-        "openAlexStats": {
-            "worksCount": openalex.get("worksCount"),
-            "citedByCount": openalex.get("citedByCount"),
-            "twoYearMeanCitedness": openalex.get("twoYearMeanCitedness"),
-            "hIndex": openalex.get("hIndex"),
-            "i10Index": openalex.get("i10Index"),
-        },
-        "foundedYear": manuscripts.get("foundedYear") or record.get("foundedYear"),
-        "publicationCount": group["publicationCount"],
-        "publicationYears": group["publicationYears"],
-        "firstPublicationYear": group["firstPublicationYear"],
-        "latestPublicationYear": group["latestPublicationYear"],
-        "sampleDoi": group["sampleDoi"],
-        "sources": sources,
-    }
-
-    return merged
-
-
-def merge_metrics(
+def merge_all_metrics(
     record: dict[str, Any],
-    manuscripts: dict[str, Any],
+    source_documents: list[dict[str, Any]],
+    report_conflicts: list[dict[str, Any]],
 ) -> dict[str, Any]:
     metrics_by_year = dict(record.get("metricsByYear") or {})
-    metric_year = manuscripts.get("metricYear")
+    candidates: list[dict[str, Any]] = []
+    for document in source_documents:
+        candidates.extend(document.get("metricCandidates") or [])
 
-    if metric_year and manuscripts.get("impactFactor") is not None:
-        year_key = str(metric_year)
-        current = dict(metrics_by_year.get(year_key) or {})
-
-        category_record: dict[str, Any] = {}
-        if manuscripts.get("category"):
-            category_record["name"] = manuscripts["category"]
-        if manuscripts.get("bestQuartile"):
-            category_record["quartile"] = manuscripts["bestQuartile"]
-        if manuscripts.get("categoryRank") is not None:
-            category_record["rank"] = manuscripts["categoryRank"]
-        if manuscripts.get("categoryJournalCount") is not None:
-            category_record["totalJournals"] = manuscripts["categoryJournalCount"]
-
-        current.update(
-            {
-                "impactFactor": manuscripts.get("impactFactor"),
-                "fiveYearImpactFactor": manuscripts.get("fiveYearImpactFactor"),
-                "jci": manuscripts.get("jci"),
-                "totalCites": manuscripts.get("totalCites"),
-                "citeScore": manuscripts.get("citeScore"),
-                "bestQuartile": manuscripts.get("bestQuartile"),
-                "categories": [category_record] if category_record else [],
-                "jcrReleaseYear": manuscripts.get("jcrReleaseYear"),
-                "sourceType": "secondary-source",
-                "sourceName": "Manusights",
-                "sourceUrls": (manuscripts.get("source") or {}).get("urls", []),
-                "verificationStatus": "secondary-source",
-                "retrievedAt": utc_now(),
-            }
+    # Apply low-priority candidates first so higher-priority sources can replace them.
+    candidates.sort(key=lambda item: metric_source_priority(item.get("source")))
+    for candidate in candidates:
+        apply_metric_candidate(
+            metrics_by_year,
+            candidate,
+            report_conflicts,
+            record.get("title", ""),
         )
-        metrics_by_year[year_key] = {
-            key: value
-            for key, value in current.items()
-            if value not in (None, "", [])
-        }
 
     record["metricsByYear"] = dict(
         sorted(metrics_by_year.items(), key=lambda item: item[0])
     )
-
-    years = [as_int(year) for year in record["metricsByYear"]]
-    valid_years = [year for year in years if year is not None]
+    valid_years = [as_int(year) for year in record["metricsByYear"]]
+    valid_years = [year for year in valid_years if year is not None]
     record["latestMetricYear"] = max(valid_years) if valid_years else None
-    return record
+
+    for document in source_documents:
+        if document.get("scopusLatest"):
+            current = record.get("scopusLatest") or {}
+            incoming = document["scopusLatest"]
+            if semantic_copy(current) != semantic_copy(incoming):
+                record["scopusLatest"] = incoming
+    return clean_nulls(record)
 
 
-def clean_nulls(value: Any) -> Any:
-    if isinstance(value, dict):
-        return {
-            key: clean_nulls(item)
-            for key, item in value.items()
-            if item is not None
-        }
-    if isinstance(value, list):
-        return [clean_nulls(item) for item in value]
-    return value
+# ---------------------------------------------------------------------------
+# Main update process
+# ---------------------------------------------------------------------------
+
+def default_payload() -> dict[str, Any]:
+    return {
+        "schemaVersion": 2,
+        "sourcePolicy": {
+            "primaryMetricSource": "JournalMetrics.org",
+            "backupMetricSources": [
+                "Bioxbio",
+                "Manusights",
+                "JournalSearches",
+            ],
+            "basicMetadataSources": [
+                "Crossref",
+                "OpenAlex",
+                "publication records",
+            ],
+            "fieldRules": {
+                "currentImpactFactorAndJcrQuartile": "JournalMetrics.org is preferred.",
+                "historicalImpactFactor": "Bioxbio is preferred.",
+                "fiveYearImpactFactorJciAndCategoryRank": "Manusights is preferred when available.",
+                "lastResortCurrentImpactFactor": "JournalSearches may fill missing JIF values.",
+                "quartileSeparation": "JournalSearches quartiles are stored as Scopus quartiles and never treated as JCR quartiles.",
+            },
+            "note": (
+                "All JIF and JCR values are secondary-source observations and "
+                "should be checked against Clarivate/JCR for formal use."
+            ),
+        },
+        "journals": {},
+    }
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(
         description=(
-            "Build and update data/journals.json from data/publications.json, "
-            "Crossref, OpenAlex, and public Manusights journal pages."
+            "Build and update data/journals.json from publications, Crossref, "
+            "OpenAlex, JournalMetrics.org, Bioxbio, Manusights, and JournalSearches."
         )
     )
     parser.add_argument(
         "--mode",
         choices=("missing", "refresh"),
         default="missing",
-        help=(
-            "missing: remotely enrich new journals only; "
-            "refresh: remotely recheck all journals."
-        ),
+        help="missing enriches new journals; refresh rechecks all journal metric sources.",
     )
     parser.add_argument(
         "--report",
         default="journal_update_report.json",
-        help="Path for a run report. The report is not required by the website.",
+        help="Path for the run report.",
     )
     args = parser.parse_args()
 
     groups = load_publication_groups()
-    existing = load_json(
-        JOURNALS_PATH,
-        default={
-            "schemaVersion": 1,
-            "sourcePolicy": {
-                "basicMetadata": ["Crossref", "OpenAlex", "publication records"],
-                "journalMetrics": ["Manusights secondary-source pages"],
-                "note": (
-                    "Journal Impact Factor and JCR values are secondary-source "
-                    "data and should be checked against Clarivate for formal use."
-                ),
-            },
-            "journals": {},
-        },
-    )
-
+    existing = load_json(JOURNALS_PATH, default=default_payload())
     if not isinstance(existing, dict):
         raise RuntimeError(f"{JOURNALS_PATH} must contain a JSON object.")
     if not isinstance(existing.get("journals"), dict):
         existing["journals"] = {}
 
+    before = copy.deepcopy(existing)
     journals: dict[str, Any] = existing["journals"]
     name_index = existing_index(existing)
     used_ids = set(journals)
@@ -926,9 +1467,10 @@ def main() -> None:
         "mode": args.mode,
         "publicationJournalCount": len(groups),
         "newJournals": [],
-        "refreshedJournals": [],
-        "metadataOnlyUpdates": [],
-        "manusightsNotFound": [],
+        "locallyUpdatedJournals": [],
+        "sourceMatches": defaultdict(list),
+        "sourceMisses": defaultdict(list),
+        "conflicts": [],
         "errors": [],
     }
 
@@ -939,7 +1481,6 @@ def main() -> None:
         ):
             journal_id = name_index.get(normalized_name)
             is_new = journal_id is None
-
             if is_new:
                 journal_id = make_journal_id(group["canonicalTitle"], used_ids)
                 record: dict[str, Any] = {
@@ -952,18 +1493,18 @@ def main() -> None:
             else:
                 record = dict(journals.get(journal_id) or {})
 
-            should_fetch_remote = is_new or args.mode == "refresh"
-            crossref: dict[str, Any] = {}
-            openalex: dict[str, Any] = {}
-            manuscripts: dict[str, Any] = {}
+            should_refresh_metrics = is_new or args.mode == "refresh"
+            needs_basic_metadata = is_new or not record.get("allIssns") or not record.get("openAlexId")
 
             print(
                 f"[{number}/{len(groups)}] {group['canonicalTitle']} "
                 f"({'new' if is_new else 'existing'}; "
-                f"{'remote refresh' if should_fetch_remote else 'local statistics only'})"
+                f"{'remote refresh' if should_refresh_metrics else 'local statistics only'})"
             )
 
-            if should_fetch_remote:
+            crossref: dict[str, Any] = {}
+            openalex: dict[str, Any] = {}
+            if needs_basic_metadata:
                 crossref = crossref_metadata(session, group["sampleDoi"])
                 known_issns = unique_strings(
                     [
@@ -973,41 +1514,112 @@ def main() -> None:
                         crossref.get("eissn"),
                     ]
                 )
-                candidates = openalex_candidates(
-                    session,
-                    title=group["canonicalTitle"],
-                    issns=known_issns,
-                )
-                source = select_openalex_source(
-                    candidates,
-                    title=group["canonicalTitle"],
-                    issns=known_issns,
-                )
-                openalex = openalex_metadata(source)
-                manuscripts = manuscripts_metadata(
-                    session,
-                    openalex.get("title")
-                    or crossref.get("title")
-                    or group["canonicalTitle"],
+                openalex = openalex_metadata(
+                    select_openalex_source(
+                        openalex_candidates(
+                            session,
+                            title=group["canonicalTitle"],
+                            issns=known_issns,
+                        ),
+                        title=group["canonicalTitle"],
+                        issns=known_issns,
+                    )
                 )
 
-                if manuscripts:
-                    report["refreshedJournals"].append(group["canonicalTitle"])
-                else:
-                    report["manusightsNotFound"].append(group["canonicalTitle"])
+            source_documents: list[dict[str, Any]] = []
+            if should_refresh_metrics:
+                title_for_search = (
+                    openalex.get("title")
+                    or crossref.get("title")
+                    or record.get("title")
+                    or group["canonicalTitle"]
+                )
+                abbreviation = (
+                    openalex.get("abbreviation")
+                    or crossref.get("abbreviation")
+                    or record.get("abbreviation")
+                    or ""
+                )
+                known_issns = unique_strings(
+                    [
+                        *(record.get("allIssns") or []),
+                        *(crossref.get("allIssns") or []),
+                        *(openalex.get("allIssns") or []),
+                        crossref.get("issn"),
+                        crossref.get("eissn"),
+                        openalex.get("issnL"),
+                    ]
+                )
+
+                fetchers = [
+                    (
+                        "JournalMetrics.org",
+                        lambda: journalmetrics_metadata(
+                            session,
+                            title=title_for_search,
+                            issns=known_issns,
+                        ),
+                    ),
+                    (
+                        "Bioxbio",
+                        lambda: bioxbio_metadata(
+                            session,
+                            title=title_for_search,
+                            abbreviation=abbreviation,
+                            issns=known_issns,
+                        ),
+                    ),
+                    (
+                        "Manusights",
+                        lambda: manusights_metadata(
+                            session,
+                            title=title_for_search,
+                        ),
+                    ),
+                    (
+                        "JournalSearches",
+                        lambda: journalsearches_metadata(
+                            session,
+                            title=title_for_search,
+                            issns=known_issns,
+                        ),
+                    ),
+                ]
+
+                for source_name, fetcher in fetchers:
+                    try:
+                        document = fetcher()
+                    except Exception as error:  # defensive: one site must not abort the run
+                        report["errors"].append(
+                            {
+                                "journal": title_for_search,
+                                "source": source_name,
+                                "error": str(error),
+                            }
+                        )
+                        document = {}
+                    if document:
+                        source_documents.append(document)
+                        report["sourceMatches"][source_name].append(title_for_search)
+                    else:
+                        report["sourceMisses"][source_name].append(title_for_search)
             else:
-                report["metadataOnlyUpdates"].append(group["canonicalTitle"])
+                report["locallyUpdatedJournals"].append(group["canonicalTitle"])
 
             record = merge_basic_metadata(
                 record,
                 group=group,
                 crossref=crossref,
                 openalex=openalex,
-                manuscripts=manuscripts,
+                source_documents=source_documents,
             )
-            record = merge_metrics(record, manuscripts)
             record["journalId"] = journal_id
-            journals[journal_id] = clean_nulls(record)
+            record = merge_all_metrics(
+                record,
+                source_documents,
+                report["conflicts"],
+            )
+            journals[journal_id] = record
             name_index[normalized_name] = journal_id
 
     active_ids = {
@@ -1015,33 +1627,42 @@ def main() -> None:
         for normalized in groups
         if normalized in name_index
     }
-
     for journal_id, record in journals.items():
         if isinstance(record, dict):
             record["currentlyUsedInPublications"] = journal_id in active_ids
 
-    existing["schemaVersion"] = 1
-    existing["lastUpdated"] = utc_now()
+    existing["schemaVersion"] = 2
+    existing["sourcePolicy"] = default_payload()["sourcePolicy"]
     existing["journalCount"] = len(journals)
     existing["activeJournalCount"] = len(active_ids)
     existing["journals"] = dict(
         sorted(
             journals.items(),
-            key=lambda item: compact_whitespace(
-                (item[1] or {}).get("title")
-            ).casefold(),
+            key=lambda item: compact_whitespace((item[1] or {}).get("title")).casefold(),
         )
     )
+
+    if semantic_copy(existing) != semantic_copy(before):
+        existing["lastUpdated"] = utc_now()
+    else:
+        existing["lastUpdated"] = before.get("lastUpdated")
+
+    report["sourceMatches"] = dict(report["sourceMatches"])
+    report["sourceMisses"] = dict(report["sourceMisses"])
+    report["journalDataChanged"] = semantic_copy(existing) != semantic_copy(before)
 
     write_json_atomic(JOURNALS_PATH, clean_nulls(existing))
     write_json_atomic(Path(args.report), clean_nulls(report))
 
     print(f"Saved {len(journals)} journal records to {JOURNALS_PATH}.")
-    print(
-        f"New: {len(report['newJournals'])}; "
-        f"Manusights matched: {len(report['refreshedJournals'])}; "
-        f"Manusights not found: {len(report['manusightsNotFound'])}."
-    )
+    print(f"Journal data changed: {report['journalDataChanged']}")
+    for source_name in ["JournalMetrics.org", "Bioxbio", "Manusights", "JournalSearches"]:
+        print(
+            f"{source_name}: "
+            f"{len(report['sourceMatches'].get(source_name, []))} matched, "
+            f"{len(report['sourceMisses'].get(source_name, []))} missed"
+        )
+    print(f"Metric conflicts recorded: {len(report['conflicts'])}")
 
 
 if __name__ == "__main__":
