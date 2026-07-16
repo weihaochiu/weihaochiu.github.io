@@ -5,1109 +5,243 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Publication Analytics | Wei-Hao Chiu</title>
   <meta name="robots" content="noindex, nofollow, noarchive" />
-  <meta name="description" content="Private publication analytics page for Wei-Hao Chiu." />
+  <meta name="description" content="Private publication, citation, journal, JCR and impact-factor analytics." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet" />
   <link href="assets/css/styles.css" rel="stylesheet" />
   <link href="assets/images/favicon.svg" rel="icon" type="image/svg+xml" />
   <style>
-    .private-analytics-header {
-      padding: 3.5rem 0 2rem;
-      border-bottom: 1px solid var(--line, #d9e0e7);
-      background: linear-gradient(180deg, #f4f7fa 0%, #ffffff 100%);
-    }
-    .private-analytics-header h1 { margin-bottom: .45rem; }
-    .private-analytics-header p {
-      max-width: 860px;
-      margin: 0;
-      color: var(--muted, #5f6d78);
-    }
-    .analytics-jump-bar {
-      position: sticky;
-      top: 72px;
-      z-index: 40;
-      background: rgba(245, 247, 249, .96);
-      border-bottom: 1px solid var(--line, #d9e0e7);
-      backdrop-filter: blur(14px);
-    }
-    .analytics-jump-inner {
-      min-height: 58px;
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-    .analytics-jump-label {
-      flex: 0 0 auto;
-      color: var(--muted, #5f6d78);
-      font-size: .7rem;
-      font-weight: 750;
-      letter-spacing: .09em;
-      text-transform: uppercase;
-    }
-    .analytics-jump-links {
-      display: flex;
-      gap: 8px;
-      overflow-x: auto;
-      padding: 9px 0;
-      scrollbar-width: thin;
-    }
-    .analytics-jump-links a {
-      flex: 0 0 auto;
-      padding: 6px 12px;
-      border: 1px solid var(--line, #d9e0e7);
-      border-radius: 999px;
-      background: #fff;
-      color: var(--brand, #234a70);
-      font-size: .75rem;
-      font-weight: 700;
-      line-height: 1.35;
-      text-decoration: none;
-    }
-    .analytics-jump-links a:hover,
-    .analytics-jump-links a:focus-visible {
-      border-color: var(--brand, #234a70);
-      background: #edf2f6;
-    }
-    .private-analytics-main {
-      padding-top: 2rem;
-      padding-bottom: 4rem;
-    }
-    .analytics-section {
-      scroll-margin-top: 150px;
-      margin-bottom: 28px;
-    }
-    .analytics-section:last-child { margin-bottom: 0; }
-    .analytics-section .chart-card { overflow: hidden; }
-    .analytics-section-heading {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 18px;
-      margin-bottom: 4px;
-    }
-    .analytics-section-heading h2 { margin-bottom: 0; }
-    .chart-download-actions {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      gap: 7px;
-    }
-    .chart-download-button {
-      appearance: none;
-      border: 1px solid #b9c5cf;
-      border-radius: 6px;
-      background: #fff;
-      color: var(--brand, #234a70);
-      padding: 7px 10px;
-      font: inherit;
-      font-size: .69rem;
-      font-weight: 750;
-      cursor: pointer;
-    }
-    .chart-download-button:hover,
-    .chart-download-button:focus-visible {
-      border-color: var(--brand, #234a70);
-      background: #edf2f6;
-    }
-    .analytics-status {
-      min-height: 1.5rem;
-      margin: .8rem 0 0;
-      color: var(--muted, #5f6d78);
-      font-size: .72rem;
-    }
-    .analytics-error { color: #9f2f2f; }
-    .analytics-warning { color: #8a5a19; }
-    .analytics-chart-frame {
-      margin-top: 8px;
-      border: 1px solid #e3e9ee;
-      border-radius: 8px;
-      background: #fff;
-      overflow: hidden;
-    }
-    .analytics-chart-host {
-      min-height: 460px;
-      overflow-x: auto;
-      overflow-y: hidden;
-      padding: 4px 0 0;
-      scrollbar-width: thin;
-    }
-    .analytics-chart-host svg {
-      display: block;
-      max-width: none;
-      background: #fff;
-    }
-    .analytics-chart-host svg text {
-      font-family: Inter, "Noto Sans TC", sans-serif;
-    }
-    .analytics-chart-host .chart-empty {
-      display: grid;
-      place-items: center;
-      min-height: 420px;
-      color: var(--muted, #5f6d78);
-      font-size: .82rem;
-      text-align: center;
-      padding: 24px;
-    }
-    .data-source-controls {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 9px 14px;
-      margin: 12px 0 14px;
-      padding: 11px 13px;
-      border: 1px solid var(--line, #d9e0e7);
-      border-radius: 7px;
-      background: #f7f9fa;
-    }
-    .data-source-controls > strong {
-      color: #52616e;
-      font-size: .69rem;
-      letter-spacing: .06em;
-      text-transform: uppercase;
-    }
-    .source-toggle {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      color: #374957;
-      font-size: .75rem;
-      font-weight: 700;
-      cursor: pointer;
-      user-select: none;
-    }
-    .source-toggle input { accent-color: var(--brand, #234a70); }
-    .source-toggle input:disabled + .source-swatch,
-    .source-toggle:has(input:disabled) {
-      opacity: .48;
-      cursor: not-allowed;
-    }
-    .source-swatch {
-      width: 11px;
-      height: 11px;
-      border-radius: 2px;
-      flex: 0 0 auto;
-    }
-    .source-swatch.google-scholar { background: #577b72; }
-    .source-swatch.openalex { background: #a66a1f; }
-    .source-swatch.publications { background: #3b6f9b; }
-    .axis-definition {
-      margin: 12px 0 0;
-      color: var(--muted, #5f6d78);
-      font-size: .69rem;
-    }
-    .axis-definition strong { color: #445462; }
-    .back-to-top {
-      display: inline-block;
-      margin-top: 12px;
-      color: var(--brand, #234a70);
-      font-size: .7rem;
-      font-weight: 700;
-      text-decoration: none;
-    }
-    .download-note {
-      margin: 8px 0 0;
-      color: var(--muted, #5f6d78);
-      font-size: .66rem;
-    }
-    @media (max-width: 700px) {
-      .private-analytics-header { padding: 2.5rem 0 1.5rem; }
-      .analytics-jump-inner {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 0;
-        padding-top: 8px;
-      }
-      .analytics-jump-links { width: 100%; }
-      .analytics-jump-bar { top: 72px; }
-      .analytics-section { scroll-margin-top: 175px; }
-      .analytics-section-heading { flex-direction: column; }
-      .chart-download-actions { justify-content: flex-start; }
-      .analytics-chart-host { min-height: 430px; }
-    }
+    :root { --analytics-blue:#3b6f9b; --analytics-green:#577b72; --analytics-gold:#a66a1f; --analytics-red:#a64b45; --analytics-purple:#72578a; }
+    .private-analytics-header{padding:3.3rem 0 2rem;border-bottom:1px solid var(--line,#d9e0e7);background:linear-gradient(180deg,#f4f7fa 0%,#fff 100%)}
+    .private-analytics-header h1{margin-bottom:.45rem}.private-analytics-header p{max-width:920px;margin:0;color:var(--muted,#5f6d78)}
+    .analytics-jump-bar{position:sticky;top:72px;z-index:40;background:rgba(245,247,249,.96);border-bottom:1px solid var(--line,#d9e0e7);backdrop-filter:blur(14px)}
+    .analytics-jump-inner{min-height:58px;display:flex;align-items:center;gap:14px}
+    .analytics-jump-label{flex:0 0 auto;color:var(--muted,#5f6d78);font-size:.7rem;font-weight:750;letter-spacing:.09em;text-transform:uppercase}
+    .analytics-jump-links{display:flex;gap:8px;overflow-x:auto;padding:9px 0;scrollbar-width:thin}
+    .analytics-jump-links a{flex:0 0 auto;padding:6px 12px;border:1px solid var(--line,#d9e0e7);border-radius:999px;background:#fff;color:var(--brand,#234a70);font-size:.73rem;font-weight:700;text-decoration:none}
+    .private-analytics-main{padding-top:2rem;padding-bottom:4rem}.analytics-section{scroll-margin-top:150px;margin-bottom:28px}
+    .analytics-section .chart-card{overflow:hidden}.analytics-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-bottom:6px}
+    .analytics-heading h2{margin-bottom:0}.chart-actions{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:7px}
+    .action-button{appearance:none;border:1px solid #b9c5cf;border-radius:6px;background:#fff;color:var(--brand,#234a70);padding:7px 10px;font:inherit;font-size:.68rem;font-weight:750;cursor:pointer}
+    .action-button:hover,.action-button:focus-visible{border-color:var(--brand,#234a70);background:#edf2f6}
+    .analytics-chart-frame{margin-top:10px;border:1px solid #e3e9ee;border-radius:8px;background:#fff;overflow:hidden}
+    .analytics-chart-host{min-height:430px;overflow:auto;padding:4px 0 0;scrollbar-width:thin}.analytics-chart-host svg{display:block;max-width:none;background:#fff}
+    .analytics-chart-host svg text{font-family:Inter,"Noto Sans TC",sans-serif}.chart-empty{display:grid;place-items:center;min-height:390px;color:#647382;padding:24px;text-align:center}
+    .analytics-status{min-height:1.4rem;margin:.75rem 0 0;color:#5f6d78;font-size:.71rem}.analytics-warning{color:#8a5a19}.analytics-error{color:#9f2f2f}
+    .chart-note,.axis-definition,.download-note{color:#5f6d78;font-size:.68rem}.axis-definition{margin:10px 0 0}.chart-note{margin:.45rem 0 0}.download-note{margin:.45rem 0 0}
+    .data-source-controls{display:flex;align-items:center;flex-wrap:wrap;gap:9px 14px;margin:12px 0 14px;padding:11px 13px;border:1px solid #d9e0e7;border-radius:7px;background:#f7f9fa}
+    .data-source-controls strong{color:#52616e;font-size:.68rem;letter-spacing:.06em;text-transform:uppercase}.source-toggle{display:inline-flex;align-items:center;gap:7px;font-size:.74rem;font-weight:700;cursor:pointer}
+    .source-swatch{width:11px;height:11px;border-radius:2px}.swatch-gs{background:#577b72}.swatch-oa{background:#a66a1f}
+    .summary-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin:0 0 28px}.summary-card{padding:18px;border:1px solid #dfe6ec;border-radius:8px;background:#fff}
+    .summary-card span{display:block;color:#647382;font-size:.68rem;text-transform:uppercase;letter-spacing:.05em}.summary-card strong{display:block;margin-top:5px;font-size:1.55rem;color:#23313d}.summary-card small{color:#6b7884;font-size:.65rem}
+    .two-column{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.two-column .analytics-chart-host{min-height:400px}
+    .table-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:12px 0}
+    .table-search{min-width:250px;max-width:420px;flex:1;padding:9px 11px;border:1px solid #c9d3dc;border-radius:6px;font:inherit;font-size:.78rem}
+    .table-wrap{overflow:auto;border:1px solid #dfe6ec;border-radius:8px}.journal-table{width:100%;min-width:1180px;border-collapse:collapse;font-size:.72rem}
+    .journal-table th,.journal-table td{padding:9px 10px;border-bottom:1px solid #e6ebef;text-align:left;vertical-align:top}.journal-table th{position:sticky;top:0;background:#f4f7f9;z-index:2;color:#344654;font-size:.67rem;text-transform:uppercase;letter-spacing:.03em}
+    .journal-table th button{all:unset;cursor:pointer;display:flex;align-items:center;gap:5px;font-weight:750}.journal-table th button:hover{color:#234a70}.journal-table td.numeric{text-align:right;font-variant-numeric:tabular-nums}
+    .sort-indicator{font-size:.6rem;color:#7b8994}.journal-name{font-weight:700;color:#253846}.metric-badge{display:inline-block;min-width:28px;padding:3px 6px;border-radius:999px;text-align:center;font-weight:750;background:#edf2f6}
+    .q1{background:#dfeee8;color:#315f52}.q2{background:#e6edf5;color:#315c82}.q3{background:#f4ead9;color:#80561a}.q4{background:#f3dddd;color:#8a3838}.unclassified{background:#eceff2;color:#66727c}
+    .back-to-top{display:inline-block;margin-top:12px;color:#234a70;font-size:.7rem;font-weight:700;text-decoration:none}
+    @media(max-width:980px){.summary-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.two-column{grid-template-columns:1fr}}
+    @media(max-width:700px){.private-analytics-header{padding:2.5rem 0 1.5rem}.analytics-jump-inner{align-items:flex-start;flex-direction:column;gap:0;padding-top:8px}.analytics-jump-links{width:100%}.analytics-section{scroll-margin-top:175px}.analytics-heading{flex-direction:column}.chart-actions{justify-content:flex-start}.summary-grid{grid-template-columns:1fr 1fr}}
   </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="shell nav-shell">
-      <a class="brand" href="index.html">
-        <span>Wei-Hao Chiu</span>
-        <small>Academic Profile</small>
-      </a>
-    </div>
-  </header>
-
-  <section class="private-analytics-header">
-    <div class="shell">
-      <h1>Publication Analytics</h1>
-      <p>Private statistics page. Citation sources can be displayed separately or compared in the same chart. Every chart can be exported as a data table in CSV format or as a publication-ready PNG image.</p>
-    </div>
-  </section>
-
-  <nav class="analytics-jump-bar" aria-label="Publication analytics navigation">
-    <div class="shell analytics-jump-inner">
-      <span class="analytics-jump-label">Jump to</span>
-      <div class="analytics-jump-links">
-        <a href="#publications-by-year">Publications by Year</a>
-        <a href="#citations-by-publication-year">Citations by Publication Year</a>
-        <a href="#citations-received-by-year">Citations Received by Year</a>
-        <a href="#publication-citation-trend">Publication &amp; Citation Trend</a>
-      </div>
-    </div>
-  </nav>
-
-  <main class="content shell private-analytics-main">
-    <section class="analytics-section" id="publications-by-year" aria-labelledby="publications-by-year-title">
-      <div class="chart-card collection-chart">
-        <div class="analytics-section-heading">
-          <div>
-            <span class="eyebrow">Publication output</span>
-            <h2 id="publications-by-year-title">Publications by Year</h2>
-          </div>
-          <div class="chart-download-actions">
-            <button class="chart-download-button" type="button" data-download-csv="publications">Download CSV</button>
-            <button class="chart-download-button" type="button" data-download-png="publications">Download PNG</button>
-          </div>
-        </div>
-        <div class="analytics-chart-frame">
-          <div aria-label="Number of publications by publication year" class="analytics-chart-host" id="privatePublicationYearChart"></div>
-        </div>
-        <p class="axis-definition"><strong>X-axis:</strong> publication year. <strong>Y-axis:</strong> number of listed journal publications, measured in articles.</p>
-        <p class="chart-note">Each bar shows the total number of publications in that publication year. Research-theme categories are not separated.</p>
-        <p class="analytics-status" id="publicationStatus">Loading publication data…</p>
-        <p class="download-note">CSV contains all annual values. PNG reflects the complete chart shown above.</p>
-        <a class="back-to-top" href="#top">Back to top ↑</a>
-      </div>
-    </section>
-
-    <section class="analytics-section" id="citations-by-publication-year" aria-labelledby="citations-by-publication-year-title">
-      <div class="chart-card collection-chart">
-        <div class="analytics-section-heading">
-          <div>
-            <span class="eyebrow">Citation impact by publication cohort</span>
-            <h2 id="citations-by-publication-year-title">Citations by Publication Year</h2>
-          </div>
-          <div class="chart-download-actions">
-            <button class="chart-download-button" type="button" data-download-csv="citation-cohort">Download CSV</button>
-            <button class="chart-download-button" type="button" data-download-png="citation-cohort">Download PNG</button>
-          </div>
-        </div>
-        <div class="data-source-controls" id="publicationYearCitationControls" aria-label="Citation sources shown in citations by publication year chart">
-          <strong>Show data</strong>
-          <label class="source-toggle">
-            <input type="checkbox" value="google-scholar" checked />
-            <span class="source-swatch google-scholar" aria-hidden="true"></span>
-            Google Scholar
-          </label>
-          <label class="source-toggle">
-            <input type="checkbox" value="openalex" checked />
-            <span class="source-swatch openalex" aria-hidden="true"></span>
-            OpenAlex
-          </label>
-        </div>
-        <div class="analytics-chart-frame">
-          <div aria-label="Current cumulative citations grouped by publication year" class="analytics-chart-host" id="publicationYearCitationChart"></div>
-        </div>
-        <p class="axis-definition"><strong>X-axis:</strong> publication year. <strong>Y-axis:</strong> current cumulative citation count, measured in citations, summed for papers published in each year.</p>
-        <p class="chart-note">This groups each paper's current citation total by the year in which that paper was published. It does not show citations received during that calendar year.</p>
-        <p class="analytics-status" id="publicationYearCitationStatus">Loading citation data…</p>
-        <p class="download-note">CSV contains both citation sources. PNG reflects the sources currently selected with the checkboxes.</p>
-        <a class="back-to-top" href="#top">Back to top ↑</a>
-      </div>
-    </section>
-
-    <section class="analytics-section" id="citations-received-by-year" aria-labelledby="citations-received-by-year-title">
-      <div class="chart-card collection-chart">
-        <div class="analytics-section-heading">
-          <div>
-            <span class="eyebrow">Annual citation activity</span>
-            <h2 id="citations-received-by-year-title">Citations Received by Year</h2>
-          </div>
-          <div class="chart-download-actions">
-            <button class="chart-download-button" type="button" data-download-csv="annual-citations">Download CSV</button>
-            <button class="chart-download-button" type="button" data-download-png="annual-citations">Download PNG</button>
-          </div>
-        </div>
-        <div class="data-source-controls" id="annualCitationControls" aria-label="Citation sources shown in citations received by year chart">
-          <strong>Show data</strong>
-          <label class="source-toggle">
-            <input type="checkbox" value="google-scholar" checked />
-            <span class="source-swatch google-scholar" aria-hidden="true"></span>
-            Google Scholar
-          </label>
-          <label class="source-toggle">
-            <input type="checkbox" value="openalex" checked />
-            <span class="source-swatch openalex" aria-hidden="true"></span>
-            OpenAlex
-          </label>
-        </div>
-        <div class="analytics-chart-frame">
-          <div aria-label="Citations received during each calendar year" class="analytics-chart-host" id="annualCitationChart"></div>
-        </div>
-        <p class="axis-definition"><strong>X-axis:</strong> calendar year. <strong>Y-axis:</strong> number of citation events received during each calendar year, measured in citations per year.</p>
-        <p class="chart-note">This has the same statistical meaning as the annual bar chart on a Google Scholar profile. The current calendar year is incomplete. OpenAlex values are reconstructed from citation events to the publications listed on this website.</p>
-        <p class="analytics-status" id="annualCitationStatus">Loading annual citation histories…</p>
-        <p class="download-note">CSV contains both citation sources. PNG reflects the sources currently selected with the checkboxes.</p>
-        <a class="back-to-top" href="#top">Back to top ↑</a>
-      </div>
-    </section>
-
-    <section class="analytics-section" id="publication-citation-trend" aria-labelledby="publication-citation-trend-title">
-      <div class="chart-card collection-chart">
-        <div class="analytics-section-heading">
-          <div>
-            <span class="eyebrow">Combined scholarly output and impact</span>
-            <h2 id="publication-citation-trend-title">Publications and Citations Received by Year</h2>
-          </div>
-          <div class="chart-download-actions">
-            <button class="chart-download-button" type="button" data-download-csv="combined-trend">Download CSV</button>
-            <button class="chart-download-button" type="button" data-download-png="combined-trend">Download PNG</button>
-          </div>
-        </div>
-        <div class="data-source-controls" id="combinedTrendControls" aria-label="Citation sources shown in combined publication and citation trend chart">
-          <strong>Show citation lines</strong>
-          <label class="source-toggle">
-            <input type="checkbox" value="google-scholar" checked />
-            <span class="source-swatch google-scholar" aria-hidden="true"></span>
-            Google Scholar
-          </label>
-          <label class="source-toggle">
-            <input type="checkbox" value="openalex" checked />
-            <span class="source-swatch openalex" aria-hidden="true"></span>
-            OpenAlex
-          </label>
-        </div>
-        <div class="analytics-chart-frame">
-          <div aria-label="Annual publications shown as bars and annual citations received shown as lines" class="analytics-chart-host" id="combinedTrendChart"></div>
-        </div>
-        <p class="axis-definition"><strong>X-axis:</strong> calendar/publication year. <strong>Left Y-axis:</strong> number of publications, measured in articles. <strong>Right Y-axis:</strong> citations received during that calendar year, measured in citations per year.</p>
-        <p class="chart-note">Blue bars show publications by publication year. Citation lines show citation events received during each calendar year. The two Y-axes use different units and scales.</p>
-        <p class="analytics-status" id="combinedTrendStatus">Loading combined trend data…</p>
-        <p class="download-note">CSV contains publication counts and both citation sources. PNG reflects the citation lines currently selected with the checkboxes.</p>
-        <a class="back-to-top" href="#top">Back to top ↑</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="shell footer-grid">
-      <div>
-        <strong>Wei-Hao Chiu, Ph.D.</strong>
-        <p>Associate Researcher<br />Center for Sustainability and Energy Technologies<br />Chang Gung University</p>
-      </div>
-      <div class="update-block">
-        <span>Site version</span><strong data-site-version>—</strong>
-        <span>Website updated</span><strong data-site-updated>—</strong>
-        <span>Scholar metrics updated</span><strong data-scholar-updated>—</strong>
-      </div>
-    </div>
-  </footer>
-
-  <script src="assets/js/app.js"></script>
-  <script>
-    (() => {
-      'use strict';
-
-      const COLORS = {
-        publications: '#3b6f9b',
-        'google-scholar': '#577b72',
-        openalex: '#a66a1f',
-        ink: '#1f2933',
-        muted: '#647382',
-        line: '#d9e1e8',
-        grid: '#e8edf1',
-        paper: '#ffffff'
-      };
-
-      const SOURCE_DEFINITIONS = {
-        'google-scholar': {
-          key: 'google-scholar',
-          label: 'Google Scholar',
-          color: COLORS['google-scholar']
-        },
-        openalex: {
-          key: 'openalex',
-          label: 'OpenAlex',
-          color: COLORS.openalex
-        }
-      };
-
-      const chartRegistry = new Map();
-
-      function escapeXml(value) {
-        return String(value ?? '').replace(/[&<>"']/g, character => ({
-          '&': '&amp;',
-          '<': '&lt;',
-          '>': '&gt;',
-          '"': '&quot;',
-          "'": '&#39;'
-        })[character]);
-      }
-
-      function normalizeDoiForAnalytics(value) {
-        return String(value || '')
-          .trim()
-          .toLowerCase()
-          .replace(/^https?:\/\/(dx\.)?doi\.org\//, '')
-          .replace(/^doi:/, '');
-      }
-
-      async function loadAnalyticsJson(path) {
-        const response = await fetch(path, { cache: 'no-store' });
-        if (!response.ok) throw new Error(`Unable to load ${path} (${response.status})`);
-        return response.json();
-      }
-
-      function initializePublicationYears(publications) {
-        const totals = {};
-        publications.forEach(publication => {
-          const year = yearOf(publication);
-          if (year && totals[year] === undefined) totals[year] = 0;
-        });
-        return totals;
-      }
-
-      function countPublicationsByYear(publications) {
-        const totals = initializePublicationYears(publications);
-        publications.forEach(publication => {
-          const year = yearOf(publication);
-          if (year) totals[year] = (totals[year] || 0) + 1;
-        });
-        return totals;
-      }
-
-      function sumGoogleScholarCitationsByPublicationYear(publications) {
-        const totals = initializePublicationYears(publications);
-        publications.forEach(publication => {
-          const year = yearOf(publication);
-          const count = Number(publication.citationCount || 0);
-          if (year && Number.isFinite(count) && count >= 0) totals[year] += count;
-        });
-        return totals;
-      }
-
-      function sumOpenAlexCitationsByPublicationYear(publications, records) {
-        const totals = initializePublicationYears(publications);
-        let verified = 0;
-        publications.forEach(publication => {
-          const year = yearOf(publication);
-          const record = records?.[normalizeDoiForAnalytics(publication.doi)];
-          const count = Number(record?.citationCount);
-          if (year && record?.status === 'verified' && Number.isFinite(count) && count >= 0) {
-            totals[year] += count;
-            verified += 1;
-          }
-        });
-        return { totals, verified };
-      }
-
-      function citationHistoryToValues(payload) {
-        const values = {};
-        const rows = Array.isArray(payload?.citationsByYear) ? payload.citationsByYear : [];
-        rows.forEach(row => {
-          const year = Number(row?.year);
-          const count = Number(row?.citations);
-          if (Number.isInteger(year) && Number.isFinite(count) && count >= 0) values[year] = count;
-        });
-        return values;
-      }
-
-      function sumValues(values) {
-        return Object.values(values || {}).reduce((sum, value) => sum + Number(value || 0), 0);
-      }
-
-      function unionYears(valueObjects, continuous = true) {
-        const years = [...new Set(
-          valueObjects.flatMap(values => Object.keys(values || {}).map(Number))
-        )].filter(Number.isFinite).sort((a, b) => a - b);
-
-        if (!years.length || !continuous) return years;
-        return Array.from(
-          { length: years.at(-1) - years[0] + 1 },
-          (_, index) => years[0] + index
-        );
-      }
-
-      function niceMaximum(value) {
-        const number = Math.max(1, Number(value) || 1);
-        const magnitude = 10 ** Math.floor(Math.log10(number));
-        const normalized = number / magnitude;
-        const step = normalized <= 1 ? 1 : normalized <= 2 ? 2 : normalized <= 5 ? 5 : 10;
-        return Math.max(4, step * magnitude);
-      }
-
-      function tickValues(maximum, divisions = 4) {
-        return Array.from(
-          { length: divisions + 1 },
-          (_, index) => Math.round(maximum * (divisions - index) / divisions)
-        );
-      }
-
-      function sourceSeries(sourceKey, values) {
-        return { ...SOURCE_DEFINITIONS[sourceKey], values: values || {} };
-      }
-
-      function selectedSourceKeys(controlElement) {
-        return [...controlElement.querySelectorAll('input[type="checkbox"]:checked:not(:disabled)')]
-          .map(input => input.value);
-      }
-
-      function setSourceAvailability(controlElement, sourceKey, available) {
-        const input = controlElement.querySelector(`input[value="${sourceKey}"]`);
-        if (!input) return;
-        input.disabled = !available;
-        if (!available) input.checked = false;
-      }
-
-      function registerChart(key, config) {
-        chartRegistry.set(key, config);
-      }
-
-      function setChartSvg(key, svgElement) {
-        const chart = chartRegistry.get(key);
-        if (chart) chart.svgElement = svgElement;
-      }
-
-      function linePath(points) {
-        if (!points.length) return '';
-        return points.map((point, index) => `${index ? 'L' : 'M'} ${point.x.toFixed(2)} ${point.y.toFixed(2)}`).join(' ');
-      }
-
-      function renderGroupedBarChart(element, visibleSeries, allSeries, options = {}) {
-        if (!element) return null;
-        if (!visibleSeries.length) {
-          element.innerHTML = '<div class="chart-empty">Select at least one data source above to display this chart.</div>';
-          return null;
-        }
-
-        const years = unionYears(
-          (allSeries.length ? allSeries : visibleSeries).map(series => series.values)
-        );
-        if (!years.length) {
-          element.innerHTML = '<div class="chart-empty">No data are currently available for this chart.</div>';
-          return null;
-        }
-
-        const width = Math.max(980, 190 + years.length * 54);
-        const height = 520;
-        const margin = { top: 92, right: 38, bottom: 82, left: 96 };
-        const plotWidth = width - margin.left - margin.right;
-        const plotHeight = height - margin.top - margin.bottom;
-        const rawMaximum = Math.max(
-          1,
-          ...allSeries.flatMap(series => Object.values(series.values || {}).map(Number).filter(Number.isFinite))
-        );
-        const maximum = niceMaximum(rawMaximum);
-        const ticks = tickValues(maximum);
-        const band = plotWidth / years.length;
-        const groupWidth = Math.min(40, band * .72);
-        const barGap = visibleSeries.length > 1 ? 4 : 0;
-        const barWidth = Math.max(7, (groupWidth - barGap * (visibleSeries.length - 1)) / visibleSeries.length);
-        const currentYear = new Date().getFullYear();
-
-        const grid = ticks.map(tick => {
-          const y = margin.top + plotHeight - tick / maximum * plotHeight;
-          return `
-            <line x1="${margin.left}" y1="${y}" x2="${width - margin.right}" y2="${y}" stroke="${COLORS.grid}" stroke-width="1" />
-            <text x="${margin.left - 12}" y="${y + 4}" text-anchor="end" font-size="11" fill="${COLORS.muted}">${tick.toLocaleString()}</text>`;
-        }).join('');
-
-        const bars = years.map((year, yearIndex) => {
-          const center = margin.left + band * (yearIndex + .5);
-          const totalGroupWidth = barWidth * visibleSeries.length + barGap * (visibleSeries.length - 1);
-          const startX = center - totalGroupWidth / 2;
-
-          const yearBars = visibleSeries.map((series, seriesIndex) => {
-            const value = Number(series.values?.[year] || 0);
-            const barHeight = value / maximum * plotHeight;
-            const x = startX + seriesIndex * (barWidth + barGap);
-            const y = margin.top + plotHeight - barHeight;
-            const note = options.markCurrentYear && year === currentYear ? ' (year to date)' : '';
-            return `
-              <g>
-                <title>${escapeXml(`${year}: ${value.toLocaleString()} ${options.unit || 'records'} — ${series.label}${note}`)}</title>
-                <rect x="${x}" y="${y}" width="${barWidth}" height="${Math.max(0, barHeight)}" rx="2" fill="${series.color}" />
-                ${value > 0 ? `<text x="${x + barWidth / 2}" y="${Math.max(margin.top + 10, y - 5)}" text-anchor="middle" font-size="9" font-weight="700" fill="${COLORS.muted}">${value.toLocaleString()}</text>` : ''}
-              </g>`;
-          }).join('');
-
-          return `${yearBars}<text x="${center}" y="${margin.top + plotHeight + 24}" text-anchor="middle" font-size="10" fill="${COLORS.muted}">${year}</text>`;
-        }).join('');
-
-        const legendStart = margin.left;
-        const legend = visibleSeries.map((series, index) => {
-          const x = legendStart + index * 175;
-          return `
-            <rect x="${x}" y="52" width="12" height="12" rx="2" fill="${series.color}" />
-            <text x="${x + 19}" y="62" font-size="11" font-weight="700" fill="${COLORS.ink}">${escapeXml(series.label)}</text>`;
-        }).join('');
-
-        element.innerHTML = `
-          <svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="${escapeXml(options.ariaLabel || options.title || 'Chart')}">
-            <rect width="${width}" height="${height}" fill="#ffffff" />
-            <text x="${margin.left}" y="28" font-family="Source Serif 4, serif" font-size="21" font-weight="700" fill="${COLORS.ink}">${escapeXml(options.title || '')}</text>
-            ${legend}
-            ${grid}
-            <line x1="${margin.left}" y1="${margin.top + plotHeight}" x2="${width - margin.right}" y2="${margin.top + plotHeight}" stroke="${COLORS.line}" />
-            <line x1="${margin.left}" y1="${margin.top}" x2="${margin.left}" y2="${margin.top + plotHeight}" stroke="${COLORS.line}" />
-            ${bars}
-            <text x="${margin.left + plotWidth / 2}" y="${height - 24}" text-anchor="middle" font-size="12" font-weight="700" fill="#52616e">${escapeXml(options.xAxisLabel || 'Year')}</text>
-            <text transform="translate(24 ${margin.top + plotHeight / 2}) rotate(-90)" text-anchor="middle" font-size="12" font-weight="700" fill="#52616e">${escapeXml(options.yAxisLabel || '')}</text>
-          </svg>`;
-
-        return element.querySelector('svg');
-      }
-
-      function renderCombinedTrendChart(element, publicationValues, visibleCitationSeries, allCitationSeries, options = {}) {
-        if (!element) return null;
-
-        const years = unionYears([
-          publicationValues,
-          ...allCitationSeries.map(series => series.values)
-        ]);
-        if (!years.length) {
-          element.innerHTML = '<div class="chart-empty">No data are currently available for this chart.</div>';
-          return null;
-        }
-
-        const width = Math.max(1040, 220 + years.length * 54);
-        const height = 540;
-        const margin = { top: 98, right: 100, bottom: 82, left: 96 };
-        const plotWidth = width - margin.left - margin.right;
-        const plotHeight = height - margin.top - margin.bottom;
-        const publicationMaximum = niceMaximum(Math.max(1, ...Object.values(publicationValues).map(Number)));
-        const citationMaximum = niceMaximum(Math.max(
-          1,
-          ...allCitationSeries.flatMap(series => Object.values(series.values || {}).map(Number).filter(Number.isFinite))
-        ));
-        const publicationTicks = tickValues(publicationMaximum);
-        const citationTicks = tickValues(citationMaximum);
-        const band = plotWidth / years.length;
-        const barWidth = Math.min(28, band * .5);
-        const currentYear = new Date().getFullYear();
-
-        const grid = publicationTicks.map((tick, index) => {
-          const y = margin.top + plotHeight - tick / publicationMaximum * plotHeight;
-          const citationTick = citationTicks[index];
-          return `
-            <line x1="${margin.left}" y1="${y}" x2="${width - margin.right}" y2="${y}" stroke="${COLORS.grid}" stroke-width="1" />
-            <text x="${margin.left - 12}" y="${y + 4}" text-anchor="end" font-size="11" fill="${COLORS.muted}">${tick.toLocaleString()}</text>
-            <text x="${width - margin.right + 12}" y="${y + 4}" text-anchor="start" font-size="11" fill="${COLORS.muted}">${citationTick.toLocaleString()}</text>`;
-        }).join('');
-
-        const bars = years.map((year, index) => {
-          const value = Number(publicationValues?.[year] || 0);
-          const x = margin.left + band * (index + .5) - barWidth / 2;
-          const barHeight = value / publicationMaximum * plotHeight;
-          const y = margin.top + plotHeight - barHeight;
-          return `
-            <g>
-              <title>${escapeXml(`${year}: ${value.toLocaleString()} publications`)}</title>
-              <rect x="${x}" y="${y}" width="${barWidth}" height="${Math.max(0, barHeight)}" rx="2" fill="${COLORS.publications}" opacity=".82" />
-              ${value > 0 ? `<text x="${x + barWidth / 2}" y="${Math.max(margin.top + 10, y - 5)}" text-anchor="middle" font-size="9" font-weight="700" fill="${COLORS.muted}">${value.toLocaleString()}</text>` : ''}
-            </g>`;
-        }).join('');
-
-        const lines = visibleCitationSeries.map((series, seriesIndex) => {
-          const points = years.map((year, index) => {
-            const value = Number(series.values?.[year] || 0);
-            return {
-              year,
-              value,
-              x: margin.left + band * (index + .5),
-              y: margin.top + plotHeight - value / citationMaximum * plotHeight
-            };
-          });
-          const dash = series.key === 'openalex' ? '8 5' : '';
-          const circles = points.map(point => `
-            <g>
-              <title>${escapeXml(`${point.year}: ${point.value.toLocaleString()} citations received — ${series.label}${point.year === currentYear ? ' (year to date)' : ''}`)}</title>
-              <circle cx="${point.x}" cy="${point.y}" r="3.5" fill="#fff" stroke="${series.color}" stroke-width="2" />
-            </g>`).join('');
-          return `
-            <path d="${linePath(points)}" fill="none" stroke="${series.color}" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" ${dash ? `stroke-dasharray="${dash}"` : ''} />
-            ${circles}`;
-        }).join('');
-
-        const publicationLegend = `
-          <rect x="${margin.left}" y="54" width="13" height="13" rx="2" fill="${COLORS.publications}" opacity=".82" />
-          <text x="${margin.left + 20}" y="65" font-size="11" font-weight="700" fill="${COLORS.ink}">Publications</text>`;
-
-        const citationLegend = visibleCitationSeries.map((series, index) => {
-          const x = margin.left + 150 + index * 190;
-          const dash = series.key === 'openalex' ? '8 5' : '';
-          return `
-            <line x1="${x}" y1="60" x2="${x + 24}" y2="60" stroke="${series.color}" stroke-width="3" ${dash ? `stroke-dasharray="${dash}"` : ''} />
-            <circle cx="${x + 12}" cy="60" r="3" fill="#fff" stroke="${series.color}" stroke-width="2" />
-            <text x="${x + 32}" y="64" font-size="11" font-weight="700" fill="${COLORS.ink}">${escapeXml(series.label)} citations</text>`;
-        }).join('');
-
-        element.innerHTML = `
-          <svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="${escapeXml(options.ariaLabel || options.title || 'Combined trend chart')}">
-            <rect width="${width}" height="${height}" fill="#ffffff" />
-            <text x="${margin.left}" y="29" font-family="Source Serif 4, serif" font-size="21" font-weight="700" fill="${COLORS.ink}">${escapeXml(options.title || '')}</text>
-            ${publicationLegend}
-            ${citationLegend}
-            ${grid}
-            <line x1="${margin.left}" y1="${margin.top + plotHeight}" x2="${width - margin.right}" y2="${margin.top + plotHeight}" stroke="${COLORS.line}" />
-            <line x1="${margin.left}" y1="${margin.top}" x2="${margin.left}" y2="${margin.top + plotHeight}" stroke="${COLORS.line}" />
-            <line x1="${width - margin.right}" y1="${margin.top}" x2="${width - margin.right}" y2="${margin.top + plotHeight}" stroke="${COLORS.line}" />
-            ${bars}
-            ${lines}
-            ${years.map((year, index) => `<text x="${margin.left + band * (index + .5)}" y="${margin.top + plotHeight + 24}" text-anchor="middle" font-size="10" fill="${COLORS.muted}">${year}</text>`).join('')}
-            <text x="${margin.left + plotWidth / 2}" y="${height - 24}" text-anchor="middle" font-size="12" font-weight="700" fill="#52616e">Year</text>
-            <text transform="translate(24 ${margin.top + plotHeight / 2}) rotate(-90)" text-anchor="middle" font-size="12" font-weight="700" fill="#52616e">Publications (articles)</text>
-            <text transform="translate(${width - 24} ${margin.top + plotHeight / 2}) rotate(90)" text-anchor="middle" font-size="12" font-weight="700" fill="#52616e">Citations received (citations/year)</text>
-          </svg>`;
-
-        return element.querySelector('svg');
-      }
-
-      function csvEscape(value) {
-        const text = String(value ?? '');
-        return /[",\n\r]/.test(text) ? `"${text.replace(/"/g, '""')}"` : text;
-      }
-
-      function downloadBlob(blob, filename) {
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = filename;
-        document.body.appendChild(link);
-        link.click();
-        link.remove();
-        window.setTimeout(() => URL.revokeObjectURL(url), 1000);
-      }
-
-      function downloadChartCsv(key) {
-        const chart = chartRegistry.get(key);
-        if (!chart || !chart.csvHeaders || !chart.csvRows) return;
-
-        const lines = [
-          chart.csvHeaders.map(csvEscape).join(','),
-          ...chart.csvRows().map(row => row.map(csvEscape).join(','))
-        ];
-        const csv = '\ufeff' + lines.join('\r\n') + '\r\n';
-        downloadBlob(
-          new Blob([csv], { type: 'text/csv;charset=utf-8' }),
-          `${chart.filename}.csv`
-        );
-      }
-
-      async function downloadChartPng(key) {
-        const chart = chartRegistry.get(key);
-        const svg = chart?.svgElement;
-        if (!svg) {
-          window.alert('The chart is not available yet.');
-          return;
-        }
-
-        const serializer = new XMLSerializer();
-        const clone = svg.cloneNode(true);
-        clone.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
-        const source = serializer.serializeToString(clone);
-        const svgBlob = new Blob([source], { type: 'image/svg+xml;charset=utf-8' });
-        const url = URL.createObjectURL(svgBlob);
-
-        try {
-          const image = new Image();
-          image.decoding = 'async';
-          const loaded = new Promise((resolve, reject) => {
-            image.onload = resolve;
-            image.onerror = reject;
-          });
-          image.src = url;
-          await loaded;
-
-          const width = Number(svg.getAttribute('width')) || 1200;
-          const height = Number(svg.getAttribute('height')) || 600;
-          const scale = 2;
-          const canvas = document.createElement('canvas');
-          canvas.width = width * scale;
-          canvas.height = height * scale;
-          const context = canvas.getContext('2d');
-          context.scale(scale, scale);
-          context.fillStyle = '#ffffff';
-          context.fillRect(0, 0, width, height);
-          context.drawImage(image, 0, 0, width, height);
-
-          const pngBlob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
-          if (!pngBlob) throw new Error('Unable to create PNG file.');
-          downloadBlob(pngBlob, `${chart.filename}.png`);
-        } catch (error) {
-          console.error(error);
-          window.alert('The PNG could not be generated in this browser.');
-        } finally {
-          URL.revokeObjectURL(url);
-        }
-      }
-
-      function formatUpdated(value) {
-        if (!value) return 'update time unavailable';
-        const date = new Date(value);
-        if (Number.isNaN(date.valueOf())) return String(value);
-        return new Intl.DateTimeFormat('en-GB', {
-          day: 'numeric',
-          month: 'short',
-          year: 'numeric',
-          hour: '2-digit',
-          minute: '2-digit',
-          timeZone: 'Asia/Taipei'
-        }).format(date);
-      }
-
-      function setStatus(element, text, className = '') {
-        element.textContent = text;
-        element.classList.remove('analytics-error', 'analytics-warning');
-        if (className) element.classList.add(className);
-      }
-
-      document.addEventListener('click', event => {
-        const csvButton = event.target.closest('[data-download-csv]');
-        if (csvButton) downloadChartCsv(csvButton.dataset.downloadCsv);
-
-        const pngButton = event.target.closest('[data-download-png]');
-        if (pngButton) downloadChartPng(pngButton.dataset.downloadPng);
-      });
-
-      document.addEventListener('DOMContentLoaded', async () => {
-        const publicationChart = document.getElementById('privatePublicationYearChart');
-        const publicationStatus = document.getElementById('publicationStatus');
-        const publicationYearCitationChart = document.getElementById('publicationYearCitationChart');
-        const publicationYearCitationControls = document.getElementById('publicationYearCitationControls');
-        const publicationYearCitationStatus = document.getElementById('publicationYearCitationStatus');
-        const annualCitationChart = document.getElementById('annualCitationChart');
-        const annualCitationControls = document.getElementById('annualCitationControls');
-        const annualCitationStatus = document.getElementById('annualCitationStatus');
-        const combinedTrendChart = document.getElementById('combinedTrendChart');
-        const combinedTrendControls = document.getElementById('combinedTrendControls');
-        const combinedTrendStatus = document.getElementById('combinedTrendStatus');
-
-        try {
-          const [publications, scholarMetrics, openAlexMetrics, scholarHistory, openAlexHistory] = await Promise.all([
-            loadData('publications'),
-            loadData('scholar_metrics').catch(() => ({})),
-            loadData('openalex_publication_metrics').catch(() => null),
-            loadAnalyticsJson('data/google_scholar_citation_history.json').catch(() => null),
-            loadAnalyticsJson('data/openalex_citation_history.json').catch(() => null)
-          ]);
-
-          const publicationValues = countPublicationsByYear(publications);
-          const publicationYears = unionYears([publicationValues]);
-          const publicationSeries = [{
-            key: 'publications',
-            label: 'Publications',
-            color: COLORS.publications,
-            values: publicationValues
-          }];
-
-          registerChart('publications', {
-            filename: 'publications-by-year',
-            csvHeaders: ['Publication year', 'Publications (articles)'],
-            csvRows: () => publicationYears.map(year => [year, publicationValues[year] || 0])
-          });
-          setChartSvg('publications', renderGroupedBarChart(
-            publicationChart,
-            publicationSeries,
-            publicationSeries,
-            {
-              title: 'Publications by Year',
-              xAxisLabel: 'Publication year',
-              yAxisLabel: 'Publications (articles)',
-              unit: 'articles',
-              ariaLabel: 'Number of publications by publication year'
-            }
-          ));
-          setStatus(
-            publicationStatus,
-            `${publications.length} publications covering ${publicationYears[0]}–${publicationYears.at(-1)}. Source: data/publications.json.`
-          );
-
-          const scholarPublicationYearValues = sumGoogleScholarCitationsByPublicationYear(publications);
-          const openAlexPublicationResult = openAlexMetrics?.records
-            ? sumOpenAlexCitationsByPublicationYear(publications, openAlexMetrics.records)
-            : { totals: {}, verified: 0 };
-          const publicationYearAllSeries = [
-            sourceSeries('google-scholar', scholarPublicationYearValues),
-            sourceSeries('openalex', openAlexPublicationResult.totals)
-          ];
-          const citationCohortYears = unionYears([
-            scholarPublicationYearValues,
-            openAlexPublicationResult.totals
-          ]);
-
-          registerChart('citation-cohort', {
-            filename: 'citations-by-publication-year',
-            csvHeaders: [
-              'Publication year',
-              'Google Scholar cumulative citations (citations)',
-              'OpenAlex cumulative citations (citations)'
-            ],
-            csvRows: () => citationCohortYears.map(year => [
-              year,
-              scholarPublicationYearValues[year] || 0,
-              openAlexPublicationResult.totals[year] || 0
-            ])
-          });
-
-          setSourceAvailability(publicationYearCitationControls, 'google-scholar', true);
-          setSourceAvailability(publicationYearCitationControls, 'openalex', Boolean(openAlexMetrics?.records));
-
-          const drawPublicationYearCitations = () => {
-            const selected = selectedSourceKeys(publicationYearCitationControls);
-            const visible = publicationYearAllSeries.filter(series => selected.includes(series.key));
-            setChartSvg('citation-cohort', renderGroupedBarChart(
-              publicationYearCitationChart,
-              visible,
-              publicationYearAllSeries,
-              {
-                title: 'Citations by Publication Year',
-                xAxisLabel: 'Publication year',
-                yAxisLabel: 'Current cumulative citations (citations)',
-                unit: 'citations',
-                ariaLabel: 'Current cumulative citations grouped by publication year'
-              }
-            ));
-          };
-          publicationYearCitationControls.addEventListener('change', drawPublicationYearCitations);
-          drawPublicationYearCitations();
-
-          const scholarPublicationTotal = sumValues(scholarPublicationYearValues);
-          const openAlexPublicationTotal = sumValues(openAlexPublicationResult.totals);
-          const openAlexPublicationText = openAlexMetrics?.records
-            ? `OpenAlex: ${openAlexPublicationTotal.toLocaleString()} citations from ${openAlexPublicationResult.verified} verified records, updated ${formatUpdated(openAlexMetrics.lastSuccessfulUpdate)}.`
-            : 'OpenAlex publication metrics are unavailable.';
-          setStatus(
-            publicationYearCitationStatus,
-            `Google Scholar: ${scholarPublicationTotal.toLocaleString()} citations, updated ${formatUpdated(scholarMetrics.lastSuccessfulUpdate)}. ${openAlexPublicationText}`,
-            openAlexMetrics?.records ? '' : 'analytics-warning'
-          );
-
-          const scholarAnnualValues = citationHistoryToValues(scholarHistory);
-          const openAlexAnnualValues = citationHistoryToValues(openAlexHistory);
-          const scholarAnnualAvailable = Object.keys(scholarAnnualValues).length > 0;
-          const openAlexAnnualAvailable = Object.keys(openAlexAnnualValues).length > 0;
-          const annualAllSeries = [
-            sourceSeries('google-scholar', scholarAnnualValues),
-            sourceSeries('openalex', openAlexAnnualValues)
-          ].filter(series => Object.keys(series.values).length > 0);
-          const annualYears = unionYears([scholarAnnualValues, openAlexAnnualValues]);
-
-          registerChart('annual-citations', {
-            filename: 'citations-received-by-year',
-            csvHeaders: [
-              'Calendar year',
-              'Google Scholar citations received (citations/year)',
-              'OpenAlex citations received (citations/year)'
-            ],
-            csvRows: () => annualYears.map(year => [
-              year,
-              scholarAnnualValues[year] || 0,
-              openAlexAnnualValues[year] || 0
-            ])
-          });
-
-          setSourceAvailability(annualCitationControls, 'google-scholar', scholarAnnualAvailable);
-          setSourceAvailability(annualCitationControls, 'openalex', openAlexAnnualAvailable);
-
-          const drawAnnualCitations = () => {
-            const selected = selectedSourceKeys(annualCitationControls);
-            const visible = annualAllSeries.filter(series => selected.includes(series.key));
-            setChartSvg('annual-citations', renderGroupedBarChart(
-              annualCitationChart,
-              visible,
-              annualAllSeries,
-              {
-                title: 'Citations Received by Year',
-                xAxisLabel: 'Calendar year',
-                yAxisLabel: 'Citations received (citations/year)',
-                unit: 'citations received',
-                markCurrentYear: true,
-                ariaLabel: 'Citations received during each calendar year'
-              }
-            ));
-          };
-          annualCitationControls.addEventListener('change', drawAnnualCitations);
-          drawAnnualCitations();
-
-          const annualMessages = [];
-          if (scholarAnnualAvailable) {
-            annualMessages.push(`Google Scholar: ${sumValues(scholarAnnualValues).toLocaleString()} annual citation events, updated ${formatUpdated(scholarHistory.lastSuccessfulUpdate)}.`);
-          } else {
-            annualMessages.push('Google Scholar annual history has not yet been generated.');
-          }
-          if (openAlexAnnualAvailable) {
-            const excluded = Number(openAlexHistory?.excludedInvalidCitationCount || 0);
-            annualMessages.push(`OpenAlex: ${sumValues(openAlexAnnualValues).toLocaleString()} annual citation events, updated ${formatUpdated(openAlexHistory.lastSuccessfulUpdate)}${excluded ? `; ${excluded} chronologically invalid event excluded` : ''}.`);
-          } else {
-            annualMessages.push('OpenAlex annual history has not yet been generated.');
-          }
-          setStatus(
-            annualCitationStatus,
-            annualMessages.join(' '),
-            scholarAnnualAvailable && openAlexAnnualAvailable ? '' : 'analytics-warning'
-          );
-
-          const combinedYears = unionYears([
-            publicationValues,
-            scholarAnnualValues,
-            openAlexAnnualValues
-          ]);
-
-          registerChart('combined-trend', {
-            filename: 'publications-and-citations-received-by-year',
-            csvHeaders: [
-              'Year',
-              'Publications (articles)',
-              'Google Scholar citations received (citations/year)',
-              'OpenAlex citations received (citations/year)'
-            ],
-            csvRows: () => combinedYears.map(year => [
-              year,
-              publicationValues[year] || 0,
-              scholarAnnualValues[year] || 0,
-              openAlexAnnualValues[year] || 0
-            ])
-          });
-
-          setSourceAvailability(combinedTrendControls, 'google-scholar', scholarAnnualAvailable);
-          setSourceAvailability(combinedTrendControls, 'openalex', openAlexAnnualAvailable);
-
-          const drawCombinedTrend = () => {
-            const selected = selectedSourceKeys(combinedTrendControls);
-            const visible = annualAllSeries.filter(series => selected.includes(series.key));
-            setChartSvg('combined-trend', renderCombinedTrendChart(
-              combinedTrendChart,
-              publicationValues,
-              visible,
-              annualAllSeries,
-              {
-                title: 'Publications and Citations Received by Year',
-                ariaLabel: 'Annual publications shown as bars and annual citations received shown as lines'
-              }
-            ));
-          };
-          combinedTrendControls.addEventListener('change', drawCombinedTrend);
-          drawCombinedTrend();
-
-          setStatus(
-            combinedTrendStatus,
-            `Publication bars: ${publications.length} articles. Citation lines use the annual Google Scholar and OpenAlex histories shown above. The current year is year to date.`,
-            scholarAnnualAvailable || openAlexAnnualAvailable ? '' : 'analytics-warning'
-          );
-        } catch (error) {
-          console.error(error);
-          setStatus(publicationStatus, 'Unable to load publication data.', 'analytics-error');
-          setStatus(publicationYearCitationStatus, 'Unable to load citation data by publication year.', 'analytics-error');
-          setStatus(annualCitationStatus, 'Unable to load annual citation histories.', 'analytics-error');
-          setStatus(combinedTrendStatus, 'Unable to load combined publication and citation trend.', 'analytics-error');
-          publicationChart.innerHTML = '<div class="chart-empty">Publication data could not be loaded.</div>';
-          publicationYearCitationChart.innerHTML = '<div class="chart-empty">Citation data could not be loaded.</div>';
-          annualCitationChart.innerHTML = '<div class="chart-empty">Annual citation data could not be loaded.</div>';
-          combinedTrendChart.innerHTML = '<div class="chart-empty">Combined trend data could not be loaded.</div>';
-        }
-      });
-    })();
-  </script>
-</body>
-</html>
+<header class="site-header"><div class="shell nav-shell"><a class="brand" href="index.html"><span>Wei-Hao Chiu</span><small>Academic Profile</small></a></div></header>
+<section class="private-analytics-header"><div class="shell"><h1>Publication Analytics</h1><p>Private dashboard combining publication output, citation activity, journal portfolio, JCR quartiles and journal metrics. JCR and JIF values are secondary-source observations; Scopus quartiles are never used as JCR quartiles.</p></div></section>
+<nav class="analytics-jump-bar" aria-label="Analytics navigation"><div class="shell analytics-jump-inner"><span class="analytics-jump-label">Jump to</span><div class="analytics-jump-links">
+<a href="#output">Output & citations</a><a href="#jcr">JCR portfolio</a><a href="#journal-rankings">Journals</a><a href="#publishers">Publishers</a><a href="#impact">Impact factor</a><a href="#relationships">Relationships</a><a href="#journal-table">Journal table</a>
+</div></div></nav>
+<main class="content shell private-analytics-main">
+<div class="summary-grid" id="summaryCards"><div class="summary-card"><span>Publications</span><strong>—</strong><small>Loading</small></div></div>
+
+<section class="analytics-section" id="output"><div class="chart-card">
+<div class="analytics-heading"><div><span class="eyebrow">Scholarly output</span><h2>Publication and Citation Trends</h2></div></div>
+<div class="two-column">
+<div><div class="analytics-heading"><h3>Publications by Year</h3><div class="chart-actions"><button class="action-button" data-csv="pub-year">CSV</button><button class="action-button" data-png="pub-year">PNG</button></div></div><div class="analytics-chart-frame"><div class="analytics-chart-host" id="chartPubYear"></div></div></div>
+<div><div class="analytics-heading"><h3>Citations by Publication Year</h3><div class="chart-actions"><button class="action-button" data-csv="citation-cohort">CSV</button><button class="action-button" data-png="citation-cohort">PNG</button></div></div><div class="data-source-controls" id="cohortControls"><strong>Show</strong><label class="source-toggle"><input type="checkbox" value="gs" checked><span class="source-swatch swatch-gs"></span>Google Scholar</label><label class="source-toggle"><input type="checkbox" value="oa" checked><span class="source-swatch swatch-oa"></span>OpenAlex</label></div><div class="analytics-chart-frame"><div class="analytics-chart-host" id="chartCitationCohort"></div></div></div>
+<div><div class="analytics-heading"><h3>Citations Received by Year</h3><div class="chart-actions"><button class="action-button" data-csv="annual-citations">CSV</button><button class="action-button" data-png="annual-citations">PNG</button></div></div><div class="data-source-controls" id="annualControls"><strong>Show</strong><label class="source-toggle"><input type="checkbox" value="gs" checked><span class="source-swatch swatch-gs"></span>Google Scholar</label><label class="source-toggle"><input type="checkbox" value="oa" checked><span class="source-swatch swatch-oa"></span>OpenAlex</label></div><div class="analytics-chart-frame"><div class="analytics-chart-host" id="chartAnnualCitations"></div></div></div>
+<div><div class="analytics-heading"><h3>Publications and Citations Received</h3><div class="chart-actions"><button class="action-button" data-csv="combined-trend">CSV</button><button class="action-button" data-png="combined-trend">PNG</button></div></div><div class="data-source-controls" id="combinedControls"><strong>Citation lines</strong><label class="source-toggle"><input type="checkbox" value="gs" checked><span class="source-swatch swatch-gs"></span>Google Scholar</label><label class="source-toggle"><input type="checkbox" value="oa" checked><span class="source-swatch swatch-oa"></span>OpenAlex</label></div><div class="analytics-chart-frame"><div class="analytics-chart-host" id="chartCombined"></div></div></div>
+</div><p class="analytics-status" id="outputStatus">Loading publication and citation data…</p><a class="back-to-top" href="#top">Back to top ↑</a></div></section>
+
+<section class="analytics-section" id="jcr"><div class="chart-card">
+<div class="analytics-heading"><div><span class="eyebrow">Journal quality portfolio</span><h2>JCR Quartile Analysis</h2></div></div>
+<div class="two-column">
+<div><div class="analytics-heading"><h3>JCR Quartile Distribution</h3><div class="chart-actions"><button class="action-button" data-csv="quartile">CSV</button><button class="action-button" data-png="quartile">PNG</button></div></div><div class="analytics-chart-frame"><div class="analytics-chart-host" id="chartQuartile"></div></div></div>
+<div><div class="analytics-heading"><h3>Quartile Composition by Publication Year</h3><div class="chart-actions"><button class="action-button" data-csv="quartile-year">CSV</button><button class="action-button" data-png="quartile-year">PNG</button></div></div><div class="analytics-chart-frame"><div class="analytics-chart-host" id="chartQuartileYear"></div></div></div>
+<div><div class="analytics-heading"><h3>Q1 Publication Ratio by Year</h3><div class="chart-actions"><button class="action-button" data-csv="q1-ratio">CSV</button><button class="action-button" data-png="q1-ratio">PNG</button></div></div><div class="analytics-chart-frame"><div class="analytics-chart-host" id="chartQ1Ratio"></div></div></div>
+<div><div class="analytics-heading"><h3>Publisher × JCR Quartile</h3><div class="chart-actions"><button class="action-button" data-csv="publisher-quartile">CSV</button><button class="action-button" data-png="publisher-quartile">PNG</button></div></div><div class="analytics-chart-frame"><div class="analytics-chart-host" id="chartPublisherQuartile"></div></div></div>
+</div><p class="chart-note">Each article is assigned the latest available JCR quartile for its journal. Records without a valid JCR quartile remain Unclassified. Scopus quartiles are excluded.</p><a class="back-to-top" href="#top">Back to top ↑</a></div></section>
+
+<section class="analytics-section" id="journal-rankings"><div class="chart-card">
+<div class="analytics-heading"><div><span class="eyebrow">Journal portfolio</span><h2>Journal and Category Distribution</h2></div></div>
+<div class="two-column">
+<div><div class="analytics-heading"><h3>Publications by Journal</h3><div class="chart-actions"><button class="action-button" data-csv="journal-count">CSV</button><button class="action-button" data-png="journal-count">PNG</button></div></div><div class="analytics-chart-frame"><div class="analytics-chart-host" id="chartJournalCount"></div></div></div>
+<div><div class="analytics-heading"><h3>JCR Category Distribution</h3><div class="chart-actions"><button class="action-button" data-csv="category">CSV</button><button class="action-button" data-png="category">PNG</button></div></div><div class="analytics-chart-frame"><div class="analytics-chart-host" id="chartCategory"></div></div></div>
+<div style="grid-column:1/-1"><div class="analytics-heading"><h3>Journal Publication Timeline</h3><div class="chart-actions"><button class="action-button" data-csv="timeline">CSV</button><button class="action-button" data-png="timeline">PNG</button></div></div><div class="analytics-chart-frame"><div class="analytics-chart-host" id="chartTimeline"></div></div></div>
+</div><a class="back-to-top" href="#top">Back to top ↑</a></div></section>
+
+<section class="analytics-section" id="publishers"><div class="chart-card">
+<div class="analytics-heading"><div><span class="eyebrow">Publishing ecosystem</span><h2>Publisher Distribution</h2></div></div>
+<div class="analytics-heading"><div></div><div class="chart-actions"><button class="action-button" data-csv="publisher">CSV</button><button class="action-button" data-png="publisher">PNG</button></div></div>
+<div class="analytics-chart-frame"><div class="analytics-chart-host" id="chartPublisher"></div></div><a class="back-to-top" href="#top">Back to top ↑</a></div></section>
+
+<section class="analytics-section" id="impact"><div class="chart-card">
+<div class="analytics-heading"><div><span class="eyebrow">Journal impact metrics</span><h2>Impact Factor Analysis</h2></div></div>
+<div class="two-column">
+<div><div class="analytics-heading"><h3>Latest Impact Factor Distribution</h3><div class="chart-actions"><button class="action-button" data-csv="if-distribution">CSV</button><button class="action-button" data-png="if-distribution">PNG</button></div></div><div class="analytics-chart-frame"><div class="analytics-chart-host" id="chartIfDistribution"></div></div></div>
+<div><div class="analytics-heading"><h3>Average Journal IF by Publication Year</h3><div class="chart-actions"><button class="action-button" data-csv="avg-if-year">CSV</button><button class="action-button" data-png="avg-if-year">PNG</button></div></div><div class="analytics-chart-frame"><div class="analytics-chart-host" id="chartAvgIfYear"></div></div></div>
+<div style="grid-column:1/-1"><div class="analytics-heading"><h3>Publications and Average Journal IF</h3><div class="chart-actions"><button class="action-button" data-csv="pub-if">CSV</button><button class="action-button" data-png="pub-if">PNG</button></div></div><div class="analytics-chart-frame"><div class="analytics-chart-host" id="chartPubIf"></div></div></div>
+</div><p class="chart-note">“Latest IF” means the most recent valid impact-factor value stored for that journal. It is not necessarily the IF from the article’s publication year.</p><a class="back-to-top" href="#top">Back to top ↑</a></div></section>
+
+<section class="analytics-section" id="relationships"><div class="chart-card">
+<div class="analytics-heading"><div><span class="eyebrow">Relationships</span><h2>Journal IF and Citation Performance</h2></div><div class="chart-actions"><button class="action-button" data-csv="citation-if">CSV</button><button class="action-button" data-png="citation-if">PNG</button></div></div>
+<div class="data-source-controls" id="scatterControls"><strong>Citation source</strong><label class="source-toggle"><input type="radio" name="scatter-source" value="gs" checked><span class="source-swatch swatch-gs"></span>Google Scholar</label><label class="source-toggle"><input type="radio" name="scatter-source" value="oa"><span class="source-swatch swatch-oa"></span>OpenAlex</label></div>
+<div class="analytics-chart-frame"><div class="analytics-chart-host" id="chartCitationIf"></div></div><p class="chart-note">Each point is one publication with a journal IF and citation count. The chart describes association only and does not imply causation.</p><a class="back-to-top" href="#top">Back to top ↑</a></div></section>
+
+<section class="analytics-section" id="journal-table"><div class="chart-card">
+<div class="analytics-heading"><div><span class="eyebrow">Detailed data</span><h2>Journal Statistics Table</h2></div><div class="chart-actions"><button class="action-button" data-table-csv>Download CSV</button></div></div>
+<div class="table-toolbar"><input class="table-search" id="journalSearch" type="search" placeholder="Search journal, publisher, ISSN, category or quartile…" /><span class="analytics-status" id="tableStatus"></span></div>
+<div class="table-wrap"><table class="journal-table"><thead><tr>
+<th><button data-sort="title">Journal <span class="sort-indicator"></span></button></th>
+<th><button data-sort="publicationCount">Articles <span class="sort-indicator"></span></button></th>
+<th><button data-sort="publisher">Publisher <span class="sort-indicator"></span></button></th>
+<th><button data-sort="issn">ISSN <span class="sort-indicator"></span></button></th>
+<th><button data-sort="latestMetricYear">Metric year <span class="sort-indicator"></span></button></th>
+<th><button data-sort="impactFactor">Latest IF <span class="sort-indicator"></span></button></th>
+<th><button data-sort="fiveYearImpactFactor">5-year IF <span class="sort-indicator"></span></button></th>
+<th><button data-sort="quartile">JCR Q <span class="sort-indicator"></span></button></th>
+<th><button data-sort="category">JCR category <span class="sort-indicator"></span></button></th>
+<th><button data-sort="years">Publication years <span class="sort-indicator"></span></button></th>
+<th><button data-sort="source">Metric source <span class="sort-indicator"></span></button></th>
+</tr></thead><tbody id="journalTableBody"></tbody></table></div>
+<p class="analytics-status" id="journalDataStatus">Loading journal data…</p><a class="back-to-top" href="#top">Back to top ↑</a></div></section>
+</main>
+<footer class="site-footer"><div class="shell footer-grid"><div><strong>Wei-Hao Chiu, Ph.D.</strong><p>Associate Researcher<br>Center for Sustainability and Energy Technologies<br>Chang Gung University</p></div><div class="update-block"><span>Site version</span><strong data-site-version>—</strong><span>Website updated</span><strong data-site-updated>—</strong><span>Scholar metrics updated</span><strong data-scholar-updated>—</strong></div></div></footer>
+<script src="assets/js/app.js"></script>
+<script>
+(() => {
+'use strict';
+const C={blue:'#3b6f9b',green:'#577b72',gold:'#a66a1f',red:'#a64b45',purple:'#72578a',cyan:'#4d8792',grey:'#8b98a3',ink:'#1f2933',muted:'#647382',grid:'#e8edf1',line:'#d9e1e8'};
+const QCOL={Q1:'#4f806f',Q2:'#587ca2',Q3:'#b4873e',Q4:'#a95450',Unclassified:'#9aa5ae'};
+const registry=new Map(); let tableRows=[],filteredTableRows=[],sortState={key:'publicationCount',direction:'desc'};
+const esc=v=>String(v??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[ch]);
+const num=v=>{const n=Number(v);return Number.isFinite(n)?n:null};
+const sum=a=>a.reduce((s,v)=>s+(Number(v)||0),0);
+const avg=a=>{const v=a.map(Number).filter(Number.isFinite);return v.length?sum(v)/v.length:null};
+const normalize=s=>String(s||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/&/g,' and ').replace(/[^a-z0-9]+/g,'');
+const doi=s=>String(s||'').toLowerCase().trim().replace(/^https?:\/\/(dx\.)?doi\.org\//,'').replace(/^doi:/,'').trim();
+async function loadJson(path){const r=await fetch(path,{cache:'no-store'});if(!r.ok)throw new Error(`${path}: ${r.status}`);return r.json()}
+function pubYear(p){return Number(p.year)||Number(String(p.date||'').slice(0,4))||null}
+function yearsUnion(objects){const y=[...new Set(objects.flatMap(o=>Object.keys(o||{}).map(Number)))].filter(Number.isFinite).sort((a,b)=>a-b);return y.length?Array.from({length:y.at(-1)-y[0]+1},(_,i)=>y[0]+i):[]}
+function niceMax(v){v=Math.max(1,Number(v)||1);const m=10**Math.floor(Math.log10(v)),n=v/m,s=n<=1?1:n<=2?2:n<=5?5:10;return Math.max(4,s*m)}
+function ticks(max,n=4){return Array.from({length:n+1},(_,i)=>Math.round(max*(n-i)/n))}
+function register(key,filename,headers,rows){registry.set(key,{filename,headers,rows,svg:null})}
+function setSvg(key,svg){const r=registry.get(key);if(r)r.svg=svg}
+function svgShell(w,h,title,body,legend=''){return `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img"><rect width="${w}" height="${h}" fill="#fff"/><text x="88" y="30" font-family="Source Serif 4,serif" font-size="21" font-weight="700" fill="${C.ink}">${esc(title)}</text>${legend}${body}</svg>`}
+function renderBars(el,title,rows,{x='label',series=[],horizontal=false,stacked=false,yLabel='',xLabel='',percent=false}={}){
+ if(!rows.length){el.innerHTML='<div class="chart-empty">No valid data available.</div>';return null}
+ const w=horizontal?Math.max(980,560):Math.max(980,180+rows.length*58),h=horizontal?Math.max(460,120+rows.length*32):520,m={t:82,r:48,b:82,l:horizontal?250:90},pw=w-m.l-m.r,ph=h-m.t-m.b;
+ const maxRaw=stacked?Math.max(1,...rows.map(r=>sum(series.map(s=>r[s.key]||0)))):Math.max(1,...rows.flatMap(r=>series.map(s=>Number(r[s.key])||0)));const max=percent?100:niceMax(maxRaw),ts=ticks(max);
+ let grid=ts.map(t=>{const yy=m.t+ph-t/max*ph;return `<line x1="${m.l}" y1="${yy}" x2="${w-m.r}" y2="${yy}" stroke="${C.grid}"/><text x="${m.l-10}" y="${yy+4}" text-anchor="end" font-size="10" fill="${C.muted}">${t}${percent?'%':''}</text>`}).join('');
+ let marks='';
+ if(horizontal){const band=ph/rows.length;rows.forEach((r,i)=>{let xx=m.l;series.forEach((s,j)=>{const v=Number(r[s.key])||0,bw=v/max*pw;marks+=`<rect x="${xx}" y="${m.t+i*band+band*.18}" width="${bw}" height="${band*.64}" rx="2" fill="${s.color||C.blue}"><title>${esc(r[x])}: ${v} ${esc(s.label)}</title></rect>`;xx+=stacked?bw:0});marks+=`<text x="${m.l-10}" y="${m.t+i*band+band*.56}" text-anchor="end" font-size="10" fill="${C.muted}">${esc(r[x])}</text>`})}
+ else{const band=pw/rows.length;rows.forEach((r,i)=>{if(stacked){let yy=m.t+ph;series.forEach(s=>{const v=Number(r[s.key])||0,bh=v/max*ph;yy-=bh;marks+=`<rect x="${m.l+i*band+band*.22}" y="${yy}" width="${band*.56}" height="${bh}" fill="${s.color}"><title>${esc(r[x])}: ${v} ${esc(s.label)}</title></rect>`})}else{const gw=Math.min(band*.72,42),gap=3,bw=(gw-gap*(series.length-1))/series.length,start=m.l+i*band+band/2-gw/2;series.forEach((s,j)=>{const v=Number(r[s.key])||0,bh=v/max*ph;marks+=`<rect x="${start+j*(bw+gap)}" y="${m.t+ph-bh}" width="${bw}" height="${bh}" rx="2" fill="${s.color}"><title>${esc(r[x])}: ${v} ${esc(s.label)}</title></rect>`})}marks+=`<text x="${m.l+i*band+band/2}" y="${m.t+ph+23}" text-anchor="middle" font-size="9.5" fill="${C.muted}">${esc(r[x])}</text>`})}
+ const legend=series.map((s,i)=>`<rect x="${m.l+i*155}" y="50" width="12" height="12" rx="2" fill="${s.color}"/><text x="${m.l+18+i*155}" y="60" font-size="10.5" font-weight="700" fill="${C.ink}">${esc(s.label)}</text>`).join('');
+ const axes=`${grid}<line x1="${m.l}" y1="${m.t+ph}" x2="${w-m.r}" y2="${m.t+ph}" stroke="${C.line}"/><text x="${m.l+pw/2}" y="${h-24}" text-anchor="middle" font-size="11" font-weight="700" fill="#52616e">${esc(xLabel)}</text><text transform="translate(22 ${m.t+ph/2}) rotate(-90)" text-anchor="middle" font-size="11" font-weight="700" fill="#52616e">${esc(yLabel)}</text>`;
+ el.innerHTML=svgShell(w,h,title,axes+marks,legend);return el.querySelector('svg')
+}
+function renderLine(el,title,rows,{x='label',series=[],yLabel='',xLabel='',maxOverride=null}={}){
+ if(!rows.length){el.innerHTML='<div class="chart-empty">No valid data available.</div>';return null}
+ const w=Math.max(980,180+rows.length*58),h=520,m={t:84,r:45,b:82,l:92},pw=w-m.l-m.r,ph=h-m.t-m.b,max=maxOverride||niceMax(Math.max(1,...rows.flatMap(r=>series.map(s=>Number(r[s.key])||0)))),ts=ticks(max),band=pw/Math.max(1,rows.length-1);
+ let body=ts.map(t=>{const y=m.t+ph-t/max*ph;return `<line x1="${m.l}" y1="${y}" x2="${w-m.r}" y2="${y}" stroke="${C.grid}"/><text x="${m.l-10}" y="${y+4}" text-anchor="end" font-size="10" fill="${C.muted}">${t}</text>`}).join('');
+ body+=`<line x1="${m.l}" y1="${m.t+ph}" x2="${w-m.r}" y2="${m.t+ph}" stroke="${C.line}"/>`;
+ series.forEach(s=>{const pts=rows.map((r,i)=>({x:m.l+(rows.length===1?pw/2:i*band),y:m.t+ph-(Number(r[s.key])||0)/max*ph,v:Number(r[s.key])||0,l:r[x]}));body+=`<path d="${pts.map((p,i)=>`${i?'L':'M'} ${p.x} ${p.y}`).join(' ')}" fill="none" stroke="${s.color}" stroke-width="3" stroke-linejoin="round"/>`+pts.map(p=>`<circle cx="${p.x}" cy="${p.y}" r="3.5" fill="#fff" stroke="${s.color}" stroke-width="2"><title>${esc(p.l)}: ${p.v} ${esc(s.label)}</title></circle>`).join('')});
+ body+=rows.map((r,i)=>`<text x="${m.l+(rows.length===1?pw/2:i*band)}" y="${m.t+ph+23}" text-anchor="middle" font-size="9.5" fill="${C.muted}">${esc(r[x])}</text>`).join('');
+ body+=`<text x="${m.l+pw/2}" y="${h-24}" text-anchor="middle" font-size="11" font-weight="700" fill="#52616e">${esc(xLabel)}</text><text transform="translate(22 ${m.t+ph/2}) rotate(-90)" text-anchor="middle" font-size="11" font-weight="700" fill="#52616e">${esc(yLabel)}</text>`;
+ const legend=series.map((s,i)=>`<line x1="${m.l+i*180}" y1="56" x2="${m.l+25+i*180}" y2="56" stroke="${s.color}" stroke-width="3"/><text x="${m.l+33+i*180}" y="60" font-size="10.5" font-weight="700" fill="${C.ink}">${esc(s.label)}</text>`).join('');
+ el.innerHTML=svgShell(w,h,title,body,legend);return el.querySelector('svg')
+}
+function renderDonut(el,title,rows){
+ if(!rows.length){el.innerHTML='<div class="chart-empty">No valid data available.</div>';return null}
+ const w=980,h=470,cx=300,cy=250,r=135,inner=78,total=sum(rows.map(r=>r.value));let a=-Math.PI/2,paths='';
+ rows.forEach(row=>{const da=total?row.value/total*Math.PI*2:0,a2=a+da,x1=cx+r*Math.cos(a),y1=cy+r*Math.sin(a),x2=cx+r*Math.cos(a2),y2=cy+r*Math.sin(a2),xi1=cx+inner*Math.cos(a),yi1=cy+inner*Math.sin(a),xi2=cx+inner*Math.cos(a2),yi2=cy+inner*Math.sin(a2),large=da>Math.PI?1:0;paths+=`<path d="M ${x1} ${y1} A ${r} ${r} 0 ${large} 1 ${x2} ${y2} L ${xi2} ${yi2} A ${inner} ${inner} 0 ${large} 0 ${xi1} ${yi1} Z" fill="${row.color}"><title>${esc(row.label)}: ${row.value} (${total?(row.value/total*100).toFixed(1):0}%)</title></path>`;a=a2});
+ const legend=rows.map((r,i)=>`<rect x="535" y="${125+i*46}" width="14" height="14" rx="2" fill="${r.color}"/><text x="560" y="${137+i*46}" font-size="12" font-weight="700" fill="${C.ink}">${esc(r.label)} — ${r.value} (${total?(r.value/total*100).toFixed(1):0}%)</text>`).join('');
+ const body=`${paths}<circle cx="${cx}" cy="${cy}" r="${inner-2}" fill="#fff"/><text x="${cx}" y="${cy-2}" text-anchor="middle" font-size="32" font-weight="700" fill="${C.ink}">${total}</text><text x="${cx}" y="${cy+24}" text-anchor="middle" font-size="11" fill="${C.muted}">Publications</text>${legend}`;
+ el.innerHTML=svgShell(w,h,title,body);return el.querySelector('svg')
+}
+function renderScatter(el,title,rows){
+ if(!rows.length){el.innerHTML='<div class="chart-empty">No publications have both IF and citation data.</div>';return null}
+ const w=1040,h=540,m={t:75,r:45,b:80,l:90},pw=w-m.l-m.r,ph=h-m.t-m.b,xmax=niceMax(Math.max(...rows.map(r=>r.if))),ymax=niceMax(Math.max(...rows.map(r=>r.citations))),xt=ticks(xmax),yt=ticks(ymax);let body='';
+ yt.forEach(t=>{const y=m.t+ph-t/ymax*ph;body+=`<line x1="${m.l}" y1="${y}" x2="${w-m.r}" y2="${y}" stroke="${C.grid}"/><text x="${m.l-10}" y="${y+4}" text-anchor="end" font-size="10" fill="${C.muted}">${t}</text>`});
+ xt.forEach(t=>{const x=m.l+t/xmax*pw;body+=`<line x1="${x}" y1="${m.t}" x2="${x}" y2="${m.t+ph}" stroke="${C.grid}"/><text x="${x}" y="${m.t+ph+22}" text-anchor="middle" font-size="10" fill="${C.muted}">${t}</text>`});
+ body+=rows.map(r=>`<circle cx="${m.l+r.if/xmax*pw}" cy="${m.t+ph-r.citations/ymax*ph}" r="${Math.min(10,4+Math.sqrt(r.articles||1))}" fill="${C.purple}" opacity=".72"><title>${esc(r.title)} | IF ${r.if} | ${r.citations} citations</title></circle>`).join('');
+ body+=`<text x="${m.l+pw/2}" y="${h-23}" text-anchor="middle" font-size="11" font-weight="700" fill="#52616e">Latest journal impact factor</text><text transform="translate(22 ${m.t+ph/2}) rotate(-90)" text-anchor="middle" font-size="11" font-weight="700" fill="#52616e">Citation count</text>`;
+ el.innerHTML=svgShell(w,h,title,body);return el.querySelector('svg')
+}
+function renderTimeline(el,title,rows,years){
+ if(!rows.length){el.innerHTML='<div class="chart-empty">No timeline data available.</div>';return null}
+ const w=Math.max(1050,300+years.length*45),h=Math.max(480,130+rows.length*30),m={t:70,r:35,b:70,l:265},pw=w-m.l-m.r,ph=h-m.t-m.b,bandX=pw/years.length,bandY=ph/rows.length;let body='';
+ years.forEach((y,i)=>body+=`<text x="${m.l+(i+.5)*bandX}" y="${m.t+ph+22}" text-anchor="middle" font-size="9.5" fill="${C.muted}">${y}</text>`);
+ rows.forEach((r,i)=>{body+=`<text x="${m.l-10}" y="${m.t+(i+.58)*bandY}" text-anchor="end" font-size="9.5" fill="${C.muted}">${esc(r.title)}</text>`;years.forEach((y,j)=>{const v=r.values[y]||0;body+=`<rect x="${m.l+j*bandX+2}" y="${m.t+i*bandY+2}" width="${Math.max(2,bandX-4)}" height="${Math.max(2,bandY-4)}" rx="2" fill="${v?C.blue:'#eef2f5'}" opacity="${v?Math.min(1,.45+v*.18):1}"><title>${esc(r.title)} — ${y}: ${v} publications</title></rect>`})});
+ body+=`<text x="${m.l+pw/2}" y="${h-20}" text-anchor="middle" font-size="11" font-weight="700" fill="#52616e">Publication year</text>`;
+ el.innerHTML=svgShell(w,h,title,body);return el.querySelector('svg')
+}
+function csvEscape(v){const s=String(v??'');return /[",\n\r]/.test(s)?`"${s.replace(/"/g,'""')}"`:s}
+function blobDownload(blob,name){const u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),1000)}
+function downloadCsv(key){const r=registry.get(key);if(!r)return;const lines=[r.headers.map(csvEscape).join(','),...r.rows().map(x=>x.map(csvEscape).join(','))];blobDownload(new Blob(['\ufeff'+lines.join('\r\n')+'\r\n'],{type:'text/csv;charset=utf-8'}),r.filename+'.csv')}
+async function downloadPng(key){const r=registry.get(key);if(!r?.svg)return alert('Chart is not available yet.');const clone=r.svg.cloneNode(true);clone.setAttribute('xmlns','http://www.w3.org/2000/svg');const url=URL.createObjectURL(new Blob([new XMLSerializer().serializeToString(clone)],{type:'image/svg+xml'}));try{const img=new Image();await new Promise((res,rej)=>{img.onload=res;img.onerror=rej;img.src=url});const w=Number(r.svg.getAttribute('width')),h=Number(r.svg.getAttribute('height')),c=document.createElement('canvas');c.width=w*2;c.height=h*2;const ctx=c.getContext('2d');ctx.scale(2,2);ctx.fillStyle='#fff';ctx.fillRect(0,0,w,h);ctx.drawImage(img,0,0,w,h);const b=await new Promise(res=>c.toBlob(res,'image/png'));blobDownload(b,r.filename+'.png')}finally{URL.revokeObjectURL(url)}}
+function latestMetric(j){const entries=Object.entries(j.metricsByYear||{}).filter(([y,m])=>Number.isFinite(Number(y))&&m&&typeof m==='object');entries.sort((a,b)=>Number(b[0])-Number(a[0]));return entries.find(([,m])=>num(m.impactFactor)!==null||m.bestQuartile||num(m.fiveYearImpactFactor)!==null)||entries[0]||[null,{}]}
+function journalIndex(journals){const idx=new Map();Object.values(journals||{}).forEach(j=>[j.title,...(j.aliases||[])].forEach(n=>idx.set(normalize(n),j)));return idx}
+function pubJournal(p,idx){return idx.get(normalize(p.journal))||null}
+function validQ(v){return /^Q[1-4]$/.test(String(v||'').toUpperCase())?String(v).toUpperCase():'Unclassified'}
+function categories(metric){const arr=(metric.categories||[]).map(x=>String(x?.name||'').trim()).filter(Boolean);return arr.length?arr:['Unclassified']}
+function publisherName(j){const p=String(j.publisher||'').trim();return p&&p.length<120?p:'Unclassified'}
+function selected(id){return [...document.querySelectorAll(`#${id} input:checked:not(:disabled)`)].map(x=>x.value)}
+document.addEventListener('click',e=>{const c=e.target.closest('[data-csv]');if(c)downloadCsv(c.dataset.csv);const p=e.target.closest('[data-png]');if(p)downloadPng(p.dataset.png);if(e.target.closest('[data-table-csv]'))downloadTableCsv()});
+function renderTable(){const q=document.getElementById('journalSearch').value.trim().toLowerCase();filteredTableRows=tableRows.filter(r=>Object.values(r).join(' ').toLowerCase().includes(q));const k=sortState.key,d=sortState.direction==='asc'?1:-1;filteredTableRows.sort((a,b)=>{let av=a[k],bv=b[k];if(['publicationCount','latestMetricYear','impactFactor','fiveYearImpactFactor'].includes(k)){av=Number(av);bv=Number(bv);if(!Number.isFinite(av))av=-Infinity;if(!Number.isFinite(bv))bv=-Infinity;return(av-bv)*d}return String(av??'').localeCompare(String(bv??''),undefined,{numeric:true,sensitivity:'base'})*d});
+ document.querySelectorAll('[data-sort]').forEach(b=>{b.querySelector('.sort-indicator').textContent=b.dataset.sort===k?(d===1?'▲':'▼'):''});
+ document.getElementById('journalTableBody').innerHTML=filteredTableRows.map(r=>`<tr><td class="journal-name">${esc(r.title)}</td><td class="numeric">${r.publicationCount}</td><td>${esc(r.publisher)}</td><td>${esc(r.issn||'—')}</td><td class="numeric">${r.latestMetricYear||'—'}</td><td class="numeric">${r.impactFactor??'—'}</td><td class="numeric">${r.fiveYearImpactFactor??'—'}</td><td><span class="metric-badge ${r.quartile.toLowerCase()}">${esc(r.quartile)}</span></td><td>${esc(r.category)}</td><td>${esc(r.years)}</td><td>${esc(r.source)}</td></tr>`).join('');
+ document.getElementById('tableStatus').textContent=`${filteredTableRows.length} of ${tableRows.length} journals shown.`;
+}
+function downloadTableCsv(){const h=['Journal','Articles','Publisher','ISSN','Metric year','Latest IF','5-year IF','JCR quartile','JCR category','Publication years','Metric source'];const rows=filteredTableRows.map(r=>[r.title,r.publicationCount,r.publisher,r.issn,r.latestMetricYear,r.impactFactor,r.fiveYearImpactFactor,r.quartile,r.category,r.years,r.source]);blobDownload(new Blob(['\ufeff'+[h,...rows].map(x=>x.map(csvEscape).join(',')).join('\r\n')+'\r\n'],{type:'text/csv;charset=utf-8'}),'journal-statistics-table.csv')}
+document.addEventListener('DOMContentLoaded',async()=>{
+ try{
+ const [pubs,jpayload,oaMetrics,gsHist,oaHist]=await Promise.all([loadJson('data/publications.json'),loadJson('data/journals.json'),loadJson('data/openalex_publication_metrics.json').catch(()=>({records:{}})),loadJson('data/google_scholar_citation_history.json').catch(()=>({})),loadJson('data/openalex_citation_history.json').catch(()=>({}))]);
+ const journals=jpayload.journals||{},idx=journalIndex(journals),pubCount={};pubs.forEach(p=>{const y=pubYear(p);if(y)pubCount[y]=(pubCount[y]||0)+1});const years=yearsUnion([pubCount]);
+ const gsCohort={},oaCohort={};pubs.forEach(p=>{const y=pubYear(p);if(!y)return;gsCohort[y]=(gsCohort[y]||0)+(Number(p.citationCount)||0);const rec=(oaMetrics.records||{})[doi(p.doi)];oaCohort[y]=(oaCohort[y]||0)+(rec?.status==='verified'?Number(rec.citationCount)||0:0)});
+ const hist=o=>Object.fromEntries((o.citationsByYear||[]).map(r=>[Number(r.year),Number(r.citations)||0]));const gsAnnual=hist(gsHist),oaAnnual=hist(oaHist);
+ const pubRows=years.map(y=>({label:y,publications:pubCount[y]||0}));register('pub-year','publications-by-year',['Year','Publications'],()=>pubRows.map(r=>[r.label,r.publications]));setSvg('pub-year',renderBars(document.getElementById('chartPubYear'),'Publications by Year',pubRows,{series:[{key:'publications',label:'Publications',color:C.blue}],yLabel:'Publications (articles)',xLabel:'Publication year'}));
+ const cohortYears=yearsUnion([gsCohort,oaCohort]),cohortRows=cohortYears.map(y=>({label:y,gs:gsCohort[y]||0,oa:oaCohort[y]||0}));register('citation-cohort','citations-by-publication-year',['Publication year','Google Scholar citations','OpenAlex citations'],()=>cohortRows.map(r=>[r.label,r.gs,r.oa]));
+ const drawCohort=()=>{const s=selected('cohortControls'),series=[s.includes('gs')&&{key:'gs',label:'Google Scholar',color:C.green},s.includes('oa')&&{key:'oa',label:'OpenAlex',color:C.gold}].filter(Boolean);setSvg('citation-cohort',renderBars(document.getElementById('chartCitationCohort'),'Citations by Publication Year',cohortRows,{series,yLabel:'Current cumulative citations',xLabel:'Publication year'}))};document.getElementById('cohortControls').addEventListener('change',drawCohort);drawCohort();
+ const annualYears=yearsUnion([gsAnnual,oaAnnual]),annualRows=annualYears.map(y=>({label:y,gs:gsAnnual[y]||0,oa:oaAnnual[y]||0}));register('annual-citations','citations-received-by-year',['Calendar year','Google Scholar citations received','OpenAlex citations received'],()=>annualRows.map(r=>[r.label,r.gs,r.oa]));
+ const drawAnnual=()=>{const s=selected('annualControls'),series=[s.includes('gs')&&{key:'gs',label:'Google Scholar',color:C.green},s.includes('oa')&&{key:'oa',label:'OpenAlex',color:C.gold}].filter(Boolean);setSvg('annual-citations',renderBars(document.getElementById('chartAnnualCitations'),'Citations Received by Year',annualRows,{series,yLabel:'Citations received',xLabel:'Calendar year'}))};document.getElementById('annualControls').addEventListener('change',drawAnnual);drawAnnual();
+ const allYears=yearsUnion([pubCount,gsAnnual,oaAnnual]),combinedRows=allYears.map(y=>({label:y,publications:pubCount[y]||0,gs:gsAnnual[y]||0,oa:oaAnnual[y]||0}));register('combined-trend','publications-and-citations-received',['Year','Publications','Google Scholar citations','OpenAlex citations'],()=>combinedRows.map(r=>[r.label,r.publications,r.gs,r.oa]));
+ const drawCombined=()=>{const s=selected('combinedControls'),series=[{key:'publications',label:'Publications',color:C.blue},s.includes('gs')&&{key:'gs',label:'Google Scholar citations',color:C.green},s.includes('oa')&&{key:'oa',label:'OpenAlex citations',color:C.gold}].filter(Boolean);setSvg('combined-trend',renderLine(document.getElementById('chartCombined'),'Publications and Citations Received',combinedRows,{series,yLabel:'Annual count',xLabel:'Year'}))};document.getElementById('combinedControls').addEventListener('change',drawCombined);drawCombined();
+
+ const journalStats=Object.values(journals).map(j=>{const [my,m]=latestMetric(j),q=validQ(m.bestQuartile),cats=categories(m),src=m.fieldSources?.impactFactor?.name||m.sourceName||'N/A';return{...j,metricYear:Number(my)||null,metric:m,quartile:q,categories:cats,impactFactor:num(m.impactFactor),fiveYearImpactFactor:num(m.fiveYearImpactFactor),metricSource:src,publisherClean:publisherName(j)}});
+ const articleEnriched=pubs.map(p=>{const j=pubJournal(p,idx),stat=j?journalStats.find(x=>x.journalId===j.journalId):null,oa=(oaMetrics.records||{})[doi(p.doi)];return{p,j:stat,year:pubYear(p),gs:Number(p.citationCount)||0,oa:oa?.status==='verified'?Number(oa.citationCount)||0:0}});
+ const qCounts={Q1:0,Q2:0,Q3:0,Q4:0,Unclassified:0};articleEnriched.forEach(x=>qCounts[x.j?.quartile||'Unclassified']++);const qRows=Object.keys(qCounts).map(q=>({label:q,value:qCounts[q],color:QCOL[q]}));register('quartile','jcr-quartile-distribution',['Quartile','Publications'],()=>qRows.map(r=>[r.label,r.value]));setSvg('quartile',renderDonut(document.getElementById('chartQuartile'),'JCR Quartile Distribution',qRows));
+ const qYearMap={};articleEnriched.forEach(x=>{if(!x.year)return;qYearMap[x.year]??={Q1:0,Q2:0,Q3:0,Q4:0,Unclassified:0};qYearMap[x.year][x.j?.quartile||'Unclassified']++});const qYearRows=Object.keys(qYearMap).map(Number).sort((a,b)=>a-b).map(y=>({label:y,...qYearMap[y]}));const qSeries=Object.keys(QCOL).map(q=>({key:q,label:q,color:QCOL[q]}));register('quartile-year','jcr-quartile-by-year',['Year',...Object.keys(QCOL)],()=>qYearRows.map(r=>[r.label,...Object.keys(QCOL).map(q=>r[q])]));setSvg('quartile-year',renderBars(document.getElementById('chartQuartileYear'),'Quartile Composition by Publication Year',qYearRows,{series:qSeries,stacked:true,yLabel:'Publications',xLabel:'Publication year'}));
+ const q1Rows=qYearRows.map(r=>({label:r.label,ratio:(r.Q1/sum(Object.keys(QCOL).map(q=>r[q]))*100)||0}));register('q1-ratio','q1-publication-ratio-by-year',['Year','Q1 ratio (%)'],()=>q1Rows.map(r=>[r.label,r.ratio.toFixed(2)]));setSvg('q1-ratio',renderLine(document.getElementById('chartQ1Ratio'),'Q1 Publication Ratio by Year',q1Rows,{series:[{key:'ratio',label:'Q1 ratio (%)',color:C.green}],yLabel:'Q1 ratio (%)',xLabel:'Publication year',maxOverride:100}));
+ const pubQ={};articleEnriched.forEach(x=>{const p=x.j?.publisherClean||'Unclassified',q=x.j?.quartile||'Unclassified';pubQ[p]??={Q1:0,Q2:0,Q3:0,Q4:0,Unclassified:0};pubQ[p][q]++});const pubQRows=Object.entries(pubQ).map(([label,v])=>({label,...v,total:sum(Object.values(v))})).sort((a,b)=>b.total-a.total);register('publisher-quartile','publisher-jcr-quartile',['Publisher',...Object.keys(QCOL)],()=>pubQRows.map(r=>[r.label,...Object.keys(QCOL).map(q=>r[q])]));setSvg('publisher-quartile',renderBars(document.getElementById('chartPublisherQuartile'),'Publisher × JCR Quartile',pubQRows,{series:qSeries,stacked:true,horizontal:true,yLabel:'Publishers',xLabel:'Publications'}));
+ const jcRows=journalStats.map(j=>({label:j.title,count:j.publicationCount||0})).sort((a,b)=>b.count-a.count);register('journal-count','publications-by-journal',['Journal','Publications'],()=>jcRows.map(r=>[r.label,r.count]));setSvg('journal-count',renderBars(document.getElementById('chartJournalCount'),'Publications by Journal',jcRows,{series:[{key:'count',label:'Publications',color:C.blue}],horizontal:true,xLabel:'Publications'}));
+ const catCounts={};articleEnriched.forEach(x=>(x.j?.categories||['Unclassified']).forEach(c=>catCounts[c]=(catCounts[c]||0)+1));const catRows=Object.entries(catCounts).map(([label,count])=>({label,count})).sort((a,b)=>b.count-a.count);register('category','jcr-category-distribution',['JCR category','Publication assignments'],()=>catRows.map(r=>[r.label,r.count]));setSvg('category',renderBars(document.getElementById('chartCategory'),'JCR Category Distribution',catRows,{series:[{key:'count',label:'Assignments',color:C.cyan}],horizontal:true,xLabel:'Publication assignments'}));
+ const timelineYears=yearsUnion([pubCount]),timelineRows=journalStats.map(j=>({title:j.title,values:Object.fromEntries(timelineYears.map(y=>[y,0]))}));articleEnriched.forEach(x=>{if(x.year&&x.j){const r=timelineRows.find(r=>r.title===x.j.title);if(r)r.values[x.year]=(r.values[x.year]||0)+1}});timelineRows.sort((a,b)=>sum(Object.values(b.values))-sum(Object.values(a.values)));register('timeline','journal-publication-timeline',['Journal',...timelineYears],()=>timelineRows.map(r=>[r.title,...timelineYears.map(y=>r.values[y]||0)]));setSvg('timeline',renderTimeline(document.getElementById('chartTimeline'),'Journal Publication Timeline',timelineRows,timelineYears));
+ const publisherCounts={};articleEnriched.forEach(x=>{const p=x.j?.publisherClean||'Unclassified';publisherCounts[p]=(publisherCounts[p]||0)+1});const publisherRows=Object.entries(publisherCounts).map(([label,count])=>({label,count})).sort((a,b)=>b.count-a.count);register('publisher','publisher-distribution',['Publisher','Publications'],()=>publisherRows.map(r=>[r.label,r.count]));setSvg('publisher',renderBars(document.getElementById('chartPublisher'),'Publisher Distribution',publisherRows,{series:[{key:'count',label:'Publications',color:C.gold}],horizontal:true,xLabel:'Publications'}));
+ const bins=[{label:'< 5',min:-Infinity,max:5,count:0},{label:'5–<10',min:5,max:10,count:0},{label:'10–<20',min:10,max:20,count:0},{label:'≥ 20',min:20,max:Infinity,count:0},{label:'N/A',na:true,count:0}];articleEnriched.forEach(x=>{const v=x.j?.impactFactor;if(v===null||v===undefined)bins.at(-1).count++;else bins.find(b=>!b.na&&v>=b.min&&v<b.max).count++});register('if-distribution','impact-factor-distribution',['IF range','Publications'],()=>bins.map(b=>[b.label,b.count]));setSvg('if-distribution',renderBars(document.getElementById('chartIfDistribution'),'Latest Impact Factor Distribution',bins,{series:[{key:'count',label:'Publications',color:C.purple}],yLabel:'Publications',xLabel:'Latest journal IF range'}));
+ const byYear={};articleEnriched.forEach(x=>{if(!x.year)return;byYear[x.year]??={ifs:[],publications:0};byYear[x.year].publications++;if(x.j?.impactFactor!==null&&x.j?.impactFactor!==undefined)byYear[x.year].ifs.push(x.j.impactFactor)});const avgIfRows=Object.entries(byYear).map(([y,v])=>({label:Number(y),avgIf:avg(v.ifs)||0,publications:v.publications,covered:v.ifs.length})).sort((a,b)=>a.label-b.label);register('avg-if-year','average-journal-if-by-publication-year',['Year','Average latest IF','Publications with IF','Total publications'],()=>avgIfRows.map(r=>[r.label,r.avgIf.toFixed(3),r.covered,r.publications]));setSvg('avg-if-year',renderLine(document.getElementById('chartAvgIfYear'),'Average Journal IF by Publication Year',avgIfRows,{series:[{key:'avgIf',label:'Average latest IF',color:C.purple}],yLabel:'Average latest IF',xLabel:'Publication year'}));
+ register('pub-if','publications-and-average-if',['Year','Publications','Average latest IF'],()=>avgIfRows.map(r=>[r.label,r.publications,r.avgIf.toFixed(3)]));setSvg('pub-if',renderLine(document.getElementById('chartPubIf'),'Publications and Average Journal IF',avgIfRows,{series:[{key:'publications',label:'Publications',color:C.blue},{key:'avgIf',label:'Average latest IF',color:C.purple}],yLabel:'Value',xLabel:'Publication year'}));
+ const scatterFor=source=>articleEnriched.filter(x=>x.j?.impactFactor!==null&&x.j?.impactFactor!==undefined).map(x=>({title:x.p.title,if:x.j.impactFactor,citations:source==='oa'?x.oa:x.gs,articles:1}));register('citation-if','citation-versus-journal-if',['Publication title','Latest journal IF','Google Scholar citations','OpenAlex citations'],()=>articleEnriched.filter(x=>x.j?.impactFactor!==null&&x.j?.impactFactor!==undefined).map(x=>[x.p.title,x.j.impactFactor,x.gs,x.oa]));const drawScatter=()=>{const s=document.querySelector('input[name="scatter-source"]:checked').value;setSvg('citation-if',renderScatter(document.getElementById('chartCitationIf'),`${s==='oa'?'OpenAlex':'Google Scholar'} Citations vs Journal IF`,scatterFor(s)))};document.getElementById('scatterControls').addEventListener('change',drawScatter);drawScatter();
+ tableRows=journalStats.map(j=>({title:j.title,publicationCount:j.publicationCount||0,publisher:j.publisherClean,issn:[j.issn,j.eissn].filter(Boolean).join(' / '),latestMetricYear:j.metricYear,impactFactor:j.impactFactor,fiveYearImpactFactor:j.fiveYearImpactFactor,quartile:j.quartile,category:j.categories.join('; '),years:(j.publicationYears||[]).join(', '),source:j.metricSource}));document.getElementById('journalSearch').addEventListener('input',renderTable);document.querySelectorAll('[data-sort]').forEach(b=>b.addEventListener('click',()=>{const key=b.dataset.sort;sortState={key,direction:sortState.key===key&&sortState.direction==='desc'?'asc':'desc'};renderTable()}));renderTable();
+ const ifCoverage=articleEnriched.filter(x=>x.j?.impactFactor!==null&&x.j?.impactFactor!==undefined).length,qCoverage=pubs.length-qCounts.Unclassified,uniquePublishers=Object.keys(publisherCounts).length;
+ document.getElementById('summaryCards').innerHTML=[['Publications',pubs.length,'Listed articles'],['Journals',journalStats.length,'Active journal records'],['Q1 share',`${pubs.length?(qCounts.Q1/pubs.length*100).toFixed(1):0}%`,`${qCounts.Q1} Q1 articles`],['IF coverage',`${ifCoverage}/${pubs.length}`,'Articles with latest IF'],['Publishers',uniquePublishers,'Normalized publishers']].map(x=>`<div class="summary-card"><span>${x[0]}</span><strong>${x[1]}</strong><small>${x[2]}</small></div>`).join('');
+ document.getElementById('outputStatus').textContent=`Google Scholar annual events: ${sum(Object.values(gsAnnual)).toLocaleString()}; OpenAlex annual events: ${sum(Object.values(oaAnnual)).toLocaleString()}. Current year is year to date.`;
+ document.getElementById('journalDataStatus').textContent=`Loaded ${journalStats.length} journal records; ${ifCoverage} of ${pubs.length} publications have a latest IF and ${qCoverage} have a valid JCR quartile. Journal data updated ${jpayload.lastUpdated||'unknown'}.`;
+ }catch(err){console.error(err);document.querySelectorAll('.analytics-chart-host').forEach(el=>el.innerHTML='<div class="chart-empty">Unable to load dashboard data.</div>');document.getElementById('journalDataStatus').textContent='Unable to load journal data.'}
+});
+})();
+</script>
+</body></html>

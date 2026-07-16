@@ -93,10 +93,94 @@ def normalize_doi(value: Any) -> str:
 
 
 def normalize_issn(value: Any) -> str:
+    """Normalize and validate an ISSN using the official modulo-11 checksum."""
     text = re.sub(r"[^0-9Xx]", "", compact_whitespace(value)).upper()
-    if len(text) != 8:
+    if len(text) != 8 or not text[:7].isdigit():
+        return ""
+
+    checksum_value = 10 if text[7] == "X" else int(text[7]) if text[7].isdigit() else -1
+    weighted_sum = sum(int(digit) * weight for digit, weight in zip(text[:7], range(8, 1, -1)))
+    expected = (11 - weighted_sum % 11) % 11
+    if checksum_value != expected:
         return ""
     return f"{text[:4]}-{text[4:]}"
+
+
+def valid_issns(values: list[Any]) -> list[str]:
+    return unique_strings([normalized for value in values if (normalized := normalize_issn(value))])
+
+
+def labeled_issns(text: Any) -> dict[str, str]:
+    """Extract only explicitly labelled ISSN fields, not every ISSN-like token on a page."""
+    source = compact_whitespace(text)
+    patterns = {
+        "eissn": [
+            r"\bE-?ISSN\b\s*[:：]?\s*(\d{4}-?[\dXx]{4})",
+            r"\bOnline ISSN\b\s*[:：]?\s*(\d{4}-?[\dXx]{4})",
+            r"\bElectronic ISSN\b\s*[:：]?\s*(\d{4}-?[\dXx]{4})",
+        ],
+        "issn": [
+            r"\bPrint ISSN\b\s*[:：]?\s*(\d{4}-?[\dXx]{4})",
+            r"(?<!E-)(?<!E)(?<!Online )(?<!Electronic )\bISSN\b\s*[:：]?\s*(\d{4}-?[\dXx]{4})",
+        ],
+    }
+    output: dict[str, str] = {}
+    for key, candidates in patterns.items():
+        for pattern in candidates:
+            match = re.search(pattern, source, flags=re.IGNORECASE)
+            if match and (value := normalize_issn(match.group(1))):
+                output[key] = value
+                break
+    return output
+
+
+def clean_publisher(value: Any) -> str:
+    """Keep short organization names and reject scraped explanatory paragraphs."""
+    text = compact_whitespace(value)
+    if not text:
+        return ""
+
+    # Some pages append prose immediately after the publisher name.
+    markers = [
+        r"\s+Official\s+[^.]{0,80}?profile\b",
+        r"\s+The\s+[0-9]+(?:\.[0-9]+)?\s+JIF\b",
+        r"\s+The\s+[0-9]+(?:\.[0-9]+)?\s+Impact Factor\b",
+        r"\s+The\s+[0-9]+(?:\.[0-9]+)?\s+CiteScore\b",
+        r"\s+Is this the exact\b",
+        r"\s+The exact journal identifier\b",
+    ]
+    for marker in markers:
+        match = re.search(marker, text, flags=re.IGNORECASE)
+        if match:
+            text = text[:match.start()].strip(" ,;:-")
+            break
+
+    lowered = text.casefold()
+    rejected_phrases = (
+        "impact factor",
+        "citescore",
+        "quality score",
+        "individual authors",
+        "laboratories",
+        "journal-level",
+        "citation-window",
+        "published scope",
+        "exact journal record",
+    )
+    if len(text) > 120 or any(phrase in lowered for phrase in rejected_phrases):
+        return ""
+    if not re.search(r"[A-Za-z]", text):
+        return ""
+    return text
+
+
+def clean_subject(value: Any) -> str:
+    text = compact_whitespace(value)
+    if not text or len(text) > 180:
+        return ""
+    if any(token in text.casefold() for token in ("impact factor", "citescore", "submit your", "exact journal")):
+        return ""
+    return text
 
 
 def as_int(value: Any) -> int | None:
@@ -509,9 +593,8 @@ def parse_journalmetrics_document(
         soup.find("h1").get_text(" ", strip=True) if soup.find("h1") else ""
     )
     text = compact_whitespace(soup.get_text(" ", strip=True))
-    page_issns = unique_strings(
-        [normalize_issn(value) for value in re.findall(r"\b\d{4}-[\dXx]{4}\b", text)]
-    )
+    labelled = labeled_issns(text)
+    page_issns = valid_issns([labelled.get("issn"), labelled.get("eissn")])
     issn_match = bool(set(expected_issns) & set(page_issns))
     if similarity(expected_title, heading) < 0.42 and not issn_match:
         return {}
@@ -594,10 +677,10 @@ def parse_journalmetrics_document(
         {
             "title": expected_title,
             "issn": page_issns[0] if page_issns else "",
-            "publisher": compact_whitespace(publisher_match.group(1)) if publisher_match else "",
+            "publisher": clean_publisher(publisher_match.group(1)) if publisher_match else "",
             "foundedYear": as_int(founded_match.group(1)) if founded_match else None,
             "frequency": compact_whitespace(frequency_match.group(1)) if frequency_match else "",
-            "subjects": [compact_whitespace(subject_match.group(1))] if subject_match else [],
+            "subjects": [clean_subject(subject_match.group(1))] if subject_match and clean_subject(subject_match.group(1)) else [],
             "metricCandidates": [
                 {
                     "metricYear": metric_year,
@@ -942,7 +1025,7 @@ def parse_manusights_document(
 
     return clean_nulls(
         {
-            "publisher": compact_whitespace(publisher_match.group(1)) if publisher_match else "",
+            "publisher": clean_publisher(publisher_match.group(1)) if publisher_match else "",
             "issn": normalize_issn(issn_match.group(1)) if issn_match else "",
             "eissn": normalize_issn(eissn_match.group(1)) if eissn_match else "",
             "foundedYear": as_int(founded_match.group(1)) if founded_match else None,
@@ -1016,8 +1099,8 @@ def parse_journalsearches_document(
         soup.find("h1").get_text(" ", strip=True) if soup.find("h1") else ""
     )
     text = compact_whitespace(soup.get_text(" ", strip=True))
-    raw_issns = re.findall(r"\b\d{8}\b|\b\d{4}-[\dXx]{4}\b", text)
-    page_issns = unique_strings([normalize_issn(value) for value in raw_issns])
+    labelled = labeled_issns(text)
+    page_issns = valid_issns([labelled.get("issn"), labelled.get("eissn")])
     if similarity(expected_title, heading) < 0.42 and not (set(page_issns) & set(expected_issns)):
         return {}
 
@@ -1079,9 +1162,11 @@ def parse_journalsearches_document(
 
     return clean_nulls(
         {
-            "publisher": compact_whitespace(publisher_match.group(1)) if publisher_match else "",
+            "publisher": clean_publisher(publisher_match.group(1)) if publisher_match else "",
+            "issn": labelled.get("issn", ""),
+            "eissn": labelled.get("eissn", ""),
             "issns": page_issns,
-            "subjects": [compact_whitespace(scope_match.group(1))] if scope_match else [],
+            "subjects": [clean_subject(scope_match.group(1))] if scope_match and clean_subject(scope_match.group(1)) else [],
             "country": compact_whitespace(country_match.group(1)) if country_match else "",
             "isOpenAccess": open_access_match.group(1).lower() == "yes" if open_access_match else None,
             "metricCandidates": metric_candidates,
@@ -1246,14 +1331,18 @@ def merge_basic_metadata(
         ]
     )
 
+    # Never carry the old allIssns list forward blindly. A prior scraper version
+    # could collect dates and unrelated journal ISSNs from whole-page text.
     document_issns: list[Any] = []
     for document in source_documents:
         document_issns.extend(document.get("issns") or [])
         document_issns.extend([document.get("issn"), document.get("eissn")])
 
-    all_issns = unique_strings(
+    all_issns = valid_issns(
         [
-            *(record.get("allIssns") or []),
+            record.get("issn"),
+            record.get("eissn"),
+            record.get("issnL"),
             *(crossref.get("allIssns") or []),
             *(openalex.get("allIssns") or []),
             crossref.get("issn"),
@@ -1263,14 +1352,16 @@ def merge_basic_metadata(
         ]
     )
 
+    # Crossref, OpenAlex and the publication list are more reliable for the
+    # publisher name than free-form secondary-site prose.
     publishers = [
         openalex.get("publisher"),
         crossref.get("publisher"),
-        *(document.get("publisher") for document in source_documents),
         group.get("publisherFromPublications"),
         record.get("publisher"),
+        *(document.get("publisher") for document in source_documents),
     ]
-    publisher = next((compact_whitespace(value) for value in publishers if compact_whitespace(value)), "")
+    publisher = next((cleaned for value in publishers if (cleaned := clean_publisher(value))), "")
 
     sources = dict(record.get("sources") or {})
     merge_source_snapshot(sources, "crossref", crossref.get("source"))
@@ -1281,29 +1372,53 @@ def merge_basic_metadata(
         if name:
             merge_source_snapshot(sources, re.sub(r"[^a-z0-9]+", "", name), source)
 
-    subjects = list(record.get("subjects") or [])
-    subjects.extend(crossref.get("subjects") or [])
-    for document in source_documents:
-        subjects.extend(document.get("subjects") or [])
+    subjects: list[str] = []
+    for candidate in [
+        *(record.get("subjects") or []),
+        *(crossref.get("subjects") or []),
+        *(subject for document in source_documents for subject in (document.get("subjects") or [])),
+    ]:
+        if cleaned := clean_subject(candidate):
+            subjects.append(cleaned)
 
-    print_issn = (
-        crossref.get("issn")
-        or record.get("issn")
-        or (all_issns[0] if all_issns else "")
+    print_issn = next(
+        (
+            value
+            for candidate in [
+                crossref.get("issn"),
+                record.get("issn"),
+                openalex.get("issnL"),
+                *(document.get("issn") for document in source_documents),
+                *(all_issns[:1]),
+            ]
+            if (value := normalize_issn(candidate))
+        ),
+        "",
     )
-    electronic_issn = crossref.get("eissn") or record.get("eissn") or ""
+    electronic_issn = next(
+        (
+            value
+            for candidate in [
+                crossref.get("eissn"),
+                record.get("eissn"),
+                *(document.get("eissn") for document in source_documents),
+            ]
+            if (value := normalize_issn(candidate))
+        ),
+        "",
+    )
 
     founded_year = record.get("foundedYear")
-    frequency = record.get("frequency") or ""
-    country = record.get("country") or ""
+    frequency = compact_whitespace(record.get("frequency"))
+    country = compact_whitespace(record.get("country"))
     is_open_access = record.get("isOpenAccess")
     for document in source_documents:
         if founded_year is None and document.get("foundedYear") is not None:
             founded_year = document.get("foundedYear")
         if not frequency and document.get("frequency"):
-            frequency = document.get("frequency")
+            frequency = compact_whitespace(document.get("frequency"))[:80]
         if not country and document.get("country"):
-            country = document.get("country")
+            country = compact_whitespace(document.get("country"))[:80]
         if is_open_access is None and document.get("isOpenAccess") is not None:
             is_open_access = document.get("isOpenAccess")
 
@@ -1321,7 +1436,7 @@ def merge_basic_metadata(
             "publisher": publisher,
             "issn": print_issn,
             "eissn": electronic_issn,
-            "issnL": openalex.get("issnL") or record.get("issnL") or "",
+            "issnL": normalize_issn(openalex.get("issnL") or record.get("issnL")),
             "allIssns": all_issns,
             "homepage": openalex.get("homepage") or record.get("homepage") or "",
             "countryCode": openalex.get("countryCode") or record.get("countryCode") or "",
@@ -1395,6 +1510,79 @@ def merge_all_metrics(
     return clean_nulls(record)
 
 
+def run_self_tests() -> None:
+    assert normalize_issn("1616-301X") == "1616-301X"
+    assert normalize_issn("21983844") == "2198-3844"
+    assert normalize_issn("2000-2026") == ""
+    assert normalize_issn("not-an-issn") == ""
+
+    polluted_publisher = (
+        "Wiley-VCH GmbH Official Wiley profile The 14.1 JIF is a journal-level, "
+        "two-year citation-window measure."
+    )
+    assert clean_publisher(polluted_publisher) == "Wiley-VCH GmbH"
+    assert clean_publisher("Elsevier BV") == "Elsevier BV"
+
+    fixture = """
+    <html><body><h1>Advanced Science Impact Factor (2026)</h1>
+    Journal Title: Advanced Science Publisher: Wiley-VCH GmbH ISSN: 2198-3844
+    E-ISSN: 2198-3844 Impact Factor: 14.1 Scopus CiteScore: 18.1
+    Related journals: 2000-2026, 1044-5498, 0022-2844 Quartile: Q1
+    </body></html>
+    """
+    parsed = parse_journalsearches_document(
+        fixture,
+        page_url="https://example.test",
+        expected_title="Advanced Science",
+        expected_issns=["2198-3844"],
+    )
+    assert parsed["issns"] == ["2198-3844"]
+    assert parsed["publisher"] == "Wiley-VCH GmbH"
+
+    merged = merge_basic_metadata(
+        {
+            "title": "Advanced Science",
+            "publisher": polluted_publisher,
+            "issn": "2198-3844",
+            "eissn": "2198-3844",
+            "issnL": "2198-3844",
+            "allIssns": ["2198-3844", "2000-2026", "1044-5498"],
+            "subjects": [],
+            "sources": {},
+        },
+        group={
+            "canonicalTitle": "Advanced Science",
+            "aliases": ["Advanced Science"],
+            "publisherFromPublications": "Wiley",
+            "publicationCount": 1,
+            "publicationYears": [2025],
+            "firstPublicationYear": 2025,
+            "latestPublicationYear": 2025,
+            "sampleDoi": "10.1002/advs.202410666",
+        },
+        crossref={
+            "title": "Advanced Science",
+            "publisher": "Wiley",
+            "issn": "2198-3844",
+            "eissn": "2198-3844",
+            "allIssns": ["2198-3844"],
+        },
+        openalex={
+            "title": "Advanced Science",
+            "publisher": "Wiley-VCH GmbH",
+            "issnL": "2198-3844",
+            "allIssns": ["2198-3844"],
+            "openAlexId": "S2737737698",
+        },
+        source_documents=[parsed],
+    )
+    assert merged["publisher"] == "Wiley-VCH GmbH"
+    assert merged["allIssns"] == ["2198-3844"]
+    assert "2000-2026" not in merged["allIssns"]
+    assert "1044-5498" not in merged["allIssns"]
+    print("All journal updater self-tests passed.")
+
+
 # ---------------------------------------------------------------------------
 # Main update process
 # ---------------------------------------------------------------------------
@@ -1448,7 +1636,16 @@ def main() -> None:
         default="journal_update_report.json",
         help="Path for the run report.",
     )
+    parser.add_argument(
+        "--self-test",
+        action="store_true",
+        help="Run offline parser and sanitation tests, then exit.",
+    )
     args = parser.parse_args()
+
+    if args.self_test:
+        run_self_tests()
+        return
 
     groups = load_publication_groups()
     existing = load_json(JOURNALS_PATH, default=default_payload())
@@ -1471,6 +1668,7 @@ def main() -> None:
         "sourceMatches": defaultdict(list),
         "sourceMisses": defaultdict(list),
         "conflicts": [],
+        "sanitizedFields": [],
         "errors": [],
     }
 
@@ -1494,7 +1692,7 @@ def main() -> None:
                 record = dict(journals.get(journal_id) or {})
 
             should_refresh_metrics = is_new or args.mode == "refresh"
-            needs_basic_metadata = is_new or not record.get("allIssns") or not record.get("openAlexId")
+            needs_basic_metadata = is_new or args.mode == "refresh" or not record.get("allIssns") or not record.get("openAlexId")
 
             print(
                 f"[{number}/{len(groups)}] {group['canonicalTitle']} "
@@ -1506,7 +1704,7 @@ def main() -> None:
             openalex: dict[str, Any] = {}
             if needs_basic_metadata:
                 crossref = crossref_metadata(session, group["sampleDoi"])
-                known_issns = unique_strings(
+                known_issns = valid_issns(
                     [
                         *(record.get("allIssns") or []),
                         *(crossref.get("allIssns") or []),
@@ -1540,7 +1738,7 @@ def main() -> None:
                     or record.get("abbreviation")
                     or ""
                 )
-                known_issns = unique_strings(
+                known_issns = valid_issns(
                     [
                         *(record.get("allIssns") or []),
                         *(crossref.get("allIssns") or []),
@@ -1606,6 +1804,8 @@ def main() -> None:
             else:
                 report["locallyUpdatedJournals"].append(group["canonicalTitle"])
 
+            previous_publisher = compact_whitespace(record.get("publisher"))
+            previous_issns = list(record.get("allIssns") or [])
             record = merge_basic_metadata(
                 record,
                 group=group,
@@ -1613,6 +1813,20 @@ def main() -> None:
                 openalex=openalex,
                 source_documents=source_documents,
             )
+            if previous_publisher and previous_publisher != record.get("publisher"):
+                report["sanitizedFields"].append({
+                    "journal": group["canonicalTitle"],
+                    "field": "publisher",
+                    "before": previous_publisher,
+                    "after": record.get("publisher", ""),
+                })
+            if previous_issns and previous_issns != record.get("allIssns"):
+                report["sanitizedFields"].append({
+                    "journal": group["canonicalTitle"],
+                    "field": "allIssns",
+                    "before": previous_issns,
+                    "after": record.get("allIssns", []),
+                })
             record["journalId"] = journal_id
             record = merge_all_metrics(
                 record,
