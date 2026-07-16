@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-07-16T10:34:33.187072Z",
+  "lastUpdated": "2026-07-16T11:55:01.753014Z",
   "journalCount": 22,
   "activeJournalCount": 22,
   "sourcePolicy": {
@@ -467,22 +467,13 @@
         }
       },
       "abbreviation": "Adv Funct Materials",
-      "publisher": "Wiley-VCH",
+      "publisher": "Wiley",
       "issn": "1616-301X",
       "eissn": "1616-3028",
       "issnL": "1616-301X",
       "allIssns": [
         "1616-301X",
-        "1616-3028",
-        "2000-2026",
-        "0217-7323",
-        "0935-9648",
-        "1530-6984",
-        "1613-6810",
-        "0264-9381",
-        "0925-9635",
-        "0040-6090",
-        "0001-7701"
+        "1616-3028"
       ],
       "homepage": "http://onlinelibrary.wiley.com/journal/10.1002/(ISSN)1616-3028",
       "countryCode": "DE",
@@ -495,11 +486,11 @@
       "openAlexId": "S135204980",
       "openAlexUrl": "https://openalex.org/S135204980",
       "openAlexStats": {
-        "worksCount": 42579,
-        "citedByCount": 2513233,
-        "twoYearMeanCitedness": 14.326441143754499,
+        "worksCount": 42610,
+        "citedByCount": 2514778,
+        "twoYearMeanCitedness": 14.347590440120152,
         "hIndex": 476,
-        "i10Index": 26960
+        "i10Index": 26983
       },
       "foundedYear": 2001,
       "publicationCount": 1,
@@ -612,22 +603,12 @@
         }
       },
       "abbreviation": "Advanced Science",
-      "publisher": "Wiley-VCH GmbH Official Wiley profile The 14.1 JIF is a journal-level, two-year citation-window measure. The 18.2 CiteScore , acceptance rate , and decision median use different underlying measures. They should not be combined into a single quality score or used to rank individual authors, papers, laboratories, or proposals. Is this the exact Wiley journal record? Advanced Science is Wiley's fully open-access interdisciplinary journal. Its published scope spans fundamental and applied work in materials science, chemistry, physics, engineering, medical and life sciences, earth and environmental sciences, and social sciences and humanities. The exact journal identifier is",
+      "publisher": "Wiley",
       "issn": "2198-3844",
       "eissn": "2198-3844",
       "issnL": "2198-3844",
       "allIssns": [
-        "2198-3844",
-        "2014-2026",
-        "1044-5498",
-        "0022-2844",
-        "0737-4038",
-        "1055-7903",
-        "0950-9232",
-        "1040-452X",
-        "0969-7128",
-        "0217-7323",
-        "0168-583X"
+        "2198-3844"
       ],
       "homepage": "https://onlinelibrary.wiley.com/journal/21983844",
       "countryCode": "DE",
@@ -640,11 +621,11 @@
       "openAlexId": "S2737737698",
       "openAlexUrl": "https://openalex.org/S2737737698",
       "openAlexStats": {
-        "worksCount": 20660,
-        "citedByCount": 649332,
-        "twoYearMeanCitedness": 8.428092002946714,
+        "worksCount": 20682,
+        "citedByCount": 650064,
+        "twoYearMeanCitedness": 8.44464417027535,
         "hIndex": 276,
-        "i10Index": 10024
+        "i10Index": 10042
       },
       "publicationCount": 1,
       "publicationYears": [
@@ -1162,18 +1143,7 @@
       "issnL": "1359-7345",
       "allIssns": [
         "1359-7345",
-        "1364-548X",
-        "1965-1968",
-        "1996-2026",
-        "0737-0652",
-        "1347-9466",
-        "0965-5441",
-        "1044-5110",
-        "2589-7780",
-        "1532-8813",
-        "1472-3581",
-        "0143-7208",
-        "0369-9420"
+        "1364-548X"
       ],
       "homepage": "http://www.rsc.org/chemcomm",
       "countryCode": "GB",
@@ -1186,11 +1156,11 @@
       "openAlexId": "S152760256",
       "openAlexUrl": "https://openalex.org/S152760256",
       "openAlexStats": {
-        "worksCount": 78063,
-        "citedByCount": 3202977,
-        "twoYearMeanCitedness": 3.92135231316726,
+        "worksCount": 78079,
+        "citedByCount": 3203497,
+        "twoYearMeanCitedness": 3.928250059199621,
         "hIndex": 401,
-        "i10Index": 54837
+        "i10Index": 54840
       },
       "foundedYear": 1996,
       "publicationCount": 1,
@@ -1732,24 +1702,13 @@
         }
       },
       "abbreviation": "Chemical Engineering Journal",
-      "publisher": "Elsevier Scope Seven CEJ sections across applied biomaterials, catalysis, reaction engineering, computational chemical engineering, environmental chemical engineering, green/sustainable engineering, and novel materials Data sourced from the 2025 JIF row in the 2026 JCR release, the repo JCR master export, and Elsevier's current Chemical Engineering Journal page. Elsevier's public metric widget can lag the newest Clarivate row, so this page uses the JCR export for the 2025 JIF. How we read this metric In our analysis of Manusights chemical-engineering submission diagnostics, the specific failure pattern is chemistry-first work that borrows engineering language late. We see authors treat CEJ's 12.5 JIF as proof that a materials, catalysis, or adsorption paper belongs there, but editors actually screen for process consequence: transport, scale-up logic, realistic feeds, reactor behavior, or engineering comparison. The editorial triage pattern is not \"high IF means broader fit.\" It is \"does the manuscript look like chemical engineering before the conclusion section?\" Is the Chemical Engineering Journal impact factor going up or down? Year Impact Factor 2025 12.5 2019 ~8.3 2020 ~10.7 2021 ~13.2 2022 ~15.1 2023 ~13.4 2024 13.2 CEJ followed the same pandemic-era citation surge as most applied chemistry and engineering journals, peaking around 15.1 in 2022 before easing to 13.2 for metric year 2024 and 12.5 for metric year 2025. The current figure still represents a genuinely competitive level for chemical engineering. The five-year JIF of 12.8 running close to the two-year figure confirms the journal has durable citation performance, not just a temporary spike. How CEJ compares Journal 2025 JIF What it rewards Chemical Engineering Journal 12.5 Applied chemical engineering broadly Applied Catalysis B 19.7 Environmental/energy catalysis specifically ACS Catalysis 13.6 Catalysis mechanisms and applications Water Research 12.8 Water science and treatment AIChE Journal 4 Fundamental chemical engineering (AIChE) CEJ vs Applied Catalysis B: Applied Catalysis B JIF 19.7 is more selective and focused specifically on environmental/energy catalysis. CEJ JIF 12.5 is broader, accepting catalysis, separation, water treatment, electrochemistry, and other applied chemical engineering. If your paper is specifically environmental catalysis, Applied Catalysis B is the higher-impact target; if the contribution spans process engineering or multiple CEJ sections, CEJ may be the cleaner fit. What Pre-Submission Reviews Reveal About Chemical Engineering Journal Submissions For manuscripts targeting the Chemical Engineering Journal, three patterns appear most often in desk-rejected submissions. Chemistry paper framed as engineering without a demonstrable process consequence. CEJ's aims and scope state the journal publishes \"research in the field of chemical engineering\" with papers \"showing the application of chemical engineering concepts.\" The most common desk-rejection trigger: papers that are fundamentally materials synthesis or analytical chemistry but claim an engineering angle through a \"potential application\" sentence. When the experimental work consists entirely of material characterization (XRD, SEM, BET) and small-scale batch tests without any process design element, flow rate optimization, scale consideration, or comparison to existing industrial practice, editors classify it as a chemistry paper regardless of the framing. The engineering consequence must be the primary scientific contribution, not the motivation paragraph. Process study without scale rationale or comparison to current industrial practice. CEJ reviewers consistently ask: how does this compare to what industry currently does? For papers on water treatment, catalytic processes, separation, or energy systems, the expectation is that performance data is contextualized against existing benchmarks. Papers reporting a novel process that achieves 85% efficiency without stating whether the current industrial process achieves 60% or 95% do not give editors or reviewers the information needed to assess significance. For any process-level paper, specifying the gap being closed relative to current practice and providing at least a qualitative argument about scale-up feasibility is expected at a Q1 engineering journal. Novel material submitted to an engineering journal rather than a chemistry journal. CEJ receives a high volume of papers primarily about synthesizing or characterizing a new material (composite, MOF, membrane) where the engineering application is used as justification rather than as the study's focus. Editors at CEJ have described the pattern in editorial commentary: a material that performs well in a lab-scale batch test is not a chemical engineering contribution unless the paper addresses selectivity under realistic conditions, mass transfer limitations, regeneration behavior, or integration into a process train. Papers where the material is new but the engineering question is not addressed are redirected toward ACS journals, Separation and Purification Technology, or applied chemistry venues. A CEJ submission readiness check can assess whether the manuscript's engineering framing and process-level data meet CEJ's editorial bar. Should you submit? Submit if: the paper presents applied chemical engineering with clear process or environmental relevance catalysis, water treatment, separation, or electrochemistry is central the engineering application is demonstrated, not just implied the scope genuinely fits chemical engineering rather than pure chemistry Think twice if: the paper is fundamental chemistry without engineering application (ACS journals) Applied Catalysis B is a realistic target for environmental catalysis work AIChE Journal serves the fundamental chemical engineering audience better the environmental angle is thin A CEJ submission readiness check can help assess scope fit before submitting. The decision question this page should answer CEJ works best when the engineering consequence is not optional background but the core reason the paper matters. That makes the page valuable for shortlist decisions: should this manuscript go to CEJ, a more selective catalysis or water title, or a chemistry journal with a different readership? The impact factor helps because it confirms CEJ is no longer a middling field journal. It is a crowded, well-cited venue where applied relevance and scale-facing logic matter. But the metric should not distract from the real editorial question: does the paper look like chemical engineering, or does it only borrow engineering language to strengthen positioning? When the number helps and when it misleads It helps when the manuscript clearly changes how chemical engineers would design, scale, separate, treat, or optimize a process. It helps when you are deciding between CEJ and other applied engineering venues with similar environmental or energy readership. It misleads when the main novelty is still synthetic chemistry or materials chemistry rather than engineering consequence. It misleads when authors assume a strong JIF can compensate for weak process reality. Related CEJ decisions Chemical Engineering Journal submission process Is Chemical Engineering Journal a good journal? Applied Catalysis B: Environment and Energy impact factor Why CEJ gets cited so heavily CEJ benefits from sitting in a cross-current of environmental engineering, catalysis, electrochemistry, separations, water treatment, and energy systems. That makes its citation profile strong because papers can travel across adjacent engineering communities. The journal's impact factor is therefore useful as a signal of broad applied-engineering visibility, not just narrow field prestige. What the metric does not settle for you The impact factor cannot tell you whether the paper reads like chemical engineering on page one. Editors make that call from the problem framing, the kind of evidence presented, and the realism of the process or application claim. A manuscript can carry sophisticated chemistry and still miss CEJ if the engineering consequence is vague, deferred, or dependent on optimistic speculation. The metric also cannot tell you whether the paper is better framed for a narrower audience. Some strong catalysis, membrane, electrochemistry, or water-treatment papers will do better in specialty journals because the readership is more concentrated even if the headline JIF is lower or only modestly higher. Why this page exists for the searcher Most authors searching this query are not just collecting rankings. They are trying to decide whether CEJ is a realistic target, a reach target, or the wrong target. That is why the useful answer is practical: CEJ is strong enough that the paper must look like applied engineering with real process consequence, but broad enough that it can reward work spanning multiple adjacent engineering communities when the application case is convincing. If the page makes that clear, it is doing more than reporting a number. It is helping the author avoid one of the most expensive submission mistakes in engineering publishing: sending a chemistry-first manuscript to an engineering journal because the metric looked attractive. How to read CEJ against neighboring options CEJ often sits in the middle of real shortlist decisions rather than at the very top or very bottom. Authors compare it with Applied Catalysis B for stronger environmental-catalysis selectivity, with Water Research for water-centered engineering problems, and with chemistry journals when the engineering relevance is not yet dominant. That middle position is exactly why the journal attracts so much search interest: it is often the realistic high-quality option when the paper is ambitious but not obviously a flagship-catalysis or flagship-water paper. Used well, the metric helps you place CEJ in that decision set. It should not replace the harder judgment about whether the manuscript already looks like a chemical-engineering contribution that process-minded readers will trust. What the impact factor does not measure CEJ at 12.5 JIF remains a high-visibility Q1 title in the current JCR export, which is meaningful for a tier dominated by submission volume and broad-scope applied chemistry. The 12.5 reflects citation density across an Elsevier title that absorbs a large mid-tier applied chemistry pile, plus genuine top-tier engineering research. The mean compresses this. Comparing CEJ's 12.5 to AIChE Journal (4.0) or Industrial and Engineering Chemistry Research (3.8) on IF alone misses that the three operate at different selectivity and scope tiers. What 12.5 cannot signal about a CEJ submission: editors return papers framed primarily as new-material-synthesis with engineering implications added late, and accept papers where the engineering consequence (process scale, real-feed reactor data, separation throughput, electrochemical efficiency at scale) drives the contribution. The friction submissions are catalysis or photochemistry papers that should have gone to Applied Catalysis B or Chem Catalysis. Subfield prestige concentrates in environmental engineering and electrochemical separations. Before choosing this journal based on IF alone, a CEJ submission readiness check assesses whether your manuscript fits the journal's actual editorial scope. Before you submit A CEJ submission readiness check identifies the specific framing and scope issues that trigger desk rejection before you submit. For a concrete sense of what the review flags look like, see sample reports before finalizing a CEJ submission. Frequently asked questions What is Chemical Engineering Journal impact factor? Chemical Engineering Journal has a 2025 Journal Impact Factor of 12.5 in the 2026 Journal Citation Reports release. The same current export lists a five-year JIF of 12.8 and Q1 standing. Is Chemical Engineering Journal impact factor going up or down? Down year-over-year from 13.2 for metric year 2024 to 12.5 for metric year 2025. That is normalization, not a collapse; the five-year JIF remains 12.8. Is Chemical Engineering Journal a good journal? Yes. Chemical Engineering Journal (JIF 12.5, Q1) is a strong applied chemical-engineering venue, but editors reject routine experimental work when the engineering consequence is thin. Materials papers without process relevance, pure-chemistry studies, and incremental optimization of heavily studied systems are common fit risks. How much is the Chemical Engineering Journal open-access APC? Elsevier currently lists a $5,070 Article Publishing Charge for",
+      "publisher": "Elsevier BV",
       "issn": "1385-8947",
       "eissn": "",
       "issnL": "1385-8947",
       "allIssns": [
         "1385-8947",
-        "1873-3212",
-        "1996-2026",
-        "0737-0652",
-        "1347-9466",
-        "0965-5441",
-        "2509-4238",
-        "1944-7442",
-        "0926-3373",
-        "0268-2575",
-        "0263-6174",
-        "0920-5861",
-        "0253-9837"
+        "1873-3212"
       ],
       "homepage": "https://www.journals.elsevier.com/chemical-engineering-journal",
       "countryCode": "CH",
@@ -1762,11 +1721,11 @@
       "openAlexId": "S149937609",
       "openAlexUrl": "https://openalex.org/S149937609",
       "openAlexStats": {
-        "worksCount": 77095,
-        "citedByCount": 3360830,
-        "twoYearMeanCitedness": 10.45493964987218,
+        "worksCount": 77130,
+        "citedByCount": 3362914,
+        "twoYearMeanCitedness": 10.47452970457043,
         "hIndex": 389,
-        "i10Index": 52300
+        "i10Index": 52329
       },
       "publicationCount": 4,
       "publicationYears": [
@@ -1850,24 +1809,13 @@
       ],
       "metricsByYear": {},
       "abbreviation": "Chemistry  An Asian Journal",
-      "publisher": "John Wiley and Sons Ltd",
+      "publisher": "Wiley",
       "issn": "1861-4728",
       "eissn": "1861-471X",
       "issnL": "1861-471X",
       "allIssns": [
         "1861-4728",
-        "1861-471X",
-        "2006-2026",
-        "1044-5498",
-        "0022-2844",
-        "0737-4038",
-        "1055-7903",
-        "0950-9232",
-        "1040-452X",
-        "1043-1802",
-        "1565-3633",
-        "0968-0896",
-        "0008-6215"
+        "1861-471X"
       ],
       "homepage": "https://onlinelibrary.wiley.com/journal/1861471X",
       "countryCode": "DE",
@@ -1881,10 +1829,10 @@
       "openAlexUrl": "https://openalex.org/S188582317",
       "openAlexStats": {
         "worksCount": 10257,
-        "citedByCount": 217019,
-        "twoYearMeanCitedness": 3.0481181515007147,
+        "citedByCount": 217078,
+        "twoYearMeanCitedness": 3.0557408289661745,
         "hIndex": 145,
-        "i10Index": 5261
+        "i10Index": 5262
       },
       "publicationCount": 3,
       "publicationYears": [
@@ -1969,24 +1917,14 @@
         }
       },
       "abbreviation": "Electrochimica Acta",
-      "publisher": "Elsevier Ltd",
+      "publisher": "Elsevier BV",
       "issn": "0013-4686",
       "eissn": "",
       "issnL": "0013-4686",
       "allIssns": [
         "0013-4686",
         "1873-3859",
-        "1959-2026",
-        "0965-5441",
-        "0263-6174",
-        "0920-5861",
-        "0253-9837",
-        "0737-0652",
-        "2095-4956",
-        "1097-3958",
-        "1347-9466",
-        "1542-2119",
-        "0932-3414"
+        "0965-5441"
       ],
       "homepage": "http://www.elsevier.com/wps/find/journaldescription.cws_home/205/description#description",
       "countryCode": "GB",
@@ -1999,11 +1937,11 @@
       "openAlexId": "S198339081",
       "openAlexUrl": "https://openalex.org/S198339081",
       "openAlexStats": {
-        "worksCount": 53809,
-        "citedByCount": 2016844,
-        "twoYearMeanCitedness": 4.705252525252526,
+        "worksCount": 53824,
+        "citedByCount": 2017328,
+        "twoYearMeanCitedness": 4.708559919436053,
         "hIndex": 325,
-        "i10Index": 36882
+        "i10Index": 36884
       },
       "publicationCount": 1,
       "publicationYears": [
@@ -2491,14 +2429,7 @@
       "issnL": "1754-5692",
       "allIssns": [
         "1754-5692",
-        "1754-5706",
-        "1546-0118",
-        "1532-4117",
-        "1532-4095",
-        "2575-0356",
-        "1556-7230",
-        "1944-7450",
-        "2160-5890"
+        "1754-5706"
       ],
       "homepage": "http://www.rsc.org/Publishing/Journals/EE/index.asp",
       "countryCode": "GB",
@@ -2509,11 +2440,11 @@
       "openAlexId": "S117082959",
       "openAlexUrl": "https://openalex.org/S117082959",
       "openAlexStats": {
-        "worksCount": 8236,
-        "citedByCount": 1324291,
-        "twoYearMeanCitedness": 28.764614588722193,
-        "hIndex": 519,
-        "i10Index": 6371
+        "worksCount": 8241,
+        "citedByCount": 1324935,
+        "twoYearMeanCitedness": 28.787409700722396,
+        "hIndex": 520,
+        "i10Index": 6372
       },
       "publicationCount": 1,
       "publicationYears": [
@@ -2589,24 +2520,13 @@
         }
       },
       "abbreviation": "Journal of Environmental Chemical Engineering",
-      "publisher": "Elsevier Ltd",
+      "publisher": "Elsevier BV",
       "issn": "2213-3437",
       "eissn": "",
       "issnL": "2213-2929",
       "allIssns": [
         "2213-3437",
-        "2213-2929",
-        "2013-2026",
-        "2509-4238",
-        "1944-7442",
-        "2772-6568",
-        "1750-5836",
-        "1044-5110",
-        "2666-8211",
-        "2199-3629",
-        "0278-6826",
-        "0926-3373",
-        "1385-8947"
+        "2213-2929"
       ],
       "homepage": "https://www.journals.elsevier.com/journal-of-environmental-chemical-engineering",
       "countryCode": "NL",
@@ -2619,11 +2539,11 @@
       "openAlexId": "S2764859491",
       "openAlexUrl": "https://openalex.org/S2764859491",
       "openAlexStats": {
-        "worksCount": 24098,
-        "citedByCount": 531753,
-        "twoYearMeanCitedness": 5.603214751958225,
+        "worksCount": 24113,
+        "citedByCount": 532144,
+        "twoYearMeanCitedness": 5.612582511612746,
         "hIndex": 187,
-        "i10Index": 12383
+        "i10Index": 12392
       },
       "publicationCount": 1,
       "publicationYears": [
@@ -2721,8 +2641,7 @@
       "issnL": "0959-9428",
       "allIssns": [
         "0959-9428",
-        "1364-5501",
-        "1991-2012"
+        "1364-5501"
       ],
       "homepage": "http://www.rsc.org/Publishing/Journals/jm/",
       "countryCode": "GB",
@@ -2734,7 +2653,7 @@
       "openAlexUrl": "https://openalex.org/S45305740",
       "openAlexStats": {
         "worksCount": 18793,
-        "citedByCount": 1191850,
+        "citedByCount": 1191934,
         "twoYearMeanCitedness": 26.0,
         "hIndex": 361,
         "i10Index": 14932
@@ -2866,24 +2785,14 @@
         }
       },
       "abbreviation": "Journal of Power Sources",
-      "publisher": "Elsevier",
+      "publisher": "Elsevier BV",
       "issn": "0378-7753",
       "eissn": "1873-2755",
       "issnL": "0378-7753",
       "allIssns": [
         "0378-7753",
         "1873-2755",
-        "1976-2026",
-        "0965-5441",
-        "2095-4956",
-        "0010-2180",
-        "2589-7780",
-        "1754-5692",
-        "0378-3820",
-        "2096-2797",
-        "0165-2370",
-        "0361-5219",
-        "2666-352X"
+        "0965-5441"
       ],
       "homepage": "http://www.elsevier.com/wps/find/journaldescription.cws_home/504093/description",
       "countryCode": "NL",
@@ -2896,11 +2805,11 @@
       "openAlexId": "S177147899",
       "openAlexUrl": "https://openalex.org/S177147899",
       "openAlexStats": {
-        "worksCount": 41214,
-        "citedByCount": 2236915,
-        "twoYearMeanCitedness": 7.36117381489842,
+        "worksCount": 41223,
+        "citedByCount": 2237864,
+        "twoYearMeanCitedness": 7.3857671872484305,
         "hIndex": 412,
-        "i10Index": 30311
+        "i10Index": 30317
       },
       "foundedYear": 1976,
       "publicationCount": 6,
@@ -3001,22 +2910,12 @@
         }
       },
       "abbreviation": "Materials Today Chemistry",
-      "publisher": "Elsevier Ltd",
+      "publisher": "Elsevier BV",
       "issn": "2468-5194",
       "eissn": "",
       "issnL": "2468-5194",
       "allIssns": [
-        "2468-5194",
-        "2016-2026",
-        "1044-5110",
-        "0010-5082",
-        "0832-7823",
-        "1537-6494",
-        "2589-7780",
-        "1532-8813",
-        "1472-3581",
-        "0143-7208",
-        "0143-7496"
+        "2468-5194"
       ],
       "homepage": "https://www.journals.elsevier.com/materials-today-chemistry",
       "countryCode": "GB",
@@ -3030,10 +2929,10 @@
       "openAlexUrl": "https://openalex.org/S2898120712",
       "openAlexStats": {
         "worksCount": 3793,
-        "citedByCount": 65310,
-        "twoYearMeanCitedness": 4.765968318855391,
+        "citedByCount": 65350,
+        "twoYearMeanCitedness": 4.776188042922841,
         "hIndex": 95,
-        "i10Index": 1677
+        "i10Index": 1679
       },
       "publicationCount": 1,
       "publicationYears": [
@@ -3117,20 +3016,12 @@
         }
       },
       "abbreviation": "Materials Today Energy",
-      "publisher": "Elsevier Ltd",
+      "publisher": "Elsevier BV",
       "issn": "2468-6069",
       "eissn": "",
       "issnL": "2468-6069",
       "allIssns": [
-        "2468-6069",
-        "2016-2026",
-        "1537-6494",
-        "2699-9412",
-        "2214-9937",
-        "2768-1688",
-        "2589-7780",
-        "1006-4982",
-        "2574-0962"
+        "2468-6069"
       ],
       "homepage": "https://www.journals.elsevier.com/materials-today-energy",
       "countryCode": "GB",
@@ -3144,10 +3035,10 @@
       "openAlexUrl": "https://openalex.org/S2898308537",
       "openAlexStats": {
         "worksCount": 2305,
-        "citedByCount": 59513,
-        "twoYearMeanCitedness": 5.438763376932224,
+        "citedByCount": 59540,
+        "twoYearMeanCitedness": 5.4494649227110585,
         "hIndex": 96,
-        "i10Index": 1379
+        "i10Index": 1380
       },
       "publicationCount": 1,
       "publicationYears": [
@@ -3231,22 +3122,12 @@
         }
       },
       "abbreviation": "Nanomaterials",
-      "publisher": "Multidisciplinary Digital Publishing Institute (MDPI)",
+      "publisher": "Multidisciplinary Digital Publishing Institute",
       "issn": "2079-4991",
       "eissn": "2079-4991",
       "issnL": "2079-4991",
       "allIssns": [
-        "2079-4991",
-        "2011-2026",
-        "1044-5110",
-        "0010-5082",
-        "0832-7823",
-        "1537-6494",
-        "2589-7780",
-        "1532-8813",
-        "1472-3581",
-        "0143-7208",
-        "0143-7496"
+        "2079-4991"
       ],
       "homepage": "http://www.mdpi.com/journal/nanomaterials",
       "countryCode": "CH",
@@ -3259,11 +3140,11 @@
       "openAlexId": "S2764646681",
       "openAlexUrl": "https://openalex.org/S2764646681",
       "openAlexStats": {
-        "worksCount": 22630,
-        "citedByCount": 529907,
-        "twoYearMeanCitedness": 5.815175922000848,
+        "worksCount": 22633,
+        "citedByCount": 530381,
+        "twoYearMeanCitedness": 5.833298030078374,
         "hIndex": 200,
-        "i10Index": 13052
+        "i10Index": 13063
       },
       "publicationCount": 3,
       "publicationYears": [
@@ -3348,22 +3229,14 @@
         }
       },
       "abbreviation": "Optics Communications",
-      "publisher": "Elsevier B.V.",
+      "publisher": "Elsevier BV",
       "issn": "0030-4018",
       "eissn": "",
       "issnL": "0030-4018",
       "allIssns": [
         "0030-4018",
         "1873-0310",
-        "1969-2026",
-        "0217-7323",
-        "1616-301X",
-        "0935-9648",
-        "1530-6984",
-        "1613-6810",
-        "0264-9381",
-        "0925-9635",
-        "0040-6090"
+        "0217-7323"
       ],
       "homepage": "http://www.elsevier.com/wps/find/journaldescription.cws_home/505711/description",
       "countryCode": "NL",
@@ -3376,11 +3249,11 @@
       "openAlexId": "S186881120",
       "openAlexUrl": "https://openalex.org/S186881120",
       "openAlexStats": {
-        "worksCount": 40313,
-        "citedByCount": 675068,
-        "twoYearMeanCitedness": 2.6452397498262683,
+        "worksCount": 40317,
+        "citedByCount": 675215,
+        "twoYearMeanCitedness": 2.6519777931991673,
         "hIndex": 190,
-        "i10Index": 17744
+        "i10Index": 17748
       },
       "publicationCount": 1,
       "publicationYears": [
@@ -3464,22 +3337,13 @@
         }
       },
       "abbreviation": "Organic Electronics",
-      "publisher": "Elsevier B.V.",
+      "publisher": "Elsevier BV",
       "issn": "1566-1199",
       "eissn": "",
       "issnL": "1566-1199",
       "allIssns": [
         "1566-1199",
-        "1878-5530",
-        "2000-2026",
-        "0217-7323",
-        "1616-301X",
-        "0935-9648",
-        "1530-6984",
-        "1613-6810",
-        "0264-9381",
-        "0925-9635",
-        "0040-6090"
+        "1878-5530"
       ],
       "homepage": "https://www.journals.elsevier.com/organic-electronics",
       "countryCode": "NL",
@@ -3493,10 +3357,10 @@
       "openAlexUrl": "https://openalex.org/S99846442",
       "openAlexStats": {
         "worksCount": 7705,
-        "citedByCount": 189336,
-        "twoYearMeanCitedness": 3.3137254901960786,
+        "citedByCount": 189363,
+        "twoYearMeanCitedness": 3.320261437908497,
         "hIndex": 126,
-        "i10Index": 5002
+        "i10Index": 5004
       },
       "publicationCount": 1,
       "publicationYears": [
@@ -3580,22 +3444,12 @@
         }
       },
       "abbreviation": "Polymers",
-      "publisher": "Multidisciplinary Digital Publishing Institute (MDPI)",
+      "publisher": "Multidisciplinary Digital Publishing Institute",
       "issn": "2073-4360",
       "eissn": "2073-4360",
       "issnL": "2073-4360",
       "allIssns": [
-        "2073-4360",
-        "2009-2026",
-        "1537-6494",
-        "0015-0541",
-        "1936-0851",
-        "1616-301X",
-        "0935-9648",
-        "2364-821X",
-        "0737-0652",
-        "1380-2224",
-        "0743-7463"
+        "2073-4360"
       ],
       "homepage": "http://www.mdpi.com/journal/polymers/",
       "countryCode": "CH",
@@ -3608,11 +3462,11 @@
       "openAlexId": "S123288148",
       "openAlexUrl": "https://openalex.org/S123288148",
       "openAlexStats": {
-        "worksCount": 32188,
-        "citedByCount": 768503,
-        "twoYearMeanCitedness": 6.591121495327103,
+        "worksCount": 32194,
+        "citedByCount": 769358,
+        "twoYearMeanCitedness": 6.613588606117208,
         "hIndex": 227,
-        "i10Index": 18731
+        "i10Index": 18751
       },
       "publicationCount": 2,
       "publicationYears": [
@@ -3697,24 +3551,13 @@
         }
       },
       "abbreviation": "Separation and Purification Technology",
-      "publisher": "Elsevier B.V.",
+      "publisher": "Elsevier BV",
       "issn": "1383-5866",
       "eissn": "",
       "issnL": "1383-5866",
       "allIssns": [
         "1383-5866",
-        "1873-3794",
-        "1997-2026",
-        "0965-5441",
-        "0263-6174",
-        "0920-5861",
-        "0253-9837",
-        "0737-0652",
-        "2095-4956",
-        "1097-3958",
-        "1347-9466",
-        "1542-2119",
-        "0932-3414"
+        "1873-3794"
       ],
       "homepage": "https://www.journals.elsevier.com/separation-and-purification-technology",
       "countryCode": "NL",
@@ -3727,11 +3570,11 @@
       "openAlexId": "S69753523",
       "openAlexUrl": "https://openalex.org/S69753523",
       "openAlexStats": {
-        "worksCount": 30955,
-        "citedByCount": 959945,
-        "twoYearMeanCitedness": 8.911527257594674,
+        "worksCount": 30970,
+        "citedByCount": 960514,
+        "twoYearMeanCitedness": 8.923524522028263,
         "hIndex": 235,
-        "i10Index": 19939
+        "i10Index": 19961
       },
       "publicationCount": 1,
       "publicationYears": [
@@ -3787,9 +3630,35 @@
       "aliases": [
         "Solar Energy"
       ],
-      "metricsByYear": {},
+      "metricsByYear": {
+        "2025": {
+          "impactFactor": 7.9,
+          "jcrReleaseYear": 2026,
+          "fieldSources": {
+            "impactFactor": {
+              "name": "JournalSearches",
+              "url": "https://journalsearches.com/journal.php?title=solar+energy",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-16T11:54:37.427969Z",
+              "priority": 60,
+              "note": "Backup JIF source; quartile is stored separately as Scopus quartile."
+            },
+            "jcrReleaseYear": {
+              "name": "JournalSearches",
+              "url": "https://journalsearches.com/journal.php?title=solar+energy",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-16T11:54:37.427969Z",
+              "priority": 60,
+              "note": "Backup JIF source; quartile is stored separately as Scopus quartile."
+            }
+          },
+          "verificationStatus": "secondary-source"
+        }
+      },
       "abbreviation": "Solar Energy",
-      "publisher": "Elsevier",
+      "publisher": "Elsevier BV",
       "issn": "0038-092X",
       "eissn": "",
       "issnL": "0038-092X",
@@ -3802,15 +3671,17 @@
       "journalType": "journal",
       "isOpenAccess": false,
       "isInDoaj": false,
-      "subjects": [],
+      "subjects": [
+        "Energy; Materials Science"
+      ],
       "openAlexId": "S5745031",
       "openAlexUrl": "https://openalex.org/S5745031",
       "openAlexStats": {
-        "worksCount": 20258,
-        "citedByCount": 843560,
-        "twoYearMeanCitedness": 7.691446484549933,
+        "worksCount": 20262,
+        "citedByCount": 844071,
+        "twoYearMeanCitedness": 7.723737147966026,
         "hIndex": 286,
-        "i10Index": 13085
+        "i10Index": 13090
       },
       "publicationCount": 1,
       "publicationYears": [
@@ -3829,11 +3700,36 @@
           "name": "OpenAlex Sources API",
           "url": "https://openalex.org/S5745031",
           "retrievedAt": "2026-07-16T09:25:52.714764Z"
+        },
+        "journalsearches": {
+          "name": "JournalSearches",
+          "url": "https://journalsearches.com/journal.php?title=solar+energy",
+          "type": "secondary-source",
+          "verificationStatus": "secondary-source",
+          "retrievedAt": "2026-07-16T11:54:37.428029Z",
+          "priority": 60
         }
       },
       "currentlyUsedInPublications": true,
-      "country": "",
-      "frequency": ""
+      "country": "United Kingdom",
+      "frequency": "",
+      "latestMetricYear": 2025,
+      "scopusLatest": {
+        "citeScore": 13.0,
+        "hIndex": 252,
+        "sjr": 1.336,
+        "quartile": "Q1",
+        "releaseYear": 2026,
+        "source": {
+          "name": "JournalSearches",
+          "url": "https://journalsearches.com/journal.php?title=solar+energy",
+          "type": "secondary-source",
+          "verificationStatus": "secondary-source",
+          "retrievedAt": "2026-07-16T11:54:37.427995Z",
+          "priority": 60,
+          "metricSystem": "Scopus/SCImago"
+        }
+      }
     },
     "solar-energy-materials-and-solar-cells": {
       "journalId": "solar-energy-materials-and-solar-cells",
@@ -3869,21 +3765,14 @@
         }
       },
       "abbreviation": "Solar Energy Materials and Solar Cells",
-      "publisher": "Elsevier B.V.",
+      "publisher": "Elsevier BV",
       "issn": "0927-0248",
       "eissn": "",
       "issnL": "0927-0248",
       "allIssns": [
         "0927-0248",
         "1879-3398",
-        "1992-2026",
-        "1537-6494",
-        "2699-9412",
-        "2214-9937",
-        "2768-1688",
-        "2589-7780",
-        "1006-4982",
-        "2574-0962"
+        "1537-6494"
       ],
       "homepage": "https://www.sciencedirect.com/journal/solar-energy-materials-and-solar-cellsnals&journal=09270248",
       "countryCode": "NL",
@@ -3896,11 +3785,11 @@
       "openAlexId": "S166040772",
       "openAlexUrl": "https://openalex.org/S166040772",
       "openAlexStats": {
-        "worksCount": 13982,
-        "citedByCount": 599134,
-        "twoYearMeanCitedness": 6.855108359133127,
+        "worksCount": 13983,
+        "citedByCount": 599309,
+        "twoYearMeanCitedness": 6.875,
         "hIndex": 248,
-        "i10Index": 9851
+        "i10Index": 9853
       },
       "publicationCount": 2,
       "publicationYears": [
@@ -3957,7 +3846,33 @@
       "aliases": [
         "Solar RRL"
       ],
-      "metricsByYear": {},
+      "metricsByYear": {
+        "2025": {
+          "impactFactor": 4.8,
+          "jcrReleaseYear": 2026,
+          "fieldSources": {
+            "impactFactor": {
+              "name": "JournalSearches",
+              "url": "https://journalsearches.com/journal.php?title=solar+rrl",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-16T11:54:50.146054Z",
+              "priority": 60,
+              "note": "Backup JIF source; quartile is stored separately as Scopus quartile."
+            },
+            "jcrReleaseYear": {
+              "name": "JournalSearches",
+              "url": "https://journalsearches.com/journal.php?title=solar+rrl",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-16T11:54:50.146054Z",
+              "priority": 60,
+              "note": "Backup JIF source; quartile is stored separately as Scopus quartile."
+            }
+          },
+          "verificationStatus": "secondary-source"
+        }
+      },
       "abbreviation": "Solar RRL",
       "publisher": "Wiley",
       "issn": "2367-198X",
@@ -3971,15 +3886,17 @@
       "journalType": "journal",
       "isOpenAccess": false,
       "isInDoaj": false,
-      "subjects": [],
+      "subjects": [
+        "Energy; Engineering; Materials Science; Physics and Astronomy"
+      ],
       "openAlexId": "S4210176222",
       "openAlexUrl": "https://openalex.org/S4210176222",
       "openAlexStats": {
         "worksCount": 3999,
-        "citedByCount": 77797,
-        "twoYearMeanCitedness": 4.127118644067797,
+        "citedByCount": 77850,
+        "twoYearMeanCitedness": 4.1403013182674195,
         "hIndex": 99,
-        "i10Index": 2045
+        "i10Index": 2047
       },
       "publicationCount": 2,
       "publicationYears": [
@@ -3999,11 +3916,36 @@
           "name": "OpenAlex Sources API",
           "url": "https://openalex.org/S4210176222",
           "retrievedAt": "2026-07-16T09:26:00.812704Z"
+        },
+        "journalsearches": {
+          "name": "JournalSearches",
+          "url": "https://journalsearches.com/journal.php?title=solar+rrl",
+          "type": "secondary-source",
+          "verificationStatus": "secondary-source",
+          "retrievedAt": "2026-07-16T11:54:50.146117Z",
+          "priority": 60
         }
       },
       "currentlyUsedInPublications": true,
-      "country": "",
-      "frequency": ""
+      "country": "Germany",
+      "frequency": "",
+      "latestMetricYear": 2025,
+      "scopusLatest": {
+        "citeScore": 9.6,
+        "hIndex": 93,
+        "sjr": 1.161,
+        "quartile": "Q1",
+        "releaseYear": 2026,
+        "source": {
+          "name": "JournalSearches",
+          "url": "https://journalsearches.com/journal.php?title=solar+rrl",
+          "type": "secondary-source",
+          "verificationStatus": "secondary-source",
+          "retrievedAt": "2026-07-16T11:54:50.146080Z",
+          "priority": 60,
+          "metricSystem": "Scopus/SCImago"
+        }
+      }
     },
     "the-journal-of-physical-chemistry-c": {
       "journalId": "the-journal-of-physical-chemistry-c",
@@ -4426,13 +4368,7 @@
       "allIssns": [
         "1932-7447",
         "1932-7455",
-        "1520-5215",
-        "1520-5207",
-        "1948-7185",
-        "1099-1395",
-        "1531-863X",
-        "1990-7923",
-        "2196-7156"
+        "1520-5215"
       ],
       "homepage": "http://pubs.acs.org/journals/jpccck/index.html",
       "countryCode": "US",
@@ -4443,11 +4379,11 @@
       "openAlexId": "S95739953",
       "openAlexUrl": "https://openalex.org/S95739953",
       "openAlexStats": {
-        "worksCount": 59307,
-        "citedByCount": 2335717,
-        "twoYearMeanCitedness": 3.508450197770586,
+        "worksCount": 59318,
+        "citedByCount": 2336248,
+        "twoYearMeanCitedness": 3.5115736587116455,
         "hIndex": 370,
-        "i10Index": 42475
+        "i10Index": 42478
       },
       "publicationCount": 1,
       "publicationYears": [
@@ -4903,20 +4839,14 @@
         }
       },
       "abbreviation": "Thin Solid Films",
-      "publisher": "Elsevier B.V.",
+      "publisher": "Elsevier BV",
       "issn": "0040-6090",
       "eissn": "",
       "issnL": "0040-6090",
       "allIssns": [
         "0040-6090",
         "1879-2731",
-        "1967-2026",
-        "0217-7323",
-        "0264-9381",
-        "0925-9635",
-        "0001-7701",
-        "0370-2693",
-        "1537-6494"
+        "0217-7323"
       ],
       "homepage": "http://www.journals.elsevier.com/thin-solid-films/",
       "countryCode": "NL",
@@ -4930,10 +4860,10 @@
       "openAlexUrl": "https://openalex.org/S84339699",
       "openAlexStats": {
         "worksCount": 47358,
-        "citedByCount": 1104589,
-        "twoYearMeanCitedness": 2.5737951807228914,
+        "citedByCount": 1104713,
+        "twoYearMeanCitedness": 2.5843373493975905,
         "hIndex": 253,
-        "i10Index": 26382
+        "i10Index": 26384
       },
       "publicationCount": 1,
       "publicationYears": [
