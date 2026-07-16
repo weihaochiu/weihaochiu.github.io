@@ -1,6 +1,44 @@
 [
   {
     "jurisdiction": "Taiwan",
+    "number": "I851990",
+    "titleEn": "Solar Cell Module Having Groove Structure and Manufacturing Method Thereof",
+    "titleZh": "槽式太陽能電池模組及其製備方法",
+    "inventorsEn": [
+      "Kun-Mu Lee",
+      "Wei-Hao Chiu",
+      "Chao-Sung Lai"
+    ],
+    "inventorsZh": "李坤穆、邱偉豪、賴朝松",
+    "assigneeEn": "Chang Gung University",
+    "assigneeZh": "長庚大學",
+    "date": "11 Aug. 2024",
+    "status": "Granted",
+    "url": "https://patents.google.com/patent/TWI851990B/zh",
+    "year": 2024,
+    "sortDate": "2024-08-11"
+  },
+  {
+    "jurisdiction": "Taiwan",
+    "number": "I816357",
+    "titleEn": "Solar Cell Module and Manufacturing Method Thereof",
+    "titleZh": "太陽能電池模組及其製備方法",
+    "inventorsEn": [
+      "Kun-Mu Lee",
+      "Wei-Hao Chiu",
+      "Chao-Sung Lai"
+    ],
+    "inventorsZh": "李坤穆、邱偉豪、賴朝松",
+    "assigneeEn": "Chang Gung University",
+    "assigneeZh": "長庚大學",
+    "date": "21 Sep. 2023",
+    "status": "Granted",
+    "url": "https://patents.google.com/patent/TWI816357B/zh",
+    "year": 2023,
+    "sortDate": "2023-09-21"
+  },
+  {
+    "jurisdiction": "Taiwan",
     "number": "M612985",
     "titleEn": "Scaffold with Adjustable Illuminance",
     "titleZh": "照度可調整之棚架",
