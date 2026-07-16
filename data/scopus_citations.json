@@ -1,7 +1,7 @@
 {
   "source": "Scopus",
   "api": "Scopus Citation Count Metadata API",
-  "lastAttempt": null,
+  "lastAttempt": "2026-07-16T08:31:58+08:00",
   "lastSuccessfulUpdate": null,
   "status": "configuration required: add SCOPUS_API_KEY to GitHub Actions secrets",
   "verifiedRecords": 0,
