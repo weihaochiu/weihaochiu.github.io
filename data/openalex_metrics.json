@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "source": "OpenAlex Author API",
-  "status": "pending",
+  "status": "success",
   "authorId": "A5007707999",
-  "authorName": "Wei-Hao Chiu",
+  "authorName": "Wei‐Hao Chiu",
   "profileUrl": "https://openalex.org/A5007707999",
-  "citations": null,
-  "hIndex": null,
-  "i10Index": null,
-  "openAlexUpdatedDate": null,
-  "lastSuccessfulUpdate": null
+  "citations": 995,
+  "hIndex": 14,
+  "i10Index": 22,
+  "openAlexUpdatedDate": "2026-07-14T12:17:59",
+  "lastSuccessfulUpdate": "2026-07-16T02:11:54Z"
 }
