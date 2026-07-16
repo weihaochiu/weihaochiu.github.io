@@ -18,7 +18,7 @@
       background: linear-gradient(180deg, #f4f7fa 0%, #ffffff 100%);
     }
     .private-analytics-header h1 { margin-bottom: .45rem; }
-    .private-analytics-header p { max-width: 760px; margin: 0; color: var(--muted, #5f6d78); }
+    .private-analytics-header p { max-width: 820px; margin: 0; color: var(--muted, #5f6d78); }
     .analytics-jump-bar {
       position: sticky;
       top: 72px;
@@ -71,6 +71,7 @@
       margin-bottom: 28px;
     }
     .analytics-section:last-child { margin-bottom: 0; }
+    .analytics-section .chart-card { overflow: hidden; }
     .analytics-status {
       min-height: 1.5rem;
       margin: .8rem 0 0;
@@ -78,19 +79,115 @@
       font-size: .72rem;
     }
     .analytics-error { color: #9f2f2f; }
-    .bar-google-scholar { background: #577b72; }
-    .bar-openalex { background: #a66a1f; }
-    .analytics-source-label {
-      display: inline-flex;
-      margin-top: 10px;
-      border: 1px solid var(--line, #d9e0e7);
-      border-radius: 999px;
-      padding: 3px 9px;
-      color: var(--muted, #5f6d78);
-      background: #f7f9fa;
-      font-size: .65rem;
-      font-weight: 700;
+    .analytics-warning { color: #8a5a19; }
+    .analytics-chart-frame {
+      display: grid;
+      grid-template-columns: 32px minmax(0, 1fr);
+      grid-template-rows: auto auto;
+      align-items: stretch;
+      margin-top: 4px;
     }
+    .analytics-y-axis-title {
+      grid-column: 1;
+      grid-row: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      color: #52616e;
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .01em;
+      text-align: center;
+    }
+    .analytics-chart-host {
+      grid-column: 2;
+      grid-row: 1;
+      min-width: 0;
+    }
+    .analytics-x-axis-title {
+      grid-column: 2;
+      grid-row: 2;
+      margin-top: 7px;
+      color: #52616e;
+      font-size: .7rem;
+      font-weight: 700;
+      text-align: center;
+    }
+    .analytics-chart-host .chart-layout {
+      grid-template-columns: 50px minmax(760px, 1fr);
+      min-height: 280px;
+    }
+    .analytics-chart-host .chart-yaxis { padding-right: 9px; }
+    .analytics-chart-host .chart-column { min-width: 48px; }
+    .analytics-chart-host .chart-bar {
+      width: 27px;
+      max-width: 32px;
+      background: #3b6f9b;
+    }
+    .analytics-chart-host.analytics-multi-series .chart-bar {
+      width: 17px;
+      max-width: 20px;
+    }
+    .analytics-chart-host .bar-publications { background: #3b6f9b; }
+    .analytics-chart-host .bar-google-scholar { background: #577b72; }
+    .analytics-chart-host .bar-openalex { background: #a66a1f; }
+    .analytics-chart-host .chart-empty {
+      display: grid;
+      place-items: center;
+      min-height: 220px;
+      border: 1px dashed var(--line, #d9e0e7);
+      border-radius: 7px;
+      color: var(--muted, #5f6d78);
+      font-size: .82rem;
+      text-align: center;
+      padding: 24px;
+    }
+    .data-source-controls {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 9px 14px;
+      margin: 12px 0 18px;
+      padding: 11px 13px;
+      border: 1px solid var(--line, #d9e0e7);
+      border-radius: 7px;
+      background: #f7f9fa;
+    }
+    .data-source-controls > strong {
+      color: #52616e;
+      font-size: .69rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .source-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: #374957;
+      font-size: .75rem;
+      font-weight: 700;
+      cursor: pointer;
+      user-select: none;
+    }
+    .source-toggle input { accent-color: var(--brand, #234a70); }
+    .source-toggle input:disabled + .source-swatch,
+    .source-toggle:has(input:disabled) { opacity: .48; cursor: not-allowed; }
+    .source-swatch {
+      width: 10px;
+      height: 10px;
+      border-radius: 2px;
+      flex: 0 0 auto;
+    }
+    .source-swatch.google-scholar { background: #577b72; }
+    .source-swatch.openalex { background: #a66a1f; }
+    .axis-definition {
+      margin: 10px 0 0;
+      color: var(--muted, #5f6d78);
+      font-size: .69rem;
+    }
+    .axis-definition strong { color: #445462; }
     .back-to-top {
       display: inline-block;
       margin-top: 12px;
@@ -105,6 +202,9 @@
       .analytics-jump-links { width: 100%; }
       .analytics-jump-bar { top: 72px; }
       .analytics-section { scroll-margin-top: 175px; }
+      .analytics-chart-frame { grid-template-columns: 27px minmax(0, 1fr); }
+      .analytics-chart-host .chart-layout { grid-template-columns: 45px minmax(720px, 1fr); }
+      .analytics-y-axis-title { font-size: .64rem; }
     }
   </style>
 </head>
@@ -121,7 +221,7 @@
   <section class="private-analytics-header">
     <div class="shell">
       <h1>Publication Analytics</h1>
-      <p>Private statistics page. This page is not linked from the public website navigation and is marked for search engines not to index.</p>
+      <p>Private statistics page. It is not linked from the public navigation and is marked for search engines not to index. Citation sources can be displayed separately or compared in the same chart.</p>
     </div>
   </section>
 
@@ -130,8 +230,8 @@
       <span class="analytics-jump-label">Jump to</span>
       <div class="analytics-jump-links">
         <a href="#publications-by-year">Publications by Year</a>
-        <a href="#google-scholar-citations">Google Scholar Citations</a>
-        <a href="#openalex-citations">OpenAlex Citations</a>
+        <a href="#citations-by-publication-year">Citations by Publication Year</a>
+        <a href="#citations-received-by-year">Citations Received by Year</a>
       </div>
     </div>
   </nav>
@@ -145,41 +245,80 @@
             <h2 id="publications-by-year-title">Publications by Year</h2>
           </div>
         </div>
-        <div aria-label="Number of publications by year" class="single-year-chart" id="privatePublicationYearChart"></div>
-        <p class="chart-note">Each bar shows the total number of publications in that year. Research-theme categories are not separated.</p>
+        <div class="analytics-chart-frame">
+          <div class="analytics-y-axis-title">Number of publications (articles)</div>
+          <div aria-label="Number of publications by publication year" class="analytics-chart-host" id="privatePublicationYearChart"></div>
+          <div class="analytics-x-axis-title">Publication year</div>
+        </div>
+        <p class="axis-definition"><strong>Y-axis:</strong> total number of listed journal publications, measured in articles.</p>
+        <p class="chart-note">Each bar shows the total number of publications in that publication year. Research-theme categories are not separated.</p>
         <p class="analytics-status" id="publicationStatus">Loading publication data…</p>
         <a class="back-to-top" href="#top">Back to top ↑</a>
       </div>
     </section>
 
-    <section class="analytics-section" id="google-scholar-citations" aria-labelledby="google-scholar-citations-title">
+    <section class="analytics-section" id="citations-by-publication-year" aria-labelledby="citations-by-publication-year-title">
       <div class="chart-card collection-chart">
         <div class="section-heading">
           <div>
-            <span class="eyebrow">Citation impact</span>
-            <h2 id="google-scholar-citations-title">Google Scholar Citations by Publication Year</h2>
+            <span class="eyebrow">Citation impact by publication cohort</span>
+            <h2 id="citations-by-publication-year-title">Citations by Publication Year</h2>
           </div>
         </div>
-        <div aria-label="Current cumulative Google Scholar citations grouped by publication year" class="single-year-chart" id="googleScholarCitationChart"></div>
-        <span class="analytics-source-label">Source: Google Scholar</span>
-        <p class="chart-note">Citation counts are the current cumulative Google Scholar citations of the listed publications, grouped by publication year. They are not citations received during each calendar year.</p>
-        <p class="analytics-status" id="googleScholarStatus">Loading Google Scholar citation data…</p>
+        <div class="data-source-controls" id="publicationYearCitationControls" aria-label="Citation sources shown in citations by publication year chart">
+          <strong>Show data</strong>
+          <label class="source-toggle">
+            <input type="checkbox" value="google-scholar" checked />
+            <span class="source-swatch google-scholar" aria-hidden="true"></span>
+            Google Scholar
+          </label>
+          <label class="source-toggle">
+            <input type="checkbox" value="openalex" checked />
+            <span class="source-swatch openalex" aria-hidden="true"></span>
+            OpenAlex
+          </label>
+        </div>
+        <div class="analytics-chart-frame">
+          <div class="analytics-y-axis-title">Current cumulative citations (citations)</div>
+          <div aria-label="Current cumulative citations grouped by publication year" class="analytics-chart-host" id="publicationYearCitationChart"></div>
+          <div class="analytics-x-axis-title">Publication year</div>
+        </div>
+        <p class="axis-definition"><strong>Y-axis:</strong> current cumulative citation count, measured in citations, summed for papers published in each year.</p>
+        <p class="chart-note">This groups each paper's current citation total by the year in which that paper was published. It does not show citations received during that calendar year.</p>
+        <p class="analytics-status" id="publicationYearCitationStatus">Loading citation data…</p>
         <a class="back-to-top" href="#top">Back to top ↑</a>
       </div>
     </section>
 
-    <section class="analytics-section" id="openalex-citations" aria-labelledby="openalex-citations-title">
+    <section class="analytics-section" id="citations-received-by-year" aria-labelledby="citations-received-by-year-title">
       <div class="chart-card collection-chart">
         <div class="section-heading">
           <div>
-            <span class="eyebrow">Citation impact</span>
-            <h2 id="openalex-citations-title">OpenAlex Citations by Publication Year</h2>
+            <span class="eyebrow">Annual citation activity</span>
+            <h2 id="citations-received-by-year-title">Citations Received by Year</h2>
           </div>
         </div>
-        <div aria-label="Current cumulative OpenAlex citations grouped by publication year" class="single-year-chart" id="openAlexCitationChart"></div>
-        <span class="analytics-source-label">Source: OpenAlex Works API</span>
-        <p class="chart-note">Citation counts are the current cumulative OpenAlex citations of verified publication records, grouped by publication year. They are not citations received during each calendar year.</p>
-        <p class="analytics-status" id="openAlexStatus">Loading OpenAlex citation data…</p>
+        <div class="data-source-controls" id="annualCitationControls" aria-label="Citation sources shown in citations received by year chart">
+          <strong>Show data</strong>
+          <label class="source-toggle">
+            <input type="checkbox" value="google-scholar" checked />
+            <span class="source-swatch google-scholar" aria-hidden="true"></span>
+            Google Scholar
+          </label>
+          <label class="source-toggle">
+            <input type="checkbox" value="openalex" checked />
+            <span class="source-swatch openalex" aria-hidden="true"></span>
+            OpenAlex
+          </label>
+        </div>
+        <div class="analytics-chart-frame">
+          <div class="analytics-y-axis-title">Citations received (citations per calendar year)</div>
+          <div aria-label="Citations received during each calendar year" class="analytics-chart-host" id="annualCitationChart"></div>
+          <div class="analytics-x-axis-title">Calendar year</div>
+        </div>
+        <p class="axis-definition"><strong>Y-axis:</strong> number of citation events received during each calendar year, measured in citations per year.</p>
+        <p class="chart-note">This has the same statistical meaning as the annual bar chart on a Google Scholar profile. The current calendar year is incomplete. OpenAlex values are reconstructed from citation events to the publications listed on this website.</p>
+        <p class="analytics-status" id="annualCitationStatus">Loading annual citation histories…</p>
         <a class="back-to-top" href="#top">Back to top ↑</a>
       </div>
     </section>
@@ -201,113 +340,330 @@
 
   <script src="assets/js/app.js"></script>
   <script>
-    function normalizeDoiForAnalytics(value) {
-      return String(value || '')
-        .trim()
-        .toLowerCase()
-        .replace(/^https?:\/\/(dx\.)?doi\.org\//, '')
-        .replace(/^doi:/, '');
-    }
+    (() => {
+      'use strict';
 
-    function initializeYearTotals(publications) {
-      return publications.reduce((totals, publication) => {
-        const year = yearOf(publication);
-        if (year && totals[year] === undefined) totals[year] = 0;
-        return totals;
-      }, {});
-    }
-
-    function sumGoogleScholarCitationsByYear(publications) {
-      const totals = initializeYearTotals(publications);
-      publications.forEach(publication => {
-        const year = yearOf(publication);
-        const count = Number(publication.citationCount || 0);
-        if (year && Number.isFinite(count) && count >= 0) totals[year] += count;
-      });
-      return totals;
-    }
-
-    function sumOpenAlexCitationsByYear(publications, records) {
-      const totals = initializeYearTotals(publications);
-      let verified = 0;
-      publications.forEach(publication => {
-        const year = yearOf(publication);
-        const record = records[normalizeDoiForAnalytics(publication.doi)];
-        const count = Number(record?.citationCount);
-        if (year && record?.status === 'verified' && Number.isFinite(count) && count >= 0) {
-          totals[year] += count;
-          verified += 1;
-        }
-      });
-      return { totals, verified };
-    }
-
-    function sumValues(values) {
-      return Object.values(values).reduce((sum, value) => sum + Number(value || 0), 0);
-    }
-
-    function setAnalyticsError(element, message) {
-      element.textContent = message;
-      element.classList.add('analytics-error');
-    }
-
-    document.addEventListener('DOMContentLoaded', async () => {
-      const publicationChart = document.getElementById('privatePublicationYearChart');
-      const scholarChart = document.getElementById('googleScholarCitationChart');
-      const openAlexChart = document.getElementById('openAlexCitationChart');
-      const publicationStatus = document.getElementById('publicationStatus');
-      const scholarStatus = document.getElementById('googleScholarStatus');
-      const openAlexStatus = document.getElementById('openAlexStatus');
-
-      try {
-        const [publications, scholarMetrics, openAlexPayload] = await Promise.all([
-          loadData('publications'),
-          loadData('scholar_metrics').catch(() => ({})),
-          loadData('openalex_publication_metrics').catch(() => null)
-        ]);
-
-        singleChart(publicationChart, publications);
-        const years = publications.map(yearOf).filter(Boolean);
-        const firstYear = years.length ? Math.min(...years) : null;
-        const lastYear = years.length ? Math.max(...years) : null;
-        publicationStatus.textContent = years.length
-          ? `${publications.length} publications, covering ${firstYear}–${lastYear}. Data are loaded from data/publications.json.`
-          : 'No publication records are currently available.';
-
-        const scholarTotals = sumGoogleScholarCitationsByYear(publications);
-        renderBarChart(scholarChart, [{
+      const SOURCE_DEFINITIONS = {
+        'google-scholar': {
           key: 'google-scholar',
-          label: 'Google Scholar citations',
-          values: scholarTotals
-        }]);
-        const scholarUpdated = scholarMetrics.lastSuccessfulUpdate
-          ? ` Updated ${formatDate(scholarMetrics.lastSuccessfulUpdate)}.`
-          : '';
-        scholarStatus.textContent = `${sumValues(scholarTotals).toLocaleString()} cumulative citations across ${publications.length} listed publications.${scholarUpdated}`;
+          label: 'Google Scholar',
+          barClass: 'bar-google-scholar'
+        },
+        openalex: {
+          key: 'openalex',
+          label: 'OpenAlex',
+          barClass: 'bar-openalex'
+        }
+      };
 
-        if (!openAlexPayload || !openAlexPayload.records) {
-          setAnalyticsError(openAlexStatus, 'Unable to load OpenAlex citation data.');
-          openAlexChart.innerHTML = '';
+      function normalizeDoiForAnalytics(value) {
+        return String(value || '')
+          .trim()
+          .toLowerCase()
+          .replace(/^https?:\/\/(dx\.)?doi\.org\//, '')
+          .replace(/^doi:/, '');
+      }
+
+      async function loadAnalyticsJson(path) {
+        const response = await fetch(path, { cache: 'no-store' });
+        if (!response.ok) throw new Error(`Unable to load ${path} (${response.status})`);
+        return response.json();
+      }
+
+      function initializePublicationYears(publications) {
+        const totals = {};
+        publications.forEach(publication => {
+          const year = yearOf(publication);
+          if (year && totals[year] === undefined) totals[year] = 0;
+        });
+        return totals;
+      }
+
+      function countPublicationsByYear(publications) {
+        const totals = initializePublicationYears(publications);
+        publications.forEach(publication => {
+          const year = yearOf(publication);
+          if (year) totals[year] = (totals[year] || 0) + 1;
+        });
+        return totals;
+      }
+
+      function sumGoogleScholarCitationsByPublicationYear(publications) {
+        const totals = initializePublicationYears(publications);
+        publications.forEach(publication => {
+          const year = yearOf(publication);
+          const count = Number(publication.citationCount || 0);
+          if (year && Number.isFinite(count) && count >= 0) totals[year] += count;
+        });
+        return totals;
+      }
+
+      function sumOpenAlexCitationsByPublicationYear(publications, records) {
+        const totals = initializePublicationYears(publications);
+        let verified = 0;
+        publications.forEach(publication => {
+          const year = yearOf(publication);
+          const record = records?.[normalizeDoiForAnalytics(publication.doi)];
+          const count = Number(record?.citationCount);
+          if (year && record?.status === 'verified' && Number.isFinite(count) && count >= 0) {
+            totals[year] += count;
+            verified += 1;
+          }
+        });
+        return { totals, verified };
+      }
+
+      function citationHistoryToValues(payload) {
+        const values = {};
+        const rows = Array.isArray(payload?.citationsByYear) ? payload.citationsByYear : [];
+        rows.forEach(row => {
+          const year = Number(row?.year);
+          const count = Number(row?.citations);
+          if (Number.isInteger(year) && Number.isFinite(count) && count >= 0) values[year] = count;
+        });
+        return values;
+      }
+
+      function sumValues(values) {
+        return Object.values(values || {}).reduce((sum, value) => sum + Number(value || 0), 0);
+      }
+
+      function continuousYearRange(series) {
+        const years = [...new Set(series.flatMap(item => Object.keys(item.values || {}).map(Number)))]
+          .filter(Number.isFinite)
+          .sort((a, b) => a - b);
+        if (!years.length) return [];
+        return Array.from({ length: years.at(-1) - years[0] + 1 }, (_, index) => years[0] + index);
+      }
+
+      function analyticsNiceMax(value) {
+        const number = Math.max(1, Number(value) || 1);
+        if (number <= 4) return 4;
+        if (number <= 6) return 6;
+        if (number <= 10) return 10;
+        const magnitude = 10 ** Math.floor(Math.log10(number));
+        const normalized = number / magnitude;
+        const step = normalized <= 1 ? 1 : normalized <= 2 ? 2 : normalized <= 5 ? 5 : 10;
+        return step * magnitude;
+      }
+
+      function chartTicks(maximum) {
+        return [maximum, maximum * .75, maximum * .5, maximum * .25, 0]
+          .map(value => Math.round(value));
+      }
+
+      function renderAnalyticsBarChart(element, visibleSeries, allSeries, options = {}) {
+        if (!element) return;
+        if (!visibleSeries.length) {
+          element.classList.remove('analytics-multi-series');
+          element.innerHTML = '<div class="chart-empty">Select at least one data source above to display this chart.</div>';
           return;
         }
 
-        const openAlexResult = sumOpenAlexCitationsByYear(publications, openAlexPayload.records);
-        renderBarChart(openAlexChart, [{
-          key: 'openalex',
-          label: 'OpenAlex citations',
-          values: openAlexResult.totals
-        }]);
-        const openAlexUpdated = openAlexPayload.lastSuccessfulUpdate
-          ? ` Updated ${formatDate(openAlexPayload.lastSuccessfulUpdate)}.`
-          : '';
-        openAlexStatus.textContent = `${sumValues(openAlexResult.totals).toLocaleString()} cumulative citations from ${openAlexResult.verified} verified OpenAlex records.${openAlexUpdated}`;
-      } catch (error) {
-        console.error(error);
-        setAnalyticsError(publicationStatus, 'Unable to load publication data.');
-        setAnalyticsError(scholarStatus, 'Unable to load Google Scholar citation data.');
-        setAnalyticsError(openAlexStatus, 'Unable to load OpenAlex citation data.');
+        const years = continuousYearRange(allSeries.length ? allSeries : visibleSeries);
+        if (!years.length) {
+          element.classList.remove('analytics-multi-series');
+          element.innerHTML = '<div class="chart-empty">No data are currently available for this chart.</div>';
+          return;
+        }
+
+        const rawMaximum = Math.max(
+          1,
+          ...allSeries.flatMap(series => Object.values(series.values || {}).map(Number).filter(Number.isFinite))
+        );
+        const maximum = analyticsNiceMax(rawMaximum);
+        const ticks = chartTicks(maximum);
+        const unit = options.unit || 'records';
+        const currentYear = new Date().getFullYear();
+
+        element.classList.toggle('analytics-multi-series', visibleSeries.length > 1);
+        element.innerHTML = `
+          <div class="chart-scroll">
+            <div class="chart-layout">
+              <div class="chart-yaxis">${ticks.map(tick => `<span>${tick.toLocaleString()}</span>`).join('')}</div>
+              <div class="chart-stage">
+                <div class="chart-gridlines">${ticks.map(() => '<span></span>').join('')}</div>
+                <div class="chart-columns">
+                  ${years.map(year => `
+                    <div class="chart-column">
+                      <div class="bar-group">
+                        ${visibleSeries.map(series => {
+                          const value = Number(series.values?.[year] || 0);
+                          const height = value > 0 ? Math.max(2.5, value / maximum * 100) : 0;
+                          const yearNote = options.markCurrentYear && year === currentYear ? ', year to date' : '';
+                          const title = `${year}: ${value.toLocaleString()} ${unit} — ${series.label}${yearNote}`;
+                          return `<button
+                            class="chart-bar ${series.barClass}"
+                            type="button"
+                            ${value === 0 ? 'disabled' : ''}
+                            style="height:${height}%"
+                            title="${title}"
+                            aria-label="${title}">
+                            ${value ? `<span class="bar-value">${value.toLocaleString()}</span>` : ''}
+                          </button>`;
+                        }).join('')}
+                      </div>
+                      <span class="chart-year">${year}</span>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+            </div>
+          </div>`;
       }
-    });
+
+      function selectedSourceKeys(controlElement) {
+        return [...controlElement.querySelectorAll('input[type="checkbox"]:checked:not(:disabled)')]
+          .map(input => input.value);
+      }
+
+      function setSourceAvailability(controlElement, sourceKey, available) {
+        const input = controlElement.querySelector(`input[value="${sourceKey}"]`);
+        if (!input) return;
+        input.disabled = !available;
+        if (!available) input.checked = false;
+      }
+
+      function makeSourceSeries(sourceKey, values) {
+        const source = SOURCE_DEFINITIONS[sourceKey];
+        return { ...source, values: values || {} };
+      }
+
+      function formatUpdated(value) {
+        if (!value) return 'update time unavailable';
+        const date = new Date(value);
+        if (Number.isNaN(date.valueOf())) return String(value);
+        return new Intl.DateTimeFormat('en-GB', {
+          day: 'numeric',
+          month: 'short',
+          year: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit',
+          timeZone: 'Asia/Taipei'
+        }).format(date);
+      }
+
+      function setStatus(element, text, className = '') {
+        element.textContent = text;
+        element.classList.remove('analytics-error', 'analytics-warning');
+        if (className) element.classList.add(className);
+      }
+
+      document.addEventListener('DOMContentLoaded', async () => {
+        const publicationChart = document.getElementById('privatePublicationYearChart');
+        const publicationStatus = document.getElementById('publicationStatus');
+        const publicationYearCitationChart = document.getElementById('publicationYearCitationChart');
+        const publicationYearCitationControls = document.getElementById('publicationYearCitationControls');
+        const publicationYearCitationStatus = document.getElementById('publicationYearCitationStatus');
+        const annualCitationChart = document.getElementById('annualCitationChart');
+        const annualCitationControls = document.getElementById('annualCitationControls');
+        const annualCitationStatus = document.getElementById('annualCitationStatus');
+
+        try {
+          const [publications, scholarMetrics, openAlexMetrics, scholarHistory, openAlexHistory] = await Promise.all([
+            loadData('publications'),
+            loadData('scholar_metrics').catch(() => ({})),
+            loadData('openalex_publication_metrics').catch(() => null),
+            loadAnalyticsJson('data/google_scholar_citation_history.json').catch(() => null),
+            loadAnalyticsJson('data/openalex_citation_history.json').catch(() => null)
+          ]);
+
+          const publicationValues = countPublicationsByYear(publications);
+          const publicationSeries = [{ key: 'publications', label: 'Publications', barClass: 'bar-publications', values: publicationValues }];
+          renderAnalyticsBarChart(publicationChart, publicationSeries, publicationSeries, { unit: 'articles' });
+          const publicationYears = Object.keys(publicationValues).map(Number).sort((a, b) => a - b);
+          setStatus(
+            publicationStatus,
+            `${publications.length} publications covering ${publicationYears[0]}–${publicationYears.at(-1)}. Source: data/publications.json.`
+          );
+
+          const scholarPublicationYearValues = sumGoogleScholarCitationsByPublicationYear(publications);
+          const openAlexPublicationResult = openAlexMetrics?.records
+            ? sumOpenAlexCitationsByPublicationYear(publications, openAlexMetrics.records)
+            : { totals: {}, verified: 0 };
+          const publicationYearAllSeries = [
+            makeSourceSeries('google-scholar', scholarPublicationYearValues),
+            makeSourceSeries('openalex', openAlexPublicationResult.totals)
+          ];
+          setSourceAvailability(publicationYearCitationControls, 'google-scholar', true);
+          setSourceAvailability(publicationYearCitationControls, 'openalex', Boolean(openAlexMetrics?.records));
+
+          const drawPublicationYearCitations = () => {
+            const selected = selectedSourceKeys(publicationYearCitationControls);
+            const visible = publicationYearAllSeries.filter(series => selected.includes(series.key));
+            renderAnalyticsBarChart(
+              publicationYearCitationChart,
+              visible,
+              publicationYearAllSeries,
+              { unit: 'citations' }
+            );
+          };
+          publicationYearCitationControls.addEventListener('change', drawPublicationYearCitations);
+          drawPublicationYearCitations();
+
+          const scholarPublicationTotal = sumValues(scholarPublicationYearValues);
+          const openAlexPublicationTotal = sumValues(openAlexPublicationResult.totals);
+          const openAlexPublicationText = openAlexMetrics?.records
+            ? `OpenAlex: ${openAlexPublicationTotal.toLocaleString()} citations from ${openAlexPublicationResult.verified} verified records, updated ${formatUpdated(openAlexMetrics.lastSuccessfulUpdate)}.`
+            : 'OpenAlex publication metrics are unavailable.';
+          setStatus(
+            publicationYearCitationStatus,
+            `Google Scholar: ${scholarPublicationTotal.toLocaleString()} citations, updated ${formatUpdated(scholarMetrics.lastSuccessfulUpdate)} ${openAlexPublicationText}`,
+            openAlexMetrics?.records ? '' : 'analytics-warning'
+          );
+
+          const scholarAnnualValues = citationHistoryToValues(scholarHistory);
+          const openAlexAnnualValues = citationHistoryToValues(openAlexHistory);
+          const scholarAnnualAvailable = Object.keys(scholarAnnualValues).length > 0;
+          const openAlexAnnualAvailable = Object.keys(openAlexAnnualValues).length > 0;
+          setSourceAvailability(annualCitationControls, 'google-scholar', scholarAnnualAvailable);
+          setSourceAvailability(annualCitationControls, 'openalex', openAlexAnnualAvailable);
+
+          const annualAllSeries = [
+            makeSourceSeries('google-scholar', scholarAnnualValues),
+            makeSourceSeries('openalex', openAlexAnnualValues)
+          ].filter(series => Object.keys(series.values).length > 0);
+
+          const drawAnnualCitations = () => {
+            const selected = selectedSourceKeys(annualCitationControls);
+            const visible = annualAllSeries.filter(series => selected.includes(series.key));
+            renderAnalyticsBarChart(
+              annualCitationChart,
+              visible,
+              annualAllSeries,
+              { unit: 'citations received', markCurrentYear: true }
+            );
+          };
+          annualCitationControls.addEventListener('change', drawAnnualCitations);
+          drawAnnualCitations();
+
+          const annualMessages = [];
+          if (scholarAnnualAvailable) {
+            annualMessages.push(`Google Scholar: ${sumValues(scholarAnnualValues).toLocaleString()} annual citation events, updated ${formatUpdated(scholarHistory.lastSuccessfulUpdate)}.`);
+          } else {
+            annualMessages.push('Google Scholar annual history has not yet been generated.');
+          }
+          if (openAlexAnnualAvailable) {
+            annualMessages.push(`OpenAlex: ${sumValues(openAlexAnnualValues).toLocaleString()} annual citation events, updated ${formatUpdated(openAlexHistory.lastSuccessfulUpdate)}.`);
+          } else {
+            annualMessages.push('OpenAlex annual history has not yet been generated.');
+          }
+          setStatus(
+            annualCitationStatus,
+            annualMessages.join(' '),
+            scholarAnnualAvailable && openAlexAnnualAvailable ? '' : 'analytics-warning'
+          );
+        } catch (error) {
+          console.error(error);
+          setStatus(publicationStatus, 'Unable to load publication data.', 'analytics-error');
+          setStatus(publicationYearCitationStatus, 'Unable to load citation data by publication year.', 'analytics-error');
+          setStatus(annualCitationStatus, 'Unable to load annual citation histories.', 'analytics-error');
+          publicationChart.innerHTML = '<div class="chart-empty">Publication data could not be loaded.</div>';
+          publicationYearCitationChart.innerHTML = '<div class="chart-empty">Citation data could not be loaded.</div>';
+          annualCitationChart.innerHTML = '<div class="chart-empty">Annual citation data could not be loaded.</div>';
+        }
+      });
+    })();
   </script>
 </body>
 </html>
