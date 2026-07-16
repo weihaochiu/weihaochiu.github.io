@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "lastUpdated": null,
+  "journalCount": 0,
+  "activeJournalCount": 0,
+  "sourcePolicy": {
+    "basicMetadata": [
+      "Crossref",
+      "OpenAlex",
+      "publication records"
+    ],
+    "journalMetrics": [
+      "Manusights secondary-source pages"
+    ],
+    "note": "Journal Impact Factor and JCR values are secondary-source data and should be checked against Clarivate for formal use."
+  },
+  "journals": {}
+}
