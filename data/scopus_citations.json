@@ -1,0 +1,9 @@
+{
+  "source": "Scopus",
+  "api": "Scopus Citation Count Metadata API",
+  "lastAttempt": null,
+  "lastSuccessfulUpdate": null,
+  "status": "configuration required: add SCOPUS_API_KEY to GitHub Actions secrets",
+  "verifiedRecords": 0,
+  "records": {}
+}
