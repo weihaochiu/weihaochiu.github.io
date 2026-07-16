@@ -39,7 +39,10 @@ def as_nonnegative_int(value: Any) -> int | None:
 
 def load_input() -> dict[str, Any]:
     if not INPUT_PATH.exists():
-        raise FileNotFoundError(f"Missing {INPUT_PATH}. Run the existing OpenAlex metrics updater first.")
+        raise FileNotFoundError(
+            f"Missing {INPUT_PATH}. Run the existing OpenAlex metrics updater first."
+        )
+
     payload = json.loads(INPUT_PATH.read_text(encoding="utf-8"))
     if not isinstance(payload.get("records"), dict):
         raise RuntimeError(f"Invalid records object in {INPUT_PATH}.")
@@ -56,6 +59,7 @@ def build_session() -> requests.Session:
         allowed_methods=frozenset({"GET"}),
         raise_on_status=False,
     )
+
     session = requests.Session()
     session.mount("https://", HTTPAdapter(max_retries=retry))
     session.headers.update(
@@ -74,12 +78,13 @@ def fetch_history(
     api_key: str,
     work_id: str,
 ) -> dict[int, int]:
+    """Return citation events grouped by the publication year of the citing work."""
     response = session.get(
         API_URL,
         params={
             "filter": f"cites:{work_id}",
             "group_by": "publication_year",
-            "per_page": 1,
+            "per-page": 200,
             "api_key": api_key,
         },
         timeout=90,
@@ -95,11 +100,15 @@ def fetch_history(
     for group in groups:
         if not isinstance(group, dict):
             continue
+
         year = as_nonnegative_int(group.get("key"))
         count = as_nonnegative_int(group.get("count"))
+
         if year is None or count is None or year < 1900:
             continue
+
         history[year] = count
+
     return history
 
 
@@ -116,21 +125,29 @@ def write_json_atomic(path: Path, payload: dict[str, Any]) -> None:
 def main() -> None:
     api_key = os.environ.get("OPENALEX_API_KEY", "").strip()
     if not api_key:
-        raise RuntimeError("OPENALEX_API_KEY is not configured in GitHub Actions secrets.")
+        raise RuntimeError(
+            "OPENALEX_API_KEY is not configured in GitHub Actions secrets."
+        )
 
     input_payload = load_input()
     records: dict[str, Any] = input_payload["records"]
 
     works: dict[str, dict[str, Any]] = {}
     expected_total = 0
+
     for doi, record in records.items():
         if not isinstance(record, dict) or record.get("status") != "verified":
             continue
-        work_id = normalize_openalex_id(record.get("openAlexId") or record.get("url"))
+
+        work_id = normalize_openalex_id(
+            record.get("openAlexId") or record.get("url")
+        )
         if not work_id:
             continue
+
         citation_count = as_nonnegative_int(record.get("citationCount")) or 0
         expected_total += citation_count
+
         works[work_id] = {
             "doi": doi,
             "title": record.get("title", ""),
@@ -144,10 +161,18 @@ def main() -> None:
     per_work: dict[str, dict[str, Any]] = {}
 
     with build_session() as session:
-        for index, (work_id, metadata) in enumerate(sorted(works.items()), start=1):
+        for index, (work_id, metadata) in enumerate(
+            sorted(works.items()),
+            start=1,
+        ):
             history = fetch_history(session, api_key, work_id)
+
             for year, count in history.items():
                 annual_totals[year] += count
+
+            history_total = sum(history.values())
+            current_total = int(metadata["currentCitationCount"])
+            unassigned_count = max(0, current_total - history_total)
 
             per_work[work_id] = {
                 **metadata,
@@ -155,33 +180,47 @@ def main() -> None:
                     {"year": year, "citations": count}
                     for year, count in sorted(history.items())
                 ],
-                "historyTotal": sum(history.values()),
+                "historyTotal": history_total,
+                "unassignedCitationCount": unassigned_count,
             }
-            print(f"[{index}/{len(works)}] {work_id}: {sum(history.values())} citation events")
+
+            print(
+                f"[{index}/{len(works)}] {work_id}: "
+                f"{history_total}/{current_total} citation events assigned to years"
+            )
             time.sleep(0.15)
 
     citations_by_year = [
         {"year": year, "citations": annual_totals[year]}
         for year in sorted(annual_totals)
     ]
+
     calculated_total = sum(annual_totals.values())
+    validation_difference = calculated_total - expected_total
+    unassigned_total = max(0, expected_total - calculated_total)
 
     output = {
         "schemaVersion": 1,
         "source": "OpenAlex Works API",
-        "status": "success",
+        "status": "success" if validation_difference == 0 else "partial",
         "lastSuccessfulUpdate": utc_now(),
         "workCount": len(works),
         "totalCitationsFromHistory": calculated_total,
         "totalCitationsFromPublicationMetrics": expected_total,
-        "validationDifference": calculated_total - expected_total,
+        "validationDifference": validation_difference,
+        "unassignedCitationCount": unassigned_total,
         "citationsByYear": citations_by_year,
         "works": per_work,
     }
 
     write_json_atomic(OUTPUT_PATH, output)
-    print(f"Saved {len(citations_by_year)} OpenAlex annual values to {OUTPUT_PATH}.")
-    print(f"Validation difference: {output['validationDifference']}")
+
+    print(
+        f"Saved {len(citations_by_year)} OpenAlex annual values "
+        f"to {OUTPUT_PATH}."
+    )
+    print(f"Validation difference: {validation_difference}")
+    print(f"Unassigned citations: {unassigned_total}")
 
 
 if __name__ == "__main__":
