@@ -18,7 +18,11 @@
       background: linear-gradient(180deg, #f4f7fa 0%, #ffffff 100%);
     }
     .private-analytics-header h1 { margin-bottom: .45rem; }
-    .private-analytics-header p { max-width: 820px; margin: 0; color: var(--muted, #5f6d78); }
+    .private-analytics-header p {
+      max-width: 860px;
+      margin: 0;
+      color: var(--muted, #5f6d78);
+    }
     .analytics-jump-bar {
       position: sticky;
       top: 72px;
@@ -65,13 +69,47 @@
       border-color: var(--brand, #234a70);
       background: #edf2f6;
     }
-    .private-analytics-main { padding-top: 2rem; padding-bottom: 4rem; }
+    .private-analytics-main {
+      padding-top: 2rem;
+      padding-bottom: 4rem;
+    }
     .analytics-section {
       scroll-margin-top: 150px;
       margin-bottom: 28px;
     }
     .analytics-section:last-child { margin-bottom: 0; }
     .analytics-section .chart-card { overflow: hidden; }
+    .analytics-section-heading {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 4px;
+    }
+    .analytics-section-heading h2 { margin-bottom: 0; }
+    .chart-download-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 7px;
+    }
+    .chart-download-button {
+      appearance: none;
+      border: 1px solid #b9c5cf;
+      border-radius: 6px;
+      background: #fff;
+      color: var(--brand, #234a70);
+      padding: 7px 10px;
+      font: inherit;
+      font-size: .69rem;
+      font-weight: 750;
+      cursor: pointer;
+    }
+    .chart-download-button:hover,
+    .chart-download-button:focus-visible {
+      border-color: var(--brand, #234a70);
+      background: #edf2f6;
+    }
     .analytics-status {
       min-height: 1.5rem;
       margin: .8rem 0 0;
@@ -81,64 +119,31 @@
     .analytics-error { color: #9f2f2f; }
     .analytics-warning { color: #8a5a19; }
     .analytics-chart-frame {
-      display: grid;
-      grid-template-columns: 32px minmax(0, 1fr);
-      grid-template-rows: auto auto;
-      align-items: stretch;
-      margin-top: 4px;
-    }
-    .analytics-y-axis-title {
-      grid-column: 1;
-      grid-row: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      writing-mode: vertical-rl;
-      transform: rotate(180deg);
-      color: #52616e;
-      font-size: .7rem;
-      font-weight: 700;
-      letter-spacing: .01em;
-      text-align: center;
+      margin-top: 8px;
+      border: 1px solid #e3e9ee;
+      border-radius: 8px;
+      background: #fff;
+      overflow: hidden;
     }
     .analytics-chart-host {
-      grid-column: 2;
-      grid-row: 1;
-      min-width: 0;
+      min-height: 460px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding: 4px 0 0;
+      scrollbar-width: thin;
     }
-    .analytics-x-axis-title {
-      grid-column: 2;
-      grid-row: 2;
-      margin-top: 7px;
-      color: #52616e;
-      font-size: .7rem;
-      font-weight: 700;
-      text-align: center;
+    .analytics-chart-host svg {
+      display: block;
+      max-width: none;
+      background: #fff;
     }
-    .analytics-chart-host .chart-layout {
-      grid-template-columns: 50px minmax(760px, 1fr);
-      min-height: 280px;
+    .analytics-chart-host svg text {
+      font-family: Inter, "Noto Sans TC", sans-serif;
     }
-    .analytics-chart-host .chart-yaxis { padding-right: 9px; }
-    .analytics-chart-host .chart-column { min-width: 48px; }
-    .analytics-chart-host .chart-bar {
-      width: 27px;
-      max-width: 32px;
-      background: #3b6f9b;
-    }
-    .analytics-chart-host.analytics-multi-series .chart-bar {
-      width: 17px;
-      max-width: 20px;
-    }
-    .analytics-chart-host .bar-publications { background: #3b6f9b; }
-    .analytics-chart-host .bar-google-scholar { background: #577b72; }
-    .analytics-chart-host .bar-openalex { background: #a66a1f; }
     .analytics-chart-host .chart-empty {
       display: grid;
       place-items: center;
-      min-height: 220px;
-      border: 1px dashed var(--line, #d9e0e7);
-      border-radius: 7px;
+      min-height: 420px;
       color: var(--muted, #5f6d78);
       font-size: .82rem;
       text-align: center;
@@ -149,7 +154,7 @@
       align-items: center;
       flex-wrap: wrap;
       gap: 9px 14px;
-      margin: 12px 0 18px;
+      margin: 12px 0 14px;
       padding: 11px 13px;
       border: 1px solid var(--line, #d9e0e7);
       border-radius: 7px;
@@ -173,17 +178,21 @@
     }
     .source-toggle input { accent-color: var(--brand, #234a70); }
     .source-toggle input:disabled + .source-swatch,
-    .source-toggle:has(input:disabled) { opacity: .48; cursor: not-allowed; }
+    .source-toggle:has(input:disabled) {
+      opacity: .48;
+      cursor: not-allowed;
+    }
     .source-swatch {
-      width: 10px;
-      height: 10px;
+      width: 11px;
+      height: 11px;
       border-radius: 2px;
       flex: 0 0 auto;
     }
     .source-swatch.google-scholar { background: #577b72; }
     .source-swatch.openalex { background: #a66a1f; }
+    .source-swatch.publications { background: #3b6f9b; }
     .axis-definition {
-      margin: 10px 0 0;
+      margin: 12px 0 0;
       color: var(--muted, #5f6d78);
       font-size: .69rem;
     }
@@ -196,15 +205,25 @@
       font-weight: 700;
       text-decoration: none;
     }
+    .download-note {
+      margin: 8px 0 0;
+      color: var(--muted, #5f6d78);
+      font-size: .66rem;
+    }
     @media (max-width: 700px) {
       .private-analytics-header { padding: 2.5rem 0 1.5rem; }
-      .analytics-jump-inner { align-items: flex-start; flex-direction: column; gap: 0; padding-top: 8px; }
+      .analytics-jump-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0;
+        padding-top: 8px;
+      }
       .analytics-jump-links { width: 100%; }
       .analytics-jump-bar { top: 72px; }
       .analytics-section { scroll-margin-top: 175px; }
-      .analytics-chart-frame { grid-template-columns: 27px minmax(0, 1fr); }
-      .analytics-chart-host .chart-layout { grid-template-columns: 45px minmax(720px, 1fr); }
-      .analytics-y-axis-title { font-size: .64rem; }
+      .analytics-section-heading { flex-direction: column; }
+      .chart-download-actions { justify-content: flex-start; }
+      .analytics-chart-host { min-height: 430px; }
     }
   </style>
 </head>
@@ -221,7 +240,7 @@
   <section class="private-analytics-header">
     <div class="shell">
       <h1>Publication Analytics</h1>
-      <p>Private statistics page. It is not linked from the public navigation and is marked for search engines not to index. Citation sources can be displayed separately or compared in the same chart.</p>
+      <p>Private statistics page. Citation sources can be displayed separately or compared in the same chart. Every chart can be exported as a data table in CSV format or as a publication-ready PNG image.</p>
     </div>
   </section>
 
@@ -232,6 +251,7 @@
         <a href="#publications-by-year">Publications by Year</a>
         <a href="#citations-by-publication-year">Citations by Publication Year</a>
         <a href="#citations-received-by-year">Citations Received by Year</a>
+        <a href="#publication-citation-trend">Publication &amp; Citation Trend</a>
       </div>
     </div>
   </nav>
@@ -239,30 +259,37 @@
   <main class="content shell private-analytics-main">
     <section class="analytics-section" id="publications-by-year" aria-labelledby="publications-by-year-title">
       <div class="chart-card collection-chart">
-        <div class="section-heading">
+        <div class="analytics-section-heading">
           <div>
             <span class="eyebrow">Publication output</span>
             <h2 id="publications-by-year-title">Publications by Year</h2>
           </div>
+          <div class="chart-download-actions">
+            <button class="chart-download-button" type="button" data-download-csv="publications">Download CSV</button>
+            <button class="chart-download-button" type="button" data-download-png="publications">Download PNG</button>
+          </div>
         </div>
         <div class="analytics-chart-frame">
-          <div class="analytics-y-axis-title">Number of publications (articles)</div>
           <div aria-label="Number of publications by publication year" class="analytics-chart-host" id="privatePublicationYearChart"></div>
-          <div class="analytics-x-axis-title">Publication year</div>
         </div>
-        <p class="axis-definition"><strong>Y-axis:</strong> total number of listed journal publications, measured in articles.</p>
+        <p class="axis-definition"><strong>X-axis:</strong> publication year. <strong>Y-axis:</strong> number of listed journal publications, measured in articles.</p>
         <p class="chart-note">Each bar shows the total number of publications in that publication year. Research-theme categories are not separated.</p>
         <p class="analytics-status" id="publicationStatus">Loading publication data…</p>
+        <p class="download-note">CSV contains all annual values. PNG reflects the complete chart shown above.</p>
         <a class="back-to-top" href="#top">Back to top ↑</a>
       </div>
     </section>
 
     <section class="analytics-section" id="citations-by-publication-year" aria-labelledby="citations-by-publication-year-title">
       <div class="chart-card collection-chart">
-        <div class="section-heading">
+        <div class="analytics-section-heading">
           <div>
             <span class="eyebrow">Citation impact by publication cohort</span>
             <h2 id="citations-by-publication-year-title">Citations by Publication Year</h2>
+          </div>
+          <div class="chart-download-actions">
+            <button class="chart-download-button" type="button" data-download-csv="citation-cohort">Download CSV</button>
+            <button class="chart-download-button" type="button" data-download-png="citation-cohort">Download PNG</button>
           </div>
         </div>
         <div class="data-source-controls" id="publicationYearCitationControls" aria-label="Citation sources shown in citations by publication year chart">
@@ -279,23 +306,26 @@
           </label>
         </div>
         <div class="analytics-chart-frame">
-          <div class="analytics-y-axis-title">Current cumulative citations (citations)</div>
           <div aria-label="Current cumulative citations grouped by publication year" class="analytics-chart-host" id="publicationYearCitationChart"></div>
-          <div class="analytics-x-axis-title">Publication year</div>
         </div>
-        <p class="axis-definition"><strong>Y-axis:</strong> current cumulative citation count, measured in citations, summed for papers published in each year.</p>
+        <p class="axis-definition"><strong>X-axis:</strong> publication year. <strong>Y-axis:</strong> current cumulative citation count, measured in citations, summed for papers published in each year.</p>
         <p class="chart-note">This groups each paper's current citation total by the year in which that paper was published. It does not show citations received during that calendar year.</p>
         <p class="analytics-status" id="publicationYearCitationStatus">Loading citation data…</p>
+        <p class="download-note">CSV contains both citation sources. PNG reflects the sources currently selected with the checkboxes.</p>
         <a class="back-to-top" href="#top">Back to top ↑</a>
       </div>
     </section>
 
     <section class="analytics-section" id="citations-received-by-year" aria-labelledby="citations-received-by-year-title">
       <div class="chart-card collection-chart">
-        <div class="section-heading">
+        <div class="analytics-section-heading">
           <div>
             <span class="eyebrow">Annual citation activity</span>
             <h2 id="citations-received-by-year-title">Citations Received by Year</h2>
+          </div>
+          <div class="chart-download-actions">
+            <button class="chart-download-button" type="button" data-download-csv="annual-citations">Download CSV</button>
+            <button class="chart-download-button" type="button" data-download-png="annual-citations">Download PNG</button>
           </div>
         </div>
         <div class="data-source-controls" id="annualCitationControls" aria-label="Citation sources shown in citations received by year chart">
@@ -312,13 +342,48 @@
           </label>
         </div>
         <div class="analytics-chart-frame">
-          <div class="analytics-y-axis-title">Citations received (citations per calendar year)</div>
           <div aria-label="Citations received during each calendar year" class="analytics-chart-host" id="annualCitationChart"></div>
-          <div class="analytics-x-axis-title">Calendar year</div>
         </div>
-        <p class="axis-definition"><strong>Y-axis:</strong> number of citation events received during each calendar year, measured in citations per year.</p>
+        <p class="axis-definition"><strong>X-axis:</strong> calendar year. <strong>Y-axis:</strong> number of citation events received during each calendar year, measured in citations per year.</p>
         <p class="chart-note">This has the same statistical meaning as the annual bar chart on a Google Scholar profile. The current calendar year is incomplete. OpenAlex values are reconstructed from citation events to the publications listed on this website.</p>
         <p class="analytics-status" id="annualCitationStatus">Loading annual citation histories…</p>
+        <p class="download-note">CSV contains both citation sources. PNG reflects the sources currently selected with the checkboxes.</p>
+        <a class="back-to-top" href="#top">Back to top ↑</a>
+      </div>
+    </section>
+
+    <section class="analytics-section" id="publication-citation-trend" aria-labelledby="publication-citation-trend-title">
+      <div class="chart-card collection-chart">
+        <div class="analytics-section-heading">
+          <div>
+            <span class="eyebrow">Combined scholarly output and impact</span>
+            <h2 id="publication-citation-trend-title">Publications and Citations Received by Year</h2>
+          </div>
+          <div class="chart-download-actions">
+            <button class="chart-download-button" type="button" data-download-csv="combined-trend">Download CSV</button>
+            <button class="chart-download-button" type="button" data-download-png="combined-trend">Download PNG</button>
+          </div>
+        </div>
+        <div class="data-source-controls" id="combinedTrendControls" aria-label="Citation sources shown in combined publication and citation trend chart">
+          <strong>Show citation lines</strong>
+          <label class="source-toggle">
+            <input type="checkbox" value="google-scholar" checked />
+            <span class="source-swatch google-scholar" aria-hidden="true"></span>
+            Google Scholar
+          </label>
+          <label class="source-toggle">
+            <input type="checkbox" value="openalex" checked />
+            <span class="source-swatch openalex" aria-hidden="true"></span>
+            OpenAlex
+          </label>
+        </div>
+        <div class="analytics-chart-frame">
+          <div aria-label="Annual publications shown as bars and annual citations received shown as lines" class="analytics-chart-host" id="combinedTrendChart"></div>
+        </div>
+        <p class="axis-definition"><strong>X-axis:</strong> calendar/publication year. <strong>Left Y-axis:</strong> number of publications, measured in articles. <strong>Right Y-axis:</strong> citations received during that calendar year, measured in citations per year.</p>
+        <p class="chart-note">Blue bars show publications by publication year. Citation lines show citation events received during each calendar year. The two Y-axes use different units and scales.</p>
+        <p class="analytics-status" id="combinedTrendStatus">Loading combined trend data…</p>
+        <p class="download-note">CSV contains publication counts and both citation sources. PNG reflects the citation lines currently selected with the checkboxes.</p>
         <a class="back-to-top" href="#top">Back to top ↑</a>
       </div>
     </section>
@@ -343,18 +408,41 @@
     (() => {
       'use strict';
 
+      const COLORS = {
+        publications: '#3b6f9b',
+        'google-scholar': '#577b72',
+        openalex: '#a66a1f',
+        ink: '#1f2933',
+        muted: '#647382',
+        line: '#d9e1e8',
+        grid: '#e8edf1',
+        paper: '#ffffff'
+      };
+
       const SOURCE_DEFINITIONS = {
         'google-scholar': {
           key: 'google-scholar',
           label: 'Google Scholar',
-          barClass: 'bar-google-scholar'
+          color: COLORS['google-scholar']
         },
         openalex: {
           key: 'openalex',
           label: 'OpenAlex',
-          barClass: 'bar-openalex'
+          color: COLORS.openalex
         }
       };
+
+      const chartRegistry = new Map();
+
+      function escapeXml(value) {
+        return String(value ?? '').replace(/[&<>"']/g, character => ({
+          '&': '&amp;',
+          '<': '&lt;',
+          '>': '&gt;',
+          '"': '&quot;',
+          "'": '&#39;'
+        })[character]);
+      }
 
       function normalizeDoiForAnalytics(value) {
         return String(value || '')
@@ -428,88 +516,35 @@
         return Object.values(values || {}).reduce((sum, value) => sum + Number(value || 0), 0);
       }
 
-      function continuousYearRange(series) {
-        const years = [...new Set(series.flatMap(item => Object.keys(item.values || {}).map(Number)))]
-          .filter(Number.isFinite)
-          .sort((a, b) => a - b);
-        if (!years.length) return [];
-        return Array.from({ length: years.at(-1) - years[0] + 1 }, (_, index) => years[0] + index);
+      function unionYears(valueObjects, continuous = true) {
+        const years = [...new Set(
+          valueObjects.flatMap(values => Object.keys(values || {}).map(Number))
+        )].filter(Number.isFinite).sort((a, b) => a - b);
+
+        if (!years.length || !continuous) return years;
+        return Array.from(
+          { length: years.at(-1) - years[0] + 1 },
+          (_, index) => years[0] + index
+        );
       }
 
-      function analyticsNiceMax(value) {
+      function niceMaximum(value) {
         const number = Math.max(1, Number(value) || 1);
-        if (number <= 4) return 4;
-        if (number <= 6) return 6;
-        if (number <= 10) return 10;
         const magnitude = 10 ** Math.floor(Math.log10(number));
         const normalized = number / magnitude;
         const step = normalized <= 1 ? 1 : normalized <= 2 ? 2 : normalized <= 5 ? 5 : 10;
-        return step * magnitude;
+        return Math.max(4, step * magnitude);
       }
 
-      function chartTicks(maximum) {
-        return [maximum, maximum * .75, maximum * .5, maximum * .25, 0]
-          .map(value => Math.round(value));
-      }
-
-      function renderAnalyticsBarChart(element, visibleSeries, allSeries, options = {}) {
-        if (!element) return;
-        if (!visibleSeries.length) {
-          element.classList.remove('analytics-multi-series');
-          element.innerHTML = '<div class="chart-empty">Select at least one data source above to display this chart.</div>';
-          return;
-        }
-
-        const years = continuousYearRange(allSeries.length ? allSeries : visibleSeries);
-        if (!years.length) {
-          element.classList.remove('analytics-multi-series');
-          element.innerHTML = '<div class="chart-empty">No data are currently available for this chart.</div>';
-          return;
-        }
-
-        const rawMaximum = Math.max(
-          1,
-          ...allSeries.flatMap(series => Object.values(series.values || {}).map(Number).filter(Number.isFinite))
+      function tickValues(maximum, divisions = 4) {
+        return Array.from(
+          { length: divisions + 1 },
+          (_, index) => Math.round(maximum * (divisions - index) / divisions)
         );
-        const maximum = analyticsNiceMax(rawMaximum);
-        const ticks = chartTicks(maximum);
-        const unit = options.unit || 'records';
-        const currentYear = new Date().getFullYear();
+      }
 
-        element.classList.toggle('analytics-multi-series', visibleSeries.length > 1);
-        element.innerHTML = `
-          <div class="chart-scroll">
-            <div class="chart-layout">
-              <div class="chart-yaxis">${ticks.map(tick => `<span>${tick.toLocaleString()}</span>`).join('')}</div>
-              <div class="chart-stage">
-                <div class="chart-gridlines">${ticks.map(() => '<span></span>').join('')}</div>
-                <div class="chart-columns">
-                  ${years.map(year => `
-                    <div class="chart-column">
-                      <div class="bar-group">
-                        ${visibleSeries.map(series => {
-                          const value = Number(series.values?.[year] || 0);
-                          const height = value > 0 ? Math.max(2.5, value / maximum * 100) : 0;
-                          const yearNote = options.markCurrentYear && year === currentYear ? ', year to date' : '';
-                          const title = `${year}: ${value.toLocaleString()} ${unit} — ${series.label}${yearNote}`;
-                          return `<button
-                            class="chart-bar ${series.barClass}"
-                            type="button"
-                            ${value === 0 ? 'disabled' : ''}
-                            style="height:${height}%"
-                            title="${title}"
-                            aria-label="${title}">
-                            ${value ? `<span class="bar-value">${value.toLocaleString()}</span>` : ''}
-                          </button>`;
-                        }).join('')}
-                      </div>
-                      <span class="chart-year">${year}</span>
-                    </div>
-                  `).join('')}
-                </div>
-              </div>
-            </div>
-          </div>`;
+      function sourceSeries(sourceKey, values) {
+        return { ...SOURCE_DEFINITIONS[sourceKey], values: values || {} };
       }
 
       function selectedSourceKeys(controlElement) {
@@ -524,9 +559,287 @@
         if (!available) input.checked = false;
       }
 
-      function makeSourceSeries(sourceKey, values) {
-        const source = SOURCE_DEFINITIONS[sourceKey];
-        return { ...source, values: values || {} };
+      function registerChart(key, config) {
+        chartRegistry.set(key, config);
+      }
+
+      function setChartSvg(key, svgElement) {
+        const chart = chartRegistry.get(key);
+        if (chart) chart.svgElement = svgElement;
+      }
+
+      function linePath(points) {
+        if (!points.length) return '';
+        return points.map((point, index) => `${index ? 'L' : 'M'} ${point.x.toFixed(2)} ${point.y.toFixed(2)}`).join(' ');
+      }
+
+      function renderGroupedBarChart(element, visibleSeries, allSeries, options = {}) {
+        if (!element) return null;
+        if (!visibleSeries.length) {
+          element.innerHTML = '<div class="chart-empty">Select at least one data source above to display this chart.</div>';
+          return null;
+        }
+
+        const years = unionYears(
+          (allSeries.length ? allSeries : visibleSeries).map(series => series.values)
+        );
+        if (!years.length) {
+          element.innerHTML = '<div class="chart-empty">No data are currently available for this chart.</div>';
+          return null;
+        }
+
+        const width = Math.max(980, 190 + years.length * 54);
+        const height = 520;
+        const margin = { top: 92, right: 38, bottom: 82, left: 96 };
+        const plotWidth = width - margin.left - margin.right;
+        const plotHeight = height - margin.top - margin.bottom;
+        const rawMaximum = Math.max(
+          1,
+          ...allSeries.flatMap(series => Object.values(series.values || {}).map(Number).filter(Number.isFinite))
+        );
+        const maximum = niceMaximum(rawMaximum);
+        const ticks = tickValues(maximum);
+        const band = plotWidth / years.length;
+        const groupWidth = Math.min(40, band * .72);
+        const barGap = visibleSeries.length > 1 ? 4 : 0;
+        const barWidth = Math.max(7, (groupWidth - barGap * (visibleSeries.length - 1)) / visibleSeries.length);
+        const currentYear = new Date().getFullYear();
+
+        const grid = ticks.map(tick => {
+          const y = margin.top + plotHeight - tick / maximum * plotHeight;
+          return `
+            <line x1="${margin.left}" y1="${y}" x2="${width - margin.right}" y2="${y}" stroke="${COLORS.grid}" stroke-width="1" />
+            <text x="${margin.left - 12}" y="${y + 4}" text-anchor="end" font-size="11" fill="${COLORS.muted}">${tick.toLocaleString()}</text>`;
+        }).join('');
+
+        const bars = years.map((year, yearIndex) => {
+          const center = margin.left + band * (yearIndex + .5);
+          const totalGroupWidth = barWidth * visibleSeries.length + barGap * (visibleSeries.length - 1);
+          const startX = center - totalGroupWidth / 2;
+
+          const yearBars = visibleSeries.map((series, seriesIndex) => {
+            const value = Number(series.values?.[year] || 0);
+            const barHeight = value / maximum * plotHeight;
+            const x = startX + seriesIndex * (barWidth + barGap);
+            const y = margin.top + plotHeight - barHeight;
+            const note = options.markCurrentYear && year === currentYear ? ' (year to date)' : '';
+            return `
+              <g>
+                <title>${escapeXml(`${year}: ${value.toLocaleString()} ${options.unit || 'records'} — ${series.label}${note}`)}</title>
+                <rect x="${x}" y="${y}" width="${barWidth}" height="${Math.max(0, barHeight)}" rx="2" fill="${series.color}" />
+                ${value > 0 ? `<text x="${x + barWidth / 2}" y="${Math.max(margin.top + 10, y - 5)}" text-anchor="middle" font-size="9" font-weight="700" fill="${COLORS.muted}">${value.toLocaleString()}</text>` : ''}
+              </g>`;
+          }).join('');
+
+          return `${yearBars}<text x="${center}" y="${margin.top + plotHeight + 24}" text-anchor="middle" font-size="10" fill="${COLORS.muted}">${year}</text>`;
+        }).join('');
+
+        const legendStart = margin.left;
+        const legend = visibleSeries.map((series, index) => {
+          const x = legendStart + index * 175;
+          return `
+            <rect x="${x}" y="52" width="12" height="12" rx="2" fill="${series.color}" />
+            <text x="${x + 19}" y="62" font-size="11" font-weight="700" fill="${COLORS.ink}">${escapeXml(series.label)}</text>`;
+        }).join('');
+
+        element.innerHTML = `
+          <svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="${escapeXml(options.ariaLabel || options.title || 'Chart')}">
+            <rect width="${width}" height="${height}" fill="#ffffff" />
+            <text x="${margin.left}" y="28" font-family="Source Serif 4, serif" font-size="21" font-weight="700" fill="${COLORS.ink}">${escapeXml(options.title || '')}</text>
+            ${legend}
+            ${grid}
+            <line x1="${margin.left}" y1="${margin.top + plotHeight}" x2="${width - margin.right}" y2="${margin.top + plotHeight}" stroke="${COLORS.line}" />
+            <line x1="${margin.left}" y1="${margin.top}" x2="${margin.left}" y2="${margin.top + plotHeight}" stroke="${COLORS.line}" />
+            ${bars}
+            <text x="${margin.left + plotWidth / 2}" y="${height - 24}" text-anchor="middle" font-size="12" font-weight="700" fill="#52616e">${escapeXml(options.xAxisLabel || 'Year')}</text>
+            <text transform="translate(24 ${margin.top + plotHeight / 2}) rotate(-90)" text-anchor="middle" font-size="12" font-weight="700" fill="#52616e">${escapeXml(options.yAxisLabel || '')}</text>
+          </svg>`;
+
+        return element.querySelector('svg');
+      }
+
+      function renderCombinedTrendChart(element, publicationValues, visibleCitationSeries, allCitationSeries, options = {}) {
+        if (!element) return null;
+
+        const years = unionYears([
+          publicationValues,
+          ...allCitationSeries.map(series => series.values)
+        ]);
+        if (!years.length) {
+          element.innerHTML = '<div class="chart-empty">No data are currently available for this chart.</div>';
+          return null;
+        }
+
+        const width = Math.max(1040, 220 + years.length * 54);
+        const height = 540;
+        const margin = { top: 98, right: 100, bottom: 82, left: 96 };
+        const plotWidth = width - margin.left - margin.right;
+        const plotHeight = height - margin.top - margin.bottom;
+        const publicationMaximum = niceMaximum(Math.max(1, ...Object.values(publicationValues).map(Number)));
+        const citationMaximum = niceMaximum(Math.max(
+          1,
+          ...allCitationSeries.flatMap(series => Object.values(series.values || {}).map(Number).filter(Number.isFinite))
+        ));
+        const publicationTicks = tickValues(publicationMaximum);
+        const citationTicks = tickValues(citationMaximum);
+        const band = plotWidth / years.length;
+        const barWidth = Math.min(28, band * .5);
+        const currentYear = new Date().getFullYear();
+
+        const grid = publicationTicks.map((tick, index) => {
+          const y = margin.top + plotHeight - tick / publicationMaximum * plotHeight;
+          const citationTick = citationTicks[index];
+          return `
+            <line x1="${margin.left}" y1="${y}" x2="${width - margin.right}" y2="${y}" stroke="${COLORS.grid}" stroke-width="1" />
+            <text x="${margin.left - 12}" y="${y + 4}" text-anchor="end" font-size="11" fill="${COLORS.muted}">${tick.toLocaleString()}</text>
+            <text x="${width - margin.right + 12}" y="${y + 4}" text-anchor="start" font-size="11" fill="${COLORS.muted}">${citationTick.toLocaleString()}</text>`;
+        }).join('');
+
+        const bars = years.map((year, index) => {
+          const value = Number(publicationValues?.[year] || 0);
+          const x = margin.left + band * (index + .5) - barWidth / 2;
+          const barHeight = value / publicationMaximum * plotHeight;
+          const y = margin.top + plotHeight - barHeight;
+          return `
+            <g>
+              <title>${escapeXml(`${year}: ${value.toLocaleString()} publications`)}</title>
+              <rect x="${x}" y="${y}" width="${barWidth}" height="${Math.max(0, barHeight)}" rx="2" fill="${COLORS.publications}" opacity=".82" />
+              ${value > 0 ? `<text x="${x + barWidth / 2}" y="${Math.max(margin.top + 10, y - 5)}" text-anchor="middle" font-size="9" font-weight="700" fill="${COLORS.muted}">${value.toLocaleString()}</text>` : ''}
+            </g>`;
+        }).join('');
+
+        const lines = visibleCitationSeries.map((series, seriesIndex) => {
+          const points = years.map((year, index) => {
+            const value = Number(series.values?.[year] || 0);
+            return {
+              year,
+              value,
+              x: margin.left + band * (index + .5),
+              y: margin.top + plotHeight - value / citationMaximum * plotHeight
+            };
+          });
+          const dash = series.key === 'openalex' ? '8 5' : '';
+          const circles = points.map(point => `
+            <g>
+              <title>${escapeXml(`${point.year}: ${point.value.toLocaleString()} citations received — ${series.label}${point.year === currentYear ? ' (year to date)' : ''}`)}</title>
+              <circle cx="${point.x}" cy="${point.y}" r="3.5" fill="#fff" stroke="${series.color}" stroke-width="2" />
+            </g>`).join('');
+          return `
+            <path d="${linePath(points)}" fill="none" stroke="${series.color}" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" ${dash ? `stroke-dasharray="${dash}"` : ''} />
+            ${circles}`;
+        }).join('');
+
+        const publicationLegend = `
+          <rect x="${margin.left}" y="54" width="13" height="13" rx="2" fill="${COLORS.publications}" opacity=".82" />
+          <text x="${margin.left + 20}" y="65" font-size="11" font-weight="700" fill="${COLORS.ink}">Publications</text>`;
+
+        const citationLegend = visibleCitationSeries.map((series, index) => {
+          const x = margin.left + 150 + index * 190;
+          const dash = series.key === 'openalex' ? '8 5' : '';
+          return `
+            <line x1="${x}" y1="60" x2="${x + 24}" y2="60" stroke="${series.color}" stroke-width="3" ${dash ? `stroke-dasharray="${dash}"` : ''} />
+            <circle cx="${x + 12}" cy="60" r="3" fill="#fff" stroke="${series.color}" stroke-width="2" />
+            <text x="${x + 32}" y="64" font-size="11" font-weight="700" fill="${COLORS.ink}">${escapeXml(series.label)} citations</text>`;
+        }).join('');
+
+        element.innerHTML = `
+          <svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="${escapeXml(options.ariaLabel || options.title || 'Combined trend chart')}">
+            <rect width="${width}" height="${height}" fill="#ffffff" />
+            <text x="${margin.left}" y="29" font-family="Source Serif 4, serif" font-size="21" font-weight="700" fill="${COLORS.ink}">${escapeXml(options.title || '')}</text>
+            ${publicationLegend}
+            ${citationLegend}
+            ${grid}
+            <line x1="${margin.left}" y1="${margin.top + plotHeight}" x2="${width - margin.right}" y2="${margin.top + plotHeight}" stroke="${COLORS.line}" />
+            <line x1="${margin.left}" y1="${margin.top}" x2="${margin.left}" y2="${margin.top + plotHeight}" stroke="${COLORS.line}" />
+            <line x1="${width - margin.right}" y1="${margin.top}" x2="${width - margin.right}" y2="${margin.top + plotHeight}" stroke="${COLORS.line}" />
+            ${bars}
+            ${lines}
+            ${years.map((year, index) => `<text x="${margin.left + band * (index + .5)}" y="${margin.top + plotHeight + 24}" text-anchor="middle" font-size="10" fill="${COLORS.muted}">${year}</text>`).join('')}
+            <text x="${margin.left + plotWidth / 2}" y="${height - 24}" text-anchor="middle" font-size="12" font-weight="700" fill="#52616e">Year</text>
+            <text transform="translate(24 ${margin.top + plotHeight / 2}) rotate(-90)" text-anchor="middle" font-size="12" font-weight="700" fill="#52616e">Publications (articles)</text>
+            <text transform="translate(${width - 24} ${margin.top + plotHeight / 2}) rotate(90)" text-anchor="middle" font-size="12" font-weight="700" fill="#52616e">Citations received (citations/year)</text>
+          </svg>`;
+
+        return element.querySelector('svg');
+      }
+
+      function csvEscape(value) {
+        const text = String(value ?? '');
+        return /[",\n\r]/.test(text) ? `"${text.replace(/"/g, '""')}"` : text;
+      }
+
+      function downloadBlob(blob, filename) {
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = filename;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        window.setTimeout(() => URL.revokeObjectURL(url), 1000);
+      }
+
+      function downloadChartCsv(key) {
+        const chart = chartRegistry.get(key);
+        if (!chart || !chart.csvHeaders || !chart.csvRows) return;
+
+        const lines = [
+          chart.csvHeaders.map(csvEscape).join(','),
+          ...chart.csvRows().map(row => row.map(csvEscape).join(','))
+        ];
+        const csv = '\ufeff' + lines.join('\r\n') + '\r\n';
+        downloadBlob(
+          new Blob([csv], { type: 'text/csv;charset=utf-8' }),
+          `${chart.filename}.csv`
+        );
+      }
+
+      async function downloadChartPng(key) {
+        const chart = chartRegistry.get(key);
+        const svg = chart?.svgElement;
+        if (!svg) {
+          window.alert('The chart is not available yet.');
+          return;
+        }
+
+        const serializer = new XMLSerializer();
+        const clone = svg.cloneNode(true);
+        clone.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+        const source = serializer.serializeToString(clone);
+        const svgBlob = new Blob([source], { type: 'image/svg+xml;charset=utf-8' });
+        const url = URL.createObjectURL(svgBlob);
+
+        try {
+          const image = new Image();
+          image.decoding = 'async';
+          const loaded = new Promise((resolve, reject) => {
+            image.onload = resolve;
+            image.onerror = reject;
+          });
+          image.src = url;
+          await loaded;
+
+          const width = Number(svg.getAttribute('width')) || 1200;
+          const height = Number(svg.getAttribute('height')) || 600;
+          const scale = 2;
+          const canvas = document.createElement('canvas');
+          canvas.width = width * scale;
+          canvas.height = height * scale;
+          const context = canvas.getContext('2d');
+          context.scale(scale, scale);
+          context.fillStyle = '#ffffff';
+          context.fillRect(0, 0, width, height);
+          context.drawImage(image, 0, 0, width, height);
+
+          const pngBlob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
+          if (!pngBlob) throw new Error('Unable to create PNG file.');
+          downloadBlob(pngBlob, `${chart.filename}.png`);
+        } catch (error) {
+          console.error(error);
+          window.alert('The PNG could not be generated in this browser.');
+        } finally {
+          URL.revokeObjectURL(url);
+        }
       }
 
       function formatUpdated(value) {
@@ -549,6 +862,14 @@
         if (className) element.classList.add(className);
       }
 
+      document.addEventListener('click', event => {
+        const csvButton = event.target.closest('[data-download-csv]');
+        if (csvButton) downloadChartCsv(csvButton.dataset.downloadCsv);
+
+        const pngButton = event.target.closest('[data-download-png]');
+        if (pngButton) downloadChartPng(pngButton.dataset.downloadPng);
+      });
+
       document.addEventListener('DOMContentLoaded', async () => {
         const publicationChart = document.getElementById('privatePublicationYearChart');
         const publicationStatus = document.getElementById('publicationStatus');
@@ -558,6 +879,9 @@
         const annualCitationChart = document.getElementById('annualCitationChart');
         const annualCitationControls = document.getElementById('annualCitationControls');
         const annualCitationStatus = document.getElementById('annualCitationStatus');
+        const combinedTrendChart = document.getElementById('combinedTrendChart');
+        const combinedTrendControls = document.getElementById('combinedTrendControls');
+        const combinedTrendStatus = document.getElementById('combinedTrendStatus');
 
         try {
           const [publications, scholarMetrics, openAlexMetrics, scholarHistory, openAlexHistory] = await Promise.all([
@@ -569,9 +893,31 @@
           ]);
 
           const publicationValues = countPublicationsByYear(publications);
-          const publicationSeries = [{ key: 'publications', label: 'Publications', barClass: 'bar-publications', values: publicationValues }];
-          renderAnalyticsBarChart(publicationChart, publicationSeries, publicationSeries, { unit: 'articles' });
-          const publicationYears = Object.keys(publicationValues).map(Number).sort((a, b) => a - b);
+          const publicationYears = unionYears([publicationValues]);
+          const publicationSeries = [{
+            key: 'publications',
+            label: 'Publications',
+            color: COLORS.publications,
+            values: publicationValues
+          }];
+
+          registerChart('publications', {
+            filename: 'publications-by-year',
+            csvHeaders: ['Publication year', 'Publications (articles)'],
+            csvRows: () => publicationYears.map(year => [year, publicationValues[year] || 0])
+          });
+          setChartSvg('publications', renderGroupedBarChart(
+            publicationChart,
+            publicationSeries,
+            publicationSeries,
+            {
+              title: 'Publications by Year',
+              xAxisLabel: 'Publication year',
+              yAxisLabel: 'Publications (articles)',
+              unit: 'articles',
+              ariaLabel: 'Number of publications by publication year'
+            }
+          ));
           setStatus(
             publicationStatus,
             `${publications.length} publications covering ${publicationYears[0]}–${publicationYears.at(-1)}. Source: data/publications.json.`
@@ -582,21 +928,46 @@
             ? sumOpenAlexCitationsByPublicationYear(publications, openAlexMetrics.records)
             : { totals: {}, verified: 0 };
           const publicationYearAllSeries = [
-            makeSourceSeries('google-scholar', scholarPublicationYearValues),
-            makeSourceSeries('openalex', openAlexPublicationResult.totals)
+            sourceSeries('google-scholar', scholarPublicationYearValues),
+            sourceSeries('openalex', openAlexPublicationResult.totals)
           ];
+          const citationCohortYears = unionYears([
+            scholarPublicationYearValues,
+            openAlexPublicationResult.totals
+          ]);
+
+          registerChart('citation-cohort', {
+            filename: 'citations-by-publication-year',
+            csvHeaders: [
+              'Publication year',
+              'Google Scholar cumulative citations (citations)',
+              'OpenAlex cumulative citations (citations)'
+            ],
+            csvRows: () => citationCohortYears.map(year => [
+              year,
+              scholarPublicationYearValues[year] || 0,
+              openAlexPublicationResult.totals[year] || 0
+            ])
+          });
+
           setSourceAvailability(publicationYearCitationControls, 'google-scholar', true);
           setSourceAvailability(publicationYearCitationControls, 'openalex', Boolean(openAlexMetrics?.records));
 
           const drawPublicationYearCitations = () => {
             const selected = selectedSourceKeys(publicationYearCitationControls);
             const visible = publicationYearAllSeries.filter(series => selected.includes(series.key));
-            renderAnalyticsBarChart(
+            setChartSvg('citation-cohort', renderGroupedBarChart(
               publicationYearCitationChart,
               visible,
               publicationYearAllSeries,
-              { unit: 'citations' }
-            );
+              {
+                title: 'Citations by Publication Year',
+                xAxisLabel: 'Publication year',
+                yAxisLabel: 'Current cumulative citations (citations)',
+                unit: 'citations',
+                ariaLabel: 'Current cumulative citations grouped by publication year'
+              }
+            ));
           };
           publicationYearCitationControls.addEventListener('change', drawPublicationYearCitations);
           drawPublicationYearCitations();
@@ -608,7 +979,7 @@
             : 'OpenAlex publication metrics are unavailable.';
           setStatus(
             publicationYearCitationStatus,
-            `Google Scholar: ${scholarPublicationTotal.toLocaleString()} citations, updated ${formatUpdated(scholarMetrics.lastSuccessfulUpdate)} ${openAlexPublicationText}`,
+            `Google Scholar: ${scholarPublicationTotal.toLocaleString()} citations, updated ${formatUpdated(scholarMetrics.lastSuccessfulUpdate)}. ${openAlexPublicationText}`,
             openAlexMetrics?.records ? '' : 'analytics-warning'
           );
 
@@ -616,23 +987,45 @@
           const openAlexAnnualValues = citationHistoryToValues(openAlexHistory);
           const scholarAnnualAvailable = Object.keys(scholarAnnualValues).length > 0;
           const openAlexAnnualAvailable = Object.keys(openAlexAnnualValues).length > 0;
+          const annualAllSeries = [
+            sourceSeries('google-scholar', scholarAnnualValues),
+            sourceSeries('openalex', openAlexAnnualValues)
+          ].filter(series => Object.keys(series.values).length > 0);
+          const annualYears = unionYears([scholarAnnualValues, openAlexAnnualValues]);
+
+          registerChart('annual-citations', {
+            filename: 'citations-received-by-year',
+            csvHeaders: [
+              'Calendar year',
+              'Google Scholar citations received (citations/year)',
+              'OpenAlex citations received (citations/year)'
+            ],
+            csvRows: () => annualYears.map(year => [
+              year,
+              scholarAnnualValues[year] || 0,
+              openAlexAnnualValues[year] || 0
+            ])
+          });
+
           setSourceAvailability(annualCitationControls, 'google-scholar', scholarAnnualAvailable);
           setSourceAvailability(annualCitationControls, 'openalex', openAlexAnnualAvailable);
-
-          const annualAllSeries = [
-            makeSourceSeries('google-scholar', scholarAnnualValues),
-            makeSourceSeries('openalex', openAlexAnnualValues)
-          ].filter(series => Object.keys(series.values).length > 0);
 
           const drawAnnualCitations = () => {
             const selected = selectedSourceKeys(annualCitationControls);
             const visible = annualAllSeries.filter(series => selected.includes(series.key));
-            renderAnalyticsBarChart(
+            setChartSvg('annual-citations', renderGroupedBarChart(
               annualCitationChart,
               visible,
               annualAllSeries,
-              { unit: 'citations received', markCurrentYear: true }
-            );
+              {
+                title: 'Citations Received by Year',
+                xAxisLabel: 'Calendar year',
+                yAxisLabel: 'Citations received (citations/year)',
+                unit: 'citations received',
+                markCurrentYear: true,
+                ariaLabel: 'Citations received during each calendar year'
+              }
+            ));
           };
           annualCitationControls.addEventListener('change', drawAnnualCitations);
           drawAnnualCitations();
@@ -644,7 +1037,8 @@
             annualMessages.push('Google Scholar annual history has not yet been generated.');
           }
           if (openAlexAnnualAvailable) {
-            annualMessages.push(`OpenAlex: ${sumValues(openAlexAnnualValues).toLocaleString()} annual citation events, updated ${formatUpdated(openAlexHistory.lastSuccessfulUpdate)}.`);
+            const excluded = Number(openAlexHistory?.excludedInvalidCitationCount || 0);
+            annualMessages.push(`OpenAlex: ${sumValues(openAlexAnnualValues).toLocaleString()} annual citation events, updated ${formatUpdated(openAlexHistory.lastSuccessfulUpdate)}${excluded ? `; ${excluded} chronologically invalid event excluded` : ''}.`);
           } else {
             annualMessages.push('OpenAlex annual history has not yet been generated.');
           }
@@ -653,14 +1047,64 @@
             annualMessages.join(' '),
             scholarAnnualAvailable && openAlexAnnualAvailable ? '' : 'analytics-warning'
           );
+
+          const combinedYears = unionYears([
+            publicationValues,
+            scholarAnnualValues,
+            openAlexAnnualValues
+          ]);
+
+          registerChart('combined-trend', {
+            filename: 'publications-and-citations-received-by-year',
+            csvHeaders: [
+              'Year',
+              'Publications (articles)',
+              'Google Scholar citations received (citations/year)',
+              'OpenAlex citations received (citations/year)'
+            ],
+            csvRows: () => combinedYears.map(year => [
+              year,
+              publicationValues[year] || 0,
+              scholarAnnualValues[year] || 0,
+              openAlexAnnualValues[year] || 0
+            ])
+          });
+
+          setSourceAvailability(combinedTrendControls, 'google-scholar', scholarAnnualAvailable);
+          setSourceAvailability(combinedTrendControls, 'openalex', openAlexAnnualAvailable);
+
+          const drawCombinedTrend = () => {
+            const selected = selectedSourceKeys(combinedTrendControls);
+            const visible = annualAllSeries.filter(series => selected.includes(series.key));
+            setChartSvg('combined-trend', renderCombinedTrendChart(
+              combinedTrendChart,
+              publicationValues,
+              visible,
+              annualAllSeries,
+              {
+                title: 'Publications and Citations Received by Year',
+                ariaLabel: 'Annual publications shown as bars and annual citations received shown as lines'
+              }
+            ));
+          };
+          combinedTrendControls.addEventListener('change', drawCombinedTrend);
+          drawCombinedTrend();
+
+          setStatus(
+            combinedTrendStatus,
+            `Publication bars: ${publications.length} articles. Citation lines use the annual Google Scholar and OpenAlex histories shown above. The current year is year to date.`,
+            scholarAnnualAvailable || openAlexAnnualAvailable ? '' : 'analytics-warning'
+          );
         } catch (error) {
           console.error(error);
           setStatus(publicationStatus, 'Unable to load publication data.', 'analytics-error');
           setStatus(publicationYearCitationStatus, 'Unable to load citation data by publication year.', 'analytics-error');
           setStatus(annualCitationStatus, 'Unable to load annual citation histories.', 'analytics-error');
+          setStatus(combinedTrendStatus, 'Unable to load combined publication and citation trend.', 'analytics-error');
           publicationChart.innerHTML = '<div class="chart-empty">Publication data could not be loaded.</div>';
           publicationYearCitationChart.innerHTML = '<div class="chart-empty">Citation data could not be loaded.</div>';
           annualCitationChart.innerHTML = '<div class="chart-empty">Annual citation data could not be loaded.</div>';
+          combinedTrendChart.innerHTML = '<div class="chart-empty">Combined trend data could not be loaded.</div>';
         }
       });
     })();
