@@ -1,10 +1,10 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-07-16T11:55:01.753014Z",
+  "lastUpdated": "2026-07-17T12:50:00Z",
   "journalCount": 22,
   "activeJournalCount": 22,
   "sourcePolicy": {
-    "primaryMetricSource": "JournalMetrics.org",
+    "primaryMetricSource": "Row-specific verified source URL",
     "backupMetricSources": [
       "Bioxbio",
       "Manusights",
@@ -16,13 +16,13 @@
       "publication records"
     ],
     "fieldRules": {
-      "currentImpactFactorAndJcrQuartile": "JournalMetrics.org is preferred.",
+      "currentImpactFactorAndJcrQuartile": "Use the row-specific source URL; bestQuartile is the best (highest) quartile among all listed JCR categories.",
       "historicalImpactFactor": "Bioxbio is preferred.",
-      "fiveYearImpactFactorJciAndCategoryRank": "Manusights is preferred when available.",
+      "fiveYearImpactFactorJciAndCategoryRank": "Use the row-specific source URL recorded in each metric entry.",
       "lastResortCurrentImpactFactor": "JournalSearches may fill missing JIF values.",
       "quartileSeparation": "JournalSearches quartiles are stored as Scopus quartiles and never treated as JCR quartiles."
     },
-    "note": "All JIF and JCR values are secondary-source observations and should be checked against Clarivate/JCR for formal use."
+    "note": "2025 JIF values correspond to the JCR release published in 2026. bestQuartile records the best quartile among all listed JCR categories. Values remain secondary-source observations unless the URL is an official publisher page."
   },
   "journals": {
     "advanced-functional-materials": {
@@ -427,13 +427,12 @@
           "jcrReleaseYear": 2026,
           "fieldSources": {
             "impactFactor": {
-              "name": "JournalSearches",
-              "url": "https://journalsearches.com/journal.php?title=advanced+functional+materials",
+              "name": "Journal Metrics",
+              "url": "https://www.journalmetrics.org/journal/advanced-functional-materials",
               "type": "secondary-source",
               "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-16T10:33:06.028112Z",
-              "priority": 60,
-              "note": "Backup JIF source; quartile is stored separately as Scopus quartile."
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             },
             "jcrReleaseYear": {
               "name": "JournalSearches",
@@ -459,11 +458,69 @@
               "verificationStatus": "secondary-source",
               "retrievedAt": "2026-07-16T10:33:03.665948Z",
               "priority": 90
+            },
+            "fiveYearImpactFactor": {
+              "name": "Journal Metrics",
+              "url": "https://www.journalmetrics.org/journal/advanced-functional-materials",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
+            },
+            "bestQuartile": {
+              "name": "Journal Metrics",
+              "url": "https://www.journalmetrics.org/journal/advanced-functional-materials",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
+            },
+            "categories": {
+              "name": "Journal Metrics",
+              "url": "https://www.journalmetrics.org/journal/advanced-functional-materials",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             }
           },
           "verificationStatus": "secondary-source",
           "citeScore": 28.7,
-          "totalCites": 413943
+          "totalCites": 413943,
+          "fiveYearImpactFactor": 20.8,
+          "bestQuartile": "Q1",
+          "categories": [
+            {
+              "name": "Chemistry, Multidisciplinary",
+              "quartile": "Q1"
+            },
+            {
+              "name": "Chemistry, Physical",
+              "quartile": "Q1"
+            },
+            {
+              "name": "Materials Science, Multidisciplinary",
+              "quartile": "Q1"
+            },
+            {
+              "name": "Nanoscience & Nanotechnology",
+              "quartile": "Q1"
+            },
+            {
+              "name": "Physics, Applied",
+              "quartile": "Q1"
+            },
+            {
+              "name": "Physics, Condensed Matter",
+              "quartile": "Q1"
+            }
+          ],
+          "sourceType": "secondary-source",
+          "sourceName": "Journal Metrics",
+          "sourceUrls": [
+            "https://www.journalmetrics.org/journal/advanced-functional-materials"
+          ],
+          "retrievedAt": "2026-07-17T12:50:00Z"
         }
       },
       "abbreviation": "Adv Funct Materials",
@@ -572,13 +629,12 @@
           "jcrReleaseYear": 2026,
           "fieldSources": {
             "impactFactor": {
-              "name": "JournalSearches",
-              "url": "https://journalsearches.com/journal.php?title=advanced+science",
+              "name": "WoS Journal Info",
+              "url": "https://wos-journal.info/journalid/11627",
               "type": "secondary-source",
               "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-16T10:33:10.018169Z",
-              "priority": 60,
-              "note": "Backup JIF source; quartile is stored separately as Scopus quartile."
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             },
             "jcrReleaseYear": {
               "name": "JournalSearches",
@@ -596,10 +652,56 @@
               "verificationStatus": "secondary-source",
               "retrievedAt": "2026-07-16T10:33:09.254019Z",
               "priority": 80
+            },
+            "fiveYearImpactFactor": {
+              "name": "WoS Journal Info",
+              "url": "https://wos-journal.info/journalid/11627",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
+            },
+            "bestQuartile": {
+              "name": "WoS Journal Info",
+              "url": "https://wos-journal.info/journalid/11627",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
+            },
+            "categories": {
+              "name": "WoS Journal Info",
+              "url": "https://wos-journal.info/journalid/11627",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             }
           },
           "verificationStatus": "secondary-source",
-          "citeScore": 18.2
+          "citeScore": 18.2,
+          "fiveYearImpactFactor": 15.6,
+          "bestQuartile": "Q1",
+          "categories": [
+            {
+              "name": "Chemistry, Multidisciplinary",
+              "quartile": "Q1"
+            },
+            {
+              "name": "Materials Science, Multidisciplinary",
+              "quartile": "Q1"
+            },
+            {
+              "name": "Nanoscience & Nanotechnology",
+              "quartile": "Q1"
+            }
+          ],
+          "sourceType": "secondary-source",
+          "sourceName": "WoS Journal Info",
+          "sourceUrls": [
+            "https://wos-journal.info/journalid/11627"
+          ],
+          "retrievedAt": "2026-07-17T12:50:00Z"
         }
       },
       "abbreviation": "Advanced Science",
@@ -1088,13 +1190,12 @@
           "jcrReleaseYear": 2026,
           "fieldSources": {
             "impactFactor": {
-              "name": "JournalSearches",
-              "url": "https://journalsearches.com/journal.php?title=chemical+communications",
+              "name": "Journal Metrics",
+              "url": "https://www.journalmetrics.org/journal/chemical-communications",
               "type": "secondary-source",
               "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-16T10:33:13.396032Z",
-              "priority": 60,
-              "note": "Backup JIF source; quartile is stored separately as Scopus quartile."
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             },
             "jcrReleaseYear": {
               "name": "JournalSearches",
@@ -1106,12 +1207,12 @@
               "note": "Backup JIF source; quartile is stored separately as Scopus quartile."
             },
             "fiveYearImpactFactor": {
-              "name": "Manusights",
-              "url": "https://manusights.com/blog/chemical-communications-impact-factor",
+              "name": "Journal Metrics",
+              "url": "https://www.journalmetrics.org/journal/chemical-communications",
               "type": "secondary-source",
               "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-16T10:33:12.620178Z",
-              "priority": 80
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             },
             "totalCites": {
               "name": "Bioxbio",
@@ -1128,12 +1229,41 @@
               "verificationStatus": "secondary-source",
               "retrievedAt": "2026-07-16T10:33:12.620178Z",
               "priority": 80
+            },
+            "bestQuartile": {
+              "name": "Journal Metrics",
+              "url": "https://www.journalmetrics.org/journal/chemical-communications",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
+            },
+            "categories": {
+              "name": "Journal Metrics",
+              "url": "https://www.journalmetrics.org/journal/chemical-communications",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             }
           },
           "verificationStatus": "secondary-source",
-          "fiveYearImpactFactor": 10.1,
+          "fiveYearImpactFactor": 4.3,
           "totalCites": 154149,
-          "citeScore": 7.2
+          "citeScore": 7.2,
+          "bestQuartile": "Q2",
+          "categories": [
+            {
+              "name": "Chemistry, Multidisciplinary",
+              "quartile": "Q2"
+            }
+          ],
+          "sourceType": "secondary-source",
+          "sourceName": "Journal Metrics",
+          "sourceUrls": [
+            "https://www.journalmetrics.org/journal/chemical-communications"
+          ],
+          "retrievedAt": "2026-07-17T12:50:00Z"
         }
       },
       "abbreviation": "Chem. Commun.",
@@ -1635,27 +1765,30 @@
           "bestQuartile": "Q1",
           "categories": [
             {
+              "name": "Engineering, Chemical",
+              "quartile": "Q1"
+            },
+            {
+              "name": "Engineering, Environmental",
               "quartile": "Q1"
             }
           ],
           "jcrReleaseYear": 2026,
           "sourceType": "secondary-source",
-          "sourceName": "Manusights",
+          "sourceName": "WoS Journal Info",
           "sourceUrls": [
-            "https://manusights.com/journals/chemical-engineering-journal",
-            "https://manusights.com/blog/chemical-engineering-journal-impact-factor"
+            "https://wos-journal.info/journalid/11647"
           ],
           "verificationStatus": "secondary-source",
-          "retrievedAt": "2026-07-16T09:24:57.249628Z",
+          "retrievedAt": "2026-07-17T12:50:00Z",
           "fieldSources": {
             "impactFactor": {
-              "name": "JournalSearches",
-              "url": "https://journalsearches.com/journal.php?title=chemical+engineering+journal",
+              "name": "WoS Journal Info",
+              "url": "https://wos-journal.info/journalid/11647",
               "type": "secondary-source",
               "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-16T10:33:16.765104Z",
-              "priority": 60,
-              "note": "Backup JIF source; quartile is stored separately as Scopus quartile."
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             },
             "jcrReleaseYear": {
               "name": "JournalSearches",
@@ -1683,12 +1816,12 @@
               "priority": 80
             },
             "fiveYearImpactFactor": {
-              "name": "Manusights",
-              "url": "https://manusights.com/blog/chemical-engineering-journal-impact-factor",
+              "name": "WoS Journal Info",
+              "url": "https://wos-journal.info/journalid/11647",
               "type": "secondary-source",
               "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-16T10:33:16.020690Z",
-              "priority": 80
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             },
             "citeScore": {
               "name": "Manusights",
@@ -1697,6 +1830,22 @@
               "verificationStatus": "secondary-source",
               "retrievedAt": "2026-07-16T10:33:16.020690Z",
               "priority": 80
+            },
+            "bestQuartile": {
+              "name": "WoS Journal Info",
+              "url": "https://wos-journal.info/journalid/11647",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
+            },
+            "categories": {
+              "name": "WoS Journal Info",
+              "url": "https://wos-journal.info/journalid/11647",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             }
           }
         }
@@ -1704,7 +1853,7 @@
       "abbreviation": "Chemical Engineering Journal",
       "publisher": "Elsevier BV",
       "issn": "1385-8947",
-      "eissn": "",
+      "eissn": "1873-3212",
       "issnL": "1385-8947",
       "allIssns": [
         "1385-8947",
@@ -1807,15 +1956,69 @@
         "Chemistry - An Asian Journal",
         "Chemistry  An Asian Journal"
       ],
-      "metricsByYear": {},
+      "metricsByYear": {
+        "2025": {
+          "impactFactor": 3.2,
+          "fiveYearImpactFactor": 3.3,
+          "bestQuartile": "Q2",
+          "categories": [
+            {
+              "name": "Chemistry, Multidisciplinary",
+              "quartile": "Q2"
+            }
+          ],
+          "jcrReleaseYear": 2026,
+          "sourceType": "secondary-source",
+          "sourceName": "WoS Journal Info",
+          "sourceUrls": [
+            "https://wos-journal.info/journalid/13434"
+          ],
+          "verificationStatus": "secondary-source",
+          "retrievedAt": "2026-07-17T12:50:00Z",
+          "fieldSources": {
+            "impactFactor": {
+              "name": "WoS Journal Info",
+              "url": "https://wos-journal.info/journalid/13434",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
+            },
+            "fiveYearImpactFactor": {
+              "name": "WoS Journal Info",
+              "url": "https://wos-journal.info/journalid/13434",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
+            },
+            "bestQuartile": {
+              "name": "WoS Journal Info",
+              "url": "https://wos-journal.info/journalid/13434",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
+            },
+            "categories": {
+              "name": "WoS Journal Info",
+              "url": "https://wos-journal.info/journalid/13434",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
+            }
+          }
+        }
+      },
       "abbreviation": "Chemistry  An Asian Journal",
       "publisher": "Wiley",
       "issn": "1861-4728",
       "eissn": "1861-471X",
       "issnL": "1861-471X",
       "allIssns": [
-        "1861-4728",
-        "1861-471X"
+        "1861-471X",
+        "1861-4728"
       ],
       "homepage": "https://onlinelibrary.wiley.com/journal/1861471X",
       "countryCode": "DE",
@@ -1881,7 +2084,8 @@
           "priority": 60,
           "metricSystem": "Scopus/SCImago"
         }
-      }
+      },
+      "latestMetricYear": 2025
     },
     "electrochimica-acta": {
       "journalId": "electrochimica-acta",
@@ -1895,13 +2099,12 @@
           "jcrReleaseYear": 2026,
           "fieldSources": {
             "impactFactor": {
-              "name": "JournalSearches",
-              "url": "https://journalsearches.com/journal.php?title=electrochimica+acta",
+              "name": "WoS Journal Info",
+              "url": "https://wos-journal.info/journalid/582",
               "type": "secondary-source",
               "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-16T10:33:25.204478Z",
-              "priority": 60,
-              "note": "Backup JIF source; quartile is stored separately as Scopus quartile."
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             },
             "jcrReleaseYear": {
               "name": "JournalSearches",
@@ -1911,20 +2114,57 @@
               "retrievedAt": "2026-07-16T10:33:25.204478Z",
               "priority": 60,
               "note": "Backup JIF source; quartile is stored separately as Scopus quartile."
+            },
+            "fiveYearImpactFactor": {
+              "name": "WoS Journal Info",
+              "url": "https://wos-journal.info/journalid/582",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
+            },
+            "bestQuartile": {
+              "name": "WoS Journal Info",
+              "url": "https://wos-journal.info/journalid/582",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
+            },
+            "categories": {
+              "name": "WoS Journal Info",
+              "url": "https://wos-journal.info/journalid/582",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             }
           },
-          "verificationStatus": "secondary-source"
+          "verificationStatus": "secondary-source",
+          "fiveYearImpactFactor": 5.4,
+          "bestQuartile": "Q2",
+          "categories": [
+            {
+              "name": "Electrochemistry",
+              "quartile": "Q2"
+            }
+          ],
+          "sourceType": "secondary-source",
+          "sourceName": "WoS Journal Info",
+          "sourceUrls": [
+            "https://wos-journal.info/journalid/582"
+          ],
+          "retrievedAt": "2026-07-17T12:50:00Z"
         }
       },
       "abbreviation": "Electrochimica Acta",
       "publisher": "Elsevier BV",
       "issn": "0013-4686",
-      "eissn": "",
+      "eissn": "1873-3859",
       "issnL": "0013-4686",
       "allIssns": [
         "0013-4686",
-        "1873-3859",
-        "0965-5441"
+        "1873-3859"
       ],
       "homepage": "http://www.elsevier.com/wps/find/journaldescription.cws_home/205/description#description",
       "countryCode": "GB",
@@ -2395,12 +2635,12 @@
           "jcrReleaseYear": 2026,
           "fieldSources": {
             "impactFactor": {
-              "name": "Bioxbio",
-              "url": "https://www.bioxbio.com/journal/ENERG-ENVIRON-SCI",
+              "name": "WoS Journal Info",
+              "url": "https://wos-journal.info/journalid/60",
               "type": "secondary-source",
               "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-16T10:33:26.436221Z",
-              "priority": 90
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             },
             "totalCites": {
               "name": "Bioxbio",
@@ -2417,9 +2657,59 @@
               "verificationStatus": "secondary-source",
               "retrievedAt": "2026-07-16T10:33:26.436221Z",
               "priority": 90
+            },
+            "fiveYearImpactFactor": {
+              "name": "WoS Journal Info",
+              "url": "https://wos-journal.info/journalid/60",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
+            },
+            "bestQuartile": {
+              "name": "WoS Journal Info",
+              "url": "https://wos-journal.info/journalid/60",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
+            },
+            "categories": {
+              "name": "WoS Journal Info",
+              "url": "https://wos-journal.info/journalid/60",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             }
           },
-          "verificationStatus": "secondary-source"
+          "verificationStatus": "secondary-source",
+          "fiveYearImpactFactor": 32.7,
+          "bestQuartile": "Q1",
+          "categories": [
+            {
+              "name": "Chemistry, Multidisciplinary",
+              "quartile": "Q1"
+            },
+            {
+              "name": "Energy & Fuels",
+              "quartile": "Q1"
+            },
+            {
+              "name": "Engineering, Chemical",
+              "quartile": "Q1"
+            },
+            {
+              "name": "Environmental Sciences",
+              "quartile": "Q1"
+            }
+          ],
+          "sourceType": "secondary-source",
+          "sourceName": "WoS Journal Info",
+          "sourceUrls": [
+            "https://wos-journal.info/journalid/60"
+          ],
+          "retrievedAt": "2026-07-17T12:50:00Z"
         }
       },
       "abbreviation": "Energy Environ. Sci.",
@@ -2498,13 +2788,12 @@
           "jcrReleaseYear": 2026,
           "fieldSources": {
             "impactFactor": {
-              "name": "JournalSearches",
-              "url": "https://journalsearches.com/journal.php?title=journal+of+environmental+chemical+engineering",
+              "name": "Journal Metrics",
+              "url": "https://www.journalmetrics.org/journal/journal-of-environmental-chemical-engineering",
               "type": "secondary-source",
               "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-16T10:33:33.540930Z",
-              "priority": 60,
-              "note": "Backup JIF source; quartile is stored separately as Scopus quartile."
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             },
             "jcrReleaseYear": {
               "name": "JournalSearches",
@@ -2514,19 +2803,61 @@
               "retrievedAt": "2026-07-16T10:33:33.540930Z",
               "priority": 60,
               "note": "Backup JIF source; quartile is stored separately as Scopus quartile."
+            },
+            "fiveYearImpactFactor": {
+              "name": "Journal Metrics",
+              "url": "https://www.journalmetrics.org/journal/journal-of-environmental-chemical-engineering",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
+            },
+            "bestQuartile": {
+              "name": "Journal Metrics",
+              "url": "https://www.journalmetrics.org/journal/journal-of-environmental-chemical-engineering",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
+            },
+            "categories": {
+              "name": "Journal Metrics",
+              "url": "https://www.journalmetrics.org/journal/journal-of-environmental-chemical-engineering",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             }
           },
-          "verificationStatus": "secondary-source"
+          "verificationStatus": "secondary-source",
+          "fiveYearImpactFactor": 8.1,
+          "bestQuartile": "Q1",
+          "categories": [
+            {
+              "name": "Engineering, Chemical",
+              "quartile": "Q1"
+            },
+            {
+              "name": "Engineering, Environmental",
+              "quartile": "Q1"
+            }
+          ],
+          "sourceType": "secondary-source",
+          "sourceName": "Journal Metrics",
+          "sourceUrls": [
+            "https://www.journalmetrics.org/journal/journal-of-environmental-chemical-engineering"
+          ],
+          "retrievedAt": "2026-07-17T12:50:00Z"
         }
       },
       "abbreviation": "Journal of Environmental Chemical Engineering",
       "publisher": "Elsevier BV",
-      "issn": "2213-3437",
-      "eissn": "",
+      "issn": "2213-2929",
+      "eissn": "2213-3437",
       "issnL": "2213-2929",
       "allIssns": [
-        "2213-3437",
-        "2213-2929"
+        "2213-2929",
+        "2213-3437"
       ],
       "homepage": "https://www.journals.elsevier.com/journal-of-environmental-chemical-engineering",
       "countryCode": "NL",
@@ -2601,18 +2932,18 @@
         "J. Mater. Chem."
       ],
       "metricsByYear": {
-        "2013": {
+        "2012": {
           "impactFactor": 6.626,
           "totalArticles": 0,
           "totalCites": 83225,
           "fieldSources": {
             "impactFactor": {
-              "name": "Bioxbio",
-              "url": "https://www.bioxbio.com/journal/J-MATER-CHEM",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-16T10:33:35.384197Z",
-              "priority": 90
+              "name": "Royal Society of Chemistry",
+              "url": "https://www.rsc.org/journals-books-databases/about-journals/journal-of-materials-chemistry/",
+              "type": "publisher-page",
+              "verificationStatus": "publisher-history",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             },
             "totalArticles": {
               "name": "Bioxbio",
@@ -2629,9 +2960,51 @@
               "verificationStatus": "secondary-source",
               "retrievedAt": "2026-07-16T10:33:35.384197Z",
               "priority": 90
+            },
+            "fiveYearImpactFactor": {
+              "name": "Royal Society of Chemistry",
+              "url": "https://www.rsc.org/journals-books-databases/about-journals/journal-of-materials-chemistry/",
+              "type": "publisher-page",
+              "verificationStatus": "publisher-history",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
+            },
+            "bestQuartile": {
+              "name": "Royal Society of Chemistry",
+              "url": "https://www.rsc.org/journals-books-databases/about-journals/journal-of-materials-chemistry/",
+              "type": "publisher-page",
+              "verificationStatus": "publisher-history",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
+            },
+            "categories": {
+              "name": "Royal Society of Chemistry",
+              "url": "https://www.rsc.org/journals-books-databases/about-journals/journal-of-materials-chemistry/",
+              "type": "publisher-page",
+              "verificationStatus": "publisher-history",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             }
           },
-          "verificationStatus": "secondary-source"
+          "verificationStatus": "publisher-history",
+          "fiveYearImpactFactor": 6.859,
+          "bestQuartile": "Q1",
+          "categories": [
+            {
+              "name": "Chemistry, Physical",
+              "quartile": "Q1"
+            },
+            {
+              "name": "Materials Science, Multidisciplinary",
+              "quartile": "Q1"
+            }
+          ],
+          "sourceType": "publisher-page",
+          "sourceName": "Royal Society of Chemistry",
+          "sourceUrls": [
+            "https://www.rsc.org/journals-books-databases/about-journals/journal-of-materials-chemistry/"
+          ],
+          "retrievedAt": "2026-07-17T12:50:00Z"
         }
       },
       "abbreviation": "J. Mater. Chem.",
@@ -2705,7 +3078,7 @@
       "currentlyUsedInPublications": true,
       "country": "",
       "frequency": "",
-      "latestMetricYear": 2013,
+      "latestMetricYear": 2012,
       "scopusLatest": {
         "releaseYear": 2026,
         "source": {
@@ -2733,28 +3106,30 @@
           "bestQuartile": "Q1",
           "categories": [
             {
-              "name": "energy-related categories",
+              "name": "Electrochemistry",
+              "quartile": "Q1"
+            },
+            {
+              "name": "Energy & Fuels",
               "quartile": "Q1"
             }
           ],
           "jcrReleaseYear": 2026,
           "sourceType": "secondary-source",
-          "sourceName": "Manusights",
+          "sourceName": "Journal Metrics",
           "sourceUrls": [
-            "https://manusights.com/journals/journal-of-power-sources",
-            "https://manusights.com/blog/journal-of-power-sources-impact-factor"
+            "https://www.journalmetrics.org/journal/journal-of-power-sources"
           ],
           "verificationStatus": "secondary-source",
-          "retrievedAt": "2026-07-16T09:25:23.807019Z",
+          "retrievedAt": "2026-07-17T12:50:00Z",
           "fieldSources": {
             "impactFactor": {
-              "name": "JournalSearches",
-              "url": "https://journalsearches.com/journal.php?title=journal+of+power+sources",
+              "name": "Journal Metrics",
+              "url": "https://www.journalmetrics.org/journal/journal-of-power-sources",
               "type": "secondary-source",
               "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-16T10:33:41.849837Z",
-              "priority": 60,
-              "note": "Backup JIF source; quartile is stored separately as Scopus quartile."
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             },
             "jcrReleaseYear": {
               "name": "JournalSearches",
@@ -2766,12 +3141,12 @@
               "note": "Backup JIF source; quartile is stored separately as Scopus quartile."
             },
             "fiveYearImpactFactor": {
-              "name": "Manusights",
-              "url": "https://manusights.com/blog/journal-of-power-sources-impact-factor",
+              "name": "Journal Metrics",
+              "url": "https://www.journalmetrics.org/journal/journal-of-power-sources",
               "type": "secondary-source",
               "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-16T10:33:41.089941Z",
-              "priority": 80
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             },
             "citeScore": {
               "name": "Manusights",
@@ -2780,6 +3155,22 @@
               "verificationStatus": "secondary-source",
               "retrievedAt": "2026-07-16T10:33:41.089941Z",
               "priority": 80
+            },
+            "bestQuartile": {
+              "name": "Journal Metrics",
+              "url": "https://www.journalmetrics.org/journal/journal-of-power-sources",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
+            },
+            "categories": {
+              "name": "Journal Metrics",
+              "url": "https://www.journalmetrics.org/journal/journal-of-power-sources",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             }
           }
         }
@@ -2791,8 +3182,7 @@
       "issnL": "0378-7753",
       "allIssns": [
         "0378-7753",
-        "1873-2755",
-        "0965-5441"
+        "1873-2755"
       ],
       "homepage": "http://www.elsevier.com/wps/find/journaldescription.cws_home/504093/description",
       "countryCode": "NL",
@@ -2888,13 +3278,12 @@
           "jcrReleaseYear": 2026,
           "fieldSources": {
             "impactFactor": {
-              "name": "JournalSearches",
-              "url": "https://journalsearches.com/journal.php?title=materials+today+chemistry",
+              "name": "WoS Journal Info",
+              "url": "https://wos-journal.info/journalid/494",
               "type": "secondary-source",
               "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-16T10:33:46.189354Z",
-              "priority": 60,
-              "note": "Backup JIF source; quartile is stored separately as Scopus quartile."
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             },
             "jcrReleaseYear": {
               "name": "JournalSearches",
@@ -2904,15 +3293,57 @@
               "retrievedAt": "2026-07-16T10:33:46.189354Z",
               "priority": 60,
               "note": "Backup JIF source; quartile is stored separately as Scopus quartile."
+            },
+            "fiveYearImpactFactor": {
+              "name": "WoS Journal Info",
+              "url": "https://wos-journal.info/journalid/494",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
+            },
+            "bestQuartile": {
+              "name": "WoS Journal Info",
+              "url": "https://wos-journal.info/journalid/494",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
+            },
+            "categories": {
+              "name": "WoS Journal Info",
+              "url": "https://wos-journal.info/journalid/494",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             }
           },
-          "verificationStatus": "secondary-source"
+          "verificationStatus": "secondary-source",
+          "fiveYearImpactFactor": 7.8,
+          "bestQuartile": "Q1",
+          "categories": [
+            {
+              "name": "Chemistry, Multidisciplinary",
+              "quartile": "Q1"
+            },
+            {
+              "name": "Materials Science, Multidisciplinary",
+              "quartile": "Q1"
+            }
+          ],
+          "sourceType": "secondary-source",
+          "sourceName": "WoS Journal Info",
+          "sourceUrls": [
+            "https://wos-journal.info/journalid/494"
+          ],
+          "retrievedAt": "2026-07-17T12:50:00Z"
         }
       },
       "abbreviation": "Materials Today Chemistry",
       "publisher": "Elsevier BV",
       "issn": "2468-5194",
-      "eissn": "",
+      "eissn": "2468-5194",
       "issnL": "2468-5194",
       "allIssns": [
         "2468-5194"
@@ -2994,13 +3425,12 @@
           "jcrReleaseYear": 2026,
           "fieldSources": {
             "impactFactor": {
-              "name": "JournalSearches",
-              "url": "https://journalsearches.com/journal.php?title=materials+today+energy",
+              "name": "Journal Metrics",
+              "url": "https://www.journalmetrics.org/journal/materials-today-energy",
               "type": "secondary-source",
               "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-16T10:33:50.509023Z",
-              "priority": 60,
-              "note": "Backup JIF source; quartile is stored separately as Scopus quartile."
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             },
             "jcrReleaseYear": {
               "name": "JournalSearches",
@@ -3010,15 +3440,61 @@
               "retrievedAt": "2026-07-16T10:33:50.509023Z",
               "priority": 60,
               "note": "Backup JIF source; quartile is stored separately as Scopus quartile."
+            },
+            "fiveYearImpactFactor": {
+              "name": "Journal Metrics",
+              "url": "https://www.journalmetrics.org/journal/materials-today-energy",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
+            },
+            "bestQuartile": {
+              "name": "Journal Metrics",
+              "url": "https://www.journalmetrics.org/journal/materials-today-energy",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
+            },
+            "categories": {
+              "name": "Journal Metrics",
+              "url": "https://www.journalmetrics.org/journal/materials-today-energy",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             }
           },
-          "verificationStatus": "secondary-source"
+          "verificationStatus": "secondary-source",
+          "fiveYearImpactFactor": 9.0,
+          "bestQuartile": "Q1",
+          "categories": [
+            {
+              "name": "Chemistry, Physical",
+              "quartile": "Q1"
+            },
+            {
+              "name": "Energy & Fuels",
+              "quartile": "Q1"
+            },
+            {
+              "name": "Materials Science, Multidisciplinary",
+              "quartile": "Q1"
+            }
+          ],
+          "sourceType": "secondary-source",
+          "sourceName": "Journal Metrics",
+          "sourceUrls": [
+            "https://www.journalmetrics.org/journal/materials-today-energy"
+          ],
+          "retrievedAt": "2026-07-17T12:50:00Z"
         }
       },
       "abbreviation": "Materials Today Energy",
       "publisher": "Elsevier BV",
       "issn": "2468-6069",
-      "eissn": "",
+      "eissn": "2468-6069",
       "issnL": "2468-6069",
       "allIssns": [
         "2468-6069"
@@ -3100,13 +3576,12 @@
           "jcrReleaseYear": 2026,
           "fieldSources": {
             "impactFactor": {
-              "name": "JournalSearches",
-              "url": "https://journalsearches.com/journal.php?title=nanomaterials",
+              "name": "Publisher journal page",
+              "url": "https://www.mdpi.com/journal/nanomaterials",
               "type": "secondary-source",
               "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-16T10:33:54.249422Z",
-              "priority": 60,
-              "note": "Backup JIF source; quartile is stored separately as Scopus quartile."
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             },
             "jcrReleaseYear": {
               "name": "JournalSearches",
@@ -3116,9 +3591,59 @@
               "retrievedAt": "2026-07-16T10:33:54.249422Z",
               "priority": 60,
               "note": "Backup JIF source; quartile is stored separately as Scopus quartile."
+            },
+            "fiveYearImpactFactor": {
+              "name": "Publisher journal page",
+              "url": "https://www.mdpi.com/journal/nanomaterials",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
+            },
+            "bestQuartile": {
+              "name": "Publisher journal page",
+              "url": "https://www.mdpi.com/journal/nanomaterials",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
+            },
+            "categories": {
+              "name": "Publisher journal page",
+              "url": "https://www.mdpi.com/journal/nanomaterials",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             }
           },
-          "verificationStatus": "secondary-source"
+          "verificationStatus": "secondary-source",
+          "fiveYearImpactFactor": 5.1,
+          "bestQuartile": "Q2",
+          "categories": [
+            {
+              "name": "Chemistry, Multidisciplinary",
+              "quartile": "Q2"
+            },
+            {
+              "name": "Materials Science, Multidisciplinary",
+              "quartile": "Q2"
+            },
+            {
+              "name": "Nanoscience & Nanotechnology",
+              "quartile": "Q2"
+            },
+            {
+              "name": "Physics, Applied",
+              "quartile": "Q2"
+            }
+          ],
+          "sourceType": "secondary-source",
+          "sourceName": "Publisher journal page",
+          "sourceUrls": [
+            "https://www.mdpi.com/journal/nanomaterials"
+          ],
+          "retrievedAt": "2026-07-17T12:50:00Z"
         }
       },
       "abbreviation": "Nanomaterials",
@@ -3207,13 +3732,12 @@
           "jcrReleaseYear": 2026,
           "fieldSources": {
             "impactFactor": {
-              "name": "JournalSearches",
-              "url": "https://journalsearches.com/journal.php?title=optics+communications",
+              "name": "WoS Journal Info",
+              "url": "https://wos-journal.info/journalid/18211",
               "type": "secondary-source",
               "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-16T10:33:58.687443Z",
-              "priority": 60,
-              "note": "Backup JIF source; quartile is stored separately as Scopus quartile."
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             },
             "jcrReleaseYear": {
               "name": "JournalSearches",
@@ -3223,20 +3747,57 @@
               "retrievedAt": "2026-07-16T10:33:58.687443Z",
               "priority": 60,
               "note": "Backup JIF source; quartile is stored separately as Scopus quartile."
+            },
+            "fiveYearImpactFactor": {
+              "name": "WoS Journal Info",
+              "url": "https://wos-journal.info/journalid/18211",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
+            },
+            "bestQuartile": {
+              "name": "WoS Journal Info",
+              "url": "https://wos-journal.info/journalid/18211",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
+            },
+            "categories": {
+              "name": "WoS Journal Info",
+              "url": "https://wos-journal.info/journalid/18211",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             }
           },
-          "verificationStatus": "secondary-source"
+          "verificationStatus": "secondary-source",
+          "fiveYearImpactFactor": 2.3,
+          "bestQuartile": "Q3",
+          "categories": [
+            {
+              "name": "Optics",
+              "quartile": "Q3"
+            }
+          ],
+          "sourceType": "secondary-source",
+          "sourceName": "WoS Journal Info",
+          "sourceUrls": [
+            "https://wos-journal.info/journalid/18211"
+          ],
+          "retrievedAt": "2026-07-17T12:50:00Z"
         }
       },
       "abbreviation": "Optics Communications",
       "publisher": "Elsevier BV",
       "issn": "0030-4018",
-      "eissn": "",
+      "eissn": "1873-0310",
       "issnL": "0030-4018",
       "allIssns": [
         "0030-4018",
-        "1873-0310",
-        "0217-7323"
+        "1873-0310"
       ],
       "homepage": "http://www.elsevier.com/wps/find/journaldescription.cws_home/505711/description",
       "countryCode": "NL",
@@ -3315,13 +3876,12 @@
           "jcrReleaseYear": 2026,
           "fieldSources": {
             "impactFactor": {
-              "name": "JournalSearches",
-              "url": "https://journalsearches.com/journal.php?title=organic+electronics",
+              "name": "Journal Metrics",
+              "url": "https://www.journalmetrics.org/journal/organic-electronics",
               "type": "secondary-source",
               "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-16T10:34:03.302928Z",
-              "priority": 60,
-              "note": "Backup JIF source; quartile is stored separately as Scopus quartile."
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             },
             "jcrReleaseYear": {
               "name": "JournalSearches",
@@ -3331,15 +3891,57 @@
               "retrievedAt": "2026-07-16T10:34:03.302928Z",
               "priority": 60,
               "note": "Backup JIF source; quartile is stored separately as Scopus quartile."
+            },
+            "fiveYearImpactFactor": {
+              "name": "Journal Metrics",
+              "url": "https://www.journalmetrics.org/journal/organic-electronics",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
+            },
+            "bestQuartile": {
+              "name": "Journal Metrics",
+              "url": "https://www.journalmetrics.org/journal/organic-electronics",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
+            },
+            "categories": {
+              "name": "Journal Metrics",
+              "url": "https://www.journalmetrics.org/journal/organic-electronics",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             }
           },
-          "verificationStatus": "secondary-source"
+          "verificationStatus": "secondary-source",
+          "fiveYearImpactFactor": 2.9,
+          "bestQuartile": "Q3",
+          "categories": [
+            {
+              "name": "Materials Science, Multidisciplinary",
+              "quartile": "Q3"
+            },
+            {
+              "name": "Physics, Applied",
+              "quartile": "Q3"
+            }
+          ],
+          "sourceType": "secondary-source",
+          "sourceName": "Journal Metrics",
+          "sourceUrls": [
+            "https://www.journalmetrics.org/journal/organic-electronics"
+          ],
+          "retrievedAt": "2026-07-17T12:50:00Z"
         }
       },
       "abbreviation": "Organic Electronics",
       "publisher": "Elsevier BV",
       "issn": "1566-1199",
-      "eissn": "",
+      "eissn": "1878-5530",
       "issnL": "1566-1199",
       "allIssns": [
         "1566-1199",
@@ -3422,13 +4024,12 @@
           "jcrReleaseYear": 2026,
           "fieldSources": {
             "impactFactor": {
-              "name": "JournalSearches",
-              "url": "https://journalsearches.com/journal.php?title=polymers",
+              "name": "WoS Journal Info",
+              "url": "https://wos-journal.info/journalid/13304",
               "type": "secondary-source",
               "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-16T10:34:07.161118Z",
-              "priority": 60,
-              "note": "Backup JIF source; quartile is stored separately as Scopus quartile."
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             },
             "jcrReleaseYear": {
               "name": "JournalSearches",
@@ -3438,9 +4039,47 @@
               "retrievedAt": "2026-07-16T10:34:07.161118Z",
               "priority": 60,
               "note": "Backup JIF source; quartile is stored separately as Scopus quartile."
+            },
+            "fiveYearImpactFactor": {
+              "name": "WoS Journal Info",
+              "url": "https://wos-journal.info/journalid/13304",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
+            },
+            "bestQuartile": {
+              "name": "WoS Journal Info",
+              "url": "https://wos-journal.info/journalid/13304",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
+            },
+            "categories": {
+              "name": "WoS Journal Info",
+              "url": "https://wos-journal.info/journalid/13304",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             }
           },
-          "verificationStatus": "secondary-source"
+          "verificationStatus": "secondary-source",
+          "fiveYearImpactFactor": 6.1,
+          "bestQuartile": "Q1",
+          "categories": [
+            {
+              "name": "Polymer Science",
+              "quartile": "Q1"
+            }
+          ],
+          "sourceType": "secondary-source",
+          "sourceName": "WoS Journal Info",
+          "sourceUrls": [
+            "https://wos-journal.info/journalid/13304"
+          ],
+          "retrievedAt": "2026-07-17T12:50:00Z"
         }
       },
       "abbreviation": "Polymers",
@@ -3529,13 +4168,12 @@
           "jcrReleaseYear": 2026,
           "fieldSources": {
             "impactFactor": {
-              "name": "JournalSearches",
-              "url": "https://journalsearches.com/journal.php?title=separation+and+purification+technology",
+              "name": "Journal Metrics",
+              "url": "https://www.journalmetrics.org/journal/separation-and-purification-technology",
               "type": "secondary-source",
               "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-16T10:34:11.485351Z",
-              "priority": 60,
-              "note": "Backup JIF source; quartile is stored separately as Scopus quartile."
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             },
             "jcrReleaseYear": {
               "name": "JournalSearches",
@@ -3545,15 +4183,53 @@
               "retrievedAt": "2026-07-16T10:34:11.485351Z",
               "priority": 60,
               "note": "Backup JIF source; quartile is stored separately as Scopus quartile."
+            },
+            "fiveYearImpactFactor": {
+              "name": "Journal Metrics",
+              "url": "https://www.journalmetrics.org/journal/separation-and-purification-technology",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
+            },
+            "bestQuartile": {
+              "name": "Journal Metrics",
+              "url": "https://www.journalmetrics.org/journal/separation-and-purification-technology",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
+            },
+            "categories": {
+              "name": "Journal Metrics",
+              "url": "https://www.journalmetrics.org/journal/separation-and-purification-technology",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             }
           },
-          "verificationStatus": "secondary-source"
+          "verificationStatus": "secondary-source",
+          "fiveYearImpactFactor": 9.6,
+          "bestQuartile": "Q1",
+          "categories": [
+            {
+              "name": "Engineering, Chemical",
+              "quartile": "Q1"
+            }
+          ],
+          "sourceType": "secondary-source",
+          "sourceName": "Journal Metrics",
+          "sourceUrls": [
+            "https://www.journalmetrics.org/journal/separation-and-purification-technology"
+          ],
+          "retrievedAt": "2026-07-17T12:50:00Z"
         }
       },
       "abbreviation": "Separation and Purification Technology",
       "publisher": "Elsevier BV",
       "issn": "1383-5866",
-      "eissn": "",
+      "eissn": "1873-3794",
       "issnL": "1383-5866",
       "allIssns": [
         "1383-5866",
@@ -3636,13 +4312,12 @@
           "jcrReleaseYear": 2026,
           "fieldSources": {
             "impactFactor": {
-              "name": "JournalSearches",
-              "url": "https://journalsearches.com/journal.php?title=solar+energy",
+              "name": "Journal Metrics",
+              "url": "https://www.journalmetrics.org/journal/solar-energy",
               "type": "secondary-source",
               "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-16T11:54:37.427969Z",
-              "priority": 60,
-              "note": "Backup JIF source; quartile is stored separately as Scopus quartile."
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             },
             "jcrReleaseYear": {
               "name": "JournalSearches",
@@ -3652,15 +4327,53 @@
               "retrievedAt": "2026-07-16T11:54:37.427969Z",
               "priority": 60,
               "note": "Backup JIF source; quartile is stored separately as Scopus quartile."
+            },
+            "fiveYearImpactFactor": {
+              "name": "Journal Metrics",
+              "url": "https://www.journalmetrics.org/journal/solar-energy",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
+            },
+            "bestQuartile": {
+              "name": "Journal Metrics",
+              "url": "https://www.journalmetrics.org/journal/solar-energy",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
+            },
+            "categories": {
+              "name": "Journal Metrics",
+              "url": "https://www.journalmetrics.org/journal/solar-energy",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             }
           },
-          "verificationStatus": "secondary-source"
+          "verificationStatus": "secondary-source",
+          "fiveYearImpactFactor": 7.2,
+          "bestQuartile": "Q2",
+          "categories": [
+            {
+              "name": "Energy & Fuels",
+              "quartile": "Q2"
+            }
+          ],
+          "sourceType": "secondary-source",
+          "sourceName": "Journal Metrics",
+          "sourceUrls": [
+            "https://www.journalmetrics.org/journal/solar-energy"
+          ],
+          "retrievedAt": "2026-07-17T12:50:00Z"
         }
       },
       "abbreviation": "Solar Energy",
       "publisher": "Elsevier BV",
       "issn": "0038-092X",
-      "eissn": "",
+      "eissn": "1471-1257",
       "issnL": "0038-092X",
       "allIssns": [
         "0038-092X",
@@ -3743,13 +4456,12 @@
           "jcrReleaseYear": 2026,
           "fieldSources": {
             "impactFactor": {
-              "name": "JournalSearches",
-              "url": "https://journalsearches.com/journal.php?title=solar+energy+materials+and+solar+cells",
+              "name": "WoS Journal Info",
+              "url": "https://wos-journal.info/journalid/589",
               "type": "secondary-source",
               "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-16T10:34:20.213950Z",
-              "priority": 60,
-              "note": "Backup JIF source; quartile is stored separately as Scopus quartile."
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             },
             "jcrReleaseYear": {
               "name": "JournalSearches",
@@ -3759,20 +4471,65 @@
               "retrievedAt": "2026-07-16T10:34:20.213950Z",
               "priority": 60,
               "note": "Backup JIF source; quartile is stored separately as Scopus quartile."
+            },
+            "fiveYearImpactFactor": {
+              "name": "WoS Journal Info",
+              "url": "https://wos-journal.info/journalid/589",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
+            },
+            "bestQuartile": {
+              "name": "WoS Journal Info",
+              "url": "https://wos-journal.info/journalid/589",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
+            },
+            "categories": {
+              "name": "WoS Journal Info",
+              "url": "https://wos-journal.info/journalid/589",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             }
           },
-          "verificationStatus": "secondary-source"
+          "verificationStatus": "secondary-source",
+          "fiveYearImpactFactor": 6.3,
+          "bestQuartile": "Q1",
+          "categories": [
+            {
+              "name": "Energy & Fuels",
+              "quartile": "Q2"
+            },
+            {
+              "name": "Materials Science, Multidisciplinary",
+              "quartile": "Q2"
+            },
+            {
+              "name": "Physics, Applied",
+              "quartile": "Q1"
+            }
+          ],
+          "sourceType": "secondary-source",
+          "sourceName": "WoS Journal Info",
+          "sourceUrls": [
+            "https://wos-journal.info/journalid/589"
+          ],
+          "retrievedAt": "2026-07-17T12:50:00Z"
         }
       },
       "abbreviation": "Solar Energy Materials and Solar Cells",
       "publisher": "Elsevier BV",
       "issn": "0927-0248",
-      "eissn": "",
+      "eissn": "1879-3398",
       "issnL": "0927-0248",
       "allIssns": [
         "0927-0248",
-        "1879-3398",
-        "1537-6494"
+        "1879-3398"
       ],
       "homepage": "https://www.sciencedirect.com/journal/solar-energy-materials-and-solar-cellsnals&journal=09270248",
       "countryCode": "NL",
@@ -3852,13 +4609,12 @@
           "jcrReleaseYear": 2026,
           "fieldSources": {
             "impactFactor": {
-              "name": "JournalSearches",
-              "url": "https://journalsearches.com/journal.php?title=solar+rrl",
+              "name": "Journal Metrics",
+              "url": "https://www.journalmetrics.org/journal/solar-rrl",
               "type": "secondary-source",
               "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-16T11:54:50.146054Z",
-              "priority": 60,
-              "note": "Backup JIF source; quartile is stored separately as Scopus quartile."
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             },
             "jcrReleaseYear": {
               "name": "JournalSearches",
@@ -3868,9 +4624,51 @@
               "retrievedAt": "2026-07-16T11:54:50.146054Z",
               "priority": 60,
               "note": "Backup JIF source; quartile is stored separately as Scopus quartile."
+            },
+            "fiveYearImpactFactor": {
+              "name": "Journal Metrics",
+              "url": "https://www.journalmetrics.org/journal/solar-rrl",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
+            },
+            "bestQuartile": {
+              "name": "Journal Metrics",
+              "url": "https://www.journalmetrics.org/journal/solar-rrl",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
+            },
+            "categories": {
+              "name": "Journal Metrics",
+              "url": "https://www.journalmetrics.org/journal/solar-rrl",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             }
           },
-          "verificationStatus": "secondary-source"
+          "verificationStatus": "secondary-source",
+          "fiveYearImpactFactor": 5.3,
+          "bestQuartile": "Q2",
+          "categories": [
+            {
+              "name": "Energy & Fuels",
+              "quartile": "Q3"
+            },
+            {
+              "name": "Materials Science, Multidisciplinary",
+              "quartile": "Q2"
+            }
+          ],
+          "sourceType": "secondary-source",
+          "sourceName": "Journal Metrics",
+          "sourceUrls": [
+            "https://www.journalmetrics.org/journal/solar-rrl"
+          ],
+          "retrievedAt": "2026-07-17T12:50:00Z"
         }
       },
       "abbreviation": "Solar RRL",
@@ -4333,12 +5131,12 @@
           "jcrReleaseYear": 2026,
           "fieldSources": {
             "impactFactor": {
-              "name": "Bioxbio",
-              "url": "https://www.bioxbio.com/journal/J-PHYS-CHEM-C",
+              "name": "Publisher journal page",
+              "url": "https://pubs.acs.org/journal/jpccck",
               "type": "secondary-source",
               "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-16T10:34:26.506834Z",
-              "priority": 90
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             },
             "totalCites": {
               "name": "Bioxbio",
@@ -4355,9 +5153,55 @@
               "verificationStatus": "secondary-source",
               "retrievedAt": "2026-07-16T10:34:26.506834Z",
               "priority": 90
+            },
+            "fiveYearImpactFactor": {
+              "name": "Publisher journal page",
+              "url": "https://pubs.acs.org/journal/jpccck",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
+            },
+            "bestQuartile": {
+              "name": "Publisher journal page",
+              "url": "https://pubs.acs.org/journal/jpccck",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
+            },
+            "categories": {
+              "name": "Publisher journal page",
+              "url": "https://pubs.acs.org/journal/jpccck",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             }
           },
-          "verificationStatus": "secondary-source"
+          "verificationStatus": "secondary-source",
+          "fiveYearImpactFactor": 3.5,
+          "bestQuartile": "Q3",
+          "categories": [
+            {
+              "name": "Chemistry, Physical",
+              "quartile": "Q3"
+            },
+            {
+              "name": "Materials Science, Multidisciplinary",
+              "quartile": "Q3"
+            },
+            {
+              "name": "Nanoscience & Nanotechnology",
+              "quartile": "Q3"
+            }
+          ],
+          "sourceType": "secondary-source",
+          "sourceName": "Publisher journal page",
+          "sourceUrls": [
+            "https://pubs.acs.org/journal/jpccck"
+          ],
+          "retrievedAt": "2026-07-17T12:50:00Z"
         }
       },
       "abbreviation": "J. Phys. Chem. C",
@@ -4367,8 +5211,7 @@
       "issnL": "1932-7447",
       "allIssns": [
         "1932-7447",
-        "1932-7455",
-        "1520-5215"
+        "1932-7455"
       ],
       "homepage": "http://pubs.acs.org/journals/jpccck/index.html",
       "countryCode": "US",
@@ -4808,13 +5651,12 @@
           "jcrReleaseYear": 2026,
           "fieldSources": {
             "impactFactor": {
-              "name": "JournalSearches",
-              "url": "https://journalsearches.com/journal.php?title=thin+solid+films",
+              "name": "Publisher journal page",
+              "url": "https://www.sciencedirect.com/journal/thin-solid-films",
               "type": "secondary-source",
               "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-16T10:34:33.181870Z",
-              "priority": 60,
-              "note": "Backup JIF source; quartile is stored separately as Scopus quartile."
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             },
             "jcrReleaseYear": {
               "name": "JournalSearches",
@@ -4832,21 +5674,62 @@
               "verificationStatus": "secondary-source",
               "retrievedAt": "2026-07-16T10:34:30.502985Z",
               "priority": 90
+            },
+            "fiveYearImpactFactor": {
+              "name": "Publisher journal page",
+              "url": "https://www.sciencedirect.com/journal/thin-solid-films",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
+            },
+            "bestQuartile": {
+              "name": "Publisher journal page",
+              "url": "https://www.sciencedirect.com/journal/thin-solid-films",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
+            },
+            "categories": {
+              "name": "Publisher journal page",
+              "url": "https://www.sciencedirect.com/journal/thin-solid-films",
+              "type": "secondary-source",
+              "verificationStatus": "secondary-source",
+              "retrievedAt": "2026-07-17T12:50:00Z",
+              "priority": 95
             }
           },
           "verificationStatus": "secondary-source",
-          "totalCites": 30785
+          "totalCites": 30785,
+          "fiveYearImpactFactor": 2.2,
+          "bestQuartile": "Q3",
+          "categories": [
+            {
+              "name": "Materials Science, Coatings & Films",
+              "quartile": "Q3"
+            },
+            {
+              "name": "Physics, Applied",
+              "quartile": "Q3"
+            }
+          ],
+          "sourceType": "secondary-source",
+          "sourceName": "Publisher journal page",
+          "sourceUrls": [
+            "https://www.sciencedirect.com/journal/thin-solid-films"
+          ],
+          "retrievedAt": "2026-07-17T12:50:00Z"
         }
       },
       "abbreviation": "Thin Solid Films",
       "publisher": "Elsevier BV",
       "issn": "0040-6090",
-      "eissn": "",
+      "eissn": "1879-2731",
       "issnL": "0040-6090",
       "allIssns": [
         "0040-6090",
-        "1879-2731",
-        "0217-7323"
+        "1879-2731"
       ],
       "homepage": "http://www.journals.elsevier.com/thin-solid-films/",
       "countryCode": "NL",
