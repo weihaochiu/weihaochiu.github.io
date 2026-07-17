@@ -5,7 +5,7 @@
   "publicationCount": 37,
   "verifiedCount": 37,
   "notFoundCount": 0,
-  "lastSuccessfulUpdate": "2026-07-16T05:21:54Z",
+  "lastSuccessfulUpdate": "2026-07-17T05:24:12Z",
   "records": {
     "10.1016/j.cej.2026.177494": {
       "status": "verified",
@@ -23,7 +23,7 @@
       "openAlexId": "W7168190148",
       "url": "https://openalex.org/W7168190148",
       "citationCount": 0,
-      "openAlexUpdatedDate": "2026-07-15T18:14:33.161393"
+      "openAlexUpdatedDate": "2026-07-15T05:50:42.429089"
     },
     "10.1016/j.solener.2026.114430": {
       "status": "verified",
@@ -67,8 +67,8 @@
       "title": "MOF- &amp; COF-integrated composite separators/membranes: innovations for sustainable and high-performance redox flow batteries",
       "openAlexId": "W4411847970",
       "url": "https://openalex.org/W4411847970",
-      "citationCount": 5,
-      "openAlexUpdatedDate": "2026-06-15T08:34:33.830935"
+      "citationCount": 6,
+      "openAlexUpdatedDate": "2026-07-16T13:24:37.021932"
     },
     "10.1002/solr.202500538": {
       "status": "verified",
