@@ -1,10 +1,10 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-07-17T12:50:00Z",
+  "lastUpdated": "2026-07-17T13:15:00Z",
   "journalCount": 22,
   "activeJournalCount": 22,
   "sourcePolicy": {
-    "primaryMetricSource": "Row-specific verified source URL",
+    "primaryMetricSource": "Clarivate Journal Citation Reports profile PDF and profile URL",
     "backupMetricSources": [
       "Bioxbio",
       "Manusights",
@@ -22,7 +22,7 @@
       "lastResortCurrentImpactFactor": "JournalSearches may fill missing JIF values.",
       "quartileSeparation": "JournalSearches quartiles are stored as Scopus quartiles and never treated as JCR quartiles."
     },
-    "note": "2025 JIF values correspond to the JCR release published in 2026. bestQuartile records the best quartile among all listed JCR categories. Values remain secondary-source observations unless the URL is an official publisher page."
+    "note": "JIF, JCR categories, and JIF quartiles for all 22 journals were verified against user-provided Clarivate JCR profile PDFs on 2026-07-17. The PDFs do not display 5-year JIF, so fiveYearImpactFactor remains secondary-source data."
   },
   "journals": {
     "advanced-functional-materials": {
@@ -427,12 +427,12 @@
           "jcrReleaseYear": 2026,
           "fieldSources": {
             "impactFactor": {
-              "name": "Journal Metrics",
-              "url": "https://www.journalmetrics.org/journal/advanced-functional-materials",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=ADV FUNCT MATER&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             },
             "jcrReleaseYear": {
               "name": "JournalSearches",
@@ -468,30 +468,34 @@
               "priority": 95
             },
             "bestQuartile": {
-              "name": "Journal Metrics",
-              "url": "https://www.journalmetrics.org/journal/advanced-functional-materials",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=ADV FUNCT MATER&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             },
             "categories": {
-              "name": "Journal Metrics",
-              "url": "https://www.journalmetrics.org/journal/advanced-functional-materials",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=ADV FUNCT MATER&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             }
           },
-          "verificationStatus": "secondary-source",
+          "verificationStatus": "official-jcr-pdf-verified",
           "citeScore": 28.7,
           "totalCites": 413943,
           "fiveYearImpactFactor": 20.8,
           "bestQuartile": "Q1",
           "categories": [
             {
-              "name": "Chemistry, Multidisciplinary",
+              "name": "Nanoscience & Nanotechnology",
+              "quartile": "Q1"
+            },
+            {
+              "name": "Physics, Condensed Matter",
               "quartile": "Q1"
             },
             {
@@ -499,11 +503,7 @@
               "quartile": "Q1"
             },
             {
-              "name": "Materials Science, Multidisciplinary",
-              "quartile": "Q1"
-            },
-            {
-              "name": "Nanoscience & Nanotechnology",
+              "name": "Chemistry, Multidisciplinary",
               "quartile": "Q1"
             },
             {
@@ -511,16 +511,19 @@
               "quartile": "Q1"
             },
             {
-              "name": "Physics, Condensed Matter",
+              "name": "Materials Science, Multidisciplinary",
               "quartile": "Q1"
             }
           ],
-          "sourceType": "secondary-source",
-          "sourceName": "Journal Metrics",
+          "sourceType": "official-jcr-profile",
+          "sourceName": "Clarivate Journal Citation Reports",
           "sourceUrls": [
-            "https://www.journalmetrics.org/journal/advanced-functional-materials"
+            "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=ADV FUNCT MATER&year=2025"
           ],
-          "retrievedAt": "2026-07-17T12:50:00Z"
+          "retrievedAt": "2026-07-17T13:12:00Z",
+          "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=ADV FUNCT MATER&year=2025",
+          "officialJcrPdfVerified": true,
+          "fiveYearImpactFactorVerificationStatus": "not-present-in-jcr-pdf"
         }
       },
       "abbreviation": "Adv Funct Materials",
@@ -615,7 +618,9 @@
           "priority": 60,
           "metricSystem": "Scopus/SCImago"
         }
-      }
+      },
+      "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=ADV FUNCT MATER&year=2025",
+      "jcrPdfVerificationStatus": "verified-from-uploaded-jcr-pdf"
     },
     "advanced-science": {
       "journalId": "advanced-science",
@@ -629,12 +634,12 @@
           "jcrReleaseYear": 2026,
           "fieldSources": {
             "impactFactor": {
-              "name": "WoS Journal Info",
-              "url": "https://wos-journal.info/journalid/11627",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=ADV SCI&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             },
             "jcrReleaseYear": {
               "name": "JournalSearches",
@@ -662,27 +667,31 @@
               "priority": 95
             },
             "bestQuartile": {
-              "name": "WoS Journal Info",
-              "url": "https://wos-journal.info/journalid/11627",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=ADV SCI&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             },
             "categories": {
-              "name": "WoS Journal Info",
-              "url": "https://wos-journal.info/journalid/11627",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=ADV SCI&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             }
           },
-          "verificationStatus": "secondary-source",
+          "verificationStatus": "official-jcr-pdf-verified",
           "citeScore": 18.2,
           "fiveYearImpactFactor": 15.6,
           "bestQuartile": "Q1",
           "categories": [
+            {
+              "name": "Nanoscience & Nanotechnology",
+              "quartile": "Q1"
+            },
             {
               "name": "Chemistry, Multidisciplinary",
               "quartile": "Q1"
@@ -690,18 +699,17 @@
             {
               "name": "Materials Science, Multidisciplinary",
               "quartile": "Q1"
-            },
-            {
-              "name": "Nanoscience & Nanotechnology",
-              "quartile": "Q1"
             }
           ],
-          "sourceType": "secondary-source",
-          "sourceName": "WoS Journal Info",
+          "sourceType": "official-jcr-profile",
+          "sourceName": "Clarivate Journal Citation Reports",
           "sourceUrls": [
-            "https://wos-journal.info/journalid/11627"
+            "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=ADV SCI&year=2025"
           ],
-          "retrievedAt": "2026-07-17T12:50:00Z"
+          "retrievedAt": "2026-07-17T13:12:00Z",
+          "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=ADV SCI&year=2025",
+          "officialJcrPdfVerified": true,
+          "fiveYearImpactFactorVerificationStatus": "not-present-in-jcr-pdf"
         }
       },
       "abbreviation": "Advanced Science",
@@ -786,7 +794,9 @@
           "priority": 60,
           "metricSystem": "Scopus/SCImago"
         }
-      }
+      },
+      "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=ADV SCI&year=2025",
+      "jcrPdfVerificationStatus": "verified-from-uploaded-jcr-pdf"
     },
     "chemical-communications": {
       "journalId": "chemical-communications",
@@ -1190,12 +1200,12 @@
           "jcrReleaseYear": 2026,
           "fieldSources": {
             "impactFactor": {
-              "name": "Journal Metrics",
-              "url": "https://www.journalmetrics.org/journal/chemical-communications",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=CHEM COMMUN&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             },
             "jcrReleaseYear": {
               "name": "JournalSearches",
@@ -1231,23 +1241,23 @@
               "priority": 80
             },
             "bestQuartile": {
-              "name": "Journal Metrics",
-              "url": "https://www.journalmetrics.org/journal/chemical-communications",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=CHEM COMMUN&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             },
             "categories": {
-              "name": "Journal Metrics",
-              "url": "https://www.journalmetrics.org/journal/chemical-communications",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=CHEM COMMUN&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             }
           },
-          "verificationStatus": "secondary-source",
+          "verificationStatus": "official-jcr-pdf-verified",
           "fiveYearImpactFactor": 4.3,
           "totalCites": 154149,
           "citeScore": 7.2,
@@ -1258,12 +1268,15 @@
               "quartile": "Q2"
             }
           ],
-          "sourceType": "secondary-source",
-          "sourceName": "Journal Metrics",
+          "sourceType": "official-jcr-profile",
+          "sourceName": "Clarivate Journal Citation Reports",
           "sourceUrls": [
-            "https://www.journalmetrics.org/journal/chemical-communications"
+            "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=CHEM COMMUN&year=2025"
           ],
-          "retrievedAt": "2026-07-17T12:50:00Z"
+          "retrievedAt": "2026-07-17T13:12:00Z",
+          "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=CHEM COMMUN&year=2025",
+          "officialJcrPdfVerified": true,
+          "fiveYearImpactFactorVerificationStatus": "not-present-in-jcr-pdf"
         }
       },
       "abbreviation": "Chem. Commun.",
@@ -1358,7 +1371,9 @@
           "priority": 60,
           "metricSystem": "Scopus/SCImago"
         }
-      }
+      },
+      "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=CHEM COMMUN&year=2025",
+      "jcrPdfVerificationStatus": "verified-from-uploaded-jcr-pdf"
     },
     "chemical-engineering-journal": {
       "journalId": "chemical-engineering-journal",
@@ -1774,21 +1789,21 @@
             }
           ],
           "jcrReleaseYear": 2026,
-          "sourceType": "secondary-source",
-          "sourceName": "WoS Journal Info",
+          "sourceType": "official-jcr-profile",
+          "sourceName": "Clarivate Journal Citation Reports",
           "sourceUrls": [
-            "https://wos-journal.info/journalid/11647"
+            "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=CHEM ENG J&year=2025"
           ],
-          "verificationStatus": "secondary-source",
-          "retrievedAt": "2026-07-17T12:50:00Z",
+          "verificationStatus": "official-jcr-pdf-verified",
+          "retrievedAt": "2026-07-17T13:12:00Z",
           "fieldSources": {
             "impactFactor": {
-              "name": "WoS Journal Info",
-              "url": "https://wos-journal.info/journalid/11647",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=CHEM ENG J&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             },
             "jcrReleaseYear": {
               "name": "JournalSearches",
@@ -1832,22 +1847,25 @@
               "priority": 80
             },
             "bestQuartile": {
-              "name": "WoS Journal Info",
-              "url": "https://wos-journal.info/journalid/11647",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=CHEM ENG J&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             },
             "categories": {
-              "name": "WoS Journal Info",
-              "url": "https://wos-journal.info/journalid/11647",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=CHEM ENG J&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             }
-          }
+          },
+          "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=CHEM ENG J&year=2025",
+          "officialJcrPdfVerified": true,
+          "fiveYearImpactFactorVerificationStatus": "not-present-in-jcr-pdf"
         }
       },
       "abbreviation": "Chemical Engineering Journal",
@@ -1945,7 +1963,9 @@
           "priority": 60,
           "metricSystem": "Scopus/SCImago"
         }
-      }
+      },
+      "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=CHEM ENG J&year=2025",
+      "jcrPdfVerificationStatus": "verified-from-uploaded-jcr-pdf"
     },
     "chemistry-an-asian-journal": {
       "journalId": "chemistry-an-asian-journal",
@@ -1968,21 +1988,21 @@
             }
           ],
           "jcrReleaseYear": 2026,
-          "sourceType": "secondary-source",
-          "sourceName": "WoS Journal Info",
+          "sourceType": "official-jcr-profile",
+          "sourceName": "Clarivate Journal Citation Reports",
           "sourceUrls": [
-            "https://wos-journal.info/journalid/13434"
+            "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=CHEM-ASIAN J&year=2025"
           ],
-          "verificationStatus": "secondary-source",
-          "retrievedAt": "2026-07-17T12:50:00Z",
+          "verificationStatus": "official-jcr-pdf-verified",
+          "retrievedAt": "2026-07-17T13:12:00Z",
           "fieldSources": {
             "impactFactor": {
-              "name": "WoS Journal Info",
-              "url": "https://wos-journal.info/journalid/13434",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=CHEM-ASIAN J&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             },
             "fiveYearImpactFactor": {
               "name": "WoS Journal Info",
@@ -1993,22 +2013,25 @@
               "priority": 95
             },
             "bestQuartile": {
-              "name": "WoS Journal Info",
-              "url": "https://wos-journal.info/journalid/13434",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=CHEM-ASIAN J&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             },
             "categories": {
-              "name": "WoS Journal Info",
-              "url": "https://wos-journal.info/journalid/13434",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=CHEM-ASIAN J&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             }
-          }
+          },
+          "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=CHEM-ASIAN J&year=2025",
+          "officialJcrPdfVerified": true,
+          "fiveYearImpactFactorVerificationStatus": "not-present-in-jcr-pdf"
         }
       },
       "abbreviation": "Chemistry  An Asian Journal",
@@ -2085,7 +2108,9 @@
           "metricSystem": "Scopus/SCImago"
         }
       },
-      "latestMetricYear": 2025
+      "latestMetricYear": 2025,
+      "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=CHEM-ASIAN J&year=2025",
+      "jcrPdfVerificationStatus": "verified-from-uploaded-jcr-pdf"
     },
     "electrochimica-acta": {
       "journalId": "electrochimica-acta",
@@ -2099,12 +2124,12 @@
           "jcrReleaseYear": 2026,
           "fieldSources": {
             "impactFactor": {
-              "name": "WoS Journal Info",
-              "url": "https://wos-journal.info/journalid/582",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=ELECTROCHIM ACTA&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             },
             "jcrReleaseYear": {
               "name": "JournalSearches",
@@ -2124,23 +2149,23 @@
               "priority": 95
             },
             "bestQuartile": {
-              "name": "WoS Journal Info",
-              "url": "https://wos-journal.info/journalid/582",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=ELECTROCHIM ACTA&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             },
             "categories": {
-              "name": "WoS Journal Info",
-              "url": "https://wos-journal.info/journalid/582",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=ELECTROCHIM ACTA&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             }
           },
-          "verificationStatus": "secondary-source",
+          "verificationStatus": "official-jcr-pdf-verified",
           "fiveYearImpactFactor": 5.4,
           "bestQuartile": "Q2",
           "categories": [
@@ -2149,12 +2174,15 @@
               "quartile": "Q2"
             }
           ],
-          "sourceType": "secondary-source",
-          "sourceName": "WoS Journal Info",
+          "sourceType": "official-jcr-profile",
+          "sourceName": "Clarivate Journal Citation Reports",
           "sourceUrls": [
-            "https://wos-journal.info/journalid/582"
+            "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=ELECTROCHIM ACTA&year=2025"
           ],
-          "retrievedAt": "2026-07-17T12:50:00Z"
+          "retrievedAt": "2026-07-17T13:12:00Z",
+          "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=ELECTROCHIM ACTA&year=2025",
+          "officialJcrPdfVerified": true,
+          "fiveYearImpactFactorVerificationStatus": "not-present-in-jcr-pdf"
         }
       },
       "abbreviation": "Electrochimica Acta",
@@ -2229,7 +2257,9 @@
           "priority": 60,
           "metricSystem": "Scopus/SCImago"
         }
-      }
+      },
+      "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=ELECTROCHIM ACTA&year=2025",
+      "jcrPdfVerificationStatus": "verified-from-uploaded-jcr-pdf"
     },
     "energy-and-environmental-science": {
       "journalId": "energy-and-environmental-science",
@@ -2635,12 +2665,12 @@
           "jcrReleaseYear": 2026,
           "fieldSources": {
             "impactFactor": {
-              "name": "WoS Journal Info",
-              "url": "https://wos-journal.info/journalid/60",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=ENERG ENVIRON SCI&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             },
             "totalCites": {
               "name": "Bioxbio",
@@ -2667,34 +2697,26 @@
               "priority": 95
             },
             "bestQuartile": {
-              "name": "WoS Journal Info",
-              "url": "https://wos-journal.info/journalid/60",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=ENERG ENVIRON SCI&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             },
             "categories": {
-              "name": "WoS Journal Info",
-              "url": "https://wos-journal.info/journalid/60",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=ENERG ENVIRON SCI&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             }
           },
-          "verificationStatus": "secondary-source",
+          "verificationStatus": "official-jcr-pdf-verified",
           "fiveYearImpactFactor": 32.7,
           "bestQuartile": "Q1",
           "categories": [
-            {
-              "name": "Chemistry, Multidisciplinary",
-              "quartile": "Q1"
-            },
-            {
-              "name": "Energy & Fuels",
-              "quartile": "Q1"
-            },
             {
               "name": "Engineering, Chemical",
               "quartile": "Q1"
@@ -2702,14 +2724,25 @@
             {
               "name": "Environmental Sciences",
               "quartile": "Q1"
+            },
+            {
+              "name": "Energy & Fuels",
+              "quartile": "Q1"
+            },
+            {
+              "name": "Chemistry, Multidisciplinary",
+              "quartile": "Q1"
             }
           ],
-          "sourceType": "secondary-source",
-          "sourceName": "WoS Journal Info",
+          "sourceType": "official-jcr-profile",
+          "sourceName": "Clarivate Journal Citation Reports",
           "sourceUrls": [
-            "https://wos-journal.info/journalid/60"
+            "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=ENERG ENVIRON SCI&year=2025"
           ],
-          "retrievedAt": "2026-07-17T12:50:00Z"
+          "retrievedAt": "2026-07-17T13:12:00Z",
+          "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=ENERG ENVIRON SCI&year=2025",
+          "officialJcrPdfVerified": true,
+          "fiveYearImpactFactorVerificationStatus": "not-present-in-jcr-pdf"
         }
       },
       "abbreviation": "Energy Environ. Sci.",
@@ -2774,7 +2807,9 @@
       "currentlyUsedInPublications": true,
       "country": "",
       "frequency": "",
-      "latestMetricYear": 2025
+      "latestMetricYear": 2025,
+      "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=ENERG ENVIRON SCI&year=2025",
+      "jcrPdfVerificationStatus": "verified-from-uploaded-jcr-pdf"
     },
     "journal-of-environmental-chemical-engineering": {
       "journalId": "journal-of-environmental-chemical-engineering",
@@ -2788,12 +2823,12 @@
           "jcrReleaseYear": 2026,
           "fieldSources": {
             "impactFactor": {
-              "name": "Journal Metrics",
-              "url": "https://www.journalmetrics.org/journal/journal-of-environmental-chemical-engineering",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=J ENVIRON CHEM ENG&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             },
             "jcrReleaseYear": {
               "name": "JournalSearches",
@@ -2813,23 +2848,23 @@
               "priority": 95
             },
             "bestQuartile": {
-              "name": "Journal Metrics",
-              "url": "https://www.journalmetrics.org/journal/journal-of-environmental-chemical-engineering",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=J ENVIRON CHEM ENG&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             },
             "categories": {
-              "name": "Journal Metrics",
-              "url": "https://www.journalmetrics.org/journal/journal-of-environmental-chemical-engineering",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=J ENVIRON CHEM ENG&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             }
           },
-          "verificationStatus": "secondary-source",
+          "verificationStatus": "official-jcr-pdf-verified",
           "fiveYearImpactFactor": 8.1,
           "bestQuartile": "Q1",
           "categories": [
@@ -2842,12 +2877,15 @@
               "quartile": "Q1"
             }
           ],
-          "sourceType": "secondary-source",
-          "sourceName": "Journal Metrics",
+          "sourceType": "official-jcr-profile",
+          "sourceName": "Clarivate Journal Citation Reports",
           "sourceUrls": [
-            "https://www.journalmetrics.org/journal/journal-of-environmental-chemical-engineering"
+            "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=J ENVIRON CHEM ENG&year=2025"
           ],
-          "retrievedAt": "2026-07-17T12:50:00Z"
+          "retrievedAt": "2026-07-17T13:12:00Z",
+          "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=J ENVIRON CHEM ENG&year=2025",
+          "officialJcrPdfVerified": true,
+          "fiveYearImpactFactorVerificationStatus": "not-present-in-jcr-pdf"
         }
       },
       "abbreviation": "Journal of Environmental Chemical Engineering",
@@ -2922,7 +2960,9 @@
           "priority": 60,
           "metricSystem": "Scopus/SCImago"
         }
-      }
+      },
+      "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=J ENVIRON CHEM ENG&year=2025",
+      "jcrPdfVerificationStatus": "verified-from-uploaded-jcr-pdf"
     },
     "journal-of-materials-chemistry": {
       "journalId": "journal-of-materials-chemistry",
@@ -2932,18 +2972,18 @@
         "J. Mater. Chem."
       ],
       "metricsByYear": {
-        "2012": {
+        "2013": {
           "impactFactor": 6.626,
           "totalArticles": 0,
           "totalCites": 83225,
           "fieldSources": {
             "impactFactor": {
-              "name": "Royal Society of Chemistry",
-              "url": "https://www.rsc.org/journals-books-databases/about-journals/journal-of-materials-chemistry/",
-              "type": "publisher-page",
-              "verificationStatus": "publisher-history",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=J MATER CHEM&year=2013",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             },
             "totalArticles": {
               "name": "Bioxbio",
@@ -2970,41 +3010,44 @@
               "priority": 95
             },
             "bestQuartile": {
-              "name": "Royal Society of Chemistry",
-              "url": "https://www.rsc.org/journals-books-databases/about-journals/journal-of-materials-chemistry/",
-              "type": "publisher-page",
-              "verificationStatus": "publisher-history",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=J MATER CHEM&year=2013",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             },
             "categories": {
-              "name": "Royal Society of Chemistry",
-              "url": "https://www.rsc.org/journals-books-databases/about-journals/journal-of-materials-chemistry/",
-              "type": "publisher-page",
-              "verificationStatus": "publisher-history",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=J MATER CHEM&year=2013",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             }
           },
-          "verificationStatus": "publisher-history",
+          "verificationStatus": "official-jcr-pdf-verified",
           "fiveYearImpactFactor": 6.859,
           "bestQuartile": "Q1",
           "categories": [
             {
-              "name": "Chemistry, Physical",
+              "name": "Materials Science, Multidisciplinary",
               "quartile": "Q1"
             },
             {
-              "name": "Materials Science, Multidisciplinary",
+              "name": "Chemistry, Physical",
               "quartile": "Q1"
             }
           ],
-          "sourceType": "publisher-page",
-          "sourceName": "Royal Society of Chemistry",
+          "sourceType": "official-jcr-profile",
+          "sourceName": "Clarivate Journal Citation Reports",
           "sourceUrls": [
-            "https://www.rsc.org/journals-books-databases/about-journals/journal-of-materials-chemistry/"
+            "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=J MATER CHEM&year=2013"
           ],
-          "retrievedAt": "2026-07-17T12:50:00Z"
+          "retrievedAt": "2026-07-17T13:12:00Z",
+          "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=J MATER CHEM&year=2013",
+          "officialJcrPdfVerified": true,
+          "fiveYearImpactFactorVerificationStatus": "not-present-in-jcr-pdf"
         }
       },
       "abbreviation": "J. Mater. Chem.",
@@ -3078,7 +3121,7 @@
       "currentlyUsedInPublications": true,
       "country": "",
       "frequency": "",
-      "latestMetricYear": 2012,
+      "latestMetricYear": 2013,
       "scopusLatest": {
         "releaseYear": 2026,
         "source": {
@@ -3090,7 +3133,9 @@
           "priority": 60,
           "metricSystem": "Scopus/SCImago"
         }
-      }
+      },
+      "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=J MATER CHEM&year=2013",
+      "jcrPdfVerificationStatus": "verified-from-uploaded-jcr-pdf"
     },
     "journal-of-power-sources": {
       "journalId": "journal-of-power-sources",
@@ -3112,24 +3157,32 @@
             {
               "name": "Energy & Fuels",
               "quartile": "Q1"
+            },
+            {
+              "name": "Chemistry, Physical",
+              "quartile": "Q1"
+            },
+            {
+              "name": "Materials Science, Multidisciplinary",
+              "quartile": "Q1"
             }
           ],
           "jcrReleaseYear": 2026,
-          "sourceType": "secondary-source",
-          "sourceName": "Journal Metrics",
+          "sourceType": "official-jcr-profile",
+          "sourceName": "Clarivate Journal Citation Reports",
           "sourceUrls": [
-            "https://www.journalmetrics.org/journal/journal-of-power-sources"
+            "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=J POWER SOURCES&year=2025"
           ],
-          "verificationStatus": "secondary-source",
-          "retrievedAt": "2026-07-17T12:50:00Z",
+          "verificationStatus": "official-jcr-pdf-verified",
+          "retrievedAt": "2026-07-17T13:12:00Z",
           "fieldSources": {
             "impactFactor": {
-              "name": "Journal Metrics",
-              "url": "https://www.journalmetrics.org/journal/journal-of-power-sources",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=J POWER SOURCES&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             },
             "jcrReleaseYear": {
               "name": "JournalSearches",
@@ -3157,22 +3210,25 @@
               "priority": 80
             },
             "bestQuartile": {
-              "name": "Journal Metrics",
-              "url": "https://www.journalmetrics.org/journal/journal-of-power-sources",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=J POWER SOURCES&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             },
             "categories": {
-              "name": "Journal Metrics",
-              "url": "https://www.journalmetrics.org/journal/journal-of-power-sources",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=J POWER SOURCES&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             }
-          }
+          },
+          "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=J POWER SOURCES&year=2025",
+          "officialJcrPdfVerified": true,
+          "fiveYearImpactFactorVerificationStatus": "not-present-in-jcr-pdf"
         }
       },
       "abbreviation": "Journal of Power Sources",
@@ -3264,7 +3320,9 @@
           "priority": 60,
           "metricSystem": "Scopus/SCImago"
         }
-      }
+      },
+      "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=J POWER SOURCES&year=2025",
+      "jcrPdfVerificationStatus": "verified-from-uploaded-jcr-pdf"
     },
     "materials-today-chemistry": {
       "journalId": "materials-today-chemistry",
@@ -3278,12 +3336,12 @@
           "jcrReleaseYear": 2026,
           "fieldSources": {
             "impactFactor": {
-              "name": "WoS Journal Info",
-              "url": "https://wos-journal.info/journalid/494",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=MATER TODAY CHEM&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             },
             "jcrReleaseYear": {
               "name": "JournalSearches",
@@ -3303,23 +3361,23 @@
               "priority": 95
             },
             "bestQuartile": {
-              "name": "WoS Journal Info",
-              "url": "https://wos-journal.info/journalid/494",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=MATER TODAY CHEM&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             },
             "categories": {
-              "name": "WoS Journal Info",
-              "url": "https://wos-journal.info/journalid/494",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=MATER TODAY CHEM&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             }
           },
-          "verificationStatus": "secondary-source",
+          "verificationStatus": "official-jcr-pdf-verified",
           "fiveYearImpactFactor": 7.8,
           "bestQuartile": "Q1",
           "categories": [
@@ -3332,12 +3390,15 @@
               "quartile": "Q1"
             }
           ],
-          "sourceType": "secondary-source",
-          "sourceName": "WoS Journal Info",
+          "sourceType": "official-jcr-profile",
+          "sourceName": "Clarivate Journal Citation Reports",
           "sourceUrls": [
-            "https://wos-journal.info/journalid/494"
+            "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=MATER TODAY CHEM&year=2025"
           ],
-          "retrievedAt": "2026-07-17T12:50:00Z"
+          "retrievedAt": "2026-07-17T13:12:00Z",
+          "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=MATER TODAY CHEM&year=2025",
+          "officialJcrPdfVerified": true,
+          "fiveYearImpactFactorVerificationStatus": "not-present-in-jcr-pdf"
         }
       },
       "abbreviation": "Materials Today Chemistry",
@@ -3411,7 +3472,9 @@
           "priority": 60,
           "metricSystem": "Scopus/SCImago"
         }
-      }
+      },
+      "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=MATER TODAY CHEM&year=2025",
+      "jcrPdfVerificationStatus": "verified-from-uploaded-jcr-pdf"
     },
     "materials-today-energy": {
       "journalId": "materials-today-energy",
@@ -3425,12 +3488,12 @@
           "jcrReleaseYear": 2026,
           "fieldSources": {
             "impactFactor": {
-              "name": "Journal Metrics",
-              "url": "https://www.journalmetrics.org/journal/materials-today-energy",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=MATER TODAY ENERGY&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:15:00Z",
+              "priority": 100
             },
             "jcrReleaseYear": {
               "name": "JournalSearches",
@@ -3450,32 +3513,32 @@
               "priority": 95
             },
             "bestQuartile": {
-              "name": "Journal Metrics",
-              "url": "https://www.journalmetrics.org/journal/materials-today-energy",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=MATER TODAY ENERGY&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:15:00Z",
+              "priority": 100
             },
             "categories": {
-              "name": "Journal Metrics",
-              "url": "https://www.journalmetrics.org/journal/materials-today-energy",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=MATER TODAY ENERGY&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:15:00Z",
+              "priority": 100
             }
           },
-          "verificationStatus": "secondary-source",
+          "verificationStatus": "official-jcr-pdf-verified",
           "fiveYearImpactFactor": 9.0,
           "bestQuartile": "Q1",
           "categories": [
             {
-              "name": "Chemistry, Physical",
+              "name": "Energy & Fuels",
               "quartile": "Q1"
             },
             {
-              "name": "Energy & Fuels",
+              "name": "Chemistry, Physical",
               "quartile": "Q1"
             },
             {
@@ -3483,12 +3546,15 @@
               "quartile": "Q1"
             }
           ],
-          "sourceType": "secondary-source",
-          "sourceName": "Journal Metrics",
+          "sourceType": "official-jcr-profile",
+          "sourceName": "Clarivate Journal Citation Reports",
           "sourceUrls": [
-            "https://www.journalmetrics.org/journal/materials-today-energy"
+            "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=MATER TODAY ENERGY&year=2025"
           ],
-          "retrievedAt": "2026-07-17T12:50:00Z"
+          "retrievedAt": "2026-07-17T13:15:00Z",
+          "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=MATER TODAY ENERGY&year=2025",
+          "officialJcrPdfVerified": true,
+          "fiveYearImpactFactorVerificationStatus": "not-present-in-jcr-pdf"
         }
       },
       "abbreviation": "Materials Today Energy",
@@ -3562,7 +3628,9 @@
           "priority": 60,
           "metricSystem": "Scopus/SCImago"
         }
-      }
+      },
+      "jcrPdfVerificationStatus": "verified-from-uploaded-jcr-pdf",
+      "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=MATER TODAY ENERGY&year=2025"
     },
     "nanomaterials": {
       "journalId": "nanomaterials",
@@ -3576,12 +3644,12 @@
           "jcrReleaseYear": 2026,
           "fieldSources": {
             "impactFactor": {
-              "name": "Publisher journal page",
-              "url": "https://www.mdpi.com/journal/nanomaterials",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=NANOMATERIALS-BASEL&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             },
             "jcrReleaseYear": {
               "name": "JournalSearches",
@@ -3601,49 +3669,52 @@
               "priority": 95
             },
             "bestQuartile": {
-              "name": "Publisher journal page",
-              "url": "https://www.mdpi.com/journal/nanomaterials",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=NANOMATERIALS-BASEL&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             },
             "categories": {
-              "name": "Publisher journal page",
-              "url": "https://www.mdpi.com/journal/nanomaterials",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=NANOMATERIALS-BASEL&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             }
           },
-          "verificationStatus": "secondary-source",
+          "verificationStatus": "official-jcr-pdf-verified",
           "fiveYearImpactFactor": 5.1,
           "bestQuartile": "Q2",
           "categories": [
-            {
-              "name": "Chemistry, Multidisciplinary",
-              "quartile": "Q2"
-            },
-            {
-              "name": "Materials Science, Multidisciplinary",
-              "quartile": "Q2"
-            },
             {
               "name": "Nanoscience & Nanotechnology",
               "quartile": "Q2"
             },
             {
+              "name": "Chemistry, Multidisciplinary",
+              "quartile": "Q2"
+            },
+            {
               "name": "Physics, Applied",
+              "quartile": "Q2"
+            },
+            {
+              "name": "Materials Science, Multidisciplinary",
               "quartile": "Q2"
             }
           ],
-          "sourceType": "secondary-source",
-          "sourceName": "Publisher journal page",
+          "sourceType": "official-jcr-profile",
+          "sourceName": "Clarivate Journal Citation Reports",
           "sourceUrls": [
-            "https://www.mdpi.com/journal/nanomaterials"
+            "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=NANOMATERIALS-BASEL&year=2025"
           ],
-          "retrievedAt": "2026-07-17T12:50:00Z"
+          "retrievedAt": "2026-07-17T13:12:00Z",
+          "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=NANOMATERIALS-BASEL&year=2025",
+          "officialJcrPdfVerified": true,
+          "fiveYearImpactFactorVerificationStatus": "not-present-in-jcr-pdf"
         }
       },
       "abbreviation": "Nanomaterials",
@@ -3718,7 +3789,9 @@
           "priority": 60,
           "metricSystem": "Scopus/SCImago"
         }
-      }
+      },
+      "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=NANOMATERIALS-BASEL&year=2025",
+      "jcrPdfVerificationStatus": "verified-from-uploaded-jcr-pdf"
     },
     "optics-communications": {
       "journalId": "optics-communications",
@@ -3732,12 +3805,12 @@
           "jcrReleaseYear": 2026,
           "fieldSources": {
             "impactFactor": {
-              "name": "WoS Journal Info",
-              "url": "https://wos-journal.info/journalid/18211",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=OPT COMMUN&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             },
             "jcrReleaseYear": {
               "name": "JournalSearches",
@@ -3757,37 +3830,40 @@
               "priority": 95
             },
             "bestQuartile": {
-              "name": "WoS Journal Info",
-              "url": "https://wos-journal.info/journalid/18211",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=OPT COMMUN&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             },
             "categories": {
-              "name": "WoS Journal Info",
-              "url": "https://wos-journal.info/journalid/18211",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=OPT COMMUN&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             }
           },
-          "verificationStatus": "secondary-source",
+          "verificationStatus": "official-jcr-pdf-verified",
           "fiveYearImpactFactor": 2.3,
-          "bestQuartile": "Q3",
+          "bestQuartile": "Q2",
           "categories": [
             {
               "name": "Optics",
-              "quartile": "Q3"
+              "quartile": "Q2"
             }
           ],
-          "sourceType": "secondary-source",
-          "sourceName": "WoS Journal Info",
+          "sourceType": "official-jcr-profile",
+          "sourceName": "Clarivate Journal Citation Reports",
           "sourceUrls": [
-            "https://wos-journal.info/journalid/18211"
+            "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=OPT COMMUN&year=2025"
           ],
-          "retrievedAt": "2026-07-17T12:50:00Z"
+          "retrievedAt": "2026-07-17T13:12:00Z",
+          "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=OPT COMMUN&year=2025",
+          "officialJcrPdfVerified": true,
+          "fiveYearImpactFactorVerificationStatus": "not-present-in-jcr-pdf"
         }
       },
       "abbreviation": "Optics Communications",
@@ -3862,7 +3938,9 @@
           "priority": 60,
           "metricSystem": "Scopus/SCImago"
         }
-      }
+      },
+      "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=OPT COMMUN&year=2025",
+      "jcrPdfVerificationStatus": "verified-from-uploaded-jcr-pdf"
     },
     "organic-electronics": {
       "journalId": "organic-electronics",
@@ -3876,12 +3954,12 @@
           "jcrReleaseYear": 2026,
           "fieldSources": {
             "impactFactor": {
-              "name": "Journal Metrics",
-              "url": "https://www.journalmetrics.org/journal/organic-electronics",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=ORG ELECTRON&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             },
             "jcrReleaseYear": {
               "name": "JournalSearches",
@@ -3901,41 +3979,44 @@
               "priority": 95
             },
             "bestQuartile": {
-              "name": "Journal Metrics",
-              "url": "https://www.journalmetrics.org/journal/organic-electronics",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=ORG ELECTRON&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             },
             "categories": {
-              "name": "Journal Metrics",
-              "url": "https://www.journalmetrics.org/journal/organic-electronics",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=ORG ELECTRON&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             }
           },
-          "verificationStatus": "secondary-source",
+          "verificationStatus": "official-jcr-pdf-verified",
           "fiveYearImpactFactor": 2.9,
           "bestQuartile": "Q3",
           "categories": [
             {
-              "name": "Materials Science, Multidisciplinary",
+              "name": "Physics, Applied",
               "quartile": "Q3"
             },
             {
-              "name": "Physics, Applied",
+              "name": "Materials Science, Multidisciplinary",
               "quartile": "Q3"
             }
           ],
-          "sourceType": "secondary-source",
-          "sourceName": "Journal Metrics",
+          "sourceType": "official-jcr-profile",
+          "sourceName": "Clarivate Journal Citation Reports",
           "sourceUrls": [
-            "https://www.journalmetrics.org/journal/organic-electronics"
+            "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=ORG ELECTRON&year=2025"
           ],
-          "retrievedAt": "2026-07-17T12:50:00Z"
+          "retrievedAt": "2026-07-17T13:12:00Z",
+          "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=ORG ELECTRON&year=2025",
+          "officialJcrPdfVerified": true,
+          "fiveYearImpactFactorVerificationStatus": "not-present-in-jcr-pdf"
         }
       },
       "abbreviation": "Organic Electronics",
@@ -4010,7 +4091,9 @@
           "priority": 60,
           "metricSystem": "Scopus/SCImago"
         }
-      }
+      },
+      "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=ORG ELECTRON&year=2025",
+      "jcrPdfVerificationStatus": "verified-from-uploaded-jcr-pdf"
     },
     "polymers": {
       "journalId": "polymers",
@@ -4024,12 +4107,12 @@
           "jcrReleaseYear": 2026,
           "fieldSources": {
             "impactFactor": {
-              "name": "WoS Journal Info",
-              "url": "https://wos-journal.info/journalid/13304",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=POLYMERS-BASEL&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             },
             "jcrReleaseYear": {
               "name": "JournalSearches",
@@ -4049,23 +4132,23 @@
               "priority": 95
             },
             "bestQuartile": {
-              "name": "WoS Journal Info",
-              "url": "https://wos-journal.info/journalid/13304",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=POLYMERS-BASEL&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             },
             "categories": {
-              "name": "WoS Journal Info",
-              "url": "https://wos-journal.info/journalid/13304",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=POLYMERS-BASEL&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             }
           },
-          "verificationStatus": "secondary-source",
+          "verificationStatus": "official-jcr-pdf-verified",
           "fiveYearImpactFactor": 6.1,
           "bestQuartile": "Q1",
           "categories": [
@@ -4074,12 +4157,15 @@
               "quartile": "Q1"
             }
           ],
-          "sourceType": "secondary-source",
-          "sourceName": "WoS Journal Info",
+          "sourceType": "official-jcr-profile",
+          "sourceName": "Clarivate Journal Citation Reports",
           "sourceUrls": [
-            "https://wos-journal.info/journalid/13304"
+            "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=POLYMERS-BASEL&year=2025"
           ],
-          "retrievedAt": "2026-07-17T12:50:00Z"
+          "retrievedAt": "2026-07-17T13:12:00Z",
+          "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=POLYMERS-BASEL&year=2025",
+          "officialJcrPdfVerified": true,
+          "fiveYearImpactFactorVerificationStatus": "not-present-in-jcr-pdf"
         }
       },
       "abbreviation": "Polymers",
@@ -4154,7 +4240,9 @@
           "priority": 60,
           "metricSystem": "Scopus/SCImago"
         }
-      }
+      },
+      "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=POLYMERS-BASEL&year=2025",
+      "jcrPdfVerificationStatus": "verified-from-uploaded-jcr-pdf"
     },
     "separation-and-purification-technology": {
       "journalId": "separation-and-purification-technology",
@@ -4168,12 +4256,12 @@
           "jcrReleaseYear": 2026,
           "fieldSources": {
             "impactFactor": {
-              "name": "Journal Metrics",
-              "url": "https://www.journalmetrics.org/journal/separation-and-purification-technology",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=SEP PURIF TECHNOL&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             },
             "jcrReleaseYear": {
               "name": "JournalSearches",
@@ -4193,23 +4281,23 @@
               "priority": 95
             },
             "bestQuartile": {
-              "name": "Journal Metrics",
-              "url": "https://www.journalmetrics.org/journal/separation-and-purification-technology",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=SEP PURIF TECHNOL&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             },
             "categories": {
-              "name": "Journal Metrics",
-              "url": "https://www.journalmetrics.org/journal/separation-and-purification-technology",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=SEP PURIF TECHNOL&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             }
           },
-          "verificationStatus": "secondary-source",
+          "verificationStatus": "official-jcr-pdf-verified",
           "fiveYearImpactFactor": 9.6,
           "bestQuartile": "Q1",
           "categories": [
@@ -4218,12 +4306,15 @@
               "quartile": "Q1"
             }
           ],
-          "sourceType": "secondary-source",
-          "sourceName": "Journal Metrics",
+          "sourceType": "official-jcr-profile",
+          "sourceName": "Clarivate Journal Citation Reports",
           "sourceUrls": [
-            "https://www.journalmetrics.org/journal/separation-and-purification-technology"
+            "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=SEP PURIF TECHNOL&year=2025"
           ],
-          "retrievedAt": "2026-07-17T12:50:00Z"
+          "retrievedAt": "2026-07-17T13:12:00Z",
+          "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=SEP PURIF TECHNOL&year=2025",
+          "officialJcrPdfVerified": true,
+          "fiveYearImpactFactorVerificationStatus": "not-present-in-jcr-pdf"
         }
       },
       "abbreviation": "Separation and Purification Technology",
@@ -4298,7 +4389,9 @@
           "priority": 60,
           "metricSystem": "Scopus/SCImago"
         }
-      }
+      },
+      "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=SEP PURIF TECHNOL&year=2025",
+      "jcrPdfVerificationStatus": "verified-from-uploaded-jcr-pdf"
     },
     "solar-energy": {
       "journalId": "solar-energy",
@@ -4312,12 +4405,12 @@
           "jcrReleaseYear": 2026,
           "fieldSources": {
             "impactFactor": {
-              "name": "Journal Metrics",
-              "url": "https://www.journalmetrics.org/journal/solar-energy",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=SOL ENERGY&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             },
             "jcrReleaseYear": {
               "name": "JournalSearches",
@@ -4337,23 +4430,23 @@
               "priority": 95
             },
             "bestQuartile": {
-              "name": "Journal Metrics",
-              "url": "https://www.journalmetrics.org/journal/solar-energy",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=SOL ENERGY&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             },
             "categories": {
-              "name": "Journal Metrics",
-              "url": "https://www.journalmetrics.org/journal/solar-energy",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=SOL ENERGY&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             }
           },
-          "verificationStatus": "secondary-source",
+          "verificationStatus": "official-jcr-pdf-verified",
           "fiveYearImpactFactor": 7.2,
           "bestQuartile": "Q2",
           "categories": [
@@ -4362,12 +4455,15 @@
               "quartile": "Q2"
             }
           ],
-          "sourceType": "secondary-source",
-          "sourceName": "Journal Metrics",
+          "sourceType": "official-jcr-profile",
+          "sourceName": "Clarivate Journal Citation Reports",
           "sourceUrls": [
-            "https://www.journalmetrics.org/journal/solar-energy"
+            "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=SOL ENERGY&year=2025"
           ],
-          "retrievedAt": "2026-07-17T12:50:00Z"
+          "retrievedAt": "2026-07-17T13:12:00Z",
+          "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=SOL ENERGY&year=2025",
+          "officialJcrPdfVerified": true,
+          "fiveYearImpactFactorVerificationStatus": "not-present-in-jcr-pdf"
         }
       },
       "abbreviation": "Solar Energy",
@@ -4442,7 +4538,9 @@
           "priority": 60,
           "metricSystem": "Scopus/SCImago"
         }
-      }
+      },
+      "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=SOL ENERGY&year=2025",
+      "jcrPdfVerificationStatus": "verified-from-uploaded-jcr-pdf"
     },
     "solar-energy-materials-and-solar-cells": {
       "journalId": "solar-energy-materials-and-solar-cells",
@@ -4456,12 +4554,12 @@
           "jcrReleaseYear": 2026,
           "fieldSources": {
             "impactFactor": {
-              "name": "WoS Journal Info",
-              "url": "https://wos-journal.info/journalid/589",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=SOL ENERG MAT SOL C&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             },
             "jcrReleaseYear": {
               "name": "JournalSearches",
@@ -4481,23 +4579,23 @@
               "priority": 95
             },
             "bestQuartile": {
-              "name": "WoS Journal Info",
-              "url": "https://wos-journal.info/journalid/589",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=SOL ENERG MAT SOL C&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             },
             "categories": {
-              "name": "WoS Journal Info",
-              "url": "https://wos-journal.info/journalid/589",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=SOL ENERG MAT SOL C&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             }
           },
-          "verificationStatus": "secondary-source",
+          "verificationStatus": "official-jcr-pdf-verified",
           "fiveYearImpactFactor": 6.3,
           "bestQuartile": "Q1",
           "categories": [
@@ -4506,20 +4604,23 @@
               "quartile": "Q2"
             },
             {
-              "name": "Materials Science, Multidisciplinary",
-              "quartile": "Q2"
-            },
-            {
               "name": "Physics, Applied",
               "quartile": "Q1"
+            },
+            {
+              "name": "Materials Science, Multidisciplinary",
+              "quartile": "Q2"
             }
           ],
-          "sourceType": "secondary-source",
-          "sourceName": "WoS Journal Info",
+          "sourceType": "official-jcr-profile",
+          "sourceName": "Clarivate Journal Citation Reports",
           "sourceUrls": [
-            "https://wos-journal.info/journalid/589"
+            "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=SOL ENERG MAT SOL C&year=2025"
           ],
-          "retrievedAt": "2026-07-17T12:50:00Z"
+          "retrievedAt": "2026-07-17T13:12:00Z",
+          "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=SOL ENERG MAT SOL C&year=2025",
+          "officialJcrPdfVerified": true,
+          "fiveYearImpactFactorVerificationStatus": "not-present-in-jcr-pdf"
         }
       },
       "abbreviation": "Solar Energy Materials and Solar Cells",
@@ -4595,7 +4696,9 @@
           "priority": 60,
           "metricSystem": "Scopus/SCImago"
         }
-      }
+      },
+      "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=SOL ENERG MAT SOL C&year=2025",
+      "jcrPdfVerificationStatus": "verified-from-uploaded-jcr-pdf"
     },
     "solar-rrl": {
       "journalId": "solar-rrl",
@@ -4609,12 +4712,12 @@
           "jcrReleaseYear": 2026,
           "fieldSources": {
             "impactFactor": {
-              "name": "Journal Metrics",
-              "url": "https://www.journalmetrics.org/journal/solar-rrl",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=SOL RRL&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             },
             "jcrReleaseYear": {
               "name": "JournalSearches",
@@ -4634,23 +4737,23 @@
               "priority": 95
             },
             "bestQuartile": {
-              "name": "Journal Metrics",
-              "url": "https://www.journalmetrics.org/journal/solar-rrl",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=SOL RRL&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             },
             "categories": {
-              "name": "Journal Metrics",
-              "url": "https://www.journalmetrics.org/journal/solar-rrl",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=SOL RRL&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             }
           },
-          "verificationStatus": "secondary-source",
+          "verificationStatus": "official-jcr-pdf-verified",
           "fiveYearImpactFactor": 5.3,
           "bestQuartile": "Q2",
           "categories": [
@@ -4663,12 +4766,15 @@
               "quartile": "Q2"
             }
           ],
-          "sourceType": "secondary-source",
-          "sourceName": "Journal Metrics",
+          "sourceType": "official-jcr-profile",
+          "sourceName": "Clarivate Journal Citation Reports",
           "sourceUrls": [
-            "https://www.journalmetrics.org/journal/solar-rrl"
+            "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=SOL RRL&year=2025"
           ],
-          "retrievedAt": "2026-07-17T12:50:00Z"
+          "retrievedAt": "2026-07-17T13:12:00Z",
+          "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=SOL RRL&year=2025",
+          "officialJcrPdfVerified": true,
+          "fiveYearImpactFactorVerificationStatus": "not-present-in-jcr-pdf"
         }
       },
       "abbreviation": "Solar RRL",
@@ -4743,7 +4849,9 @@
           "priority": 60,
           "metricSystem": "Scopus/SCImago"
         }
-      }
+      },
+      "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=SOL RRL&year=2025",
+      "jcrPdfVerificationStatus": "verified-from-uploaded-jcr-pdf"
     },
     "the-journal-of-physical-chemistry-c": {
       "journalId": "the-journal-of-physical-chemistry-c",
@@ -5131,12 +5239,12 @@
           "jcrReleaseYear": 2026,
           "fieldSources": {
             "impactFactor": {
-              "name": "Publisher journal page",
-              "url": "https://pubs.acs.org/journal/jpccck",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=J PHYS CHEM C&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             },
             "totalCites": {
               "name": "Bioxbio",
@@ -5163,26 +5271,30 @@
               "priority": 95
             },
             "bestQuartile": {
-              "name": "Publisher journal page",
-              "url": "https://pubs.acs.org/journal/jpccck",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=J PHYS CHEM C&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             },
             "categories": {
-              "name": "Publisher journal page",
-              "url": "https://pubs.acs.org/journal/jpccck",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=J PHYS CHEM C&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             }
           },
-          "verificationStatus": "secondary-source",
+          "verificationStatus": "official-jcr-pdf-verified",
           "fiveYearImpactFactor": 3.5,
           "bestQuartile": "Q3",
           "categories": [
+            {
+              "name": "Nanoscience & Nanotechnology",
+              "quartile": "Q3"
+            },
             {
               "name": "Chemistry, Physical",
               "quartile": "Q3"
@@ -5190,18 +5302,17 @@
             {
               "name": "Materials Science, Multidisciplinary",
               "quartile": "Q3"
-            },
-            {
-              "name": "Nanoscience & Nanotechnology",
-              "quartile": "Q3"
             }
           ],
-          "sourceType": "secondary-source",
-          "sourceName": "Publisher journal page",
+          "sourceType": "official-jcr-profile",
+          "sourceName": "Clarivate Journal Citation Reports",
           "sourceUrls": [
-            "https://pubs.acs.org/journal/jpccck"
+            "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=J PHYS CHEM C&year=2025"
           ],
-          "retrievedAt": "2026-07-17T12:50:00Z"
+          "retrievedAt": "2026-07-17T13:12:00Z",
+          "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=J PHYS CHEM C&year=2025",
+          "officialJcrPdfVerified": true,
+          "fiveYearImpactFactorVerificationStatus": "not-present-in-jcr-pdf"
         }
       },
       "abbreviation": "J. Phys. Chem. C",
@@ -5266,7 +5377,9 @@
       "currentlyUsedInPublications": true,
       "country": "",
       "frequency": "",
-      "latestMetricYear": 2025
+      "latestMetricYear": 2025,
+      "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=J PHYS CHEM C&year=2025",
+      "jcrPdfVerificationStatus": "verified-from-uploaded-jcr-pdf"
     },
     "thin-solid-films": {
       "journalId": "thin-solid-films",
@@ -5651,12 +5764,12 @@
           "jcrReleaseYear": 2026,
           "fieldSources": {
             "impactFactor": {
-              "name": "Publisher journal page",
-              "url": "https://www.sciencedirect.com/journal/thin-solid-films",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=THIN SOLID FILMS&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             },
             "jcrReleaseYear": {
               "name": "JournalSearches",
@@ -5684,42 +5797,53 @@
               "priority": 95
             },
             "bestQuartile": {
-              "name": "Publisher journal page",
-              "url": "https://www.sciencedirect.com/journal/thin-solid-films",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=THIN SOLID FILMS&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             },
             "categories": {
-              "name": "Publisher journal page",
-              "url": "https://www.sciencedirect.com/journal/thin-solid-films",
-              "type": "secondary-source",
-              "verificationStatus": "secondary-source",
-              "retrievedAt": "2026-07-17T12:50:00Z",
-              "priority": 95
+              "name": "Clarivate Journal Citation Reports",
+              "url": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=THIN SOLID FILMS&year=2025",
+              "type": "official-jcr-profile",
+              "verificationStatus": "official-jcr-pdf-verified",
+              "retrievedAt": "2026-07-17T13:12:00Z",
+              "priority": 100
             }
           },
-          "verificationStatus": "secondary-source",
+          "verificationStatus": "official-jcr-pdf-verified",
           "totalCites": 30785,
           "fiveYearImpactFactor": 2.2,
           "bestQuartile": "Q3",
           "categories": [
             {
-              "name": "Materials Science, Coatings & Films",
+              "name": "Physics, Condensed Matter",
               "quartile": "Q3"
             },
             {
               "name": "Physics, Applied",
               "quartile": "Q3"
+            },
+            {
+              "name": "Materials Science, Coatings & Films",
+              "quartile": "Q3"
+            },
+            {
+              "name": "Materials Science, Multidisciplinary",
+              "quartile": "Q3"
             }
           ],
-          "sourceType": "secondary-source",
-          "sourceName": "Publisher journal page",
+          "sourceType": "official-jcr-profile",
+          "sourceName": "Clarivate Journal Citation Reports",
           "sourceUrls": [
-            "https://www.sciencedirect.com/journal/thin-solid-films"
+            "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=THIN SOLID FILMS&year=2025"
           ],
-          "retrievedAt": "2026-07-17T12:50:00Z"
+          "retrievedAt": "2026-07-17T13:12:00Z",
+          "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=THIN SOLID FILMS&year=2025",
+          "officialJcrPdfVerified": true,
+          "fiveYearImpactFactorVerificationStatus": "not-present-in-jcr-pdf"
         }
       },
       "abbreviation": "Thin Solid Films",
@@ -5802,7 +5926,9 @@
           "priority": 60,
           "metricSystem": "Scopus/SCImago"
         }
-      }
+      },
+      "jcrProfileUrl": "https://jcr.clarivate.com/jcr-jp/journal-profile?journal=THIN SOLID FILMS&year=2025",
+      "jcrPdfVerificationStatus": "verified-from-uploaded-jcr-pdf"
     }
   }
 }
