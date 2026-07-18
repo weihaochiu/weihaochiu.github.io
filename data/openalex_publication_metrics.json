@@ -5,7 +5,7 @@
   "publicationCount": 37,
   "verifiedCount": 37,
   "notFoundCount": 0,
-  "lastSuccessfulUpdate": "2026-07-17T05:24:12Z",
+  "lastSuccessfulUpdate": "2026-07-18T05:06:34Z",
   "records": {
     "10.1016/j.cej.2026.177494": {
       "status": "verified",
@@ -49,8 +49,8 @@
       "title": "Impact of proton radiation on the performance of single-junction perovskite solar cells for space applications",
       "openAlexId": "W4415443362",
       "url": "https://openalex.org/W4415443362",
-      "citationCount": 8,
-      "openAlexUpdatedDate": "2026-07-14T08:27:34.040176"
+      "citationCount": 9,
+      "openAlexUpdatedDate": "2026-07-17T09:13:05.818461"
     },
     "10.1002/asia.70245": {
       "status": "verified",
@@ -149,7 +149,7 @@
       "openAlexId": "W4385773304",
       "url": "https://openalex.org/W4385773304",
       "citationCount": 10,
-      "openAlexUpdatedDate": "2026-07-14T05:46:48.188703"
+      "openAlexUpdatedDate": "2026-07-17T09:13:05.818461"
     },
     "10.1002/asia.202300681": {
       "status": "verified",
