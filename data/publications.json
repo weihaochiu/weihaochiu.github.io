@@ -746,6 +746,14 @@
     ],
     "graphicalAbstract": "",
     "graphicalAbstractAlt": "",
+    "contentStatus": {
+      "abstract": "pending",
+      "highlights": "pending",
+      "keywords": "available",
+      "graphicalAbstract": "pending",
+      "verifiedDate": "",
+      "verifiedSource": ""
+    },
     "authorOrder": 3,
     "topic": "Hole-Transporting Materials",
     "tags": [
