@@ -1,5 +1,5 @@
 {
   "version": "v23",
-  "lastUpdated": "2026-07-16",
-  "notes": "V23 preserves the six-page website architecture and adds upgraded Person schema, 37 ScholarlyArticle records within publications.html, crawler-readable static publication content, citation and DOI metadata, page-level Open Graph metadata, llms.txt, sitemap lastmod, explicit AI crawler rules, and corrected email links."
+  "lastUpdated": "2026-07-19",
+  "notes": "V23 adds static crawler-readable publications, 37 ScholarlyArticle records, upgraded Person schema, corrected email links on every page, article-specific citation and Open Graph metadata, expanded llms.txt, and crawler-aware robots and sitemap files."
 }
