@@ -53,6 +53,7 @@
 .publication-highlights li{margin:.55rem 0;padding-left:.25rem}
 .publication-keywords{display:flex;flex-wrap:wrap;gap:8px}.publication-keywords span{display:inline-flex;padding:5px 10px;border:1px solid var(--line);border-radius:999px;background:#f4f6f8;color:#425b73;font-size:.72rem;font-weight:700}
 .publication-detail-actions{margin-top:34px;padding-top:24px;border-top:1px solid var(--line);gap:12px}.publication-detail-actions .action{display:inline-flex;align-items:center;min-height:36px;padding:7px 11px;border:1px solid #bdc9d3;border-radius:6px;background:#fff}.publication-return{display:inline-block;margin-top:22px}
+.publication-detail-link{color:#fff;background:var(--brand);border-radius:5px;padding:4px 9px}.publication-detail-link:hover{filter:brightness(.94)}
 .graphical-abstract figure{margin:0}
 .graphical-abstract img{display:block;max-width:100%;width:auto;height:auto;margin:0 auto;border:1px solid var(--line);border-radius:8px;background:#fff}
 .graphical-abstract figcaption{text-align:center;margin-top:8px;color:var(--muted);font-size:.72rem}

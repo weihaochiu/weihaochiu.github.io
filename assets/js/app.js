@@ -2,66 +2,6 @@ const $=(s,r=document)=>r.querySelector(s);
 const $$=(s,r=document)=>[...r.querySelectorAll(s)];
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
-function sendGaEvent(eventName,parameters={}){
-  if(typeof window.gtag!=='function')return;
-  window.gtag('event',eventName,{
-    event_category:'academic_interaction',
-    page_path:window.location.pathname,
-    link_url:String(parameters.linkUrl||''),
-    link_text:String(parameters.linkText||''),
-    item_id:String(parameters.itemId||''),
-    share_method:String(parameters.shareMethod||'')
-  });
-}
-function interactionItemId(element){
-  const article=element?.closest('article');
-  return article?.querySelector('meta[itemprop="identifier"]')?.content||article?.id?.replace(/^pub-/,'')||'';
-}
-function shareMethod(link){
-  const href=link.getAttribute('href')||'';
-  if(href.startsWith('mailto:'))return 'email';
-  try{
-    const host=new URL(link.href).hostname.toLowerCase();
-    if(host.includes('linkedin.com'))return 'linkedin';
-    if(host==='twitter.com'||host==='x.com')return 'x';
-    if(host.includes('facebook.com'))return 'facebook';
-  }catch(error){}
-  return 'other';
-}
-function analyticsInteractions(){
-  document.addEventListener('click',event=>{
-    const link=event.target.closest('a');
-    if(!link)return;
-    const href=link.href||'';
-    const rawHref=link.getAttribute('href')||'';
-    const text=(link.textContent||'').trim();
-    const itemId=interactionItemId(link);
-    const base={linkUrl:href,linkText:text,itemId};
-
-    if(link.closest('.share-wrap')){
-      sendGaEvent('share_action',{...base,shareMethod:shareMethod(link)});
-      return;
-    }
-    if(link.classList.contains('oa-action')){
-      sendGaEvent('oa_pdf_click',base);
-      return;
-    }
-    if(location.pathname.endsWith('/patents.html')&&link.closest('[data-collection="patents"] .collection-card')){
-      sendGaEvent('patent_click',base);
-      return;
-    }
-    if(/^mailto:/i.test(rawHref)){
-      sendGaEvent('email_click',base);
-      return;
-    }
-    if(/(?:^|\.)doi\.org$/i.test(link.hostname))sendGaEvent('doi_click',base);
-    else if(/^scholar\.google\./i.test(link.hostname))sendGaEvent('scholar_click',base);
-    else if(/(?:^|\.)openalex\.org$/i.test(link.hostname))sendGaEvent('openalex_click',base);
-    else if(/(?:^|\.)orcid\.org$/i.test(link.hostname))sendGaEvent('orcid_click',base);
-    else if((/\.(?:pdf|docx?)(?:[?#]|$)/i.test(rawHref)||link.hasAttribute('download'))&&/\b(?:cv|curriculum|resume)\b/i.test(`${text} ${rawHref}`))sendGaEvent('cv_download',base);
-  });
-}
-
 async function loadData(name){
   const local=`data/${name}.json`;
   try{const r=await fetch(local,{cache:'no-store'});if(r.ok)return r.json()}catch(e){}
@@ -89,9 +29,8 @@ function setNavigation(){
   const nav=$('.site-nav');if(!nav)return;
   const links=[['about.html','About'],['research.html','Research'],['publications.html','Publications'],['patents.html','Patents'],['projects.html','Projects']];
   const p=(location.pathname.split('/').pop()||'index.html').toLowerCase();
-  const prefix=location.pathname.includes('/publications/')?'../':'';
   const aboutPages=new Set(['about.html','experience.html','education.html','awards.html']);
-  nav.innerHTML=links.map(([href,label])=>{const active=(href===p)||(href==='about.html'&&aboutPages.has(p));return `<a ${active?'aria-current="page" ':''}href="${prefix}${href}">${label}</a>`}).join('');
+  nav.innerHTML=links.map(([href,label])=>{const active=(href===p)||(href==='about.html'&&aboutPages.has(p));return `<a ${active?'aria-current="page" ':''}href="${href}">${label}</a>`}).join('');
 }
 
 async function initMeta(){
@@ -227,6 +166,7 @@ function publicationCard(p){
   const labels=[p.categoryLabel,...(p.subtopics||[])].filter(Boolean);
   const anchor=publicationAnchor(p);
   const shareUrl=publicationShareUrl(anchor);
+  const detailAction=`<a class="action publication-detail-link" href="${esc(shareUrl)}">Abstract, Highlights, GA &amp; Keywords →</a>`;
   const shareText=`${p.title}\n${p.journal||''}${p.year?`, ${p.year}`:''}\nDOI: ${p.doi||''}`;
   const emailUrl=`mailto:?subject=${encodeURIComponent(p.title||'Publication')}&body=${encodeURIComponent(`${shareText}\n\n${shareUrl}`)}`;
   const linkedinUrl=`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`;
@@ -234,7 +174,7 @@ function publicationCard(p){
   const facebookUrl=`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
   const shareMenuId=`share-menu-${anchor}`;
   const share=`<span class="share-wrap"><button class="action action-button share-trigger" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="${esc(shareMenuId)}" data-share-title="${esc(p.title)}" data-share-text="${esc(shareText)}" data-share-url="${esc(shareUrl)}">${SHARE_ICON}<span>Share</span></button><span class="share-menu" id="${esc(shareMenuId)}" role="menu" hidden><button type="button" role="menuitem" data-copy-share-url="${esc(shareUrl)}">Copy link</button><a role="menuitem" href="${esc(emailUrl)}">Email</a><a role="menuitem" href="${esc(linkedinUrl)}" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a role="menuitem" href="${esc(xUrl)}" target="_blank" rel="noopener noreferrer">X (Twitter) ↗</a><a role="menuitem" href="${esc(facebookUrl)}" target="_blank" rel="noopener noreferrer">Facebook ↗</a></span></span>`;
-  return `<article class="collection-card publication-card" id="${esc(anchor)}"><div class="card-heading"><h4><a href="${esc(p.doiUrl)}" target="_blank" rel="noopener">${esc(p.title)}</a></h4><span class="date-badge">${esc(p.date)}</span></div><p class="authors">${authors}</p><p class="journal"><em>${esc(p.journal)}</em>${p.volume?`, ${esc(p.volume)}`:''}${p.pages?`, ${esc(p.pages)}`:''} (${p.year}).</p><div class="card-labels">${labels.map(label=>`<span class="card-label">${esc(label)}</span>`).join('')}</div><div class="card-actions"><a class="action" href="${esc(p.doiUrl)}" target="_blank" rel="noopener">DOI ↗</a>${oaAction}${cited}${readers}${share}</div></article>`;
+  return `<article class="collection-card publication-card" id="${esc(anchor)}"><div class="card-heading"><h4><a href="${esc(shareUrl)}">${esc(p.title)}</a></h4><span class="date-badge">${esc(p.date)}</span></div><p class="authors">${authors}</p><p class="journal"><em>${esc(p.journal)}</em>${p.volume?`, ${esc(p.volume)}`:''}${p.pages?`, ${esc(p.pages)}`:''} (${p.year}).</p><div class="card-labels">${labels.map(label=>`<span class="card-label">${esc(label)}</span>`).join('')}</div><div class="card-actions">${detailAction}<a class="action" href="${esc(p.doiUrl)}" target="_blank" rel="noopener">DOI ↗</a>${oaAction}${cited}${readers}${share}</div></article>`;
 }
 function patentCard(p){return `<article class="collection-card"><div class="card-heading"><h4><a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.titleEn)}</a></h4><span class="date-badge">${esc(p.date)}</span></div>${p.titleZh?`<div class="local-title" lang="zh-Hant">${esc(p.titleZh)}</div>`:''}<div class="card-labels"><span class="card-label">${esc(p.number)}</span><span class="card-label">${esc(p.jurisdiction)}</span><span class="card-label">${esc(p.status)}</span></div><div class="meta-row">Inventors: ${(p.inventorsEn||[]).map(highlightAuthor).join(', ')}</div>${p.inventorsZh?`<div class="meta-row" lang="zh-Hant">發明人／創作人：${esc(p.inventorsZh)}</div>`:''}<div class="meta-row">Assignee: ${esc(p.assigneeEn)}</div><div class="card-actions"><a class="action" href="${esc(p.url)}" target="_blank" rel="noopener">Patent record ↗</a></div></article>`}
 function projectCard(p){return `<article class="collection-card"><div class="card-heading"><h4>${p.url?`<a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.titleEn)}</a>`:esc(p.titleEn)}</h4><span class="date-badge">${esc(p.period||p.startYear)}</span></div><div class="local-title" lang="zh-Hant">${esc(p.titleZh)}</div><div class="card-labels"><span class="card-label">${esc(p.status)}</span><span class="card-label">${esc(p.role)} · ${esc(p.roleZh)}</span>${p.number?`<span class="card-label">${esc(p.number)}</span>`:''}</div><p>${esc(p.agencyEn)}</p><p class="summary">${esc(p.scopeEn)}</p>${p.url?`<div class="card-actions"><a class="action" href="${esc(p.url)}" target="_blank" rel="noopener">Project record ↗</a></div>`:''}</article>`}
@@ -392,7 +332,7 @@ function publicationInteractions(){
       const text=trigger.dataset.shareText||'';
       const url=trigger.dataset.shareUrl||window.location.href;
       if(typeof navigator.share==='function'){
-        try{await navigator.share({title,text,url});sendGaEvent('share_action',{linkUrl:url,linkText:title,itemId:interactionItemId(trigger),shareMethod:'native'});return}
+        try{await navigator.share({title,text,url});return}
         catch(error){if(error?.name==='AbortError')return}
       }
       const menu=document.getElementById(trigger.getAttribute('aria-controls'));
@@ -410,7 +350,6 @@ function publicationInteractions(){
       const original=copyButton.textContent;
       try{
         await copyText(copyButton.dataset.copyShareUrl||window.location.href);
-        sendGaEvent('share_action',{linkUrl:copyButton.dataset.copyShareUrl||window.location.href,linkText:'Copy link',itemId:interactionItemId(copyButton),shareMethod:'copy_link'});
         copyButton.textContent='✓ Link copied';
       }catch(error){
         copyButton.textContent='Copy failed';
@@ -449,7 +388,6 @@ function navigationInteractions(){
 }
 
 document.addEventListener('DOMContentLoaded',()=>{
-  analyticsInteractions();
   setNavigation();
   navigationInteractions();
   publicationInteractions();
