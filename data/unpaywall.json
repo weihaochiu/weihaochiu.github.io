@@ -1,8 +1,8 @@
 {
   "source": "Unpaywall",
   "apiVersion": "v2",
-  "lastSuccessfulUpdate": "2026-07-16T02:07:35Z",
-  "lastAttempt": "2026-07-16T02:07:35Z",
+  "lastSuccessfulUpdate": "2026-07-19T19:14:40Z",
+  "lastAttempt": "2026-07-19T19:14:40Z",
   "status": "success",
   "publicationCount": 37,
   "records": {
@@ -10,49 +10,49 @@
       "status": "closed",
       "isOa": false,
       "oaStatus": "closed",
-      "lastChecked": "2026-07-16T02:07:35Z"
+      "lastChecked": "2026-07-19T19:14:40Z"
     },
     "10.1016/j.mtener.2026.102359": {
       "status": "closed",
       "isOa": false,
       "oaStatus": "closed",
-      "lastChecked": "2026-07-16T02:07:35Z"
+      "lastChecked": "2026-07-19T19:14:40Z"
     },
     "10.1016/j.solener.2026.114430": {
       "status": "closed",
       "isOa": false,
       "oaStatus": "closed",
-      "lastChecked": "2026-07-16T02:07:35Z"
+      "lastChecked": "2026-07-19T19:14:40Z"
     },
     "10.1016/j.jpowsour.2025.239216": {
       "status": "closed",
       "isOa": false,
       "oaStatus": "closed",
-      "lastChecked": "2026-07-16T02:07:35Z"
+      "lastChecked": "2026-07-19T19:14:40Z"
     },
     "10.1016/j.solmat.2025.114015": {
       "status": "closed",
       "isOa": false,
       "oaStatus": "closed",
-      "lastChecked": "2026-07-16T02:07:35Z"
+      "lastChecked": "2026-07-19T19:14:40Z"
     },
     "10.1002/asia.70245": {
       "status": "closed",
       "isOa": false,
       "oaStatus": "closed",
-      "lastChecked": "2026-07-16T02:07:35Z"
+      "lastChecked": "2026-07-19T19:14:40Z"
     },
     "10.1016/j.seppur.2025.134157": {
       "status": "closed",
       "isOa": false,
       "oaStatus": "closed",
-      "lastChecked": "2026-07-16T02:07:35Z"
+      "lastChecked": "2026-07-19T19:14:40Z"
     },
     "10.1002/solr.202500538": {
       "status": "closed",
       "isOa": false,
       "oaStatus": "closed",
-      "lastChecked": "2026-07-16T02:07:35Z"
+      "lastChecked": "2026-07-19T19:14:40Z"
     },
     "10.1002/asia.202500719": {
       "status": "open-access",
@@ -64,7 +64,7 @@
       "version": "publishedVersion",
       "hostType": "publisher",
       "repositoryInstitution": null,
-      "lastChecked": "2026-07-16T02:07:35Z"
+      "lastChecked": "2026-07-19T19:14:40Z"
     },
     "10.1002/advs.202410666": {
       "status": "open-access",
@@ -76,55 +76,55 @@
       "version": "publishedVersion",
       "hostType": "publisher",
       "repositoryInstitution": null,
-      "lastChecked": "2026-07-16T02:07:35Z"
+      "lastChecked": "2026-07-19T19:14:40Z"
     },
     "10.1016/j.mtchem.2024.102329": {
       "status": "closed",
       "isOa": false,
       "oaStatus": "closed",
-      "lastChecked": "2026-07-16T02:07:35Z"
+      "lastChecked": "2026-07-19T19:14:40Z"
     },
     "10.1016/j.cej.2024.153974": {
       "status": "closed",
       "isOa": false,
       "oaStatus": "closed",
-      "lastChecked": "2026-07-16T02:07:35Z"
+      "lastChecked": "2026-07-19T19:14:40Z"
     },
     "10.1016/j.jece.2023.111741": {
       "status": "closed",
       "isOa": false,
       "oaStatus": "closed",
-      "lastChecked": "2026-07-16T02:07:35Z"
+      "lastChecked": "2026-07-19T19:14:40Z"
     },
     "10.1002/solr.202300988": {
       "status": "closed",
       "isOa": false,
       "oaStatus": "closed",
-      "lastChecked": "2026-07-16T02:07:35Z"
+      "lastChecked": "2026-07-19T19:14:40Z"
     },
     "10.1039/d3cc04699k": {
       "status": "closed",
       "isOa": false,
       "oaStatus": "closed",
-      "lastChecked": "2026-07-16T02:07:35Z"
+      "lastChecked": "2026-07-19T19:14:40Z"
     },
     "10.1016/j.jpowsour.2023.233496": {
       "status": "closed",
       "isOa": false,
       "oaStatus": "closed",
-      "lastChecked": "2026-07-16T02:07:35Z"
+      "lastChecked": "2026-07-19T19:14:40Z"
     },
     "10.1002/asia.202300681": {
       "status": "closed",
       "isOa": false,
       "oaStatus": "closed",
-      "lastChecked": "2026-07-16T02:07:35Z"
+      "lastChecked": "2026-07-19T19:14:40Z"
     },
     "10.1016/j.orgel.2023.106847": {
       "status": "closed",
       "isOa": false,
       "oaStatus": "closed",
-      "lastChecked": "2026-07-16T02:07:35Z"
+      "lastChecked": "2026-07-19T19:14:40Z"
     },
     "10.1002/adfm.202306367": {
       "status": "open-access",
@@ -136,13 +136,13 @@
       "version": "publishedVersion",
       "hostType": "publisher",
       "repositoryInstitution": null,
-      "lastChecked": "2026-07-16T02:07:35Z"
+      "lastChecked": "2026-07-19T19:14:40Z"
     },
     "10.1016/j.cej.2022.139926": {
       "status": "closed",
       "isOa": false,
       "oaStatus": "closed",
-      "lastChecked": "2026-07-16T02:07:35Z"
+      "lastChecked": "2026-07-19T19:14:40Z"
     },
     "10.3390/nano12152651": {
       "status": "open-access",
@@ -154,7 +154,7 @@
       "version": "publishedVersion",
       "hostType": "publisher",
       "repositoryInstitution": null,
-      "lastChecked": "2026-07-16T02:07:35Z"
+      "lastChecked": "2026-07-19T19:14:40Z"
     },
     "10.3390/polym14081580": {
       "status": "open-access",
@@ -166,13 +166,13 @@
       "version": "publishedVersion",
       "hostType": "publisher",
       "repositoryInstitution": null,
-      "lastChecked": "2026-07-16T02:07:35Z"
+      "lastChecked": "2026-07-19T19:14:40Z"
     },
     "10.1016/j.cej.2021.131609": {
       "status": "closed",
       "isOa": false,
       "oaStatus": "closed",
-      "lastChecked": "2026-07-16T02:07:35Z"
+      "lastChecked": "2026-07-19T19:14:40Z"
     },
     "10.3390/polym13234246": {
       "status": "open-access",
@@ -184,7 +184,7 @@
       "version": "publishedVersion",
       "hostType": "publisher",
       "repositoryInstitution": null,
-      "lastChecked": "2026-07-16T02:07:35Z"
+      "lastChecked": "2026-07-19T19:14:40Z"
     },
     "10.3390/nano11082125": {
       "status": "open-access",
@@ -196,7 +196,7 @@
       "version": "publishedVersion",
       "hostType": "publisher",
       "repositoryInstitution": null,
-      "lastChecked": "2026-07-16T02:07:35Z"
+      "lastChecked": "2026-07-19T19:14:40Z"
     },
     "10.3390/nano11061607": {
       "status": "open-access",
@@ -208,73 +208,73 @@
       "version": "publishedVersion",
       "hostType": "publisher",
       "repositoryInstitution": null,
-      "lastChecked": "2026-07-16T02:07:35Z"
+      "lastChecked": "2026-07-19T19:14:40Z"
     },
     "10.1016/j.jpowsour.2012.12.094": {
       "status": "closed",
       "isOa": false,
       "oaStatus": "closed",
-      "lastChecked": "2026-07-16T02:07:35Z"
+      "lastChecked": "2026-07-19T19:14:40Z"
     },
     "10.1016/j.jpowsour.2012.05.079": {
       "status": "closed",
       "isOa": false,
       "oaStatus": "closed",
-      "lastChecked": "2026-07-16T02:07:35Z"
+      "lastChecked": "2026-07-19T19:14:40Z"
     },
     "10.1016/j.jpowsour.2011.06.049": {
       "status": "closed",
       "isOa": false,
       "oaStatus": "closed",
-      "lastChecked": "2026-07-16T02:07:35Z"
+      "lastChecked": "2026-07-19T19:14:40Z"
     },
     "10.1016/j.jpowsour.2010.12.063": {
       "status": "closed",
       "isOa": false,
       "oaStatus": "closed",
-      "lastChecked": "2026-07-16T02:07:35Z"
+      "lastChecked": "2026-07-19T19:14:40Z"
     },
     "10.1039/c0jm04099a": {
       "status": "closed",
       "isOa": false,
       "oaStatus": "closed",
-      "lastChecked": "2026-07-16T02:07:35Z"
+      "lastChecked": "2026-07-19T19:14:40Z"
     },
     "10.1016/j.electacta.2010.07.061": {
       "status": "closed",
       "isOa": false,
       "oaStatus": "closed",
-      "lastChecked": "2026-07-16T02:07:35Z"
+      "lastChecked": "2026-07-19T19:14:40Z"
     },
     "10.1016/j.tsf.2009.11.058": {
       "status": "closed",
       "isOa": false,
       "oaStatus": "closed",
-      "lastChecked": "2026-07-16T02:07:35Z"
+      "lastChecked": "2026-07-19T19:14:40Z"
     },
     "10.1016/j.solmat.2009.07.017": {
       "status": "closed",
       "isOa": false,
       "oaStatus": "closed",
-      "lastChecked": "2026-07-16T02:07:35Z"
+      "lastChecked": "2026-07-19T19:14:40Z"
     },
     "10.1039/b902595m": {
       "status": "closed",
       "isOa": false,
       "oaStatus": "closed",
-      "lastChecked": "2026-07-16T02:07:35Z"
+      "lastChecked": "2026-07-19T19:14:40Z"
     },
     "10.1021/jp805239k": {
       "status": "closed",
       "isOa": false,
       "oaStatus": "closed",
-      "lastChecked": "2026-07-16T02:07:35Z"
+      "lastChecked": "2026-07-19T19:14:40Z"
     },
     "10.1016/j.optcom.2004.10.003": {
       "status": "closed",
       "isOa": false,
       "oaStatus": "closed",
-      "lastChecked": "2026-07-16T02:07:35Z"
+      "lastChecked": "2026-07-19T19:14:40Z"
     }
   }
 }
