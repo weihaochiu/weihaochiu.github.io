@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+<title>BEMS</title>
+<style>
+:root{
+  --bg:#f4f7fb;--surface:#fff;--ink:#172033;--muted:#667085;
+  --line:#e4e9f2;--accent:#3157d5;--accent2:#eef2ff;--ok:#087a55;
+  --shadow:0 14px 40px rgba(31,42,68,.08)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink)}
+a{color:inherit;text-decoration:none}
+.shell{max-width:1240px;margin:auto;padding:28px}
+.topbar{display:flex;justify-content:space-between;gap:18px;align-items:center;margin-bottom:28px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.02em}
+.mark{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#3157d5,#7b61ff);display:grid;place-items:center;color:white}
+.badge{font-size:12px;padding:6px 10px;border:1px solid var(--line);border-radius:999px;color:var(--muted);background:#fff}
+.hero{background:linear-gradient(135deg,#172a68,#3157d5 58%,#775fe8);color:white;border-radius:24px;padding:34px;box-shadow:var(--shadow);margin-bottom:24px}
+.hero h1{font-size:clamp(28px,5vw,48px);margin:4px 0 12px}.hero p{max-width:760px;color:#e8ecff;line-height:1.65}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:var(--shadow)}
+.card h2,.card h3{margin-top:0}.muted{color:var(--muted)}
+.launch{display:inline-flex;align-items:center;gap:8px;margin-top:18px;padding:11px 16px;border-radius:12px;background:var(--accent);color:#fff;font-weight:700}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:20px 0}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:17px;padding:18px}
+.kpi .v{font-size:28px;font-weight:800;margin-top:6px}.kpi .l{font-size:13px;color:var(--muted)}
+.panel-grid{display:grid;grid-template-columns:1.55fr 1fr;gap:20px}
+canvas{width:100%!important;max-height:360px}
+.table-wrap{overflow:auto}
+table{border-collapse:collapse;width:100%}th,td{text-align:left;padding:12px;border-bottom:1px solid var(--line);font-size:14px}th{color:var(--muted);font-weight:600}
+.status{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted)}.dot{width:9px;height:9px;border-radius:50%;background:var(--ok)}
+.toolbar{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:16px}
+select{padding:9px 12px;border:1px solid var(--line);border-radius:10px;background:#fff}
+.error{display:none;background:#fff3f3;color:#9a2222;border:1px solid #ffd6d6;padding:14px;border-radius:12px;margin:16px 0}
+footer{margin:30px 0 8px;color:var(--muted);font-size:13px}
+@media(max-width:850px){.grid,.panel-grid,.kpis{grid-template-columns:1fr 1fr}.shell{padding:16px}}
+@media(max-width:560px){.grid,.panel-grid,.kpis{grid-template-columns:1fr}.hero{padding:24px}.topbar{align-items:flex-start}}
+</style>
+</head>
+<body>
+<main class="shell">
+  <div class="topbar"><div class="brand"><div class="mark">B</div>BEMS</div><span class="badge">Unlisted management portal</span></div>
+  <section class="hero"><div class="badge" style="display:inline-block;background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.25)">Back-end Management System</div>
+  <h1>Research website control center</h1><p>A private-by-obscurity entry point for website performance and publication analytics. This page is intentionally excluded from navigation and search indexing.</p></section>
+  <section class="grid">
+    <article class="card"><h2>Website Insights</h2><p class="muted">GA4 overview, monthly traffic, top pages, acquisition channels, countries, devices and academic-resource events.</p>
+      <a class="launch" href="website-insight-ea929558.html">Open dashboard →</a></article>
+    <article class="card"><h2>Publication Insights</h2><p class="muted">Publication, citation, journal, quartile and research-field analytics.</p>
+      <a class="launch" href="publication-insights-4d8c7a.html">Open dashboard →</a></article>
+    <article class="card"><h2>Future modules</h2><p class="muted">Patent analytics, update validation, citation-source comparison and data-quality checking can be added here later.</p></article>
+    <article class="card"><h2>Privacy note</h2><p class="muted">No login is used. Anyone who obtains this URL can open it. Do not place API credentials, visitor-level records or confidential research data in these pages.</p></article>
+  </section>
+  <footer>BEMS · Static GitHub Pages module</footer>
+</main>
+</body></html>
