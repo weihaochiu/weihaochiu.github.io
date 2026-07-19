@@ -17,3 +17,6 @@ statistics:
 
 The same statuses are supported for abstract, highlights and keywords:
 available, pending, not-available.
+
+Keywords must be stored explicitly in the "keywords" array. Existing "tags"
+are used for website classification only and do not satisfy the Keywords audit.

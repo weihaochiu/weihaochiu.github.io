@@ -61,7 +61,7 @@ def graphical_abstract_path(p):
   return ''
 
 def article_schema(p, url):
-  obj = {'@type':'ScholarlyArticle','@id':url+'#article','url':url,'mainEntityOfPage':url,'headline':p.get('title',''),'name':p.get('title',''),'datePublished':p.get('date') or str(p.get('year','')),'author':[{'@type':'Person','name':a} for a in p.get('authors',[])],'isPartOf':{'@type':'Periodical','name':p.get('journal','')},'publisher':{'@type':'Organization','name':p.get('publisher','')},'identifier':[{'@type':'PropertyValue','propertyID':'DOI','value':p.get('doi','')},p.get('doiUrl','')],'sameAs':p.get('doiUrl',''),'citation':p.get('citation',''),'keywords':p.get('keywords') or p.get('tags',[]),'about':p.get('topic',''),'pagination':p.get('pages',''),'volumeNumber':p.get('volume',''),'issueNumber':p.get('issue',''),'inLanguage':'en'}
+  obj = {'@type':'ScholarlyArticle','@id':url+'#article','url':url,'mainEntityOfPage':url,'headline':p.get('title',''),'name':p.get('title',''),'datePublished':p.get('date') or str(p.get('year','')),'author':[{'@type':'Person','name':a} for a in p.get('authors',[])],'isPartOf':{'@type':'Periodical','name':p.get('journal','')},'publisher':{'@type':'Organization','name':p.get('publisher','')},'identifier':[{'@type':'PropertyValue','propertyID':'DOI','value':p.get('doi','')},p.get('doiUrl','')],'sameAs':p.get('doiUrl',''),'citation':p.get('citation',''),'keywords':p.get('keywords',[]),'about':p.get('topic',''),'pagination':p.get('pages',''),'volumeNumber':p.get('volume',''),'issueNumber':p.get('issue',''),'inLanguage':'en'}
   if p.get('abstract'): obj['abstract'] = p.get('abstract')
   ga_path = graphical_abstract_path(p)
   if ga_path: obj['image'] = SITE_URL + '/' + ga_path
@@ -107,7 +107,7 @@ def publication_page(p, openalex_record=None, unpaywall_record=None):
   highlights = p.get('highlights') or []
   if isinstance(highlights, str): highlights = [highlights]
   highlights = [str(item).strip() for item in highlights if str(item).strip()]
-  keywords = p.get('keywords') if 'keywords' in p else p.get('tags',[])
+  keywords = p.get('keywords',[])
   if isinstance(keywords, str): keywords = [keywords]
   keywords = [str(item).strip() for item in (keywords or []) if str(item).strip()]
   ga_path = graphical_abstract_path(p)
