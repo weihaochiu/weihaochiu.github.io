@@ -8,6 +8,26 @@ ROOT = Path(__file__).resolve().parents[1]
 SITE_URL = 'https://weihaochiu.github.io'
 TODAY = date.today().isoformat()
 EMAIL_LINKS = '<a href="mailto:weihao.chiu@gmail.com">Personal Email</a><a href="mailto:d000019005@cgu.edu.tw">CGU Email</a>'
+GA_TAG = '''<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G82XWMCJDE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-G82XWMCJDE');
+</script>'''
+PRIVATE_PATHS = ('bems-fe5049fb.html', 'website-insight-ea929558.html', 'publication-insights-4d8c7a.html')
+
+def robots_text():
+  agents = ('*', 'Googlebot', 'Bingbot', 'OAI-SearchBot', 'GPTBot', 'ChatGPT-User',
+            'ClaudeBot', 'Claude-SearchBot', 'PerplexityBot', 'Google-Extended',
+            'Applebot-Extended')
+  blocks = []
+  for agent in agents:
+    lines = [f'User-agent: {agent}', 'Allow: /']
+    lines += [f'Disallow: /{path}' for path in PRIVATE_PATHS]
+    blocks.append('\n'.join(lines))
+  return '\n\n'.join(blocks) + f'\n\nSitemap: {SITE_URL}/sitemap.xml\n'
 
 PERSON = {
   '@context': 'https://schema.org', '@type': 'Person', '@id': SITE_URL + '/#person',
@@ -64,7 +84,7 @@ def publication_page(p):
   graph={'@context':'https://schema.org','@graph':[PERSON,article_schema(p,url)]}
   vol=', '+esc(p.get('volume')) if p.get('volume') else ''
   pages=', '+esc(p.get('pages')) if p.get('pages') else ''
-  return '''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>{title} | Wei-Hao Chiu</title><meta name="description" content="{desc}"/><link rel="canonical" href="{url}"/><meta property="og:type" content="article"/><meta property="og:title" content="{title}"/><meta property="og:description" content="{desc}"/><meta property="og:url" content="{url}"/><meta property="og:image" content="{site}/assets/images/og-profile.jpg"/><meta property="article:published_time" content="{date}"/><meta property="article:author" content="{site}/"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="{title}"/><meta name="twitter:description" content="{desc}"/><meta name="twitter:image" content="{site}/assets/images/og-profile.jpg"/>{citation}<script type="application/ld+json">{schema}</script><link href="../assets/css/styles.css" rel="stylesheet"/></head><body><header class="site-header"><div class="shell nav-shell"><a class="brand" href="../index.html"><span>Wei-Hao Chiu</span><small>Academic Profile</small></a><nav aria-label="Main navigation" class="site-nav"><a href="../about.html">About</a><a href="../research.html">Research</a><a href="../publications.html">Publications</a><a href="../patents.html">Patents</a><a href="../projects.html">Projects</a></nav></div></header><main class="content shell"><article class="collection-card publication-card" itemscope itemtype="https://schema.org/ScholarlyArticle"><p class="kicker">Scholarly article</p><h1 itemprop="headline">{title}</h1><p class="authors" itemprop="author">{authors}</p><p class="journal"><em>{journal}</em>{vol}{pages} ({year}).</p><p><strong>DOI:</strong> <a itemprop="sameAs" href="{doiurl}" target="_blank" rel="noopener">{doi}</a></p><p><strong>Research topic:</strong> {topic}</p><p><strong>Google Scholar citations recorded by this website:</strong> {count}</p><div class="card-actions"><a class="action" href="{doiurl}" target="_blank" rel="noopener">Open DOI ↗</a><a class="action" href="../publications.html#pub-{slug}">Return to publications</a></div></article></main><footer class="site-footer"><div class="shell footer-grid"><div><strong>Wei-Hao Chiu, Ph.D.</strong><p>Associate Researcher<br/>Center for Sustainability and Energy Technologies<br/>Chang Gung University</p></div><div class="footer-links">{emails}</div></div></footer></body></html>'''.format(title=title,desc=desc,url=url,site=SITE_URL,date=esc(p.get('date')),citation=citation_meta(p),schema=json.dumps(graph,ensure_ascii=False,separators=(',',':')),authors=authors,journal=esc(p.get('journal')),vol=vol,pages=pages,year=esc(p.get('year')),doiurl=esc(p.get('doiUrl')),doi=esc(doi),topic=esc(p.get('topic')),count=esc(p.get('citationCount',0)),slug=slug,emails=EMAIL_LINKS)
+  return '''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>{title} | Wei-Hao Chiu</title><meta name="description" content="{desc}"/><link rel="canonical" href="{url}"/><meta property="og:type" content="article"/><meta property="og:title" content="{title}"/><meta property="og:description" content="{desc}"/><meta property="og:url" content="{url}"/><meta property="og:image" content="{site}/assets/images/og-profile.jpg"/><meta property="article:published_time" content="{date}"/><meta property="article:author" content="{site}/"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="{title}"/><meta name="twitter:description" content="{desc}"/><meta name="twitter:image" content="{site}/assets/images/og-profile.jpg"/>{ga}{citation}<script type="application/ld+json">{schema}</script><link href="../assets/css/styles.css" rel="stylesheet"/></head><body><header class="site-header"><div class="shell nav-shell"><a class="brand" href="../index.html"><span>Wei-Hao Chiu</span><small>Academic Profile</small></a><nav aria-label="Main navigation" class="site-nav"><a href="../about.html">About</a><a href="../research.html">Research</a><a href="../publications.html">Publications</a><a href="../patents.html">Patents</a><a href="../projects.html">Projects</a></nav></div></header><main class="content shell"><article class="collection-card publication-card" itemscope itemtype="https://schema.org/ScholarlyArticle"><p class="kicker">Scholarly article</p><h1 itemprop="headline">{title}</h1><p class="authors" itemprop="author">{authors}</p><p class="journal"><em>{journal}</em>{vol}{pages} ({year}).</p><p><strong>DOI:</strong> <a itemprop="sameAs" href="{doiurl}" target="_blank" rel="noopener">{doi}</a></p><p><strong>Research topic:</strong> {topic}</p><p><strong>Google Scholar citations recorded by this website:</strong> {count}</p><div class="card-actions"><a class="action" href="{doiurl}" target="_blank" rel="noopener">Open DOI ↗</a><a class="action" href="../publications.html#pub-{slug}">Return to publications</a></div></article></main><footer class="site-footer"><div class="shell footer-grid"><div><strong>Wei-Hao Chiu, Ph.D.</strong><p>Associate Researcher<br/>Center for Sustainability and Energy Technologies<br/>Chang Gung University</p></div><div class="footer-links">{emails}</div></div></footer></body></html>'''.format(title=title,desc=desc,url=url,site=SITE_URL,date=esc(p.get('date')),ga=GA_TAG,citation=citation_meta(p),schema=json.dumps(graph,ensure_ascii=False,separators=(',',':')),authors=authors,journal=esc(p.get('journal')),vol=vol,pages=pages,year=esc(p.get('year')),doiurl=esc(p.get('doiUrl')),doi=esc(doi),topic=esc(p.get('topic')),count=esc(p.get('citationCount',0)),slug=slug,emails=EMAIL_LINKS)
 
 def main():
   pubs=json.loads((ROOT/'data/publications.json').read_text(encoding='utf-8'))
@@ -85,7 +105,7 @@ def main():
   app=ROOT/'assets/js/app.js'; js=app.read_text(encoding='utf-8')
   js=re.sub(r'function publicationShareUrl\(anchor\)\{.*?\n\}', "function publicationShareUrl(anchor){\n  const slug=String(anchor||'').replace(/^pub-/,'');\n  return new URL(`publications/${slug}.html`,window.location.href).toString();\n}", js, count=1, flags=re.S)
   app.write_text(js,encoding='utf-8')
-  (ROOT/'robots.txt').write_text('''User-agent: *\nAllow: /\n\nUser-agent: Googlebot\nAllow: /\n\nUser-agent: Bingbot\nAllow: /\n\nUser-agent: OAI-SearchBot\nAllow: /\n\nUser-agent: GPTBot\nAllow: /\n\nUser-agent: ChatGPT-User\nAllow: /\n\nUser-agent: ClaudeBot\nAllow: /\n\nUser-agent: Claude-SearchBot\nAllow: /\n\nUser-agent: PerplexityBot\nAllow: /\n\nUser-agent: Google-Extended\nAllow: /\n\nUser-agent: Applebot-Extended\nAllow: /\n\nSitemap: https://weihaochiu.github.io/sitemap.xml\n''',encoding='utf-8')
+  (ROOT/'robots.txt').write_text(robots_text(),encoding='utf-8')
   urls=['','about.html','research.html','publications.html','patents.html','projects.html','llms.txt']+['publications/'+slugify(p.get('doi',''))+'.html' for p in pubs]
   rows='\n'.join('  <url><loc>'+SITE_URL+'/'+esc(u)+'</loc><lastmod>'+TODAY+'</lastmod></url>' for u in urls)
   (ROOT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+rows+'\n</urlset>\n',encoding='utf-8')

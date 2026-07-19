@@ -1,34 +1,67 @@
 User-agent: *
 Allow: /
+Disallow: /bems-fe5049fb.html
+Disallow: /website-insight-ea929558.html
+Disallow: /publication-insights-4d8c7a.html
 
 User-agent: Googlebot
 Allow: /
+Disallow: /bems-fe5049fb.html
+Disallow: /website-insight-ea929558.html
+Disallow: /publication-insights-4d8c7a.html
 
 User-agent: Bingbot
 Allow: /
+Disallow: /bems-fe5049fb.html
+Disallow: /website-insight-ea929558.html
+Disallow: /publication-insights-4d8c7a.html
 
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /bems-fe5049fb.html
+Disallow: /website-insight-ea929558.html
+Disallow: /publication-insights-4d8c7a.html
 
 User-agent: GPTBot
 Allow: /
+Disallow: /bems-fe5049fb.html
+Disallow: /website-insight-ea929558.html
+Disallow: /publication-insights-4d8c7a.html
 
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /bems-fe5049fb.html
+Disallow: /website-insight-ea929558.html
+Disallow: /publication-insights-4d8c7a.html
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /bems-fe5049fb.html
+Disallow: /website-insight-ea929558.html
+Disallow: /publication-insights-4d8c7a.html
 
 User-agent: Claude-SearchBot
 Allow: /
+Disallow: /bems-fe5049fb.html
+Disallow: /website-insight-ea929558.html
+Disallow: /publication-insights-4d8c7a.html
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /bems-fe5049fb.html
+Disallow: /website-insight-ea929558.html
+Disallow: /publication-insights-4d8c7a.html
 
 User-agent: Google-Extended
 Allow: /
+Disallow: /bems-fe5049fb.html
+Disallow: /website-insight-ea929558.html
+Disallow: /publication-insights-4d8c7a.html
 
 User-agent: Applebot-Extended
 Allow: /
+Disallow: /bems-fe5049fb.html
+Disallow: /website-insight-ea929558.html
+Disallow: /publication-insights-4d8c7a.html
 
 Sitemap: https://weihaochiu.github.io/sitemap.xml
