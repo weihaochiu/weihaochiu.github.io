@@ -33,7 +33,7 @@ def main():
     row = o.rows[0] if o.rows else None
     overview = {"pageViews":val(row,0,int),"activeUsers":val(row,1,int),"sessions":val(row,2,int),"engagementRate":val(row,3)} if row else {}
 
-    monthly = report(client, ["yearMonth"], ["screenPageViews","activeUsers"], "12monthsAgo", order_metric=None)
+    monthly = report(client, ["yearMonth"], ["screenPageViews","activeUsers"], "365daysAgo", order_metric=None)
     monthly_trend = []
     for r in monthly.rows:
         ym=r.dimension_values[0].value
@@ -65,7 +65,7 @@ def main():
     payload={
         "schemaVersion":1,
         "generatedAt":datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00","Z"),
-        "period":{"overview":"28daysAgo to yesterday","trend":"12monthsAgo to yesterday"},
+        "period":{"overview":"28daysAgo to yesterday","trend":"365daysAgo to yesterday"},
         "overview":overview,"monthlyTrend":monthly_trend,"topPages":top_pages,
         "trafficChannels":traffic,"topCountries":countries,"devices":devices,
         "academicEvents":events
