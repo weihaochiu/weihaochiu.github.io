@@ -56,7 +56,8 @@ def main():
         field_name="eventName",
         in_list_filter=Filter.InListFilter(values=[
             "doi_click","oa_pdf_click","scholar_click","cited_by_click",
-            "patent_click","cv_download","orcid_click","openalex_click"
+            "patent_click","cv_download","orcid_click","openalex_click",
+            "email_click","share_action"
         ])
     ))
     events_r = report(client, ["eventName"], ["eventCount"], "28daysAgo", limit=30, order_metric="eventCount", filter_expr=event_filter)

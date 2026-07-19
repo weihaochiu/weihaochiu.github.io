@@ -42,7 +42,7 @@ footer{margin:30px 0 8px;color:var(--muted);font-size:13px}
 @media(max-width:850px){.grid,.panel-grid,.kpis{grid-template-columns:1fr 1fr}.shell{padding:16px}}
 @media(max-width:560px){.grid,.panel-grid,.kpis{grid-template-columns:1fr}.hero{padding:24px}.topbar{align-items:flex-start}}
 </style>
-<script type="application/ld+json" id="person-schema">{"@context":"https://schema.org","@type":"Person","@id":"https://weihaochiu.github.io/#person","name":"Wei-Hao Chiu","alternateName":["邱偉豪","Chiu, Wei-Hao"],"honorificSuffix":"Ph.D.","url":"https://weihaochiu.github.io/","image":"https://weihaochiu.github.io/assets/images/profile.jpg","jobTitle":"Associate Researcher","email":["mailto:weihao.chiu@gmail.com","mailto:d000019005@cgu.edu.tw"],"affiliation":{"@type":"Organization","name":"Chang Gung University","url":"https://www.cgu.edu.tw/"},"worksFor":{"@type":"Organization","name":"Center for Sustainability and Energy Technologies, Chang Gung University"},"knowsAbout":["Perovskite solar cells","Tin and tin-lead perovskite photovoltaics","Scalable photovoltaic manufacturing","Vacuum-flash crystallization","Blade coating","Slot-die coating","Charge-transport layers","Self-assembled monolayers","Photoluminescence and electroluminescence","Quasi-Fermi level splitting","Photovoltaic reliability","Space photovoltaics","Tandem solar cells","Vanadium redox flow batteries"],"sameAs":["https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en","https://orcid.org/0000-0003-4484-3117","https://www.scopus.com/authid/detail.uri?authorId=7201503537","https://www.webofscience.com/wos/author/record/JCE-6812-2023","https://pure.lib.cgu.edu.tw/en/persons/wei-hao-chiu/publications/","https://www.cgu.edu.tw/cset-en/FullTimeProfessorManagement/Detail/e3d82caf-b69a-4ee3-ac95-0d1558e22d83?nodeId=17439","https://www.researchgate.net/profile/Wei-Hao-Chiu","https://www.linkedin.com/in/wei-hao-chiu-a208a9b0/","https://openalex.org/works?filter=authorships.author.id:a5007707999"]}</script></head>
+</head>
 <body>
 <main class="shell">
   <div class="topbar"><a class="brand" href="bems-fe5049fb.html"><div class="mark">B</div>BEMS</a><div class="status"><span class="dot"></span><span id="updated">Loading data…</span></div></div>
@@ -62,7 +62,7 @@ footer{margin:30px 0 8px;color:var(--muted);font-size:13px}
     <article class="card"><h2>Top countries</h2><div class="table-wrap"><table><thead><tr><th>Country</th><th>Users</th><th>Views</th></tr></thead><tbody id="countries"></tbody></table></div></article>
     <article class="card"><h2>Devices</h2><canvas id="devicesChart"></canvas></article>
   </section>
-  <section class="card" style="margin-top:20px"><h2>Academic resource interactions</h2><div class="table-wrap"><table><thead><tr><th>Event</th><th>Count</th></tr></thead><tbody id="events"></tbody></table></div></section>
+  <section class="card" style="margin-top:20px"><h2>Academic resource interactions</h2><p class="muted">Tracked clicks and completed share actions during the last 28 days.</p><div class="table-wrap"><table><thead><tr><th>Interaction</th><th>Count</th></tr></thead><tbody id="events"></tbody></table></div></section>
   <footer>Only aggregated data are shown. JSON source: <code>assets/data/ga-summary.json</code></footer>
 </main>
 <script>
@@ -83,6 +83,18 @@ fetch(DATA_URL,{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.s
  const c=d.trafficChannels||[];chart('channelsChart','bar',c.map(x=>x.channel),[{label:'Sessions',data:c.map(x=>x.sessions)}],{indexAxis:'y'});
  rows('countries',d.topCountries,x=>`<tr><td>${esc(x.country)}</td><td>${nf.format(x.activeUsers||0)}</td><td>${nf.format(x.pageViews||0)}</td></tr>`);
  const dv=d.devices||[];chart('devicesChart','doughnut',dv.map(x=>x.device),[{label:'Users',data:dv.map(x=>x.activeUsers)}]);
- rows('events',d.academicEvents,x=>`<tr><td>${esc(x.eventName)}</td><td>${nf.format(x.eventCount||0)}</td></tr>`);
+ const eventLabels=[
+  ['doi_click','DOI clicks'],
+  ['oa_pdf_click','Open Access PDF clicks'],
+  ['scholar_click','Google Scholar clicks'],
+  ['openalex_click','OpenAlex clicks'],
+  ['orcid_click','ORCID clicks'],
+  ['email_click','Email clicks'],
+  ['cv_download','CV downloads'],
+  ['share_action','Share actions'],
+  ['patent_click','Patent link clicks']
+ ];
+ const eventCounts=new Map((d.academicEvents||[]).map(x=>[x.eventName,Number(x.eventCount)||0]));
+ rows('events',eventLabels.map(([eventName,label])=>({eventName,label,eventCount:eventCounts.get(eventName)||0})),x=>`<tr><td>${esc(x.label)}</td><td>${nf.format(x.eventCount)}</td></tr>`);
 }).catch(e=>{const el=document.getElementById('error');el.style.display='block';el.textContent='Unable to load analytics data: '+e.message+'. Run the GitHub Action after configuring the required secrets.';});
 </script></body></html>
