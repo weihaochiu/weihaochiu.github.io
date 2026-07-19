@@ -3,6 +3,7 @@ from __future__ import annotations
 import html, json, re
 from datetime import date
 from pathlib import Path
+from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE_URL = 'https://weihaochiu.github.io'
@@ -44,8 +45,26 @@ PERSON = {
 def esc(v): return html.escape(str(v or ''), quote=True)
 def slugify(doi): return re.sub(r'[^a-z0-9]+','-',str(doi).lower()).strip('-') or 'publication'
 
+def graphical_abstract_path(p):
+  """Return a site-relative GA path, preferring an explicit JSON value."""
+  explicit = str(p.get('graphicalAbstract') or '').strip().replace('\\', '/')
+  if explicit:
+    return explicit.lstrip('/')
+  stem = str(p.get('doi') or '').strip().replace('/', '_')
+  if not stem:
+    return ''
+  ga_dir = ROOT / 'GA'
+  for suffix in ('.JPG', '.PNG', '.jpg', '.png', '.JPEG', '.jpeg'):
+    candidate = ga_dir / f'{stem}{suffix}'
+    if candidate.is_file():
+      return candidate.relative_to(ROOT).as_posix()
+  return ''
+
 def article_schema(p, url):
-  obj = {'@type':'ScholarlyArticle','@id':url+'#article','url':url,'mainEntityOfPage':url,'headline':p.get('title',''),'name':p.get('title',''),'datePublished':p.get('date') or str(p.get('year','')),'author':[{'@type':'Person','name':a} for a in p.get('authors',[])],'isPartOf':{'@type':'Periodical','name':p.get('journal','')},'publisher':{'@type':'Organization','name':p.get('publisher','')},'identifier':[{'@type':'PropertyValue','propertyID':'DOI','value':p.get('doi','')},p.get('doiUrl','')],'sameAs':p.get('doiUrl',''),'citation':p.get('citation',''),'keywords':p.get('tags',[]),'about':p.get('topic',''),'pagination':p.get('pages',''),'volumeNumber':p.get('volume',''),'issueNumber':p.get('issue',''),'inLanguage':'en'}
+  obj = {'@type':'ScholarlyArticle','@id':url+'#article','url':url,'mainEntityOfPage':url,'headline':p.get('title',''),'name':p.get('title',''),'datePublished':p.get('date') or str(p.get('year','')),'author':[{'@type':'Person','name':a} for a in p.get('authors',[])],'isPartOf':{'@type':'Periodical','name':p.get('journal','')},'publisher':{'@type':'Organization','name':p.get('publisher','')},'identifier':[{'@type':'PropertyValue','propertyID':'DOI','value':p.get('doi','')},p.get('doiUrl','')],'sameAs':p.get('doiUrl',''),'citation':p.get('citation',''),'keywords':p.get('keywords') or p.get('tags',[]),'about':p.get('topic',''),'pagination':p.get('pages',''),'volumeNumber':p.get('volume',''),'issueNumber':p.get('issue',''),'inLanguage':'en'}
+  if p.get('abstract'): obj['abstract'] = p.get('abstract')
+  ga_path = graphical_abstract_path(p)
+  if ga_path: obj['image'] = SITE_URL + '/' + ga_path
   return {k:v for k,v in obj.items() if v not in ('',[],None)}
 
 def citation_meta(p):
@@ -76,18 +95,56 @@ def static_card(p):
   labels=[p.get('topic')]+list(p.get('tags',[]))
   labels_html=''.join('<span class="card-label">'+esc(x)+'</span>' for x in labels if x)
   n=int(p.get('citationCount') or 0)
-  return '<article class="collection-card publication-card seo-static-card" id="pub-'+slug+'" itemscope itemtype="https://schema.org/ScholarlyArticle"><meta itemprop="identifier" content="'+esc(doi)+'"/><div class="card-heading"><h4 itemprop="headline"><a href="'+esc(local)+'">'+esc(p.get('title'))+'</a></h4><span class="date-badge" itemprop="datePublished">'+esc(p.get('date'))+'</span></div><p class="authors" itemprop="author">'+authors+'</p><p class="journal" itemprop="isPartOf">'+journal+'</p><div class="card-labels">'+labels_html+'</div><div class="card-actions"><a class="action" href="'+esc(p.get('doiUrl'))+'" target="_blank" rel="noopener">DOI ↗</a><a class="action" href="'+esc(local)+'">Metadata &amp; share →</a><span class="action">'+str(n)+' Google Scholar citation'+('s' if n!=1 else '')+'</span></div></article>'
+  return '<article class="collection-card publication-card seo-static-card" id="pub-'+slug+'" itemscope itemtype="https://schema.org/ScholarlyArticle"><meta itemprop="identifier" content="'+esc(doi)+'"/><div class="card-heading"><h4 itemprop="headline"><a href="'+esc(local)+'">'+esc(p.get('title'))+'</a></h4><span class="date-badge" itemprop="datePublished">'+esc(p.get('date'))+'</span></div><p class="authors" itemprop="author">'+authors+'</p><p class="journal" itemprop="isPartOf">'+journal+'</p><div class="card-labels">'+labels_html+'</div><div class="card-actions"><a class="action" href="'+esc(p.get('doiUrl'))+'" target="_blank" rel="noopener">DOI ↗</a><a class="action" href="'+esc(local)+'">Abstract, Highlights &amp; GA →</a><span class="action">'+str(n)+' Google Scholar citation'+('s' if n!=1 else '')+'</span></div></article>'
 
-def publication_page(p):
+def publication_page(p, openalex_record=None, unpaywall_record=None):
   doi=p.get('doi',''); slug=slugify(doi); url=SITE_URL+'/publications/'+slug+'.html'
   title=esc(p.get('title')); desc=esc(p.get('citation')); authors=', '.join(esc(a) for a in p.get('authors',[]))
   graph={'@context':'https://schema.org','@graph':[PERSON,article_schema(p,url)]}
   vol=', '+esc(p.get('volume')) if p.get('volume') else ''
   pages=', '+esc(p.get('pages')) if p.get('pages') else ''
-  return '''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>{title} | Wei-Hao Chiu</title><meta name="description" content="{desc}"/><link rel="canonical" href="{url}"/><meta property="og:type" content="article"/><meta property="og:title" content="{title}"/><meta property="og:description" content="{desc}"/><meta property="og:url" content="{url}"/><meta property="og:image" content="{site}/assets/images/og-profile.jpg"/><meta property="article:published_time" content="{date}"/><meta property="article:author" content="{site}/"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="{title}"/><meta name="twitter:description" content="{desc}"/><meta name="twitter:image" content="{site}/assets/images/og-profile.jpg"/>{ga}{citation}<script type="application/ld+json">{schema}</script><link href="../assets/css/styles.css" rel="stylesheet"/></head><body><header class="site-header"><div class="shell nav-shell"><a class="brand" href="../index.html"><span>Wei-Hao Chiu</span><small>Academic Profile</small></a><nav aria-label="Main navigation" class="site-nav"><a href="../about.html">About</a><a href="../research.html">Research</a><a href="../publications.html">Publications</a><a href="../patents.html">Patents</a><a href="../projects.html">Projects</a></nav></div></header><main class="content shell"><article class="collection-card publication-card" id="pub-{slug}" itemscope itemtype="https://schema.org/ScholarlyArticle"><p class="kicker">Scholarly article</p><h1 itemprop="headline">{title}</h1><p class="authors" itemprop="author">{authors}</p><p class="journal"><em>{journal}</em>{vol}{pages} ({year}).</p><p><strong>DOI:</strong> <a itemprop="sameAs" href="{doiurl}" target="_blank" rel="noopener">{doi}</a></p><p><strong>Research topic:</strong> {topic}</p><p><strong>Google Scholar citations recorded by this website:</strong> {count}</p><div class="card-actions"><a class="action" href="{doiurl}" target="_blank" rel="noopener">Open DOI ↗</a><a class="action" href="../publications.html#pub-{slug}">Return to publications</a></div></article></main><footer class="site-footer"><div class="shell footer-grid"><div><strong>Wei-Hao Chiu, Ph.D.</strong><p>Associate Researcher<br/>Center for Sustainability and Energy Technologies<br/>Chang Gung University</p></div><div class="footer-links">{emails}</div></div></footer><script src="../assets/js/app.js"></script></body></html>'''.format(title=title,desc=desc,url=url,site=SITE_URL,date=esc(p.get('date')),ga=GA_TAG,citation=citation_meta(p),schema=json.dumps(graph,ensure_ascii=False,separators=(',',':')),authors=authors,journal=esc(p.get('journal')),vol=vol,pages=pages,year=esc(p.get('year')),doiurl=esc(p.get('doiUrl')),doi=esc(doi),topic=esc(p.get('topic')),count=esc(p.get('citationCount',0)),slug=slug,emails=EMAIL_LINKS)
+  abstract = str(p.get('abstract') or '').strip()
+  highlights = p.get('highlights') or []
+  if isinstance(highlights, str): highlights = [highlights]
+  highlights = [str(item).strip() for item in highlights if str(item).strip()]
+  keywords = p.get('keywords') if 'keywords' in p else p.get('tags',[])
+  if isinstance(keywords, str): keywords = [keywords]
+  keywords = [str(item).strip() for item in (keywords or []) if str(item).strip()]
+  ga_path = graphical_abstract_path(p)
+  openalex_record = openalex_record or {}
+  unpaywall_record = unpaywall_record or {}
+  detail_sections = []
+  if abstract:
+    detail_sections.append('<section class="publication-detail-section"><h2>Abstract</h2><p itemprop="abstract">'+esc(abstract)+'</p></section>')
+  if highlights:
+    detail_sections.append('<section class="publication-detail-section"><h2>Highlights</h2><ul class="publication-highlights">'+''.join('<li>'+esc(item)+'</li>' for item in highlights)+'</ul></section>')
+  if ga_path:
+    ga_alt = p.get('graphicalAbstractAlt') or ('Graphical abstract for '+str(p.get('title') or 'this publication'))
+    detail_sections.append('<section class="publication-detail-section graphical-abstract"><h2>Graphical Abstract</h2><figure><img src="../'+esc(ga_path)+'" alt="'+esc(ga_alt)+'" loading="lazy"/><figcaption>Graphical abstract</figcaption></figure></section>')
+  if keywords:
+    detail_sections.append('<section class="publication-detail-section"><h2>Keywords</h2><div class="publication-keywords">'+''.join('<span itemprop="keywords">'+esc(item)+'</span>' for item in keywords)+'</div></section>')
+  details = ''.join(detail_sections)
+  actions = ['<a class="action" href="'+esc(p.get('doiUrl'))+'" target="_blank" rel="noopener">DOI ↗</a>']
+  if unpaywall_record.get('isOa') and unpaywall_record.get('urlForPdf'):
+    actions.append('<a class="action oa-action" href="'+esc(unpaywall_record.get('urlForPdf'))+'" target="_blank" rel="noopener noreferrer">Open Access PDF ↗</a>')
+  scholar_url = p.get('citedByUrl') or p.get('scholarProfileUrl')
+  if scholar_url:
+    actions.append('<a class="action" href="'+esc(scholar_url)+'" target="_blank" rel="noopener noreferrer">Google Scholar ('+esc(p.get('citationCount',0))+') ↗</a>')
+  if openalex_record.get('status') == 'verified' and openalex_record.get('url'):
+    oa_count = int(openalex_record.get('citationCount') or 0)
+    actions.append('<a class="action" href="'+esc(openalex_record.get('url'))+'" target="_blank" rel="noopener noreferrer">OpenAlex ('+f'{oa_count:,}'+') ↗</a>')
+  share_text = str(p.get('title') or '')
+  email_url = 'mailto:?subject='+quote(share_text)+'&body='+quote(url)
+  actions.append('<span class="share-wrap"><button class="action action-button share-trigger" type="button" aria-haspopup="menu" aria-expanded="false" data-share-title="'+title+'" data-share-text="'+title+'" data-share-url="'+esc(url)+'">Share</button><span class="share-menu" role="menu" hidden><button type="button" role="menuitem" data-copy-share-url="'+esc(url)+'">Copy link</button><a role="menuitem" href="'+esc(email_url)+'">Email</a><a role="menuitem" href="https://www.linkedin.com/sharing/share-offsite/?url='+quote(url, safe='')+'" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></span></span>')
+  actions_html = '<div class="card-actions publication-detail-actions">'+''.join(actions)+'</div>'
+  return '''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>{title} | Wei-Hao Chiu</title><meta name="description" content="{desc}"/><link rel="canonical" href="{url}"/><meta property="og:type" content="article"/><meta property="og:title" content="{title}"/><meta property="og:description" content="{desc}"/><meta property="og:url" content="{url}"/><meta property="og:image" content="{site}/assets/images/og-profile.jpg"/><meta property="article:published_time" content="{date}"/><meta property="article:author" content="{site}/"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="{title}"/><meta name="twitter:description" content="{desc}"/><meta name="twitter:image" content="{site}/assets/images/og-profile.jpg"/>{ga}{citation}<script type="application/ld+json">{schema}</script><link href="../assets/css/styles.css" rel="stylesheet"/></head><body><header class="site-header"><div class="shell nav-shell"><a class="brand" href="../index.html"><span>Wei-Hao Chiu</span><small>Academic Profile</small></a><nav aria-label="Main navigation" class="site-nav"><a href="../about.html">About</a><a href="../research.html">Research</a><a href="../publications.html">Publications</a><a href="../patents.html">Patents</a><a href="../projects.html">Projects</a></nav></div></header><main class="content shell"><article class="collection-card publication-card publication-detail" itemscope itemtype="https://schema.org/ScholarlyArticle"><p class="kicker">Scholarly article</p><h1 itemprop="headline">{title}</h1><p class="authors" itemprop="author">{authors}</p><p class="journal"><em>{journal}</em>{vol}{pages} ({year}).</p><p><strong>Research topic:</strong> {topic}</p>{details}{actions}<a class="action publication-return" href="../publications.html#pub-{slug}">← Return to publications</a></article></main><footer class="site-footer"><div class="shell footer-grid"><div><strong>Wei-Hao Chiu, Ph.D.</strong><p>Associate Researcher<br/>Center for Sustainability and Energy Technologies<br/>Chang Gung University</p></div><div class="footer-links">{emails}</div></div></footer><script src="../assets/js/app.js"></script></body></html>'''.format(title=title,desc=desc,url=url,site=SITE_URL,date=esc(p.get('date')),ga=GA_TAG,citation=citation_meta(p),schema=json.dumps(graph,ensure_ascii=False,separators=(',',':')),authors=authors,journal=esc(p.get('journal')),vol=vol,pages=pages,year=esc(p.get('year')),topic=esc(p.get('topic')),details=details,actions=actions_html,slug=slug,emails=EMAIL_LINKS)
 
 def main():
   pubs=json.loads((ROOT/'data/publications.json').read_text(encoding='utf-8'))
+  openalex_path=ROOT/'data/openalex_publication_metrics.json'
+  openalex_records=json.loads(openalex_path.read_text(encoding='utf-8')).get('records',{}) if openalex_path.exists() else {}
+  unpaywall_path=ROOT/'data/unpaywall.json'
+  unpaywall_records=json.loads(unpaywall_path.read_text(encoding='utf-8')).get('records',{}) if unpaywall_path.exists() else {}
   if len(pubs)!=37: raise SystemExit(f'Expected 37 publications, found {len(pubs)}')
   for path in ROOT.glob('*.html'):
     text=path.read_text(encoding='utf-8'); text=replace_person_schema(text); text=replace_emails(text); path.write_text(text,encoding='utf-8')
@@ -101,7 +158,10 @@ def main():
   pubpath.write_text(text,encoding='utf-8')
   pdir=ROOT/'publications'; pdir.mkdir(exist_ok=True)
   for f in pdir.glob('*.html'): f.unlink()
-  for p in pubs: (pdir/(slugify(p.get('doi',''))+'.html')).write_text(publication_page(p),encoding='utf-8')
+  for p in pubs:
+    record=openalex_records.get(str(p.get('doi') or '').strip().lower(),{})
+    oa_record=unpaywall_records.get(str(p.get('doi') or '').strip().lower(),{})
+    (pdir/(slugify(p.get('doi',''))+'.html')).write_text(publication_page(p,record,oa_record),encoding='utf-8')
   app=ROOT/'assets/js/app.js'; js=app.read_text(encoding='utf-8')
   js=re.sub(r'function publicationShareUrl\(anchor\)\{.*?\n\}', "function publicationShareUrl(anchor){\n  const slug=String(anchor||'').replace(/^pub-/,'');\n  return new URL(`publications/${slug}.html`,window.location.href).toString();\n}", js, count=1, flags=re.S)
   app.write_text(js,encoding='utf-8')

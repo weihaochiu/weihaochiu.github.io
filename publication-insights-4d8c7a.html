@@ -37,6 +37,7 @@
     .series-style{display:inline-flex;align-items:center;gap:6px;font-size:.72rem;font-weight:700}.series-style select{padding:5px 7px;border:1px solid #bdc9d2;border-radius:5px;background:#fff;color:#344654;font:inherit}
     .summary-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin:0 0 28px}.summary-card{padding:18px;border:1px solid #dfe6ec;border-radius:8px;background:#fff}
     .summary-card span{display:block;color:#647382;font-size:.68rem;text-transform:uppercase;letter-spacing:.05em}.summary-card strong{display:block;margin-top:5px;font-size:1.55rem;color:#23313d}.summary-card small{color:#6b7884;font-size:.65rem}
+    .content-audit-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.content-audit-card{padding:18px;border:1px solid #dfe6ec;border-radius:8px;background:#fff}.content-audit-card span{display:block;color:#647382;font-size:.68rem;text-transform:uppercase;letter-spacing:.05em}.content-audit-card strong{display:block;margin:5px 0;font-size:1.55rem}.content-audit-card small{color:#6b7884}.missing-publication-list{margin:16px 0 0;padding:0;list-style:none;border-top:1px solid #e3e8ed}.missing-publication-list li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;padding:12px 0;border-bottom:1px solid #e3e8ed;font-size:.76rem}.missing-publication-list a{color:#245f96;font-weight:700;text-decoration:none}.missing-tags{display:flex;gap:5px;flex-wrap:wrap;justify-content:flex-end}.missing-tag{padding:2px 7px;border-radius:999px;background:#fff1e4;color:#8a4b16;font-size:.62rem;font-weight:750}
     .two-column{display:grid;grid-template-columns:minmax(0,1fr);gap:20px}.two-column .analytics-chart-host{min-height:430px}
     .table-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:12px 0}
     .table-search{min-width:250px;max-width:420px;flex:1;padding:9px 11px;border:1px solid #c9d3dc;border-radius:6px;font:inherit;font-size:.78rem}
@@ -47,17 +48,23 @@
     .q1{background:#dfeee8;color:#315f52}.q2{background:#e6edf5;color:#315c82}.q3{background:#f4ead9;color:#80561a}.q4{background:#f3dddd;color:#8a3838}.unclassified{background:#eceff2;color:#66727c}
     .back-to-top{display:inline-block;margin-top:12px;color:#234a70;font-size:.7rem;font-weight:700;text-decoration:none}
     @media(max-width:980px){.summary-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.two-column{grid-template-columns:1fr}}
-    @media(max-width:700px){.private-analytics-header{padding:2.5rem 0 1.5rem}.analytics-jump-inner{align-items:flex-start;flex-direction:column;gap:0;padding-top:8px}.analytics-jump-links{width:100%}.analytics-section{scroll-margin-top:175px}.analytics-heading{flex-direction:column}.chart-actions{justify-content:flex-start}.summary-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:700px){.private-analytics-header{padding:2.5rem 0 1.5rem}.analytics-jump-inner{align-items:flex-start;flex-direction:column;gap:0;padding-top:8px}.analytics-jump-links{width:100%}.analytics-section{scroll-margin-top:175px}.analytics-heading{flex-direction:column}.chart-actions{justify-content:flex-start}.summary-grid{grid-template-columns:1fr 1fr}.content-audit-grid{grid-template-columns:1fr}.missing-publication-list li{grid-template-columns:1fr}.missing-tags{justify-content:flex-start}}
   </style>
 <script type="application/ld+json" id="person-schema">{"@context":"https://schema.org","@type":"Person","@id":"https://weihaochiu.github.io/#person","name":"Wei-Hao Chiu","alternateName":["邱偉豪","Chiu, Wei-Hao"],"honorificSuffix":"Ph.D.","url":"https://weihaochiu.github.io/","image":"https://weihaochiu.github.io/assets/images/profile.jpg","jobTitle":"Associate Researcher","email":["mailto:weihao.chiu@gmail.com","mailto:d000019005@cgu.edu.tw"],"affiliation":{"@type":"Organization","name":"Chang Gung University","url":"https://www.cgu.edu.tw/"},"worksFor":{"@type":"Organization","name":"Center for Sustainability and Energy Technologies, Chang Gung University"},"knowsAbout":["Perovskite solar cells","Tin and tin-lead perovskite photovoltaics","Scalable photovoltaic manufacturing","Vacuum-flash crystallization","Blade coating","Slot-die coating","Charge-transport layers","Self-assembled monolayers","Photoluminescence and electroluminescence","Quasi-Fermi level splitting","Photovoltaic reliability","Space photovoltaics","Tandem solar cells","Vanadium redox flow batteries"],"sameAs":["https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en","https://orcid.org/0000-0003-4484-3117","https://www.scopus.com/authid/detail.uri?authorId=7201503537","https://www.webofscience.com/wos/author/record/JCE-6812-2023","https://pure.lib.cgu.edu.tw/en/persons/wei-hao-chiu/publications/","https://www.cgu.edu.tw/cset-en/FullTimeProfessorManagement/Detail/e3d82caf-b69a-4ee3-ac95-0d1558e22d83?nodeId=17439","https://www.researchgate.net/profile/Wei-Hao-Chiu","https://www.linkedin.com/in/wei-hao-chiu-a208a9b0/","https://openalex.org/works?filter=authorships.author.id:a5007707999"]}</script></head>
 <body>
 <header class="site-header"><div class="shell nav-shell"><a class="brand" href="index.html"><span>Wei-Hao Chiu</span><small>Academic Profile</small></a></div></header>
 <section class="private-analytics-header"><div class="shell"><h1>Publication Analytics</h1><p>Private dashboard combining publication output, citation activity, journal portfolio, JCR quartiles and journal metrics. JCR and JIF values are secondary-source observations; Scopus quartiles are never used as JCR quartiles.</p></div></section>
 <nav class="analytics-jump-bar" aria-label="Analytics navigation"><div class="shell analytics-jump-inner"><span class="analytics-jump-label">Jump to</span><div class="analytics-jump-links">
-<a href="#output">Output & citations</a><a href="#jcr">JCR portfolio</a><a href="#journal-rankings">Journals</a><a href="#publishers">Publishers</a><a href="#impact">Impact factor</a><a href="#relationships">Relationships</a><a href="#journal-table">Journal table</a>
+<a href="#content-completeness">Content completeness</a><a href="#output">Output & citations</a><a href="#jcr">JCR portfolio</a><a href="#journal-rankings">Journals</a><a href="#publishers">Publishers</a><a href="#impact">Impact factor</a><a href="#relationships">Relationships</a><a href="#journal-table">Journal table</a>
 </div></div></nav>
 <main class="content shell private-analytics-main">
 <div class="summary-grid" id="summaryCards"><div class="summary-card"><span>Publications</span><strong>—</strong><small>Loading</small></div></div>
+
+<section class="analytics-section" id="content-completeness"><div class="chart-card">
+<div class="analytics-heading"><div><span class="eyebrow">Publication page content</span><h2>Abstract, Highlights, Keywords and GA Completeness</h2></div></div>
+<div class="content-audit-grid" id="contentAuditCards"><div class="content-audit-card"><span>Content audit</span><strong>—</strong><small>Checking publication records and GA files…</small></div></div>
+<ul class="missing-publication-list" id="missingPublicationList"></ul>
+<p class="analytics-status" id="contentAuditStatus">Checking content completeness…</p><a class="back-to-top" href="#top">Back to top ↑</a></div></section>
 
 <section class="analytics-section" id="output"><div class="chart-card">
 <div class="analytics-heading"><div><span class="eyebrow">Scholarly output</span><h2>Publication and Citation Trends</h2></div></div>
@@ -142,6 +149,13 @@ const avg=a=>{const v=a.map(Number).filter(Number.isFinite);return v.length?sum(
 const normalize=s=>String(s||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/&/g,' and ').replace(/[^a-z0-9]+/g,'');
 const doi=s=>String(s||'').toLowerCase().trim().replace(/^https?:\/\/(dx\.)?doi\.org\//,'').replace(/^doi:/,'').trim();
 async function loadJson(path){const r=await fetch(path,{cache:'no-store'});if(!r.ok)throw new Error(`${path}: ${r.status}`);return r.json()}
+async function hasGraphicalAbstract(p){
+ const explicit=String(p.graphicalAbstract||'').trim().replace(/^\/+/, '');
+ const stem=String(p.doi||'').trim().replace('/', '_');
+ const candidates=explicit?[explicit]:stem?['JPG','PNG','jpg','png','JPEG','jpeg'].map(ext=>`GA/${stem}.${ext}`):[];
+ for(const path of candidates){try{const r=await fetch(path,{method:'HEAD',cache:'no-store'});if(r.ok)return true}catch(e){}}
+ return false;
+}
 function pubYear(p){return Number(p.year)||Number(String(p.date||'').slice(0,4))||null}
 function yearsUnion(objects){const y=[...new Set(objects.flatMap(o=>Object.keys(o||{}).map(Number)))].filter(Number.isFinite).sort((a,b)=>a-b);return y.length?Array.from({length:y.at(-1)-y[0]+1},(_,i)=>y[0]+i):[]}
 function niceMax(v){v=Math.max(1,Number(v)||1);const m=10**Math.floor(Math.log10(v)),n=v/m,s=n<=1?1:n<=2?2:n<=5?5:10;return Math.max(4,s*m)}
@@ -230,6 +244,13 @@ function downloadTableCsv(){const h=['Journal','JCR profile URL','Articles','Pub
 document.addEventListener('DOMContentLoaded',async()=>{
  try{
  const [pubs,jpayload,oaMetrics,gsHist,oaHist]=await Promise.all([loadJson('data/publications.json'),loadJson('data/journals.json'),loadJson('data/openalex_publication_metrics.json').catch(()=>({records:{}})),loadJson('data/google_scholar_citation_history.json').catch(()=>({})),loadJson('data/openalex_citation_history.json').catch(()=>({}))]);
+ const gaResults=await Promise.all(pubs.map(hasGraphicalAbstract));
+ const hasItems=v=>Array.isArray(v)?v.some(x=>String(x||'').trim()):Boolean(String(v||'').trim());
+ const contentAudit=pubs.map((p,i)=>({p,missing:[!String(p.abstract||'').trim()&&'Abstract',!hasItems(p.highlights)&&'Highlights',!hasItems(Object.prototype.hasOwnProperty.call(p,'keywords')?p.keywords:p.tags)&&'Keywords',!gaResults[i]&&'GA'].filter(Boolean)}));
+ const missingAbstract=contentAudit.filter(x=>x.missing.includes('Abstract')).length,missingHighlights=contentAudit.filter(x=>x.missing.includes('Highlights')).length,missingKeywords=contentAudit.filter(x=>x.missing.includes('Keywords')).length,missingGa=contentAudit.filter(x=>x.missing.includes('GA')).length,complete=contentAudit.filter(x=>!x.missing.length).length;
+ document.getElementById('contentAuditCards').innerHTML=[['Missing Abstract',missingAbstract,`${pubs.length-missingAbstract} completed`],['Missing Highlights',missingHighlights,`${pubs.length-missingHighlights} completed`],['Missing Keywords',missingKeywords,`${pubs.length-missingKeywords} completed`],['Missing Graphical Abstract',missingGa,`${pubs.length-missingGa} completed`]].map(x=>`<div class="content-audit-card"><span>${x[0]}</span><strong>${x[1]}</strong><small>${x[2]} of ${pubs.length}</small></div>`).join('');
+ document.getElementById('missingPublicationList').innerHTML=contentAudit.filter(x=>x.missing.length).map(x=>{const slug=String(x.p.doi||'publication').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');return `<li><a href="publications/${esc(slug)}.html">${esc(x.p.title||x.p.doi)}</a><span class="missing-tags">${x.missing.map(m=>`<span class="missing-tag">Missing ${m}</span>`).join('')}</span></li>`}).join('');
+ document.getElementById('contentAuditStatus').textContent=`${complete} of ${pubs.length} publications have Abstract, Highlights, Keywords and GA. ${pubs.length-complete} still require one or more items.`;
  const journals=jpayload.journals||{},idx=journalIndex(journals),pubCount={};pubs.forEach(p=>{const y=pubYear(p);if(y)pubCount[y]=(pubCount[y]||0)+1});const years=yearsUnion([pubCount]);
  const gsCohort={},oaCohort={};pubs.forEach(p=>{const y=pubYear(p);if(!y)return;gsCohort[y]=(gsCohort[y]||0)+(Number(p.citationCount)||0);const rec=(oaMetrics.records||{})[doi(p.doi)];oaCohort[y]=(oaCohort[y]||0)+(rec?.status==='verified'?Number(rec.citationCount)||0:0)});
  const hist=o=>Object.fromEntries((o.citationsByYear||[]).map(r=>[Number(r.year),Number(r.citations)||0]));const gsAnnual=hist(gsHist),oaAnnual=hist(oaHist);

@@ -42,3 +42,18 @@
 .publication-card{scroll-margin-top:96px;transition:background-color .25s,box-shadow .25s}
 .publication-card.shared-target{background:#f3f7fa;box-shadow:inset 3px 0 0 var(--brand);padding-left:14px;padding-right:14px}
 @media(max-width:560px){.share-menu{right:auto;left:0}.share-menu:before{right:auto;left:18px}}
+
+/* Individual publication abstract, highlights and graphical abstract */
+.publication-detail{max-width:960px;margin:0 auto;padding:32px;background:#fff;border:1px solid var(--line);border-radius:10px}
+.publication-detail>h1{font-family:"Source Serif 4",serif;font-size:clamp(1.8rem,4vw,2.75rem);line-height:1.25;margin:0 0 16px}
+.publication-detail-section{margin-top:34px;padding-top:28px;border-top:1px solid var(--line)}
+.publication-detail-section h2{font-size:1.45rem;margin:0 0 14px}
+.publication-detail-section>p{max-width:82ch;margin:0;color:#374957;font-size:.94rem;line-height:1.85}
+.publication-highlights{margin:0;padding-left:1.3rem;color:#374957}
+.publication-highlights li{margin:.55rem 0;padding-left:.25rem}
+.publication-keywords{display:flex;flex-wrap:wrap;gap:8px}.publication-keywords span{display:inline-flex;padding:5px 10px;border:1px solid var(--line);border-radius:999px;background:#f4f6f8;color:#425b73;font-size:.72rem;font-weight:700}
+.publication-detail-actions{margin-top:34px;padding-top:24px;border-top:1px solid var(--line);gap:12px}.publication-detail-actions .action{display:inline-flex;align-items:center;min-height:36px;padding:7px 11px;border:1px solid #bdc9d3;border-radius:6px;background:#fff}.publication-return{display:inline-block;margin-top:22px}
+.graphical-abstract figure{margin:0}
+.graphical-abstract img{display:block;max-width:100%;width:auto;height:auto;margin:0 auto;border:1px solid var(--line);border-radius:8px;background:#fff}
+.graphical-abstract figcaption{text-align:center;margin-top:8px;color:var(--muted);font-size:.72rem}
+@media(max-width:760px){.publication-detail{padding:22px 18px}.publication-detail-section{margin-top:27px;padding-top:22px}}
