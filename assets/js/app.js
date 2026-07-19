@@ -133,9 +133,8 @@ function normalizeExternalUrl(value){
   }catch(e){return ''}
 }
 function publicationShareUrl(anchor){
-  const url=new URL('publications.html',window.location.href);
-  url.hash=anchor;
-  return url.toString();
+  const slug=String(anchor||'').replace(/^pub-/,'');
+  return new URL(`publications/${slug}.html`,window.location.href).toString();
 }
 function inferPublicationCategory(p){
   const text=`${p.topic||''} ${p.title||''} ${(p.tags||[]).join(' ')}`.toLowerCase();
