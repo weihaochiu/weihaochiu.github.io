@@ -2,12 +2,12 @@
   "schemaVersion": 2,
   "source": "OpenAlex Works API",
   "status": "success_with_exclusions",
-  "lastSuccessfulUpdate": "2026-07-16T08:38:47.033272Z",
+  "lastSuccessfulUpdate": "2026-07-19T23:12:07.060462Z",
   "workCount": 37,
   "missingPublicationYearCount": 0,
-  "totalCitationsFromPublicationMetrics": 985,
-  "rawTotalCitationsFromHistory": 985,
-  "totalCitationsIncludedInAnnualChart": 979,
+  "totalCitationsFromPublicationMetrics": 987,
+  "rawTotalCitationsFromHistory": 987,
+  "totalCitationsIncludedInAnnualChart": 981,
   "rawValidationDifference": 0,
   "unassignedCitationCount": 0,
   "excludedInvalidCitationCount": 6,
@@ -137,7 +137,7 @@
     },
     {
       "year": 2026,
-      "citations": 51
+      "citations": 53
     }
   ],
   "works": {
@@ -2098,7 +2098,7 @@
       "doi": "10.1016/j.seppur.2025.134157",
       "title": "MOF- &amp; COF-integrated composite separators/membranes: innovations for sustainable and high-performance redox flow batteries",
       "publicationYear": 2025,
-      "currentCitationCount": 5,
+      "currentCitationCount": 6,
       "citationsByYear": [
         {
           "year": 2025,
@@ -2106,7 +2106,7 @@
         },
         {
           "year": 2026,
-          "citations": 4
+          "citations": 5
         }
       ],
       "rawCitationsByYear": [
@@ -2116,11 +2116,11 @@
         },
         {
           "year": 2026,
-          "citations": 4
+          "citations": 5
         }
       ],
-      "historyTotal": 5,
-      "rawHistoryTotal": 5,
+      "historyTotal": 6,
+      "rawHistoryTotal": 6,
       "excludedInvalidCitationCount": 0,
       "excludedInvalidCitations": [],
       "unassignedCitationCount": 0
@@ -2165,11 +2165,11 @@
       "doi": "10.1016/j.solmat.2025.114015",
       "title": "Impact of proton radiation on the performance of single-junction perovskite solar cells for space applications",
       "publicationYear": 2026,
-      "currentCitationCount": 8,
+      "currentCitationCount": 9,
       "citationsByYear": [
         {
           "year": 2026,
-          "citations": 7
+          "citations": 8
         }
       ],
       "rawCitationsByYear": [
@@ -2179,11 +2179,11 @@
         },
         {
           "year": 2026,
-          "citations": 7
+          "citations": 8
         }
       ],
-      "historyTotal": 7,
-      "rawHistoryTotal": 8,
+      "historyTotal": 8,
+      "rawHistoryTotal": 9,
       "excludedInvalidCitationCount": 1,
       "excludedInvalidCitations": [
         {
