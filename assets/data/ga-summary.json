@@ -1,16 +1,11 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-19T00:00:00Z",
+  "generatedAt": "2026-07-19T02:02:35Z",
   "period": {
     "overview": "28daysAgo to yesterday",
-    "trend": "12monthsAgo to yesterday"
+    "trend": "365daysAgo to yesterday"
   },
-  "overview": {
-    "pageViews": 0,
-    "activeUsers": 0,
-    "sessions": 0,
-    "engagementRate": 0
-  },
+  "overview": {},
   "monthlyTrend": [],
   "topPages": [],
   "trafficChannels": [],
