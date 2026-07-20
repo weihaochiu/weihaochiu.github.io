@@ -19,6 +19,29 @@
     "month": 7,
     "publisher": "Elsevier",
     "doi": "10.1016/j.cej.2026.177494",
+    "abstract": "Thermal stress represents a critical reliability bottleneck for perovskite solar cells (PSCs) in space environments, where sustained high temperatures can accelerate irreversible degradation. Beyond isolated thermal effects, PSCs in orbit experience synergistic stressors including vacuum, illumination, and elevated temperature. This study investigates the stability of p-i-n PSCs under combined vacuum + light (V + L) and vacuum + heat (V + H) conditions, focusing on thermally activated interfacial failure and polymer-based mitigation. Devices are evaluated under two temperature regimes: moderate (85 and 100 °C) and extreme (115 and 130 °C) V + H stress, together with prolonged V + L exposure. The results show that degradation is dominated by interface-driven non-radiative recombination rather than bulk absorber failure, with ΔV3 increase, QFLS reduction, and interface-specific pseudo-PCE loss, identifying the perovskite/PCBM as the primary weak point under V + H stress. Incorporation of poly(vinylidene fluoride-co-hexafluoropropylene) (PVDF-HFP) into the perovskite layer effectively suppresses defect generation, preserves microstructural integrity, and improves charge-extraction stability, leading to enhanced performance retention. Hazard-based Weibull-Arrhenius analysis confirms extended characteristic lifetimes for PVDF-HFP devices at moderate temperatures, with a higher activation energy (0.95 eV vs 0.83 eV) indicating a modified degradation pathway. Room-temperature lifetime is further predicted using a graphical extrapolation method, yielding significantly extended projected operational lifetimes for polymer-modified devices. These findings establish a reliability enhancement of the PVDF-HFP-modified devices under synergetic space-relevant stress.",
+    "highlights": [
+      "PVDF-HFP improves perovskite solar cell stability under space-relevant stresses.",
+      "Devices tested under combined vacuum + light and vacuum + heat conditions.",
+      "Degradation is dominated by interfacial non-radiative recombination pathways.",
+      "Reliability analysis shows extended lifetimes and higher activation energy for PVDF-HFP modified devices."
+    ],
+    "keywords": [
+      "Perovskite solar cell",
+      "Space application",
+      "Thermal stress",
+      "Polymer-modified"
+    ],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "contentStatus": {
+      "abstract": "available",
+      "highlights": "available",
+      "keywords": "available",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-07-20",
+      "verifiedSource": "Author-provided content"
+    },
     "authorOrder": 3,
     "topic": "Space PV & Reliability",
     "tags": [
@@ -108,6 +131,29 @@
     "month": 5,
     "publisher": "Elsevier",
     "doi": "10.1016/j.solener.2026.114430",
+    "abstract": "The performance and stability of perovskite solar cells (PSCs) can be limited by film quality and interfacial defects. In this study, we developed a moderate-temperature liquid medium annealing (LMA) process that involves a 20-s preheating step, followed by formamidinium bromide (FABr) passivation. The preheating step effectively removes residual antisolvent and initiates uniform nucleation, enabling the formation of continuous and uniform perovskite films with large grains and high crystallinity. The optimal time and temperature for LMA were determined to be 3 min and 50 °C, respectively. Devices fabricated through LMA involving the preheating step exhibited a champion power conversion efficiency (PCE) of 21.49% and suppressed hysteresis. Incorporation of FABr passivation into this process improved the PCE to 22.01%, reduced the trap density between perovskite and the hole transport material, and extended carrier lifetime. Notably, an unencapsulated PSC with perovskite films produced through LMA, preheating, and FABr passivation retained 94.5% of its initial PCE after 650 h under ISOS-D1 testing. Overall, the proposed synergistic strategy offers a scalable route for fabricating efficient and durable PSCs.",
+    "highlights": [
+      "Preheated moderate-temp LMA produces uniform films with enhanced crystallinity.",
+      "Preheating removes residual solvent and improves charge carrier extraction.",
+      "LMA PSCs reach 21.49% PCE, further boosted to 22.01% with FABr passivation.",
+      "FABr-passivated LMA cells retain 94.5% efficiency after 650 h under ISOS-D1 tests."
+    ],
+    "keywords": [
+      "FABr passivation",
+      "Halide perovskite",
+      "Liquid medium annealing (LMA)",
+      "Pre-heat treatment"
+    ],
+    "graphicalAbstract": "GA/10.1016_j.solener.2026.114430.png",
+    "graphicalAbstractAlt": "Graphical abstract of preheated moderate-temperature liquid medium annealing and FABr passivation for efficient perovskite solar cells",
+    "contentStatus": {
+      "abstract": "available",
+      "highlights": "available",
+      "keywords": "available",
+      "graphicalAbstract": "available",
+      "verifiedDate": "2026-07-20",
+      "verifiedSource": "Author-provided content"
+    },
     "authorOrder": 2,
     "topic": "Perovskite Solar Cells",
     "tags": [
@@ -244,6 +290,25 @@
     "month": 12,
     "publisher": "Elsevier",
     "doi": "10.1016/j.seppur.2025.134157",
+    "abstract": "Advancements in membrane engineering are perceived as the primary concern for leading redox flow batteries (RFBs) to large-scale energy storage technology. Separators/Membranes that offer balanced trade-offs between permeability and selectivity, with controlled wettability, solvent resistance, and robustness, have emerged as promising materials for separation in RFBs. Traditional ion exchange membranes (IEMs), like Nafion, are prone to high permeability to active species and high costs, which limit their commercial viability and the overall performance of RFBs. Over the past decade, the development of non-ionic/porous membranes has garnered tremendous research attention due to their industrial-level properties, including porosity and flexibility, as well as advancements in fabrication methods and the principle of operation, such as size-based sieving effects. In this context, recent research has focused on intrinsic porous materials, such as covalent organic frameworks (COFs) and metal–organic frameworks (MOFs), for membrane fabrication due to their modifiability in pore channels, ion selectivity, and design flexibility. However, this technology is still in its early stages. This review summarizes recent advances in MOF/COF separators for RFBs, providing insights into existing challenges (e.g., desired pore size, processability, or scaling) and fundamental strategies (such as functional side chain modification) to achieve targeted functionality. Apart from the intrinsic features of frameworks, optimized structural properties (e.g., pore size) and performance evaluation are crucial to improve the quality of the separator, which are discussed in detail. This review provides valuable insights and can guide future research directions for designing next-generation MOF/COF separators in RFBs.",
+    "highlights": [
+      "MOF/COF separators offer tunable porosity for selective ion transport in RFBs.",
+      "Functional design enables control over ion selectivity and permeability.",
+      "New separators improve ion transport and address key RFB performance issues.",
+      "Eco-friendly synthesis and green linkers enhance separator sustainability.",
+      "Structure–property–performance insights guide next-gen RFB separator design."
+    ],
+    "keywords": [],
+    "graphicalAbstract": "GA/10.1016_j.seppur.2025.134157.png",
+    "graphicalAbstractAlt": "Graphical abstract illustrating selective proton transport, ion rejection, chemical stability, mechanical robustness, and scalable synthesis of MOF/COF separators for redox flow batteries",
+    "contentStatus": {
+      "abstract": "available",
+      "highlights": "available",
+      "keywords": "pending",
+      "graphicalAbstract": "available",
+      "verifiedDate": "2026-07-20",
+      "verifiedSource": "Author-provided content"
+    },
     "authorOrder": 2,
     "topic": "Redox Flow Batteries",
     "tags": [
@@ -609,6 +674,19 @@
     "month": 11,
     "publisher": "Royal Society of Chemistry",
     "doi": "10.1039/D3CC04699K",
+    "abstract": "",
+    "highlights": [],
+    "keywords": [],
+    "graphicalAbstract": "GA/10.1039_D3CC04699K.png",
+    "graphicalAbstractAlt": "Graphical abstract showing the YC-oF fluorinated cyclopentadithiophene-based hole-transport material and a perovskite solar cell power conversion efficiency of 22.41%",
+    "contentStatus": {
+      "abstract": "pending",
+      "highlights": "pending",
+      "keywords": "pending",
+      "graphicalAbstract": "available",
+      "verifiedDate": "2026-07-20",
+      "verifiedSource": "Author-provided content"
+    },
     "authorOrder": 6,
     "topic": "Hole-Transporting Materials",
     "tags": [
