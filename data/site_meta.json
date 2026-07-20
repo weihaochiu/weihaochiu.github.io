@@ -1,5 +1,5 @@
 {
   "version": "v23",
-  "lastUpdated": "2026-07-18",
+  "lastUpdated": "2026-07-20",
   "notes": "V23 adds static crawler-readable publications, 37 ScholarlyArticle records, upgraded Person schema, corrected email links on every page, article-specific citation and Open Graph metadata, expanded llms.txt, and crawler-aware robots and sitemap files."
 }
