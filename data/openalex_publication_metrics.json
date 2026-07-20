@@ -5,7 +5,7 @@
   "publicationCount": 37,
   "verifiedCount": 37,
   "notFoundCount": 0,
-  "lastSuccessfulUpdate": "2026-07-19T05:33:38Z",
+  "lastSuccessfulUpdate": "2026-07-20T05:50:41Z",
   "records": {
     "10.1016/j.cej.2026.177494": {
       "status": "verified",
@@ -19,11 +19,11 @@
     "10.1016/j.mtener.2026.102359": {
       "status": "verified",
       "doi": "10.1016/j.mtener.2026.102359",
-      "title": "2T Perovskite Tandem Solar Cells in Space: Failure Mechanisms and Design Strategies",
+      "title": "2T perovskite tandem solar cells in space: Failure mechanisms and design strategies",
       "openAlexId": "W7168190148",
       "url": "https://openalex.org/W7168190148",
       "citationCount": 0,
-      "openAlexUpdatedDate": "2026-07-15T05:50:42.429089"
+      "openAlexUpdatedDate": "2026-07-19T07:52:34.831488"
     },
     "10.1016/j.solener.2026.114430": {
       "status": "verified",
@@ -149,7 +149,7 @@
       "openAlexId": "W4385773304",
       "url": "https://openalex.org/W4385773304",
       "citationCount": 10,
-      "openAlexUpdatedDate": "2026-07-18T07:39:51.176621"
+      "openAlexUpdatedDate": "2026-07-18T05:51:51.687321"
     },
     "10.1002/asia.202300681": {
       "status": "verified",
