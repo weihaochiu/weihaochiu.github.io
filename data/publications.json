@@ -53,6 +53,25 @@
     "month": 7,
     "publisher": "Elsevier",
     "doi": "10.1016/j.mtener.2026.102359",
+    "abstract": "Perovskite tandem solar cells (TSCs) offer a promising route toward lightweight, high-efficiency space photovoltaics, but their multilayer architecture introduces degradation pathways beyond those of single-junction devices. This review examines the reliability of two-terminal (2T) perovskite TSCs under space-relevant stressors, including radiation, vacuum, atomic oxygen, ultraviolet exposure, thermal cycling, and low-intensity, low-temperature operation. The discussion is organized from stressor-specific degradation to layer-wise vulnerability, covering absorber instability, charge transport layer degradation, interconnecting layer (ICL) failure, bottom-cell damage, electrode diffusion, and encapsulation limitations. Since complete tandem studies remain limited, degradation trends are interpreted using tandem sub-cell data, single-junction analogues, and material-level studies. The review also highlights how current matching and buried ICL stability can convert localized degradation into full-device performance loss. Multiscale simulation methods are discussed as tools for linking radiation, thermal, and mechanical stress to device-level outcomes. Finally, design strategies for improving stability are summarized, including absorber composition tuning, interface passivation, robust ICLs, protective barriers, and mechanically compatible encapsulation. This review provides a reliability-focused framework for developing 2T perovskite TSCs for future space missions.",
+    "highlights": [
+      "Perovskite tandem solar cells face unique reliability challenges in space.",
+      "Radiation, vacuum, heat, and ultraviolet light create different failure paths.",
+      "Damage in one layer can limit the whole solar cell by reducing current flow.",
+      "Buried layers are critical weak points for long-term space operation.",
+      "Better barriers, interfaces, and materials can improve stability in space."
+    ],
+    "keywords": [],
+    "graphicalAbstract": "GA/10.1016_j.mtener.2026.102359.png",
+    "graphicalAbstractAlt": "Graphical abstract showing space stressors, key device regions, failure mechanisms, and design strategies for 2T perovskite tandem solar cells in space",
+    "contentStatus": {
+      "abstract": "available",
+      "highlights": "available",
+      "keywords": "pending",
+      "graphicalAbstract": "available",
+      "verifiedDate": "2026-07-20",
+      "verifiedSource": "Author-provided content"
+    },
     "authorOrder": 2,
     "topic": "Space PV & Reliability",
     "tags": [
