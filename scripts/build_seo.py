@@ -18,6 +18,8 @@ GA_TAG = '''<!-- Google tag (gtag.js) -->
   gtag('config', 'G-G82XWMCJDE');
 </script>'''
 PRIVATE_PATHS = ('bems-fe5049fb.html', 'website-insight-ea929558.html', 'publication-insights-4d8c7a.html')
+CITATION_META_START = '<!-- SEO_CITATION_META_START -->'
+CITATION_META_END = '<!-- SEO_CITATION_META_END -->'
 
 def robots_text():
   agents = ('*', 'Googlebot', 'Bingbot', 'OAI-SearchBot', 'GPTBot', 'ChatGPT-User',
@@ -73,6 +75,17 @@ def citation_meta(p):
   fields=[('citation_title',p.get('title')),('citation_publication_date',p.get('date') or p.get('year')),('citation_journal_title',p.get('journal')),('citation_volume',p.get('volume')),('citation_issue',p.get('issue')),('citation_firstpage',p.get('pages')),('citation_doi',p.get('doi')),('citation_abstract_html_url',p.get('doiUrl'))]
   out += [f'<meta name="{n}" content="{esc(v)}"/>' for n,v in fields if v not in ('',None)]
   return '\n'.join(out)
+
+def clean_publications_head(text):
+  """Remove generated/legacy publication metadata before rebuilding it."""
+  text = re.sub(
+      re.escape(CITATION_META_START) + r'.*?' + re.escape(CITATION_META_END),
+      '', text, flags=re.S)
+  # Clean metadata produced by older builds before the marker block existed.
+  text = re.sub(r'\s*<meta\s+name=["\']citation_[^"\']+["\'][^>]*?/?>', '', text, flags=re.I)
+  # OpenAlex is rendered by app.js; loading this legacy enhancer duplicates it.
+  text = re.sub(r'\s*<script\s+src=["\']assets/js/openalex-publications\.js["\']\s*></script>', '', text, flags=re.I)
+  return text
 
 def replace_person_schema(text):
   block='<script type="application/ld+json" id="person-schema">'+json.dumps(PERSON,ensure_ascii=False,separators=(',',':'))+'</script>'
@@ -162,13 +175,14 @@ def main():
   if len(pubs)!=37: raise SystemExit(f'Expected 37 publications, found {len(pubs)}')
   for path in ROOT.glob('*.html'):
     text=path.read_text(encoding='utf-8'); text=replace_person_schema(text); text=replace_emails(text); path.write_text(text,encoding='utf-8')
-  pubpath=ROOT/'publications.html'; text=pubpath.read_text(encoding='utf-8')
+  pubpath=ROOT/'publications.html'; text=clean_publications_head(pubpath.read_text(encoding='utf-8'))
   cards='\n'.join(static_card(p) for p in pubs)
   text=re.sub(r'<div id="collectionContainer">.*?</div>', '<div id="collectionContainer" data-static-publications="37">\n'+cards+'\n</div>', text, count=1, flags=re.S)
   graph={'@context':'https://schema.org','@graph':[PERSON]+[article_schema(p,SITE_URL+'/publications/'+slugify(p.get('doi',''))+'.html') for p in pubs]}
   schema='<script type="application/ld+json" id="publications-schema">'+json.dumps(graph,ensure_ascii=False,separators=(',',':'))+'</script>'
   text=re.sub(r'<script type="application/ld\+json" id="publications-schema">.*?</script>','',text,flags=re.S)
-  text=text.replace('</head>','\n'.join(citation_meta(p) for p in pubs)+'\n'+schema+'\n</head>',1)
+  citation_block = CITATION_META_START+'\n'+'\n'.join(citation_meta(p) for p in pubs)+'\n'+CITATION_META_END
+  text=text.replace('</head>',citation_block+'\n'+schema+'\n</head>',1)
   pubpath.write_text(text,encoding='utf-8')
   pdir=ROOT/'publications'; pdir.mkdir(exist_ok=True)
   for f in pdir.glob('*.html'): f.unlink()
