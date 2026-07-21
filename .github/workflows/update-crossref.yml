@@ -1,0 +1,48 @@
+name: Update Crossref publication citations
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "37 2 * * 1"
+  push:
+    branches: [main]
+    paths:
+      - "data/publications.json"
+      - "scripts/update_crossref_publications.py"
+      - ".github/workflows/update-crossref.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-crossref-publication-citations
+  cancel-in-progress: false
+
+jobs:
+  update:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+      - name: Fetch Crossref citation counts
+        env:
+          CROSSREF_MAILTO: ${{ secrets.CROSSREF_MAILTO }}
+        run: python scripts/update_crossref_publications.py
+      - name: Rebuild static publication pages
+        run: python scripts/build_seo.py
+      - name: Commit updated data and pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/crossref_publication_metrics.json publications.html publications sitemap.xml robots.txt llms.txt
+          if git diff --cached --quiet; then
+            echo "Crossref metrics have not changed."
+          else
+            git commit -m "Update Crossref publication citations"
+            git push
+          fi

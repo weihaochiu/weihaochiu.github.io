@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths:
       - "data/publications.json"
+      - "data/crossref_publication_metrics.json"
       - "scripts/build_seo.py"
       - ".github/workflows/build-seo.yml"
 
