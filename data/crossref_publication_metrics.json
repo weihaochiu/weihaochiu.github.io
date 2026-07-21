@@ -1,8 +1,305 @@
 {
   "source": "Crossref REST API",
   "field": "is-referenced-by-count",
-  "lastSuccessfulUpdate": null,
-  "recordCount": 0,
-  "verifiedCount": 0,
-  "records": {}
+  "lastSuccessfulUpdate": "2026-07-21T10:28:58Z",
+  "recordCount": 37,
+  "verifiedCount": 37,
+  "records": {
+    "10.1016/j.cej.2026.177494": {
+      "doi": "10.1016/j.cej.2026.177494",
+      "citationCount": 0,
+      "status": "verified",
+      "url": "https://search.crossref.org/?q=10.1016%2Fj.cej.2026.177494",
+      "apiUrl": "https://api.crossref.org/works/10.1016%2Fj.cej.2026.177494",
+      "updatedAt": "2026-07-21T10:28:58Z"
+    },
+    "10.1016/j.mtener.2026.102359": {
+      "doi": "10.1016/j.mtener.2026.102359",
+      "citationCount": 0,
+      "status": "verified",
+      "url": "https://search.crossref.org/?q=10.1016%2Fj.mtener.2026.102359",
+      "apiUrl": "https://api.crossref.org/works/10.1016%2Fj.mtener.2026.102359",
+      "updatedAt": "2026-07-21T10:28:58Z"
+    },
+    "10.1016/j.solener.2026.114430": {
+      "doi": "10.1016/j.solener.2026.114430",
+      "citationCount": 0,
+      "status": "verified",
+      "url": "https://search.crossref.org/?q=10.1016%2Fj.solener.2026.114430",
+      "apiUrl": "https://api.crossref.org/works/10.1016%2Fj.solener.2026.114430",
+      "updatedAt": "2026-07-21T10:28:58Z"
+    },
+    "10.1016/j.jpowsour.2025.239216": {
+      "doi": "10.1016/j.jpowsour.2025.239216",
+      "citationCount": 1,
+      "status": "verified",
+      "url": "https://search.crossref.org/?q=10.1016%2Fj.jpowsour.2025.239216",
+      "apiUrl": "https://api.crossref.org/works/10.1016%2Fj.jpowsour.2025.239216",
+      "updatedAt": "2026-07-21T10:28:58Z"
+    },
+    "10.1016/j.solmat.2025.114015": {
+      "doi": "10.1016/j.solmat.2025.114015",
+      "citationCount": 9,
+      "status": "verified",
+      "url": "https://search.crossref.org/?q=10.1016%2Fj.solmat.2025.114015",
+      "apiUrl": "https://api.crossref.org/works/10.1016%2Fj.solmat.2025.114015",
+      "updatedAt": "2026-07-21T10:28:58Z"
+    },
+    "10.1002/asia.70245": {
+      "doi": "10.1002/asia.70245",
+      "citationCount": 0,
+      "status": "verified",
+      "url": "https://search.crossref.org/?q=10.1002%2Fasia.70245",
+      "apiUrl": "https://api.crossref.org/works/10.1002%2Fasia.70245",
+      "updatedAt": "2026-07-21T10:28:58Z"
+    },
+    "10.1016/j.seppur.2025.134157": {
+      "doi": "10.1016/j.seppur.2025.134157",
+      "citationCount": 6,
+      "status": "verified",
+      "url": "https://search.crossref.org/?q=10.1016%2Fj.seppur.2025.134157",
+      "apiUrl": "https://api.crossref.org/works/10.1016%2Fj.seppur.2025.134157",
+      "updatedAt": "2026-07-21T10:28:58Z"
+    },
+    "10.1002/solr.202500538": {
+      "doi": "10.1002/solr.202500538",
+      "citationCount": 1,
+      "status": "verified",
+      "url": "https://search.crossref.org/?q=10.1002%2Fsolr.202500538",
+      "apiUrl": "https://api.crossref.org/works/10.1002%2Fsolr.202500538",
+      "updatedAt": "2026-07-21T10:28:58Z"
+    },
+    "10.1002/asia.202500719": {
+      "doi": "10.1002/asia.202500719",
+      "citationCount": 0,
+      "status": "verified",
+      "url": "https://search.crossref.org/?q=10.1002%2Fasia.202500719",
+      "apiUrl": "https://api.crossref.org/works/10.1002%2Fasia.202500719",
+      "updatedAt": "2026-07-21T10:28:58Z"
+    },
+    "10.1002/advs.202410666": {
+      "doi": "10.1002/advs.202410666",
+      "citationCount": 15,
+      "status": "verified",
+      "url": "https://search.crossref.org/?q=10.1002%2Fadvs.202410666",
+      "apiUrl": "https://api.crossref.org/works/10.1002%2Fadvs.202410666",
+      "updatedAt": "2026-07-21T10:28:58Z"
+    },
+    "10.1016/j.mtchem.2024.102329": {
+      "doi": "10.1016/j.mtchem.2024.102329",
+      "citationCount": 4,
+      "status": "verified",
+      "url": "https://search.crossref.org/?q=10.1016%2Fj.mtchem.2024.102329",
+      "apiUrl": "https://api.crossref.org/works/10.1016%2Fj.mtchem.2024.102329",
+      "updatedAt": "2026-07-21T10:28:58Z"
+    },
+    "10.1016/j.cej.2024.153974": {
+      "doi": "10.1016/j.cej.2024.153974",
+      "citationCount": 14,
+      "status": "verified",
+      "url": "https://search.crossref.org/?q=10.1016%2Fj.cej.2024.153974",
+      "apiUrl": "https://api.crossref.org/works/10.1016%2Fj.cej.2024.153974",
+      "updatedAt": "2026-07-21T10:28:58Z"
+    },
+    "10.1016/j.jece.2023.111741": {
+      "doi": "10.1016/j.jece.2023.111741",
+      "citationCount": 1,
+      "status": "verified",
+      "url": "https://search.crossref.org/?q=10.1016%2Fj.jece.2023.111741",
+      "apiUrl": "https://api.crossref.org/works/10.1016%2Fj.jece.2023.111741",
+      "updatedAt": "2026-07-21T10:28:58Z"
+    },
+    "10.1002/solr.202300988": {
+      "doi": "10.1002/solr.202300988",
+      "citationCount": 10,
+      "status": "verified",
+      "url": "https://search.crossref.org/?q=10.1002%2Fsolr.202300988",
+      "apiUrl": "https://api.crossref.org/works/10.1002%2Fsolr.202300988",
+      "updatedAt": "2026-07-21T10:28:58Z"
+    },
+    "10.1039/d3cc04699k": {
+      "doi": "10.1039/d3cc04699k",
+      "citationCount": 10,
+      "status": "verified",
+      "url": "https://search.crossref.org/?q=10.1039%2Fd3cc04699k",
+      "apiUrl": "https://api.crossref.org/works/10.1039%2Fd3cc04699k",
+      "updatedAt": "2026-07-21T10:28:58Z"
+    },
+    "10.1016/j.jpowsour.2023.233496": {
+      "doi": "10.1016/j.jpowsour.2023.233496",
+      "citationCount": 11,
+      "status": "verified",
+      "url": "https://search.crossref.org/?q=10.1016%2Fj.jpowsour.2023.233496",
+      "apiUrl": "https://api.crossref.org/works/10.1016%2Fj.jpowsour.2023.233496",
+      "updatedAt": "2026-07-21T10:28:58Z"
+    },
+    "10.1002/asia.202300681": {
+      "doi": "10.1002/asia.202300681",
+      "citationCount": 0,
+      "status": "verified",
+      "url": "https://search.crossref.org/?q=10.1002%2Fasia.202300681",
+      "apiUrl": "https://api.crossref.org/works/10.1002%2Fasia.202300681",
+      "updatedAt": "2026-07-21T10:28:58Z"
+    },
+    "10.1016/j.orgel.2023.106847": {
+      "doi": "10.1016/j.orgel.2023.106847",
+      "citationCount": 10,
+      "status": "verified",
+      "url": "https://search.crossref.org/?q=10.1016%2Fj.orgel.2023.106847",
+      "apiUrl": "https://api.crossref.org/works/10.1016%2Fj.orgel.2023.106847",
+      "updatedAt": "2026-07-21T10:28:58Z"
+    },
+    "10.1002/adfm.202306367": {
+      "doi": "10.1002/adfm.202306367",
+      "citationCount": 33,
+      "status": "verified",
+      "url": "https://search.crossref.org/?q=10.1002%2Fadfm.202306367",
+      "apiUrl": "https://api.crossref.org/works/10.1002%2Fadfm.202306367",
+      "updatedAt": "2026-07-21T10:28:58Z"
+    },
+    "10.1016/j.cej.2022.139926": {
+      "doi": "10.1016/j.cej.2022.139926",
+      "citationCount": 33,
+      "status": "verified",
+      "url": "https://search.crossref.org/?q=10.1016%2Fj.cej.2022.139926",
+      "apiUrl": "https://api.crossref.org/works/10.1016%2Fj.cej.2022.139926",
+      "updatedAt": "2026-07-21T10:28:58Z"
+    },
+    "10.3390/nano12152651": {
+      "doi": "10.3390/nano12152651",
+      "citationCount": 9,
+      "status": "verified",
+      "url": "https://search.crossref.org/?q=10.3390%2Fnano12152651",
+      "apiUrl": "https://api.crossref.org/works/10.3390%2Fnano12152651",
+      "updatedAt": "2026-07-21T10:28:58Z"
+    },
+    "10.3390/polym14081580": {
+      "doi": "10.3390/polym14081580",
+      "citationCount": 4,
+      "status": "verified",
+      "url": "https://search.crossref.org/?q=10.3390%2Fpolym14081580",
+      "apiUrl": "https://api.crossref.org/works/10.3390%2Fpolym14081580",
+      "updatedAt": "2026-07-21T10:28:58Z"
+    },
+    "10.1016/j.cej.2021.131609": {
+      "doi": "10.1016/j.cej.2021.131609",
+      "citationCount": 57,
+      "status": "verified",
+      "url": "https://search.crossref.org/?q=10.1016%2Fj.cej.2021.131609",
+      "apiUrl": "https://api.crossref.org/works/10.1016%2Fj.cej.2021.131609",
+      "updatedAt": "2026-07-21T10:28:58Z"
+    },
+    "10.3390/polym13234246": {
+      "doi": "10.3390/polym13234246",
+      "citationCount": 15,
+      "status": "verified",
+      "url": "https://search.crossref.org/?q=10.3390%2Fpolym13234246",
+      "apiUrl": "https://api.crossref.org/works/10.3390%2Fpolym13234246",
+      "updatedAt": "2026-07-21T10:28:58Z"
+    },
+    "10.3390/nano11082125": {
+      "doi": "10.3390/nano11082125",
+      "citationCount": 11,
+      "status": "verified",
+      "url": "https://search.crossref.org/?q=10.3390%2Fnano11082125",
+      "apiUrl": "https://api.crossref.org/works/10.3390%2Fnano11082125",
+      "updatedAt": "2026-07-21T10:28:58Z"
+    },
+    "10.3390/nano11061607": {
+      "doi": "10.3390/nano11061607",
+      "citationCount": 7,
+      "status": "verified",
+      "url": "https://search.crossref.org/?q=10.3390%2Fnano11061607",
+      "apiUrl": "https://api.crossref.org/works/10.3390%2Fnano11061607",
+      "updatedAt": "2026-07-21T10:28:58Z"
+    },
+    "10.1016/j.jpowsour.2012.12.094": {
+      "doi": "10.1016/j.jpowsour.2012.12.094",
+      "citationCount": 14,
+      "status": "verified",
+      "url": "https://search.crossref.org/?q=10.1016%2Fj.jpowsour.2012.12.094",
+      "apiUrl": "https://api.crossref.org/works/10.1016%2Fj.jpowsour.2012.12.094",
+      "updatedAt": "2026-07-21T10:28:58Z"
+    },
+    "10.1016/j.jpowsour.2012.05.079": {
+      "doi": "10.1016/j.jpowsour.2012.05.079",
+      "citationCount": 14,
+      "status": "verified",
+      "url": "https://search.crossref.org/?q=10.1016%2Fj.jpowsour.2012.05.079",
+      "apiUrl": "https://api.crossref.org/works/10.1016%2Fj.jpowsour.2012.05.079",
+      "updatedAt": "2026-07-21T10:28:58Z"
+    },
+    "10.1016/j.jpowsour.2011.06.049": {
+      "doi": "10.1016/j.jpowsour.2011.06.049",
+      "citationCount": 36,
+      "status": "verified",
+      "url": "https://search.crossref.org/?q=10.1016%2Fj.jpowsour.2011.06.049",
+      "apiUrl": "https://api.crossref.org/works/10.1016%2Fj.jpowsour.2011.06.049",
+      "updatedAt": "2026-07-21T10:28:58Z"
+    },
+    "10.1016/j.jpowsour.2010.12.063": {
+      "doi": "10.1016/j.jpowsour.2010.12.063",
+      "citationCount": 67,
+      "status": "verified",
+      "url": "https://search.crossref.org/?q=10.1016%2Fj.jpowsour.2010.12.063",
+      "apiUrl": "https://api.crossref.org/works/10.1016%2Fj.jpowsour.2010.12.063",
+      "updatedAt": "2026-07-21T10:28:58Z"
+    },
+    "10.1039/c0jm04099a": {
+      "doi": "10.1039/c0jm04099a",
+      "citationCount": 55,
+      "status": "verified",
+      "url": "https://search.crossref.org/?q=10.1039%2Fc0jm04099a",
+      "apiUrl": "https://api.crossref.org/works/10.1039%2Fc0jm04099a",
+      "updatedAt": "2026-07-21T10:28:58Z"
+    },
+    "10.1016/j.electacta.2010.07.061": {
+      "doi": "10.1016/j.electacta.2010.07.061",
+      "citationCount": 37,
+      "status": "verified",
+      "url": "https://search.crossref.org/?q=10.1016%2Fj.electacta.2010.07.061",
+      "apiUrl": "https://api.crossref.org/works/10.1016%2Fj.electacta.2010.07.061",
+      "updatedAt": "2026-07-21T10:28:58Z"
+    },
+    "10.1016/j.tsf.2009.11.058": {
+      "doi": "10.1016/j.tsf.2009.11.058",
+      "citationCount": 86,
+      "status": "verified",
+      "url": "https://search.crossref.org/?q=10.1016%2Fj.tsf.2009.11.058",
+      "apiUrl": "https://api.crossref.org/works/10.1016%2Fj.tsf.2009.11.058",
+      "updatedAt": "2026-07-21T10:28:58Z"
+    },
+    "10.1016/j.solmat.2009.07.017": {
+      "doi": "10.1016/j.solmat.2009.07.017",
+      "citationCount": 40,
+      "status": "verified",
+      "url": "https://search.crossref.org/?q=10.1016%2Fj.solmat.2009.07.017",
+      "apiUrl": "https://api.crossref.org/works/10.1016%2Fj.solmat.2009.07.017",
+      "updatedAt": "2026-07-21T10:28:58Z"
+    },
+    "10.1039/b902595m": {
+      "doi": "10.1039/b902595m",
+      "citationCount": 74,
+      "status": "verified",
+      "url": "https://search.crossref.org/?q=10.1039%2Fb902595m",
+      "apiUrl": "https://api.crossref.org/works/10.1039%2Fb902595m",
+      "updatedAt": "2026-07-21T10:28:58Z"
+    },
+    "10.1021/jp805239k": {
+      "doi": "10.1021/jp805239k",
+      "citationCount": 253,
+      "status": "verified",
+      "url": "https://search.crossref.org/?q=10.1021%2Fjp805239k",
+      "apiUrl": "https://api.crossref.org/works/10.1021%2Fjp805239k",
+      "updatedAt": "2026-07-21T10:28:58Z"
+    },
+    "10.1016/j.optcom.2004.10.003": {
+      "doi": "10.1016/j.optcom.2004.10.003",
+      "citationCount": 5,
+      "status": "verified",
+      "url": "https://search.crossref.org/?q=10.1016%2Fj.optcom.2004.10.003",
+      "apiUrl": "https://api.crossref.org/works/10.1016%2Fj.optcom.2004.10.003",
+      "updatedAt": "2026-07-21T10:28:58Z"
+    }
+  }
 }
