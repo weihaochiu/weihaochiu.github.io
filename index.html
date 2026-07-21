@@ -72,7 +72,19 @@
     </section>
 
     <section aria-label="Academic metrics" class="shell metrics-band metrics-band-sources">
-      <div class="metric-compact"><strong id="statPublicationCount">37</strong><span>Publications</span></div>
+      <div class="metrics-group metrics-output-group" aria-label="Academic outputs">
+        <div class="metrics-group-heading"><span>Academic outputs</span><small>Current records</small></div>
+        <div class="metrics-output-grid">
+          <a class="metric-compact" href="publications.html"><strong id="statPublicationCount" data-output-count="publications">37</strong><span>Publications</span></a>
+          <a class="metric-compact" href="patents.html"><strong id="statPatentCount" data-output-count="patents">14</strong><span>Patents</span></a>
+          <a class="metric-compact" href="projects.html"><strong id="statProjectCount" data-output-count="projects">4</strong><span>Projects</span></a>
+          <a class="metric-compact" href="about.html#awards"><strong id="statAwardCount" data-output-count="awards">10</strong><span>Awards</span></a>
+        </div>
+      </div>
+
+      <div class="metrics-group metrics-impact-group" aria-label="Research impact">
+        <div class="metrics-group-heading"><span>Research impact</span><small>Source-specific metrics</small></div>
+        <div class="metrics-impact-grid">
 
       <div class="metric-source-card-wrap">
         <a class="metric-source-card" href="https://scholar.google.com.tw/citations?user=ZYbNQb8AAAAJ&amp;hl=zh-TW" rel="noopener" target="_blank" aria-label="Open Google Scholar profile">
@@ -98,10 +110,9 @@
         </a>
       </div>
 
-      <div class="metric-compact" title="Sum of Mendeley reader counts across publications; readers may overlap between papers."><strong data-mendeley-readers="">—</strong><span>Mendeley readers</span></div>
-      <div class="metric-compact"><strong id="statPatentCount">12</strong><span>Patents</span></div>
-      <div class="metric-compact"><strong id="statProjectCount">4</strong><span>Projects</span></div>
-      <div class="metric-compact"><strong id="statAwardCount">10</strong><span>Awards</span></div>
+          <div class="metric-reader-card" title="Sum of Mendeley reader counts across publications; readers may overlap between papers."><strong data-mendeley-readers="">—</strong><span>Mendeley readers</span><small>Article readership</small></div>
+        </div>
+      </div>
     </section>
 
     <section class="content shell" id="about">
@@ -109,7 +120,7 @@
       <div class="about-preview">
         <article><span class="preview-number">13+</span><h3>Years in photovoltaic industry</h3><p>Device engineering, process development and reliability experience at Neo Solar Power and United Renewable Energy.</p><a href="about.html#experience">Experience →</a></article>
         <article><span class="preview-number">Ph.D.</span><h3>Electro-Optical Engineering</h3><p>Academic training in semiconductor devices, photovoltaics, lasers and optoelectronic materials.</p><a href="about.html#education">Education →</a></article>
-        <article><span class="preview-number">10</span><h3>Awards and recognitions</h3><p>Innovation, photovoltaic technology and academic recognitions, including bilingual Taiwan award records.</p><a href="about.html#awards">Awards →</a></article>
+        <article><span class="preview-number" data-output-count="awards">10</span><h3>Awards and recognitions</h3><p>Innovation, photovoltaic technology and academic recognitions, including bilingual Taiwan award records.</p><a href="about.html#awards">Awards →</a></article>
       </div>
     </section>
 

@@ -96,6 +96,17 @@ async function initMeta(){
   }
 }
 
+async function initOutputCounts(){
+  const names=['publications','patents','projects','awards'];
+  const rows=await Promise.all(names.map(name=>loadData(name).catch(()=>null)));
+  rows.forEach((records,index)=>{
+    if(!Array.isArray(records))return;
+    $$(`[data-output-count="${names[index]}"]`).forEach(element=>{
+      element.textContent=records.length.toLocaleString();
+    });
+  });
+}
+
 const FALLBACK_CATEGORY_LABELS={
   DSSC:'Dye-Sensitized Solar Cells (DSSC)',
   PSC:'Perovskite Solar Cells (PSC)',
@@ -454,6 +465,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   navigationInteractions();
   publicationInteractions();
   initMeta();
+  initOutputCounts().catch(console.error);
   combinedChart().catch(console.error);
   researchCharts().catch(console.error);
   initCollection().catch(console.error);
