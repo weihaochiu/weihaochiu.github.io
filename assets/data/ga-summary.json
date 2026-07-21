@@ -1,39 +1,51 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-20T04:53:41Z",
+  "generatedAt": "2026-07-21T04:33:31Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 11,
-    "activeUsers": 4,
-    "sessions": 5,
-    "engagementRate": 0.2
+    "pageViews": 54,
+    "activeUsers": 5,
+    "sessions": 7,
+    "engagementRate": 0.14285714285714285
   },
   "monthlyTrend": [
     {
       "month": "2026-07",
-      "pageViews": 11,
-      "activeUsers": 4
+      "pageViews": 54,
+      "activeUsers": 5
     }
   ],
   "topPages": [
     {
-      "title": "Publications | Wei-Hao Chiu",
-      "path": "/publications.html",
-      "pageViews": 5,
+      "title": "2T Perovskite Tandem Solar Cells in Space: Failure Mechanisms and Design Strategies | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-mtener-2026-102359.html",
+      "pageViews": 33,
       "activeUsers": 1
     },
     {
-      "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
-      "path": "/",
-      "pageViews": 3,
+      "title": "Publications | Wei-Hao Chiu",
+      "path": "/publications.html",
+      "pageViews": 7,
       "activeUsers": 3
     },
     {
       "title": "Reliability enhancement of PVDF-HFP modified perovskite solar cells under synergistic space-relevant stress conditions | Wei-Hao Chiu",
       "path": "/publications/10-1016-j-cej-2026-177494.html",
+      "pageViews": 4,
+      "activeUsers": 2
+    },
+    {
+      "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
+      "path": "/",
+      "pageViews": 4,
+      "activeUsers": 4
+    },
+    {
+      "title": "MOF-& COF-integrated composite separators/membranes: innovations for sustainable and high-performance redox flow batteries | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-seppur-2025-134157.html",
       "pageViews": 2,
       "activeUsers": 1
     },
@@ -42,34 +54,62 @@
       "path": "/publications/10-1002-adfm-202306367.html",
       "pageViews": 1,
       "activeUsers": 1
+    },
+    {
+      "title": "Fluorination on cyclopentadithiophene-based hole-transport material for high-performance perovskite solar cells | Wei-Hao Chiu",
+      "path": "/publications/10-1039-d3cc04699k.html",
+      "pageViews": 1,
+      "activeUsers": 1
+    },
+    {
+      "title": "Synergistic preheating and moderate temperature liquid medium annealing for high performance perovskite solar cells | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-solener-2026-114430.html",
+      "pageViews": 1,
+      "activeUsers": 1
+    },
+    {
+      "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
+      "path": "/index.html",
+      "pageViews": 1,
+      "activeUsers": 1
     }
   ],
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 5,
+      "sessions": 6,
       "activeUsers": 4
+    },
+    {
+      "channel": "Organic Search",
+      "sessions": 1,
+      "activeUsers": 1
+    },
+    {
+      "channel": "Unassigned",
+      "sessions": 1,
+      "activeUsers": 1
     }
   ],
   "topCountries": [
     {
+      "country": "Taiwan",
+      "activeUsers": 3,
+      "pageViews": 52
+    },
+    {
       "country": "(not set)",
       "activeUsers": 2,
       "pageViews": 2
-    },
-    {
-      "country": "Taiwan",
-      "activeUsers": 2,
-      "pageViews": 9
     }
   ],
   "devices": [
     {
-      "device": "desktop",
-      "activeUsers": 2
+      "device": "mobile",
+      "activeUsers": 3
     },
     {
-      "device": "mobile",
+      "device": "desktop",
       "activeUsers": 2
     }
   ],
