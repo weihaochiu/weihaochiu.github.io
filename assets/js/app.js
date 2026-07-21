@@ -2,6 +2,36 @@ const $=(s,r=document)=>r.querySelector(s);
 const $$=(s,r=document)=>[...r.querySelectorAll(s)];
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
+function sendAnalyticsEvent(eventName,link){
+  if(typeof window.gtag!=='function'||!eventName)return;
+  const href=link?.getAttribute?.('href')||'';
+  window.gtag('event',eventName,{
+    link_text:String(link?.textContent||'').trim().slice(0,100),
+    link_url:/^mailto:/i.test(href)?'mailto:':href,
+    page_path:window.location.pathname
+  });
+}
+function analyticsEventFor(target){
+  const explicit=target?.closest?.('[data-ga-event]');
+  if(explicit)return {name:explicit.dataset.gaEvent,element:explicit};
+  const element=target?.closest?.('a,button');
+  if(!element)return null;
+  const href=String(element.getAttribute('href')||'');
+  const text=String(element.textContent||'').trim().toLowerCase();
+  let name='';
+  if(/search\.crossref\.org|crossref\.org/i.test(href)||text.includes('crossref'))name='crossref_click';
+  else if(/openalex\.org/i.test(href)||text.includes('openalex'))name='openalex_click';
+  else if(/scholar\.google\./i.test(href)||text.includes('google scholar'))name='scholar_click';
+  else if(/doi\.org/i.test(href)||text==='doi ↗')name='doi_click';
+  else if(text.includes('open access pdf'))name='oa_pdf_click';
+  else if(/orcid\.org/i.test(href)||text==='orcid')name='orcid_click';
+  else if(/^mailto:/i.test(href))name='email_click';
+  else if(/\.pdf(?:$|[?#])/i.test(href)&&/cv|curriculum/i.test(`${href} ${text}`))name='cv_download';
+  else if(element.matches('[data-share-url],[data-copy-share-url]')||element.closest('.share-menu'))name='share_action';
+  else if(/patent|tipo|patentscope|google\.com\/patents/i.test(`${href} ${text}`))name='patent_click';
+  return name?{name,element}:null;
+}
+
 async function loadData(name){
   const local=`data/${name}.json`;
   try{const r=await fetch(local,{cache:'no-store'});if(r.ok)return r.json()}catch(e){}
@@ -355,6 +385,8 @@ function closeShareMenus(except=null){
 }
 function publicationInteractions(){
   document.addEventListener('click',async event=>{
+    const analytics=analyticsEventFor(event.target);
+    if(analytics)sendAnalyticsEvent(analytics.name,analytics.element);
     const trigger=event.target.closest('[data-share-url]');
     if(trigger){
       event.preventDefault();
