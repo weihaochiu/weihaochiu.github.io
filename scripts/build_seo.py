@@ -97,7 +97,7 @@ def static_card(p):
   n=int(p.get('citationCount') or 0)
   return '<article class="collection-card publication-card seo-static-card" id="pub-'+slug+'" itemscope itemtype="https://schema.org/ScholarlyArticle"><meta itemprop="identifier" content="'+esc(doi)+'"/><div class="card-heading"><h4 itemprop="headline"><a href="'+esc(local)+'">'+esc(p.get('title'))+'</a></h4><span class="date-badge" itemprop="datePublished">'+esc(p.get('date'))+'</span></div><p class="authors" itemprop="author">'+authors+'</p><p class="journal" itemprop="isPartOf">'+journal+'</p><div class="card-labels">'+labels_html+'</div><div class="card-actions"><a class="action" href="'+esc(p.get('doiUrl'))+'" target="_blank" rel="noopener">DOI ↗</a><a class="action" href="'+esc(local)+'">Abstract, Highlights &amp; GA →</a><span class="action">'+str(n)+' Google Scholar citation'+('s' if n!=1 else '')+'</span></div></article>'
 
-def publication_page(p, openalex_record=None, unpaywall_record=None):
+def publication_page(p, openalex_record=None, unpaywall_record=None, crossref_record=None):
   doi=p.get('doi',''); slug=slugify(doi); url=SITE_URL+'/publications/'+slug+'.html'
   title=esc(p.get('title')); desc=esc(p.get('citation')); authors=', '.join(esc(a) for a in p.get('authors',[]))
   graph={'@context':'https://schema.org','@graph':[PERSON,article_schema(p,url)]}
@@ -113,6 +113,7 @@ def publication_page(p, openalex_record=None, unpaywall_record=None):
   ga_path = graphical_abstract_path(p)
   openalex_record = openalex_record or {}
   unpaywall_record = unpaywall_record or {}
+  crossref_record = crossref_record or {}
   detail_sections = []
   if abstract:
     detail_sections.append('<section class="publication-detail-section"><h2>Abstract</h2><p itemprop="abstract">'+esc(abstract)+'</p></section>')
@@ -133,6 +134,9 @@ def publication_page(p, openalex_record=None, unpaywall_record=None):
   if openalex_record.get('status') == 'verified' and openalex_record.get('url'):
     oa_count = int(openalex_record.get('citationCount') or 0)
     actions.append('<a class="action" href="'+esc(openalex_record.get('url'))+'" target="_blank" rel="noopener noreferrer">OpenAlex ('+f'{oa_count:,}'+') ↗</a>')
+  if crossref_record.get('status') == 'verified' and crossref_record.get('url'):
+    cr_count = int(crossref_record.get('citationCount') or 0)
+    actions.append('<a class="action" href="'+esc(crossref_record.get('url'))+'" target="_blank" rel="noopener noreferrer">Crossref ('+f'{cr_count:,}'+') ↗</a>')
   share_text = str(p.get('title') or '')
   email_url = 'mailto:?subject='+quote(share_text)+'&body='+quote(url)
   actions.append('<span class="share-wrap"><button class="action action-button share-trigger" type="button" aria-haspopup="menu" aria-expanded="false" data-share-title="'+title+'" data-share-text="'+title+'" data-share-url="'+esc(url)+'">Share</button><span class="share-menu" role="menu" hidden><button type="button" role="menuitem" data-copy-share-url="'+esc(url)+'">Copy link</button><a role="menuitem" href="'+esc(email_url)+'">Email</a><a role="menuitem" href="https://www.linkedin.com/sharing/share-offsite/?url='+quote(url, safe='')+'" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></span></span>')
@@ -143,6 +147,8 @@ def main():
   pubs=json.loads((ROOT/'data/publications.json').read_text(encoding='utf-8'))
   openalex_path=ROOT/'data/openalex_publication_metrics.json'
   openalex_records=json.loads(openalex_path.read_text(encoding='utf-8')).get('records',{}) if openalex_path.exists() else {}
+  crossref_path=ROOT/'data/crossref_publication_metrics.json'
+  crossref_records=json.loads(crossref_path.read_text(encoding='utf-8')).get('records',{}) if crossref_path.exists() else {}
   unpaywall_path=ROOT/'data/unpaywall.json'
   unpaywall_records=json.loads(unpaywall_path.read_text(encoding='utf-8')).get('records',{}) if unpaywall_path.exists() else {}
   if len(pubs)!=37: raise SystemExit(f'Expected 37 publications, found {len(pubs)}')
@@ -161,7 +167,8 @@ def main():
   for p in pubs:
     record=openalex_records.get(str(p.get('doi') or '').strip().lower(),{})
     oa_record=unpaywall_records.get(str(p.get('doi') or '').strip().lower(),{})
-    (pdir/(slugify(p.get('doi',''))+'.html')).write_text(publication_page(p,record,oa_record),encoding='utf-8')
+    cr_record=crossref_records.get(str(p.get('doi') or '').strip().lower(),{})
+    (pdir/(slugify(p.get('doi',''))+'.html')).write_text(publication_page(p,record,oa_record,cr_record),encoding='utf-8')
   app=ROOT/'assets/js/app.js'; js=app.read_text(encoding='utf-8')
   js=re.sub(r'function publicationShareUrl\(anchor\)\{.*?\n\}', "function publicationShareUrl(anchor){\n  const slug=String(anchor||'').replace(/^pub-/,'');\n  return new URL(`publications/${slug}.html`,window.location.href).toString();\n}", js, count=1, flags=re.S)
   app.write_text(js,encoding='utf-8')

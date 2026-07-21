@@ -82,17 +82,18 @@ function inferPublicationCategory(p){
   if(/dye-sensitized|dssc/.test(text))return 'DSSC';
   return 'Other';
 }
-function enrichPublications(rows,taxonomy={},mendeley={},unpaywall={}){
+function enrichPublications(rows,taxonomy={},mendeley={},unpaywall={},crossref={}){
   const map=taxonomy.publications||{};
   const metricMap=mendeley.records||{};
   const oaMap=unpaywall.records||{};
+  const crossrefMap=crossref.records||{};
   const labels={...FALLBACK_CATEGORY_LABELS,...(taxonomy.categoryLabels||{})};
   return rows.map(p=>{
     const key=publicationKey(p);
     const entry=map[key]||{};
     const category=entry.category||inferPublicationCategory(p);
     const subtopics=Array.isArray(entry.subtopics)?[...new Set(entry.subtopics)]:[];
-    return {...p,category,categoryLabel:labels[category]||category,subtopics,mendeley:metricMap[key]||null,openAccess:oaMap[key]||null};
+    return {...p,category,categoryLabel:labels[category]||category,subtopics,mendeley:metricMap[key]||null,openAccess:oaMap[key]||null,crossref:crossrefMap[key]||null};
   });
 }
 function fillPublicationThemeSelect(el,taxonomy={}){
@@ -149,6 +150,12 @@ function publicationCard(p){
   const cited=n>0&&scholarUrl
     ?`<a class="action" href="${esc(scholarUrl)}" target="_blank" rel="noopener noreferrer">${n} Google Scholar citation${n===1?'':'s'} ↗</a>`
     :`<span class="action">${n} Google Scholar citation${n===1?'':'s'}</span>`;
+  const crossref=p.crossref||{};
+  const crossrefCount=Number(crossref.citationCount);
+  const crossrefUrl=normalizeExternalUrl(crossref.url);
+  const crossrefAction=crossref.status==='verified'&&Number.isFinite(crossrefCount)&&crossrefCount>=0&&crossrefUrl
+    ?`<a class="action" href="${esc(crossrefUrl)}" target="_blank" rel="noopener noreferrer">Crossref (${crossrefCount.toLocaleString()}) ↗</a>`
+    :'';
   const metric=p.mendeley||{};
   const readerCount=Number(metric.readerCount);
   const mendeleyUrl=normalizeMendeleyUrl(metric.url);
@@ -174,7 +181,7 @@ function publicationCard(p){
   const facebookUrl=`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
   const shareMenuId=`share-menu-${anchor}`;
   const share=`<span class="share-wrap"><button class="action action-button share-trigger" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="${esc(shareMenuId)}" data-share-title="${esc(p.title)}" data-share-text="${esc(shareText)}" data-share-url="${esc(shareUrl)}">${SHARE_ICON}<span>Share</span></button><span class="share-menu" id="${esc(shareMenuId)}" role="menu" hidden><button type="button" role="menuitem" data-copy-share-url="${esc(shareUrl)}">Copy link</button><a role="menuitem" href="${esc(emailUrl)}">Email</a><a role="menuitem" href="${esc(linkedinUrl)}" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a role="menuitem" href="${esc(xUrl)}" target="_blank" rel="noopener noreferrer">X (Twitter) ↗</a><a role="menuitem" href="${esc(facebookUrl)}" target="_blank" rel="noopener noreferrer">Facebook ↗</a></span></span>`;
-  return `<article class="collection-card publication-card" id="${esc(anchor)}"><div class="card-heading"><h4><a href="${esc(shareUrl)}">${esc(p.title)}</a></h4><span class="date-badge">${esc(p.date)}</span></div><p class="authors">${authors}</p><p class="journal"><em>${esc(p.journal)}</em>${p.volume?`, ${esc(p.volume)}`:''}${p.pages?`, ${esc(p.pages)}`:''} (${p.year}).</p><div class="card-labels">${labels.map(label=>`<span class="card-label">${esc(label)}</span>`).join('')}</div><div class="card-actions">${detailAction}<a class="action" href="${esc(p.doiUrl)}" target="_blank" rel="noopener">DOI ↗</a>${oaAction}${cited}${readers}${share}</div></article>`;
+  return `<article class="collection-card publication-card" id="${esc(anchor)}"><div class="card-heading"><h4><a href="${esc(shareUrl)}">${esc(p.title)}</a></h4><span class="date-badge">${esc(p.date)}</span></div><p class="authors">${authors}</p><p class="journal"><em>${esc(p.journal)}</em>${p.volume?`, ${esc(p.volume)}`:''}${p.pages?`, ${esc(p.pages)}`:''} (${p.year}).</p><div class="card-labels">${labels.map(label=>`<span class="card-label">${esc(label)}</span>`).join('')}</div><div class="card-actions">${detailAction}<a class="action" href="${esc(p.doiUrl)}" target="_blank" rel="noopener">DOI ↗</a>${oaAction}${cited}${crossrefAction}${readers}${share}</div></article>`;
 }
 function patentCard(p){return `<article class="collection-card"><div class="card-heading"><h4><a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.titleEn)}</a></h4><span class="date-badge">${esc(p.date)}</span></div>${p.titleZh?`<div class="local-title" lang="zh-Hant">${esc(p.titleZh)}</div>`:''}<div class="card-labels"><span class="card-label">${esc(p.number)}</span><span class="card-label">${esc(p.jurisdiction)}</span><span class="card-label">${esc(p.status)}</span></div><div class="meta-row">Inventors: ${(p.inventorsEn||[]).map(highlightAuthor).join(', ')}</div>${p.inventorsZh?`<div class="meta-row" lang="zh-Hant">發明人／創作人：${esc(p.inventorsZh)}</div>`:''}<div class="meta-row">Assignee: ${esc(p.assigneeEn)}</div><div class="card-actions"><a class="action" href="${esc(p.url)}" target="_blank" rel="noopener">Patent record ↗</a></div></article>`}
 function projectCard(p){return `<article class="collection-card"><div class="card-heading"><h4>${p.url?`<a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.titleEn)}</a>`:esc(p.titleEn)}</h4><span class="date-badge">${esc(p.period||p.startYear)}</span></div><div class="local-title" lang="zh-Hant">${esc(p.titleZh)}</div><div class="card-labels"><span class="card-label">${esc(p.status)}</span><span class="card-label">${esc(p.role)} · ${esc(p.roleZh)}</span>${p.number?`<span class="card-label">${esc(p.number)}</span>`:''}</div><p>${esc(p.agencyEn)}</p><p class="summary">${esc(p.scopeEn)}</p>${p.url?`<div class="card-actions"><a class="action" href="${esc(p.url)}" target="_blank" rel="noopener">Project record ↗</a></div>`:''}</article>`}
@@ -260,10 +267,10 @@ async function initCollection(){
   const root=$('[data-collection]');if(!root)return;
   const name=root.dataset.collection;
   const rawRows=await loadData(name);
-  const [taxonomy,mendeley,unpaywall]=name==='publications'
-    ?await Promise.all([loadData('publication_taxonomy').catch(()=>({})),loadData('mendeley_metrics').catch(()=>({})),loadData('unpaywall').catch(()=>({}))])
-    :[{},{},{}];
-  const rows=name==='publications'?enrichPublications(rawRows,taxonomy,mendeley,unpaywall):rawRows;
+  const [taxonomy,mendeley,unpaywall,crossref]=name==='publications'
+    ?await Promise.all([loadData('publication_taxonomy').catch(()=>({})),loadData('mendeley_metrics').catch(()=>({})),loadData('unpaywall').catch(()=>({})),loadData('crossref_publication_metrics').catch(()=>({}))])
+    :[{},{},{},{}];
+  const rows=name==='publications'?enrichPublications(rawRows,taxonomy,mendeley,unpaywall,crossref):rawRows;
   const search=$('#searchInput'),year=$('#yearFilter'),topic=$('#topicFilter'),sort=$('#sortFilter'),count=$('#resultCount'),container=$('#collectionContainer'),empty=$('#emptyState');
   fillSelect(year,rows.map(yearOf),'All years','numeric-desc');
   if(topic){
@@ -396,4 +403,3 @@ document.addEventListener('DOMContentLoaded',()=>{
   researchCharts().catch(console.error);
   initCollection().catch(console.error);
 });
-
