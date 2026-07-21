@@ -27,6 +27,35 @@ jobs:
           python-version: "3.12"
       - name: Generate v23 website files
         run: python scripts/build_seo.py
+      - name: Verify generated publication metadata
+        run: |
+          python scripts/build_seo.py
+          python - <<'PY'
+          import json
+          import re
+          from pathlib import Path
+
+          root = Path('.')
+          expected = len(json.loads((root / 'data/publications.json').read_text(encoding='utf-8')))
+          page = (root / 'publications.html').read_text(encoding='utf-8')
+          titles = len(re.findall(r'<meta\s+name=["\']citation_title["\']', page, flags=re.I))
+          detail_pages = len(list((root / 'publications').glob('*.html')))
+          legacy_scripts = len(re.findall(r'openalex-publications\.js', page, flags=re.I))
+          marker_starts = page.count('<!-- SEO_CITATION_META_START -->')
+          marker_ends = page.count('<!-- SEO_CITATION_META_END -->')
+          errors = []
+          if titles != expected:
+              errors.append(f'citation_title count: expected {expected}, found {titles}')
+          if detail_pages != expected:
+              errors.append(f'detail page count: expected {expected}, found {detail_pages}')
+          if legacy_scripts:
+              errors.append(f'legacy OpenAlex scripts: expected 0, found {legacy_scripts}')
+          if (marker_starts, marker_ends) != (1, 1):
+              errors.append(f'citation marker pairs: expected 1/1, found {marker_starts}/{marker_ends}')
+          if errors:
+              raise SystemExit('\n'.join(errors))
+          print(f'Verified {expected} publications; metadata is idempotent and legacy OpenAlex script is absent.')
+          PY
       - name: Commit generated files
         run: |
           git config user.name "github-actions[bot]"
