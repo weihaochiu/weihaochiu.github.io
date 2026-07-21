@@ -1,6 +1,6 @@
 /* Source-specific citation cards added without changing the existing global stylesheet. */
 .metrics-band.metrics-band-sources{
-  grid-template-columns:repeat(9,minmax(0,1fr));
+  grid-template-columns:repeat(8,minmax(0,1fr));
 }
 .metrics-band.metrics-band-sources .metric-source-card-wrap{
   grid-column:span 2;

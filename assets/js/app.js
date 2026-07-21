@@ -34,10 +34,11 @@ function setNavigation(){
 }
 
 async function initMeta(){
-  const [m,s,md]=await Promise.all([
+  const [m,s,md,cr]=await Promise.all([
     loadData('site_meta').catch(()=>({})),
     loadData('scholar_metrics').catch(()=>({})),
-    loadData('mendeley_metrics').catch(()=>({}))
+    loadData('mendeley_metrics').catch(()=>({})),
+    loadData('crossref_publication_metrics').catch(()=>({}))
   ]);
   $$('[data-site-updated]').forEach(e=>e.textContent=formatDate(m.lastUpdated));
   $$('[data-site-version]').forEach(e=>e.textContent=m.version||'v20');
@@ -47,6 +48,21 @@ async function initMeta(){
   if(s.i10Index!==undefined&&s.i10Index!==null)$$('[data-scholar-i10]').forEach(e=>e.textContent=s.i10Index);
   if(md.totalReaders!==undefined&&md.totalReaders!==null){
     $$('[data-mendeley-readers]').forEach(e=>e.textContent=Number(md.totalReaders).toLocaleString());
+  }
+  const crossrefCounts=Object.values(cr.records||{})
+    .filter(record=>record?.status==='verified'&&Number.isInteger(Number(record.citationCount))&&Number(record.citationCount)>=0)
+    .map(record=>Number(record.citationCount))
+    .sort((a,b)=>b-a);
+  if(crossrefCounts.length){
+    const citations=crossrefCounts.reduce((sum,count)=>sum+count,0);
+    const hIndex=crossrefCounts.reduce((h,count,index)=>count>=index+1?index+1:h,0);
+    const i10Index=crossrefCounts.filter(count=>count>=10).length;
+    $$('[data-crossref-citations]').forEach(e=>e.textContent=citations.toLocaleString());
+    $$('[data-crossref-h]').forEach(e=>e.textContent=hIndex);
+    $$('[data-crossref-i10]').forEach(e=>e.textContent=i10Index);
+    $$('[data-crossref-metrics-link]').forEach(e=>{
+      if(cr.lastSuccessfulUpdate)e.title=`Crossref metrics updated ${formatDate(cr.lastSuccessfulUpdate)}`;
+    });
   }
 }
 
