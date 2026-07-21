@@ -97,7 +97,7 @@ def static_card(p):
   n=int(p.get('citationCount') or 0)
   return '<article class="collection-card publication-card seo-static-card" id="pub-'+slug+'" itemscope itemtype="https://schema.org/ScholarlyArticle"><meta itemprop="identifier" content="'+esc(doi)+'"/><div class="card-heading"><h4 itemprop="headline"><a href="'+esc(local)+'">'+esc(p.get('title'))+'</a></h4><span class="date-badge" itemprop="datePublished">'+esc(p.get('date'))+'</span></div><p class="authors" itemprop="author">'+authors+'</p><p class="journal" itemprop="isPartOf">'+journal+'</p><div class="card-labels">'+labels_html+'</div><div class="card-actions"><a class="action" href="'+esc(p.get('doiUrl'))+'" target="_blank" rel="noopener">DOI ↗</a><a class="action" href="'+esc(local)+'">Abstract, Highlights &amp; GA →</a><span class="action">'+str(n)+' Google Scholar citation'+('s' if n!=1 else '')+'</span></div></article>'
 
-def publication_page(p, openalex_record=None, unpaywall_record=None, crossref_record=None):
+def publication_page(p, openalex_record=None, unpaywall_record=None, crossref_record=None, mendeley_record=None):
   doi=p.get('doi',''); slug=slugify(doi); url=SITE_URL+'/publications/'+slug+'.html'
   title=esc(p.get('title')); desc=esc(p.get('citation')); authors=', '.join(esc(a) for a in p.get('authors',[]))
   graph={'@context':'https://schema.org','@graph':[PERSON,article_schema(p,url)]}
@@ -114,6 +114,7 @@ def publication_page(p, openalex_record=None, unpaywall_record=None, crossref_re
   openalex_record = openalex_record or {}
   unpaywall_record = unpaywall_record or {}
   crossref_record = crossref_record or {}
+  mendeley_record = mendeley_record or {}
   detail_sections = []
   if abstract:
     detail_sections.append('<section class="publication-detail-section"><h2>Abstract</h2><p itemprop="abstract">'+esc(abstract)+'</p></section>')
@@ -130,13 +131,18 @@ def publication_page(p, openalex_record=None, unpaywall_record=None, crossref_re
     actions.append('<a class="action oa-action" href="'+esc(unpaywall_record.get('urlForPdf'))+'" target="_blank" rel="noopener noreferrer">Open Access PDF ↗</a>')
   scholar_url = p.get('citedByUrl') or p.get('scholarProfileUrl')
   if scholar_url:
-    actions.append('<a class="action" href="'+esc(scholar_url)+'" target="_blank" rel="noopener noreferrer">Google Scholar ('+esc(p.get('citationCount',0))+') ↗</a>')
+    scholar_count = int(p.get('citationCount') or 0)
+    actions.append('<a class="action" href="'+esc(scholar_url)+'" target="_blank" rel="noopener noreferrer">'+f'{scholar_count:,}'+' Google Scholar citation'+('' if scholar_count == 1 else 's')+' ↗</a>')
   if openalex_record.get('status') == 'verified' and openalex_record.get('url'):
     oa_count = int(openalex_record.get('citationCount') or 0)
-    actions.append('<a class="action" href="'+esc(openalex_record.get('url'))+'" target="_blank" rel="noopener noreferrer">OpenAlex ('+f'{oa_count:,}'+') ↗</a>')
-  if crossref_record.get('status') == 'verified' and crossref_record.get('url'):
+    actions.append('<a class="action" href="'+esc(openalex_record.get('url'))+'" target="_blank" rel="noopener noreferrer">'+f'{oa_count:,}'+' OpenAlex citation'+('' if oa_count == 1 else 's')+' ↗</a>')
+  if crossref_record.get('status') == 'verified' and doi:
     cr_count = int(crossref_record.get('citationCount') or 0)
-    actions.append('<a class="action" href="'+esc(crossref_record.get('url'))+'" target="_blank" rel="noopener noreferrer">Crossref ('+f'{cr_count:,}'+') ↗</a>')
+    crossref_url = 'https://search.crossref.org/search/works?q=' + quote(str(doi), safe='') + '&from_ui=yes'
+    actions.append('<a class="action" href="'+esc(crossref_url)+'" target="_blank" rel="noopener noreferrer">'+f'{cr_count:,}'+' Crossref citation'+('' if cr_count == 1 else 's')+' ↗</a>')
+  if mendeley_record.get('status') == 'verified' and mendeley_record.get('url'):
+    reader_count = int(mendeley_record.get('readerCount') or 0)
+    actions.append('<a class="action" href="'+esc(mendeley_record.get('url'))+'" target="_blank" rel="noopener noreferrer">'+f'{reader_count:,}'+' Mendeley reader'+('' if reader_count == 1 else 's')+' ↗</a>')
   share_text = str(p.get('title') or '')
   email_url = 'mailto:?subject='+quote(share_text)+'&body='+quote(url)
   actions.append('<span class="share-wrap"><button class="action action-button share-trigger" type="button" aria-haspopup="menu" aria-expanded="false" data-share-title="'+title+'" data-share-text="'+title+'" data-share-url="'+esc(url)+'">Share</button><span class="share-menu" role="menu" hidden><button type="button" role="menuitem" data-copy-share-url="'+esc(url)+'">Copy link</button><a role="menuitem" href="'+esc(email_url)+'">Email</a><a role="menuitem" href="https://www.linkedin.com/sharing/share-offsite/?url='+quote(url, safe='')+'" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></span></span>')
@@ -151,6 +157,8 @@ def main():
   crossref_records=json.loads(crossref_path.read_text(encoding='utf-8')).get('records',{}) if crossref_path.exists() else {}
   unpaywall_path=ROOT/'data/unpaywall.json'
   unpaywall_records=json.loads(unpaywall_path.read_text(encoding='utf-8')).get('records',{}) if unpaywall_path.exists() else {}
+  mendeley_path=ROOT/'data/mendeley_metrics.json'
+  mendeley_records=json.loads(mendeley_path.read_text(encoding='utf-8')).get('records',{}) if mendeley_path.exists() else {}
   if len(pubs)!=37: raise SystemExit(f'Expected 37 publications, found {len(pubs)}')
   for path in ROOT.glob('*.html'):
     text=path.read_text(encoding='utf-8'); text=replace_person_schema(text); text=replace_emails(text); path.write_text(text,encoding='utf-8')
@@ -168,7 +176,8 @@ def main():
     record=openalex_records.get(str(p.get('doi') or '').strip().lower(),{})
     oa_record=unpaywall_records.get(str(p.get('doi') or '').strip().lower(),{})
     cr_record=crossref_records.get(str(p.get('doi') or '').strip().lower(),{})
-    (pdir/(slugify(p.get('doi',''))+'.html')).write_text(publication_page(p,record,oa_record,cr_record),encoding='utf-8')
+    md_record=mendeley_records.get(str(p.get('doi') or '').strip().lower(),{})
+    (pdir/(slugify(p.get('doi',''))+'.html')).write_text(publication_page(p,record,oa_record,cr_record,md_record),encoding='utf-8')
   app=ROOT/'assets/js/app.js'; js=app.read_text(encoding='utf-8')
   js=re.sub(r'function publicationShareUrl\(anchor\)\{.*?\n\}', "function publicationShareUrl(anchor){\n  const slug=String(anchor||'').replace(/^pub-/,'');\n  return new URL(`publications/${slug}.html`,window.location.href).toString();\n}", js, count=1, flags=re.S)
   app.write_text(js,encoding='utf-8')
