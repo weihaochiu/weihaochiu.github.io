@@ -532,7 +532,24 @@
     "citedByUrl": "https://scholar.google.com/scholar?hl=en&q=%22Asymmetric+Fluorinated+Cyclopenta+%5B2%2C+1%E2%80%90b%3A+3%2C+4%E2%80%90b%27%5D+Dithiophene%E2%80%90Based+Hole%E2%80%90Transporting+Materials+for+Perovskite+Solar+Cell%22",
     "scholarCitedByUrl": "",
     "scholarLinkVerified": false,
-    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en"
+    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en",
+    "contentStatus": {
+      "abstract": "available",
+      "highlights": "pending",
+      "keywords": "available",
+      "graphicalAbstract": "pending",
+      "verifiedDate": "2026-07-22",
+      "verifiedSource": "PubMed publisher-supplied record"
+    },
+    "abstract": "A series of asymmetric hole-transporting materials (HTMs) based on cyclopenta[2,1-b;3,4-b']dithiophene cores tethered with p-methoxytriphenylamines donor units with or without incorporated fluorine atoms were rationally designed, synthesized, and employed in perovskite solar cells (PSCs). A comprehensive comparison is conducted encompassing the absorption spectra, electrochemical characteristics, thermal stability, density functional theory (DFT) calculations, hole mobility, and surface morphology, as revealed by scanning electron microscopy (SEM) and atomic force microscopy (AFM), steady-state and time-resolved photoluminescence measurements, water contact angle analyzes, and photovoltaic parameters of the PSCs. The fluorinated HTMs, P-oF and P-mF, demonstrated enhanced hole mobility and more efficient charge extraction at the perovskite/HTM interface compared to their non-fluorinated counterpart. Consequently, PSCs employing P-oF and P-mF achieved power conversion efficiencies (PCEs) of 21.52% and 19.78%, respectively, with negligible hysteresis, outperforming devices based on P-H, which exhibited a PCE of 17.05%. Moreover, the operational stability of the device incorporating P-series as the HTM exceeded that of the PSCs employing the benchmark material of spiro-OMeTAD. The findings presented herein underscore the facile accessibility and potential of asymmetric compounds as alternative HTMs for PSCs. The results provide valuable insights and serve as a reference for the development of optimal HTMs for PSCs.",
+    "keywords": [
+      "Cyclopenta[2,1-b:3, 4-b’]dithiophene-based derivatives",
+      "Fluorine-substituted small molecule",
+      "Hole-transporting materials",
+      "Long-term stability",
+      "Perovskite solar cells",
+      "Photo-energy conversion"
+    ]
   },
   {
     "date": "2025-01",
@@ -579,7 +596,24 @@
     "citedByUrl": "https://scholar.google.com/scholar?hl=en&q=%22Judicious+Molecular+Design+of+5H%E2%80%91Dithieno%5B3%2C2%E2%80%91b%3A2%E2%80%B2%2C3%E2%80%B2%E2%80%91d%5DPyran-based+Hole-Transporting+Materials+for+Highly+Efficient+and+Stable+Perovskite+Solar+Cells%22",
     "scholarCitedByUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=5690886755135611232",
     "scholarLinkVerified": true,
-    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en"
+    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en",
+    "contentStatus": {
+      "abstract": "available",
+      "highlights": "pending",
+      "keywords": "available",
+      "graphicalAbstract": "pending",
+      "verifiedDate": "2026-07-22",
+      "verifiedSource": "PubMed/PMC publisher article record"
+    },
+    "abstract": "The structural modification of hole-transporting materials (HTMs) is an effective strategy for enhancing photovoltaic performance in perovskite solar cells (PSCs). Herein, a series of dithienopyran (DTP)-based HTMs (Me-H, Ph-H, CF3-H, CF3-mF, and CF3-oF) is designed and synthesized by substituting different functional groups on the DTP unit and are used fabricating PSCs. In comparison with Me-H having two methyl substituents on the dithienopyrano ring, the Ph-H having two phenyl substituents on the ring exhibits higher PCEs. Notably, the incorporation of trifluoromethyl groups in CF3-H endows the molecule with a larger dipole moment, deeper HOMO energy level, better film morphology, closer molecular stacking, more efficient defect-passivation, enhanced hydrophobicity, and better photovoltaic performance when compared with the Ph-H counterpart. Furthermore, the HTMs of CF3-mF and CF3-oF, which feature fluorine-substituted triphenylamine, demonstrated excellent film-forming properties, more suitable energy levels, enhanced charge mobility, and improved passivation of the buried interface between HTMs and perovskite. As a result, PSCs employing CF3-mF and CF3-oF gave impressive PCEs of 23.41 and 24.13%, respectively. In addition, the large-area (1.00 cm2) PSCs based on CF3-oF achieved a PCE of 22.31%. Moreover, the PSCs devices with CF3 series HTMs exhibited excellent long-term stability under different conditions.",
+    "keywords": [
+      "dithienopyran-based derivatives",
+      "fluorine-substituted small molecule",
+      "hole-transporting materials",
+      "long-term stability",
+      "perovskite solar cells",
+      "photo-energy conversion"
+    ]
   },
   {
     "date": "2024-10",
@@ -615,7 +649,23 @@
     "citedByUrl": "https://scholar.google.com/scholar?hl=en&q=%22Exploring+the+efficiency+enhancement+of+perovskite+solar+cells+by+chemical+bath+depositing+SnO2+on+mesoporous+TiO2+electrode%22",
     "scholarCitedByUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=10792458438841699188",
     "scholarLinkVerified": true,
-    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en"
+    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en",
+    "contentStatus": {
+      "abstract": "available",
+      "highlights": "available",
+      "keywords": "pending",
+      "graphicalAbstract": "available",
+      "verifiedDate": "2026-07-22",
+      "verifiedSource": "ScienceDirect article page"
+    },
+    "abstract": "This study presents a groundbreaking approach to enhance the efficiency of perovskite solar cells (PSCs) by employing Chemical Bath Deposited (CBD) SnO2 on mesoporous TiO2 (m-TiO2) as an electron transport layer (ETL) without a traditional compact TiO2 (c-TiO2) layer between FTO (fluorine-doped tin oxide) and m-TiO2 ETL. Our investigation reveals that this method significantly improves carrier dynamics, as evidenced by reduced time constants compared to traditional ETLs. The CBD SnO2 not only augments electron transport but also effectively reduces defect density in m-TiO2 films. These enhancements are reflected in the improved photovoltaic parameters of the cells, including higher open-circuit voltage (VOC), short-circuit current (JSC), fill factor (FF), and an impressive power conversion efficiency (PCE) exceeding 23.62%. The study further underscores the scalability of this technology, highlighting advancements in screen printing and chemical bath deposition techniques vital for large-area PSC applications. Remarkably, the uniformity of PCE across large-area cells confirms the efficacy and consistency of this approach, which provides a new and general strategy for preparing high-efficiency PSCs.",
+    "highlights": [
+      "The study introduces a novel ETL using CBD SnO2 on m-TiO2 enhancing carrier dynamics and reducing recombination.",
+      "Integration of CBD SnO2 with m-TiO2 significantly increases key photovoltaic metrics, achieving a PCE of over 23.62%.",
+      "Advances in screen printing and CBD methods allow this method to be scaled up effectively, maintaining PCEs between 21.75% and 23.52% across large areas.",
+      "This work simplifies the PSC fabrication process, helping reduce costs while maintaining high efficiency."
+    ],
+    "graphicalAbstract": "GA/10.1016_j.mtchem.2024.102329.jpg"
   },
   {
     "date": "2024-09",
@@ -650,7 +700,24 @@
     "citedByUrl": "https://scholar.google.com/scholar?hl=en&q=%22A+systematic+investigation+of+PVDF-HFP+in+perovskite+solar+cells+for+improved+space+mission+reliability%22",
     "scholarCitedByUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=18185974222076374073",
     "scholarLinkVerified": true,
-    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en"
+    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en",
+    "contentStatus": {
+      "abstract": "available",
+      "highlights": "pending",
+      "keywords": "available",
+      "graphicalAbstract": "pending",
+      "verifiedDate": "2026-07-22",
+      "verifiedSource": "CGU Pure publisher metadata"
+    },
+    "abstract": "Metal halide perovskites have sparked considerable interest in photovoltaic (PV) research due to their exceptional optoelectronic attributes. The remarkable power conversion efficiency (PCE), superior power-to-weight ratios, adaptability to flexible substrates, and robust radiation tolerance position perovskite solar cells (PSCs) as a compelling option for futuristic space PV applications. In this study, we enhance the stability of PSCs by incorporating the additive poly (vinylidene fluoride-co-hexafluoropropylene) (PVDF-HFP) into the perovskite composition and evaluate their performance under vacuum and gamma-ray irradiation conditions. The fluorine content in PVDF-HFP establishes strong hydrogen bonding with the perovskite's organic cations and coordination bonds with Pb2+ ions, facilitating effective defect mitigation within the perovskite matrix. PVDF-HFP PSCs showed a marked increase in PCE of 22.54%, comparing to 19.85% for the pristine one. Furthermore, PVDF-HFP PSCs retained 70% of their initial PCE after 600 h in a vacuum environment (2 × 10−7 torr). Additionally, it exhibited strong resilience to gamma-ray exposure. These results indicate that the integration of PVDF-HFP as an additive in perovskite solar cells significantly enhances their stability and performance in the harsh space condition.",
+    "keywords": [
+      "Gamma ray",
+      "Perovskite solar cell",
+      "PVDF-HFP",
+      "Renewable energy",
+      "Space environment",
+      "Vacuum degradation"
+    ]
   },
   {
     "date": "2024-02",
@@ -684,7 +751,13 @@
     "citedByUrl": "https://scholar.google.com/scholar?hl=en&q=%22Additive-free+electroless+deposition+on+graphene%2Fcopper+foil%3A+Photo-induced+and+defect-assisted+approach+for+environmentally+friendly+plating%22",
     "scholarCitedByUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=9751449533445342580",
     "scholarLinkVerified": true,
-    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en"
+    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en",
+    "contentStatus": {
+      "abstract": "pending",
+      "highlights": "pending",
+      "keywords": "pending",
+      "graphicalAbstract": "pending"
+    }
   },
   {
     "date": "2024-01",
@@ -729,7 +802,22 @@
     "citedByUrl": "https://scholar.google.com/scholar?hl=en&q=%22Fluorination+of+Star-Shaped+Cyclopenta%5B2%2C1-b%3B3%2C4-b%E2%80%B2%5Ddithiophene+Derivatives+and+Its+Application+as+Hole-Transporting+Materials+in+Scalable+Perovskite+Solar+Cell+Fabrication+by+Bar+Coating%22",
     "scholarCitedByUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=6335828228264374299",
     "scholarLinkVerified": true,
-    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en"
+    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en",
+    "contentStatus": {
+      "abstract": "available",
+      "highlights": "pending",
+      "keywords": "available",
+      "graphicalAbstract": "pending",
+      "verifiedDate": "2026-07-22",
+      "verifiedSource": "National Central University research portal"
+    },
+    "abstract": "In this study, three novel star-shaped small molecules HYC-oF, HYC-mF, and HYC-H are designed and synthesized and are applied in perovskite solar cells (PSCs) as efficient hole-transporting materials (HTMs). Compared with non-fluorinated HYC-H, F-substituted analogs HYC-oF and HYC-mF exhibited enhanced hole mobility, suitable energy level alignment, improved interfacial contact and hole extraction/transport capability, better passivation effect, as well as increased hydrophobicity. This work demonstrates the potential of fluorinated star-shaped cyclopenta[2,1-b;3,4-b′]dithiophene (CPDT)-based molecule as HTM for achieving efficient PSC in both small and large scale.",
+    "keywords": [
+      "bar coating",
+      "cyclopenta[2,1-b;3,4-b′]dithiophene",
+      "hole-transporting materials",
+      "perovskite solar cell"
+    ]
   },
   {
     "date": "2023-11",
@@ -753,18 +841,18 @@
     "month": 11,
     "publisher": "Royal Society of Chemistry",
     "doi": "10.1039/D3CC04699K",
-    "abstract": "",
+    "abstract": "A new class of fluorinated cyclopenta[2,1-b:3,4-b′]dithiophene (CPDT)-based small molecules, namely YC-oF, YC-mF, and YC-H, are demonstrated as hole-transporting materials (HTMs) for high-performance perovskite solar cells (PSCs). PSCs employing YC-oF as the HTM delivered an excellent efficiency of 22.41% with encouraging long-term stability.",
     "highlights": [],
     "keywords": [],
     "graphicalAbstract": "GA/10.1039_D3CC04699K.png",
     "graphicalAbstractAlt": "Graphical abstract showing the YC-oF fluorinated cyclopentadithiophene-based hole-transport material and a perovskite solar cell power conversion efficiency of 22.41%",
     "contentStatus": {
-      "abstract": "pending",
+      "abstract": "available",
       "highlights": "pending",
       "keywords": "pending",
       "graphicalAbstract": "available",
-      "verifiedDate": "2026-07-20",
-      "verifiedSource": "Author-provided content"
+      "verifiedDate": "2026-07-22",
+      "verifiedSource": "Royal Society of Chemistry article page"
     },
     "authorOrder": 6,
     "topic": "Hole-Transporting Materials",
@@ -817,7 +905,13 @@
     "citedByUrl": "https://scholar.google.com/scholar?hl=en&q=%22Ladder-type+dihydronaphtho+%5B1%2C+2%2C+3%2C+4-rst%5D+pentaphene+as+building+block+to+construct+hole-transporting+materials+for+perovskite+solar+cells%22",
     "scholarCitedByUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=12014917116797003917",
     "scholarLinkVerified": true,
-    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en"
+    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en",
+    "contentStatus": {
+      "abstract": "pending",
+      "highlights": "pending",
+      "keywords": "pending",
+      "graphicalAbstract": "pending"
+    }
   },
   {
     "date": "2023-09",
@@ -850,7 +944,23 @@
     "citedByUrl": "https://scholar.google.com/scholar?hl=en&q=%22New+Molecular+Design%2C+Step%E2%80%90Saving+Synthesis%2C+and+Applications+of+Indolocarbazole+Core%E2%80%90Based+Oligo+%28hetero%29+arenes%22",
     "scholarCitedByUrl": "",
     "scholarLinkVerified": false,
-    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en"
+    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en",
+    "contentStatus": {
+      "abstract": "available",
+      "highlights": "pending",
+      "keywords": "available",
+      "graphicalAbstract": "pending",
+      "verifiedDate": "2026-07-22",
+      "verifiedSource": "PubMed publisher-supplied record"
+    },
+    "abstract": "In this work, we have successfully synthesized 15 new examples (LLA01-06; LinLi01-10) of small-molecule hole-transporting materials (HTM) using the less explored indolocarbazole (ICbz) as core moiety. Different from previously reported ICbz HTMs, LinLi01-10 exhibit new molecular designs in which 3,4-ethylenedioxythiophene (EDOT) units are inserted as crucial π-spacers and fluorine atoms are introdcued into end-group molecules. These substantially improve the materials solubility and device power conversion efficiencies (PCEs) while fabricated in perovskite solar cells (PSC). More importantly, LinLi01-10 are generated by a sustainable synthetic approach involving the use of straightforward C-H/C-Br couplings as key transformations, thus avoiding additional synthetic transformations including halogenation and borylation reactions called substrate prefunctionalizations usually required in Suzuki reactions. Most HTM molecules can be purified simply by reprecipitations instead of conducting column chromatography. In contrast to LLA01-06 without additional EDOT moieties, PSC devices using LinLi01-10 as hole-transport layers display promising PCEs of up to 17.5%. Interestingly, PSC devices employing seven of the LinLi01-10 as hole-transport molecules, respectively, are all able to show an immediate >10% PCE (t=0) without any device oxidation/aging process that is necessary for the commercial spiro-OMeTAD based PSCs.",
+    "keywords": [
+      "Direct C−H Arylation",
+      "Hole Transporting Materials",
+      "Indolocarbazole",
+      "Molecular Design",
+      "Perovskite Solar Cells"
+    ]
   },
   {
     "date": "2023-09",
@@ -888,7 +998,13 @@
     "citedByUrl": "https://scholar.google.com/scholar?hl=en&q=%22Enhancing+efficiency+and+stability+of+perovskite+solar+cells+through+two-step+deposition+method+with+the+addition+of+cesium+halides+to+PbI2+precursor%22",
     "scholarCitedByUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=15913086561685731338",
     "scholarLinkVerified": true,
-    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en"
+    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en",
+    "contentStatus": {
+      "abstract": "pending",
+      "highlights": "pending",
+      "keywords": "pending",
+      "graphicalAbstract": "pending"
+    }
   },
   {
     "date": "2023-07",
@@ -981,7 +1097,13 @@
     "citedByUrl": "https://scholar.google.com/scholar?hl=en&q=%22Facile+synthesis+of+spiro-core-based+hole-transporting+material+for+high-performance+and+stable+perovskite+solar+cells%22",
     "scholarCitedByUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=2925815878457385925",
     "scholarLinkVerified": true,
-    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en"
+    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en",
+    "contentStatus": {
+      "abstract": "pending",
+      "highlights": "pending",
+      "keywords": "pending",
+      "graphicalAbstract": "pending"
+    }
   },
   {
     "date": "2022-08",
@@ -1019,7 +1141,22 @@
     "citedByUrl": "https://scholar.google.com/scholar?hl=en&q=%22Surfactant+Tween+20+Controlled+Perovskite+Film+Fabricated+by+Thermal+Blade+Coating+for+Efficient+Perovskite+Solar+Cells%22",
     "scholarCitedByUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=15480986497300811188",
     "scholarLinkVerified": true,
-    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en"
+    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en",
+    "contentStatus": {
+      "abstract": "available",
+      "highlights": "pending",
+      "keywords": "available",
+      "graphicalAbstract": "pending",
+      "verifiedDate": "2026-07-22",
+      "verifiedSource": "MDPI article page"
+    },
+    "abstract": "In recent years, additive engineering has received considerable attention for the fabrication of high-performance perovskite solar cells (PSCs). In this study, a non-ionic surfactant, polyoxyethylene (20) sorbitan monolaurate (Tween 20), was added as an additive into the MAPbI3 perovskite layer, and the thermal-assisted blade-coating method was used to fabricate a high-quality perovskite film. The Tween 20 effectively passivated defects and traps in the MAPbI3 perovskite films. Such a film fabricated with an appropriate amount of Tween 20 on the substrate showed a higher photoluminescence (PL) intensity and longer carrier lifetime. At the optimal concentration of 1.0 mM Tween 20, the performance of the PSC was apparently enhanced, and the champion PSC demonstrated a PCE of 18.80%. Finally, this study further explored and compared the effect on the device performance and ambient stability of the MAPbI3 perovskite film prepared by the spin-coating method and the thermal-assisted blade coating.",
+    "keywords": [
+      "perovskite solar cells",
+      "surfactant Tween 20",
+      "thermal-assisted blade coating",
+      "power conversion efficiency"
+    ]
   },
   {
     "date": "2022-04",
@@ -1053,7 +1190,23 @@
     "citedByUrl": "https://scholar.google.com/scholar?hl=en&q=%22Effect+of+Thiophene+Insertion+on+X-Shaped+Anthracene-Based+Hole-Transporting+Materials+in+Perovskite+Solar+Cells%22",
     "scholarCitedByUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=8494799270686504892",
     "scholarLinkVerified": true,
-    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en"
+    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en",
+    "contentStatus": {
+      "abstract": "available",
+      "highlights": "pending",
+      "keywords": "available",
+      "graphicalAbstract": "available",
+      "verifiedDate": "2026-07-22",
+      "verifiedSource": "MDPI article page"
+    },
+    "abstract": "In this work, two novel tetra-substituted X-shaped molecules X1 and X2 that were constructed with anthracene as the central core and arylamine as the donor groups have been synthesized. The HTMs X1 and X2 were synthesized in two steps from industrially accessible and moderately reasonable beginning reagents. These new HTMs are described in terms of utilization of light absorption, energy level, thermal properties, hole mobility (µh), and film-forming property. The photovoltaic performances of these HTMs were effectively assessed in perovskite solar cells (PSCs). The devices based on these HTMs accomplished an overall efficiency of 16.10% for X1 and 10.25% for X2 under standard conditions (AM 1.5 G and 100 mW cm−2). This precise investigation provides another perspective on the use of HTMs in PSCs with various device configurations.",
+    "keywords": [
+      "anthracene",
+      "tetra-substituted",
+      "perovskite solar cells",
+      "hole-transporting materials"
+    ],
+    "graphicalAbstract": "GA/10.3390_polym14081580.png"
   },
   {
     "date": "2022-01",
@@ -1088,7 +1241,21 @@
     "citedByUrl": "https://scholar.google.com/scholar?hl=en&q=%22High-performance+perovskite+solar+cells+based+on+dopant-free+hole-transporting+material+fabricated+by+a+thermal-assisted+blade-coating+method+with+efficiency+exceeding+21%25%22",
     "scholarCitedByUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=3766576655497687992",
     "scholarLinkVerified": true,
-    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en"
+    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en",
+    "contentStatus": {
+      "abstract": "available",
+      "highlights": "available",
+      "keywords": "pending",
+      "graphicalAbstract": "pending",
+      "verifiedDate": "2026-07-22",
+      "verifiedSource": "ScienceDirect article page"
+    },
+    "abstract": "As the performance in terms of efficiency and device stability of perovskite solar cells (PSCs) has made rapid progress in a short period of time, the upscaling of PSCs becomes an important issue for massive commercial applications, where the cost of device manufacturing is a determining factor for wide spread uses. Device fabrication by printing technique is one such low-cost process for large scale preparation. However, one of the reasons limiting the progress of a fully printed PSCs is the lack of appropriate hole-transporting materials (HTMs) that can be printed. Herein, a new donor–acceptor-donor (D-A-D) type hole-transporting material with 4-dicyanomethylene-4H-cyclopenta[2,1-b;3,4-b’]dithiophene (diCN-CPDT) core tethered with two bis(alkoxy)diphenylaminocarbazole periphery groups, namely CB, was synthesized and applied as dopant-free HTM in fully printed PSCs by thermal-assisted blade-coating (TABC) method. The PSCs fabricated by fully scalable processes based on dopant-free CB as HTM exhibited an impressive power conversion efficiency (PCE) up to 21.09%, which is higher than that of devices with doped 2,2′,7,7′-tetrakis-(N,N-di-p-methoxyphenylamine)9,9′-spirobifluorene (spiro-OMeTAD) (14.28%) under the same fabricating condition. Furthermore, the all TABC process is demonstrated to produce an area of 10 cm × 10 cm for the devices except for electrode with an average PCE of 19.68%. Additionally, the TABC-based dopant-free CB-based PSCs exhibited significantly improved long-term stability, retaining more than 94% PCE after 500 h compared to that using doped spiro-OMeTAD under a relative humidity of ~50%. This result demonstrated that the newly developed CB is a promising candidate HTM for high-performance fully printable PSCs.",
+    "highlights": [
+      "A new D-A-D type HTM with 4-dicyanomethylene-4H-cyclopenta[2,1-b;3,4-b’]dithiophene (diCN-CPDT) core.",
+      "High-quality perovskite and uniform HTM film was demonstrated by using thermal-assisted blade-coating deposition technique.",
+      "A fully scalable PSCs with dopant-free CB showed a better PCE (21.09%) than doped spiro-OMeTAD (14.28%)."
+    ]
   },
   {
     "date": "2021-12",
@@ -1121,7 +1288,31 @@
     "citedByUrl": "https://scholar.google.com/scholar?hl=en&q=%22Microstructure+and+Biological+Properties+of+Electrospun+In+Situ+Polymerization+of+Polycaprolactone-Graft-Polyacrylic+Acid+Nanofibers+and+Its+Composite+Nanofiber+Dressings%22",
     "scholarCitedByUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=6750110989477742816",
     "scholarLinkVerified": true,
-    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en"
+    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en",
+    "contentStatus": {
+      "abstract": "available",
+      "highlights": "pending",
+      "keywords": "available",
+      "graphicalAbstract": "available",
+      "verifiedDate": "2026-07-22",
+      "verifiedSource": "MDPI article page"
+    },
+    "abstract": "In this study, polycaprolactone (PCL)- and poly(acrylic acid) (PAA)-based electrospun nanofibers were prepared for the carriers of antimicrobials and designed composite nanofiber mats for chronic wound care. The PCL- and PAA-based electrospun nanofibers were prepared through in situ polymerization starting from PCL and acrylic acid (AA). Different amounts of AA were introduced to improve the hydrophilicity of the PCL electrospun nanofibers. A compatibilizer and a photoinitiator were then added to the electrospinning solution to form a grafted structure composed of PCL and PAA (PCL-g-PAA). The grafted PAA was mainly located on the surface of a PCL nanofiber. The optimization of the composition of PCL, AA, compatibilizer, and photoinitiator was studied, and the PCL-g-PAA electrospun nanofibers were characterized through scanning electron microscopy and 1H-NMR spectroscopy. Results showed that the addition of AA to PCL improved the hydrophilicity of the electrospun PCL nanofibers, and a PCL/AA ratio of 80/20 presented the best composition and had smooth nanofiber morphology. Moreover, poly[2-(tert-butylaminoethyl) methacrylate]-grafted graphene oxide nanosheets (GO-g-PTA) functioned as an antimicrobial agent and was used as filler for PCL-g-PAA nanofibers in the preparation of composite nanofiber mats, which exerted synergistic effects promoted by the antibacterial properties of GO-g-PTA and the hydrophilicity of PCL-g-PAA electrospun nanofibers. Thus, the composite nanofiber mats had antibacterial properties and absorbed body fluids in the wound healing process, thereby promoting cell proliferation. The biodegradation of the PCL-g-PAA electrospun nanofibers also demonstrated an encouraging result of three-fold weight reduction compared to the neat PCL nanofiber. Our findings may serve as guidelines for the fabrication of electrospun nanofiber composites that can be used mats for chronic wound care.",
+    "keywords": [
+      "electrospinning",
+      "in situ polymerization",
+      "polycaprolactone",
+      "poly(acrylic acid)",
+      "grafting",
+      "nanofiber",
+      "graphene oxides",
+      "photoinitiator",
+      "hydrophilic",
+      "wound healing",
+      "ethylene glycol dimethyl acrylate",
+      "poly[2-(tert-butylaminoethyl) methacrylate]"
+    ],
+    "graphicalAbstract": "GA/10.3390_polym13234246.png"
   },
   {
     "date": "2021-08",
@@ -1156,7 +1347,23 @@
     "citedByUrl": "https://scholar.google.com/scholar?hl=en&q=%22Controlled+Photoanode+Properties+for+Large-Area+Efficient+and+Stable+Dye-Sensitized+Photovoltaic+Modules%22",
     "scholarCitedByUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=14651405326527318915",
     "scholarLinkVerified": true,
-    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en"
+    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en",
+    "contentStatus": {
+      "abstract": "available",
+      "highlights": "pending",
+      "keywords": "available",
+      "graphicalAbstract": "pending",
+      "verifiedDate": "2026-07-22",
+      "verifiedSource": "MDPI article page"
+    },
+    "abstract": "Nowadays, a dye-sensitized solar cell (DSSC) attracts attention to its development widely due to its several advantages, such as simple processes, low costs, and flexibility. In this work, we demonstrate the difference in device structures between small size and large size cells (5 cm × 5 cm, 10 cm × 10 cm and 10 cm × 15 cm). The design of the photoanode and dye-sensitized process plays important roles in affecting the cell efficiency and stability. The effects of the TiO2 electrode, using TiCl4(aq) pretreatment and post-treatment processes, are also discussed, whereas, the open-circuit voltage (Voc), short-circuit current density (Jsc), and module efficiency are successfully improved. Furthermore, the effects on module performances by some factors, such as dye solution concentration, dye soaking temperature, and electrolyte injection method are also investigated. We have demonstrated that the output power of a 5 cm × 5 cm DSSC module increases from 86.2 mW to 93.7 mW, and the module efficiency achieves an outstanding performance of 9.79%. Furthermore, enlarging the DSSC modules to two sizes (10 cm × 10 cm and 10 cm × 15 cm) and comparing the performance with different module designs (C-DSSC and S-DSSC) also provides the specific application of polymer sealing and preparing high-efficiency large-area DSSC modules.",
+    "keywords": [
+      "dye-sensitized",
+      "photovoltaic",
+      "solar module",
+      "photoanode",
+      "large"
+    ]
   },
   {
     "date": "2021-06",
@@ -1193,7 +1400,22 @@
     "citedByUrl": "https://scholar.google.com/scholar?hl=en&q=%22Reducing+defects+in+organic-lead+halide+perovskite+film+by+delayed+thermal+annealing+combined+with+KI%2FI2+for+efficient+perovskite+solar+cells%22",
     "scholarCitedByUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=2312700748990413268",
     "scholarLinkVerified": true,
-    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en"
+    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en",
+    "contentStatus": {
+      "abstract": "available",
+      "highlights": "pending",
+      "keywords": "available",
+      "graphicalAbstract": "pending",
+      "verifiedDate": "2026-07-22",
+      "verifiedSource": "MDPI article page"
+    },
+    "abstract": "This study improved quality of CH3NH3PbI3 (MAPbI3) perovskite films by delaying thermal annealing in the spin coating process and introducing KI and I2 to prepare MAPbI3 films that were low in defects for high-efficiency perovskite solar cells. The influences of delayed thermal annealing time after coating the MAPbI3 perovskite layer on the crystallized perovskite, the morphology control of MAPbI3 films, and the photoelectric conversion efficiency of solar cells were investigated. The optimal delayed thermal annealing time was found to be 60 min at room temperature. The effect of KI/I2 additives on the growth of MAPbI3 films and the corresponding optimal delayed thermal annealing time were further investigated. The addition of KI/I2 can improve perovskite crystallinity, and the conductivity and carrier mobility of MAPbI3 films. Under optimized conditions, the photoelectric conversion efficiency of MAPbI3 perovskite solar cells can reach 19.36% under standard AM1.5G solar illumination of 100 mW/cm2.",
+    "keywords": [
+      "perovskite solar cell",
+      "delayed annealing process",
+      "defect",
+      "additives"
+    ]
   },
   {
     "date": "2013-06",
@@ -1227,7 +1449,13 @@
     "citedByUrl": "https://scholar.google.com/scholar?hl=en&q=%22Enhanced+efficiency+of+bifacial+and+back-illuminated+Ti+foil+based+flexible+dye-sensitized+solar+cells+by+decoration+of+mesoporous+SiO2+layer+on+TiO2+anode%22",
     "scholarCitedByUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=12969383063647871492",
     "scholarLinkVerified": true,
-    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en"
+    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en",
+    "contentStatus": {
+      "abstract": "pending",
+      "highlights": "pending",
+      "keywords": "pending",
+      "graphicalAbstract": "pending"
+    }
   },
   {
     "date": "2012-10",
@@ -1262,7 +1490,13 @@
     "citedByUrl": "https://scholar.google.com/scholar?hl=en&q=%22Ionic+liquid+diffusion+properties+in+tetrapod-like+ZnO+photoanode+for+dye-sensitized+solar+cells%22",
     "scholarCitedByUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=5340110067816868570",
     "scholarLinkVerified": true,
-    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en"
+    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en",
+    "contentStatus": {
+      "abstract": "pending",
+      "highlights": "pending",
+      "keywords": "pending",
+      "graphicalAbstract": "pending"
+    }
   },
   {
     "date": "2011-10",
@@ -1296,7 +1530,13 @@
     "citedByUrl": "https://scholar.google.com/scholar?hl=en&q=%22Improvement+on+the+long-term+stability+of+flexible+plastic+dye-sensitized+solar+cells%22",
     "scholarCitedByUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=6877450755234553085",
     "scholarLinkVerified": true,
-    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en"
+    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en",
+    "contentStatus": {
+      "abstract": "pending",
+      "highlights": "pending",
+      "keywords": "pending",
+      "graphicalAbstract": "pending"
+    }
   },
   {
     "date": "2011-04",
@@ -1328,7 +1568,13 @@
     "citedByUrl": "https://scholar.google.com/scholar?hl=en&q=%22High+efficiency+flexible+dye-sensitized+solar+cells+by+multiple+electrophoretic+depositions%22",
     "scholarCitedByUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=17171960631027043282",
     "scholarLinkVerified": true,
-    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en"
+    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en",
+    "contentStatus": {
+      "abstract": "pending",
+      "highlights": "pending",
+      "keywords": "pending",
+      "graphicalAbstract": "pending"
+    }
   },
   {
     "date": "2011-02",
@@ -1362,7 +1608,13 @@
     "citedByUrl": "https://scholar.google.com/scholar?hl=en&q=%22Improved+performance+of+flexible+dye-sensitized+solar+cells+by+introducing+an+interfacial+layer+on+Ti+substrates%22",
     "scholarCitedByUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=6442615507018627738",
     "scholarLinkVerified": true,
-    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en"
+    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en",
+    "contentStatus": {
+      "abstract": "pending",
+      "highlights": "pending",
+      "keywords": "pending",
+      "graphicalAbstract": "pending"
+    }
   },
   {
     "date": "2010-12",
@@ -1398,7 +1650,13 @@
     "citedByUrl": "https://scholar.google.com/scholar?hl=en&q=%22The+influence+of+tetrapod-like+ZnO+morphology+and+electrolytes+on+energy+conversion+efficiency+of+dye-sensitized+solar+cells%22",
     "scholarCitedByUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=6250901551251250400",
     "scholarLinkVerified": true,
-    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en"
+    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en",
+    "contentStatus": {
+      "abstract": "pending",
+      "highlights": "pending",
+      "keywords": "pending",
+      "graphicalAbstract": "pending"
+    }
   },
   {
     "date": "2010-01",
@@ -1433,7 +1691,13 @@
     "citedByUrl": "https://scholar.google.com/scholar?hl=en&q=%22Effects+of+mesoscopic+poly+%283%2C+4-ethylenedioxythiophene%29+films+as+counter+electrodes+for+dye-sensitized+solar+cells%22",
     "scholarCitedByUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=18008772559394818291",
     "scholarLinkVerified": true,
-    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en"
+    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en",
+    "contentStatus": {
+      "abstract": "pending",
+      "highlights": "pending",
+      "keywords": "pending",
+      "graphicalAbstract": "pending"
+    }
   },
   {
     "date": "2009-11",
@@ -1469,7 +1733,13 @@
     "citedByUrl": "https://scholar.google.com/scholar?hl=en&q=%22Dye-sensitized+solar+cells+with+a+micro-porous+TiO2+electrode+and+gel+polymer+electrolytes+prepared+by+in+situ+cross-link+reaction%22",
     "scholarCitedByUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=13327786681160215395",
     "scholarLinkVerified": true,
-    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en"
+    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en",
+    "contentStatus": {
+      "abstract": "pending",
+      "highlights": "pending",
+      "keywords": "pending",
+      "graphicalAbstract": "pending"
+    }
   },
   {
     "date": "2009-03",
@@ -1505,7 +1775,13 @@
     "citedByUrl": "https://scholar.google.com/scholar?hl=en&q=%22Efficient+electron+transport+in+tetrapod-like+ZnO+metal-free+dye-sensitized+solar+cells%22",
     "scholarCitedByUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=12075242826769288552",
     "scholarLinkVerified": true,
-    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en"
+    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en",
+    "contentStatus": {
+      "abstract": "pending",
+      "highlights": "pending",
+      "keywords": "pending",
+      "graphicalAbstract": "pending"
+    }
   },
   {
     "date": "2008-09",
@@ -1539,7 +1815,13 @@
     "citedByUrl": "https://scholar.google.com/scholar?hl=en&q=%22Formation+of+branched+ZnO+nanowires+from+solvothermal+method+and+dye-sensitized+solar+cells+applications%22",
     "scholarCitedByUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=4372183802790834142",
     "scholarLinkVerified": true,
-    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en"
+    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en",
+    "contentStatus": {
+      "abstract": "pending",
+      "highlights": "pending",
+      "keywords": "pending",
+      "graphicalAbstract": "pending"
+    }
   },
   {
     "date": "2005-01",
@@ -1570,7 +1852,12 @@
     "citedByUrl": "https://scholar.google.com/scholar?hl=en&q=%22Transverse+excess+noise+factor+and+transverse+mode+locking+in+a+gain-guided+laser%22",
     "scholarCitedByUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=3775240022619432832",
     "scholarLinkVerified": true,
-    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en"
+    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en",
+    "contentStatus": {
+      "abstract": "pending",
+      "highlights": "pending",
+      "keywords": "pending",
+      "graphicalAbstract": "pending"
+    }
   }
 ]
-
