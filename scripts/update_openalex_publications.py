@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Fetch OpenAlex citation counts and record links for every site publication."""
+"""Fetch OpenAlex citation and normalized-impact metrics for site publications."""
 
 from __future__ import annotations
 
 import json
+import math
 import os
 import sys
 import tempfile
@@ -18,8 +19,6 @@ from urllib.request import Request, urlopen
 ROOT = Path(__file__).resolve().parents[1]
 PUBLICATIONS_PATH = ROOT / "data" / "publications.json"
 OUTPUT_PATH = ROOT / "data" / "openalex_publication_metrics.json"
-PUBLICATIONS_HTML_PATH = ROOT / "publications.html"
-SCRIPT_TAG = '<script src="assets/js/openalex-publications.js"></script>'
 API_BASE = "https://api.openalex.org/works"
 
 
@@ -45,9 +44,42 @@ def require_nonnegative_int(value: Any, field: str) -> int:
     return number
 
 
+def optional_nonnegative_float(value: Any, field: str) -> float | None:
+    if value is None:
+        return None
+    if isinstance(value, bool):
+        raise ValueError(f"{field} must be a non-negative number or null")
+    number = float(value)
+    if not math.isfinite(number) or number < 0:
+        raise ValueError(f"{field} must be a finite non-negative number or null")
+    return number
+
+
+def optional_percentile(value: Any) -> tuple[float | None, bool | None, bool | None]:
+    if value is None:
+        return None, None, None
+    if not isinstance(value, dict):
+        raise ValueError("citation_normalized_percentile must be an object or null")
+    percentile = optional_nonnegative_float(value.get("value"), "citation_normalized_percentile.value")
+    if percentile is not None and percentile > 1:
+        raise ValueError("citation_normalized_percentile.value must be between 0 and 1")
+    top_1 = value.get("is_in_top_1_percent")
+    top_10 = value.get("is_in_top_10_percent")
+    if top_1 is not None and not isinstance(top_1, bool):
+        raise ValueError("is_in_top_1_percent must be a boolean or null")
+    if top_10 is not None and not isinstance(top_10, bool):
+        raise ValueError("is_in_top_10_percent must be a boolean or null")
+    return percentile, top_1, top_10
+
+
 def build_url(doi: str) -> str:
     work_id = quote(f"doi:{doi}", safe=":")
-    params = {"select": "id,doi,display_name,cited_by_count,updated_date"}
+    params = {
+        "select": (
+            "id,doi,display_name,cited_by_count,fwci,"
+            "citation_normalized_percentile,updated_date"
+        )
+    }
     api_key = os.getenv("OPENALEX_API_KEY", "").strip()
     mailto = os.getenv("OPENALEX_MAILTO", "weihao.chiu@gmail.com").strip()
     if api_key:
@@ -96,6 +128,8 @@ def normalize_record(doi: str, payload: dict[str, Any] | None) -> dict[str, Any]
     if not openalex_url.startswith("https://openalex.org/W"):
         raise ValueError(f"Unexpected OpenAlex work id for DOI {doi}: {openalex_url!r}")
 
+    percentile, top_1, top_10 = optional_percentile(payload.get("citation_normalized_percentile"))
+
     return {
         "status": "verified",
         "doi": doi,
@@ -103,6 +137,10 @@ def normalize_record(doi: str, payload: dict[str, Any] | None) -> dict[str, Any]
         "openAlexId": openalex_url.rsplit("/", 1)[-1],
         "url": openalex_url,
         "citationCount": require_nonnegative_int(payload.get("cited_by_count"), "cited_by_count"),
+        "fwci": optional_nonnegative_float(payload.get("fwci"), "fwci"),
+        "citationPercentile": percentile,
+        "isTop1Percent": top_1,
+        "isTop10Percent": top_10,
         "openAlexUpdatedDate": payload.get("updated_date"),
     }
 
@@ -116,23 +154,6 @@ def write_atomic(path: Path, data: dict[str, Any]) -> None:
         temporary.write(serialized)
         temporary_path = Path(temporary.name)
     temporary_path.replace(path)
-
-
-def ensure_publication_script() -> bool:
-    if not PUBLICATIONS_HTML_PATH.exists():
-        raise FileNotFoundError(f"Missing {PUBLICATIONS_HTML_PATH}")
-    text = PUBLICATIONS_HTML_PATH.read_text(encoding="utf-8")
-    if SCRIPT_TAG in text:
-        return False
-    app_tag = '<script src="assets/js/app.js"></script>'
-    if app_tag in text:
-        text = text.replace(app_tag, app_tag + SCRIPT_TAG, 1)
-    elif "</body>" in text:
-        text = text.replace("</body>", SCRIPT_TAG + "</body>", 1)
-    else:
-        raise ValueError("Unable to locate a script insertion point in publications.html")
-    PUBLICATIONS_HTML_PATH.write_text(text, encoding="utf-8")
-    return True
 
 
 def main() -> int:
@@ -153,7 +174,7 @@ def main() -> int:
             time.sleep(0.1)
 
         data = {
-            "schemaVersion": 1,
+            "schemaVersion": 2,
             "source": "OpenAlex Works API",
             "status": "success",
             "publicationCount": len(dois),
@@ -163,7 +184,6 @@ def main() -> int:
             "records": records,
         }
         write_atomic(OUTPUT_PATH, data)
-        inserted = ensure_publication_script()
     except (OSError, RuntimeError, ValueError, TypeError, json.JSONDecodeError) as error:
         print(
             f"OpenAlex publication update failed; existing JSON was preserved: {error}",
@@ -173,8 +193,7 @@ def main() -> int:
 
     print(
         "Updated per-publication OpenAlex metrics: "
-        f"verified={data['verifiedCount']}, not-found={data['notFoundCount']}, "
-        f"script-tag-inserted={inserted}"
+        f"verified={data['verifiedCount']}, not-found={data['notFoundCount']}"
     )
     return 0
 

@@ -120,6 +120,22 @@ def static_card(p):
   n=int(p.get('citationCount') or 0)
   return '<article class="collection-card publication-card seo-static-card" id="pub-'+slug+'" itemscope itemtype="https://schema.org/ScholarlyArticle"><meta itemprop="identifier" content="'+esc(doi)+'"/><div class="card-heading"><h4 itemprop="headline"><a href="'+esc(local)+'">'+esc(p.get('title'))+'</a></h4><span class="date-badge" itemprop="datePublished">'+esc(p.get('date'))+'</span></div><p class="authors" itemprop="author">'+authors+'</p><p class="journal" itemprop="isPartOf">'+journal+'</p><div class="card-labels">'+labels_html+'</div><div class="card-actions"><a class="action" href="'+esc(p.get('doiUrl'))+'" target="_blank" rel="noopener">DOI ↗</a><a class="action" href="'+esc(local)+'">Abstract, Highlights &amp; GA →</a><span class="action">'+str(n)+' Google Scholar citation'+('s' if n!=1 else '')+'</span></div></article>'
 
+def openalex_impact_actions(record):
+  actions=[]
+  fwci=record.get('fwci')
+  if fwci is not None:
+    actions.append('<span class="action openalex-impact" title="Field-Weighted Citation Impact; world average = 1.00">FWCI '+f'{float(fwci):.2f}'+'</span>')
+  percentile=record.get('citationPercentile')
+  if percentile is not None:
+    top_share=max(0.0,100.0*(1.0-float(percentile)))
+    digits=2 if top_share < 1 else 1
+    actions.append('<span class="action openalex-impact" title="OpenAlex field-normalized citation percentile">Top '+f'{top_share:.{digits}f}'+'% normalized citations</span>')
+  elif record.get('isTop1Percent') is True:
+    actions.append('<span class="action openalex-impact openalex-impact-strong">Top 1% normalized citations</span>')
+  elif record.get('isTop10Percent') is True:
+    actions.append('<span class="action openalex-impact openalex-impact-strong">Top 10% normalized citations</span>')
+  return actions
+
 def publication_page(p, openalex_record=None, unpaywall_record=None, crossref_record=None, mendeley_record=None):
   doi=p.get('doi',''); slug=slugify(doi); url=SITE_URL+'/publications/'+slug+'.html'
   title=esc(p.get('title')); desc=esc(p.get('citation')); authors=', '.join(author_html(a) for a in p.get('authors',[]))
@@ -159,6 +175,7 @@ def publication_page(p, openalex_record=None, unpaywall_record=None, crossref_re
   if openalex_record.get('status') == 'verified' and openalex_record.get('url'):
     oa_count = int(openalex_record.get('citationCount') or 0)
     actions.append('<a class="action" href="'+esc(openalex_record.get('url'))+'" target="_blank" rel="noopener noreferrer">'+f'{oa_count:,}'+' OpenAlex citation'+('' if oa_count == 1 else 's')+' ↗</a>')
+    actions.extend(openalex_impact_actions(openalex_record))
   if crossref_record.get('status') == 'verified' and doi:
     cr_count = int(crossref_record.get('citationCount') or 0)
     crossref_url = 'https://search.crossref.org/search/works?q=' + quote(str(doi), safe='') + '&from_ui=yes'

@@ -75,3 +75,7 @@
 .author-popover-links a{padding:5px 9px;border:1px solid var(--line);border-radius:5px;color:var(--brand);font-size:.7rem;font-weight:700;text-decoration:none}
 .author-popover-links a:hover,.author-popover-links a:focus-visible{background:#edf2f6}
 @media(max-width:760px){.author-popover{position:fixed!important;left:12px!important;right:12px!important;bottom:12px!important;top:auto!important;width:auto!important;max-height:70vh;overflow:auto}}
+
+/* OpenAlex field-normalized impact metrics */
+.openalex-impact{display:inline-flex;align-items:center;padding:2px 7px;border:1px solid #c7d6e2;border-radius:999px;background:#f4f8fb;color:#315b76}
+.openalex-impact-strong{border-color:#83a8bf;background:#e8f2f8;color:#174c6a}

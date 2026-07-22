@@ -235,6 +235,25 @@ const MENDELEY_READER_ICON='<svg class="metric-icon" aria-hidden="true" viewBox=
 const OPEN_ACCESS_ICON='<svg class="action-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M7 10V7a5 5 0 0 1 9.7-1.7"></path><rect x="5" y="10" width="14" height="10" rx="2"></rect><path d="M12 14v2"></path></svg>';
 const SHARE_ICON='<svg class="action-icon" aria-hidden="true" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="m8.7 10.7 6.6-4.1M8.7 13.3l6.6 4.1"></path></svg>';
 
+function openAlexImpactMetrics(record={}){
+  const items=[];
+  const fwci=record.fwci;
+  if(fwci!==null&&fwci!==undefined&&Number.isFinite(Number(fwci))&&Number(fwci)>=0){
+    items.push(`<span class="action openalex-impact" title="Field-Weighted Citation Impact; world average = 1.00">FWCI ${Number(fwci).toFixed(2)}</span>`);
+  }
+  const percentile=record.citationPercentile;
+  if(percentile!==null&&percentile!==undefined&&Number.isFinite(Number(percentile))&&Number(percentile)>=0&&Number(percentile)<=1){
+    const topShare=Math.max(0,100*(1-Number(percentile)));
+    const digits=topShare<1?2:1;
+    items.push(`<span class="action openalex-impact" title="OpenAlex field-normalized citation percentile">Top ${topShare.toFixed(digits)}% normalized citations</span>`);
+  }else if(record.isTop1Percent===true){
+    items.push('<span class="action openalex-impact openalex-impact-strong">Top 1% normalized citations</span>');
+  }else if(record.isTop10Percent===true){
+    items.push('<span class="action openalex-impact openalex-impact-strong">Top 10% normalized citations</span>');
+  }
+  return items.join('');
+}
+
 function publicationCard(p){
   const authors=(p.authors||[]).map(renderAuthor).join(', ');
   const n=Number(p.citationCount||0);
@@ -248,6 +267,7 @@ function publicationCard(p){
   const openalexAction=openalex.status==='verified'&&Number.isFinite(openalexCount)&&openalexCount>=0&&openalexUrl
     ?`<a class="action" href="${esc(openalexUrl)}" target="_blank" rel="noopener noreferrer">${openalexCount.toLocaleString()} OpenAlex citation${openalexCount===1?'':'s'} ↗</a>`
     :'';
+  const openalexImpact=openalex.status==='verified'?openAlexImpactMetrics(openalex):'';
   const crossref=p.crossref||{};
   const crossrefCount=Number(crossref.citationCount);
   const crossrefUrl=p.doi?`https://search.crossref.org/search/works?q=${encodeURIComponent(p.doi)}&from_ui=yes`:'';
@@ -279,7 +299,7 @@ function publicationCard(p){
   const facebookUrl=`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
   const shareMenuId=`share-menu-${anchor}`;
   const share=`<span class="share-wrap"><button class="action action-button share-trigger" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="${esc(shareMenuId)}" data-share-title="${esc(p.title)}" data-share-text="${esc(shareText)}" data-share-url="${esc(shareUrl)}">${SHARE_ICON}<span>Share</span></button><span class="share-menu" id="${esc(shareMenuId)}" role="menu" hidden><button type="button" role="menuitem" data-copy-share-url="${esc(shareUrl)}">Copy link</button><a role="menuitem" href="${esc(emailUrl)}">Email</a><a role="menuitem" href="${esc(linkedinUrl)}" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a role="menuitem" href="${esc(xUrl)}" target="_blank" rel="noopener noreferrer">X (Twitter) ↗</a><a role="menuitem" href="${esc(facebookUrl)}" target="_blank" rel="noopener noreferrer">Facebook ↗</a></span></span>`;
-  return `<article class="collection-card publication-card" id="${esc(anchor)}"><div class="card-heading"><h4><a href="${esc(shareUrl)}">${esc(p.title)}</a></h4><span class="date-badge">${esc(p.date)}</span></div><p class="authors">${authors}</p><p class="journal"><em>${esc(p.journal)}</em>${p.volume?`, ${esc(p.volume)}`:''}${p.pages?`, ${esc(p.pages)}`:''} (${p.year}).</p><div class="card-labels">${labels.map(label=>`<span class="card-label">${esc(label)}</span>`).join('')}</div><div class="card-actions">${detailAction}<a class="action" href="${esc(p.doiUrl)}" target="_blank" rel="noopener">DOI ↗</a>${oaAction}${cited}${openalexAction}${crossrefAction}${readers}${share}</div></article>`;
+  return `<article class="collection-card publication-card" id="${esc(anchor)}"><div class="card-heading"><h4><a href="${esc(shareUrl)}">${esc(p.title)}</a></h4><span class="date-badge">${esc(p.date)}</span></div><p class="authors">${authors}</p><p class="journal"><em>${esc(p.journal)}</em>${p.volume?`, ${esc(p.volume)}`:''}${p.pages?`, ${esc(p.pages)}`:''} (${p.year}).</p><div class="card-labels">${labels.map(label=>`<span class="card-label">${esc(label)}</span>`).join('')}</div><div class="card-actions">${detailAction}<a class="action" href="${esc(p.doiUrl)}" target="_blank" rel="noopener">DOI ↗</a>${oaAction}${cited}${openalexAction}${openalexImpact}${crossrefAction}${readers}${share}</div></article>`;
 }
 function patentCard(p){return `<article class="collection-card"><div class="card-heading"><h4><a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.titleEn)}</a></h4><span class="date-badge">${esc(p.date)}</span></div>${p.titleZh?`<div class="local-title" lang="zh-Hant">${esc(p.titleZh)}</div>`:''}<div class="card-labels"><span class="card-label">${esc(p.number)}</span><span class="card-label">${esc(p.jurisdiction)}</span><span class="card-label">${esc(p.status)}</span></div><div class="meta-row">Inventors: ${(p.inventorsEn||[]).map(highlightAuthor).join(', ')}</div>${p.inventorsZh?`<div class="meta-row" lang="zh-Hant">發明人／創作人：${esc(p.inventorsZh)}</div>`:''}<div class="meta-row">Assignee: ${esc(p.assigneeEn)}</div><div class="card-actions"><a class="action" href="${esc(p.url)}" target="_blank" rel="noopener">Patent record ↗</a></div></article>`}
 function projectCard(p){return `<article class="collection-card"><div class="card-heading"><h4>${p.url?`<a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.titleEn)}</a>`:esc(p.titleEn)}</h4><span class="date-badge">${esc(p.period||p.startYear)}</span></div><div class="local-title" lang="zh-Hant">${esc(p.titleZh)}</div><div class="card-labels"><span class="card-label">${esc(p.status)}</span><span class="card-label">${esc(p.role)} · ${esc(p.roleZh)}</span>${p.number?`<span class="card-label">${esc(p.number)}</span>`:''}</div><p>${esc(p.agencyEn)}</p><p class="summary">${esc(p.scopeEn)}</p>${p.url?`<div class="card-actions"><a class="action" href="${esc(p.url)}" target="_blank" rel="noopener">Project record ↗</a></div>`:''}</article>`}
