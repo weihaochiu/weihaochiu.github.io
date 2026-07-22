@@ -59,3 +59,19 @@
 .graphical-abstract figcaption{text-align:center;margin-top:8px;color:var(--muted);font-size:.72rem}
 @media(max-width:760px){.publication-detail{padding:22px 18px}.publication-detail-section{margin-top:27px;padding-top:22px}}
 
+/* Click-only author information cards */
+.author-trigger{display:inline;padding:0;border:0;border-bottom:1px solid currentColor;background:transparent;color:inherit;font:inherit;line-height:inherit;cursor:pointer;text-align:inherit}
+.author-trigger:hover,.author-trigger:focus-visible{color:var(--brand);border-bottom-width:2px;outline:none}
+.author-trigger.me{font-weight:700;color:var(--ink)}
+.author-popover{position:absolute;z-index:1000;box-sizing:border-box;padding:22px 44px 20px 22px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);box-shadow:0 16px 42px rgba(25,48,67,.2)}
+.author-popover[hidden]{display:none}
+.author-popover h2{margin:0;font-family:"Source Serif 4",serif;font-size:1.25rem;line-height:1.25}
+.author-popover p{margin:5px 0;font-size:.78rem;color:var(--muted)}
+.author-popover .author-name-zh{color:var(--ink);font-weight:650}
+.author-popover .author-role{font-weight:700;color:#374957}
+.author-popover-close{position:absolute;top:8px;right:10px;width:32px;height:32px;border:0;border-radius:50%;background:transparent;color:#536674;font-size:1.45rem;line-height:1;cursor:pointer}
+.author-popover-close:hover,.author-popover-close:focus-visible{background:#edf2f6;color:var(--ink);outline:2px solid transparent}
+.author-popover-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.author-popover-links a{padding:5px 9px;border:1px solid var(--line);border-radius:5px;color:var(--brand);font-size:.7rem;font-weight:700;text-decoration:none}
+.author-popover-links a:hover,.author-popover-links a:focus-visible{background:#edf2f6}
+@media(max-width:760px){.author-popover{position:fixed!important;left:12px!important;right:12px!important;bottom:12px!important;top:auto!important;width:auto!important;max-height:70vh;overflow:auto}}

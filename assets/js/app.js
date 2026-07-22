@@ -43,6 +43,40 @@ async function loadData(name){
 
 function yearOf(x){return Number(x.year||x.startYear||String(x.sortDate||x.date||'').slice(0,4)||0)}
 function highlightAuthor(name){return /Chiu, Wei-Hao|Wei-Hao Chiu/.test(name)?`<strong class="me">${esc(name)}</strong>`:esc(name)}
+const authorDirectory=new Map();
+function normalizeAuthorName(name){return String(name||'').normalize('NFKD').toLowerCase().replace(/[^a-z0-9]+/g,'').trim()}
+function authorHasInformation(author){return Boolean(author&&(author.role||author.affiliation||(author.email||[]).length||author.orcid||Object.values(author.links||{}).some(Boolean)))}
+function buildAuthorDirectory(authors=[]){
+  authorDirectory.clear();
+  authors.forEach(author=>{
+    if(!authorHasInformation(author))return;
+    [author.name,author.displayName,author.nameZh,...(author.aliases||[])].filter(Boolean).forEach(name=>authorDirectory.set(normalizeAuthorName(name),author));
+  });
+}
+function renderAuthor(name){
+  const author=authorDirectory.get(normalizeAuthorName(name));
+  if(!author)return highlightAuthor(name);
+  const me=/Chiu, Wei-Hao|Wei-Hao Chiu/.test(name)?' me':'';
+  return `<button class="author-trigger${me}" type="button" data-author-name="${esc(name)}" aria-haspopup="dialog" aria-expanded="false">${esc(name)}</button>`;
+}
+function authorCardHtml(author){
+  const emails=(author.email||[]).map(item=>typeof item==='string'?{address:item,label:'Email'}:item).filter(item=>item.address);
+  const links={ORCID:author.links?.orcid||(author.orcid?`https://orcid.org/${author.orcid}`:''),'Google Scholar':author.links?.googleScholar,OpenAlex:author.links?.openAlex,'Search Crossref':author.links?.crossref,Scopus:author.links?.scopus,'Web of Science':author.links?.webOfScience,Institution:author.links?.institution,'Personal website':author.links?.personalWebsite};
+  const actions=[...emails.map(item=>`<a href="mailto:${esc(item.address)}">${esc(item.label||'Email')}</a>`),...Object.entries(links).filter(([,url])=>url).map(([label,url])=>`<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(label)} ↗</a>`)].join('');
+  return `<button class="author-popover-close" type="button" aria-label="Close author information">×</button><h2>${esc(author.displayName||author.name)}</h2>${author.nameZh?`<p class="author-name-zh">${esc(author.nameZh)}</p>`:''}${author.role?`<p class="author-role">${esc(author.role)}</p>`:''}${author.affiliation?`<p class="author-affiliation">${esc(author.affiliation)}</p>`:''}<div class="author-popover-links">${actions}</div>`;
+}
+function initAuthorPopover(){
+  if(document.documentElement.dataset.authorPopoverReady==='true')return;
+  document.documentElement.dataset.authorPopoverReady='true';
+  let popover=document.getElementById('authorPopover');
+  if(!popover){popover=document.createElement('div');popover.id='authorPopover';popover.className='author-popover';popover.setAttribute('role','dialog');popover.setAttribute('aria-label','Author information');popover.hidden=true;document.body.append(popover)}
+  let active=null;
+  const close=()=>{if(popover.hidden)return null;const previous=active;popover.hidden=true;active?.setAttribute('aria-expanded','false');active=null;return previous};
+  const open=trigger=>{const author=authorDirectory.get(normalizeAuthorName(trigger.dataset.authorName));if(!author)return;active?.setAttribute('aria-expanded','false');active=trigger;active.setAttribute('aria-expanded','true');popover.innerHTML=authorCardHtml(author);popover.hidden=false;const r=trigger.getBoundingClientRect(),w=Math.min(360,window.innerWidth-24),left=Math.max(12,Math.min(window.innerWidth-w-12,r.left));popover.style.width=`${w}px`;popover.style.left=`${left}px`;popover.style.top=`${Math.min(window.scrollY+r.bottom+8,window.scrollY+window.innerHeight-popover.offsetHeight-12)}px`;popover.querySelector('.author-popover-close')?.focus({preventScroll:true})};
+  document.addEventListener('click',event=>{const trigger=event.target.closest('.author-trigger[data-author-name]');if(trigger){event.preventDefault();active===trigger&&!popover.hidden?close():open(trigger);return}if(event.target.closest('.author-popover-close')||(!popover.hidden&&!event.target.closest('#authorPopover')))close()});
+  document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!popover.hidden)close()?.focus()});
+}
+window.AuthorCards={build:buildAuthorDirectory,render:renderAuthor,init:initAuthorPopover,has:author=>authorHasInformation(author)};
 function fillSelect(el,vals,label='All',mode='numeric-desc'){
   if(!el)return;
   let items=[...new Set(vals.filter(v=>v!==undefined&&v!==null&&v!==''))];
@@ -202,7 +236,7 @@ const OPEN_ACCESS_ICON='<svg class="action-icon" aria-hidden="true" viewBox="0 0
 const SHARE_ICON='<svg class="action-icon" aria-hidden="true" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="m8.7 10.7 6.6-4.1M8.7 13.3l6.6 4.1"></path></svg>';
 
 function publicationCard(p){
-  const authors=(p.authors||[]).map(highlightAuthor).join(', ');
+  const authors=(p.authors||[]).map(renderAuthor).join(', ');
   const n=Number(p.citationCount||0);
   const scholarUrl=normalizeScholarUrl(p.scholarCitedByUrl)||normalizeScholarUrl(p.citedByUrl);
   const cited=n>0&&scholarUrl
@@ -460,7 +494,7 @@ function navigationInteractions(){
   document.addEventListener('keydown',e=>{if(e.key==='Escape'){nav?.classList.remove('open');toggle?.setAttribute('aria-expanded','false')}});
 }
 
-document.addEventListener('DOMContentLoaded',()=>{
+document.addEventListener('DOMContentLoaded',async()=>{
   setNavigation();
   navigationInteractions();
   publicationInteractions();
@@ -468,5 +502,6 @@ document.addEventListener('DOMContentLoaded',()=>{
   initOutputCounts().catch(console.error);
   combinedChart().catch(console.error);
   researchCharts().catch(console.error);
+  const authors=await loadData('authors').catch(()=>[]);buildAuthorDirectory(authors);initAuthorPopover();
   initCollection().catch(console.error);
 });

@@ -1,0 +1,48 @@
+[
+  {
+    "id": "wei-hao-chiu",
+    "name": "Wei-Hao Chiu",
+    "displayName": "Wei-Hao Chiu",
+    "nameZh": "邱偉豪",
+    "aliases": ["Chiu, Wei-Hao", "Wei Hao Chiu", "W.-H. Chiu"],
+    "role": "Associate Researcher",
+    "affiliation": "Center for Sustainability and Energy Technologies, Chang Gung University",
+    "email": [
+      {"address": "weihao.chiu@gmail.com", "label": "Personal Email"},
+      {"address": "d000019005@cgu.edu.tw", "label": "CGU Email"}
+    ],
+    "orcid": "0000-0003-4484-3117",
+    "links": {
+      "orcid": "https://orcid.org/0000-0003-4484-3117",
+      "googleScholar": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en",
+      "openAlex": "https://openalex.org/works?filter=authorships.author.id:a5007707999",
+      "scopus": "https://www.scopus.com/authid/detail.uri?authorId=7201503537",
+      "webOfScience": "https://www.webofscience.com/wos/author/record/JCE-6812-2023",
+      "institution": "https://www.cgu.edu.tw/cset-en/FullTimeProfessorManagement/Detail/e3d82caf-b69a-4ee3-ac95-0d1558e22d83?nodeId=17439",
+      "personalWebsite": "https://weihaochiu.github.io/"
+    },
+    "status": "verified",
+    "lastVerified": "2026-07-22",
+    "sources": [
+      "https://orcid.org/0000-0003-4484-3117",
+      "https://www.cgu.edu.tw/cset-en/FullTimeProfessorManagement/Detail/e3d82caf-b69a-4ee3-ac95-0d1558e22d83?nodeId=17439"
+    ]
+  },
+  {
+    "id": "kun-mu-lee",
+    "name": "Kun-Mu Lee",
+    "displayName": "Kun-Mu Lee",
+    "nameZh": "李坤穆",
+    "aliases": ["Lee, Kun-Mu", "Kun Mu Lee", "K.-M. Lee"],
+    "role": "Professor",
+    "affiliation": "Chang Gung University",
+    "email": [],
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=%22Kun-Mu+Lee%22",
+      "crossref": "https://search.crossref.org/?q=Kun-Mu%20Lee"
+    },
+    "status": "partial",
+    "lastVerified": "2026-07-22",
+    "sources": ["https://www.cgu.edu.tw/"]
+  }
+]

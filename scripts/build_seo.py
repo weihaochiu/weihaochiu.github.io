@@ -46,6 +46,16 @@ PERSON = {
 
 def esc(v): return html.escape(str(v or ''), quote=True)
 def slugify(doi): return re.sub(r'[^a-z0-9]+','-',str(doi).lower()).strip('-') or 'publication'
+AUTHOR_MAP = {}
+def normalize_author_name(name): return re.sub(r'[^a-z0-9]+', '', str(name or '').lower())
+def author_has_information(author):
+  return bool(author and (author.get('role') or author.get('affiliation') or author.get('email') or author.get('orcid') or any((author.get('links') or {}).values())))
+def author_html(name):
+  author = AUTHOR_MAP.get(normalize_author_name(name))
+  if not author_has_information(author):
+    return '<strong class="me">'+esc(name)+'</strong>' if name in ('Chiu, Wei-Hao','Wei-Hao Chiu') else esc(name)
+  me = ' me' if name in ('Chiu, Wei-Hao','Wei-Hao Chiu') else ''
+  return '<button class="author-trigger'+me+'" type="button" data-author-name="'+esc(name)+'" aria-haspopup="dialog" aria-expanded="false">'+esc(name)+'</button>'
 
 def graphical_abstract_path(p):
   """Return a site-relative GA path, preferring an explicit JSON value."""
@@ -100,7 +110,7 @@ def replace_emails(text):
 
 def static_card(p):
   doi=p.get('doi',''); slug=slugify(doi); local='publications/'+slug+'.html'
-  authors=', '.join('<strong class="me">'+esc(a)+'</strong>' if a in ('Chiu, Wei-Hao','Wei-Hao Chiu') else esc(a) for a in p.get('authors',[]))
+  authors=', '.join(author_html(a) for a in p.get('authors',[]))
   journal='<em>'+esc(p.get('journal'))+'</em>'
   if p.get('volume'): journal += ', '+esc(p.get('volume'))
   if p.get('pages'): journal += ', '+esc(p.get('pages'))
@@ -112,7 +122,7 @@ def static_card(p):
 
 def publication_page(p, openalex_record=None, unpaywall_record=None, crossref_record=None, mendeley_record=None):
   doi=p.get('doi',''); slug=slugify(doi); url=SITE_URL+'/publications/'+slug+'.html'
-  title=esc(p.get('title')); desc=esc(p.get('citation')); authors=', '.join(esc(a) for a in p.get('authors',[]))
+  title=esc(p.get('title')); desc=esc(p.get('citation')); authors=', '.join(author_html(a) for a in p.get('authors',[]))
   graph={'@context':'https://schema.org','@graph':[PERSON,article_schema(p,url)]}
   vol=', '+esc(p.get('volume')) if p.get('volume') else ''
   pages=', '+esc(p.get('pages')) if p.get('pages') else ''
@@ -163,7 +173,11 @@ def publication_page(p, openalex_record=None, unpaywall_record=None, crossref_re
   return '''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>{title} | Wei-Hao Chiu</title><meta name="description" content="{desc}"/><link rel="canonical" href="{url}"/><meta property="og:type" content="article"/><meta property="og:title" content="{title}"/><meta property="og:description" content="{desc}"/><meta property="og:url" content="{url}"/><meta property="og:image" content="{site}/assets/images/og-profile.jpg"/><meta property="article:published_time" content="{date}"/><meta property="article:author" content="{site}/"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="{title}"/><meta name="twitter:description" content="{desc}"/><meta name="twitter:image" content="{site}/assets/images/og-profile.jpg"/>{ga}{citation}<script type="application/ld+json">{schema}</script><link href="../assets/css/styles.css" rel="stylesheet"/></head><body><header class="site-header"><div class="shell nav-shell"><a class="brand" href="../index.html"><span>Wei-Hao Chiu</span><small>Academic Profile</small></a><nav aria-label="Main navigation" class="site-nav"><a href="../about.html">About</a><a href="../research.html">Research</a><a href="../publications.html">Publications</a><a href="../patents.html">Patents</a><a href="../projects.html">Projects</a></nav></div></header><main class="content shell"><article class="collection-card publication-card publication-detail" itemscope itemtype="https://schema.org/ScholarlyArticle"><p class="kicker">Scholarly article</p><h1 itemprop="headline">{title}</h1><p class="authors" itemprop="author">{authors}</p><p class="journal"><em>{journal}</em>{vol}{pages} ({year}).</p><p><strong>Research topic:</strong> {topic}</p>{details}{actions}<a class="action publication-return" href="../publications.html#pub-{slug}">← Return to publications</a></article></main><footer class="site-footer"><div class="shell footer-grid"><div><strong>Wei-Hao Chiu, Ph.D.</strong><p>Associate Researcher<br/>Center for Sustainability and Energy Technologies<br/>Chang Gung University</p></div><div class="footer-links">{emails}</div></div></footer><script src="../assets/js/app.js"></script></body></html>'''.format(title=title,desc=desc,url=url,site=SITE_URL,date=esc(p.get('date')),ga=GA_TAG,citation=citation_meta(p),schema=json.dumps(graph,ensure_ascii=False,separators=(',',':')),authors=authors,journal=esc(p.get('journal')),vol=vol,pages=pages,year=esc(p.get('year')),topic=esc(p.get('topic')),details=details,actions=actions_html,slug=slug,emails=EMAIL_LINKS)
 
 def main():
+  global AUTHOR_MAP
   pubs=json.loads((ROOT/'data/publications.json').read_text(encoding='utf-8'))
+  authors_path=ROOT/'data/authors.json'
+  author_rows=json.loads(authors_path.read_text(encoding='utf-8')) if authors_path.exists() else []
+  AUTHOR_MAP={normalize_author_name(name):author for author in author_rows if author_has_information(author) for name in [author.get('name'),author.get('displayName'),author.get('nameZh'),*(author.get('aliases') or [])] if name}
   openalex_path=ROOT/'data/openalex_publication_metrics.json'
   openalex_records=json.loads(openalex_path.read_text(encoding='utf-8')).get('records',{}) if openalex_path.exists() else {}
   crossref_path=ROOT/'data/crossref_publication_metrics.json'
