@@ -11,7 +11,6 @@ on:
       - ".github/workflows/update-openalex-stats.yml"
       - "scripts/update_openalex_stats.py"
       - "scripts/update_openalex_publications.py"
-      - "assets/js/openalex-publications.js"
       - "data/publications.json"
 
 permissions:
@@ -39,7 +38,7 @@ jobs:
           OPENALEX_MAILTO: ${{ secrets.OPENALEX_MAILTO }}
         run: python scripts/update_openalex_stats.py
 
-      - name: Fetch per-publication OpenAlex citations
+      - name: Fetch per-publication OpenAlex metrics
         env:
           OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
           OPENALEX_MAILTO: ${{ secrets.OPENALEX_MAILTO }}
@@ -50,7 +49,6 @@ jobs:
           FILES=(
             data/openalex_metrics.json
             data/openalex_publication_metrics.json
-            publications.html
           )
           if [ -z "$(git status --porcelain -- "${FILES[@]}")" ]; then
             echo "OpenAlex metrics have not changed."
