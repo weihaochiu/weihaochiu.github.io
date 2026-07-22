@@ -144,14 +144,14 @@
       "Liquid medium annealing (LMA)",
       "Pre-heat treatment"
     ],
-    "graphicalAbstract": "GA/10.1016_j.solener.2026.114430.png",
+    "graphicalAbstract": "GA/10.1016_j.solener.2026.114430.jpg",
     "graphicalAbstractAlt": "Graphical abstract of preheated moderate-temperature liquid medium annealing and FABr passivation for efficient perovskite solar cells",
     "contentStatus": {
       "abstract": "available",
       "highlights": "available",
       "keywords": "available",
       "graphicalAbstract": "available",
-      "verifiedDate": "2026-07-20",
+      "verifiedDate": "2026-07-22",
       "verifiedSource": "Author-provided content"
     },
     "authorOrder": 2,
@@ -189,6 +189,32 @@
     "month": 3,
     "publisher": "Elsevier",
     "doi": "10.1016/j.jpowsour.2025.239216",
+    "abstract": "Graphite felt (GF) is a porous carbonized polymer used as multifunctional electrodes in energy and environmental electrochemical devices. Despite its high surface area, limited surface-active sites reduce catalytic activity. Furthermore, its intrinsic hydrophobicity requires hydrophilic pretreatment for effective electrochemical performance. Graphitic Carbon Nitride (g-C3N4) enables structural regulation by creating conjugated systems through its electronic structure, thereby expanding its multifunctionality and applications in electrode materials. An optimal g-C3N4 concentration on the GF ensures better conductivity, resulting in higher electrochemical activity. This study used thermal polymerization to decorate GF with g-C3N4 (GCN/GF), and nano GCN/GF electrode showed excellent hydrophilicity, lowest charge-transfer resistance (Rct), and high electrochemical activity. An optimally decorated g-C3N4 showed minimal agglomeration, better distribution on GF surfaces, and superior active sites for VO2+/VO2+ redox reaction. Its uniform decoration of g-C3N4 facilitated charge transport, enhanced hydrophilicity, and improved electrolyte access, reducing electrochemical polarization during active species transfer, and energy efficiency improved to 84.13 % at 80 mA cm−2. The long-term cycling performance confirmed the durability of the vanadium redox flow battery (VRFB) with the nano GCN/GF electrode, exhibiting negligible degradation for 1000 cycles. These findings highlight the potential of g-C3N4 as a cost-effective alternative to noble metals for high-performance VRFB electrodes.",
+    "highlights": [
+      "Urea thermal polymerization enables tunable decoration of g-C3N4 nanostructures on GF.",
+      "Layered g-C3N4 structures increase surface area and enhance electrode wettability.",
+      "Synergistic structure and chemistry improve durability and energy efficiency.",
+      "g-C3N4/GF electrodes exhibit high stability and long-term VRFB reliability."
+    ],
+    "keywords": [
+      "Graphite felt",
+      "g-C3N4",
+      "Thermal polymerization",
+      "Charge-transfer resistance",
+      "Surface modification",
+      "Hydrophilicity",
+      "Electrochemical activity"
+    ],
+    "graphicalAbstract": "GA/10.1016_j.jpowsour.2025.239216.jpg",
+    "graphicalAbstractAlt": "Graphical abstract of nanostructured graphitic carbon nitride decorated graphite felt electrodes for enhanced vanadium redox flow battery performance",
+    "contentStatus": {
+      "abstract": "available",
+      "highlights": "available",
+      "keywords": "available",
+      "graphicalAbstract": "available",
+      "verifiedDate": "2026-07-22",
+      "verifiedSource": "Author-provided content"
+    },
     "authorOrder": 1,
     "topic": "Redox Flow Batteries",
     "tags": [
@@ -223,6 +249,27 @@
     "month": 1,
     "publisher": "Elsevier",
     "doi": "10.1016/j.solmat.2025.114015",
+    "abstract": "The operational stability of the single-junction perovskite solar cells (PSCs) under space conditions remains a concern. This review systematically analyzes the effects of proton irradiation on PSCs, correlating the observed degradation with displacement damage and electronic ionization mechanisms. The penetration depth of protons and the associated vacancy profiles across PSC layers are assessed using Monte-Carlo simulations. Proton irradiation generates defects in the perovskite lattice, leading to reduced carrier mobility and device performance. Substrate analysis shows that cerium-doped glass, fused quartz, and silica retain optical clarity better than soda lime glass and flexible substrates. Transparent conductive oxides (TCOs) like Indium-tin oxide (ITO) exhibit strong radiation stability compared to other TCOs. For charge transport layers (CTLs), inorganic CTLs demonstrated better radiation resistance compared to their organic counterparts. The phenomenon of self-recovery in PSCs is also explored, which is attributed to defect recovery, relaxation of ion migration, and thermal annealing. By integrating experimental findings with simulation-based insights, this review maps the vulnerability of each device layer and addresses the proton irradiation relevant for space environments.",
+    "highlights": [],
+    "keywords": [
+      "Perovskite solar cell",
+      "Space applications",
+      "Proton radiation",
+      "Displacement damage",
+      "Electronic ionization",
+      "Defect recovery",
+      "Ion migration"
+    ],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "contentStatus": {
+      "abstract": "available",
+      "highlights": "not-available",
+      "keywords": "available",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-07-22",
+      "verifiedSource": "Author-provided content"
+    },
     "authorOrder": 2,
     "topic": "Space PV & Reliability",
     "tags": [
@@ -258,6 +305,19 @@
     "month": 1,
     "publisher": "Wiley",
     "doi": "10.1002/asia.70245",
+    "abstract": "The development of efficient and stable hole-transporting materials (HTMs) is critical for advancing perovskite solar cell (PSC) technology. This study presents two novel HTMs, LK-1 and LK-2, based on fused dithienoheterocycle derivatives, namely, dithieno[3,2-f:2′,3′-h]quinoxaline (DTQu) and dithieno[3,2-a:2′,3′-c]phenazine (DTPh), designed for PSCs. These donor–acceptor–donor (D–A–D) structured HTMs exhibit planar, rigid cores that enhance π–π stacking, improving hole mobility and stability. LK-1 and LK-2 were synthesized and characterized for their optical, electrochemical, and thermal properties. PSCs with LK-1 achieved a power conversion efficiency (PCE) of 18.16%, whereas LK-2 reached 19.40%, outperforming LK-1 due to smoother film properties and reduced recombination. Both HTMs showed high thermal stability and suitable energy alignment with the perovskite layer. LK-2-based PSCs enhanced hydrophobicity and film morphology further suggest its potential for stable, efficient PSCs, advancing the development of robust organic HTMs.",
+    "highlights": [],
+    "keywords": [],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "contentStatus": {
+      "abstract": "available",
+      "highlights": "not-available",
+      "keywords": "pending",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-07-22",
+      "verifiedSource": "Author-provided content"
+    },
     "authorOrder": 2,
     "topic": "Hole-Transporting Materials",
     "tags": [
@@ -299,14 +359,14 @@
       "Structure–property–performance insights guide next-gen RFB separator design."
     ],
     "keywords": [],
-    "graphicalAbstract": "GA/10.1016_j.seppur.2025.134157.png",
+    "graphicalAbstract": "GA/10.1016_j.seppur.2025.134157.jpg",
     "graphicalAbstractAlt": "Graphical abstract illustrating selective proton transport, ion rejection, chemical stability, mechanical robustness, and scalable synthesis of MOF/COF separators for redox flow batteries",
     "contentStatus": {
       "abstract": "available",
       "highlights": "available",
       "keywords": "pending",
       "graphicalAbstract": "available",
-      "verifiedDate": "2026-07-20",
+      "verifiedDate": "2026-07-22",
       "verifiedSource": "Author-provided content"
     },
     "authorOrder": 2,
@@ -390,6 +450,25 @@
     "month": 10,
     "publisher": "Wiley",
     "doi": "10.1002/solr.202500538",
+    "abstract": "Organic-thin film and perovskite solar cells are extremely promising because of their rapid progress in photovoltaic conversion efficiency (PCE). Beyond developing new materials and fabrication techniques, accurate performance characterization is essential for research and application. This study reports a round-robin interlaboratory comparison of current density–voltage (J–V) characteristics under standard test conditions (STC) and external quantum efficiency (EQE) spectra for large-area (>1 cm2) organic thin-film, perovskite, as well as reference solar cells with distinct spectral responses. Among 20 participating laboratories, the relative deviation in PCE of the samples reaches an unprecedented 111%. A comprehensive analysis identifies critical obstacles to measurement accuracy, including total incident irradiance for the samples, EQE spectrum measurements for spectral mismatch factors (SMM), temperature control, and methodologies for obtaining the J–V curves. Based on these findings, corresponding recommendations are presented to enhance the accuracy of performance characterization for emerging solar cells.",
+    "highlights": [],
+    "keywords": [
+      "Organic thin-film photovoltaics (OPV)",
+      "Perovskite solar cells (PSC)",
+      "Round-robin intercomparison",
+      "Spectral mismatch factor (SMM)",
+      "Standard test conditions (STC)"
+    ],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "contentStatus": {
+      "abstract": "available",
+      "highlights": "not-available",
+      "keywords": "available",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-07-22",
+      "verifiedSource": "Author-provided content"
+    },
     "authorOrder": 15,
     "topic": "Perovskite Solar Cells",
     "tags": [
@@ -1494,3 +1573,4 @@
     "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en"
   }
 ]
+
