@@ -118,12 +118,71 @@
   color:#9aa5af;
 }
 .metrics-band .metric-source-card .metric-source-name{
-  display:block;
+  display:flex;
+  align-items:center;
+  gap:7px;
   margin-top:4px;
   color:var(--brand);
   font-size:.68rem;
   font-weight:750;
   line-height:1.3;
+}
+.metrics-band .metric-source-card .metric-source-name img{
+  width:23px;
+  height:23px;
+  padding:2px;
+  border:1px solid #e2e7ec;
+  border-radius:5px;
+  background:#fff;
+  object-fit:contain;
+}
+.button-with-logo{
+  display:inline-flex!important;
+  align-items:center;
+  gap:7px;
+}
+.button-with-logo img,
+.footer-logo-link img{
+  width:18px;
+  height:18px;
+  padding:1px;
+  border-radius:4px;
+  background:#fff;
+  object-fit:contain;
+}
+.footer-logo-link{
+  display:inline-flex!important;
+  align-items:center;
+  gap:7px;
+}
+.profile-directory.profile-directory-logos a{
+  display:flex;
+  align-items:center;
+  gap:11px;
+  min-height:54px;
+}
+.profile-logo-frame{
+  width:30px;
+  height:30px;
+  flex:0 0 30px;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  border:1px solid #dde4ea;
+  border-radius:7px;
+  background:#fff;
+}
+.profile-logo-frame img{
+  width:100%;
+  height:100%;
+  padding:3px;
+  object-fit:contain;
+}
+.profile-logo-text{
+  color:var(--brand);
+  background:#f2f5f8;
+  font-size:.76rem;
+  font-weight:800;
 }
 .metric-reader-card{
   padding:16px 18px 14px!important;
@@ -154,4 +213,5 @@
   }
   .metric-source-card{padding:17px 18px}
   .metrics-group-heading{padding-inline:14px}
+  .profile-directory.profile-directory-logos a{min-height:50px}
 }
