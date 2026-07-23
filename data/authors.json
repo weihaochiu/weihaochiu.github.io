@@ -2253,31 +2253,43 @@
     "id": "lin-yan-duo",
     "name": "Lin, Yan-Duo",
     "displayName": "Yan-Duo Lin",
-    "nameZh": "",
+    "nameZh": "林彥多",
     "aliases": [
-      "Yan-Duo Lin"
+      "Yan-Duo Lin",
+      "林彥多"
     ],
-    "role": "",
-    "currentPosition": "",
-    "affiliation": "",
-    "affiliationZh": "",
-    "email": [],
-    "telephone": "",
+    "role": "Professor",
+    "currentPosition": "Professor",
+    "affiliation": "Department of Chemistry, Soochow University",
+    "affiliationZh": "東吳大學 化學系",
+    "email": [
+      {
+        "address": "ydlin@scu.edu.tw",
+        "label": "SCU Email"
+      }
+    ],
+    "telephone": {
+      "display": "(02) 2881-9471 #6807",
+      "href": "tel:+886228819471;ext=6807"
+    },
     "orcid": "0000-0002-1570-5842",
     "links": {
-      "personalWebsite": "http://www.ncyu.edu.tw/chem/content.aspx?site_content_sn=58714",
+      "orcid": "https://orcid.org/0000-0002-1570-5842",
       "googleScholar": "https://scholar.google.com/citations?user=v4m0FJUAAAAJ&hl=zh-TW",
       "openAlex": "https://openalex.org/A5055342027",
-      "orcid": "https://orcid.org/0000-0002-1570-5842"
+      "personalWebsite": "https://cowcutoo.wixsite.com/m409",
+      "institution": "https://web-ch.scu.edu.tw/chem/web_page/11775"
     },
     "status": "verified",
-    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "verificationLevel": "Official Soochow University faculty page + ORCID + DOI-constrained OpenAlex match",
     "lastVerified": "2026-07-23",
     "sources": [
+      "https://web-ch.scu.edu.tw/chem/web_page/11775",
+      "https://scholar.google.com/citations?user=v4m0FJUAAAAJ&hl=zh-TW",
+      "https://cowcutoo.wixsite.com/m409",
       "https://openalex.org/A5055342027",
       "https://orcid.org/0000-0002-1570-5842",
-      "https://doi.org/10.1002/asia.202500719",
-      "http://www.ncyu.edu.tw/chem/content.aspx?site_content_sn=58714"
+      "https://doi.org/10.1002/asia.202500719"
     ]
   },
   {
