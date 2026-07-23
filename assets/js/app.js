@@ -45,7 +45,7 @@ function yearOf(x){return Number(x.year||x.startYear||String(x.sortDate||x.date|
 function highlightAuthor(name){return /Chiu, Wei-Hao|Wei-Hao Chiu/.test(name)?`<strong class="me">${esc(name)}</strong>`:esc(name)}
 const authorDirectory=new Map();
 function normalizeAuthorName(name){return String(name||'').normalize('NFKD').toLowerCase().replace(/[^a-z0-9]+/g,'').trim()}
-function authorHasInformation(author){return Boolean(author&&(author.role||author.affiliation||(author.email||[]).length||author.orcid||Object.values(author.links||{}).some(Boolean)))}
+function authorHasInformation(author){return Boolean(author&&(author.role||author.currentPosition||author.affiliation||author.affiliationZh||(author.email||[]).length||author.telephone||author.orcid||Object.values(author.links||{}).some(Boolean)))}
 function buildAuthorDirectory(authors=[]){
   authorDirectory.clear();
   authors.forEach(author=>{
@@ -61,9 +61,12 @@ function renderAuthor(name){
 }
 function authorCardHtml(author){
   const emails=(author.email||[]).map(item=>typeof item==='string'?{address:item,label:'Email'}:item).filter(item=>item.address);
+  const telephone=typeof author.telephone==='string'?{display:author.telephone}:author.telephone;
+  const phoneAction=telephone?.display?`<a${telephone.href?` href="${esc(telephone.href)}"`:''}>Phone: ${esc(telephone.display)}</a>`:'';
   const links={ORCID:author.links?.orcid||(author.orcid?`https://orcid.org/${author.orcid}`:''),'Google Scholar':author.links?.googleScholar,OpenAlex:author.links?.openAlex,'Search Crossref':author.links?.crossref,Scopus:author.links?.scopus,'Web of Science':author.links?.webOfScience,Institution:author.links?.institution,'Personal website':author.links?.personalWebsite};
-  const actions=[...emails.map(item=>`<a href="mailto:${esc(item.address)}">${esc(item.label||'Email')}</a>`),...Object.entries(links).filter(([,url])=>url).map(([label,url])=>`<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(label)} ↗</a>`)].join('');
-  return `<button class="author-popover-close" type="button" aria-label="Close author information">×</button><h2>${esc(author.displayName||author.name)}</h2>${author.nameZh?`<p class="author-name-zh">${esc(author.nameZh)}</p>`:''}${author.role?`<p class="author-role">${esc(author.role)}</p>`:''}${author.affiliation?`<p class="author-affiliation">${esc(author.affiliation)}</p>`:''}<div class="author-popover-links">${actions}</div>`;
+  const actions=[...emails.map(item=>`<a href="mailto:${esc(item.address)}">${esc(item.label||'Email')}</a>`),phoneAction,...Object.entries(links).filter(([,url])=>url).map(([label,url])=>`<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(label)} ↗</a>`)].filter(Boolean).join('');
+  const position=author.currentPosition&&author.currentPosition!==author.role?`<p class="author-role">Current position: ${esc(author.currentPosition)}</p>`:'';
+  return `<button class="author-popover-close" type="button" aria-label="Close author information">×</button><h2>${esc(author.displayName||author.name)}</h2>${author.nameZh?`<p class="author-name-zh">${esc(author.nameZh)}</p>`:''}${author.role?`<p class="author-role">${esc(author.role)}</p>`:''}${position}${author.affiliation?`<p class="author-affiliation">${esc(author.affiliation)}</p>`:''}${author.affiliationZh?`<p class="author-affiliation">${esc(author.affiliationZh)}</p>`:''}<div class="author-popover-links">${actions}</div>`;
 }
 function initAuthorPopover(){
   if(document.documentElement.dataset.authorPopoverReady==='true')return;

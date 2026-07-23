@@ -35,14 +35,31 @@
     "nameZh": "李坤穆",
     "aliases": ["Lee, Kun-Mu", "Kun Mu Lee", "K.-M. Lee"],
     "role": "Professor",
-    "affiliation": "Chang Gung University",
-    "email": [],
-    "links": {
-      "googleScholar": "https://scholar.google.com/scholar?q=%22Kun-Mu+Lee%22",
-      "crossref": "https://search.crossref.org/?q=Kun-Mu%20Lee"
+    "currentPosition": "Professor",
+    "affiliation": "Department of Chemical and Materials Engineering, Chang Gung University",
+    "affiliationZh": "長庚大學 化工與材料工程學系",
+    "email": [
+      {"address": "KMLee@mail.cgu.edu.tw", "label": "CGU Email"}
+    ],
+    "telephone": {
+      "display": "(03)-2118800 Ext 3891",
+      "href": "tel:+88632118800;ext=3891"
     },
-    "status": "partial",
-    "lastVerified": "2026-07-22",
-    "sources": ["https://www.cgu.edu.tw/"]
+    "orcid": "0000-0002-5911-9386",
+    "links": {
+      "orcid": "https://orcid.org/0000-0002-5911-9386",
+      "googleScholar": "https://scholar.google.com.tw/citations?user=acpIL4cAAAAJ&hl=zh-TW",
+      "crossref": "https://search.crossref.org/?q=Kun-Mu%20Lee",
+      "scopus": "https://www.scopus.com/authid/detail.uri?authorId=7501498671",
+      "institution": "https://pure.lib.cgu.edu.tw/zh/persons/kun-mu-lee-2/",
+      "personalWebsite": "https://www.frontiergroup.tw/"
+    },
+    "status": "verified",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://pure.lib.cgu.edu.tw/zh/persons/kun-mu-lee-2/",
+      "https://orcid.org/0000-0002-5911-9386",
+      "https://www.frontiergroup.tw/"
+    ]
   }
 ]
