@@ -267,7 +267,7 @@ function renderTable(){const q=document.getElementById('journalSearch').value.tr
 function downloadTableCsv(){const h=['Journal','JCR profile URL','Articles','Publisher','ISSN','Metric year','Latest IF','5-year IF','JCR quartile','JCR category','Publication years','Metric source'];const rows=filteredTableRows.map(r=>[r.title,r.jcrProfileUrl,r.publicationCount,r.publisher,r.issn,r.latestMetricYear,r.impactFactor,r.fiveYearImpactFactor,r.quartile,r.category,r.years,r.source]);blobDownload(new Blob(['\ufeff'+[h,...rows].map(x=>x.map(csvEscape).join(',')).join('\r\n')+'\r\n'],{type:'text/csv;charset=utf-8'}),'journal-statistics-table.csv')}
 const AUTHOR_PROFILE_FIELDS=[
  ['role','role'],['affiliation','affiliation'],['email','email'],['telephone','telephone'],['orcid','orcid'],
- ['googleScholar','Google Scholar'],['openAlex','OpenAlex'],['crossref','Crossref'],['scopus','Scopus'],
+ ['googleScholar','Google Scholar'],['openAlex','OpenAlex'],['scopus','Scopus'],
  ['webOfScience','Web of Science'],['institution','institution page'],['personalWebsite','personal website']
 ];
 function authorDirectoryIndex(authors){

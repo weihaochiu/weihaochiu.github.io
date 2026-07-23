@@ -66,7 +66,6 @@
     "links": {
       "orcid": "https://orcid.org/0000-0002-5911-9386",
       "googleScholar": "https://scholar.google.com/citations?user=acpIL4cAAAAJ&hl=zh-TW",
-      "crossref": "https://search.crossref.org/?q=Kun-Mu%20Lee",
       "scopus": "https://www.scopus.com/authid/detail.uri?authorId=7501498671",
       "institution": "https://pure.lib.cgu.edu.tw/zh/persons/kun-mu-lee-2/",
       "personalWebsite": "https://www.frontiergroup.tw/"
@@ -97,7 +96,6 @@
     "orcid": "",
     "links": {
       "googleScholar": "https://scholar.google.com/citations?user=U7YSdAUAAAAJ&hl=zh-TW",
-      "crossref": "https://search.crossref.org/?q=Harini%20Srikanth%20Rao",
       "openAlex": "https://openalex.org/A5109226325",
       "institution": "https://ror.org/00d80zx46"
     },
@@ -127,7 +125,6 @@
     "orcid": "0009-0003-3751-8583",
     "links": {
       "googleScholar": "https://scholar.google.com/citations?user=O_URQgwAAAAJ&hl=zh-TW",
-      "crossref": "https://search.crossref.org/?q=Seoungjun%20Ahn",
       "openAlex": "https://openalex.org/A5032000460",
       "orcid": "https://orcid.org/0009-0003-3751-8583",
       "institution": "https://ror.org/00d80zx46"
@@ -158,7 +155,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Wei-Chen%20Chu",
       "openAlex": "https://openalex.org/A5102526432",
       "institution": "https://ror.org/00d80zx46"
     },
@@ -187,7 +183,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Yi-Wen%20Sung",
       "openAlex": "https://openalex.org/A5136426351",
       "institution": "https://ror.org/00d80zx46"
     },
@@ -216,7 +211,6 @@
     "telephone": "",
     "orcid": "0000-0003-3865-0896",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Gao%20Chen",
       "openAlex": "https://openalex.org/A5101469932",
       "orcid": "https://orcid.org/0000-0003-3865-0896",
       "institution": "https://ror.org/01m8p7q42"
@@ -248,7 +242,6 @@
     "orcid": "0009-0009-7913-4397",
     "links": {
       "googleScholar": "https://scholar.google.com/citations?user=e65zM8MAAAAJ&hl=zh-TW",
-      "crossref": "https://search.crossref.org/?q=Shih-Hsuan%20Chen",
       "openAlex": "https://openalex.org/A5102853858",
       "orcid": "https://orcid.org/0009-0009-7913-4397",
       "institution": "https://ror.org/00d80zx46"
@@ -285,7 +278,6 @@
       "scopus": "https://www.scopus.com/authid/detail.uri?authorId=14065507800",
       "webOfScience": "http://www.researcherid.com/rid/D-9023-2011",
       "googleScholar": "https://scholar.google.com/citations?user=R1UPxsMAAAAJ&hl=zh-TW",
-      "crossref": "https://search.crossref.org/?q=Ming-Chung%20Wu",
       "openAlex": "https://openalex.org/A5086349184",
       "orcid": "https://orcid.org/0000-0002-3584-3871",
       "institution": "https://ror.org/00d80zx46"
@@ -317,7 +309,6 @@
     "telephone": "",
     "orcid": "0000-0002-6253-576X",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Wei-Lun%20Yu",
       "openAlex": "https://openalex.org/A5056818545",
       "orcid": "https://orcid.org/0000-0002-6253-576X",
       "institution": "https://ror.org/00944ve71"
@@ -350,7 +341,6 @@
     "telephone": "",
     "orcid": "0000-0003-0798-5378",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Jen-Fu%20Hsu",
       "openAlex": "https://openalex.org/A5054975977",
       "orcid": "https://orcid.org/0000-0003-0798-5378",
       "institution": "https://ror.org/04whfy367"
@@ -381,7 +371,6 @@
     "telephone": "",
     "orcid": "0000-0002-2569-8535",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Ching-Yuan%20Liu",
       "openAlex": "https://openalex.org/A5001310604",
       "orcid": "https://orcid.org/0000-0002-2569-8535",
       "institution": "https://ror.org/00944ve71"
@@ -413,7 +402,6 @@
     "orcid": "0009-0000-7193-2962",
     "links": {
       "scopus": "https://www.scopus.com/authid/detail.uri?authorId=59970572100",
-      "crossref": "https://search.crossref.org/?q=Iqra%20Shaheen",
       "openAlex": "https://openalex.org/A5121757482",
       "orcid": "https://orcid.org/0009-0000-7193-2962",
       "institution": "https://ror.org/00d80zx46"
@@ -444,7 +432,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Yu-Xian%20Lee",
       "institution": "https://ror.org/04xgh4d03"
     },
     "status": "verified",
@@ -470,9 +457,7 @@
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {
-      "crossref": "https://search.crossref.org/?q=Bo-Chin%20Lee"
-    },
+    "links": {},
     "status": "verified",
     "verificationLevel": "Crossref DOI author match",
     "lastVerified": "",
@@ -493,9 +478,7 @@
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {
-      "crossref": "https://search.crossref.org/?q=Yu-Hsin%20Kao"
-    },
+    "links": {},
     "status": "verified",
     "verificationLevel": "Crossref DOI author match",
     "lastVerified": "",
@@ -517,7 +500,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Jr-Si%20Hsu",
       "institution": "https://ror.org/02w8ws377"
     },
     "status": "verified",
@@ -544,7 +526,6 @@
     "telephone": "",
     "orcid": "0000-0001-6008-2878",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Yung-Sheng%20Yen",
       "openAlex": "https://openalex.org/A5090838798",
       "orcid": "https://orcid.org/0000-0001-6008-2878",
       "institution": "https://ror.org/02w8ws377"
@@ -577,7 +558,6 @@
     "orcid": "0000-0002-7935-4076",
     "links": {
       "scopus": "https://www.scopus.com/authid/detail.uri?authorId=56996278700",
-      "crossref": "https://search.crossref.org/?q=Chia-Yuan%20Chen",
       "openAlex": "https://openalex.org/A5101418642",
       "orcid": "https://orcid.org/0000-0002-7935-4076",
       "institution": "https://ror.org/01b8kcc49"
@@ -608,7 +588,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Yu-Fan%20Chang",
       "openAlex": "https://openalex.org/A5103847969",
       "institution": "https://ror.org/02pgrmd66"
     },
@@ -637,7 +616,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Yen-Chen%20Shih",
       "openAlex": "https://openalex.org/A5101033238",
       "institution": "https://ror.org/02pgrmd66"
     },
@@ -666,7 +644,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Ying-Chuan%20Liu",
       "openAlex": "https://openalex.org/A5038281969",
       "institution": "https://ror.org/00944ve71"
     },
@@ -695,7 +672,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Chi-Feng%20Chiu",
       "openAlex": "https://openalex.org/A5015074030",
       "institution": "https://ror.org/00944ve71"
     },
@@ -724,7 +700,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Rahma%20Rahayu%20Dinarlita",
       "openAlex": "https://openalex.org/A5119935360",
       "institution": "https://ror.org/00944ve71"
     },
@@ -754,7 +729,6 @@
     "telephone": "",
     "orcid": "0000-0002-3387-3516",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Tsung-Yu%20Tsai",
       "openAlex": "https://openalex.org/A5002357272",
       "orcid": "https://orcid.org/0000-0002-3387-3516",
       "institution": "https://ror.org/00d80zx46"
@@ -786,7 +760,6 @@
     "orcid": "",
     "links": {
       "googleScholar": "https://scholar.google.com/citations?user=CRlM8csAAAAJ&hl=zh-TW",
-      "crossref": "https://search.crossref.org/?q=Chieh-Ming%20Hung",
       "openAlex": "https://openalex.org/A5111140621",
       "institution": "https://ror.org/05bqach95"
     },
@@ -818,7 +791,6 @@
     "orcid": "0000-0002-5675-5213",
     "links": {
       "googleScholar": "https://scholar.google.com/citations?user=1TZwvz8AAAAJ&hl=zh-TW",
-      "crossref": "https://search.crossref.org/?q=Hou-Chin%20Cha",
       "openAlex": "https://openalex.org/A5067807539",
       "orcid": "https://orcid.org/0000-0002-5675-5213",
       "institution": "https://ror.org/04xgh4d03"
@@ -849,7 +821,6 @@
     "telephone": "",
     "orcid": "0000-0003-4401-3279",
     "links": {
-      "crossref": "https://search.crossref.org/?q=You-Ren%20Chen",
       "openAlex": "https://openalex.org/A5032842399",
       "orcid": "https://orcid.org/0000-0003-4401-3279",
       "institution": "https://ror.org/04xgh4d03"
@@ -881,7 +852,6 @@
     "orcid": "0000-0002-2682-9007",
     "links": {
       "personalWebsite": "http://www.polychem.suda.edu.cn",
-      "crossref": "https://search.crossref.org/?q=Zhi-Hao%20Huang",
       "openAlex": "https://openalex.org/A5025209912",
       "orcid": "https://orcid.org/0000-0002-2682-9007",
       "institution": "https://ror.org/04xgh4d03"
@@ -913,7 +883,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Yu-Cheng%20Zhang",
       "openAlex": "https://openalex.org/A5014323381",
       "institution": "https://ror.org/04xgh4d03"
     },
@@ -942,7 +911,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Hui-Chieh%20Lin",
       "institution": "https://ror.org/04xgh4d03"
     },
     "status": "verified",
@@ -972,7 +940,6 @@
       "personalWebsite": "https://www.linkedin.com/in/sie-rong-li-9657a916b/",
       "webOfScience": "https://www.webofscience.com/wos/author/record/AAV-7027-2021",
       "googleScholar": "https://scholar.google.com/citations?user=L7nADj8AAAAJ&hl=zh-TW",
-      "crossref": "https://search.crossref.org/?q=Sie-Rong%20Li",
       "openAlex": "https://openalex.org/A5033313741",
       "orcid": "https://orcid.org/0000-0002-2822-1185",
       "institution": "https://ror.org/04xjjma71"
@@ -1004,7 +971,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Ting-Jui%20Chang",
       "openAlex": "https://openalex.org/A5077927977",
       "institution": "https://ror.org/00zdnkx70"
     },
@@ -1033,7 +999,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Yi-Hong%20Liao",
       "institution": "https://ror.org/00zdnkx70"
     },
     "status": "verified",
@@ -1074,7 +1039,6 @@
     "orcid": "0000-0002-5074-8151",
     "links": {
       "personalWebsite": "https://sitiutarirahayu.blogspot.com/",
-      "crossref": "https://search.crossref.org/?q=Siti%20Utari%20Rahayu",
       "openAlex": "https://openalex.org/A5050368054",
       "orcid": "https://orcid.org/0000-0002-5074-8151",
       "institution": "https://ror.org/05vn3ca78"
@@ -1106,7 +1070,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Bo-Yu%20Han",
       "openAlex": "https://openalex.org/A5049027375",
       "institution": "https://ror.org/059dkdx38"
     },
@@ -1135,7 +1098,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Yun-Tou%20Lin",
       "institution": "https://ror.org/00q09pe49"
     },
     "status": "verified",
@@ -1165,7 +1127,6 @@
     "links": {
       "institution": "https://scholars.lib.ntu.edu.tw/cris/rp/rp07959",
       "scopus": "https://www.scopus.com/authid/detail.uri?authorId=55718418500",
-      "crossref": "https://search.crossref.org/?q=Pei-Ling%20Wang",
       "openAlex": "https://openalex.org/A5046804162",
       "orcid": "https://orcid.org/0000-0002-4392-3935"
     },
@@ -1195,7 +1156,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Zi-Ting%20Liao",
       "openAlex": "https://openalex.org/A5109623775",
       "institution": "https://ror.org/00q09pe49"
     },
@@ -1224,7 +1184,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Jhao-Yun%20Tsai",
       "institution": "https://ror.org/00q09pe49"
     },
     "status": "verified",
@@ -1251,7 +1210,6 @@
     "telephone": "",
     "orcid": "0000-0001-6807-5832",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Zhong-En%20Shi",
       "openAlex": "https://openalex.org/A5081698873",
       "orcid": "https://orcid.org/0000-0001-6807-5832",
       "institution": "https://ror.org/04xgh4d03"
@@ -1282,7 +1240,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Chia-Tse%20Hsu",
       "institution": "https://ror.org/00se2k293"
     },
     "status": "verified",
@@ -1311,7 +1268,6 @@
     "telephone": "",
     "orcid": "0000-0001-6336-6091",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Po-Shun%20Hsu",
       "openAlex": "https://openalex.org/A5044879049",
       "orcid": "https://orcid.org/0000-0001-6336-6091",
       "institution": "https://ror.org/02bn97g32"
@@ -1344,7 +1300,6 @@
     "orcid": "0000-0003-2129-2586",
     "links": {
       "scopus": "https://www.scopus.com/authid/detail.uri?authorId=24483294300",
-      "crossref": "https://search.crossref.org/?q=Po-Yuan%20Chen",
       "openAlex": "https://openalex.org/A5033532448",
       "orcid": "https://orcid.org/0000-0003-2129-2586",
       "institution": "https://ror.org/00q017g63"
@@ -1376,7 +1331,6 @@
     "orcid": "0000-0002-6416-4296",
     "links": {
       "scopus": "https://www.scopus.com/authid/detail.uri?authorId=23493072100",
-      "crossref": "https://search.crossref.org/?q=Jia-Zhen%20Li",
       "openAlex": "https://openalex.org/A5101405348",
       "orcid": "https://orcid.org/0000-0002-6416-4296",
       "institution": "https://ror.org/0152hn881"
@@ -1409,7 +1363,6 @@
     "links": {
       "personalWebsite": "https://acs.digitellinc.com/live/31/session/527509",
       "googleScholar": "https://scholar.google.com/citations?user=a_NI_NIAAAAJ&hl=zh-TW",
-      "crossref": "https://search.crossref.org/?q=Anjali%20Thakran",
       "openAlex": "https://openalex.org/A5044541891",
       "orcid": "https://orcid.org/0000-0003-1250-2166",
       "institution": "https://ror.org/05bxb3784"
@@ -1444,7 +1397,6 @@
     "links": {
       "webOfScience": "http://www.researcherid.com/rid/Y-5241-2018",
       "scopus": "https://www.scopus.com/authid/detail.uri?authorId=55721148900",
-      "crossref": "https://search.crossref.org/?q=Yu-Ting%20Chen",
       "openAlex": "https://openalex.org/A5100436559",
       "orcid": "https://orcid.org/0000-0001-9525-8407",
       "institution": "https://ror.org/0168r3w48"
@@ -1476,7 +1428,6 @@
     "telephone": "",
     "orcid": "0000-0002-3404-0807",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Yu-Sheng%20Li",
       "openAlex": "https://openalex.org/A5100614169",
       "orcid": "https://orcid.org/0000-0002-3404-0807",
       "institution": "https://ror.org/00f1zfq44"
@@ -1507,7 +1458,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Hao-Wei%20Yu",
       "openAlex": "https://openalex.org/A5111199242",
       "institution": "https://ror.org/05bqach95"
     },
@@ -1544,7 +1494,6 @@
     "links": {
       "scopus": "https://www.scopus.com/authid/detail.uri?authorId=21741765500",
       "googleScholar": "https://scholar.google.com/citations?user=HLNEIJUAAAAJ&hl=zh-TW",
-      "crossref": "https://search.crossref.org/?q=Chu-Chen%20Chueh",
       "openAlex": "https://openalex.org/A5060441783",
       "orcid": "https://orcid.org/0000-0003-1203-4227",
       "institution": "https://ror.org/05bqach95"
@@ -1576,7 +1525,6 @@
     "telephone": "",
     "orcid": "0000-0003-1536-6235",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Tzung-Fang%20Guo",
       "openAlex": "https://openalex.org/A5040915632",
       "orcid": "https://orcid.org/0000-0003-1536-6235",
       "institution": "https://ror.org/000zgvm20"
@@ -1611,7 +1559,6 @@
     "links": {
       "webOfScience": "https://www.webofscience.com/wos/author/record/C-2349-2009",
       "googleScholar": "https://scholar.google.com/citations?user=4kAUjCsAAAAJ&hl=zh-TW",
-      "crossref": "https://search.crossref.org/?q=Chih-Wei%20Chu",
       "openAlex": "https://openalex.org/A5029399992",
       "orcid": "https://orcid.org/0000-0003-0979-1729",
       "institution": "https://ror.org/00mjawt10"
@@ -1642,7 +1589,6 @@
     "telephone": "",
     "orcid": "0000-0002-6368-0141",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Leeyih%20Wang",
       "openAlex": "https://openalex.org/A5021834293",
       "orcid": "https://orcid.org/0000-0002-6368-0141",
       "institution": "https://ror.org/059dkdx38"
@@ -1679,7 +1625,6 @@
       "institution": "http://research.mc.ntu.edu.tw/web/Teacher!one.action?tid=1884",
       "scopus": "https://www.scopus.com/authid/detail.uri?authorId=56962715200",
       "googleScholar": "https://scholar.google.com/citations?user=h7cFu_wAAAAJ&hl=zh-TW",
-      "crossref": "https://search.crossref.org/?q=Kuo-Chuan%20Ho",
       "openAlex": "https://openalex.org/A5051193004",
       "orcid": "https://orcid.org/0000-0001-7501-1271"
     },
@@ -1720,7 +1665,6 @@
       "webOfScience": "http://www.researcherid.com/rid/P-7099-2015",
       "scopus": "https://www.scopus.com/authid/detail.uri?authorId=35290703500",
       "googleScholar": "https://scholar.google.com/citations?user=lO7CbYQAAAAJ&hl=zh-TW",
-      "crossref": "https://search.crossref.org/?q=Fang-Chung%20Chen",
       "openAlex": "https://openalex.org/A5046634428",
       "orcid": "https://orcid.org/0000-0002-4131-3893",
       "institution": "https://ror.org/00se2k293"
@@ -1761,7 +1705,6 @@
       "webOfScience": "https://www.webofscience.com/wos/author/record/HCH-2989-2022",
       "scopus": "https://www.scopus.com/authid/detail.uri?authorId=57220167820",
       "googleScholar": "https://scholar.google.com/citations?user=XwpHT88AAAAJ&hl=zh-TW",
-      "crossref": "https://search.crossref.org/?q=Chih-Ping%20Chen",
       "openAlex": "https://openalex.org/A5101571988",
       "orcid": "https://orcid.org/0000-0001-5219-8221",
       "institution": "https://ror.org/02pgvzy25"
@@ -1795,7 +1738,6 @@
     "orcid": "0000-0001-7000-6086",
     "links": {
       "googleScholar": "https://scholar.google.com/citations?user=Lql95bUAAAAJ&hl=zh-TW",
-      "crossref": "https://search.crossref.org/?q=Yian%20Tai",
       "openAlex": "https://openalex.org/A5058112195",
       "orcid": "https://orcid.org/0000-0001-7000-6086",
       "institution": "https://ror.org/00q09pe49"
@@ -1826,7 +1768,6 @@
     "telephone": "",
     "orcid": "0000-0002-4848-7335",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Chun-Ting%20Li",
       "openAlex": "https://openalex.org/A5016967438",
       "orcid": "https://orcid.org/0000-0002-4848-7335",
       "institution": "https://ror.org/00xyeez13"
@@ -1857,7 +1798,6 @@
     "telephone": "",
     "orcid": "0000-0002-8343-9179",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Ming-Way%20Lee",
       "openAlex": "https://openalex.org/A5044725298",
       "orcid": "https://orcid.org/0000-0002-8343-9179",
       "institution": "https://ror.org/05vn3ca78"
@@ -1892,7 +1832,6 @@
       "personalWebsite": "https://wangcl.wixsite.com/e-lab",
       "webOfScience": "http://www.researcherid.com/rid/N-3676-2013",
       "scopus": "https://www.scopus.com/authid/detail.uri?authorId=55913946100",
-      "crossref": "https://search.crossref.org/?q=Chih-Liang%20Wang",
       "openAlex": "https://openalex.org/A5023583881",
       "orcid": "https://orcid.org/0000-0002-0772-4285",
       "institution": "https://ror.org/00zdnkx70"
@@ -1930,7 +1869,6 @@
       "webOfScience": "http://www.researcherid.com/rid/C-6952-2015",
       "scopus": "https://www.scopus.com/authid/detail.uri?authorId=7404510318",
       "googleScholar": "https://scholar.google.com/citations?user=f_H1I1IAAAAJ&hl=zh-TW",
-      "crossref": "https://search.crossref.org/?q=Shih-Sheng%20Sun",
       "openAlex": "https://openalex.org/A5010356907",
       "orcid": "https://orcid.org/0000-0001-5515-5059",
       "institution": "https://ror.org/04xjjma71"
@@ -1964,7 +1902,6 @@
     "orcid": "0000-0002-8424-1914",
     "links": {
       "googleScholar": "https://scholar.google.com/citations?user=WwB-K-YAAAAJ&hl=zh-TW",
-      "crossref": "https://search.crossref.org/?q=Zong-Liang%20Tseng",
       "openAlex": "https://openalex.org/A5091777458",
       "orcid": "https://orcid.org/0000-0002-8424-1914",
       "institution": "https://ror.org/04xgh4d03"
@@ -1999,7 +1936,6 @@
     "links": {
       "scopus": "https://www.scopus.com/authid/detail.uri?authorId=8856139400",
       "webOfScience": "http://www.researcherid.com/rid/C-4359-2018",
-      "crossref": "https://search.crossref.org/?q=Yu-Ching%20Huang",
       "openAlex": "https://openalex.org/A5033862057",
       "orcid": "https://orcid.org/0000-0003-4772-8050",
       "institution": "https://ror.org/04xgh4d03"
@@ -2040,7 +1976,6 @@
     "links": {
       "scopus": "https://www.scopus.com/authid/detail.uri?authorId=7201966354",
       "googleScholar": "https://scholar.google.com/citations?user=fu8JeLwAAAAJ&hl=zh-TW",
-      "crossref": "https://search.crossref.org/?q=Pi-Tai%20Chou",
       "openAlex": "https://openalex.org/A5032004836",
       "orcid": "https://orcid.org/0000-0002-8925-7747",
       "institution": "https://ror.org/00q09pe49"
@@ -2071,7 +2006,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Chung-Wen%20Ko",
       "openAlex": "https://openalex.org/A5113538540",
       "institution": "https://ror.org/02pgrmd66"
     },
@@ -2102,7 +2036,6 @@
     "telephone": "",
     "orcid": "0000-0001-8540-5602",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Chun-Guey%20Wu",
       "openAlex": "https://openalex.org/A5079624088",
       "orcid": "https://orcid.org/0000-0001-8540-5602",
       "institution": "https://ror.org/00944ve71"
@@ -2132,9 +2065,7 @@
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {
-      "crossref": "https://search.crossref.org/?q=Jui-Ting%20Pan"
-    },
+    "links": {},
     "status": "verified",
     "verificationLevel": "Crossref DOI author match",
     "lastVerified": "",
@@ -2157,7 +2088,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Wen-Tzu%20Chen",
       "openAlex": "https://openalex.org/A5059357498",
       "institution": "https://ror.org/05kvm7n82"
     },
@@ -2187,7 +2117,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Chia-Hui%20Lin",
       "openAlex": "https://openalex.org/A5103379062",
       "institution": "https://ror.org/009knm296"
     },
@@ -2216,7 +2145,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Zhe-Wei%20Wang",
       "openAlex": "https://openalex.org/A5111612323",
       "institution": "https://ror.org/05kvm7n82"
     },
@@ -2245,7 +2173,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Ya-Ho%20Chang",
       "openAlex": "https://openalex.org/A5100882960",
       "institution": "https://ror.org/00d80zx46"
     },
@@ -2275,7 +2202,6 @@
     "telephone": "",
     "orcid": "0000-0001-7508-2088",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Shih-I%20Lu",
       "openAlex": "https://openalex.org/A5082345844",
       "orcid": "https://orcid.org/0000-0001-7508-2088",
       "institution": "https://ror.org/05kvm7n82"
@@ -2306,7 +2232,6 @@
     "telephone": "",
     "orcid": "0000-0002-4213-8580",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Hsiao-Chi%20Hsieh",
       "openAlex": "https://openalex.org/A5110454629",
       "orcid": "https://orcid.org/0000-0002-4213-8580",
       "institution": "https://ror.org/04tft4718"
@@ -2343,7 +2268,6 @@
       "personalWebsite": "https://www.researchgate.net/profile/Chih-Wei_Hu",
       "scopus": "https://www.scopus.com/authid/detail.uri?authorId=8392615600",
       "webOfScience": "http://www.researcherid.com/rid/H-8099-2018",
-      "crossref": "https://search.crossref.org/?q=Chih-Wei%20Hu",
       "openAlex": "https://openalex.org/A5027963671",
       "orcid": "https://orcid.org/0000-0001-9200-4444",
       "institution": "https://ror.org/0064kty71"
@@ -2377,7 +2301,6 @@
     "orcid": "0000-0002-8308-8946",
     "links": {
       "scopus": "https://www.scopus.com/authid/detail.uri?authorId=56180026400",
-      "crossref": "https://search.crossref.org/?q=Chih-Hung%20Chen",
       "openAlex": "https://openalex.org/A5100759684",
       "orcid": "https://orcid.org/0000-0002-8308-8946",
       "institution": "https://ror.org/00q09pe49"
@@ -2409,7 +2332,6 @@
     "orcid": "",
     "links": {
       "googleScholar": "https://scholar.google.com/citations?user=6qr6alkAAAAJ&hl=zh-TW",
-      "crossref": "https://search.crossref.org/?q=Jian-Ming%20Chiu",
       "openAlex": "https://openalex.org/A5110847715",
       "institution": "https://ror.org/00q09pe49"
     },
@@ -2438,7 +2360,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Kang-Ling%20Liau",
       "openAlex": "https://openalex.org/A5050364464",
       "institution": "https://ror.org/00944ve71"
     },
@@ -2467,7 +2388,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Yun-Shuo%20Liu",
       "openAlex": "https://openalex.org/A5109677492",
       "institution": "https://ror.org/05kvm7n82"
     },
@@ -2498,7 +2418,6 @@
     "links": {
       "personalWebsite": "http://www.ncyu.edu.tw/chem/content.aspx?site_content_sn=58714",
       "googleScholar": "https://scholar.google.com/citations?user=v4m0FJUAAAAJ&hl=zh-TW",
-      "crossref": "https://search.crossref.org/?q=Yan-Duo%20Lin",
       "openAlex": "https://openalex.org/A5055342027",
       "orcid": "https://orcid.org/0000-0002-1570-5842",
       "institution": "https://ror.org/05kvm7n82"
@@ -2534,7 +2453,6 @@
     "orcid": "0000-0002-5257-0238",
     "links": {
       "scopus": "https://www.scopus.com/authid/detail.uri?authorId=14051707300",
-      "crossref": "https://search.crossref.org/?q=Chia-Chi%20Chang",
       "openAlex": "https://openalex.org/A5049118103",
       "orcid": "https://orcid.org/0000-0002-5257-0238",
       "institution": "https://ror.org/05031qk94"
@@ -2568,7 +2486,6 @@
     "orcid": "0000-0003-1253-685X",
     "links": {
       "scopus": "https://www.scopus.com/authid/detail.uri?authorId=57222482444",
-      "crossref": "https://search.crossref.org/?q=Ting-Yu%20Yang",
       "openAlex": "https://openalex.org/A5012152145",
       "orcid": "https://orcid.org/0000-0003-1253-685X",
       "institution": "https://ror.org/05k3sdc46"
@@ -2598,9 +2515,7 @@
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {
-      "crossref": "https://search.crossref.org/?q=Chia%20Hui%20Hu"
-    },
+    "links": {},
     "status": "verified",
     "verificationLevel": "Crossref DOI author match",
     "lastVerified": "",
@@ -2622,7 +2537,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Wei-Chun%20Chou",
       "openAlex": "https://openalex.org/A5057420331",
       "institution": "https://ror.org/05kvm7n82"
     },
@@ -2653,7 +2567,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Mandy%20Mei-Ling%20Lee",
       "openAlex": "https://openalex.org/A5031589756",
       "institution": "https://ror.org/04xjjma71"
     },
@@ -2686,7 +2599,6 @@
     "links": {
       "webOfScience": "http://www.researcherid.com/rid/E-7134-2015",
       "googleScholar": "https://scholar.google.com/citations?user=rU0FZgkAAAAJ&hl=zh-TW",
-      "crossref": "https://search.crossref.org/?q=Yu-Tai%20Tao",
       "openAlex": "https://openalex.org/A5088139396",
       "orcid": "https://orcid.org/0000-0003-4507-0419",
       "institution": "https://ror.org/04xjjma71"
@@ -2718,7 +2630,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Ying-Kai%20Huang",
       "openAlex": "https://openalex.org/A5108488453",
       "institution": "https://ror.org/00d80zx46"
     },
@@ -2747,7 +2658,6 @@
     "telephone": "",
     "orcid": "0000-0002-6076-7129",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Pei-Yu%20Chen",
       "openAlex": "https://openalex.org/A5101699881",
       "orcid": "https://orcid.org/0000-0002-6076-7129",
       "institution": "https://ror.org/03efmqc40"
@@ -2780,7 +2690,6 @@
     "orcid": "0000-0002-0709-7306",
     "links": {
       "googleScholar": "https://scholar.google.com/citations?user=79zH24gAAAAJ&hl=zh-TW",
-      "crossref": "https://search.crossref.org/?q=Ting-Han%20Lin",
       "openAlex": "https://openalex.org/A5028335338",
       "orcid": "https://orcid.org/0000-0002-0709-7306",
       "institution": "https://ror.org/00d80zx46"
@@ -2813,7 +2722,6 @@
     "links": {
       "webOfScience": "https://www.webofscience.com/wos/author/record/MGV-4769-2025",
       "scopus": "https://www.scopus.com/authid/detail.uri?authorId=37029723400",
-      "crossref": "https://search.crossref.org/?q=Hsiao-Chien%20Chen",
       "openAlex": "https://openalex.org/A5023282498",
       "orcid": "https://orcid.org/0000-0001-6222-5393",
       "institution": "https://ror.org/00d80zx46"
@@ -2845,7 +2753,6 @@
     "orcid": "0000-0002-4631-6786",
     "links": {
       "googleScholar": "https://scholar.google.com/citations?user=gPbKnCkAAAAJ&hl=zh-TW",
-      "crossref": "https://search.crossref.org/?q=Abdul%20Shabir",
       "openAlex": "https://openalex.org/A5016345772",
       "orcid": "https://orcid.org/0000-0002-4631-6786",
       "institution": "https://ror.org/00d80zx46"
@@ -2887,7 +2794,6 @@
     "telephone": "",
     "orcid": "0000-0002-7146-4481",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Kun-Hua%20Tu",
       "openAlex": "https://openalex.org/A5056020685",
       "orcid": "https://orcid.org/0000-0002-7146-4481",
       "institution": "https://ror.org/00d80zx46"
@@ -2924,7 +2830,6 @@
       "institution": "https://pure.lib.cgu.edu.tw/en/persons/22de0b86-679d-4afa-ab7b-2a81d1238998",
       "scopus": "https://www.scopus.com/authid/detail.uri?authorId=7402818339",
       "googleScholar": "https://scholar.google.com/citations?user=nlnCwXQAAAAJ&hl=zh-TW",
-      "crossref": "https://search.crossref.org/?q=Cher%20Ming%20Tan",
       "openAlex": "https://openalex.org/A5045004316",
       "orcid": "https://orcid.org/0000-0002-6330-3899"
     },
@@ -2954,7 +2859,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Ruei-Cheng%20Fan",
       "openAlex": "https://openalex.org/A5111094725",
       "institution": "https://ror.org/00d80zx46"
     },
@@ -2985,7 +2889,6 @@
     "orcid": "",
     "links": {
       "googleScholar": "https://scholar.google.com/citations?user=1EfcF2UAAAAJ&hl=zh-TW",
-      "crossref": "https://search.crossref.org/?q=Nilim%20Akash%20Baruah",
       "openAlex": "https://openalex.org/A5092640461",
       "institution": "https://ror.org/009knm296"
     },
@@ -3015,7 +2918,6 @@
     "orcid": "0000-0003-0217-6205",
     "links": {
       "googleScholar": "https://scholar.google.com/citations?user=s5jm77kAAAAJ&hl=zh-TW",
-      "crossref": "https://search.crossref.org/?q=Gizachew%20Belay%20Adugna",
       "openAlex": "https://openalex.org/A5086482996",
       "orcid": "https://orcid.org/0000-0003-0217-6205",
       "institution": "https://ror.org/05kvm7n82"
@@ -3046,7 +2948,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Yu-Chien%20Hsieh",
       "openAlex": "https://openalex.org/A5113191589",
       "institution": "https://ror.org/05kvm7n82"
     },
@@ -3075,7 +2976,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=June%20Hung%20Yang",
       "openAlex": "https://openalex.org/A5081836582",
       "institution": "https://ror.org/05kvm7n82"
     },
@@ -3104,7 +3004,6 @@
     "telephone": "",
     "orcid": "0000-0001-9683-965X",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Dharuman%20Chandrasekaran",
       "openAlex": "https://openalex.org/A5036987336",
       "orcid": "https://orcid.org/0000-0001-9683-965X",
       "institution": "https://ror.org/02w8ws377"
@@ -3135,7 +3034,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Shin-Jyun%20Liou",
       "institution": "https://ror.org/00zhvdn11"
     },
     "status": "verified",
@@ -3162,7 +3060,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Lee-Che%20Lee",
       "openAlex": "https://openalex.org/A5092280508",
       "institution": "https://ror.org/009knm296"
     },
@@ -3192,7 +3089,6 @@
     "telephone": "",
     "orcid": "0000-0002-1857-9810",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Yi-Chen%20Wu",
       "openAlex": "https://openalex.org/A5028985032",
       "orcid": "https://orcid.org/0000-0002-1857-9810",
       "institution": "https://ror.org/03fcpsq87"
@@ -3231,7 +3127,6 @@
       "webOfScience": "http://www.researcherid.com/rid/I-8873-2016",
       "scopus": "https://www.scopus.com/authid/detail.uri?authorId=57652482100",
       "googleScholar": "https://scholar.google.com/citations?user=t-eTAHEAAAAJ&hl=zh-TW",
-      "crossref": "https://search.crossref.org/?q=Hsien-Hsin%20Chou",
       "openAlex": "https://openalex.org/A5065689738",
       "orcid": "https://orcid.org/0000-0003-1374-2284",
       "institution": "https://ror.org/03fcpsq87"
@@ -3264,7 +3159,6 @@
     "orcid": "0000-0001-9642-6302",
     "links": {
       "googleScholar": "https://scholar.google.com/citations?user=2GO79OgAAAAJ&hl=zh-TW",
-      "crossref": "https://search.crossref.org/?q=Yuan%20Jay%20Chang",
       "openAlex": "https://openalex.org/A5009272753",
       "orcid": "https://orcid.org/0000-0001-9642-6302",
       "institution": "https://ror.org/00zhvdn11"
@@ -3298,7 +3192,6 @@
     "orcid": "0000-0002-8014-8296",
     "links": {
       "scopus": "https://www.scopus.com/authid/detail.uri?authorId=56202671400",
-      "crossref": "https://search.crossref.org/?q=Lin%20Li",
       "openAlex": "https://openalex.org/A5100412901",
       "orcid": "https://orcid.org/0000-0002-8014-8296",
       "institution": "https://ror.org/03xjacd83"
@@ -3329,7 +3222,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Ming-Ling%20Cao",
       "openAlex": "https://openalex.org/A5102554286",
       "institution": "https://ror.org/00944ve71"
     },
@@ -3360,7 +3252,6 @@
     "orcid": "0000-0002-6025-0154",
     "links": {
       "googleScholar": "https://scholar.google.com/citations?user=H3MBI8EAAAAJ&hl=zh-TW",
-      "crossref": "https://search.crossref.org/?q=Hsin-Ming%20Cheng",
       "openAlex": "https://openalex.org/A5103077826",
       "orcid": "https://orcid.org/0000-0002-6025-0154",
       "institution": "https://ror.org/00ex2js61"
@@ -3393,7 +3284,6 @@
     "orcid": "0000-0003-1123-3291",
     "links": {
       "googleScholar": "https://scholar.google.com/citations?user=O7ph8LUAAAAJ&hl=zh-TW",
-      "crossref": "https://search.crossref.org/?q=Vembu%20Suryanarayanan",
       "openAlex": "https://openalex.org/A5042890065",
       "orcid": "https://orcid.org/0000-0003-1123-3291",
       "institution": "https://ror.org/01qek3q18"
@@ -3424,7 +3314,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Yao-Shen%20Huang",
       "openAlex": "https://openalex.org/A5063854259",
       "institution": "https://ror.org/00d80zx46"
     },
@@ -3456,7 +3345,6 @@
     "links": {
       "scopus": "https://www.scopus.com/authid/detail.uri?authorId=57224767733",
       "googleScholar": "https://scholar.google.com/citations?user=K3lxle8AAAAJ&hl=zh-TW",
-      "crossref": "https://search.crossref.org/?q=Fang-Ju%20Lin",
       "openAlex": "https://openalex.org/A5101562056",
       "orcid": "https://orcid.org/0000-0003-1038-0871",
       "institution": "https://ror.org/00k194y12"
@@ -3489,7 +3377,6 @@
     "links": {
       "webOfScience": "http://www.researcherid.com/rid/R-2390-2017",
       "googleScholar": "https://scholar.google.com/citations?user=Yv18JMAAAAAJ&hl=zh-TW",
-      "crossref": "https://search.crossref.org/?q=Seid%20Yimer%20Abate",
       "openAlex": "https://openalex.org/A5036381098",
       "orcid": "https://orcid.org/0000-0002-1183-0806",
       "institution": "https://ror.org/0155zta11"
@@ -3521,7 +3408,6 @@
     "orcid": "",
     "links": {
       "googleScholar": "https://scholar.google.com/citations?user=WA1cc0sAAAAJ&hl=zh-TW",
-      "crossref": "https://search.crossref.org/?q=Shun-Hsiang%20Chan",
       "openAlex": "https://openalex.org/A5112760217",
       "institution": "https://ror.org/009knm296"
     },
@@ -3550,7 +3436,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Chang-Chieh%20Ting",
       "openAlex": "https://openalex.org/A5047353842",
       "institution": "https://ror.org/00944ve71"
     },
@@ -3579,7 +3464,6 @@
     "telephone": "",
     "orcid": "0000-0002-5527-1962",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Jian-Ming%20Liao",
       "openAlex": "https://openalex.org/A5014654794",
       "orcid": "https://orcid.org/0000-0002-5527-1962",
       "institution": "https://ror.org/03fcpsq87"
@@ -3610,7 +3494,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Yu-Hsiang%20Tsai",
       "openAlex": "https://openalex.org/A5109959152",
       "institution": "https://ror.org/04gknbs13"
     },
@@ -3639,7 +3522,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Chao-Shian%20Wang",
       "openAlex": "https://openalex.org/A5065479165",
       "institution": "https://ror.org/05kvm7n82"
     },
@@ -3670,7 +3552,6 @@
     "orcid": "0000-0002-8948-6988",
     "links": {
       "scopus": "https://www.scopus.com/authid/detail.uri?authorId=57223193925",
-      "crossref": "https://search.crossref.org/?q=Yi-Jen%20Huang",
       "openAlex": "https://openalex.org/A5103278966",
       "orcid": "https://orcid.org/0000-0002-8948-6988",
       "institution": "https://ror.org/040bs6h16"
@@ -3702,7 +3583,6 @@
     "orcid": "0000-0002-4987-9429",
     "links": {
       "scopus": "https://www.scopus.com/authid/detail.uri?authorId=55325038600",
-      "crossref": "https://search.crossref.org/?q=Chien-Lin%20Huang",
       "openAlex": "https://openalex.org/A5060455058",
       "orcid": "https://orcid.org/0000-0002-4987-9429",
       "institution": "https://ror.org/05vhczg54"
@@ -3733,7 +3613,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Ruo-Yu%20Lai",
       "openAlex": "https://openalex.org/A5055638448",
       "institution": "https://ror.org/05vhczg54"
     },
@@ -3762,7 +3641,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Cheng-Han%20Zhuang",
       "openAlex": "https://openalex.org/A5005069594",
       "institution": "https://ror.org/05vhczg54"
     },
@@ -3792,7 +3670,6 @@
     "orcid": "0000-0002-3452-8108",
     "links": {
       "googleScholar": "https://scholar.google.com/citations?user=co2hrQ4AAAAJ&hl=zh-TW",
-      "crossref": "https://search.crossref.org/?q=Yin-Hsuan%20Chang",
       "openAlex": "https://openalex.org/A5090182923",
       "orcid": "https://orcid.org/0000-0002-3452-8108",
       "institution": "https://ror.org/00d80zx46"
@@ -3837,7 +3714,6 @@
     "orcid": "0000-0003-1074-8170",
     "links": {
       "scopus": "https://www.scopus.com/authid/detail.uri?authorId=55741998100",
-      "crossref": "https://search.crossref.org/?q=Chih-Yu%20Hsu",
       "openAlex": "https://openalex.org/A5111688404",
       "orcid": "https://orcid.org/0000-0003-1074-8170",
       "institution": "https://ror.org/02yq4ac41"
@@ -3869,7 +3745,6 @@
     "orcid": "0000-0003-4229-3027",
     "links": {
       "personalWebsite": "http://www.itri.org.tw/",
-      "crossref": "https://search.crossref.org/?q=Chia-Hua%20Lee",
       "openAlex": "https://openalex.org/A5001300090",
       "orcid": "https://orcid.org/0000-0003-4229-3027",
       "institution": "https://ror.org/02verss31"
@@ -3901,7 +3776,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Ming-De%20Lu",
       "openAlex": "https://openalex.org/A5043390506",
       "institution": "https://ror.org/05szzwt63"
     },
@@ -3937,7 +3811,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Wen-Feng%20Hsieh",
       "openAlex": "https://openalex.org/A5108372667",
       "institution": "https://dop.nycu.edu.tw/ch/people_ii.html?tID=112",
       "personalWebsite": "https://wfhsieh1955.blogspot.com/"
@@ -3970,7 +3843,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Jenn-Ming%20Wu",
       "openAlex": "https://openalex.org/A5109944881",
       "institution": "https://ror.org/00zdnkx70"
     },
@@ -3999,7 +3871,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Wen-Hsiang%20Yen",
       "openAlex": "https://openalex.org/A5012093855",
       "institution": "https://ror.org/05szzwt63"
     },
@@ -4028,7 +3899,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Hsiu-Fen%20Lin",
       "openAlex": "https://openalex.org/A5100842499",
       "institution": "https://ror.org/05szzwt63"
     },
@@ -4060,7 +3930,6 @@
       "personalWebsite": "https://www.ee.ntu.edu.tw/publist1.php?teacher_id=675",
       "scopus": "https://www.scopus.com/authid/detail.uri?authorId=7402517097",
       "googleScholar": "https://scholar.google.com/citations?user=a7tj-HgAAAAJ&hl=zh-TW",
-      "crossref": "https://search.crossref.org/?q=Hung-Yu%20Wei",
       "openAlex": "https://openalex.org/A5045339787",
       "orcid": "https://orcid.org/0000-0002-3116-306X",
       "institution": "https://ror.org/05bqach95"
@@ -4092,7 +3961,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Meng-Chin%20Tsui",
       "openAlex": "https://openalex.org/A5071290260",
       "institution": "https://ror.org/05szzwt63"
     },
@@ -4121,7 +3989,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Yung-Liang%20Tung",
       "openAlex": "https://openalex.org/A5110056189",
       "institution": "https://ror.org/05szzwt63"
     },
@@ -4152,7 +4019,6 @@
     "telephone": "",
     "orcid": "0000-0001-6039-242X",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Song-Yeu%20Tsai",
       "openAlex": "https://openalex.org/A5085196803",
       "orcid": "https://orcid.org/0000-0001-6039-242X",
       "institution": "https://ror.org/05szzwt63"
@@ -4183,7 +4049,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Shih-Chieh%20Liao",
       "openAlex": "https://openalex.org/A5102121934",
       "institution": "https://ror.org/00v408z34"
     },
@@ -4212,7 +4077,6 @@
     "telephone": "",
     "orcid": "0000-0002-1966-2931",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Ching-Hsu%20Chen",
       "openAlex": "https://openalex.org/A5048067834",
       "orcid": "https://orcid.org/0000-0002-1966-2931",
       "institution": "https://ror.org/04gknbs13"
@@ -4244,7 +4108,6 @@
     "telephone": "",
     "orcid": "",
     "links": {
-      "crossref": "https://search.crossref.org/?q=Po-Tse%20Tai",
       "openAlex": "https://openalex.org/A5111648315",
       "institution": "https://ror.org/00se2k293"
     },
