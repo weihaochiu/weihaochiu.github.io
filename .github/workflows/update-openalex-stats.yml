@@ -15,6 +15,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: update-openalex-metrics
@@ -45,6 +46,7 @@ jobs:
         run: python scripts/update_openalex_publications.py
 
       - name: Commit updated metrics when changed
+        id: commit-metrics
         run: |
           FILES=(
             data/openalex_metrics.json
@@ -52,6 +54,7 @@ jobs:
           )
           if [ -z "$(git status --porcelain -- "${FILES[@]}")" ]; then
             echo "OpenAlex metrics have not changed."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git config user.name "github-actions[bot]"
@@ -59,3 +62,10 @@ jobs:
           git add "${FILES[@]}"
           git commit -m "Update OpenAlex author and publication metrics"
           git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Rebuild publication HTML after metrics update
+        if: steps.commit-metrics.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run build-seo.yml --ref main
