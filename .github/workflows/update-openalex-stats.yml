@@ -18,7 +18,7 @@ permissions:
   actions: write
 
 concurrency:
-  group: update-openalex-metrics
+  group: website-content-write
   cancel-in-progress: false
 
 jobs:

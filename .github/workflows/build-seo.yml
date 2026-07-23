@@ -6,16 +6,22 @@ on:
     branches: [main]
     paths:
       - "data/publications.json"
+      - "data/authors.json"
       - "data/openalex_publication_metrics.json"
       - "data/crossref_publication_metrics.json"
       - "data/mendeley_metrics.json"
       - "data/unpaywall.json"
       - "data/publication_taxonomy.json"
       - "scripts/build_seo.py"
+      - "scripts/sync_publication_authors.py"
       - ".github/workflows/build-seo.yml"
 
 permissions:
   contents: write
+
+concurrency:
+  group: website-content-write
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -25,10 +31,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Synchronize publication authors
+        run: python scripts/sync_publication_authors.py
       - name: Generate v23 website files
         run: python scripts/build_seo.py
       - name: Verify generated publication metadata
         run: |
+          python scripts/sync_publication_authors.py --check
           python scripts/build_seo.py
           python - <<'PY'
           import json
@@ -60,7 +69,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -- '*.html' publications assets/js/app.js data/site_meta.json robots.txt sitemap.xml llms.txt
+          git add -- '*.html' publications assets/js/app.js data/authors.json data/site_meta.json robots.txt sitemap.xml llms.txt
           if git diff --cached --quiet; then
             echo "No generated changes."
           else
