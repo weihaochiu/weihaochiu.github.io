@@ -108,7 +108,7 @@ def replace_emails(text):
   text=text.replace('weihchiu@mail.cgu.edu.tw','weihao.chiu@gmail.com')
   return text
 
-def static_card(p):
+def static_card(p, openalex_record=None):
   doi=p.get('doi',''); slug=slugify(doi); local='publications/'+slug+'.html'
   authors=', '.join(author_html(a) for a in p.get('authors',[]))
   journal='<em>'+esc(p.get('journal'))+'</em>'
@@ -118,7 +118,9 @@ def static_card(p):
   labels=[p.get('topic')]+list(p.get('tags',[]))
   labels_html=''.join('<span class="card-label">'+esc(x)+'</span>' for x in labels if x)
   n=int(p.get('citationCount') or 0)
-  return '<article class="collection-card publication-card seo-static-card" id="pub-'+slug+'" itemscope itemtype="https://schema.org/ScholarlyArticle"><meta itemprop="identifier" content="'+esc(doi)+'"/><div class="card-heading"><h4 itemprop="headline"><a href="'+esc(local)+'">'+esc(p.get('title'))+'</a></h4><span class="date-badge" itemprop="datePublished">'+esc(p.get('date'))+'</span></div><p class="authors" itemprop="author">'+authors+'</p><p class="journal" itemprop="isPartOf">'+journal+'</p><div class="card-labels">'+labels_html+'</div><div class="card-actions"><a class="action" href="'+esc(p.get('doiUrl'))+'" target="_blank" rel="noopener">DOI ↗</a><a class="action" href="'+esc(local)+'">Abstract, Highlights &amp; GA →</a><span class="action">'+str(n)+' Google Scholar citation'+('s' if n!=1 else '')+'</span></div></article>'
+  openalex_record = openalex_record or {}
+  impact_html = ''.join(openalex_impact_actions(openalex_record)) if openalex_record.get('status') == 'verified' else ''
+  return '<article class="collection-card publication-card seo-static-card" id="pub-'+slug+'" itemscope itemtype="https://schema.org/ScholarlyArticle"><meta itemprop="identifier" content="'+esc(doi)+'"/><div class="card-heading"><h4 itemprop="headline"><a href="'+esc(local)+'">'+esc(p.get('title'))+'</a></h4><span class="date-badge" itemprop="datePublished">'+esc(p.get('date'))+'</span></div><p class="authors" itemprop="author">'+authors+'</p><p class="journal" itemprop="isPartOf">'+journal+'</p><div class="card-labels">'+labels_html+'</div><div class="card-actions"><a class="action" href="'+esc(p.get('doiUrl'))+'" target="_blank" rel="noopener">DOI ↗</a><a class="action" href="'+esc(local)+'">Abstract, Highlights &amp; GA →</a><span class="action">'+str(n)+' Google Scholar citation'+('s' if n!=1 else '')+'</span>'+impact_html+'</div></article>'
 
 def openalex_impact_actions(record):
   actions=[]
@@ -207,7 +209,7 @@ def main():
   for path in ROOT.glob('*.html'):
     text=path.read_text(encoding='utf-8'); text=replace_person_schema(text); text=replace_emails(text); path.write_text(text,encoding='utf-8')
   pubpath=ROOT/'publications.html'; text=clean_publications_head(pubpath.read_text(encoding='utf-8'))
-  cards='\n'.join(static_card(p) for p in pubs)
+  cards='\n'.join(static_card(p,openalex_records.get(str(p.get('doi') or '').strip().lower(),{})) for p in pubs)
   text=re.sub(r'<div id="collectionContainer">.*?</div>', '<div id="collectionContainer" data-static-publications="37">\n'+cards+'\n</div>', text, count=1, flags=re.S)
   graph={'@context':'https://schema.org','@graph':[PERSON]+[article_schema(p,SITE_URL+'/publications/'+slugify(p.get('doi',''))+'.html') for p in pubs]}
   schema='<script type="application/ld+json" id="publications-schema">'+json.dumps(graph,ensure_ascii=False,separators=(',',':'))+'</script>'
