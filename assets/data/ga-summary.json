@@ -1,65 +1,101 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-22T04:35:11Z",
+  "generatedAt": "2026-07-23T04:35:27Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 106,
-    "activeUsers": 6,
-    "sessions": 12,
+    "pageViews": 169,
+    "activeUsers": 21,
+    "sessions": 30,
     "engagementRate": 0.16666666666666666
   },
   "monthlyTrend": [
     {
       "month": "2026-07",
-      "pageViews": 106,
-      "activeUsers": 6
+      "pageViews": 169,
+      "activeUsers": 21
     }
   ],
   "topPages": [
     {
-      "title": "2T Perovskite Tandem Solar Cells in Space: Failure Mechanisms and Design Strategies | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-mtener-2026-102359.html",
-      "pageViews": 36,
+      "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
+      "path": "/index.html",
+      "pageViews": 42,
       "activeUsers": 2
     },
     {
-      "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
-      "path": "/index.html",
-      "pageViews": 31,
-      "activeUsers": 1
+      "title": "2T Perovskite Tandem Solar Cells in Space: Failure Mechanisms and Design Strategies | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-mtener-2026-102359.html",
+      "pageViews": 37,
+      "activeUsers": 3
     },
     {
       "title": "Publications | Wei-Hao Chiu",
       "path": "/publications.html",
-      "pageViews": 17,
-      "activeUsers": 4
+      "pageViews": 28,
+      "activeUsers": 7
+    },
+    {
+      "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
+      "path": "/",
+      "pageViews": 20,
+      "activeUsers": 16
     },
     {
       "title": "About | Wei-Hao Chiu",
       "path": "/about.html",
-      "pageViews": 5,
-      "activeUsers": 1
+      "pageViews": 8,
+      "activeUsers": 3
+    },
+    {
+      "title": "Patents | Wei-Hao Chiu",
+      "path": "/patents.html",
+      "pageViews": 7,
+      "activeUsers": 2
     },
     {
       "title": "Reliability enhancement of PVDF-HFP modified perovskite solar cells under synergistic space-relevant stress conditions | Wei-Hao Chiu",
       "path": "/publications/10-1016-j-cej-2026-177494.html",
       "pageViews": 5,
-      "activeUsers": 2
-    },
-    {
-      "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
-      "path": "/",
-      "pageViews": 5,
-      "activeUsers": 5
+      "activeUsers": 3
     },
     {
       "title": "MOF-& COF-integrated composite separators/membranes: innovations for sustainable and high-performance redox flow batteries | Wei-Hao Chiu",
       "path": "/publications/10-1016-j-seppur-2025-134157.html",
+      "pageViews": 4,
+      "activeUsers": 2
+    },
+    {
+      "title": "Research | Wei-Hao Chiu",
+      "path": "/research.html",
+      "pageViews": 4,
+      "activeUsers": 2
+    },
+    {
+      "title": "Round-Robin Interlaboratory Comparison of Large-Area Organic Thin-Film and Perovskite Solar Cells | Wei-Hao Chiu",
+      "path": "/publications/10-1002-solr-202500538.html",
+      "pageViews": 3,
+      "activeUsers": 1
+    },
+    {
+      "title": "Fused Dithienoheterocycle‐Based Hole‐Transporting Materials for Efficient Perovskite Solar Cells | Wei-Hao Chiu",
+      "path": "/publications/10-1002-asia-70245.html",
       "pageViews": 2,
       "activeUsers": 1
+    },
+    {
+      "title": "Research Projects | Wei-Hao Chiu",
+      "path": "/projects.html",
+      "pageViews": 2,
+      "activeUsers": 1
+    },
+    {
+      "title": "Synergistic preheating and moderate temperature liquid medium annealing for high performance perovskite solar cells | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-solener-2026-114430.html",
+      "pageViews": 2,
+      "activeUsers": 2
     },
     {
       "title": "Fluorinated Pentafulvalene‐Fused Hole‐Transporting Material Enhances the Performance of Perovskite Solar Cells with Efficiency Exceeding 23% | Wei-Hao Chiu",
@@ -72,69 +108,74 @@
       "path": "/publications/10-1039-d3cc04699k.html",
       "pageViews": 1,
       "activeUsers": 1
-    },
-    {
-      "title": "Patents | Wei-Hao Chiu",
-      "path": "/patents.html",
-      "pageViews": 1,
-      "activeUsers": 1
-    },
-    {
-      "title": "Research | Wei-Hao Chiu",
-      "path": "/research.html",
-      "pageViews": 1,
-      "activeUsers": 1
-    },
-    {
-      "title": "Synergistic preheating and moderate temperature liquid medium annealing for high performance perovskite solar cells | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-solener-2026-114430.html",
-      "pageViews": 1,
-      "activeUsers": 1
     }
   ],
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 10,
-      "activeUsers": 5
+      "sessions": 23,
+      "activeUsers": 18
     },
     {
       "channel": "Unassigned",
-      "sessions": 3,
-      "activeUsers": 3
+      "sessions": 10,
+      "activeUsers": 8
     },
     {
       "channel": "Organic Search",
-      "sessions": 2,
-      "activeUsers": 1
+      "sessions": 7,
+      "activeUsers": 4
     }
   ],
   "topCountries": [
     {
       "country": "Taiwan",
-      "activeUsers": 4,
-      "pageViews": 104
+      "activeUsers": 8,
+      "pageViews": 155
+    },
+    {
+      "country": "United States",
+      "activeUsers": 8,
+      "pageViews": 9
     },
     {
       "country": "(not set)",
       "activeUsers": 2,
       "pageViews": 2
+    },
+    {
+      "country": "Germany",
+      "activeUsers": 2,
+      "pageViews": 2
+    },
+    {
+      "country": "India",
+      "activeUsers": 1,
+      "pageViews": 1
     }
   ],
   "devices": [
     {
-      "device": "mobile",
-      "activeUsers": 4
+      "device": "desktop",
+      "activeUsers": 13
     },
     {
-      "device": "desktop",
-      "activeUsers": 2
+      "device": "mobile",
+      "activeUsers": 8
     }
   ],
   "academicEvents": [
     {
       "eventName": "doi_click",
-      "eventCount": 2
+      "eventCount": 10
+    },
+    {
+      "eventName": "patent_click",
+      "eventCount": 5
+    },
+    {
+      "eventName": "openalex_click",
+      "eventCount": 1
     }
   ]
 }
