@@ -82,2395 +82,4276 @@
   {
     "id": "rao-harini-srikanth",
     "name": "Rao, Harini Srikanth",
-    "displayName": "Rao, Harini Srikanth",
+    "displayName": "Harini Srikanth Rao",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Harini Srikanth Rao",
+      "H Rao"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Chang Gung University",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Harini%20Srikanth%20Rao%22",
+      "crossref": "https://search.crossref.org/?q=Harini%20Srikanth%20Rao",
+      "openAlex": "https://openalex.org/A5109226325",
+      "institution": "https://ror.org/00d80zx46"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5109226325",
+      "https://doi.org/10.1016/j.cej.2026.177494",
+      "https://ror.org/00d80zx46"
+    ]
   },
   {
     "id": "ahn-seoungjun",
     "name": "Ahn, Seoungjun",
-    "displayName": "Ahn, Seoungjun",
+    "displayName": "Seoungjun Ahn",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Seoungjun Ahn"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemical and Materials Engineering, Chang Gung University, Taoyuan 33302, Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0009-0003-3751-8583",
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Seoungjun%20Ahn%22",
+      "crossref": "https://search.crossref.org/?q=Seoungjun%20Ahn",
+      "openAlex": "https://openalex.org/A5032000460",
+      "orcid": "https://orcid.org/0009-0003-3751-8583",
+      "institution": "https://ror.org/00d80zx46"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5032000460",
+      "https://orcid.org/0009-0003-3751-8583",
+      "https://doi.org/10.1016/j.cej.2026.177494",
+      "https://ror.org/00d80zx46"
+    ]
   },
   {
     "id": "chu-wei-chen",
     "name": "Chu, Wei-Chen",
-    "displayName": "Chu, Wei-Chen",
+    "displayName": "Wei-Chen Chu",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Wei-Chen Chu"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemical and Materials Engineering College of Engineering Chang Gung University Taoyuan Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Wei-Chen%20Chu%22",
+      "crossref": "https://search.crossref.org/?q=Wei-Chen%20Chu",
+      "openAlex": "https://openalex.org/A5102526432",
+      "institution": "https://ror.org/00d80zx46"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5102526432",
+      "https://doi.org/10.1016/j.cej.2026.177494",
+      "https://ror.org/00d80zx46"
+    ]
   },
   {
     "id": "sung-yi-wen",
     "name": "Sung, Yi-Wen",
-    "displayName": "Sung, Yi-Wen",
+    "displayName": "Yi-Wen Sung",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Yi-Wen Sung"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Chang Gung University",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Yi-Wen%20Sung%22",
+      "crossref": "https://search.crossref.org/?q=Yi-Wen%20Sung",
+      "openAlex": "https://openalex.org/A5136426351",
+      "institution": "https://ror.org/00d80zx46"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5136426351",
+      "https://doi.org/10.1016/j.cej.2026.177494",
+      "https://ror.org/00d80zx46"
+    ]
   },
   {
     "id": "chen-gao",
     "name": "Chen, Gao",
-    "displayName": "Chen, Gao",
+    "displayName": "Gao Chen",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Gao Chen"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Tsinghua University",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0003-3865-0896",
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Gao%20Chen%22",
+      "crossref": "https://search.crossref.org/?q=Gao%20Chen",
+      "openAlex": "https://openalex.org/A5101469932",
+      "orcid": "https://orcid.org/0000-0003-3865-0896",
+      "institution": "https://ror.org/01m8p7q42"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5101469932",
+      "https://orcid.org/0000-0003-3865-0896",
+      "https://doi.org/10.1016/j.cej.2026.177494",
+      "https://ror.org/01m8p7q42"
+    ]
   },
   {
     "id": "chen-shih-hsuan",
     "name": "Chen, Shih-Hsuan",
-    "displayName": "Chen, Shih-Hsuan",
+    "displayName": "Shih-Hsuan Chen",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Shih-Hsuan Chen"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemical and Materials Engineering, Chang Gung University, Taoyuan 33302, Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0009-0009-7913-4397",
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Shih-Hsuan%20Chen%22",
+      "crossref": "https://search.crossref.org/?q=Shih-Hsuan%20Chen",
+      "openAlex": "https://openalex.org/A5102853858",
+      "orcid": "https://orcid.org/0009-0009-7913-4397",
+      "institution": "https://ror.org/00d80zx46"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5102853858",
+      "https://orcid.org/0009-0009-7913-4397",
+      "https://doi.org/10.1016/j.mtener.2026.102359",
+      "https://ror.org/00d80zx46"
+    ]
   },
   {
     "id": "wu-ming-chung",
     "name": "Wu, Ming-Chung",
-    "displayName": "Wu, Ming-Chung",
+    "displayName": "Ming-Chung Wu",
     "nameZh": "",
-    "aliases": [],
-    "role": "",
-    "currentPosition": "",
-    "affiliation": "",
+    "aliases": [
+      "Ming-Chung Wu",
+      "M C Wu",
+      "M WU"
+    ],
+    "role": "Professor",
+    "currentPosition": "Professor",
+    "affiliation": "Department of Chemical and Materials Engineering, Chang Gung University",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0002-3584-3871",
+    "links": {
+      "personalWebsite": "https://www.frontiergroup.tw/",
+      "scopus": "https://www.scopus.com/authid/detail.uri?authorId=14065507800",
+      "webOfScience": "http://www.researcherid.com/rid/D-9023-2011",
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Ming-Chung%20Wu%22",
+      "crossref": "https://search.crossref.org/?q=Ming-Chung%20Wu",
+      "openAlex": "https://openalex.org/A5086349184",
+      "orcid": "https://orcid.org/0000-0002-3584-3871",
+      "institution": "https://ror.org/00d80zx46"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5086349184",
+      "https://orcid.org/0000-0002-3584-3871",
+      "https://doi.org/10.1016/j.mtener.2026.102359",
+      "https://ror.org/00d80zx46",
+      "https://www.frontiergroup.tw/"
+    ]
   },
   {
     "id": "yu-wei-lun",
     "name": "Yu, Wei-Lun",
-    "displayName": "Yu, Wei-Lun",
+    "displayName": "Wei-Lun Yu",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Wei-Lun Yu"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemical and Materials Engineering National Central University Jhongli District Taoyuan City 320 Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0002-6253-576X",
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Wei-Lun%20Yu%22",
+      "crossref": "https://search.crossref.org/?q=Wei-Lun%20Yu",
+      "openAlex": "https://openalex.org/A5056818545",
+      "orcid": "https://orcid.org/0000-0002-6253-576X",
+      "institution": "https://ror.org/00944ve71"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5056818545",
+      "https://orcid.org/0000-0002-6253-576X",
+      "https://doi.org/10.1016/j.solener.2026.114430",
+      "https://ror.org/00944ve71"
+    ]
   },
   {
     "id": "hsu-jen-fu",
     "name": "Hsu, Jen-Fu",
-    "displayName": "Hsu, Jen-Fu",
+    "displayName": "Jen-Fu Hsu",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Jen-Fu Hsu",
+      "J. Hsu",
+      "J.-F. Hsu"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Division of Pediatric Neonatology, Linkou Chang Gung Memorial Hospital",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0003-0798-5378",
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Jen-Fu%20Hsu%22",
+      "crossref": "https://search.crossref.org/?q=Jen-Fu%20Hsu",
+      "openAlex": "https://openalex.org/A5054975977",
+      "orcid": "https://orcid.org/0000-0003-0798-5378",
+      "institution": "https://ror.org/04whfy367"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5054975977",
+      "https://orcid.org/0000-0003-0798-5378",
+      "https://doi.org/10.1016/j.solener.2026.114430",
+      "https://ror.org/04whfy367"
+    ]
   },
   {
     "id": "liu-ching-yuan",
     "name": "Liu, Ching-Yuan",
-    "displayName": "Liu, Ching-Yuan",
+    "displayName": "Ching-Yuan Liu",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Ching-Yuan Liu"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Chemical and Materials Engineering, National Central University",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0002-2569-8535",
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Ching-Yuan%20Liu%22",
+      "crossref": "https://search.crossref.org/?q=Ching-Yuan%20Liu",
+      "openAlex": "https://openalex.org/A5001310604",
+      "orcid": "https://orcid.org/0000-0002-2569-8535",
+      "institution": "https://ror.org/00944ve71"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5001310604",
+      "https://orcid.org/0000-0002-2569-8535",
+      "https://doi.org/10.1016/j.solener.2026.114430",
+      "https://ror.org/00944ve71"
+    ]
   },
   {
     "id": "shaheen-iqra",
     "name": "Shaheen, Iqra",
-    "displayName": "Shaheen, Iqra",
+    "displayName": "Iqra Shaheen",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Iqra Shaheen"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Chang Gung University",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0009-0000-7193-2962",
+    "links": {
+      "scopus": "https://www.scopus.com/authid/detail.uri?authorId=59970572100",
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Iqra%20Shaheen%22",
+      "crossref": "https://search.crossref.org/?q=Iqra%20Shaheen",
+      "openAlex": "https://openalex.org/A5121757482",
+      "orcid": "https://orcid.org/0009-0000-7193-2962",
+      "institution": "https://ror.org/00d80zx46"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5121757482",
+      "https://orcid.org/0009-0000-7193-2962",
+      "https://doi.org/10.1016/j.jpowsour.2025.239216",
+      "https://ror.org/00d80zx46"
+    ]
   },
   {
     "id": "lee-yu-xian",
     "name": "Lee, Yu-Xian",
-    "displayName": "Lee, Yu-Xian",
+    "displayName": "Yu-Xian Lee",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Yu-Xian Lee"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Ming Chi University of Technology; Chang Gung University; Chang Gung Memorial Hospital",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Yu-Xian%20Lee%22",
+      "crossref": "https://search.crossref.org/?q=Yu-Xian%20Lee",
+      "institution": "https://ror.org/04xgh4d03"
+    },
+    "status": "verified",
+    "verificationLevel": "Crossref DOI author match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://doi.org/10.1016/j.jpowsour.2025.239216",
+      "https://ror.org/04xgh4d03"
+    ]
   },
   {
     "id": "lee-bo-chin",
     "name": "Lee, Bo-Chin",
-    "displayName": "Lee, Bo-Chin",
+    "displayName": "Bo-Chin Lee",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Bo-Chin Lee"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemistry Chung Yuan Christian University Zhongli Taoyuan 320 Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Bo-Chin%20Lee%22",
+      "crossref": "https://search.crossref.org/?q=Bo-Chin%20Lee"
+    },
+    "status": "verified",
+    "verificationLevel": "Crossref DOI author match",
     "lastVerified": "",
     "sources": []
   },
   {
     "id": "kao-yu-hsin",
     "name": "Kao, Yu-Hsin",
-    "displayName": "Kao, Yu-Hsin",
+    "displayName": "Yu-Hsin Kao",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Yu-Hsin Kao"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemistry Chung Yuan Christian University Zhongli Taoyuan 320 Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Yu-Hsin%20Kao%22",
+      "crossref": "https://search.crossref.org/?q=Yu-Hsin%20Kao"
+    },
+    "status": "verified",
+    "verificationLevel": "Crossref DOI author match",
     "lastVerified": "",
     "sources": []
   },
   {
     "id": "hsu-jr-si",
     "name": "Hsu, Jr-Si",
-    "displayName": "Hsu, Jr-Si",
+    "displayName": "Jr-Si Hsu",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Jr-Si Hsu"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemistry Chung Yuan Christian University Zhongli Taoyuan 320 Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Jr-Si%20Hsu%22",
+      "crossref": "https://search.crossref.org/?q=Jr-Si%20Hsu",
+      "institution": "https://ror.org/02w8ws377"
+    },
+    "status": "verified",
+    "verificationLevel": "Crossref DOI author match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://doi.org/10.1002/asia.70245",
+      "https://ror.org/02w8ws377"
+    ]
   },
   {
     "id": "yen-yung-sheng",
     "name": "Yen, Yung-Sheng",
-    "displayName": "Yen, Yung-Sheng",
+    "displayName": "Yung-Sheng Yen",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Yung-Sheng Yen"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemistry Chung Yuan Christian University Zhongli Taoyuan 320 Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0001-6008-2878",
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Yung-Sheng%20Yen%22",
+      "crossref": "https://search.crossref.org/?q=Yung-Sheng%20Yen",
+      "openAlex": "https://openalex.org/A5090838798",
+      "orcid": "https://orcid.org/0000-0001-6008-2878",
+      "institution": "https://ror.org/02w8ws377"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5090838798",
+      "https://orcid.org/0000-0001-6008-2878",
+      "https://doi.org/10.1002/asia.70245",
+      "https://ror.org/02w8ws377"
+    ]
   },
   {
     "id": "chen-chia-yuan",
     "name": "Chen, Chia-Yuan",
-    "displayName": "Chen, Chia-Yuan",
+    "displayName": "Chia-Yuan Chen",
     "nameZh": "",
-    "aliases": [],
-    "role": "",
-    "currentPosition": "",
-    "affiliation": "",
+    "aliases": [
+      "Chia-Yuan Chen",
+      "C. Y. Chen"
+    ],
+    "role": "Assistant Professor",
+    "currentPosition": "Assistant Professor",
+    "affiliation": "Research Center for New Generation Photovoltaics (RCNPV) & Department of Chemistry, National Central University",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0002-7935-4076",
+    "links": {
+      "scopus": "https://www.scopus.com/authid/detail.uri?authorId=56996278700",
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Chia-Yuan%20Chen%22",
+      "crossref": "https://search.crossref.org/?q=Chia-Yuan%20Chen",
+      "openAlex": "https://openalex.org/A5101418642",
+      "orcid": "https://orcid.org/0000-0002-7935-4076",
+      "institution": "https://ror.org/01b8kcc49"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5101418642",
+      "https://orcid.org/0000-0002-7935-4076",
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/01b8kcc49"
+    ]
   },
   {
     "id": "chang-yu-fan",
     "name": "Chang, Yu-Fan",
-    "displayName": "Chang, Yu-Fan",
+    "displayName": "Yu-Fan Chang",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Yu-Fan Chang"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Ways Technical Corp. Ltd. Taoyuan Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Yu-Fan%20Chang%22",
+      "crossref": "https://search.crossref.org/?q=Yu-Fan%20Chang",
+      "openAlex": "https://openalex.org/A5103847969",
+      "institution": "https://ror.org/02pgrmd66"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5103847969",
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/02pgrmd66"
+    ]
   },
   {
     "id": "shih-yen-chen",
     "name": "Shih, Yen-Chen",
-    "displayName": "Shih, Yen-Chen",
+    "displayName": "Yen-Chen Shih",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Yen-Chen Shih"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Ways Technical Corp. Ltd. Taoyuan Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Yen-Chen%20Shih%22",
+      "crossref": "https://search.crossref.org/?q=Yen-Chen%20Shih",
+      "openAlex": "https://openalex.org/A5101033238",
+      "institution": "https://ror.org/02pgrmd66"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5101033238",
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/02pgrmd66"
+    ]
   },
   {
     "id": "liu-ying-chuan",
     "name": "Liu, Ying-Chuan",
-    "displayName": "Liu, Ying-Chuan",
+    "displayName": "Ying-Chuan Liu",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Ying-Chuan Liu"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemistry National Central University Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Ying-Chuan%20Liu%22",
+      "crossref": "https://search.crossref.org/?q=Ying-Chuan%20Liu",
+      "openAlex": "https://openalex.org/A5038281969",
+      "institution": "https://ror.org/00944ve71"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5038281969",
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/00944ve71"
+    ]
   },
   {
     "id": "chiu-chi-feng",
     "name": "Chiu, Chi-Feng",
-    "displayName": "Chiu, Chi-Feng",
+    "displayName": "Chi-Feng Chiu",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Chi-Feng Chiu"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemistry National Central University Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Chi-Feng%20Chiu%22",
+      "crossref": "https://search.crossref.org/?q=Chi-Feng%20Chiu",
+      "openAlex": "https://openalex.org/A5015074030",
+      "institution": "https://ror.org/00944ve71"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5015074030",
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/00944ve71"
+    ]
   },
   {
     "id": "dinarlita-rahma-rahayu",
     "name": "Dinarlita, Rahma Rahayu",
-    "displayName": "Dinarlita, Rahma Rahayu",
+    "displayName": "Rahma Rahayu Dinarlita",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Rahma Rahayu Dinarlita"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemistry National Central University Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Rahma%20Rahayu%20Dinarlita%22",
+      "crossref": "https://search.crossref.org/?q=Rahma%20Rahayu%20Dinarlita",
+      "openAlex": "https://openalex.org/A5119935360",
+      "institution": "https://ror.org/00944ve71"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5119935360",
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/00944ve71"
+    ]
   },
   {
     "id": "tsai-tsung-yu",
     "name": "Tsai, Tsung-Yu",
-    "displayName": "Tsai, Tsung-Yu",
+    "displayName": "Tsung-Yu Tsai",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Tsung-Yu Tsai",
+      "T Y Tsai"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemistry National Central University Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0002-3387-3516",
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Tsung-Yu%20Tsai%22",
+      "crossref": "https://search.crossref.org/?q=Tsung-Yu%20Tsai",
+      "openAlex": "https://openalex.org/A5002357272",
+      "orcid": "https://orcid.org/0000-0002-3387-3516",
+      "institution": "https://ror.org/00d80zx46"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5002357272",
+      "https://orcid.org/0000-0002-3387-3516",
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/00d80zx46"
+    ]
   },
   {
     "id": "hung-chieh-ming",
     "name": "Hung, Chieh-Ming",
-    "displayName": "Hung, Chieh-Ming",
+    "displayName": "Chieh-Ming Hung",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Chieh-Ming Hung"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemistry Center for Emerging Materials and Advanced Devices National Taiwan University Taipei Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Chieh-Ming%20Hung%22",
+      "crossref": "https://search.crossref.org/?q=Chieh-Ming%20Hung",
+      "openAlex": "https://openalex.org/A5111140621",
+      "institution": "https://ror.org/05bqach95"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5111140621",
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/05bqach95"
+    ]
   },
   {
     "id": "cha-hou-chin",
     "name": "Cha, Hou-Chin",
-    "displayName": "Cha, Hou-Chin",
+    "displayName": "Hou-Chin Cha",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Hou-Chin Cha",
+      "H CHA",
+      "H.C. Cha"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Materials Engineering Ming Chi University of Technology New Taipei City Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0002-5675-5213",
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Hou-Chin%20Cha%22",
+      "crossref": "https://search.crossref.org/?q=Hou-Chin%20Cha",
+      "openAlex": "https://openalex.org/A5067807539",
+      "orcid": "https://orcid.org/0000-0002-5675-5213",
+      "institution": "https://ror.org/04xgh4d03"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5067807539",
+      "https://orcid.org/0000-0002-5675-5213",
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/04xgh4d03"
+    ]
   },
   {
     "id": "chen-you-ren",
     "name": "Chen, You-Ren",
-    "displayName": "Chen, You-Ren",
+    "displayName": "You-Ren Chen",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "You-Ren Chen"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Materials Engineering Ming Chi University of Technology New Taipei City Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0003-4401-3279",
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22You-Ren%20Chen%22",
+      "crossref": "https://search.crossref.org/?q=You-Ren%20Chen",
+      "openAlex": "https://openalex.org/A5032842399",
+      "orcid": "https://orcid.org/0000-0003-4401-3279",
+      "institution": "https://ror.org/04xgh4d03"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5032842399",
+      "https://orcid.org/0000-0003-4401-3279",
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/04xgh4d03"
+    ]
   },
   {
     "id": "huang-zhi-hao",
     "name": "Huang, Zhi-Hao",
-    "displayName": "Huang, Zhi-Hao",
+    "displayName": "Zhi-Hao Huang",
     "nameZh": "",
-    "aliases": [],
-    "role": "",
-    "currentPosition": "",
-    "affiliation": "",
+    "aliases": [
+      "Zhi-Hao Huang"
+    ],
+    "role": "Associate Research Professor",
+    "currentPosition": "Associate Research Professor",
+    "affiliation": "Department of Polymer Science and EngineeringCollege of Chemistry, Chemical Engineering and Material Science, Soochow University",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0002-2682-9007",
+    "links": {
+      "personalWebsite": "http://www.polychem.suda.edu.cn",
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Zhi-Hao%20Huang%22",
+      "crossref": "https://search.crossref.org/?q=Zhi-Hao%20Huang",
+      "openAlex": "https://openalex.org/A5025209912",
+      "orcid": "https://orcid.org/0000-0002-2682-9007",
+      "institution": "https://ror.org/04xgh4d03"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5025209912",
+      "https://orcid.org/0000-0002-2682-9007",
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/04xgh4d03",
+      "http://www.polychem.suda.edu.cn"
+    ]
   },
   {
     "id": "zhang-yu-cheng",
     "name": "Zhang, Yu-Cheng",
-    "displayName": "Zhang, Yu-Cheng",
+    "displayName": "Yu-Cheng Zhang",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Yu-Cheng Zhang"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Organic Electronics Research Center Ming Chi University of Technology New Taipei City Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Yu-Cheng%20Zhang%22",
+      "crossref": "https://search.crossref.org/?q=Yu-Cheng%20Zhang",
+      "openAlex": "https://openalex.org/A5014323381",
+      "institution": "https://ror.org/04xgh4d03"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5014323381",
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/04xgh4d03"
+    ]
   },
   {
     "id": "lin-hui-chieh",
     "name": "Lin, Hui-Chieh",
-    "displayName": "Lin, Hui-Chieh",
+    "displayName": "Hui-Chieh Lin",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Hui-Chieh Lin"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Organic Electronics Research Center Ming Chi University of Technology New Taipei City Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Hui-Chieh%20Lin%22",
+      "crossref": "https://search.crossref.org/?q=Hui-Chieh%20Lin",
+      "institution": "https://ror.org/04xgh4d03"
+    },
+    "status": "verified",
+    "verificationLevel": "Crossref DOI author match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/04xgh4d03"
+    ]
   },
   {
     "id": "li-sie-rong",
     "name": "Li, Sie-Rong",
-    "displayName": "Li, Sie-Rong",
+    "displayName": "Sie-Rong Li",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Sie-Rong Li"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Institute of Chemistry Academia Sinica",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0002-2822-1185",
+    "links": {
+      "personalWebsite": "https://www.linkedin.com/in/sie-rong-li-9657a916b/",
+      "webOfScience": "https://www.webofscience.com/wos/author/record/AAV-7027-2021",
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Sie-Rong%20Li%22",
+      "crossref": "https://search.crossref.org/?q=Sie-Rong%20Li",
+      "openAlex": "https://openalex.org/A5033313741",
+      "orcid": "https://orcid.org/0000-0002-2822-1185",
+      "institution": "https://ror.org/04xjjma71"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5033313741",
+      "https://orcid.org/0000-0002-2822-1185",
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/04xjjma71",
+      "https://www.linkedin.com/in/sie-rong-li-9657a916b/"
+    ]
   },
   {
     "id": "chang-ting-jui",
     "name": "Chang, Ting-Jui",
-    "displayName": "Chang, Ting-Jui",
+    "displayName": "Ting-Jui Chang",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Ting-Jui Chang"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Materials Science and Engineering National Tsing Hua University Hsinchu Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Ting-Jui%20Chang%22",
+      "crossref": "https://search.crossref.org/?q=Ting-Jui%20Chang",
+      "openAlex": "https://openalex.org/A5077927977",
+      "institution": "https://ror.org/00zdnkx70"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5077927977",
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/00zdnkx70"
+    ]
   },
   {
     "id": "liao-yi-hong",
     "name": "Liao, Yi-Hong",
-    "displayName": "Liao, Yi-Hong",
+    "displayName": "Yi-Hong Liao",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Yi-Hong Liao"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Materials Science and Engineering National Tsing Hua University Hsinchu Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Yi-Hong%20Liao%22",
+      "crossref": "https://search.crossref.org/?q=Yi-Hong%20Liao",
+      "institution": "https://ror.org/00zdnkx70"
+    },
+    "status": "verified",
+    "verificationLevel": "Crossref DOI author match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/00zdnkx70"
+    ]
   },
   {
     "id": "rahayu-siti-utari",
     "name": "Rahayu, Siti Utari",
-    "displayName": "Rahayu, Siti Utari",
+    "displayName": "Siti Utari Rahayu",
     "nameZh": "",
-    "aliases": [],
-    "role": "",
-    "currentPosition": "",
-    "affiliation": "",
+    "aliases": [
+      "Siti Utari Rahayu",
+      "Rahayu, S.",
+      "S Rahayu",
+      "S U Rahayu",
+      "Siti Rahayu"
+    ],
+    "role": "Lecturer",
+    "currentPosition": "Lecturer",
+    "affiliation": "Physics, Universitas Sumatera Utara",
     "affiliationZh": "",
-    "email": [],
+    "email": [
+      {
+        "address": "sitiutarirahayu@yahoo.co.id",
+        "label": "Public Email"
+      },
+      {
+        "address": "siti.utari@usu.ac.id",
+        "label": "Public Email"
+      }
+    ],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0002-5074-8151",
+    "links": {
+      "personalWebsite": "https://sitiutarirahayu.blogspot.com/",
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Siti%20Utari%20Rahayu%22",
+      "crossref": "https://search.crossref.org/?q=Siti%20Utari%20Rahayu",
+      "openAlex": "https://openalex.org/A5050368054",
+      "orcid": "https://orcid.org/0000-0002-5074-8151",
+      "institution": "https://ror.org/05vn3ca78"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5050368054",
+      "https://orcid.org/0000-0002-5074-8151",
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/05vn3ca78",
+      "https://sitiutarirahayu.blogspot.com/"
+    ]
   },
   {
     "id": "han-bo-yu",
     "name": "Han, Bo-Yu",
-    "displayName": "Han, Bo-Yu",
+    "displayName": "Bo-Yu Han",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Bo-Yu Han"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemistry National Taiwan Normal University Taipei Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Bo-Yu%20Han%22",
+      "crossref": "https://search.crossref.org/?q=Bo-Yu%20Han",
+      "openAlex": "https://openalex.org/A5049027375",
+      "institution": "https://ror.org/059dkdx38"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5049027375",
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/059dkdx38"
+    ]
   },
   {
     "id": "lin-yun-tou",
     "name": "Lin, Yun-Tou",
-    "displayName": "Lin, Yun-Tou",
+    "displayName": "Yun-Tou Lin",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Yun-Tou Lin"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemical Engineering National Taiwan University of Science and Technology Taipei Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Yun-Tou%20Lin%22",
+      "crossref": "https://search.crossref.org/?q=Yun-Tou%20Lin",
+      "institution": "https://ror.org/00q09pe49"
+    },
+    "status": "verified",
+    "verificationLevel": "Crossref DOI author match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/00q09pe49"
+    ]
   },
   {
     "id": "wang-pei-ling",
     "name": "Wang, Pei-Ling",
-    "displayName": "Wang, Pei-Ling",
-    "nameZh": "",
-    "aliases": [],
+    "displayName": "Pei-Ling Wang",
+    "nameZh": "王珮玲",
+    "aliases": [
+      "Pei-Ling Wang",
+      "P.-L. Wang"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemical Engineering National Taiwan University of Science and Technology Taipei Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0002-4392-3935",
+    "links": {
+      "institution": "https://scholars.lib.ntu.edu.tw/cris/rp/rp07959",
+      "scopus": "https://www.scopus.com/authid/detail.uri?authorId=55718418500",
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Pei-Ling%20Wang%22",
+      "crossref": "https://search.crossref.org/?q=Pei-Ling%20Wang",
+      "openAlex": "https://openalex.org/A5046804162",
+      "orcid": "https://orcid.org/0000-0002-4392-3935"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5046804162",
+      "https://orcid.org/0000-0002-4392-3935",
+      "https://doi.org/10.1002/solr.202500538",
+      "https://scholars.lib.ntu.edu.tw/cris/rp/rp07959"
+    ]
   },
   {
     "id": "liao-zi-ting",
     "name": "Liao, Zi-Ting",
-    "displayName": "Liao, Zi-Ting",
+    "displayName": "Zi-Ting Liao",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Zi-Ting Liao"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemical Engineering National Taiwan University of Science and Technology Taipei Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Zi-Ting%20Liao%22",
+      "crossref": "https://search.crossref.org/?q=Zi-Ting%20Liao",
+      "openAlex": "https://openalex.org/A5109623775",
+      "institution": "https://ror.org/00q09pe49"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5109623775",
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/00q09pe49"
+    ]
   },
   {
     "id": "tsai-jhao-yun",
     "name": "Tsai, Jhao-Yun",
-    "displayName": "Tsai, Jhao-Yun",
+    "displayName": "Jhao-Yun Tsai",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Jhao-Yun Tsai"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemical Engineering National Taiwan University of Science and Technology Taipei Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Jhao-Yun%20Tsai%22",
+      "crossref": "https://search.crossref.org/?q=Jhao-Yun%20Tsai",
+      "institution": "https://ror.org/00q09pe49"
+    },
+    "status": "verified",
+    "verificationLevel": "Crossref DOI author match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/00q09pe49"
+    ]
   },
   {
     "id": "shi-zhong-en",
     "name": "Shi, Zhong-En",
-    "displayName": "Shi, Zhong-En",
+    "displayName": "Zhong-En Shi",
     "nameZh": "",
-    "aliases": [],
-    "role": "",
-    "currentPosition": "",
-    "affiliation": "",
+    "aliases": [
+      "Zhong-En Shi"
+    ],
+    "role": "Postdoc",
+    "currentPosition": "Postdoc",
+    "affiliation": "Department of Materials Engineering, Ming Chi University of Technology",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0001-6807-5832",
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Zhong-En%20Shi%22",
+      "crossref": "https://search.crossref.org/?q=Zhong-En%20Shi",
+      "openAlex": "https://openalex.org/A5081698873",
+      "orcid": "https://orcid.org/0000-0001-6807-5832",
+      "institution": "https://ror.org/04xgh4d03"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5081698873",
+      "https://orcid.org/0000-0001-6807-5832",
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/04xgh4d03"
+    ]
   },
   {
     "id": "hsu-chia-tse",
     "name": "Hsu, Chia-Tse",
-    "displayName": "Hsu, Chia-Tse",
+    "displayName": "Chia-Tse Hsu",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Chia-Tse Hsu"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Institute of Electro‐Optical Engineering National Yang Ming Chiao Tung University Hsinchu Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Chia-Tse%20Hsu%22",
+      "crossref": "https://search.crossref.org/?q=Chia-Tse%20Hsu",
+      "institution": "https://ror.org/00se2k293"
+    },
+    "status": "verified",
+    "verificationLevel": "Crossref DOI author match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/00se2k293"
+    ]
   },
   {
     "id": "hsu-po-shun",
     "name": "Hsu, Po-Shun",
-    "displayName": "Hsu, Po-Shun",
+    "displayName": "Po-Shun Hsu",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Po-Shun Hsu",
+      "P. Hsu",
+      "P.-S. Hsu"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemical Engineering Institute of Polymer Science and Engineering and Advanced Research Center for Green Materials Science and Technology National Taiwan University Taipei Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0001-6336-6091",
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Po-Shun%20Hsu%22",
+      "crossref": "https://search.crossref.org/?q=Po-Shun%20Hsu",
+      "openAlex": "https://openalex.org/A5044879049",
+      "orcid": "https://orcid.org/0000-0001-6336-6091",
+      "institution": "https://ror.org/02bn97g32"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5044879049",
+      "https://orcid.org/0000-0001-6336-6091",
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/02bn97g32"
+    ]
   },
   {
     "id": "chen-po-yuan",
     "name": "Chen, Po-Yuan",
-    "displayName": "Chen, Po-Yuan",
+    "displayName": "Po-Yuan Chen",
     "nameZh": "",
-    "aliases": [],
-    "role": "",
-    "currentPosition": "",
-    "affiliation": "",
+    "aliases": [
+      "Po-Yuan Chen",
+      "Po Y. Chen"
+    ],
+    "role": "Associate Professor",
+    "currentPosition": "Associate Professor",
+    "affiliation": "Biological Science and Technology, China Medical University",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0003-2129-2586",
+    "links": {
+      "scopus": "https://www.scopus.com/authid/detail.uri?authorId=24483294300",
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Po-Yuan%20Chen%22",
+      "crossref": "https://search.crossref.org/?q=Po-Yuan%20Chen",
+      "openAlex": "https://openalex.org/A5033532448",
+      "orcid": "https://orcid.org/0000-0003-2129-2586",
+      "institution": "https://ror.org/00q017g63"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5033532448",
+      "https://orcid.org/0000-0003-2129-2586",
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/00q017g63"
+    ]
   },
   {
     "id": "li-jia-zhen",
     "name": "Li, Jia-Zhen",
-    "displayName": "Li, Jia-Zhen",
+    "displayName": "Jia-Zhen Li",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Jia-Zhen Li"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Orthopaedic Surgery, Zhengzhou University First Affiliated Hospital",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0002-6416-4296",
+    "links": {
+      "scopus": "https://www.scopus.com/authid/detail.uri?authorId=23493072100",
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Jia-Zhen%20Li%22",
+      "crossref": "https://search.crossref.org/?q=Jia-Zhen%20Li",
+      "openAlex": "https://openalex.org/A5101405348",
+      "orcid": "https://orcid.org/0000-0002-6416-4296",
+      "institution": "https://ror.org/0152hn881"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5101405348",
+      "https://orcid.org/0000-0002-6416-4296",
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/0152hn881"
+    ]
   },
   {
     "id": "thakran-anjali",
     "name": "Thakran, Anjali",
-    "displayName": "Thakran, Anjali",
+    "displayName": "Anjali Thakran",
     "nameZh": "",
-    "aliases": [],
-    "role": "",
-    "currentPosition": "",
-    "affiliation": "",
+    "aliases": [
+      "Anjali Thakran"
+    ],
+    "role": "Post-doctoral Fellow",
+    "currentPosition": "Post-doctoral Fellow",
+    "affiliation": "Research Center for Applied Sciences, Academia Sinica",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0003-1250-2166",
+    "links": {
+      "personalWebsite": "https://acs.digitellinc.com/live/31/session/527509",
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Anjali%20Thakran%22",
+      "crossref": "https://search.crossref.org/?q=Anjali%20Thakran",
+      "openAlex": "https://openalex.org/A5044541891",
+      "orcid": "https://orcid.org/0000-0003-1250-2166",
+      "institution": "https://ror.org/05bxb3784"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5044541891",
+      "https://orcid.org/0000-0003-1250-2166",
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/05bxb3784",
+      "https://acs.digitellinc.com/live/31/session/527509"
+    ]
   },
   {
     "id": "chen-yu-ting",
     "name": "Chen, Yu-Ting",
-    "displayName": "Chen, Yu-Ting",
+    "displayName": "Yu-Ting Chen",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Yu-Ting Chen",
+      "Y.-T. Chen"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "University of California San Diego",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0001-9525-8407",
+    "links": {
+      "webOfScience": "http://www.researcherid.com/rid/Y-5241-2018",
+      "scopus": "https://www.scopus.com/authid/detail.uri?authorId=55721148900",
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Yu-Ting%20Chen%22",
+      "crossref": "https://search.crossref.org/?q=Yu-Ting%20Chen",
+      "openAlex": "https://openalex.org/A5100436559",
+      "orcid": "https://orcid.org/0000-0001-9525-8407",
+      "institution": "https://ror.org/0168r3w48"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5100436559",
+      "https://orcid.org/0000-0001-9525-8407",
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/0168r3w48"
+    ]
   },
   {
     "id": "li-yu-sheng",
     "name": "Li, Yu-Sheng",
-    "displayName": "Li, Yu-Sheng",
-    "nameZh": "",
-    "aliases": [],
-    "role": "",
-    "currentPosition": "",
-    "affiliation": "",
+    "displayName": "Yu-Sheng Li",
+    "nameZh": "李宇晟",
+    "aliases": [
+      "Yu-Sheng Li",
+      "Y S Li"
+    ],
+    "role": "Attending Doctor",
+    "currentPosition": "Attending Doctor",
+    "affiliation": "Orthopedics, Central South University",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0002-3404-0807",
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Yu-Sheng%20Li%22",
+      "crossref": "https://search.crossref.org/?q=Yu-Sheng%20Li",
+      "openAlex": "https://openalex.org/A5100614169",
+      "orcid": "https://orcid.org/0000-0002-3404-0807",
+      "institution": "https://ror.org/00f1zfq44"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5100614169",
+      "https://orcid.org/0000-0002-3404-0807",
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/00f1zfq44"
+    ]
   },
   {
     "id": "yu-hao-wei",
     "name": "Yu, Hao-Wei",
-    "displayName": "Yu, Hao-Wei",
+    "displayName": "Hao-Wei Yu",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Hao-Wei Yu"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemical Engineering National Taiwan University Taipei Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Hao-Wei%20Yu%22",
+      "crossref": "https://search.crossref.org/?q=Hao-Wei%20Yu",
+      "openAlex": "https://openalex.org/A5111199242",
+      "institution": "https://ror.org/05bqach95"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5111199242",
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/05bqach95"
+    ]
   },
   {
     "id": "chueh-chu-chen",
     "name": "Chueh, Chu-Chen",
-    "displayName": "Chueh, Chu-Chen",
+    "displayName": "Chu-Chen Chueh",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Chu-Chen Chueh",
+      "C.-C. Chueh"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemical Engineering National Taiwan University Taipei Taiwan",
     "affiliationZh": "",
-    "email": [],
+    "email": [
+      {
+        "address": "chueh1981@gmail.com",
+        "label": "Public Email"
+      }
+    ],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0003-1203-4227",
+    "links": {
+      "scopus": "https://www.scopus.com/authid/detail.uri?authorId=21741765500",
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Chu-Chen%20Chueh%22",
+      "crossref": "https://search.crossref.org/?q=Chu-Chen%20Chueh",
+      "openAlex": "https://openalex.org/A5060441783",
+      "orcid": "https://orcid.org/0000-0003-1203-4227",
+      "institution": "https://ror.org/05bqach95"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5060441783",
+      "https://orcid.org/0000-0003-1203-4227",
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/05bqach95"
+    ]
   },
   {
     "id": "guo-tzung-fang",
     "name": "Guo, Tzung-Fang",
-    "displayName": "Guo, Tzung-Fang",
+    "displayName": "Tzung-Fang Guo",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Tzung-Fang Guo",
+      "T. F. Guo"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Photonics and Program on Key Materials Academy of Innovative Semiconductor and Sustainable Manufacturing National Cheng Kung University Tainan Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0003-1536-6235",
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Tzung-Fang%20Guo%22",
+      "crossref": "https://search.crossref.org/?q=Tzung-Fang%20Guo",
+      "openAlex": "https://openalex.org/A5040915632",
+      "orcid": "https://orcid.org/0000-0003-1536-6235",
+      "institution": "https://ror.org/000zgvm20"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5040915632",
+      "https://orcid.org/0000-0003-1536-6235",
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/000zgvm20"
+    ]
   },
   {
     "id": "chu-chih-wei",
     "name": "Chu, Chih-Wei",
-    "displayName": "Chu, Chih-Wei",
+    "displayName": "Chih-Wei Chu",
     "nameZh": "",
-    "aliases": [],
-    "role": "",
-    "currentPosition": "",
-    "affiliation": "",
+    "aliases": [
+      "Chih-Wei Chu",
+      "C CHU",
+      "C. -W. Chu"
+    ],
+    "role": "Research Fellow",
+    "currentPosition": "Research Fellow",
+    "affiliation": "Research Center for Applied Sciences, Academia Sinica",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0003-0979-1729",
+    "links": {
+      "webOfScience": "https://www.webofscience.com/wos/author/record/C-2349-2009",
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Chih-Wei%20Chu%22",
+      "crossref": "https://search.crossref.org/?q=Chih-Wei%20Chu",
+      "openAlex": "https://openalex.org/A5029399992",
+      "orcid": "https://orcid.org/0000-0003-0979-1729",
+      "institution": "https://ror.org/00mjawt10"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5029399992",
+      "https://orcid.org/0000-0003-0979-1729",
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/00mjawt10"
+    ]
   },
   {
     "id": "wang-leeyih",
     "name": "Wang, Leeyih",
-    "displayName": "Wang, Leeyih",
+    "displayName": "Leeyih Wang",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Leeyih Wang"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Center for Condensed Matter Sciences, National Taiwan University",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0002-6368-0141",
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Leeyih%20Wang%22",
+      "crossref": "https://search.crossref.org/?q=Leeyih%20Wang",
+      "openAlex": "https://openalex.org/A5021834293",
+      "orcid": "https://orcid.org/0000-0002-6368-0141",
+      "institution": "https://ror.org/059dkdx38"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5021834293",
+      "https://orcid.org/0000-0002-6368-0141",
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/059dkdx38"
+    ]
   },
   {
     "id": "ho-kuo-chuan",
     "name": "Ho, Kuo-Chuan",
-    "displayName": "Ho, Kuo-Chuan",
-    "nameZh": "",
-    "aliases": [],
+    "displayName": "Kuo-Chuan Ho",
+    "nameZh": "何國川",
+    "aliases": [
+      "Kuo-Chuan Ho",
+      "Ho, K.",
+      "K C Ho",
+      "K HO"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemical Engineering Institute of Polymer Science and Engineering and Advanced Research Center for Green Materials Science and Technology National Taiwan University Taipei Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0001-7501-1271",
+    "links": {
+      "institution": "http://research.mc.ntu.edu.tw/web/Teacher!one.action?tid=1884",
+      "scopus": "https://www.scopus.com/authid/detail.uri?authorId=56962715200",
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Kuo-Chuan%20Ho%22",
+      "crossref": "https://search.crossref.org/?q=Kuo-Chuan%20Ho",
+      "openAlex": "https://openalex.org/A5051193004",
+      "orcid": "https://orcid.org/0000-0001-7501-1271"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5051193004",
+      "https://orcid.org/0000-0001-7501-1271",
+      "https://doi.org/10.1002/solr.202500538",
+      "http://research.mc.ntu.edu.tw/web/Teacher!one.action?tid=1884"
+    ]
   },
   {
     "id": "chen-fang-chung",
     "name": "Chen, Fang-Chung",
-    "displayName": "Chen, Fang-Chung",
+    "displayName": "Fang-Chung Chen",
     "nameZh": "",
-    "aliases": [],
-    "role": "",
-    "currentPosition": "",
-    "affiliation": "",
+    "aliases": [
+      "Fang-Chung Chen",
+      "F. C. Chen",
+      "Fang C. Chen"
+    ],
+    "role": "Professor, Chairman",
+    "currentPosition": "Professor, Chairman",
+    "affiliation": "Department of Photonics, National Yang Ming Chiao Tung University",
     "affiliationZh": "",
-    "email": [],
+    "email": [
+      {
+        "address": "fcchendop@nycu.edu.tw",
+        "label": "Public Email"
+      }
+    ],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0002-4131-3893",
+    "links": {
+      "personalWebsite": "https://fc-richard-chen.github.io/",
+      "webOfScience": "http://www.researcherid.com/rid/P-7099-2015",
+      "scopus": "https://www.scopus.com/authid/detail.uri?authorId=35290703500",
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Fang-Chung%20Chen%22",
+      "crossref": "https://search.crossref.org/?q=Fang-Chung%20Chen",
+      "openAlex": "https://openalex.org/A5046634428",
+      "orcid": "https://orcid.org/0000-0002-4131-3893",
+      "institution": "https://ror.org/00se2k293"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5046634428",
+      "https://orcid.org/0000-0002-4131-3893",
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/00se2k293",
+      "https://fc-richard-chen.github.io/"
+    ]
   },
   {
     "id": "chen-chih-ping",
     "name": "Chen, Chih-Ping",
-    "displayName": "Chen, Chih-Ping",
-    "nameZh": "",
-    "aliases": [],
-    "role": "",
-    "currentPosition": "",
-    "affiliation": "",
+    "displayName": "Chih-Ping Chen",
+    "nameZh": "陳志平",
+    "aliases": [
+      "Chih-Ping Chen"
+    ],
+    "role": "Assistant Professor",
+    "currentPosition": "Assistant Professor",
+    "affiliation": "Department of Product Design, Ming Chuan University",
     "affiliationZh": "",
-    "email": [],
+    "email": [
+      {
+        "address": "cpchen@mail.mcu.edu.tw",
+        "label": "Public Email"
+      }
+    ],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0001-5219-8221",
+    "links": {
+      "personalWebsite": "https://www2.mcu.edu.tw/eportfolio/teacher/html/eportfoliopost_any.asp?lang=c&tno=1101841",
+      "webOfScience": "https://www.webofscience.com/wos/author/record/HCH-2989-2022",
+      "scopus": "https://www.scopus.com/authid/detail.uri?authorId=57220167820",
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Chih-Ping%20Chen%22",
+      "crossref": "https://search.crossref.org/?q=Chih-Ping%20Chen",
+      "openAlex": "https://openalex.org/A5101571988",
+      "orcid": "https://orcid.org/0000-0001-5219-8221",
+      "institution": "https://ror.org/02pgvzy25"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5101571988",
+      "https://orcid.org/0000-0001-5219-8221",
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/02pgvzy25",
+      "https://www2.mcu.edu.tw/eportfolio/teacher/html/eportfoliopost_any.asp?lang=c&tno=1101841"
+    ]
   },
   {
     "id": "tai-yian",
     "name": "Tai, Yian",
-    "displayName": "Tai, Yian",
+    "displayName": "Yian Tai",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Yian Tai",
+      "Y Tai"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemical Engineering National Taiwan University of Science and Technology Taipei Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0001-7000-6086",
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Yian%20Tai%22",
+      "crossref": "https://search.crossref.org/?q=Yian%20Tai",
+      "openAlex": "https://openalex.org/A5058112195",
+      "orcid": "https://orcid.org/0000-0001-7000-6086",
+      "institution": "https://ror.org/00q09pe49"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5058112195",
+      "https://orcid.org/0000-0001-7000-6086",
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/00q09pe49"
+    ]
   },
   {
     "id": "li-chun-ting",
     "name": "Li, Chun-Ting",
-    "displayName": "Li, Chun-Ting",
+    "displayName": "Chun-Ting Li",
     "nameZh": "",
-    "aliases": [],
-    "role": "",
-    "currentPosition": "",
-    "affiliation": "",
+    "aliases": [
+      "Chun-Ting Li"
+    ],
+    "role": "Assistant Professor",
+    "currentPosition": "Assistant Professor",
+    "affiliation": "Chemistry, National Taiwan Normal University",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0002-4848-7335",
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Chun-Ting%20Li%22",
+      "crossref": "https://search.crossref.org/?q=Chun-Ting%20Li",
+      "openAlex": "https://openalex.org/A5016967438",
+      "orcid": "https://orcid.org/0000-0002-4848-7335",
+      "institution": "https://ror.org/00xyeez13"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5016967438",
+      "https://orcid.org/0000-0002-4848-7335",
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/00xyeez13"
+    ]
   },
   {
     "id": "lee-ming-way",
     "name": "Lee, Ming-Way",
-    "displayName": "Lee, Ming-Way",
+    "displayName": "Ming-Way Lee",
     "nameZh": "",
-    "aliases": [],
-    "role": "",
-    "currentPosition": "",
-    "affiliation": "",
+    "aliases": [
+      "Ming-Way Lee"
+    ],
+    "role": "prof.",
+    "currentPosition": "prof.",
+    "affiliation": "Physics, National Chung Hsing University",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0002-8343-9179",
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Ming-Way%20Lee%22",
+      "crossref": "https://search.crossref.org/?q=Ming-Way%20Lee",
+      "openAlex": "https://openalex.org/A5044725298",
+      "orcid": "https://orcid.org/0000-0002-8343-9179",
+      "institution": "https://ror.org/05vn3ca78"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5044725298",
+      "https://orcid.org/0000-0002-8343-9179",
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/05vn3ca78"
+    ]
   },
   {
     "id": "wang-chih-liang",
     "name": "Wang, Chih-Liang",
-    "displayName": "Wang, Chih-Liang",
-    "nameZh": "",
-    "aliases": [],
-    "role": "",
-    "currentPosition": "",
-    "affiliation": "",
+    "displayName": "Chih-Liang Wang",
+    "nameZh": "王致喨",
+    "aliases": [
+      "Chih-Liang Wang",
+      "Wang, C. L."
+    ],
+    "role": "Associate Professor",
+    "currentPosition": "Associate Professor",
+    "affiliation": "Department of Materials Science and Engineering, National Tsing Hua University",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0002-0772-4285",
+    "links": {
+      "personalWebsite": "https://wangcl.wixsite.com/e-lab",
+      "webOfScience": "http://www.researcherid.com/rid/N-3676-2013",
+      "scopus": "https://www.scopus.com/authid/detail.uri?authorId=55913946100",
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Chih-Liang%20Wang%22",
+      "crossref": "https://search.crossref.org/?q=Chih-Liang%20Wang",
+      "openAlex": "https://openalex.org/A5023583881",
+      "orcid": "https://orcid.org/0000-0002-0772-4285",
+      "institution": "https://ror.org/00zdnkx70"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5023583881",
+      "https://orcid.org/0000-0002-0772-4285",
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/00zdnkx70",
+      "https://wangcl.wixsite.com/e-lab"
+    ]
   },
   {
     "id": "sun-shih-sheng",
     "name": "Sun, Shih-Sheng",
-    "displayName": "Sun, Shih-Sheng",
+    "displayName": "Shih-Sheng Sun",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Shih-Sheng Sun",
+      "S S Sun",
+      "S. Sun"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Institute of Chemistry, Academia Sinica",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0001-5515-5059",
+    "links": {
+      "personalWebsite": "https://www.chem.sinica.edu.tw/faculty/index.php?piName=sssun&lang=en",
+      "webOfScience": "http://www.researcherid.com/rid/C-6952-2015",
+      "scopus": "https://www.scopus.com/authid/detail.uri?authorId=7404510318",
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Shih-Sheng%20Sun%22",
+      "crossref": "https://search.crossref.org/?q=Shih-Sheng%20Sun",
+      "openAlex": "https://openalex.org/A5010356907",
+      "orcid": "https://orcid.org/0000-0001-5515-5059",
+      "institution": "https://ror.org/04xjjma71"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5010356907",
+      "https://orcid.org/0000-0001-5515-5059",
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/04xjjma71",
+      "https://www.chem.sinica.edu.tw/faculty/index.php?piName=sssun&lang=en"
+    ]
   },
   {
     "id": "tseng-zong-liang",
     "name": "Tseng, Zong-Liang",
-    "displayName": "Tseng, Zong-Liang",
+    "displayName": "Zong-Liang Tseng",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Zong-Liang Tseng",
+      "Z. L. Tseng"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Depatment of Electronic Engineering, Ming Chi University of Technology",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0002-8424-1914",
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Zong-Liang%20Tseng%22",
+      "crossref": "https://search.crossref.org/?q=Zong-Liang%20Tseng",
+      "openAlex": "https://openalex.org/A5091777458",
+      "orcid": "https://orcid.org/0000-0002-8424-1914",
+      "institution": "https://ror.org/04xgh4d03"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5091777458",
+      "https://orcid.org/0000-0002-8424-1914",
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/04xgh4d03"
+    ]
   },
   {
     "id": "huang-yu-ching",
     "name": "Huang, Yu-Ching",
-    "displayName": "Huang, Yu-Ching",
+    "displayName": "Yu-Ching Huang",
     "nameZh": "",
-    "aliases": [],
-    "role": "",
-    "currentPosition": "",
-    "affiliation": "",
+    "aliases": [
+      "Yu-Ching Huang",
+      "Y. Huang",
+      "Y.-C. Huang"
+    ],
+    "role": "Prof.",
+    "currentPosition": "Prof.",
+    "affiliation": "Materials Engineering, Ming Chi University of Technology",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0003-4772-8050",
+    "links": {
+      "scopus": "https://www.scopus.com/authid/detail.uri?authorId=8856139400",
+      "webOfScience": "http://www.researcherid.com/rid/C-4359-2018",
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Yu-Ching%20Huang%22",
+      "crossref": "https://search.crossref.org/?q=Yu-Ching%20Huang",
+      "openAlex": "https://openalex.org/A5033862057",
+      "orcid": "https://orcid.org/0000-0003-4772-8050",
+      "institution": "https://ror.org/04xgh4d03"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5033862057",
+      "https://orcid.org/0000-0003-4772-8050",
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/04xgh4d03"
+    ]
   },
   {
     "id": "chou-pi-tai",
     "name": "Chou, Pi-Tai",
-    "displayName": "Chou, Pi-Tai",
+    "displayName": "Pi-Tai Chou",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Pi-Tai Chou",
+      "Chou, P.-T.",
+      "P CHOU",
+      "P. T. Chou"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemistry Center for Emerging Materials and Advanced Devices National Taiwan University Taipei Taiwan",
     "affiliationZh": "",
-    "email": [],
+    "email": [
+      {
+        "address": "chop@ntu.edu.tw",
+        "label": "Public Email"
+      }
+    ],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0002-8925-7747",
+    "links": {
+      "scopus": "https://www.scopus.com/authid/detail.uri?authorId=7201966354",
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Pi-Tai%20Chou%22",
+      "crossref": "https://search.crossref.org/?q=Pi-Tai%20Chou",
+      "openAlex": "https://openalex.org/A5032004836",
+      "orcid": "https://orcid.org/0000-0002-8925-7747",
+      "institution": "https://ror.org/00q09pe49"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5032004836",
+      "https://orcid.org/0000-0002-8925-7747",
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/00q09pe49"
+    ]
   },
   {
     "id": "ko-chung-wen",
     "name": "Ko, Chung-Wen",
-    "displayName": "Ko, Chung-Wen",
+    "displayName": "Chung-Wen Ko",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Chung-Wen Ko"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Ways Technical Corp. Ltd. Taoyuan Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Chung-Wen%20Ko%22",
+      "crossref": "https://search.crossref.org/?q=Chung-Wen%20Ko",
+      "openAlex": "https://openalex.org/A5113538540",
+      "institution": "https://ror.org/02pgrmd66"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5113538540",
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/02pgrmd66"
+    ]
   },
   {
     "id": "wu-chun-guey",
     "name": "Wu, Chun-Guey",
-    "displayName": "Wu, Chun-Guey",
+    "displayName": "Chun-Guey Wu",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Chun-Guey Wu",
+      "C. G. Wu",
+      "Chun Wu"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "National Central University",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0001-8540-5602",
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Chun-Guey%20Wu%22",
+      "crossref": "https://search.crossref.org/?q=Chun-Guey%20Wu",
+      "openAlex": "https://openalex.org/A5079624088",
+      "orcid": "https://orcid.org/0000-0001-8540-5602",
+      "institution": "https://ror.org/00944ve71"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5079624088",
+      "https://orcid.org/0000-0001-8540-5602",
+      "https://doi.org/10.1002/solr.202500538",
+      "https://ror.org/00944ve71"
+    ]
   },
   {
     "id": "pan-jui-ting",
     "name": "Pan, Jui-Ting",
-    "displayName": "Pan, Jui-Ting",
+    "displayName": "Jui-Ting Pan",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Jui-Ting Pan"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemistry Soochow University Taipei 11102 Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Jui-Ting%20Pan%22",
+      "crossref": "https://search.crossref.org/?q=Jui-Ting%20Pan"
+    },
+    "status": "verified",
+    "verificationLevel": "Crossref DOI author match",
     "lastVerified": "",
     "sources": []
   },
   {
     "id": "chen-wen-tzu",
     "name": "Chen, Wen-Tzu",
-    "displayName": "Chen, Wen-Tzu",
+    "displayName": "Wen-Tzu Chen",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Wen-Tzu Chen",
+      "W.-T. CHEN"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemistry Soochow University Taipei 11102 Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Wen-Tzu%20Chen%22",
+      "crossref": "https://search.crossref.org/?q=Wen-Tzu%20Chen",
+      "openAlex": "https://openalex.org/A5059357498",
+      "institution": "https://ror.org/05kvm7n82"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5059357498",
+      "https://doi.org/10.1002/asia.202500719",
+      "https://ror.org/05kvm7n82"
+    ]
   },
   {
     "id": "lin-chia-hui",
     "name": "Lin, Chia-Hui",
-    "displayName": "Lin, Chia-Hui",
+    "displayName": "Chia-Hui Lin",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Chia-Hui Lin",
+      "C H Lin"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemistry Soochow University Taipei 11102 Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Chia-Hui%20Lin%22",
+      "crossref": "https://search.crossref.org/?q=Chia-Hui%20Lin",
+      "openAlex": "https://openalex.org/A5103379062",
+      "institution": "https://ror.org/009knm296"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5103379062",
+      "https://doi.org/10.1002/asia.202500719",
+      "https://ror.org/009knm296"
+    ]
   },
   {
     "id": "wang-zhe-wei",
     "name": "Wang, Zhe-Wei",
-    "displayName": "Wang, Zhe-Wei",
+    "displayName": "Zhe-Wei Wang",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Zhe-Wei Wang"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemistry Soochow University Taipei 11102 Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Zhe-Wei%20Wang%22",
+      "crossref": "https://search.crossref.org/?q=Zhe-Wei%20Wang",
+      "openAlex": "https://openalex.org/A5111612323",
+      "institution": "https://ror.org/05kvm7n82"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5111612323",
+      "https://doi.org/10.1002/asia.202500719",
+      "https://ror.org/05kvm7n82"
+    ]
   },
   {
     "id": "chang-ya-ho",
     "name": "Chang, Ya-Ho",
-    "displayName": "Chang, Ya-Ho",
+    "displayName": "Ya-Ho Chang",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Ya-Ho Chang"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Center for Sustainability and Energy Technologies Chang Gung University Taoyuan 33302 Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Ya-Ho%20Chang%22",
+      "crossref": "https://search.crossref.org/?q=Ya-Ho%20Chang",
+      "openAlex": "https://openalex.org/A5100882960",
+      "institution": "https://ror.org/00d80zx46"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5100882960",
+      "https://doi.org/10.1002/asia.202500719",
+      "https://ror.org/00d80zx46"
+    ]
   },
   {
     "id": "lu-shih-i",
     "name": "Lu, Shih-I",
-    "displayName": "Lu, Shih-I",
+    "displayName": "Shih-I Lu",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Shih-I Lu",
+      "S -I Lu"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemistry Soochow University Taipei 11102 Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0001-7508-2088",
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Shih-I%20Lu%22",
+      "crossref": "https://search.crossref.org/?q=Shih-I%20Lu",
+      "openAlex": "https://openalex.org/A5082345844",
+      "orcid": "https://orcid.org/0000-0001-7508-2088",
+      "institution": "https://ror.org/05kvm7n82"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5082345844",
+      "https://orcid.org/0000-0001-7508-2088",
+      "https://doi.org/10.1002/asia.202500719",
+      "https://ror.org/05kvm7n82"
+    ]
   },
   {
     "id": "hsieh-hsiao-chi",
     "name": "Hsieh, Hsiao-Chi",
-    "displayName": "Hsieh, Hsiao-Chi",
+    "displayName": "Hsiao-Chi Hsieh",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Hsiao-Chi Hsieh"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemical and Materials Engineering Tamkang University New Taipei City 24301 Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0002-4213-8580",
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Hsiao-Chi%20Hsieh%22",
+      "crossref": "https://search.crossref.org/?q=Hsiao-Chi%20Hsieh",
+      "openAlex": "https://openalex.org/A5110454629",
+      "orcid": "https://orcid.org/0000-0002-4213-8580",
+      "institution": "https://ror.org/04tft4718"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5110454629",
+      "https://orcid.org/0000-0002-4213-8580",
+      "https://doi.org/10.1002/asia.202500719",
+      "https://ror.org/04tft4718"
+    ]
   },
   {
     "id": "hu-chih-wei",
     "name": "Hu, Chih-Wei",
-    "displayName": "Hu, Chih-Wei",
-    "nameZh": "",
-    "aliases": [],
-    "role": "",
-    "currentPosition": "",
-    "affiliation": "",
+    "displayName": "Chih-Wei Hu",
+    "nameZh": "胡 致維",
+    "aliases": [
+      "Chih-Wei Hu",
+      "C HU",
+      "C. W. Hu"
+    ],
+    "role": "Researcher",
+    "currentPosition": "Researcher",
+    "affiliation": "Structural Materials Research Institute, National Institute of Advanced Industrial Science and Technology",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0001-9200-4444",
+    "links": {
+      "googleScholar": "https://scholar.google.com.tw/citations?hl=zh-TW&user=wylpTR0AAAAJ",
+      "personalWebsite": "https://www.researchgate.net/profile/Chih-Wei_Hu",
+      "scopus": "https://www.scopus.com/authid/detail.uri?authorId=8392615600",
+      "webOfScience": "http://www.researcherid.com/rid/H-8099-2018",
+      "crossref": "https://search.crossref.org/?q=Chih-Wei%20Hu",
+      "openAlex": "https://openalex.org/A5027963671",
+      "orcid": "https://orcid.org/0000-0001-9200-4444",
+      "institution": "https://ror.org/0064kty71"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5027963671",
+      "https://orcid.org/0000-0001-9200-4444",
+      "https://doi.org/10.1002/asia.202500719",
+      "https://ror.org/0064kty71",
+      "https://www.researchgate.net/profile/Chih-Wei_Hu"
+    ]
   },
   {
     "id": "chen-chih-hung",
     "name": "Chen, Chih-Hung",
-    "displayName": "Chen, Chih-Hung",
+    "displayName": "Chih-Hung Chen",
     "nameZh": "",
-    "aliases": [],
-    "role": "",
-    "currentPosition": "",
-    "affiliation": "",
+    "aliases": [
+      "Chih-Hung Chen",
+      "C.-H. CHEN"
+    ],
+    "role": "Associate Professor",
+    "currentPosition": "Associate Professor",
+    "affiliation": "Bachelor Program of Interdisciplinary Studies, National Taichung University of Education",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0002-8308-8946",
+    "links": {
+      "scopus": "https://www.scopus.com/authid/detail.uri?authorId=56180026400",
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Chih-Hung%20Chen%22",
+      "crossref": "https://search.crossref.org/?q=Chih-Hung%20Chen",
+      "openAlex": "https://openalex.org/A5100759684",
+      "orcid": "https://orcid.org/0000-0002-8308-8946",
+      "institution": "https://ror.org/00q09pe49"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5100759684",
+      "https://orcid.org/0000-0002-8308-8946",
+      "https://doi.org/10.1002/asia.202500719",
+      "https://ror.org/00q09pe49"
+    ]
   },
   {
     "id": "chiu-jian-ming",
     "name": "Chiu, Jian-Ming",
-    "displayName": "Chiu, Jian-Ming",
+    "displayName": "Jian-Ming Chiu",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Jian-Ming Chiu"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Materials Science and Engineering National Taiwan University of Science and Technology Taipei 106335 Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Jian-Ming%20Chiu%22",
+      "crossref": "https://search.crossref.org/?q=Jian-Ming%20Chiu",
+      "openAlex": "https://openalex.org/A5110847715",
+      "institution": "https://ror.org/00q09pe49"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5110847715",
+      "https://doi.org/10.1002/asia.202500719",
+      "https://ror.org/00q09pe49"
+    ]
   },
   {
     "id": "liau-kang-ling",
     "name": "Liau, Kang-Ling",
-    "displayName": "Liau, Kang-Ling",
+    "displayName": "Kang-Ling Liau",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Kang-Ling Liau"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemistry National Central University Taoyuan 32001 Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Kang-Ling%20Liau%22",
+      "crossref": "https://search.crossref.org/?q=Kang-Ling%20Liau",
+      "openAlex": "https://openalex.org/A5050364464",
+      "institution": "https://ror.org/00944ve71"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5050364464",
+      "https://doi.org/10.1002/asia.202500719",
+      "https://ror.org/00944ve71"
+    ]
   },
   {
     "id": "liu-yun-shuo",
     "name": "Liu, Yun-Shuo",
-    "displayName": "Liu, Yun-Shuo",
+    "displayName": "Yun-Shuo Liu",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Yun-Shuo Liu"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemistry Soochow University Taipei 11102 Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Yun-Shuo%20Liu%22",
+      "crossref": "https://search.crossref.org/?q=Yun-Shuo%20Liu",
+      "openAlex": "https://openalex.org/A5109677492",
+      "institution": "https://ror.org/05kvm7n82"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5109677492",
+      "https://doi.org/10.1002/asia.202500719",
+      "https://ror.org/05kvm7n82"
+    ]
   },
   {
     "id": "lin-yan-duo",
     "name": "Lin, Yan-Duo",
-    "displayName": "Lin, Yan-Duo",
+    "displayName": "Yan-Duo Lin",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Yan-Duo Lin"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemistry, Soochow University Library",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0002-1570-5842",
+    "links": {
+      "personalWebsite": "http://www.ncyu.edu.tw/chem/content.aspx?site_content_sn=58714",
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Yan-Duo%20Lin%22",
+      "crossref": "https://search.crossref.org/?q=Yan-Duo%20Lin",
+      "openAlex": "https://openalex.org/A5055342027",
+      "orcid": "https://orcid.org/0000-0002-1570-5842",
+      "institution": "https://ror.org/05kvm7n82"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5055342027",
+      "https://orcid.org/0000-0002-1570-5842",
+      "https://doi.org/10.1002/asia.202500719",
+      "https://ror.org/05kvm7n82",
+      "http://www.ncyu.edu.tw/chem/content.aspx?site_content_sn=58714"
+    ]
   },
   {
     "id": "chang-chia-chi",
     "name": "Chang, Chia-Chi",
-    "displayName": "Chang, Chia-Chi",
+    "displayName": "Chia-Chi Chang",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Chia-Chi Chang",
+      "C. Chang",
+      "C.-C. CHANG",
+      "Chia C. Chang"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemistry Soochow University Taipei 11102 Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0002-5257-0238",
+    "links": {
+      "scopus": "https://www.scopus.com/authid/detail.uri?authorId=14051707300",
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Chia-Chi%20Chang%22",
+      "crossref": "https://search.crossref.org/?q=Chia-Chi%20Chang",
+      "openAlex": "https://openalex.org/A5049118103",
+      "orcid": "https://orcid.org/0000-0002-5257-0238",
+      "institution": "https://ror.org/05031qk94"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5049118103",
+      "https://orcid.org/0000-0002-5257-0238",
+      "https://doi.org/10.1002/advs.202410666",
+      "https://ror.org/05031qk94"
+    ]
   },
   {
     "id": "yang-ting-yu",
     "name": "Yang, Ting-Yu",
-    "displayName": "Yang, Ting-Yu",
+    "displayName": "Ting-Yu Yang",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Ting-Yu Yang",
+      "T Y YANG",
+      "T. Yang"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemistry Soochow University Taipei 11102 Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0003-1253-685X",
+    "links": {
+      "scopus": "https://www.scopus.com/authid/detail.uri?authorId=57222482444",
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Ting-Yu%20Yang%22",
+      "crossref": "https://search.crossref.org/?q=Ting-Yu%20Yang",
+      "openAlex": "https://openalex.org/A5012152145",
+      "orcid": "https://orcid.org/0000-0003-1253-685X",
+      "institution": "https://ror.org/05k3sdc46"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5012152145",
+      "https://orcid.org/0000-0003-1253-685X",
+      "https://doi.org/10.1002/advs.202410666",
+      "https://ror.org/05k3sdc46"
+    ]
   },
   {
     "id": "hu-chia-hui",
     "name": "Hu, Chia Hui",
-    "displayName": "Hu, Chia Hui",
+    "displayName": "Chia Hui Hu",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Chia Hui Hu"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemistry Soochow University Taipei 11102 Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Chia%20Hui%20Hu%22",
+      "crossref": "https://search.crossref.org/?q=Chia%20Hui%20Hu"
+    },
+    "status": "verified",
+    "verificationLevel": "Crossref DOI author match",
     "lastVerified": "",
     "sources": []
   },
   {
     "id": "chou-wei-chun",
     "name": "Chou, Wei-Chun",
-    "displayName": "Chou, Wei-Chun",
+    "displayName": "Wei-Chun Chou",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Wei-Chun Chou"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemistry Soochow University Taipei 11102 Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Wei-Chun%20Chou%22",
+      "crossref": "https://search.crossref.org/?q=Wei-Chun%20Chou",
+      "openAlex": "https://openalex.org/A5057420331",
+      "institution": "https://ror.org/05kvm7n82"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5057420331",
+      "https://doi.org/10.1002/advs.202410666",
+      "https://ror.org/05kvm7n82"
+    ]
   },
   {
     "id": "lee-mandy-mei-ling",
     "name": "Lee, Mandy Mei-Ling",
-    "displayName": "Lee, Mandy Mei-Ling",
+    "displayName": "Mandy Mei-Ling Lee",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Mandy Mei-Ling Lee",
+      "Lee, Mandy M.",
+      "Mandy M. Lee"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Institute of Chemistry Academia Sinica Taipei 115024 Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Mandy%20Mei-Ling%20Lee%22",
+      "crossref": "https://search.crossref.org/?q=Mandy%20Mei-Ling%20Lee",
+      "openAlex": "https://openalex.org/A5031589756",
+      "institution": "https://ror.org/04xjjma71"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5031589756",
+      "https://doi.org/10.1002/advs.202410666",
+      "https://ror.org/04xjjma71"
+    ]
   },
   {
     "id": "tao-yu-tai",
     "name": "Tao, Yu-Tai",
-    "displayName": "Tao, Yu-Tai",
+    "displayName": "Yu-Tai Tao",
     "nameZh": "",
-    "aliases": [],
-    "role": "",
-    "currentPosition": "",
-    "affiliation": "",
+    "aliases": [
+      "Yu-Tai Tao",
+      "Tao, Y.-T.",
+      "Y. T. Tao"
+    ],
+    "role": "Distinguished Chair Professor",
+    "currentPosition": "Distinguished Chair Professor",
+    "affiliation": "Institute of Chemistry, Academia Sinica",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0003-4507-0419",
+    "links": {
+      "webOfScience": "http://www.researcherid.com/rid/E-7134-2015",
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Yu-Tai%20Tao%22",
+      "crossref": "https://search.crossref.org/?q=Yu-Tai%20Tao",
+      "openAlex": "https://openalex.org/A5088139396",
+      "orcid": "https://orcid.org/0000-0003-4507-0419",
+      "institution": "https://ror.org/04xjjma71"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5088139396",
+      "https://orcid.org/0000-0003-4507-0419",
+      "https://doi.org/10.1002/advs.202410666",
+      "https://ror.org/04xjjma71"
+    ]
   },
   {
     "id": "huang-ying-kai",
     "name": "Huang, Ying-Kai",
-    "displayName": "Huang, Ying-Kai",
+    "displayName": "Ying-Kai Huang",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Ying-Kai Huang",
+      "Y.‐K. HUANG"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemical and Materials Engineering Chang Gung University Taoyuan 33302 Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Ying-Kai%20Huang%22",
+      "crossref": "https://search.crossref.org/?q=Ying-Kai%20Huang",
+      "openAlex": "https://openalex.org/A5108488453",
+      "institution": "https://ror.org/00d80zx46"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5108488453",
+      "https://doi.org/10.1016/j.mtchem.2024.102329",
+      "https://ror.org/00d80zx46"
+    ]
   },
   {
     "id": "chen-pei-yu",
     "name": "Chen, Pei-Yu",
-    "displayName": "Chen, Pei-Yu",
+    "displayName": "Pei-Yu Chen",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Pei-Yu Chen"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Arizona State University",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0002-6076-7129",
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Pei-Yu%20Chen%22",
+      "crossref": "https://search.crossref.org/?q=Pei-Yu%20Chen",
+      "openAlex": "https://openalex.org/A5101699881",
+      "orcid": "https://orcid.org/0000-0002-6076-7129",
+      "institution": "https://ror.org/03efmqc40"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5101699881",
+      "https://orcid.org/0000-0002-6076-7129",
+      "https://doi.org/10.1016/j.cej.2024.153974",
+      "https://ror.org/03efmqc40"
+    ]
   },
   {
     "id": "lin-ting-han",
     "name": "Lin, Ting-Han",
-    "displayName": "Lin, Ting-Han",
+    "displayName": "Ting-Han Lin",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Ting-Han Lin",
+      "T. H. Lin"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Chang Gung University",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0002-0709-7306",
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Ting-Han%20Lin%22",
+      "crossref": "https://search.crossref.org/?q=Ting-Han%20Lin",
+      "openAlex": "https://openalex.org/A5028335338",
+      "orcid": "https://orcid.org/0000-0002-0709-7306",
+      "institution": "https://ror.org/00d80zx46"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5028335338",
+      "https://orcid.org/0000-0002-0709-7306",
+      "https://doi.org/10.1016/j.cej.2024.153974",
+      "https://ror.org/00d80zx46"
+    ]
   },
   {
     "id": "chen-hsiao-chien",
     "name": "Chen, Hsiao-Chien",
-    "displayName": "Chen, Hsiao-Chien",
+    "displayName": "Hsiao-Chien Chen",
     "nameZh": "",
-    "aliases": [],
-    "role": "",
-    "currentPosition": "",
-    "affiliation": "",
+    "aliases": [
+      "Hsiao-Chien Chen"
+    ],
+    "role": "Assistant professor",
+    "currentPosition": "Assistant professor",
+    "affiliation": "Center for Reliability Sciences and Technologies, Chang Gung University",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0001-6222-5393",
+    "links": {
+      "webOfScience": "https://www.webofscience.com/wos/author/record/MGV-4769-2025",
+      "scopus": "https://www.scopus.com/authid/detail.uri?authorId=37029723400",
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Hsiao-Chien%20Chen%22",
+      "crossref": "https://search.crossref.org/?q=Hsiao-Chien%20Chen",
+      "openAlex": "https://openalex.org/A5023282498",
+      "orcid": "https://orcid.org/0000-0001-6222-5393",
+      "institution": "https://ror.org/00d80zx46"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5023282498",
+      "https://orcid.org/0000-0001-6222-5393",
+      "https://doi.org/10.1016/j.jece.2023.111741",
+      "https://ror.org/00d80zx46"
+    ]
   },
   {
     "id": "shabir-abdul",
     "name": "Shabir, Abdul",
-    "displayName": "Shabir, Abdul",
+    "displayName": "Abdul Shabir",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Abdul Shabir"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Chang Gung University",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0002-4631-6786",
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Abdul%20Shabir%22",
+      "crossref": "https://search.crossref.org/?q=Abdul%20Shabir",
+      "openAlex": "https://openalex.org/A5016345772",
+      "orcid": "https://orcid.org/0000-0002-4631-6786",
+      "institution": "https://ror.org/00d80zx46"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5016345772",
+      "https://orcid.org/0000-0002-4631-6786",
+      "https://doi.org/10.1016/j.jece.2023.111741",
+      "https://ror.org/00d80zx46"
+    ]
   },
   {
     "id": "tu-kun-hua",
     "name": "Tu, Kun-Hua",
-    "displayName": "Tu, Kun-Hua",
+    "displayName": "Kun-Hua Tu",
     "nameZh": "",
-    "aliases": [],
-    "role": "",
-    "currentPosition": "",
-    "affiliation": "",
+    "aliases": [
+      "Kun-Hua Tu",
+      "K. Tu",
+      "K.H. Tu"
+    ],
+    "role": "Attending physician",
+    "currentPosition": "Attending physician",
+    "affiliation": "Nephrology, Chang Gung University",
     "affiliationZh": "",
-    "email": [],
+    "email": [
+      {
+        "address": "christopher.tu@gmail.com",
+        "label": "Public Email"
+      },
+      {
+        "address": "8902086@adm.cgmh.org.tw",
+        "label": "Public Email"
+      }
+    ],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0002-7146-4481",
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Kun-Hua%20Tu%22",
+      "crossref": "https://search.crossref.org/?q=Kun-Hua%20Tu",
+      "openAlex": "https://openalex.org/A5056020685",
+      "orcid": "https://orcid.org/0000-0002-7146-4481",
+      "institution": "https://ror.org/00d80zx46"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5056020685",
+      "https://orcid.org/0000-0002-7146-4481",
+      "https://doi.org/10.1016/j.jece.2023.111741",
+      "https://ror.org/00d80zx46"
+    ]
   },
   {
     "id": "tan-cher-ming",
     "name": "Tan, Cher Ming",
-    "displayName": "Tan, Cher Ming",
-    "nameZh": "",
-    "aliases": [],
-    "role": "",
-    "currentPosition": "",
-    "affiliation": "",
+    "displayName": "Cher Ming Tan",
+    "nameZh": "陳始明",
+    "aliases": [
+      "Cher Ming Tan",
+      "C M Tan",
+      "C. Tan",
+      "Cher Tan"
+    ],
+    "role": "Special Assistant",
+    "currentPosition": "Special Assistant",
+    "affiliation": "CEO Office, LiteOn Power Semiconductor Corporation",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0002-6330-3899",
+    "links": {
+      "institution": "https://pure.lib.cgu.edu.tw/en/persons/22de0b86-679d-4afa-ab7b-2a81d1238998",
+      "scopus": "https://www.scopus.com/authid/detail.uri?authorId=7402818339",
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Cher%20Ming%20Tan%22",
+      "crossref": "https://search.crossref.org/?q=Cher%20Ming%20Tan",
+      "openAlex": "https://openalex.org/A5045004316",
+      "orcid": "https://orcid.org/0000-0002-6330-3899"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5045004316",
+      "https://orcid.org/0000-0002-6330-3899",
+      "https://doi.org/10.1016/j.jece.2023.111741",
+      "https://pure.lib.cgu.edu.tw/en/persons/22de0b86-679d-4afa-ab7b-2a81d1238998"
+    ]
   },
   {
     "id": "fan-ruei-cheng",
     "name": "Fan, Ruei-Cheng",
-    "displayName": "Fan, Ruei-Cheng",
+    "displayName": "Ruei-Cheng Fan",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Ruei-Cheng Fan"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Chang Gung University",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Ruei-Cheng%20Fan%22",
+      "crossref": "https://search.crossref.org/?q=Ruei-Cheng%20Fan",
+      "openAlex": "https://openalex.org/A5111094725",
+      "institution": "https://ror.org/00d80zx46"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5111094725",
+      "https://doi.org/10.1016/j.jece.2023.111741",
+      "https://ror.org/00d80zx46"
+    ]
   },
   {
     "id": "baruah-nilim-akash",
     "name": "Baruah, Nilim Akash",
-    "displayName": "Baruah, Nilim Akash",
+    "displayName": "Nilim Akash Baruah",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Nilim Akash Baruah",
+      "NILIM BARUAH"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Chang Gung University of Science and Technology; Chang Gung University",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Nilim%20Akash%20Baruah%22",
+      "crossref": "https://search.crossref.org/?q=Nilim%20Akash%20Baruah",
+      "openAlex": "https://openalex.org/A5092640461",
+      "institution": "https://ror.org/009knm296"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5092640461",
+      "https://doi.org/10.1016/j.jece.2023.111741",
+      "https://ror.org/009knm296"
+    ]
   },
   {
     "id": "adugna-gizachew-belay",
     "name": "Adugna, Gizachew Belay",
-    "displayName": "Adugna, Gizachew Belay",
+    "displayName": "Gizachew Belay Adugna",
     "nameZh": "",
-    "aliases": [],
-    "role": "",
-    "currentPosition": "",
-    "affiliation": "",
+    "aliases": [
+      "Gizachew Belay Adugna"
+    ],
+    "role": "Postdoctoral fellow",
+    "currentPosition": "Postdoctoral fellow",
+    "affiliation": "Department of chemistry, Soochow University",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0003-0217-6205",
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Gizachew%20Belay%20Adugna%22",
+      "crossref": "https://search.crossref.org/?q=Gizachew%20Belay%20Adugna",
+      "openAlex": "https://openalex.org/A5086482996",
+      "orcid": "https://orcid.org/0000-0003-0217-6205",
+      "institution": "https://ror.org/05kvm7n82"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5086482996",
+      "https://orcid.org/0000-0003-0217-6205",
+      "https://doi.org/10.1002/solr.202300988",
+      "https://ror.org/05kvm7n82"
+    ]
   },
   {
     "id": "hsieh-yu-chien",
     "name": "Hsieh, Yu-Chien",
-    "displayName": "Hsieh, Yu-Chien",
+    "displayName": "Yu-Chien Hsieh",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Yu-Chien Hsieh"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemistry Soochow University Taipei 11102 Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Yu-Chien%20Hsieh%22",
+      "crossref": "https://search.crossref.org/?q=Yu-Chien%20Hsieh",
+      "openAlex": "https://openalex.org/A5113191589",
+      "institution": "https://ror.org/05kvm7n82"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5113191589",
+      "https://doi.org/10.1002/solr.202300988",
+      "https://ror.org/05kvm7n82"
+    ]
   },
   {
     "id": "yang-june-hung",
     "name": "Yang, June Hung",
-    "displayName": "Yang, June Hung",
+    "displayName": "June Hung Yang",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "June Hung Yang"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemistry Soochow University Taipei 11102 Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22June%20Hung%20Yang%22",
+      "crossref": "https://search.crossref.org/?q=June%20Hung%20Yang",
+      "openAlex": "https://openalex.org/A5081836582",
+      "institution": "https://ror.org/05kvm7n82"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5081836582",
+      "https://doi.org/10.1002/solr.202300988",
+      "https://ror.org/05kvm7n82"
+    ]
   },
   {
     "id": "chandrasekaran-dharuman",
     "name": "Chandrasekaran, Dharuman",
-    "displayName": "Chandrasekaran, Dharuman",
+    "displayName": "Dharuman Chandrasekaran",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Dharuman Chandrasekaran"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemistry, Chung Yuan Christian University, Zhongli, Taoyuan 320, Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0001-9683-965X",
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Dharuman%20Chandrasekaran%22",
+      "crossref": "https://search.crossref.org/?q=Dharuman%20Chandrasekaran",
+      "openAlex": "https://openalex.org/A5036987336",
+      "orcid": "https://orcid.org/0000-0001-9683-965X",
+      "institution": "https://ror.org/02w8ws377"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5036987336",
+      "https://orcid.org/0000-0001-9683-965X",
+      "https://doi.org/10.1016/j.jpowsour.2023.233496",
+      "https://ror.org/02w8ws377"
+    ]
   },
   {
     "id": "liou-shin-jyun",
     "name": "Liou, Shin-Jyun",
-    "displayName": "Liou, Shin-Jyun",
+    "displayName": "Shin-Jyun Liou",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Shin-Jyun Liou"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Tunghai University",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Shin-Jyun%20Liou%22",
+      "crossref": "https://search.crossref.org/?q=Shin-Jyun%20Liou",
+      "institution": "https://ror.org/00zhvdn11"
+    },
+    "status": "verified",
+    "verificationLevel": "Crossref DOI author match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://doi.org/10.1016/j.jpowsour.2023.233496",
+      "https://ror.org/00zhvdn11"
+    ]
   },
   {
     "id": "lee-lee-che",
     "name": "Lee, Lee-Che",
-    "displayName": "Lee, Lee-Che",
+    "displayName": "Lee-Che Lee",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Lee-Che Lee"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Chang Gung University of Science and Technology; Chang Gung University; Chang Gung Memorial Hospital",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Lee-Che%20Lee%22",
+      "crossref": "https://search.crossref.org/?q=Lee-Che%20Lee",
+      "openAlex": "https://openalex.org/A5092280508",
+      "institution": "https://ror.org/009knm296"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5092280508",
+      "https://doi.org/10.1016/j.jpowsour.2023.233496",
+      "https://ror.org/009knm296"
+    ]
   },
   {
     "id": "wu-yi-chen",
     "name": "Wu, Yi-Chen",
-    "displayName": "Wu, Yi-Chen",
+    "displayName": "Yi-Chen Wu",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Yi-Chen Wu",
+      "Y. Wu"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Providence University; Providence College",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0002-1857-9810",
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Yi-Chen%20Wu%22",
+      "crossref": "https://search.crossref.org/?q=Yi-Chen%20Wu",
+      "openAlex": "https://openalex.org/A5028985032",
+      "orcid": "https://orcid.org/0000-0002-1857-9810",
+      "institution": "https://ror.org/03fcpsq87"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5028985032",
+      "https://orcid.org/0000-0002-1857-9810",
+      "https://doi.org/10.1016/j.jpowsour.2023.233496",
+      "https://ror.org/03fcpsq87"
+    ]
   },
   {
     "id": "chou-hsien-hsin",
     "name": "Chou, Hsien-Hsin",
-    "displayName": "Chou, Hsien-Hsin",
+    "displayName": "Hsien-Hsin Chou",
     "nameZh": "",
-    "aliases": [],
-    "role": "",
-    "currentPosition": "",
-    "affiliation": "",
+    "aliases": [
+      "Hsien-Hsin Chou"
+    ],
+    "role": "Associate Professor",
+    "currentPosition": "Associate Professor",
+    "affiliation": "Department of Applied Chemistry, Providence University",
     "affiliationZh": "",
-    "email": [],
+    "email": [
+      {
+        "address": "hhchou@pu.edu.tw",
+        "label": "Public Email"
+      }
+    ],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0003-1374-2284",
+    "links": {
+      "webOfScience": "http://www.researcherid.com/rid/I-8873-2016",
+      "scopus": "https://www.scopus.com/authid/detail.uri?authorId=57652482100",
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Hsien-Hsin%20Chou%22",
+      "crossref": "https://search.crossref.org/?q=Hsien-Hsin%20Chou",
+      "openAlex": "https://openalex.org/A5065689738",
+      "orcid": "https://orcid.org/0000-0003-1374-2284",
+      "institution": "https://ror.org/03fcpsq87"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5065689738",
+      "https://orcid.org/0000-0003-1374-2284",
+      "https://doi.org/10.1016/j.jpowsour.2023.233496",
+      "https://ror.org/03fcpsq87"
+    ]
   },
   {
     "id": "chang-yuan-jay",
     "name": "Chang, Yuan Jay",
-    "displayName": "Chang, Yuan Jay",
+    "displayName": "Yuan Jay Chang",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Yuan Jay Chang",
+      "Yuan Chang"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Tunghai University",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0001-9642-6302",
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Yuan%20Jay%20Chang%22",
+      "crossref": "https://search.crossref.org/?q=Yuan%20Jay%20Chang",
+      "openAlex": "https://openalex.org/A5009272753",
+      "orcid": "https://orcid.org/0000-0001-9642-6302",
+      "institution": "https://ror.org/00zhvdn11"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5009272753",
+      "https://orcid.org/0000-0001-9642-6302",
+      "https://doi.org/10.1016/j.jpowsour.2023.233496",
+      "https://ror.org/00zhvdn11"
+    ]
   },
   {
     "id": "li-lin",
     "name": "Li, Lin",
-    "displayName": "Li, Lin",
+    "displayName": "Lin Li",
     "nameZh": "",
-    "aliases": [],
-    "role": "",
-    "currentPosition": "",
-    "affiliation": "",
+    "aliases": [
+      "Lin Li",
+      "L Li",
+      "Li, L."
+    ],
+    "role": "Associate Professor",
+    "currentPosition": "Associate Professor",
+    "affiliation": "School of Highway, Chang'an University",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0002-8014-8296",
+    "links": {
+      "scopus": "https://www.scopus.com/authid/detail.uri?authorId=56202671400",
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Lin%20Li%22",
+      "crossref": "https://search.crossref.org/?q=Lin%20Li",
+      "openAlex": "https://openalex.org/A5100412901",
+      "orcid": "https://orcid.org/0000-0002-8014-8296",
+      "institution": "https://ror.org/03xjacd83"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5100412901",
+      "https://orcid.org/0000-0002-8014-8296",
+      "https://doi.org/10.1002/asia.202300681",
+      "https://ror.org/03xjacd83"
+    ]
   },
   {
     "id": "cao-ming-ling",
     "name": "Cao, Ming-Ling",
-    "displayName": "Cao, Ming-Ling",
+    "displayName": "Ming-Ling Cao",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Ming-Ling Cao"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemical and Materials Engineering National Central University Jhongli District Taoyuan City 320 Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Ming-Ling%20Cao%22",
+      "crossref": "https://search.crossref.org/?q=Ming-Ling%20Cao",
+      "openAlex": "https://openalex.org/A5102554286",
+      "institution": "https://ror.org/00944ve71"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5102554286",
+      "https://doi.org/10.1002/asia.202300681",
+      "https://ror.org/00944ve71"
+    ]
   },
   {
     "id": "cheng-hsin-ming",
     "name": "Cheng, Hsin-Ming",
-    "displayName": "Cheng, Hsin-Ming",
+    "displayName": "Hsin-Ming Cheng",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Hsin-Ming Cheng",
+      "H. M. Cheng"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Photonics and Institute of Electro-Optical Engineering, National Chiao Tung University, 1001 Tahsueh Road., Hsinchu 30050, Taiwan, Republic of China, and Photovoltaics Technology Center, Industrial Technology Research Institute, Hsinchu 310, Taiwan, Republic of China",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0002-6025-0154",
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Hsin-Ming%20Cheng%22",
+      "crossref": "https://search.crossref.org/?q=Hsin-Ming%20Cheng",
+      "openAlex": "https://openalex.org/A5103077826",
+      "orcid": "https://orcid.org/0000-0002-6025-0154",
+      "institution": "https://ror.org/00ex2js61"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5103077826",
+      "https://orcid.org/0000-0002-6025-0154",
+      "https://doi.org/10.1016/j.orgel.2023.106847",
+      "https://ror.org/00ex2js61"
+    ]
   },
   {
     "id": "suryanarayanan-vembu",
     "name": "Suryanarayanan, Vembu",
-    "displayName": "Suryanarayanan, Vembu",
+    "displayName": "Vembu Suryanarayanan",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Vembu Suryanarayanan",
+      "V SURYANARAYANAN"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Electroorganic and Materials Electrochemistry Division, CSIR-Central Electrochemical Research Institute, Karaikudi 630003, India",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0003-1123-3291",
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Vembu%20Suryanarayanan%22",
+      "crossref": "https://search.crossref.org/?q=Vembu%20Suryanarayanan",
+      "openAlex": "https://openalex.org/A5042890065",
+      "orcid": "https://orcid.org/0000-0003-1123-3291",
+      "institution": "https://ror.org/01qek3q18"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5042890065",
+      "https://orcid.org/0000-0003-1123-3291",
+      "https://doi.org/10.1016/j.orgel.2023.106847",
+      "https://ror.org/01qek3q18"
+    ]
   },
   {
     "id": "huang-yao-shen",
     "name": "Huang, Yao-Shen",
-    "displayName": "Huang, Yao-Shen",
+    "displayName": "Yao-Shen Huang",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Yao-Shen Huang"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemistry Soochow University Taipei 11102 Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Yao-Shen%20Huang%22",
+      "crossref": "https://search.crossref.org/?q=Yao-Shen%20Huang",
+      "openAlex": "https://openalex.org/A5063854259",
+      "institution": "https://ror.org/00d80zx46"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5063854259",
+      "https://doi.org/10.1002/adfm.202306367",
+      "https://ror.org/00d80zx46"
+    ]
   },
   {
     "id": "lin-fang-ju",
     "name": "Lin, Fang-Ju",
-    "displayName": "Lin, Fang-Ju",
+    "displayName": "Fang-Ju Lin",
     "nameZh": "",
-    "aliases": [],
-    "role": "",
-    "currentPosition": "",
-    "affiliation": "",
+    "aliases": [
+      "Fang-Ju Lin",
+      "F J Lin"
+    ],
+    "role": "Pediatritian",
+    "currentPosition": "Pediatritian",
+    "affiliation": "Pediatric infectious disease, Kaohsiung Chang Gung Memorial Hospital",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0003-1038-0871",
+    "links": {
+      "scopus": "https://www.scopus.com/authid/detail.uri?authorId=57224767733",
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Fang-Ju%20Lin%22",
+      "crossref": "https://search.crossref.org/?q=Fang-Ju%20Lin",
+      "openAlex": "https://openalex.org/A5101562056",
+      "orcid": "https://orcid.org/0000-0003-1038-0871",
+      "institution": "https://ror.org/00k194y12"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5101562056",
+      "https://orcid.org/0000-0003-1038-0871",
+      "https://doi.org/10.1002/adfm.202306367",
+      "https://ror.org/00k194y12"
+    ]
   },
   {
     "id": "abate-seid-yimer",
     "name": "Abate, Seid Yimer",
-    "displayName": "Abate, Seid Yimer",
+    "displayName": "Seid Yimer Abate",
     "nameZh": "",
-    "aliases": [],
-    "role": "",
-    "currentPosition": "",
-    "affiliation": "",
+    "aliases": [
+      "Seid Yimer Abate"
+    ],
+    "role": "Research Scientist",
+    "currentPosition": "Research Scientist",
+    "affiliation": "Verde Technologies Inc.",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0002-1183-0806",
+    "links": {
+      "webOfScience": "http://www.researcherid.com/rid/R-2390-2017",
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Seid%20Yimer%20Abate%22",
+      "crossref": "https://search.crossref.org/?q=Seid%20Yimer%20Abate",
+      "openAlex": "https://openalex.org/A5036381098",
+      "orcid": "https://orcid.org/0000-0002-1183-0806",
+      "institution": "https://ror.org/0155zta11"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5036381098",
+      "https://orcid.org/0000-0002-1183-0806",
+      "https://doi.org/10.1016/j.cej.2022.139926",
+      "https://ror.org/0155zta11"
+    ]
   },
   {
     "id": "chan-shun-hsiang",
     "name": "Chan, Shun-Hsiang",
-    "displayName": "Chan, Shun-Hsiang",
+    "displayName": "Shun-Hsiang Chan",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Shun-Hsiang Chan"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemical and Materials Engineering, Chang Gung University, Taoyuan 33302, Taiwan; Green Technology Research Center, Chang Gung University, Taoyuan 33302, Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Shun-Hsiang%20Chan%22",
+      "crossref": "https://search.crossref.org/?q=Shun-Hsiang%20Chan",
+      "openAlex": "https://openalex.org/A5112760217",
+      "institution": "https://ror.org/009knm296"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5112760217",
+      "https://doi.org/10.3390/nano12152651",
+      "https://ror.org/009knm296"
+    ]
   },
   {
     "id": "ting-chang-chieh",
     "name": "Ting, Chang-Chieh",
-    "displayName": "Ting, Chang-Chieh",
+    "displayName": "Chang-Chieh Ting",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Chang-Chieh Ting"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Chemical and Materials Engineering, National Central University, Jhongli District, Taoyuan 32001, Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Chang-Chieh%20Ting%22",
+      "crossref": "https://search.crossref.org/?q=Chang-Chieh%20Ting",
+      "openAlex": "https://openalex.org/A5047353842",
+      "institution": "https://ror.org/00944ve71"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5047353842",
+      "https://doi.org/10.3390/nano12152651",
+      "https://ror.org/00944ve71"
+    ]
   },
   {
     "id": "liao-jian-ming",
     "name": "Liao, Jian-Ming",
-    "displayName": "Liao, Jian-Ming",
+    "displayName": "Jian-Ming Liao",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Jian-Ming Liao"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Applied Chemistry, Providence University, Taichung 433, Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0002-5527-1962",
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Jian-Ming%20Liao%22",
+      "crossref": "https://search.crossref.org/?q=Jian-Ming%20Liao",
+      "openAlex": "https://openalex.org/A5014654794",
+      "orcid": "https://orcid.org/0000-0002-5527-1962",
+      "institution": "https://ror.org/03fcpsq87"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5014654794",
+      "https://orcid.org/0000-0002-5527-1962",
+      "https://doi.org/10.3390/polym14081580",
+      "https://ror.org/03fcpsq87"
+    ]
   },
   {
     "id": "tsai-yu-hsiang",
     "name": "Tsai, Yu-Hsiang",
-    "displayName": "Tsai, Yu-Hsiang",
+    "displayName": "Yu-Hsiang Tsai",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Yu-Hsiang Tsai"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "National Chiayi University",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Yu-Hsiang%20Tsai%22",
+      "crossref": "https://search.crossref.org/?q=Yu-Hsiang%20Tsai",
+      "openAlex": "https://openalex.org/A5109959152",
+      "institution": "https://ror.org/04gknbs13"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5109959152",
+      "https://doi.org/10.1016/j.cej.2021.131609",
+      "https://ror.org/04gknbs13"
+    ]
   },
   {
     "id": "wang-chao-shian",
     "name": "Wang, Chao-Shian",
-    "displayName": "Wang, Chao-Shian",
+    "displayName": "Chao-Shian Wang",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Chao-Shian Wang"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Soochow University",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Chao-Shian%20Wang%22",
+      "crossref": "https://search.crossref.org/?q=Chao-Shian%20Wang",
+      "openAlex": "https://openalex.org/A5065479165",
+      "institution": "https://ror.org/05kvm7n82"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5065479165",
+      "https://doi.org/10.1016/j.cej.2021.131609",
+      "https://ror.org/05kvm7n82"
+    ]
   },
   {
     "id": "huang-yi-jen",
     "name": "Huang, Yi-Jen",
-    "displayName": "Huang, Yi-Jen",
+    "displayName": "Yi-Jen Huang",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Yi-Jen Huang",
+      "Y. J. Huang"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Materials and Chemical Engineering, National Chin-Yi University of Technology",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0002-8948-6988",
+    "links": {
+      "scopus": "https://www.scopus.com/authid/detail.uri?authorId=57223193925",
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Yi-Jen%20Huang%22",
+      "crossref": "https://search.crossref.org/?q=Yi-Jen%20Huang",
+      "openAlex": "https://openalex.org/A5103278966",
+      "orcid": "https://orcid.org/0000-0002-8948-6988",
+      "institution": "https://ror.org/040bs6h16"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5103278966",
+      "https://orcid.org/0000-0002-8948-6988",
+      "https://doi.org/10.3390/polym13234246",
+      "https://ror.org/040bs6h16"
+    ]
   },
   {
     "id": "huang-chien-lin",
     "name": "Huang, Chien-Lin",
-    "displayName": "Huang, Chien-Lin",
+    "displayName": "Chien-Lin Huang",
     "nameZh": "",
-    "aliases": [],
-    "role": "",
-    "currentPosition": "",
-    "affiliation": "",
+    "aliases": [
+      "Chien-Lin Huang"
+    ],
+    "role": "Associate Professor",
+    "currentPosition": "Associate Professor",
+    "affiliation": "Fiber and Composite Material, Feng Chia University",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0002-4987-9429",
+    "links": {
+      "scopus": "https://www.scopus.com/authid/detail.uri?authorId=55325038600",
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Chien-Lin%20Huang%22",
+      "crossref": "https://search.crossref.org/?q=Chien-Lin%20Huang",
+      "openAlex": "https://openalex.org/A5060455058",
+      "orcid": "https://orcid.org/0000-0002-4987-9429",
+      "institution": "https://ror.org/05vhczg54"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5060455058",
+      "https://orcid.org/0000-0002-4987-9429",
+      "https://doi.org/10.3390/polym13234246",
+      "https://ror.org/05vhczg54"
+    ]
   },
   {
     "id": "lai-ruo-yu",
     "name": "Lai, Ruo-Yu",
-    "displayName": "Lai, Ruo-Yu",
+    "displayName": "Ruo-Yu Lai",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Ruo-Yu Lai"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Fiber and Composite Materials, Feng Chia University, Taichung 40724, Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Ruo-Yu%20Lai%22",
+      "crossref": "https://search.crossref.org/?q=Ruo-Yu%20Lai",
+      "openAlex": "https://openalex.org/A5055638448",
+      "institution": "https://ror.org/05vhczg54"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5055638448",
+      "https://doi.org/10.3390/polym13234246",
+      "https://ror.org/05vhczg54"
+    ]
   },
   {
     "id": "zhuang-cheng-han",
     "name": "Zhuang, Cheng-Han",
-    "displayName": "Zhuang, Cheng-Han",
+    "displayName": "Cheng-Han Zhuang",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Cheng-Han Zhuang"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Department of Fiber and Composite Materials, Feng Chia University, Taichung 40724, Taiwan",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Cheng-Han%20Zhuang%22",
+      "crossref": "https://search.crossref.org/?q=Cheng-Han%20Zhuang",
+      "openAlex": "https://openalex.org/A5005069594",
+      "institution": "https://ror.org/05vhczg54"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5005069594",
+      "https://doi.org/10.3390/polym13234246",
+      "https://ror.org/05vhczg54"
+    ]
   },
   {
     "id": "chang-yin-hsuan",
     "name": "Chang, Yin-Hsuan",
-    "displayName": "Chang, Yin-Hsuan",
+    "displayName": "Yin-Hsuan Chang",
     "nameZh": "",
-    "aliases": [],
-    "role": "",
-    "currentPosition": "",
-    "affiliation": "",
+    "aliases": [
+      "Yin-Hsuan Chang"
+    ],
+    "role": "Postdoctoral Researcher",
+    "currentPosition": "Postdoctoral Researcher",
+    "affiliation": "Department of Chemical and MAterials Engineering, Chang Gung University",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0002-3452-8108",
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Yin-Hsuan%20Chang%22",
+      "crossref": "https://search.crossref.org/?q=Yin-Hsuan%20Chang",
+      "openAlex": "https://openalex.org/A5090182923",
+      "orcid": "https://orcid.org/0000-0002-3452-8108",
+      "institution": "https://ror.org/00d80zx46"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5090182923",
+      "https://orcid.org/0000-0002-3452-8108",
+      "https://doi.org/10.3390/nano11061607",
+      "https://ror.org/00d80zx46"
+    ]
   },
   {
     "id": "hsu-chih-yu",
     "name": "Hsu, Chih-Yu",
-    "displayName": "Hsu, Chih-Yu",
+    "displayName": "Chih-Yu Hsu",
     "nameZh": "",
-    "aliases": [],
-    "role": "",
-    "currentPosition": "",
-    "affiliation": "",
+    "aliases": [
+      "Chih-Yu Hsu"
+    ],
+    "role": "Guest Professor",
+    "currentPosition": "Guest Professor",
+    "affiliation": "School of Cyber Science and Engineering, Wuxi University",
     "affiliationZh": "",
-    "email": [],
+    "email": [
+      {
+        "address": "tccnchsu@yahoo.com.tw",
+        "label": "Public Email"
+      },
+      {
+        "address": "chihyuhsu@cwxu.edu.cn",
+        "label": "Public Email"
+      },
+      {
+        "address": "tccnchsu@gmail.com",
+        "label": "Public Email"
+      }
+    ],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0003-1074-8170",
+    "links": {
+      "scopus": "https://www.scopus.com/authid/detail.uri?authorId=55741998100",
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Chih-Yu%20Hsu%22",
+      "crossref": "https://search.crossref.org/?q=Chih-Yu%20Hsu",
+      "openAlex": "https://openalex.org/A5111688404",
+      "orcid": "https://orcid.org/0000-0003-1074-8170",
+      "institution": "https://ror.org/02yq4ac41"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5111688404",
+      "https://orcid.org/0000-0003-1074-8170",
+      "https://doi.org/10.1016/j.jpowsour.2012.05.079",
+      "https://ror.org/02yq4ac41"
+    ]
   },
   {
     "id": "lee-chia-hua",
     "name": "Lee, Chia-Hua",
-    "displayName": "Lee, Chia-Hua",
+    "displayName": "Chia-Hua Lee",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Chia-Hua Lee"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Industrial Technology Research Institute",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0003-4229-3027",
+    "links": {
+      "personalWebsite": "http://www.itri.org.tw/",
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Chia-Hua%20Lee%22",
+      "crossref": "https://search.crossref.org/?q=Chia-Hua%20Lee",
+      "openAlex": "https://openalex.org/A5001300090",
+      "orcid": "https://orcid.org/0000-0003-4229-3027",
+      "institution": "https://ror.org/02verss31"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5001300090",
+      "https://orcid.org/0000-0003-4229-3027",
+      "https://doi.org/10.1016/j.jpowsour.2012.05.079",
+      "https://ror.org/02verss31",
+      "http://www.itri.org.tw/"
+    ]
   },
   {
     "id": "lu-ming-de",
     "name": "Lu, Ming-De",
-    "displayName": "Lu, Ming-De",
+    "displayName": "Ming-De Lu",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Ming-De Lu"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Industrial Technology Research Institute",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Ming-De%20Lu%22",
+      "crossref": "https://search.crossref.org/?q=Ming-De%20Lu",
+      "openAlex": "https://openalex.org/A5043390506",
+      "institution": "https://ror.org/05szzwt63"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5043390506",
+      "https://doi.org/10.1016/j.jpowsour.2011.06.049",
+      "https://ror.org/05szzwt63"
+    ]
   },
   {
     "id": "hsieh-wen-feng",
     "name": "Hsieh, Wen-Feng",
-    "displayName": "Hsieh, Wen-Feng",
-    "nameZh": "",
-    "aliases": [],
-    "role": "",
-    "currentPosition": "",
-    "affiliation": "",
-    "affiliationZh": "",
-    "email": [],
+    "displayName": "Wen-Feng Hsieh",
+    "nameZh": "謝文峰",
+    "aliases": [
+      "Wen-Feng Hsieh",
+      "Hsieh, Weng-Feng",
+      "Weng-Feng Hsieh"
+    ],
+    "role": "Professor Emeritus",
+    "currentPosition": "Retired Professor",
+    "affiliation": "Department of Photonics, National Yang Ming Chiao Tung University",
+    "affiliationZh": "國立陽明交通大學 光電工程學系",
+    "email": [
+      {
+        "address": "wfhsieh1955@gmail.com",
+        "label": "Public Email"
+      }
+    ],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Wen-Feng%20Hsieh%22",
+      "crossref": "https://search.crossref.org/?q=Wen-Feng%20Hsieh",
+      "openAlex": "https://openalex.org/A5108372667",
+      "institution": "https://dop.nycu.edu.tw/ch/people_ii.html?tID=112",
+      "personalWebsite": "https://wfhsieh1955.blogspot.com/"
+    },
+    "status": "verified",
+    "verificationLevel": "Official NYCU faculty page + DOI-constrained author match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5108372667",
+      "https://doi.org/10.1016/j.jpowsour.2011.06.049",
+      "https://ror.org/00se2k293",
+      "https://dop.nycu.edu.tw/ch/people_ii.html?tID=112",
+      "https://wfhsieh1955.blogspot.com/",
+      "https://openalex.org/A5028020777"
+    ]
   },
   {
     "id": "wu-jenn-ming",
     "name": "Wu, Jenn-Ming",
-    "displayName": "Wu, Jenn-Ming",
+    "displayName": "Jenn-Ming Wu",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Jenn-Ming Wu"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "National Tsing Hua University",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Jenn-Ming%20Wu%22",
+      "crossref": "https://search.crossref.org/?q=Jenn-Ming%20Wu",
+      "openAlex": "https://openalex.org/A5109944881",
+      "institution": "https://ror.org/00zdnkx70"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5109944881",
+      "https://doi.org/10.1039/c0jm04099a",
+      "https://ror.org/00zdnkx70"
+    ]
   },
   {
     "id": "yen-wen-hsiang",
     "name": "Yen, Wen-Hsiang",
-    "displayName": "Yen, Wen-Hsiang",
+    "displayName": "Wen-Hsiang Yen",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Wen-Hsiang Yen"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Industrial Technology Research Institute",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Wen-Hsiang%20Yen%22",
+      "crossref": "https://search.crossref.org/?q=Wen-Hsiang%20Yen",
+      "openAlex": "https://openalex.org/A5012093855",
+      "institution": "https://ror.org/05szzwt63"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5012093855",
+      "https://doi.org/10.1016/j.electacta.2010.07.061",
+      "https://ror.org/05szzwt63"
+    ]
   },
   {
     "id": "lin-hsiu-fen",
     "name": "Lin, Hsiu-Fen",
-    "displayName": "Lin, Hsiu-Fen",
+    "displayName": "Hsiu-Fen Lin",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Hsiu-Fen Lin"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Industrial Technology Research Institute",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Hsiu-Fen%20Lin%22",
+      "crossref": "https://search.crossref.org/?q=Hsiu-Fen%20Lin",
+      "openAlex": "https://openalex.org/A5100842499",
+      "institution": "https://ror.org/05szzwt63"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5100842499",
+      "https://doi.org/10.1016/j.electacta.2010.07.061",
+      "https://ror.org/05szzwt63"
+    ]
   },
   {
     "id": "wei-hung-yu",
     "name": "Wei, Hung-Yu",
-    "displayName": "Wei, Hung-Yu",
+    "displayName": "Hung-Yu Wei",
     "nameZh": "",
-    "aliases": [],
-    "role": "",
-    "currentPosition": "",
-    "affiliation": "",
+    "aliases": [
+      "Hung-Yu Wei"
+    ],
+    "role": "Professor",
+    "currentPosition": "Professor",
+    "affiliation": "Dept. of Electrical Engineering, National Taiwan University",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
-  },
-  {
-    "id": "hsieh-weng-feng",
-    "name": "Hsieh, Weng-Feng",
-    "displayName": "Hsieh, Weng-Feng",
-    "nameZh": "",
-    "aliases": [],
-    "role": "",
-    "currentPosition": "",
-    "affiliation": "",
-    "affiliationZh": "",
-    "email": [],
-    "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0002-3116-306X",
+    "links": {
+      "personalWebsite": "https://www.ee.ntu.edu.tw/publist1.php?teacher_id=675",
+      "scopus": "https://www.scopus.com/authid/detail.uri?authorId=7402517097",
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Hung-Yu%20Wei%22",
+      "crossref": "https://search.crossref.org/?q=Hung-Yu%20Wei",
+      "openAlex": "https://openalex.org/A5045339787",
+      "orcid": "https://orcid.org/0000-0002-3116-306X",
+      "institution": "https://ror.org/05bqach95"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5045339787",
+      "https://orcid.org/0000-0002-3116-306X",
+      "https://doi.org/10.1016/j.tsf.2009.11.058",
+      "https://ror.org/05bqach95",
+      "https://www.ee.ntu.edu.tw/publist1.php?teacher_id=675"
+    ]
   },
   {
     "id": "tsui-meng-chin",
     "name": "Tsui, Meng-Chin",
-    "displayName": "Tsui, Meng-Chin",
+    "displayName": "Meng-Chin Tsui",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Meng-Chin Tsui"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Industrial Technology Research Institute",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Meng-Chin%20Tsui%22",
+      "crossref": "https://search.crossref.org/?q=Meng-Chin%20Tsui",
+      "openAlex": "https://openalex.org/A5071290260",
+      "institution": "https://ror.org/05szzwt63"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5071290260",
+      "https://doi.org/10.1016/j.solmat.2009.07.017",
+      "https://ror.org/05szzwt63"
+    ]
   },
   {
     "id": "tung-yung-liang",
     "name": "Tung, Yung-Liang",
-    "displayName": "Tung, Yung-Liang",
+    "displayName": "Yung-Liang Tung",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Yung-Liang Tung"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Industrial Technology Research Institute",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Yung-Liang%20Tung%22",
+      "crossref": "https://search.crossref.org/?q=Yung-Liang%20Tung",
+      "openAlex": "https://openalex.org/A5110056189",
+      "institution": "https://ror.org/05szzwt63"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5110056189",
+      "https://doi.org/10.1016/j.solmat.2009.07.017",
+      "https://ror.org/05szzwt63"
+    ]
   },
   {
     "id": "tsai-song-yeu",
     "name": "Tsai, Song-Yeu",
-    "displayName": "Tsai, Song-Yeu",
+    "displayName": "Song-Yeu Tsai",
     "nameZh": "",
-    "aliases": [],
-    "role": "",
-    "currentPosition": "",
-    "affiliation": "",
+    "aliases": [
+      "Song-Yeu Tsai",
+      "S.-Y. Tsai",
+      "Tsai, S.-Y."
+    ],
+    "role": "Deputy Division Director",
+    "currentPosition": "Deputy Division Director",
+    "affiliation": "Photovoltaic Technology Division, Green Energy and Environment Research Laboratoriesy",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0001-6039-242X",
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Song-Yeu%20Tsai%22",
+      "crossref": "https://search.crossref.org/?q=Song-Yeu%20Tsai",
+      "openAlex": "https://openalex.org/A5085196803",
+      "orcid": "https://orcid.org/0000-0001-6039-242X",
+      "institution": "https://ror.org/05szzwt63"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5085196803",
+      "https://orcid.org/0000-0001-6039-242X",
+      "https://doi.org/10.1016/j.solmat.2009.07.017",
+      "https://ror.org/05szzwt63"
+    ]
   },
   {
     "id": "liao-shih-chieh",
     "name": "Liao, Shih-Chieh",
-    "displayName": "Liao, Shih-Chieh",
+    "displayName": "Shih-Chieh Liao",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Shih-Chieh Liao"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "China Medical University",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Shih-Chieh%20Liao%22",
+      "crossref": "https://search.crossref.org/?q=Shih-Chieh%20Liao",
+      "openAlex": "https://openalex.org/A5102121934",
+      "institution": "https://ror.org/00v408z34"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5102121934",
+      "https://doi.org/10.1039/b902595m",
+      "https://ror.org/00v408z34"
+    ]
   },
   {
     "id": "chen-ching-hsu",
     "name": "Chen, Ching-Hsu",
-    "displayName": "Chen, Ching-Hsu",
+    "displayName": "Ching-Hsu Chen",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Ching-Hsu Chen"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "Electrophysics, National Chiayi University",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
-    "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "orcid": "0000-0002-1966-2931",
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Ching-Hsu%20Chen%22",
+      "crossref": "https://search.crossref.org/?q=Ching-Hsu%20Chen",
+      "openAlex": "https://openalex.org/A5048067834",
+      "orcid": "https://orcid.org/0000-0002-1966-2931",
+      "institution": "https://ror.org/04gknbs13"
+    },
+    "status": "verified",
+    "verificationLevel": "ORCID + DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5048067834",
+      "https://orcid.org/0000-0002-1966-2931",
+      "https://doi.org/10.1016/j.optcom.2004.10.003",
+      "https://ror.org/04gknbs13"
+    ]
   },
   {
     "id": "tai-po-tse",
     "name": "Tai, Po-Tse",
-    "displayName": "Tai, Po-Tse",
+    "displayName": "Po-Tse Tai",
     "nameZh": "",
-    "aliases": [],
+    "aliases": [
+      "Po-Tse Tai",
+      "P.T. Tai"
+    ],
     "role": "",
     "currentPosition": "",
-    "affiliation": "",
+    "affiliation": "National Yang Ming Chiao Tung University",
     "affiliationZh": "",
     "email": [],
     "telephone": "",
     "orcid": "",
-    "links": {},
-    "status": "pending",
-    "lastVerified": "",
-    "sources": []
+    "links": {
+      "googleScholar": "https://scholar.google.com/scholar?q=author%3A%22Po-Tse%20Tai%22",
+      "crossref": "https://search.crossref.org/?q=Po-Tse%20Tai",
+      "openAlex": "https://openalex.org/A5111648315",
+      "institution": "https://ror.org/00se2k293"
+    },
+    "status": "verified",
+    "verificationLevel": "DOI-constrained OpenAlex match",
+    "lastVerified": "2026-07-23",
+    "sources": [
+      "https://openalex.org/A5111648315",
+      "https://doi.org/10.1016/j.optcom.2004.10.003",
+      "https://ror.org/00se2k293"
+    ]
   }
 ]
