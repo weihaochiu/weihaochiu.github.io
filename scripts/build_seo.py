@@ -205,12 +205,11 @@ def main():
   unpaywall_records=json.loads(unpaywall_path.read_text(encoding='utf-8')).get('records',{}) if unpaywall_path.exists() else {}
   mendeley_path=ROOT/'data/mendeley_metrics.json'
   mendeley_records=json.loads(mendeley_path.read_text(encoding='utf-8')).get('records',{}) if mendeley_path.exists() else {}
-  if len(pubs)!=37: raise SystemExit(f'Expected 37 publications, found {len(pubs)}')
   for path in ROOT.glob('*.html'):
     text=path.read_text(encoding='utf-8'); text=replace_person_schema(text); text=replace_emails(text); path.write_text(text,encoding='utf-8')
   pubpath=ROOT/'publications.html'; text=clean_publications_head(pubpath.read_text(encoding='utf-8'))
   cards='\n'.join(static_card(p,openalex_records.get(str(p.get('doi') or '').strip().lower(),{})) for p in pubs)
-  text=re.sub(r'<div id="collectionContainer">.*?</div>', '<div id="collectionContainer" data-static-publications="37">\n'+cards+'\n</div>', text, count=1, flags=re.S)
+  text=re.sub(r'<div id="collectionContainer">.*?</div>', '<div id="collectionContainer" data-static-publications="'+str(len(pubs))+'">\n'+cards+'\n</div>', text, count=1, flags=re.S)
   graph={'@context':'https://schema.org','@graph':[PERSON]+[article_schema(p,SITE_URL+'/publications/'+slugify(p.get('doi',''))+'.html') for p in pubs]}
   schema='<script type="application/ld+json" id="publications-schema">'+json.dumps(graph,ensure_ascii=False,separators=(',',':'))+'</script>'
   text=re.sub(r'<script type="application/ld\+json" id="publications-schema">.*?</script>','',text,flags=re.S)
@@ -236,6 +235,6 @@ def main():
   lines += ['- '+x for x in PERSON['knowsAbout']]; lines += ['','## Publications','']
   for p in pubs: lines.append(f"- [{p.get('title')}]({SITE_URL}/publications/{slugify(p.get('doi',''))}.html) — {p.get('journal')}, {p.get('year')}; DOI: {p.get('doi')}")
   (ROOT/'llms.txt').write_text('\n'.join(lines)+'\n',encoding='utf-8')
-  mp=ROOT/'data/site_meta.json'; meta=json.loads(mp.read_text(encoding='utf-8')); meta.update({'version':'v23','lastUpdated':TODAY,'notes':'V23 adds static crawler-readable publications, 37 ScholarlyArticle records, upgraded Person schema, corrected email links on every page, article-specific citation and Open Graph metadata, expanded llms.txt, and crawler-aware robots and sitemap files.'}); mp.write_text(json.dumps(meta,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+  mp=ROOT/'data/site_meta.json'; meta=json.loads(mp.read_text(encoding='utf-8')); meta.update({'version':'v23','lastUpdated':TODAY,'notes':f'V23 provides {len(pubs)} static crawler-readable ScholarlyArticle records, upgraded Person schema, corrected email links on every page, article-specific citation and Open Graph metadata, expanded llms.txt, and crawler-aware robots and sitemap files.'}); mp.write_text(json.dumps(meta,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 
 if __name__=='__main__': main()

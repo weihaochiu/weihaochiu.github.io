@@ -38,6 +38,7 @@
     .summary-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin:0 0 28px}.summary-card{padding:18px;border:1px solid #dfe6ec;border-radius:8px;background:#fff}
     .summary-card span{display:block;color:#647382;font-size:.68rem;text-transform:uppercase;letter-spacing:.05em}.summary-card strong{display:block;margin-top:5px;font-size:1.55rem;color:#23313d}.summary-card small{color:#6b7884;font-size:.65rem}
     .content-audit-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.content-audit-card{padding:18px;border:1px solid #dfe6ec;border-radius:8px;background:#fff}.content-audit-card span{display:block;color:#647382;font-size:.68rem;text-transform:uppercase;letter-spacing:.05em}.content-audit-card strong{display:block;margin:5px 0;font-size:1.55rem}.content-audit-card small{color:#6b7884}.missing-publication-list{margin:16px 0 0;padding:0;list-style:none;border-top:1px solid #e3e8ed}.missing-publication-list li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;padding:12px 0;border-bottom:1px solid #e3e8ed;font-size:.76rem}.missing-publication-list a{color:#245f96;font-weight:700;text-decoration:none}.missing-tags{display:flex;gap:5px;flex-wrap:wrap;justify-content:flex-end}.missing-tag{padding:2px 7px;border-radius:999px;background:#fff1e4;color:#8a4b16;font-size:.62rem;font-weight:750}
+    .pending-author-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:12px 0 16px}.pending-author-summary .content-audit-card strong{color:#8a4b16}.pending-author-table{min-width:1180px}.pending-author-table td{max-width:360px}.pending-author-table details summary{color:#245f96;font-weight:700;cursor:pointer}.pending-author-publications{margin:8px 0 0;padding-left:18px}.pending-author-publications li{margin:5px 0}.pending-author-publications a{color:#245f96;text-decoration:none}.pending-status{display:inline-block;padding:3px 7px;border-radius:999px;background:#fff1e4;color:#8a4b16;font-size:.62rem;font-weight:750;text-transform:uppercase}.pending-author-empty{padding:18px;color:#577b72;font-size:.78rem}
     .two-column{display:grid;grid-template-columns:minmax(0,1fr);gap:20px}.two-column .analytics-chart-host{min-height:430px}
     .table-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:12px 0}
     .table-search{min-width:250px;max-width:420px;flex:1;padding:9px 11px;border:1px solid #c9d3dc;border-radius:6px;font:inherit;font-size:.78rem}
@@ -52,14 +53,14 @@
     .collaboration-summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:12px 0}.collaboration-summary div{padding:12px;border:1px solid #dfe6ec;border-radius:7px;background:#fff}.collaboration-summary span{display:block;color:#647382;font-size:.63rem;text-transform:uppercase;letter-spacing:.04em}.collaboration-summary strong{display:block;margin-top:4px;color:#253846;font-size:1.15rem}
     .network-layout{display:grid;grid-template-columns:minmax(0,2fr) minmax(280px,1fr);gap:16px}.network-host{min-height:620px;position:relative;overflow:hidden}.network-host svg{width:100%;height:auto;touch-action:none}.network-tooltip{position:absolute;display:none;z-index:4;max-width:310px;padding:9px 11px;border-radius:7px;background:rgba(31,41,51,.94);color:#fff;font-size:.68rem;line-height:1.45;pointer-events:none;box-shadow:0 5px 18px rgba(0,0,0,.2)}.collaborator-list{max-height:620px;overflow:auto;border:1px solid #dfe6ec;border-radius:8px}.collaborator-list table{width:100%;border-collapse:collapse;font-size:.7rem}.collaborator-list th,.collaborator-list td{padding:8px 9px;border-bottom:1px solid #e6ebef;text-align:left}.collaborator-list th{position:sticky;top:0;background:#f4f7f9;z-index:2}.collaborator-list .author-trigger{all:unset;color:#245f96;font-weight:700;cursor:pointer;border-bottom:1px solid currentColor}.network-legend{display:flex;flex-wrap:wrap;gap:12px;margin-top:9px;color:#647382;font-size:.66rem}.network-dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px}
     @media(max-width:980px){.summary-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.two-column,.network-layout{grid-template-columns:1fr}.collaboration-controls{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media(max-width:700px){.private-analytics-header{padding:2.5rem 0 1.5rem}.analytics-jump-inner{align-items:flex-start;flex-direction:column;gap:0;padding-top:8px}.analytics-jump-links{width:100%}.analytics-section{scroll-margin-top:175px}.analytics-heading{flex-direction:column}.chart-actions{justify-content:flex-start}.summary-grid{grid-template-columns:1fr 1fr}.content-audit-grid{grid-template-columns:1fr}.missing-publication-list li{grid-template-columns:1fr}.missing-tags{justify-content:flex-start}}
+    @media(max-width:700px){.private-analytics-header{padding:2.5rem 0 1.5rem}.analytics-jump-inner{align-items:flex-start;flex-direction:column;gap:0;padding-top:8px}.analytics-jump-links{width:100%}.analytics-section{scroll-margin-top:175px}.analytics-heading{flex-direction:column}.chart-actions{justify-content:flex-start}.summary-grid{grid-template-columns:1fr 1fr}.content-audit-grid,.pending-author-summary{grid-template-columns:1fr}.missing-publication-list li{grid-template-columns:1fr}.missing-tags{justify-content:flex-start}}
   </style>
 <script type="application/ld+json" id="person-schema">{"@context":"https://schema.org","@type":"Person","@id":"https://weihaochiu.github.io/#person","name":"Wei-Hao Chiu","alternateName":["邱偉豪","Chiu, Wei-Hao"],"honorificSuffix":"Ph.D.","url":"https://weihaochiu.github.io/","image":"https://weihaochiu.github.io/assets/images/profile.jpg","jobTitle":"Associate Researcher","email":["mailto:weihao.chiu@gmail.com","mailto:d000019005@cgu.edu.tw"],"affiliation":{"@type":"Organization","name":"Chang Gung University","url":"https://www.cgu.edu.tw/"},"worksFor":{"@type":"Organization","name":"Center for Sustainability and Energy Technologies, Chang Gung University"},"knowsAbout":["Perovskite solar cells","Tin and tin-lead perovskite photovoltaics","Scalable photovoltaic manufacturing","Vacuum-flash crystallization","Blade coating","Slot-die coating","Charge-transport layers","Self-assembled monolayers","Photoluminescence and electroluminescence","Quasi-Fermi level splitting","Photovoltaic reliability","Space photovoltaics","Tandem solar cells","Vanadium redox flow batteries"],"sameAs":["https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en","https://orcid.org/0000-0003-4484-3117","https://www.scopus.com/authid/detail.uri?authorId=7201503537","https://www.webofscience.com/wos/author/record/JCE-6812-2023","https://pure.lib.cgu.edu.tw/en/persons/wei-hao-chiu/publications/","https://www.cgu.edu.tw/cset-en/FullTimeProfessorManagement/Detail/e3d82caf-b69a-4ee3-ac95-0d1558e22d83?nodeId=17439","https://www.researchgate.net/profile/Wei-Hao-Chiu","https://www.linkedin.com/in/wei-hao-chiu-a208a9b0/","https://openalex.org/works?filter=authorships.author.id:a5007707999"]}</script></head>
 <body>
 <header class="site-header"><div class="shell nav-shell"><a class="brand" href="index.html"><span>Wei-Hao Chiu</span><small>Academic Profile</small></a></div></header>
 <section class="private-analytics-header"><div class="shell"><h1>Publication Analytics</h1><p>Private dashboard combining publication output, citation activity, journal portfolio, JCR quartiles and journal metrics. JCR and JIF values are secondary-source observations; Scopus quartiles are never used as JCR quartiles.</p></div></section>
 <nav class="analytics-jump-bar" aria-label="Analytics navigation"><div class="shell analytics-jump-inner"><span class="analytics-jump-label">Jump to</span><div class="analytics-jump-links">
-<a href="#content-completeness">Content completeness</a><a href="#output">Output & citations</a><a href="#collaboration">Collaboration</a><a href="#jcr">JCR portfolio</a><a href="#journal-rankings">Journals</a><a href="#publishers">Publishers</a><a href="#impact">Impact factor</a><a href="#relationships">Relationships</a><a href="#journal-table">Journal table</a>
+<a href="#content-completeness">Content completeness</a><a href="#author-completeness">Pending authors</a><a href="#output">Output & citations</a><a href="#collaboration">Collaboration</a><a href="#jcr">JCR portfolio</a><a href="#journal-rankings">Journals</a><a href="#publishers">Publishers</a><a href="#impact">Impact factor</a><a href="#relationships">Relationships</a><a href="#journal-table">Journal table</a>
 </div></div></nav>
 <main class="content shell private-analytics-main">
 <div class="summary-grid" id="summaryCards"><div class="summary-card"><span>Publications</span><strong>—</strong><small>Loading</small></div></div>
@@ -69,6 +70,13 @@
 <div class="content-audit-grid" id="contentAuditCards"><div class="content-audit-card"><span>Content audit</span><strong>—</strong><small>Checking publication records and GA files…</small></div></div>
 <ul class="missing-publication-list" id="missingPublicationList"></ul>
 <p class="analytics-status" id="contentAuditStatus">Checking content completeness…</p><a class="back-to-top" href="#top">Back to top ↑</a></div></section>
+
+<section class="analytics-section" id="author-completeness"><div class="chart-card">
+<div class="analytics-heading"><div><span class="eyebrow">Author directory maintenance</span><h2>Pending Author Information</h2></div><div class="chart-actions"><button class="action-button" data-csv="pending-authors" type="button">Download CSV</button></div></div>
+<p class="chart-note">New publication authors are added automatically with pending status. Unverified profile fields stay blank and their names remain non-clickable on public pages.</p>
+<div class="pending-author-summary" id="pendingAuthorSummary"><div class="content-audit-card"><span>Pending authors</span><strong>—</strong><small>Loading author records…</small></div></div>
+<div class="table-wrap"><table class="journal-table pending-author-table"><thead><tr><th>Status</th><th>Author</th><th>Author ID</th><th>Publications</th><th>First year</th><th>Latest year</th><th>Publication details</th><th>Missing fields</th></tr></thead><tbody id="pendingAuthorTableBody"></tbody></table><div class="pending-author-empty" id="pendingAuthorEmpty" hidden>All publication authors have verified directory records.</div></div>
+<p class="analytics-status" id="pendingAuthorStatus">Checking author records…</p><a class="back-to-top" href="#top">Back to top ↑</a></div></section>
 
 <section class="analytics-section" id="output"><div class="chart-card">
 <div class="analytics-heading"><div><span class="eyebrow">Scholarly output</span><h2>Publication and Citation Trends</h2></div></div>
@@ -257,6 +265,46 @@ function renderTable(){const q=document.getElementById('journalSearch').value.tr
  document.getElementById('tableStatus').textContent=`${filteredTableRows.length} of ${tableRows.length} journals shown.`;
 }
 function downloadTableCsv(){const h=['Journal','JCR profile URL','Articles','Publisher','ISSN','Metric year','Latest IF','5-year IF','JCR quartile','JCR category','Publication years','Metric source'];const rows=filteredTableRows.map(r=>[r.title,r.jcrProfileUrl,r.publicationCount,r.publisher,r.issn,r.latestMetricYear,r.impactFactor,r.fiveYearImpactFactor,r.quartile,r.category,r.years,r.source]);blobDownload(new Blob(['\ufeff'+[h,...rows].map(x=>x.map(csvEscape).join(',')).join('\r\n')+'\r\n'],{type:'text/csv;charset=utf-8'}),'journal-statistics-table.csv')}
+const AUTHOR_PROFILE_FIELDS=[
+ ['role','role'],['affiliation','affiliation'],['email','email'],['telephone','telephone'],['orcid','orcid'],
+ ['googleScholar','Google Scholar'],['openAlex','OpenAlex'],['crossref','Crossref'],['scopus','Scopus'],
+ ['webOfScience','Web of Science'],['institution','institution page'],['personalWebsite','personal website']
+];
+function authorDirectoryIndex(authors){
+ const index=new Map();
+ (authors||[]).forEach(author=>[author.name,author.displayName,author.nameZh,...(author.aliases||[])].filter(Boolean).forEach(name=>index.set(normalize(name),author)));
+ return index;
+}
+function authorMissingFields(author){
+ const links=author?.links||{};
+ return AUTHOR_PROFILE_FIELDS.filter(([key])=>{
+  if(key==='email')return!Array.isArray(author?.email)||!author.email.some(item=>String(item?.address||item||'').trim());
+  if(key==='telephone')return!String(author?.telephone?.display||author?.telephone||'').trim();
+  if(['role','affiliation','orcid'].includes(key))return!String(author?.[key]||'').trim();
+  return!String(links[key]||'').trim();
+ }).map(([,label])=>label);
+}
+function publicationSlug(p){return String(p.doi||'publication').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')||'publication'}
+function buildPendingAuthors(pubs,authors){
+ const index=authorDirectoryIndex(authors),rows=new Map();
+ (pubs||[]).forEach(p=>(p.authors||[]).forEach(raw=>{
+  const author=index.get(normalize(raw))||null,status=String(author?.status||'not-synchronized').toLowerCase();
+  if(status==='verified')return;
+  const id=String(author?.id||`unsynced-${normalize(raw)}`),row=rows.get(id)||{author,id,status,publications:new Map()};
+  const publicationKey=doi(p.doi)||`${p.title||''}|${pubYear(p)||''}`;
+  row.publications.set(publicationKey,p);rows.set(id,row);
+ }));
+ const result=[...rows.values()].map(row=>{
+  const publications=[...row.publications.values()].sort((a,b)=>(pubYear(b)||0)-(pubYear(a)||0)||String(a.title||'').localeCompare(String(b.title||''))),years=publications.map(pubYear).filter(Number.isFinite);
+  return{...row,name:String(row.author?.displayName||row.author?.name||publications.flatMap(p=>p.authors||[]).find(name=>normalize(name)===row.id.replace(/^unsynced-/,''))||row.id),aliases:(row.author?.aliases||[]).join('; '),publicationCount:publications.length,firstYear:years.length?Math.min(...years):'',lastYear:years.length?Math.max(...years):'',missingFields:authorMissingFields(row.author)};
+ }).sort((a,b)=>b.publicationCount-a.publicationCount||a.name.localeCompare(b.name));
+ const verified=(authors||[]).filter(author=>String(author.status||'').toLowerCase()==='verified').length,affected=new Set(result.flatMap(row=>[...row.publications.keys()])).size;
+ document.getElementById('pendingAuthorSummary').innerHTML=[['Pending authors',result.length,'Require profile review'],['Publications affected',affected,'Contain one or more pending authors'],['Verified directory records',verified,`${authors.length} total author records`]].map(x=>`<div class="content-audit-card"><span>${x[0]}</span><strong>${x[1]}</strong><small>${x[2]}</small></div>`).join('');
+ const body=document.getElementById('pendingAuthorTableBody'),empty=document.getElementById('pendingAuthorEmpty');empty.hidden=Boolean(result.length);
+ body.innerHTML=result.map(row=>`<tr><td><span class="pending-status">${esc(row.status)}</span></td><td class="journal-name">${esc(row.name)}${row.aliases?`<br><small>${esc(row.aliases)}</small>`:''}</td><td>${esc(row.id)}</td><td class="numeric">${row.publicationCount}</td><td class="numeric">${row.firstYear||'—'}</td><td class="numeric">${row.lastYear||'—'}</td><td><details><summary>${row.publicationCount} publication${row.publicationCount===1?'':'s'}</summary><ul class="pending-author-publications">${[...row.publications.values()].map(p=>`<li><a href="publications/${esc(publicationSlug(p))}.html">${esc(p.title||p.doi||'Untitled publication')}</a>${p.doi?`<br><small>${esc(p.doi)}</small>`:''}</li>`).join('')}</ul></details></td><td><span class="missing-tags">${row.missingFields.map(field=>`<span class="missing-tag">${esc(field)}</span>`).join('')}</span></td></tr>`).join('');
+ register('pending-authors','pending-publication-authors',['author_id','author_name','aliases','status','publication_count','first_publication_year','last_publication_year','publication_titles','publication_dois','missing_fields'],()=>result.map(row=>[row.id,row.name,row.aliases,row.status,row.publicationCount,row.firstYear,row.lastYear,[...row.publications.values()].map(p=>p.title||'').join(' | '),[...row.publications.values()].map(p=>p.doi||'').filter(Boolean).join('; '),row.missingFields.join('; ')]));
+ document.getElementById('pendingAuthorStatus').textContent=result.length?`${result.length} authors are pending verification. The CSV includes publication titles, DOIs and every currently missing profile field.`:'All publication authors have verified directory records.';
+}
 const AUTHOR_ALIASES={'weihaochiu':'Wei-Hao Chiu','chiuweihao':'Wei-Hao Chiu','whchiu':'Wei-Hao Chiu'};
 function authorName(raw){const s=String(raw||'').trim().replace(/\s+/g,' '),key=normalize(s);if(AUTHOR_ALIASES[key])return AUTHOR_ALIASES[key];if(s.includes(',')){const [last,...rest]=s.split(',');return `${rest.join(',').trim()} ${last.trim()}`.replace(/\s+/g,' ').trim()}return s}
 function buildCollaboration(pubs){
@@ -289,6 +337,7 @@ document.addEventListener('DOMContentLoaded',async()=>{
  try{
  const [pubs,jpayload,oaMetrics,crMetrics,gsHist,oaHist,authors]=await Promise.all([loadJson('data/publications.json'),loadJson('data/journals.json'),loadJson('data/openalex_publication_metrics.json').catch(()=>({records:{}})),loadJson('data/crossref_publication_metrics.json').catch(()=>({records:{}})),loadJson('data/google_scholar_citation_history.json').catch(()=>({})),loadJson('data/openalex_citation_history.json').catch(()=>({})),loadJson('data/authors.json').catch(()=>[])]);
  window.AuthorCards?.build(authors);window.AuthorCards?.init();
+ buildPendingAuthors(pubs,authors);
  buildCollaboration(pubs);
  const gaResults=await Promise.all(pubs.map(hasGraphicalAbstract));
  const hasItems=v=>Array.isArray(v)?v.some(x=>String(x||'').trim()):Boolean(String(v||'').trim());
