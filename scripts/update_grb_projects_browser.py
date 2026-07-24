@@ -10,6 +10,7 @@ summaries and English wording.
 from __future__ import annotations
 
 import copy
+import json
 import logging
 import re
 import sys
@@ -43,10 +44,68 @@ from update_grb_projects import (
 LOGGER = logging.getLogger("grb-browser")
 ROOT = Path(__file__).resolve().parents[1]
 DETAIL_PREFIX = "https://www.grb.gov.tw/search/planDetail?id="
+DEBUG_DIR = ROOT / "grb_debug"
+URL_TRAILING_PUNCTUATION = " \t\r\n:：,，.;；"
+STANDARD_BROWSER_USER_AGENT = (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+    "AppleWebKit/537.36 (KHTML, like Gecko) "
+    "Chrome/131.0.0.0 Safari/537.36"
+)
 
 
 def compact(value: Any) -> str:
     return re.sub(r"\s+", " ", str(value or "")).strip()
+
+
+def sanitize_grb_url(value: Any) -> str:
+    """Remove sentence punctuation and reject non-GRB destinations."""
+    url = clean_text(value).rstrip(URL_TRAILING_PUNCTUATION)
+    if not url:
+        return ""
+    if not url.startswith("https://www.grb.gov.tw/"):
+        raise UpdateError(f"Unexpected non-GRB URL: {url!r}")
+    return url
+
+
+def debug_slug(value: Any) -> str:
+    slug = re.sub(r"[^0-9A-Za-z._-]+", "-", clean_text(value)).strip("-.")
+    return slug[:100] or "grb-page"
+
+
+def save_page_diagnostics(
+    page: Page,
+    *,
+    debug_name: str,
+    requested_url: str,
+    status: int | None,
+    excerpt: str,
+) -> None:
+    """Persist the exact HTML and screenshot seen by the GitHub runner."""
+    if not debug_name:
+        return
+    DEBUG_DIR.mkdir(parents=True, exist_ok=True)
+    stem = debug_slug(debug_name)
+    html_path = DEBUG_DIR / f"{stem}.html"
+    png_path = DEBUG_DIR / f"{stem}.png"
+    meta_path = DEBUG_DIR / f"{stem}.json"
+    try:
+        html_path.write_text(page.content(), encoding="utf-8")
+        page.screenshot(path=str(png_path), full_page=True)
+        metadata = {
+            "requestedUrl": requested_url,
+            "requestedUrlRepr": repr(requested_url),
+            "finalUrl": page.url,
+            "httpStatus": status,
+            "pageTitle": page.title(),
+            "userAgent": page.evaluate("() => navigator.userAgent"),
+            "excerpt": excerpt,
+        }
+        meta_path.write_text(
+            json.dumps(metadata, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
+    except Exception as exc:
+        LOGGER.warning("Unable to save GRB diagnostics for %s: %s", debug_name, exc)
 
 
 def render_page(
@@ -55,11 +114,19 @@ def render_page(
     *,
     expected_text: str = "",
     wait_for_detail_links: bool = False,
+    debug_name: str = "",
 ) -> tuple[str, int | None, str]:
+    url = sanitize_grb_url(url)
     page: Page = context.new_page()
     status: int | None = None
+    LOGGER.info("Opening GRB page\nURL: %s\nURL repr: %r", url, url)
     try:
-        response = page.goto(url, wait_until="domcontentloaded", timeout=60_000)
+        response = page.goto(
+            url,
+            wait_until="domcontentloaded",
+            timeout=60_000,
+            referer="https://www.grb.gov.tw/",
+        )
         status = response.status if response else None
         try:
             page.wait_for_load_state("networkidle", timeout=20_000)
@@ -88,7 +155,27 @@ def render_page(
 
         html = page.content()
         excerpt = compact(page.locator("body").inner_text())[:800]
+        save_page_diagnostics(
+            page,
+            debug_name=debug_name,
+            requested_url=url,
+            status=status,
+            excerpt=excerpt,
+        )
         return html, status, excerpt
+    except Exception:
+        try:
+            excerpt = compact(page.locator("body").inner_text())[:800]
+        except Exception:
+            excerpt = ""
+        save_page_diagnostics(
+            page,
+            debug_name=debug_name or "navigation-error",
+            requested_url=url,
+            status=status,
+            excerpt=excerpt,
+        )
+        raise
     finally:
         page.close()
 
@@ -97,8 +184,16 @@ def parse_rendered_plan(
     context: BrowserContext,
     url: str,
     expected_number: str = "",
+    *,
+    debug_name: str = "",
 ) -> tuple[dict[str, Any], int | None, str]:
-    html, status, excerpt = render_page(context, url, expected_text=expected_number)
+    url = sanitize_grb_url(url)
+    html, status, excerpt = render_page(
+        context,
+        url,
+        expected_text=expected_number,
+        debug_name=debug_name,
+    )
     parsed = parse_plan_html(html, url)
     if not (clean_text(parsed.get("number")) or clean_text(parsed.get("titleZh"))):
         raise UpdateError("Rendered GRB page still contained no recognizable project record")
@@ -165,9 +260,10 @@ def main() -> int:
     snapshot["records"] = snapshot.get("records") if isinstance(snapshot.get("records"), dict) else {}
     snapshot["discovery"] = []
 
-    user_agent = config.get(
-        "userAgent",
-        "Wei-Hao-Chiu-Academic-Site-GRB-Updater/1.0 (+https://weihaochiu.github.io/)",
+    # Do not reuse the requests crawler user agent in Chromium. A bot-style UA can
+    # cause some WAFs to return a maintenance page even when a normal browser works.
+    browser_user_agent = (
+        clean_text(config.get("browserUserAgent")) or STANDARD_BROWSER_USER_AGENT
     )
 
     success_count = 0
@@ -180,18 +276,41 @@ def main() -> int:
             args=["--disable-dev-shm-usage", "--no-sandbox"],
         )
         context = browser.new_context(
-            user_agent=user_agent,
+            user_agent=browser_user_agent,
             locale="zh-TW",
             timezone_id="Asia/Taipei",
             extra_http_headers={"Accept-Language": "zh-TW,zh;q=0.9,en;q=0.7"},
         )
         try:
             # Establish cookies/session state in the same way as a normal visitor.
-            render_page(context, "https://www.grb.gov.tw/")
+            render_page(
+                context,
+                "https://www.grb.gov.tw/",
+                debug_name="homepage-session",
+            )
+
+            # Reproduce the successful manual path: open the researcher search
+            # before navigating to individual project detail pages.
+            for index, raw_discovery_url in enumerate(config.get("discoveryUrls", []), start=1):
+                try:
+                    session_url = sanitize_grb_url(raw_discovery_url)
+                    render_page(
+                        context,
+                        session_url,
+                        wait_for_detail_links=True,
+                        debug_name=f"session-search-{index}",
+                    )
+                except Exception as exc:
+                    LOGGER.warning(
+                        "GRB session search failed\nURL: %s\nURL repr: %r\nError: %s",
+                        raw_discovery_url,
+                        raw_discovery_url,
+                        exc,
+                    )
 
             for source in config.get("knownPlans", []):
                 grb_id = clean_text(source.get("grbId"))
-                url = clean_text(source.get("url")) or f"{DETAIL_PREFIX}{grb_id}"
+                url = sanitize_grb_url(source.get("url")) or f"{DETAIL_PREFIX}{grb_id}"
                 entry: dict[str, Any] = {
                     "grbId": grb_id,
                     "url": url,
@@ -203,6 +322,7 @@ def main() -> int:
                         context,
                         url,
                         clean_text(source.get("number")),
+                        debug_name=f"known-{grb_id or 'unknown'}",
                     )
                     entry["statusCode"] = status
                     match_index = next(
@@ -226,10 +346,16 @@ def main() -> int:
                     success_count += 1
                 except Exception as exc:
                     entry["error"] = str(exc)
-                    LOGGER.warning("Rendered GRB update failed for %s: %s", url, exc)
+                    LOGGER.warning(
+                        "Rendered GRB update failed\nURL: %s\nURL repr: %r\nError: %s",
+                        url,
+                        url,
+                        exc,
+                    )
                 snapshot["records"][grb_id or url] = entry
 
-            for discovery_url in config.get("discoveryUrls", []):
+            for discovery_index, raw_discovery_url in enumerate(config.get("discoveryUrls", []), start=1):
+                discovery_url = sanitize_grb_url(raw_discovery_url)
                 discovery_entry: dict[str, Any] = {
                     "url": discovery_url,
                     "ok": False,
@@ -237,7 +363,10 @@ def main() -> int:
                 }
                 try:
                     html, status, excerpt = render_page(
-                        context, discovery_url, wait_for_detail_links=True
+                        context,
+                        discovery_url,
+                        wait_for_detail_links=True,
+                        debug_name=f"discovery-{discovery_index}",
                     )
                     links = discover_links(html, discovery_url)
                     discovery_entry.update(
@@ -269,7 +398,12 @@ def main() -> int:
                     pending_by_key.pop(candidate_key, None)
                     continue
                 try:
-                    parsed, status, excerpt = parse_rendered_plan(context, url)
+                    url = sanitize_grb_url(url)
+                    parsed, status, excerpt = parse_rendered_plan(
+                        context,
+                        url,
+                        debug_name=f"candidate-{candidate_id or 'unknown'}",
+                    )
                     details = discovery_match_details(parsed, config)
                     if strict_discovery_match(parsed, config) and auto_add_verified:
                         project = build_new_project(parsed, config, checked_at)
@@ -297,7 +431,12 @@ def main() -> int:
                             details,
                         )
                 except Exception as exc:
-                    LOGGER.warning("Rendered discovery candidate failed for %s: %s", url, exc)
+                    LOGGER.warning(
+                        "Rendered discovery candidate failed\nURL: %s\nURL repr: %r\nError: %s",
+                        url,
+                        url,
+                        exc,
+                    )
         finally:
             context.close()
             browser.close()
