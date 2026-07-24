@@ -1,29 +1,115 @@
 {
   "source": "Government Research Bulletin (GRB), Taiwan",
   "sourceUrl": "https://www.grb.gov.tw/",
-  "checkedAt": "2026-07-24T18:07:26+08:00",
+  "checkedAt": "2026-07-24T23:17:35+08:00",
   "records": {
     "18623445": {
       "grbId": "18623445",
       "url": "https://www.grb.gov.tw/search/planDetail?id=18623445",
-      "ok": false,
+      "ok": true,
+      "fetchMode": "playwright",
       "statusCode": 200,
-      "error": "GRB detail page did not contain a recognizable project record"
+      "parsed": {
+        "url": "https://www.grb.gov.tw/search/planDetail?id=18623445",
+        "grbId": "18623445",
+        "systemId": "PB11412-5590",
+        "number": "NSTC114-2622-E182-006",
+        "agencyZh": "國家科學及技術委員會(本會)",
+        "periodRaw": "11411 ~ 11510",
+        "institutionZh": "長庚大學綠色科技研究中心",
+        "yearRaw": "114年",
+        "fundingRaw": "622千元",
+        "researchersRaw": "邱偉豪",
+        "titleZh": "產學協作開發用於鈣鈦礦模組製程之智慧真空閃蒸裝置與成膜參數調控技術",
+        "titleEn": "Collaborative Development of a Smart Vacuum Flash System and Process Optimization for Perovskite Module Production",
+        "startYear": 2025,
+        "sortDate": "2025-11-01",
+        "startDate": "2025-11-01",
+        "endDate": "2026-10-31",
+        "period": "1 Nov. 2025 – 31 Oct. 2026",
+        "status": "Ongoing",
+        "fundingAmountK": 622,
+        "fundingAmountTwd": 622000,
+        "fundingDisplayEn": "NT$622,000",
+        "fundingDisplayZh": "新臺幣 622,000 元",
+        "fundingSource": "GRB",
+        "fundingNote": "GRB-reported current-period funding (本期經費)",
+        "agencyEn": "National Science and Technology Council, Taiwan"
+      },
+      "changedFields": [
+        "number",
+        "agencyZh",
+        "startDate",
+        "endDate",
+        "fundingAmountK",
+        "fundingAmountTwd",
+        "fundingDisplayEn",
+        "fundingDisplayZh",
+        "fundingSource",
+        "fundingNote"
+      ],
+      "textExcerpt": "首 頁 關於GRB 管理辦法 計畫主管機關 聯絡我們 國研院科政中心 國家科學及技術委員會 國發會 搜尋結果詳目內容│ 產學協作開發用於鈣鈦礦模組製程之智慧真空閃蒸裝置與成膜參數調控技術 Collaborative Development of a Smart Vacuum Flash System and Process Optimization for Perovskite Module Production 報告上線通知 GOOGLE Scholar GOOGLE Search [主持人聯絡資訊 ] 計畫詳目 相似計畫 計畫系統編號 PB11412-5590 研究性質 技術發展 計畫編號 NSTC114-2622-E182-006 研究方式 學術補助 主管機關 國家科學及技術委員會(本會) 研究期間 11411 ~ 11510 執行機構 長庚大學綠色科技研究中心 年 度 114年 研究經費 622千元 研究領域 能源工程； 研究人員 邱偉豪 中文關鍵字 鈣鈦礦太陽能電池；真空閃蒸；壓力控制模組；成膜技術；製程模擬； 綠色溶劑 英文關鍵字 perovskite solar cells； vacuum flash processing； pressure control module； thin-film crystallization； process simulation； green solvent 中文摘要 本計畫呼應國家「2050 淨零排放」與「綠色科技產業化」政策方向，聚焦開發具智慧化與模組化的真空閃蒸壓力控制成膜模組，有助於提升鈣鈦礦太陽能電池製程穩定性與轉換效率，支援我國發展次世代高效光電材料，具關鍵戰略意義。透過產學協作導入數位模擬與參數資料化控制，將加速高階製程設備之本土研發，減少對國外設備依賴，符合「綠能自主技術」政策目標。平台設計具跨材料應用潛力，"
     },
     "19484167": {
       "grbId": "19484167",
       "url": "https://www.grb.gov.tw/search/planDetail?id=19484167",
-      "ok": false,
+      "ok": true,
+      "fetchMode": "playwright",
       "statusCode": 200,
-      "error": "GRB detail page did not contain a recognizable project record"
+      "parsed": {
+        "url": "https://www.grb.gov.tw/search/planDetail?id=19484167",
+        "grbId": "19484167",
+        "systemId": "PB11507-3119",
+        "number": "NSTC115-2221-E182-052",
+        "agencyZh": "國家科學及技術委員會(本會)",
+        "periodRaw": "11508 ~ 11607",
+        "institutionZh": "長庚大學永續發展與能源科技研究中心",
+        "yearRaw": "115年",
+        "fundingRaw": "1083千元",
+        "researchersRaw": "邱偉豪",
+        "titleZh": "結合摻雜型二氧化鈦奈米線電極與異質疊層共價有機框架隔離膜之長效全釩液流電池開發",
+        "titleEn": "Development of Long-Life All-Vanadium Redox Flow Batteries Integrating Doped Titanium Dioxide Nanowire Electrodes and Heterostructured Covalent Organic Framework Membranes",
+        "startYear": 2026,
+        "sortDate": "2026-08-01",
+        "startDate": "2026-08-01",
+        "endDate": "2027-07-31",
+        "period": "1 Aug. 2026 – 31 Jul. 2027",
+        "status": "Upcoming",
+        "fundingAmountK": 1083,
+        "fundingAmountTwd": 1083000,
+        "fundingDisplayEn": "NT$1,083,000",
+        "fundingDisplayZh": "新臺幣 1,083,000 元",
+        "fundingSource": "GRB",
+        "fundingNote": "GRB-reported current-period funding (本期經費)",
+        "agencyEn": "National Science and Technology Council, Taiwan"
+      },
+      "changedFields": [
+        "number",
+        "agencyZh",
+        "period",
+        "sortDate",
+        "startDate",
+        "endDate",
+        "status",
+        "fundingAmountK",
+        "fundingAmountTwd",
+        "fundingDisplayEn",
+        "fundingDisplayZh",
+        "fundingSource",
+        "fundingNote"
+      ],
+      "textExcerpt": "首 頁 關於GRB 管理辦法 計畫主管機關 聯絡我們 國研院科政中心 國家科學及技術委員會 國發會 搜尋結果詳目內容│ 結合摻雜型二氧化鈦奈米線電極與異質疊層共價有機框架隔離膜之長效全釩液流電池開發 Development of Long-Life All-Vanadium Redox Flow Batteries Integrating Doped Titanium Dioxide Nanowire Electrodes and Heterostructured Covalent Organic Framework Membranes 報告上線通知 GOOGLE Scholar GOOGLE Search [主持人聯絡資訊 ] 計畫詳目 相似計畫 計畫系統編號 PB11507-3119 研究性質 技術發展 計畫編號 NSTC115-2221-E182-052 研究方式 學術補助 主管機關 國家科學及技術委員會(本會) 研究期間 11508 ~ 11607 執行機構 長庚大學永續發展與能源科技研究中心 年 度 115年 研究經費 1083千元 研究領域 能源工程； 研究人員 邱偉豪 中文關鍵字 全釩液流電池；二氧化鈦奈米線；金屬摻雜；共價有機框架；異質疊層隔離膜；析氫抑制 英文關鍵字 All-Vanadium Redox Flow Battery； TiO2 Nanowires； Metal Doping； Covalent Organic Frameworks (COFs)； Heterostructured Membranes； Hydrogen Evolution Suppression 中文摘要 本計畫旨在開發具低電容損失且長壽命之全釩液流電池系統，透過「金屬摻雜二氧化鈦奈米線電極」與「異質疊層共價有機框架隔離膜」之技術整合，從電極界面催化與隔膜離子篩分雙重調控，解"
     }
   },
   "discovery": [
     {
       "url": "https://www.grb.gov.tw/advq?queryStr=%E9%82%B1%E5%81%89%E8%B1%AA&queryType=grb05",
       "ok": true,
+      "fetchMode": "playwright",
       "statusCode": 200,
-      "linksFound": 0
+      "linksFound": 2,
+      "textExcerpt": "首 頁 關於GRB 管理辦法 計畫主管機關 聯絡我們 國研院科政中心 國家科學及技術委員會 國發會 搜尋說明 研究計畫查詢 研究人員查詢 研究機構查詢 技術查詢 智慧搜尋條件 編號查詢： 計畫年度： 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 至 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 計畫經費： 千元至千元 研究屬性： 研究方式： 研究領域： 主管機關： 執行機構代碼： 代碼查詢 請用分號 ( ; ) 區隔代碼 本系統內含未來年度之資料，係因該些計畫為跨年度計畫，計畫主管機關已先行填報。 搜尋結果│檢索結果2 筆 共花費： 48 亳秒/ 依相關度遞減排序 依計畫年度遞減排序 依計畫年度遞增排序 依計畫名稱遞減排序 依計畫名稱遞增排序 計畫年度 114年 (1) 115年 (1) 經費規模 501~1000千元(1) 1001~1500千元(1) 研究領域 工 (2) 計畫件數最多之主管機關 國家科學及技術委員會(本會) (2) 計畫件數最多之執行機構 [empty] (1) 長庚大學綠色科技研究中心 (1) 計畫件數最多之主持人 邱偉豪(2) 1.本檢索結果係您輸入條件(含關鍵詞)的所有查詢結果，如果是關鍵詞，則包含該關鍵詞出現在任一欄位(含基本資料及摘要)的所有計畫，人名也會被當成關鍵詞，所以若您要針對某研究人員進行統計，建議使用「研究人員查詢」。2.此文字雲係以這一次查詢結果之計畫內容進"
     }
-  ]
+  ],
+  "browserFallback": true
 }
