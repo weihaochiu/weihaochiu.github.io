@@ -9,6 +9,7 @@ on:
     branches: [main]
     paths:
       - "scripts/update_grb_projects.py"
+      - "scripts/update_grb_projects_browser.py"
       - "data/projects.json"
       - "data/grb_project_sources.json"
       - ".github/workflows/update-grb-projects.yml"
@@ -29,12 +30,16 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Install parser dependencies
-        run: python -m pip install --disable-pip-version-check requests beautifulsoup4
+      - name: Install parser and browser dependencies
+        run: |
+          python -m pip install --disable-pip-version-check requests beautifulsoup4 playwright
+          python -m playwright install --with-deps chromium
       - name: Test GRB parser
         run: python scripts/update_grb_projects.py --self-test
       - name: Update GRB projects and funding UI
         run: python scripts/update_grb_projects.py --patch-ui --allow-network-failure
+      - name: Render JavaScript-driven GRB data
+        run: python scripts/update_grb_projects_browser.py
       - name: Validate generated data
         run: |
           python scripts/update_grb_projects.py --validate-only
