@@ -1,0 +1,62 @@
+name: Update GRB projects
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 06:30 Asia/Taipei on the 22nd of every month.
+    - cron: "30 22 21 * *"
+  push:
+    branches: [main]
+    paths:
+      - "scripts/update_grb_projects.py"
+      - "data/projects.json"
+      - "data/grb_project_sources.json"
+      - ".github/workflows/update-grb-projects.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: website-content-write
+  cancel-in-progress: false
+
+jobs:
+  update:
+    if: github.event_name != 'push' || github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install parser dependencies
+        run: python -m pip install --disable-pip-version-check requests beautifulsoup4
+      - name: Test GRB parser
+        run: python scripts/update_grb_projects.py --self-test
+      - name: Update GRB projects and funding UI
+        run: python scripts/update_grb_projects.py --patch-ui --allow-network-failure
+      - name: Validate generated data
+        run: |
+          python scripts/update_grb_projects.py --validate-only
+          python -m json.tool data/projects.json >/dev/null
+          python -m json.tool data/grb_project_sources.json >/dev/null
+          python -m json.tool data/grb_projects_snapshot.json >/dev/null
+          python -m json.tool data/grb_projects_pending.json >/dev/null
+          git diff --check
+      - name: Commit GRB updates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- \
+            assets/js/app.js \
+            data/projects.json \
+            data/grb_project_sources.json \
+            data/site_meta.json \
+            data/grb_projects_snapshot.json \
+            data/grb_projects_pending.json
+          if git diff --cached --quiet; then
+            echo "No GRB changes."
+          else
+            git commit -m "Update GRB project metadata"
+            git push
+          fi
