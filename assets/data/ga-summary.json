@@ -1,28 +1,34 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-23T04:35:27Z",
+  "generatedAt": "2026-07-24T04:34:05Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 169,
-    "activeUsers": 21,
-    "sessions": 30,
-    "engagementRate": 0.16666666666666666
+    "pageViews": 213,
+    "activeUsers": 22,
+    "sessions": 45,
+    "engagementRate": 0.5555555555555556
   },
   "monthlyTrend": [
     {
       "month": "2026-07",
-      "pageViews": 169,
-      "activeUsers": 21
+      "pageViews": 213,
+      "activeUsers": 22
     }
   ],
   "topPages": [
     {
+      "title": "Publications | Wei-Hao Chiu",
+      "path": "/publications.html",
+      "pageViews": 52,
+      "activeUsers": 9
+    },
+    {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/index.html",
-      "pageViews": 42,
+      "pageViews": 45,
       "activeUsers": 2
     },
     {
@@ -32,16 +38,10 @@
       "activeUsers": 3
     },
     {
-      "title": "Publications | Wei-Hao Chiu",
-      "path": "/publications.html",
-      "pageViews": 28,
-      "activeUsers": 7
-    },
-    {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 20,
-      "activeUsers": 16
+      "pageViews": 28,
+      "activeUsers": 18
     },
     {
       "title": "About | Wei-Hao Chiu",
@@ -50,15 +50,21 @@
       "activeUsers": 3
     },
     {
+      "title": "Reliability enhancement of PVDF-HFP modified perovskite solar cells under synergistic space-relevant stress conditions | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-cej-2026-177494.html",
+      "pageViews": 7,
+      "activeUsers": 3
+    },
+    {
       "title": "Patents | Wei-Hao Chiu",
       "path": "/patents.html",
-      "pageViews": 7,
+      "pageViews": 6,
       "activeUsers": 2
     },
     {
-      "title": "Reliability enhancement of PVDF-HFP modified perovskite solar cells under synergistic space-relevant stress conditions | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-cej-2026-177494.html",
-      "pageViews": 5,
+      "title": "Heterogeneous graphite felt electrodes decorated with nanostructured graphitic carbon nitride for enhanced redox kinetics in vanadium redox flow batteries | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-jpowsour-2025-239216.html",
+      "pageViews": 4,
       "activeUsers": 3
     },
     {
@@ -66,6 +72,12 @@
       "path": "/publications/10-1016-j-seppur-2025-134157.html",
       "pageViews": 4,
       "activeUsers": 2
+    },
+    {
+      "title": "Research Projects | Wei-Hao Chiu",
+      "path": "/projects.html",
+      "pageViews": 4,
+      "activeUsers": 3
     },
     {
       "title": "Research | Wei-Hao Chiu",
@@ -80,14 +92,14 @@
       "activeUsers": 1
     },
     {
-      "title": "Fused Dithienoheterocycle‐Based Hole‐Transporting Materials for Efficient Perovskite Solar Cells | Wei-Hao Chiu",
-      "path": "/publications/10-1002-asia-70245.html",
+      "title": "Exploring the efficiency enhancement of perovskite solar cells by chemical bath depositing SnO2 on mesoporous TiO2 electrode | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-mtchem-2024-102329.html",
       "pageViews": 2,
       "activeUsers": 1
     },
     {
-      "title": "Research Projects | Wei-Hao Chiu",
-      "path": "/projects.html",
+      "title": "Fused Dithienoheterocycle‐Based Hole‐Transporting Materials for Efficient Perovskite Solar Cells | Wei-Hao Chiu",
+      "path": "/publications/10-1002-asia-70245.html",
       "pageViews": 2,
       "activeUsers": 1
     },
@@ -96,34 +108,17 @@
       "path": "/publications/10-1016-j-solener-2026-114430.html",
       "pageViews": 2,
       "activeUsers": 2
-    },
-    {
-      "title": "Fluorinated Pentafulvalene‐Fused Hole‐Transporting Material Enhances the Performance of Perovskite Solar Cells with Efficiency Exceeding 23% | Wei-Hao Chiu",
-      "path": "/publications/10-1002-adfm-202306367.html",
-      "pageViews": 1,
-      "activeUsers": 1
-    },
-    {
-      "title": "Fluorination on cyclopentadithiophene-based hole-transport material for high-performance perovskite solar cells | Wei-Hao Chiu",
-      "path": "/publications/10-1039-d3cc04699k.html",
-      "pageViews": 1,
-      "activeUsers": 1
     }
   ],
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 23,
-      "activeUsers": 18
-    },
-    {
-      "channel": "Unassigned",
-      "sessions": 10,
-      "activeUsers": 8
+      "sessions": 29,
+      "activeUsers": 19
     },
     {
       "channel": "Organic Search",
-      "sessions": 7,
+      "sessions": 16,
       "activeUsers": 4
     }
   ],
@@ -131,12 +126,12 @@
     {
       "country": "Taiwan",
       "activeUsers": 8,
-      "pageViews": 155
+      "pageViews": 197
     },
     {
       "country": "United States",
       "activeUsers": 8,
-      "pageViews": 9
+      "pageViews": 10
     },
     {
       "country": "(not set)",
@@ -149,6 +144,11 @@
       "pageViews": 2
     },
     {
+      "country": "Hong Kong",
+      "activeUsers": 1,
+      "pageViews": 1
+    },
+    {
       "country": "India",
       "activeUsers": 1,
       "pageViews": 1
@@ -157,7 +157,7 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 13
+      "activeUsers": 14
     },
     {
       "device": "mobile",
@@ -167,15 +167,27 @@
   "academicEvents": [
     {
       "eventName": "doi_click",
-      "eventCount": 10
+      "eventCount": 12
     },
     {
-      "eventName": "patent_click",
+      "eventName": "orcid_click",
+      "eventCount": 9
+    },
+    {
+      "eventName": "scholar_click",
+      "eventCount": 7
+    },
+    {
+      "eventName": "crossref_click",
       "eventCount": 5
     },
     {
       "eventName": "openalex_click",
-      "eventCount": 1
+      "eventCount": 5
+    },
+    {
+      "eventName": "patent_click",
+      "eventCount": 5
     }
   ]
 }
