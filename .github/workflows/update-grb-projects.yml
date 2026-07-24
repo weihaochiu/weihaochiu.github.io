@@ -38,8 +38,32 @@ jobs:
         run: python scripts/update_grb_projects.py --self-test
       - name: Update GRB projects and funding UI
         run: python scripts/update_grb_projects.py --patch-ui --allow-network-failure
+      - name: Capture direct GRB HTTP diagnostics
+        continue-on-error: true
+        run: |
+          mkdir -p grb_debug
+          curl -sS -L \
+            -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/131.0.0.0 Safari/537.36" \
+            -D grb_debug/curl-18623445-headers.txt \
+            -o grb_debug/curl-18623445.html \
+            "https://www.grb.gov.tw/search/planDetail?id=18623445"
+          curl -sS -L \
+            -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/131.0.0.0 Safari/537.36" \
+            -D grb_debug/curl-19484167-headers.txt \
+            -o grb_debug/curl-19484167.html \
+            "https://www.grb.gov.tw/search/planDetail?id=19484167"
       - name: Render JavaScript-driven GRB data
         run: python scripts/update_grb_projects_browser.py
+      - name: Upload GRB diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: grb-diagnostics-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            grb_debug/
+            data/grb_projects_snapshot.json
+          if-no-files-found: warn
+          retention-days: 14
       - name: Validate generated data
         run: |
           python scripts/update_grb_projects.py --validate-only
