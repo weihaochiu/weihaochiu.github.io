@@ -1,24 +1,5 @@
 [
   {
-    "titleEn": "Industry–Academia Development of a Smart Vacuum-Flash System and Film-Formation Parameter Control Technology for Perovskite Module Processing",
-    "titleZh": "產學協作開發用於鈣鈦礦模組製程之智慧真空閃蒸裝置與成膜參數調控技術",
-    "agencyEn": "National Science and Technology Council, Taiwan",
-    "agencyZh": "國家科學及技術委員會",
-    "role": "Principal Investigator",
-    "number": "NSTC 114-2622-E-182-006",
-    "period": "1 Nov. 2025 – 31 Oct. 2026",
-    "status": "Ongoing",
-    "scopeEn": "Development of a modular, programmable vacuum-flash platform for scalable perovskite-module coating, pressure-profile control, in-line monitoring, and data-driven process optimization.",
-    "scopeZh": "開發可模組化與程式化控制的真空閃蒸平台，應用於鈣鈦礦模組之可放大塗佈、壓力曲線控制、線上監測與數據驅動製程最佳化。",
-    "url": "https://www.grb.gov.tw/search/planDetail?id=18623445",
-    "startYear": 2025,
-    "sortDate": "2025-11-01",
-    "roleZh": "計畫主持人",
-    "grbId": "18623445",
-    "dataSource": "GRB",
-    "grbSourceUrl": "https://www.grb.gov.tw/search/planDetail?id=18623445"
-  },
-  {
     "titleEn": "Long-Life All-Vanadium Redox Flow Batteries Integrating Doped TiO₂ Nanowire Electrodes and Heterogeneous Laminated COF Separator Membranes",
     "titleZh": "結合摻雜型二氧化鈦奈米線電極與異質疊層共價有機框架隔離膜之長效全釩液流電池開發",
     "agencyEn": "National Science and Technology Council, Taiwan",
@@ -36,6 +17,25 @@
     "grbId": "19484167",
     "dataSource": "GRB",
     "grbSourceUrl": "https://www.grb.gov.tw/search/planDetail?id=19484167"
+  },
+  {
+    "titleEn": "Industry–Academia Development of a Smart Vacuum-Flash System and Film-Formation Parameter Control Technology for Perovskite Module Processing",
+    "titleZh": "產學協作開發用於鈣鈦礦模組製程之智慧真空閃蒸裝置與成膜參數調控技術",
+    "agencyEn": "National Science and Technology Council, Taiwan",
+    "agencyZh": "國家科學及技術委員會",
+    "role": "Principal Investigator",
+    "number": "NSTC 114-2622-E-182-006",
+    "period": "1 Nov. 2025 – 31 Oct. 2026",
+    "status": "Ongoing",
+    "scopeEn": "Development of a modular, programmable vacuum-flash platform for scalable perovskite-module coating, pressure-profile control, in-line monitoring, and data-driven process optimization.",
+    "scopeZh": "開發可模組化與程式化控制的真空閃蒸平台，應用於鈣鈦礦模組之可放大塗佈、壓力曲線控制、線上監測與數據驅動製程最佳化。",
+    "url": "https://www.grb.gov.tw/search/planDetail?id=18623445",
+    "startYear": 2025,
+    "sortDate": "2025-11-01",
+    "roleZh": "計畫主持人",
+    "grbId": "18623445",
+    "dataSource": "GRB",
+    "grbSourceUrl": "https://www.grb.gov.tw/search/planDetail?id=18623445"
   },
   {
     "titleEn": "Innovative Prototype Project: Miniature Add-On Device for State-of-Charge Monitoring of All-Vanadium Redox Flow Batteries Using Real-Time Spectral Analysis",

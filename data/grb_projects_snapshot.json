@@ -1,0 +1,29 @@
+{
+  "source": "Government Research Bulletin (GRB), Taiwan",
+  "sourceUrl": "https://www.grb.gov.tw/",
+  "checkedAt": "2026-07-24T18:06:36+08:00",
+  "records": {
+    "18623445": {
+      "grbId": "18623445",
+      "url": "https://www.grb.gov.tw/search/planDetail?id=18623445",
+      "ok": false,
+      "statusCode": 200,
+      "error": "GRB detail page did not contain a recognizable project record"
+    },
+    "19484167": {
+      "grbId": "19484167",
+      "url": "https://www.grb.gov.tw/search/planDetail?id=19484167",
+      "ok": false,
+      "statusCode": 200,
+      "error": "GRB detail page did not contain a recognizable project record"
+    }
+  },
+  "discovery": [
+    {
+      "url": "https://www.grb.gov.tw/advq?queryStr=%E9%82%B1%E5%81%89%E8%B1%AA&queryType=grb05",
+      "ok": true,
+      "statusCode": 200,
+      "linksFound": 0
+    }
+  ]
+}
