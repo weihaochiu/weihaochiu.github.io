@@ -25,6 +25,7 @@ jobs:
   update:
     if: github.event_name != 'push' || github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -42,17 +43,19 @@ jobs:
         continue-on-error: true
         run: |
           mkdir -p grb_debug
-          curl -sS -L \
+          curl -sS -L --connect-timeout 15 --max-time 45 \
             -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/131.0.0.0 Safari/537.36" \
             -D grb_debug/curl-18623445-headers.txt \
             -o grb_debug/curl-18623445.html \
             "https://www.grb.gov.tw/search/planDetail?id=18623445"
-          curl -sS -L \
+          curl -sS -L --connect-timeout 15 --max-time 45 \
             -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/131.0.0.0 Safari/537.36" \
             -D grb_debug/curl-19484167-headers.txt \
             -o grb_debug/curl-19484167.html \
             "https://www.grb.gov.tw/search/planDetail?id=19484167"
       - name: Render JavaScript-driven GRB data
+        env:
+          PYTHONUNBUFFERED: "1"
         run: python scripts/update_grb_projects_browser.py
       - name: Upload GRB diagnostics
         if: always()
