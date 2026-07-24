@@ -51,6 +51,21 @@ STANDARD_BROWSER_USER_AGENT = (
     "AppleWebKit/537.36 (KHTML, like Gecko) "
     "Chrome/131.0.0.0 Safari/537.36"
 )
+BLOCKED_RESOURCE_TYPES = {"font", "image", "media"}
+BLOCKED_URL_FRAGMENTS = (
+    "fonts.googleapis.com",
+    "fonts.gstatic.com",
+    "google-analytics.com",
+    "googletagmanager.com",
+    "doubleclick.net",
+    "www.google.com/recaptcha",
+    "www.gstatic.com/recaptcha",
+)
+MAINTENANCE_MARKERS = (
+    "系統升級",
+    "暫停所有對外服務",
+    "maintenance",
+)
 
 
 def compact(value: Any) -> str:
@@ -72,6 +87,35 @@ def debug_slug(value: Any) -> str:
     return slug[:100] or "grb-page"
 
 
+def safe_page_value(callback: Any, default: Any = "") -> Any:
+    try:
+        return callback()
+    except Exception:
+        return default
+
+
+def install_request_filters(context: BrowserContext) -> None:
+    """Block nonessential resources that can keep DOMContentLoaded pending."""
+
+    def handle(route: Any) -> None:
+        request = route.request
+        url = str(request.url or "").lower()
+        if (
+            request.resource_type in BLOCKED_RESOURCE_TYPES
+            or any(fragment in url for fragment in BLOCKED_URL_FRAGMENTS)
+        ):
+            route.abort()
+            return
+        route.continue_()
+
+    context.route("**/*", handle)
+
+
+def page_excerpt(page: Page, limit: int = 800) -> str:
+    body = page.locator("body")
+    return compact(safe_page_value(lambda: body.inner_text(timeout=5_000), ""))[:limit]
+
+
 def save_page_diagnostics(
     page: Page,
     *,
@@ -79,8 +123,9 @@ def save_page_diagnostics(
     requested_url: str,
     status: int | None,
     excerpt: str,
+    navigation_error: str = "",
 ) -> None:
-    """Persist the exact HTML and screenshot seen by the GitHub runner."""
+    """Persist HTML/JSON first; a screenshot failure must not lose diagnostics."""
     if not debug_name:
         return
     DEBUG_DIR.mkdir(parents=True, exist_ok=True)
@@ -88,24 +133,54 @@ def save_page_diagnostics(
     html_path = DEBUG_DIR / f"{stem}.html"
     png_path = DEBUG_DIR / f"{stem}.png"
     meta_path = DEBUG_DIR / f"{stem}.json"
+
+    html = safe_page_value(page.content, "")
     try:
-        html_path.write_text(page.content(), encoding="utf-8")
-        page.screenshot(path=str(png_path), full_page=True)
-        metadata = {
-            "requestedUrl": requested_url,
-            "requestedUrlRepr": repr(requested_url),
-            "finalUrl": page.url,
-            "httpStatus": status,
-            "pageTitle": page.title(),
-            "userAgent": page.evaluate("() => navigator.userAgent"),
-            "excerpt": excerpt,
-        }
+        html_path.write_text(html, encoding="utf-8")
+    except Exception as exc:
+        LOGGER.warning("Unable to save GRB HTML for %s: %s", debug_name, exc)
+
+    metadata = {
+        "requestedUrl": requested_url,
+        "requestedUrlRepr": repr(requested_url),
+        "finalUrl": safe_page_value(lambda: page.url, ""),
+        "httpStatus": status,
+        "pageTitle": safe_page_value(page.title, ""),
+        "userAgent": safe_page_value(
+            lambda: page.evaluate("() => navigator.userAgent"), ""
+        ),
+        "excerpt": excerpt,
+        "navigationError": navigation_error,
+        "screenshotSaved": False,
+    }
+
+    try:
         meta_path.write_text(
             json.dumps(metadata, ensure_ascii=False, indent=2) + "\n",
             encoding="utf-8",
         )
     except Exception as exc:
-        LOGGER.warning("Unable to save GRB diagnostics for %s: %s", debug_name, exc)
+        LOGGER.warning("Unable to save GRB metadata for %s: %s", debug_name, exc)
+
+    try:
+        page.screenshot(
+            path=str(png_path),
+            full_page=False,
+            animations="disabled",
+            timeout=5_000,
+        )
+        metadata["screenshotSaved"] = True
+    except Exception as exc:
+        metadata["screenshotError"] = str(exc)
+        LOGGER.warning("Unable to save GRB screenshot for %s: %s", debug_name, exc)
+    finally:
+        try:
+            meta_path.write_text(
+                json.dumps(metadata, ensure_ascii=False, indent=2) + "\n",
+                encoding="utf-8",
+            )
+        except Exception:
+            pass
 
 
 def render_page(
@@ -119,61 +194,82 @@ def render_page(
     url = sanitize_grb_url(url)
     page: Page = context.new_page()
     status: int | None = None
+    navigation_error = ""
     LOGGER.info("Opening GRB page\nURL: %s\nURL repr: %r", url, url)
     try:
-        response = page.goto(
-            url,
-            wait_until="domcontentloaded",
-            timeout=60_000,
-            referer="https://www.grb.gov.tw/",
-        )
-        status = response.status if response else None
+        # `commit` returns after response headers. GRB pages may never emit
+        # DOMContentLoaded on GitHub runners because third-party resources stall.
         try:
-            page.wait_for_load_state("networkidle", timeout=20_000)
+            response = page.goto(
+                url,
+                wait_until="commit",
+                timeout=30_000,
+                referer="https://www.grb.gov.tw/",
+            )
+            status = response.status if response else None
+        except Exception as exc:
+            navigation_error = str(exc)
+            LOGGER.warning(
+                "GRB navigation did not reach commit\nURL: %s\nError: %s",
+                url,
+                exc,
+            )
+
+        try:
+            page.wait_for_selector("body", state="attached", timeout=10_000)
         except Exception:
             pass
+        page.wait_for_timeout(1_500)
 
-        if expected_text:
+        excerpt = page_excerpt(page)
+        is_maintenance = any(
+            marker.lower() in excerpt.lower() for marker in MAINTENANCE_MARKERS
+        )
+
+        if not is_maintenance and expected_text:
             try:
                 page.wait_for_function(
                     "expected => (document.body?.innerText || '').includes(expected)",
                     expected_text,
-                    timeout=25_000,
-                )
-            except Exception:
-                page.wait_for_timeout(4_000)
-        elif wait_for_detail_links:
-            try:
-                page.wait_for_function(
-                    "() => document.querySelectorAll('a[href*=\"/search/planDetail\"]').length > 0",
                     timeout=20_000,
                 )
             except Exception:
-                page.wait_for_timeout(4_000)
-        else:
-            page.wait_for_timeout(1_500)
+                page.wait_for_timeout(2_000)
+        elif not is_maintenance and wait_for_detail_links:
+            try:
+                page.wait_for_function(
+                    "() => document.querySelectorAll('a[href*=\"/search/planDetail\"]').length > 0",
+                    timeout=15_000,
+                )
+            except Exception:
+                page.wait_for_timeout(2_000)
 
-        html = page.content()
-        excerpt = compact(page.locator("body").inner_text())[:800]
+        html = safe_page_value(page.content, "")
+        excerpt = page_excerpt(page)
         save_page_diagnostics(
             page,
             debug_name=debug_name,
             requested_url=url,
             status=status,
             excerpt=excerpt,
+            navigation_error=navigation_error,
+        )
+        LOGGER.info(
+            "Captured GRB page\nFinal URL: %s\nHTTP status: %s\nExcerpt: %s",
+            safe_page_value(lambda: page.url, ""),
+            status,
+            excerpt[:240],
         )
         return html, status, excerpt
-    except Exception:
-        try:
-            excerpt = compact(page.locator("body").inner_text())[:800]
-        except Exception:
-            excerpt = ""
+    except Exception as exc:
+        excerpt = page_excerpt(page)
         save_page_diagnostics(
             page,
             debug_name=debug_name or "navigation-error",
             requested_url=url,
             status=status,
             excerpt=excerpt,
+            navigation_error=navigation_error or str(exc),
         )
         raise
     finally:
@@ -281,13 +377,18 @@ def main() -> int:
             timezone_id="Asia/Taipei",
             extra_http_headers={"Accept-Language": "zh-TW,zh;q=0.9,en;q=0.7"},
         )
+        install_request_filters(context)
         try:
-            # Establish cookies/session state in the same way as a normal visitor.
-            render_page(
-                context,
-                "https://www.grb.gov.tw/",
-                debug_name="homepage-session",
-            )
+            # Homepage/session initialization is useful but must never prevent
+            # the known detail pages from being diagnosed.
+            try:
+                render_page(
+                    context,
+                    "https://www.grb.gov.tw/",
+                    debug_name="homepage-session",
+                )
+            except Exception as exc:
+                LOGGER.warning("GRB homepage session failed; continuing: %s", exc)
 
             # Reproduce the successful manual path: open the researcher search
             # before navigating to individual project detail pages.
