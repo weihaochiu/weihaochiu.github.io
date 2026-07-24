@@ -14,6 +14,7 @@ The updater keeps data/projects.json as the single formal source of truth:
 from __future__ import annotations
 
 import argparse
+import calendar
 import copy
 import json
 import logging
@@ -246,6 +247,22 @@ def extract_title(soup: BeautifulSoup, fields: dict[str, str], language: str) ->
     if clean_text(fields.get(key)):
         return clean_text(fields[key])
 
+    # Current GRB detail pages place the Chinese title in .planTitle and the
+    # English title in its .planTitleen child. Prefer these explicit selectors
+    # over modal headings elsewhere on the page.
+    if language == "en":
+        element = soup.select_one(".planTitleen")
+        if element:
+            value = clean_text(element.get_text(" ", strip=True))
+            if value:
+                return value
+    else:
+        element = soup.select_one(".planTitle")
+        if element:
+            direct = clean_text(" ".join(element.find_all(string=True, recursive=False)))
+            if direct:
+                return direct
+
     candidates: list[str] = []
     for selector in ("meta[property='og:title']", "meta[name='twitter:title']"):
         meta = soup.select_one(selector)
@@ -316,6 +333,21 @@ def format_site_date(value: date) -> str:
 
 def parse_period(raw: str) -> dict[str, Any]:
     values = date_candidates(raw)
+
+    # Current GRB pages often use compact ROC year-month ranges such as
+    # "11411 ~ 11510". Interpret the first month from day 1 and the final
+    # month through its last calendar day.
+    if not values:
+        compact_months = re.findall(r"(?<!\d)(\d{2,3})(0[1-9]|1[0-2])(?!\d)", clean_text(raw))
+        if compact_months:
+            converted: list[date] = []
+            for index, (year_raw, month_raw) in enumerate(compact_months[:2]):
+                year = roc_to_ad(int(year_raw))
+                month = int(month_raw)
+                day = 1 if index == 0 else calendar.monthrange(year, month)[1]
+                converted.append(date(year, month, day))
+            values = converted
+
     if not values:
         return {}
     start = values[0]
@@ -337,15 +369,34 @@ def parse_period(raw: str) -> dict[str, Any]:
 
 def parse_plan_html(html: str, url: str) -> dict[str, Any]:
     soup = BeautifulSoup(html, "html.parser")
+    raw_page_text = clean_text(soup.get_text(" ", strip=True))
+    maintenance_detected = (
+        "系統目前更新中" in raw_page_text
+        or "暫停所有對外服務" in raw_page_text
+    )
+
+    # GRB currently embeds an old, normally hidden maintenance announcement at
+    # the end of otherwise valid detail pages. It must not invalidate a page
+    # that already contains real project fields. Remove only the dedicated
+    # maintenance container before parsing visible project content.
+    for node in soup.select("#no-service-container, .no-service-container"):
+        node.decompose()
+
     page_text = clean_text(soup.get_text(" ", strip=True))
     if len(page_text) < 100:
+        if maintenance_detected:
+            raise UpdateError("GRB returned a maintenance page")
         raise UpdateError("GRB response is unexpectedly short")
-    if "系統目前更新中" in page_text or "暫停所有對外服務" in page_text:
-        raise UpdateError("GRB returned a maintenance page")
 
     fields = extract_label_values(soup)
     fields["titleZh"] = extract_title(soup, fields, "zh")
     fields["titleEn"] = extract_title(soup, fields, "en")
+
+    # Only treat a response as maintenance when no formal project identity was
+    # found. This prevents hidden announcement markup from causing false errors.
+    if maintenance_detected and not clean_text(fields.get("number") or fields.get("systemId")):
+        raise UpdateError("GRB returned a maintenance page")
+
     funding_k = parse_funding_k(fields.get("fundingRaw", ""))
     period = parse_period(fields.get("periodRaw", ""))
 
@@ -367,7 +418,8 @@ def parse_plan_html(html: str, url: str) -> dict[str, Any]:
             }
         )
     if record.get("agencyZh"):
-        record["agencyEn"] = AGENCY_EN.get(record["agencyZh"], "")
+        agency_key = re.sub(r"\s*[（(][^）)]*[）)]\s*$", "", record["agencyZh"]).strip()
+        record["agencyEn"] = AGENCY_EN.get(agency_key, "")
     return record
 
 
@@ -921,6 +973,36 @@ def run_self_test() -> int:
     assert parsed["startDate"] == "2025-11-01"
     assert parsed["endDate"] == "2026-10-31"
     assert parsed["number"] == "NSTC 114-0000-E-182-001"
+
+    rendered_sample = """
+    <html><body>
+      <div class="planTitle">實際 GRB 測試計畫
+        <span class="planTitleen">Rendered GRB Test Project</span>
+      </div>
+      <div><span>計畫系統編號</span><span>PB11412-5590</span></div>
+      <div><span>計畫編號</span><span>NSTC114-2622-E182-006</span></div>
+      <div><span>主管機關</span><span>國家科學及技術委員會(本會)</span></div>
+      <div><span>研究期間</span><span>11411 ~ 11510</span></div>
+      <div><span>執行機構</span><span>長庚大學綠色科技研究中心</span></div>
+      <div><span>研究經費</span><span>622千元</span></div>
+      <div><span>研究人員</span><span>邱偉豪</span></div>
+      <div id="no-service-container">
+        本系統將於 5/30 進行系統升級作業，期間將暫停所有對外服務
+      </div>
+    </body></html>
+    """
+    rendered = parse_plan_html(
+        rendered_sample,
+        "https://www.grb.gov.tw/search/planDetail?id=18623445",
+    )
+    assert rendered["titleZh"] == "實際 GRB 測試計畫"
+    assert rendered["titleEn"] == "Rendered GRB Test Project"
+    assert rendered["fundingAmountK"] == 622
+    assert rendered["fundingAmountTwd"] == 622_000
+    assert rendered["startDate"] == "2025-11-01"
+    assert rendered["endDate"] == "2026-10-31"
+    assert rendered["agencyEn"] == "National Science and Technology Council, Taiwan"
+
     config = {
         "researcherAliases": ["邱偉豪"],
         "institutionAliases": ["長庚大學"],
