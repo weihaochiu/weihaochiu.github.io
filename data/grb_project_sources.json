@@ -1,0 +1,39 @@
+{
+  "sourceName": "Government Research Bulletin (GRB), Taiwan",
+  "sourceUrl": "https://www.grb.gov.tw/",
+  "researcherAliases": [
+    "邱偉豪",
+    "Wei-Hao Chiu",
+    "Chiu, Wei-Hao"
+  ],
+  "institutionAliases": [
+    "長庚大學",
+    "Chang Gung University"
+  ],
+  "knownPlans": [
+    {
+      "grbId": "18623445",
+      "number": "NSTC 114-2622-E-182-006",
+      "url": "https://www.grb.gov.tw/search/planDetail?id=18623445",
+      "allowTitleUpdate": false,
+      "autoManaged": true
+    },
+    {
+      "grbId": "19484167",
+      "number": "NSTC 115-2221-E-182-052",
+      "url": "https://www.grb.gov.tw/search/planDetail?id=19484167",
+      "allowTitleUpdate": false,
+      "autoManaged": true
+    }
+  ],
+  "discoveryUrls": [
+    "https://www.grb.gov.tw/advq?queryStr=%E9%82%B1%E5%81%89%E8%B1%AA&queryType=grb05"
+  ],
+  "maxDiscoveryCandidates": 20,
+  "userAgent": "Wei-Hao-Chiu-Academic-Site-GRB-Updater/1.0 (+https://weihaochiu.github.io/)",
+  "autoAddVerifiedProjects": true,
+  "autoTrackFormalProjects": true,
+  "treatMissingTrackedProjectsAsIgnored": true,
+  "ignoredGrbIds": [],
+  "removedPlans": []
+}

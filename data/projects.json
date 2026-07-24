@@ -13,7 +13,10 @@
     "url": "https://www.grb.gov.tw/search/planDetail?id=18623445",
     "startYear": 2025,
     "sortDate": "2025-11-01",
-    "roleZh": "計畫主持人"
+    "roleZh": "計畫主持人",
+    "grbId": "18623445",
+    "dataSource": "GRB",
+    "grbSourceUrl": "https://www.grb.gov.tw/search/planDetail?id=18623445"
   },
   {
     "titleEn": "Long-Life All-Vanadium Redox Flow Batteries Integrating Doped TiO₂ Nanowire Electrodes and Heterogeneous Laminated COF Separator Membranes",
@@ -29,7 +32,10 @@
     "url": "https://www.grb.gov.tw/search/planDetail?id=19484167",
     "startYear": 2026,
     "sortDate": "2026",
-    "roleZh": "計畫主持人"
+    "roleZh": "計畫主持人",
+    "grbId": "19484167",
+    "dataSource": "GRB",
+    "grbSourceUrl": "https://www.grb.gov.tw/search/planDetail?id=19484167"
   },
   {
     "titleEn": "Innovative Prototype Project: Miniature Add-On Device for State-of-Charge Monitoring of All-Vanadium Redox Flow Batteries Using Real-Time Spectral Analysis",
