@@ -57,6 +57,80 @@ def author_html(name):
   me = ' me' if name in ('Chiu, Wei-Hao','Wei-Hao Chiu') else ''
   return '<button class="author-trigger'+me+'" type="button" data-author-name="'+esc(name)+'" aria-haspopup="dialog" aria-expanded="false">'+esc(name)+'</button>'
 
+# PUBLICATION_AUTHORSHIP_BUILD_START
+def publication_authorships(p):
+  rows=p.get('authorships')
+  if isinstance(rows,list) and rows:
+    return [row for row in rows if isinstance(row,dict)]
+  return [{'name':name,'authorOrder':index+1,'authorPosition':'first' if index==0 else 'last' if index==len(p.get('authors',[]))-1 else 'middle','affiliationIds':[],'isEqualContributor':None,'isCorresponding':None} for index,name in enumerate(p.get('authors',[]))]
+
+def publication_affiliation_map(p):
+  return {str(row.get('id') or ''):row for row in (p.get('affiliations') or []) if isinstance(row,dict)}
+
+def publication_affiliation_text(row):
+  address=row.get('address') or row.get('raw')
+  values=[row.get('department'),row.get('institution'),address]
+  if not address: values += [row.get('city'),row.get('countryCode')]
+  output=[]; seen=set()
+  for value in values:
+    value=re.sub(r'\s+',' ',html.unescape(str(value or ''))).strip(' ,;')
+    key=normalize_author_name(value)
+    if value and key and key not in seen:
+      seen.add(key); output.append(value)
+  return ', '.join(output)
+
+def authorship_marker_html(row,affiliations):
+  symbols=[]; labels=[]
+  if row.get('isEqualContributor') is True:
+    symbols.append('†'); labels.append('Equal contribution')
+  if row.get('isCorresponding') is True:
+    symbols.append('*'); labels.append('Corresponding author')
+  for aff_id in row.get('affiliationIds') or []:
+    label=str((affiliations.get(str(aff_id)) or {}).get('label') or '').strip()
+    if label:
+      symbols.append(label); labels.append('Affiliation '+label)
+  if not symbols: return ''
+  return '<sup class="author-affiliation-ref" aria-label="'+esc('; '.join(labels))+'" title="'+esc('; '.join(labels))+'">'+esc(','.join(symbols))+'</sup>'
+
+def publication_authors_html(p):
+  affiliations=publication_affiliation_map(p)
+  return ', '.join('<span class="publication-author">'+author_html(str(row.get('name') or ''))+authorship_marker_html(row,affiliations)+'</span>' for row in publication_authorships(p))
+
+def publication_affiliations_html(p,details=False):
+  affiliations=[row for row in (p.get('affiliations') or []) if isinstance(row,dict) and publication_affiliation_text(row)]
+  rows=publication_authorships(p)
+  equal=any(row.get('isEqualContributor') is True for row in rows)
+  corresponding=[row for row in rows if row.get('isCorresponding') is True]
+  if not affiliations and not equal and not corresponding: return ''
+  aff_html=''.join('<li class="affiliation-entry"><span class="affiliation-label">'+esc(row.get('label'))+'</span><span>'+esc(publication_affiliation_text(row))+((' <a href="'+esc(row.get('ror'))+'" target="_blank" rel="noopener noreferrer">ROR ↗</a>') if row.get('ror') else '')+'</span></li>' for row in affiliations)
+  legend=[]
+  if equal: legend.append('<li><span class="author-role-marker">†</span><span>These authors contributed equally.</span></li>')
+  if corresponding:
+    names=', '.join(esc(row.get('name')) for row in corresponding)
+    emails=[str(row.get('correspondingEmail') or '').strip() for row in corresponding if str(row.get('correspondingEmail') or '').strip()]
+    email_html='' if not emails else ' '+' '.join('<a href="mailto:'+esc(email)+'">'+esc(email)+'</a>' for email in emails)
+    legend.append('<li><span class="author-role-marker">*</span><span>Corresponding author'+('s' if len(corresponding)>1 else '')+': '+names+'.'+email_html+'</span></li>')
+  body=(('<ol class="affiliation-list">'+aff_html+'</ol>') if aff_html else '')+(('<ul class="author-role-legend">'+''.join(legend)+'</ul>') if legend else '')
+  return '<details class="publication-affiliations"'+(' open' if details else '')+'><summary>Author affiliations and roles</summary>'+body+'</details>'
+
+def authorship_schema_person(row,p):
+  affiliations=publication_affiliation_map(p); organizations=[]
+  for aff_id in row.get('affiliationIds') or []:
+    aff=affiliations.get(str(aff_id)); name=publication_affiliation_text(aff or {})
+    if not name: continue
+    org={'@type':'Organization','name':name}
+    if aff.get('ror'): org['sameAs']=aff.get('ror')
+    organizations.append(org)
+  person={'@type':'Person','name':row.get('name','')}
+  if organizations: person['affiliation']=organizations[0] if len(organizations)==1 else organizations
+  same_as=[]
+  if row.get('orcid'): same_as.append('https://orcid.org/'+str(row.get('orcid')).replace('https://orcid.org/',''))
+  if row.get('openAlexId'): same_as.append('https://openalex.org/'+str(row.get('openAlexId')).rsplit('/',1)[-1])
+  if same_as: person['sameAs']=same_as[0] if len(same_as)==1 else same_as
+  if row.get('isCorresponding') is True and row.get('correspondingEmail'): person['email']='mailto:'+str(row.get('correspondingEmail'))
+  return person
+# PUBLICATION_AUTHORSHIP_BUILD_END
+
 def graphical_abstract_path(p):
   """Return a site-relative GA path, preferring an explicit JSON value."""
   explicit = str(p.get('graphicalAbstract') or '').strip().replace('\\', '/')
@@ -73,7 +147,7 @@ def graphical_abstract_path(p):
   return ''
 
 def article_schema(p, url):
-  obj = {'@type':'ScholarlyArticle','@id':url+'#article','url':url,'mainEntityOfPage':url,'headline':p.get('title',''),'name':p.get('title',''),'datePublished':p.get('date') or str(p.get('year','')),'author':[{'@type':'Person','name':a} for a in p.get('authors',[])],'isPartOf':{'@type':'Periodical','name':p.get('journal','')},'publisher':{'@type':'Organization','name':p.get('publisher','')},'identifier':[{'@type':'PropertyValue','propertyID':'DOI','value':p.get('doi','')},p.get('doiUrl','')],'sameAs':p.get('doiUrl',''),'citation':p.get('citation',''),'keywords':p.get('keywords',[]),'about':p.get('topic',''),'pagination':p.get('pages',''),'volumeNumber':p.get('volume',''),'issueNumber':p.get('issue',''),'inLanguage':'en'}
+  obj = {'@type':'ScholarlyArticle','@id':url+'#article','url':url,'mainEntityOfPage':url,'headline':p.get('title',''),'name':p.get('title',''),'datePublished':p.get('date') or str(p.get('year','')),'author':[authorship_schema_person(row,p) for row in publication_authorships(p)],'isPartOf':{'@type':'Periodical','name':p.get('journal','')},'publisher':{'@type':'Organization','name':p.get('publisher','')},'identifier':[{'@type':'PropertyValue','propertyID':'DOI','value':p.get('doi','')},p.get('doiUrl','')],'sameAs':p.get('doiUrl',''),'citation':p.get('citation',''),'keywords':p.get('keywords',[]),'about':p.get('topic',''),'pagination':p.get('pages',''),'volumeNumber':p.get('volume',''),'issueNumber':p.get('issue',''),'inLanguage':'en'}
   if p.get('abstract'): obj['abstract'] = p.get('abstract')
   ga_path = graphical_abstract_path(p)
   if ga_path: obj['image'] = SITE_URL + '/' + ga_path
@@ -110,7 +184,7 @@ def replace_emails(text):
 
 def static_card(p, openalex_record=None):
   doi=p.get('doi',''); slug=slugify(doi); local='publications/'+slug+'.html'
-  authors=', '.join(author_html(a) for a in p.get('authors',[]))
+  authors=publication_authors_html(p)
   journal='<em>'+esc(p.get('journal'))+'</em>'
   if p.get('volume'): journal += ', '+esc(p.get('volume'))
   if p.get('pages'): journal += ', '+esc(p.get('pages'))
@@ -120,7 +194,7 @@ def static_card(p, openalex_record=None):
   n=int(p.get('citationCount') or 0)
   openalex_record = openalex_record or {}
   impact_html = ''.join(openalex_impact_actions(openalex_record)) if openalex_record.get('status') == 'verified' else ''
-  return '<article class="collection-card publication-card seo-static-card" id="pub-'+slug+'" itemscope itemtype="https://schema.org/ScholarlyArticle"><meta itemprop="identifier" content="'+esc(doi)+'"/><div class="card-heading"><h4 itemprop="headline"><a href="'+esc(local)+'">'+esc(p.get('title'))+'</a></h4><span class="date-badge" itemprop="datePublished">'+esc(p.get('date'))+'</span></div><p class="authors" itemprop="author">'+authors+'</p><p class="journal" itemprop="isPartOf">'+journal+'</p><div class="card-labels">'+labels_html+'</div><div class="card-actions"><a class="action" href="'+esc(p.get('doiUrl'))+'" target="_blank" rel="noopener">DOI ↗</a><a class="action" href="'+esc(local)+'">Abstract, Highlights &amp; GA →</a><span class="action">'+str(n)+' Google Scholar citation'+('s' if n!=1 else '')+'</span>'+impact_html+'</div></article>'
+  return '<article class="collection-card publication-card seo-static-card" id="pub-'+slug+'" itemscope itemtype="https://schema.org/ScholarlyArticle"><meta itemprop="identifier" content="'+esc(doi)+'"/><div class="card-heading"><h4 itemprop="headline"><a href="'+esc(local)+'">'+esc(p.get('title'))+'</a></h4><span class="date-badge" itemprop="datePublished">'+esc(p.get('date'))+'</span></div><p class="authors publication-authors" itemprop="author">'+authors+'</p>'+publication_affiliations_html(p,details=False)+'<p class="journal" itemprop="isPartOf">'+journal+'</p><div class="card-labels">'+labels_html+'</div><div class="card-actions"><a class="action" href="'+esc(p.get('doiUrl'))+'" target="_blank" rel="noopener">DOI ↗</a><a class="action" href="'+esc(local)+'">Abstract, Highlights &amp; GA →</a><span class="action">'+str(n)+' Google Scholar citation'+('s' if n!=1 else '')+'</span>'+impact_html+'</div></article>'
 
 def openalex_impact_actions(record):
   actions=[]
@@ -140,7 +214,7 @@ def openalex_impact_actions(record):
 
 def publication_page(p, openalex_record=None, unpaywall_record=None, crossref_record=None, mendeley_record=None):
   doi=p.get('doi',''); slug=slugify(doi); url=SITE_URL+'/publications/'+slug+'.html'
-  title=esc(p.get('title')); desc=esc(p.get('citation')); authors=', '.join(author_html(a) for a in p.get('authors',[]))
+  title=esc(p.get('title')); desc=esc(p.get('citation')); authors=publication_authors_html(p)
   graph={'@context':'https://schema.org','@graph':[PERSON,article_schema(p,url)]}
   vol=', '+esc(p.get('volume')) if p.get('volume') else ''
   pages=', '+esc(p.get('pages')) if p.get('pages') else ''
@@ -167,6 +241,7 @@ def publication_page(p, openalex_record=None, unpaywall_record=None, crossref_re
   if keywords:
     detail_sections.append('<section class="publication-detail-section"><h2>Keywords</h2><div class="publication-keywords">'+''.join('<span itemprop="keywords">'+esc(item)+'</span>' for item in keywords)+'</div></section>')
   details = ''.join(detail_sections)
+  author_info=publication_affiliations_html(p,details=True)
   actions = ['<a class="action" href="'+esc(p.get('doiUrl'))+'" target="_blank" rel="noopener">DOI ↗</a>']
   if unpaywall_record.get('isOa') and unpaywall_record.get('urlForPdf'):
     actions.append('<a class="action oa-action" href="'+esc(unpaywall_record.get('urlForPdf'))+'" target="_blank" rel="noopener noreferrer">Open Access PDF ↗</a>')
@@ -189,7 +264,7 @@ def publication_page(p, openalex_record=None, unpaywall_record=None, crossref_re
   email_url = 'mailto:?subject='+quote(share_text)+'&body='+quote(url)
   actions.append('<span class="share-wrap"><button class="action action-button share-trigger" type="button" aria-haspopup="menu" aria-expanded="false" data-share-title="'+title+'" data-share-text="'+title+'" data-share-url="'+esc(url)+'">Share</button><span class="share-menu" role="menu" hidden><button type="button" role="menuitem" data-copy-share-url="'+esc(url)+'">Copy link</button><a role="menuitem" href="'+esc(email_url)+'">Email</a><a role="menuitem" href="https://www.linkedin.com/sharing/share-offsite/?url='+quote(url, safe='')+'" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></span></span>')
   actions_html = '<div class="card-actions publication-detail-actions">'+''.join(actions)+'</div>'
-  return '''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>{title} | Wei-Hao Chiu</title><meta name="description" content="{desc}"/><link rel="canonical" href="{url}"/><meta property="og:type" content="article"/><meta property="og:title" content="{title}"/><meta property="og:description" content="{desc}"/><meta property="og:url" content="{url}"/><meta property="og:image" content="{site}/assets/images/og-profile.jpg"/><meta property="article:published_time" content="{date}"/><meta property="article:author" content="{site}/"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="{title}"/><meta name="twitter:description" content="{desc}"/><meta name="twitter:image" content="{site}/assets/images/og-profile.jpg"/>{ga}{citation}<script type="application/ld+json">{schema}</script><link href="../assets/css/styles.css" rel="stylesheet"/></head><body><header class="site-header"><div class="shell nav-shell"><a class="brand" href="../index.html"><span>Wei-Hao Chiu</span><small>Academic Profile</small></a><nav aria-label="Main navigation" class="site-nav"><a href="../about.html">About</a><a href="../research.html">Research</a><a href="../publications.html">Publications</a><a href="../patents.html">Patents</a><a href="../projects.html">Projects</a></nav></div></header><main class="content shell"><article class="collection-card publication-card publication-detail" itemscope itemtype="https://schema.org/ScholarlyArticle"><p class="kicker">Scholarly article</p><h1 itemprop="headline">{title}</h1><p class="authors" itemprop="author">{authors}</p><p class="journal"><em>{journal}</em>{vol}{pages} ({year}).</p><p><strong>Research topic:</strong> {topic}</p>{details}{actions}<a class="action publication-return" href="../publications.html#pub-{slug}">← Return to publications</a></article></main><footer class="site-footer"><div class="shell footer-grid"><div><strong>Wei-Hao Chiu, Ph.D.</strong><p>Associate Researcher<br/>Center for Sustainability and Energy Technologies<br/>Chang Gung University</p></div><div class="footer-links">{emails}</div></div></footer><script src="../assets/js/app.js"></script></body></html>'''.format(title=title,desc=desc,url=url,site=SITE_URL,date=esc(p.get('date')),ga=GA_TAG,citation=citation_meta(p),schema=json.dumps(graph,ensure_ascii=False,separators=(',',':')),authors=authors,journal=esc(p.get('journal')),vol=vol,pages=pages,year=esc(p.get('year')),topic=esc(p.get('topic')),details=details,actions=actions_html,slug=slug,emails=EMAIL_LINKS)
+  return '''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>{title} | Wei-Hao Chiu</title><meta name="description" content="{desc}"/><link rel="canonical" href="{url}"/><meta property="og:type" content="article"/><meta property="og:title" content="{title}"/><meta property="og:description" content="{desc}"/><meta property="og:url" content="{url}"/><meta property="og:image" content="{site}/assets/images/og-profile.jpg"/><meta property="article:published_time" content="{date}"/><meta property="article:author" content="{site}/"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="{title}"/><meta name="twitter:description" content="{desc}"/><meta name="twitter:image" content="{site}/assets/images/og-profile.jpg"/>{ga}{citation}<script type="application/ld+json">{schema}</script><link href="../assets/css/styles.css" rel="stylesheet"/></head><body><header class="site-header"><div class="shell nav-shell"><a class="brand" href="../index.html"><span>Wei-Hao Chiu</span><small>Academic Profile</small></a><nav aria-label="Main navigation" class="site-nav"><a href="../about.html">About</a><a href="../research.html">Research</a><a href="../publications.html">Publications</a><a href="../patents.html">Patents</a><a href="../projects.html">Projects</a></nav></div></header><main class="content shell"><article class="collection-card publication-card publication-detail" itemscope itemtype="https://schema.org/ScholarlyArticle"><p class="kicker">Scholarly article</p><h1 itemprop="headline">{title}</h1><p class="authors publication-authors" itemprop="author">{authors}</p>{author_info}<p class="journal"><em>{journal}</em>{vol}{pages} ({year}).</p><p><strong>Research topic:</strong> {topic}</p>{details}{actions}<a class="action publication-return" href="../publications.html#pub-{slug}">← Return to publications</a></article></main><footer class="site-footer"><div class="shell footer-grid"><div><strong>Wei-Hao Chiu, Ph.D.</strong><p>Associate Researcher<br/>Center for Sustainability and Energy Technologies<br/>Chang Gung University</p></div><div class="footer-links">{emails}</div></div></footer><script src="../assets/js/app.js"></script></body></html>'''.format(title=title,desc=desc,url=url,site=SITE_URL,date=esc(p.get('date')),ga=GA_TAG,citation=citation_meta(p),schema=json.dumps(graph,ensure_ascii=False,separators=(',',':')),authors=authors,author_info=author_info,journal=esc(p.get('journal')),vol=vol,pages=pages,year=esc(p.get('year')),topic=esc(p.get('topic')),details=details,actions=actions_html,slug=slug,emails=EMAIL_LINKS)
 
 def main():
   global AUTHOR_MAP
@@ -213,6 +288,7 @@ def main():
   graph={'@context':'https://schema.org','@graph':[PERSON]+[article_schema(p,SITE_URL+'/publications/'+slugify(p.get('doi',''))+'.html') for p in pubs]}
   schema='<script type="application/ld+json" id="publications-schema">'+json.dumps(graph,ensure_ascii=False,separators=(',',':'))+'</script>'
   text=re.sub(r'<script type="application/ld\+json" id="publications-schema">.*?</script>','',text,flags=re.S)
+  text=re.sub(r'\s*</head>', '\n</head>', text, count=1)
   citation_block = CITATION_META_START+'\n'+'\n'.join(citation_meta(p) for p in pubs)+'\n'+CITATION_META_END
   text=text.replace('</head>',citation_block+'\n'+schema+'\n</head>',1)
   pubpath.write_text(text,encoding='utf-8')

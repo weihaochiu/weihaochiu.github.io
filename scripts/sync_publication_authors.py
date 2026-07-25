@@ -105,6 +105,30 @@ def pending_author(name: str, used_ids: set[str]) -> dict[str, Any]:
     }
 
 
+# PUBLICATION_AUTHORSHIP_SYNC_START
+def publication_author_names(publication: dict[str, Any], publication_number: int) -> list[str]:
+    legacy = publication.get("authors") or []
+    if not isinstance(legacy, list):
+        raise SystemExit(f"Publication {publication_number} has a non-array authors field")
+    legacy_names = [str(name or "").strip() for name in legacy if str(name or "").strip()]
+    rows = publication.get("authorships")
+    if not isinstance(rows, list) or not rows:
+        return legacy_names
+    structured_names: list[str] = []
+    for index, row in enumerate(rows, start=1):
+        if not isinstance(row, dict):
+            raise SystemExit(f"Publication {publication_number} authorship {index} is not an object")
+        name = str(row.get("name") or "").strip()
+        if not name:
+            raise SystemExit(f"Publication {publication_number} authorship {index} has no name")
+        if row.get("authorOrder") != index:
+            raise SystemExit(f"Publication {publication_number} authorship {index} has invalid authorOrder")
+        structured_names.append(name)
+    if legacy_names and [normalize_name(name) for name in legacy_names] != [normalize_name(name) for name in structured_names]:
+        raise SystemExit(f"Publication {publication_number} authors and authorships do not have the same order")
+    return structured_names
+# PUBLICATION_AUTHORSHIP_SYNC_END
+
 def synchronize(publications: list[dict[str, Any]], authors: list[dict[str, Any]]) -> list[str]:
     index = build_name_index(authors)
     used_ids = {str(author.get("id") or "").strip() for author in authors}
@@ -112,9 +136,7 @@ def synchronize(publications: list[dict[str, Any]], authors: list[dict[str, Any]
     added: list[str] = []
 
     for publication_number, publication in enumerate(publications, start=1):
-        names = publication.get("authors") or []
-        if not isinstance(names, list):
-            raise SystemExit(f"Publication {publication_number} has a non-array authors field")
+        names = publication_author_names(publication, publication_number)
         for raw_name in names:
             name = str(raw_name or "").strip()
             if not name:

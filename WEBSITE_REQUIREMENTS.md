@@ -43,3 +43,18 @@ Verified collection files in `data/` remain authoritative. Do not replace them w
 - Shared links must target a stable DOI-derived publication anchor on `publications.html`.
 - Opening a shared publication URL must scroll to and temporarily highlight the target record.
 - Unpaywall data are stored separately in `data/unpaywall.json`; verified publication records in `data/publications.json` remain unchanged.
+
+<!-- PUBLICATION_AUTHORSHIP_REQUIREMENTS_START -->
+## Publication authorship and affiliation metadata
+
+- `data/authors.json` stores an author's current profile and current affiliation.
+- `data/publications.json` stores the affiliation and author role associated with the specific publication.
+- Keep the existing `authors` string array for backward compatibility and store structured details in `authorships`, `affiliations`, and `authorshipMetadata`.
+- Source priority is manually verified data, Europe PMC/JATS, Crossref, OpenAlex, and explicitly enabled publisher HTML metadata.
+- Never infer equal contribution from adjacent author order.
+- Never infer a corresponding author from the final author position.
+- API failures and empty responses must not erase existing verified values.
+- `verified` means the structured fields are complete enough for automatic display and analytics; `partial` means one or more fields remain unknown; `manual` means a human-verified override is authoritative.
+- Records with conflicting or incomplete source data must use `requiresManualReview: true` and list the unresolved fields.
+- Generated HTML must be rebuilt from the authoritative JSON; individual files under `publications/` must not be edited manually.
+<!-- PUBLICATION_AUTHORSHIP_REQUIREMENTS_END -->

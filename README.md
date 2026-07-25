@@ -69,3 +69,22 @@ Automated scripts and GitHub Actions should preserve the last valid data when an
 ## Maintenance principle
 
 Keep only this primary `README.md` in the repository root. Place other Markdown documentation under `docs/` so that the GitHub Pages root remains easy to review and maintain.
+
+<!-- PUBLICATION_AUTHORSHIP_README_START -->
+## Publication authorship metadata
+
+Publication-level author order, affiliations, equal-contribution markers, and corresponding-author roles are stored in `data/publications.json`. The backward-compatible `authors` string array remains authoritative for display order, while `authorships` and `affiliations` provide structured metadata.
+
+Run locally:
+
+```bash
+python scripts/update_publication_authorships.py
+python scripts/update_publication_authorships.py --doi 10.xxxx/xxxxx
+python scripts/update_publication_authorships.py --retry-partial
+python scripts/update_publication_authorships.py --check
+python scripts/sync_publication_authors.py --check
+python scripts/build_seo.py
+```
+
+The scheduled `update-publication-authorships.yml` workflow fetches metadata, validates it, rebuilds generated HTML, and commits the updated data and pages in one job. This combined workflow is intentional because commits made with the default GitHub Actions token do not trigger a second workflow automatically.
+<!-- PUBLICATION_AUTHORSHIP_README_END -->

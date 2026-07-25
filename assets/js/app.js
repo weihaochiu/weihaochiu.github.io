@@ -542,3 +542,148 @@ document.addEventListener('DOMContentLoaded',async()=>{
   const authors=await loadData('authors').catch(()=>[]);buildAuthorDirectory(authors);initAuthorPopover();
   initCollection().catch(console.error);
 });
+
+/* PUBLICATION_AUTHORSHIP_APP_START */
+(() => {
+  'use strict';
+  if (window.__publicationAuthorshipsLoaded) return;
+  window.__publicationAuthorshipsLoaded = true;
+
+  const scriptUrl = document.currentScript?.src || new URL('assets/js/publication-authorships.js', document.baseURI).toString();
+  const publicationsUrl = new URL('../../data/publications.json', scriptUrl).toString();
+  const normalize = value => String(value || '').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, '');
+  const slugify = value => String(value || 'publication').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'publication';
+  const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+  const escapeAttr = escapeHtml;
+
+  let publications = [];
+  let bySlug = new Map();
+
+  function affiliationText(row) {
+    const address = row?.address || row?.raw;
+    const values = [row?.department, row?.institution, address, ...(!address ? [row?.city, row?.countryCode] : [])]
+      .map(value => String(value || '').trim())
+      .filter(Boolean);
+    const seen = new Set();
+    return values.filter(value => {
+      const key = normalize(value);
+      if (!key || seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    }).join(', ');
+  }
+
+  function markerParts(authorship, affiliationMap) {
+    const parts = [];
+    if (authorship?.isEqualContributor === true) parts.push({text:'†', label:'Equal contribution'});
+    if (authorship?.isCorresponding === true) parts.push({text:'*', label:'Corresponding author'});
+    for (const id of authorship?.affiliationIds || []) {
+      const label = affiliationMap.get(id)?.label;
+      if (label) parts.push({text:label, label:`Affiliation ${label}`});
+    }
+    return parts;
+  }
+
+  function markerHtml(authorship, affiliationMap) {
+    const parts = markerParts(authorship, affiliationMap);
+    if (!parts.length) return '';
+    const text = parts.map(part => part.text).join(',');
+    const label = parts.map(part => part.label).join('; ');
+    return `<sup class="author-affiliation-ref" aria-label="${escapeAttr(label)}" title="${escapeAttr(label)}">${escapeHtml(text)}</sup>`;
+  }
+
+  function renderName(name) {
+    if (window.AuthorCards?.render) {
+      const rendered = window.AuthorCards.render(name);
+      if (rendered) return rendered;
+    }
+    const mine = ['weihaochiu','chiuweihao','whchiu'].includes(normalize(name));
+    return `<span class="author-name${mine ? ' me' : ''}">${escapeHtml(name)}</span>`;
+  }
+
+  function renderAuthors(publication) {
+    const affiliations = new Map((publication.affiliations || []).map(row => [String(row.id || ''), row]));
+    const rows = Array.isArray(publication.authorships) && publication.authorships.length
+      ? publication.authorships
+      : (publication.authors || []).map((name, index) => ({name, authorOrder:index + 1, affiliationIds:[]}));
+    return rows.map(row => `<span class="publication-author">${renderName(row.name)}${markerHtml(row, affiliations)}</span>`).join(', ');
+  }
+
+  function renderAffiliations(publication, open = false) {
+    const rows = publication.affiliations || [];
+    const authorships = publication.authorships || [];
+    if (!rows.length && !authorships.some(row => row?.isEqualContributor === true || row?.isCorresponding === true)) return '';
+    const affiliationRows = rows.map(row => {
+      const text = affiliationText(row);
+      if (!text) return '';
+      const ror = row.ror ? ` <a href="${escapeAttr(row.ror)}" target="_blank" rel="noopener noreferrer">ROR ↗</a>` : '';
+      return `<li class="affiliation-entry"><span class="affiliation-label">${escapeHtml(row.label || '')}</span><span>${escapeHtml(text)}${ror}</span></li>`;
+    }).filter(Boolean).join('');
+    const equal = authorships.some(row => row?.isEqualContributor === true);
+    const corresponding = authorships.filter(row => row?.isCorresponding === true);
+    const legend = [
+      equal ? '<li><span class="author-role-marker">†</span><span>These authors contributed equally.</span></li>' : '',
+      corresponding.length ? '<li><span class="author-role-marker">*</span><span>Corresponding author' + (corresponding.length > 1 ? 's' : '') + ': ' + corresponding.map(row => escapeHtml(row.name)).join(', ') + '.</span></li>' : ''
+    ].filter(Boolean).join('');
+    return `<details class="publication-affiliations"${open ? ' open' : ''}><summary>Author affiliations and roles</summary>${affiliationRows ? `<ol class="affiliation-list">${affiliationRows}</ol>` : ''}${legend ? `<ul class="author-role-legend">${legend}</ul>` : ''}</details>`;
+  }
+
+  function cardPublication(card) {
+    const id = String(card.id || '').replace(/^pub-/, '');
+    if (id && bySlug.has(id)) return bySlug.get(id);
+    const metaDoi = document.querySelector('meta[name="citation_doi"]')?.content;
+    if (metaDoi && card.classList.contains('publication-detail')) return bySlug.get(slugify(metaDoi));
+    const doiLink = [...card.querySelectorAll('a[href*="doi.org/"]')].map(a => a.href.split('doi.org/')[1]).find(Boolean);
+    return doiLink ? bySlug.get(slugify(decodeURIComponent(doiLink))) : null;
+  }
+
+  function enhanceCard(card) {
+    const publication = cardPublication(card);
+    if (!publication) return;
+    const authors = card.querySelector('.authors');
+    if (!authors) return;
+    const signature = JSON.stringify(publication.authorships || publication.authors || []);
+    if (card.dataset.authorshipSignature === signature) return;
+    authors.classList.add('publication-authors');
+    authors.innerHTML = renderAuthors(publication);
+    card.querySelector(':scope > .publication-affiliations')?.remove();
+    const detail = card.classList.contains('publication-detail');
+    const wrapper = document.createElement('div');
+    wrapper.innerHTML = renderAffiliations(publication, detail);
+    const affiliationBlock = wrapper.firstElementChild;
+    if (affiliationBlock) {
+      const journal = card.querySelector('.journal');
+      (journal || authors).insertAdjacentElement('afterend', affiliationBlock);
+    }
+    card.dataset.authorshipSignature = signature;
+    window.AuthorCards?.init?.();
+  }
+
+  function enhanceAll(root = document) {
+    root.querySelectorAll?.('.publication-card').forEach(enhanceCard);
+  }
+
+  async function load() {
+    try {
+      const response = await fetch(publicationsUrl, {cache:'no-store'});
+      if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
+      publications = await response.json();
+      bySlug = new Map(publications.map(publication => [slugify(publication.doi), publication]));
+      enhanceAll();
+      const observer = new MutationObserver(mutations => {
+        for (const mutation of mutations) {
+          for (const node of mutation.addedNodes) {
+            if (node.nodeType === Node.ELEMENT_NODE) enhanceAll(node.matches?.('.publication-card') ? node.parentElement : node);
+          }
+        }
+      });
+      observer.observe(document.body, {childList:true, subtree:true});
+    } catch (error) {
+      console.warn('Publication authorship metadata could not be loaded.', error);
+    }
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', load, {once:true});
+  else load();
+})();
+/* PUBLICATION_AUTHORSHIP_APP_END */

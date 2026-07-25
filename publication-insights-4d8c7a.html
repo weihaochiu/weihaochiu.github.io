@@ -387,4 +387,137 @@ document.addEventListener('DOMContentLoaded',async()=>{
 });
 })();
 </script>
+<!-- PUBLICATION_AUTHORSHIP_INSIGHTS_START -->
+<script>
+(() => {
+  'use strict';
+  if (window.__publicationAuthorshipInsightsLoaded) return;
+  window.__publicationAuthorshipInsightsLoaded = true;
+
+  const scriptUrl = document.currentScript?.src || '';
+  const publicationsUrl = scriptUrl ? new URL('../../data/publications.json', scriptUrl).toString() : new URL('data/publications.json', document.baseURI).toString();
+  const ME_ORCID = '0000-0003-4484-3117';
+  const normalize = value => String(value || '').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '');
+  const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+  const isMe = row => String(row?.orcid || '').replace(/^https?:\/\/orcid\.org\//i, '').toUpperCase() === ME_ORCID || ['weihaochiu','chiuweihao','whchiu'].includes(normalize(row?.name));
+  const yearOf = publication => Number(publication.year) || Number(String(publication.date || '').slice(0, 4)) || '';
+  const slugify = value => String(value || 'publication').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'publication';
+  const csvEscape = value => { const text = String(value ?? ''); return /[",\n\r]/.test(text) ? `"${text.replace(/"/g, '""')}"` : text; };
+
+  function affiliationText(publication, row) {
+    const index = new Map((publication.affiliations || []).map(item => [String(item.id || ''), item]));
+    return (row?.affiliationIds || []).map(id => index.get(String(id))).filter(Boolean).map(item => [item.department, item.institution, item.address || item.raw].filter(Boolean).join(', ')).join(' | ');
+  }
+
+  function derive(publication) {
+    const rows = Array.isArray(publication.authorships) ? publication.authorships : [];
+    const mine = rows.find(isMe);
+    if (!mine) return null;
+    const order = Number(mine.authorOrder) || rows.indexOf(mine) + 1;
+    const count = rows.length || (publication.authors || []).length;
+    const correspondingCount = rows.filter(row => row?.isCorresponding === true).length;
+    return {
+      publication,
+      mine,
+      order,
+      count,
+      isFirst: order === 1,
+      isCoFirst: mine.isEqualContributor === true,
+      isCorresponding: mine.isCorresponding === true,
+      isCoCorresponding: mine.isCorresponding === true && correspondingCount > 1,
+      isLast: count > 1 && order === count,
+      status: String(publication.authorshipMetadata?.status || 'missing'),
+      needsReview: Boolean(publication.authorshipMetadata?.requiresManualReview),
+      sources: (publication.authorshipMetadata?.sources || []).join('; '),
+      affiliations: affiliationText(publication, mine)
+    };
+  }
+
+  function downloadCsv(rows) {
+    const headers = ['doi','title','publication_year','author_order','author_count','author_position','is_first_author','is_co_first_author','is_corresponding_author','is_co_corresponding_author','is_last_author','affiliations','authorship_status','authorship_sources','requires_manual_review'];
+    const values = rows.map(row => [
+      row.publication.doi, row.publication.title, yearOf(row.publication), row.order, row.count,
+      row.mine.authorPosition || '', row.isFirst, row.isCoFirst, row.isCorresponding,
+      row.isCoCorresponding, row.isLast, row.affiliations, row.status, row.sources, row.needsReview
+    ]);
+    const text = '\ufeff' + [headers, ...values].map(line => line.map(csvEscape).join(',')).join('\r\n') + '\r\n';
+    const url = URL.createObjectURL(new Blob([text], {type:'text/csv;charset=utf-8'}));
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'wei-hao-chiu-publication-authorships.csv';
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }
+
+  function buildSection(rows, totalPublications) {
+    const section = document.createElement('section');
+    section.className = 'analytics-section';
+    section.id = 'authorship-analysis';
+    const firstOnly = rows.filter(row => row.isFirst && !row.isCoFirst).length;
+    const coFirst = rows.filter(row => row.isCoFirst).length;
+    const corresponding = rows.filter(row => row.isCorresponding).length;
+    const coCorresponding = rows.filter(row => row.isCoCorresponding).length;
+    const leadAndCorresponding = rows.filter(row => (row.isFirst || row.isCoFirst) && row.isCorresponding).length;
+    const last = rows.filter(row => row.isLast).length;
+    const unresolved = rows.filter(row => row.needsReview || !['verified','manual','manually-verified'].includes(row.status.toLowerCase())).length;
+    const complete = totalPublications ? Math.round((rows.length - unresolved) / totalPublications * 1000) / 10 : 0;
+
+    section.innerHTML = `<div class="chart-card">
+      <div class="analytics-heading"><div><span class="eyebrow">Publication authorship</span><h2>Author Roles and Metadata Quality</h2></div><div class="chart-actions"><button class="action-button" id="downloadAuthorshipCsv" type="button">Download CSV</button></div></div>
+      <div class="authorship-summary-grid">
+        ${[
+          ['First author', firstOnly, 'Sole first-author records'],
+          ['Co-first author', coFirst, 'Explicit equal-contribution records'],
+          ['Corresponding author', corresponding, 'Includes co-corresponding'],
+          ['Co-corresponding', coCorresponding, 'More than one corresponding author'],
+          ['Lead + corresponding', leadAndCorresponding, 'First/co-first and corresponding'],
+          ['Last author', last, 'Final author position'],
+          ['Needs review', unresolved, 'Partial, missing or conflicting metadata'],
+          ['Metadata completeness', `${complete}%`, `${rows.length} of ${totalPublications} publications identify Wei-Hao Chiu`]
+        ].map(item => `<div class="content-audit-card"><span>${escapeHtml(item[0])}</span><strong>${escapeHtml(item[1])}</strong><small>${escapeHtml(item[2])}</small></div>`).join('')}
+      </div>
+      <div class="table-wrap"><table class="journal-table authorship-table"><thead><tr><th>Year</th><th>Publication</th><th>Position</th><th>Role</th><th>Affiliation</th><th>Status</th></tr></thead><tbody>
+        ${rows.slice().sort((a,b) => (yearOf(b.publication) || 0) - (yearOf(a.publication) || 0) || String(a.publication.title || '').localeCompare(String(b.publication.title || ''))).map(row => {
+          const roles = [row.isCoFirst ? 'Co-first' : row.isFirst ? 'First' : '', row.isCorresponding ? (row.isCoCorresponding ? 'Co-corresponding' : 'Corresponding') : '', row.isLast ? 'Last' : ''].filter(Boolean).join(' · ') || 'Co-author';
+          const statusClass = row.needsReview ? 'pending-status' : 'metric-badge q1';
+          return `<tr><td class="numeric">${escapeHtml(yearOf(row.publication) || '—')}</td><td class="journal-name"><a href="publications/${escapeHtml(slugify(row.publication.doi))}.html">${escapeHtml(row.publication.title || row.publication.doi || 'Untitled publication')}</a><br><small>${escapeHtml(row.publication.doi || '')}</small></td><td>${row.order}/${row.count}</td><td>${escapeHtml(roles)}</td><td>${escapeHtml(row.affiliations || '—')}</td><td><span class="${statusClass}">${escapeHtml(row.status)}${row.needsReview ? ' · review' : ''}</span></td></tr>`;
+        }).join('')}
+      </tbody></table></div>
+      <p class="chart-note">Co-first and corresponding-author status are counted only when explicitly present in structured metadata or manually verified. Author order alone is not used to infer either role.</p>
+      <a class="back-to-top" href="#top">Back to top ↑</a>
+    </div>`;
+    section.querySelector('#downloadAuthorshipCsv')?.addEventListener('click', () => downloadCsv(rows));
+    return section;
+  }
+
+  async function init() {
+    try {
+      const response = await fetch(publicationsUrl, {cache:'no-store'});
+      if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
+      const publications = await response.json();
+      const rows = publications.map(derive).filter(Boolean);
+      const existing = document.getElementById('authorship-analysis');
+      existing?.remove();
+      const output = document.getElementById('output');
+      if (!output) return;
+      output.insertAdjacentElement('afterend', buildSection(rows, publications.length));
+      const jumpLinks = document.querySelector('.analytics-jump-links');
+      if (jumpLinks && !jumpLinks.querySelector('a[href="#authorship-analysis"]')) {
+        const link = document.createElement('a');
+        link.href = '#authorship-analysis';
+        link.textContent = 'Authorship';
+        jumpLinks.insertBefore(link, jumpLinks.querySelector('a[href="#collaboration"]') || null);
+      }
+    } catch (error) {
+      console.warn('Authorship analytics could not be loaded.', error);
+    }
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, {once:true});
+  else init();
+})();
+</script>
+<!-- PUBLICATION_AUTHORSHIP_INSIGHTS_END -->
 </body></html>

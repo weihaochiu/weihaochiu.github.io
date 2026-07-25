@@ -56,7 +56,114 @@
     "citedByUrl": "https://scholar.google.com/scholar?hl=en&q=%22Reliability+enhancement+of+PVDF-HFP+modified+perovskite+solar+cells+under+synergistic+space-relevant+stress+conditions%22",
     "scholarCitedByUrl": "",
     "scholarLinkVerified": false,
-    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en"
+    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en",
+    "authorships": [
+      {
+        "name": "Rao, Harini Srikanth",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Ahn, Seoungjun",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chiu, Wei-Hao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chu, Wei-Chen",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 4,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Sung, Yi-Wen",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 5,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chen, Gao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 6,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lee, Kun-Mu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 7,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "pending",
+      "lastChecked": "",
+      "sources": [],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "affiliations",
+        "equalContribution",
+        "correspondingAuthor"
+      ],
+      "warnings": []
+    }
   },
   {
     "date": "2026-07",
@@ -109,7 +216,88 @@
     "citedByUrl": "https://scholar.google.com/scholar?hl=en&q=%222T+Perovskite+Tandem+Solar+Cells+in+Space%3A+Failure+Mechanisms+and+Design+Strategies%22",
     "scholarCitedByUrl": "",
     "scholarLinkVerified": false,
-    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en"
+    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en",
+    "authorships": [
+      {
+        "name": "Rao, Harini Srikanth",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chiu, Wei-Hao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chen, Shih-Hsuan",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Wu, Ming-Chung",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 4,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lee, Kun-Mu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 5,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "pending",
+      "lastChecked": "",
+      "sources": [],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "affiliations",
+        "equalContribution",
+        "correspondingAuthor"
+      ],
+      "warnings": []
+    }
   },
   {
     "date": "2026-05",
@@ -154,21 +342,128 @@
       "verifiedDate": "2026-07-22",
       "verifiedSource": "Author-provided content"
     },
-    "authorOrder": 2,
+    "authorOrder": 1,
     "topic": "Perovskite Solar Cells",
     "tags": [
       "Perovskite",
       "Photovoltaics",
       "Liquid-medium annealing"
     ],
-    "role": "Co-author",
+    "role": "First author",
     "doiUrl": "https://doi.org/10.1016/j.solener.2026.114430",
     "citation": "Chiu, Wei-Hao; Yu, Wei-Lun; Wu, Ming-Chung; Hsu, Jen-Fu; Chen, Gao; Liu, Ching-Yuan; Lee, Kun-Mu. Synergistic preheating and moderate temperature liquid medium annealing for high performance perovskite solar cells. Solar Energy, 309, 114430 (2026). https://doi.org/10.1016/j.solener.2026.114430",
     "citationCount": 0,
     "citedByUrl": "https://scholar.google.com/scholar?hl=en&q=%22Synergistic+preheating+and+moderate+temperature+liquid+medium+annealing+for+high+performance+perovskite+solar+cells%22",
     "scholarCitedByUrl": "",
     "scholarLinkVerified": false,
-    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en"
+    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en",
+    "authorships": [
+      {
+        "name": "Chiu, Wei-Hao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Yu, Wei-Lun",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Wu, Ming-Chung",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Hsu, Jen-Fu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 4,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chen, Gao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 5,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Liu, Ching-Yuan",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 6,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lee, Kun-Mu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 7,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "pending",
+      "lastChecked": "",
+      "sources": [],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "affiliations",
+        "equalContribution",
+        "correspondingAuthor"
+      ],
+      "warnings": []
+    }
   },
   {
     "date": "2026-03",
@@ -215,21 +510,115 @@
       "verifiedDate": "2026-07-22",
       "verifiedSource": "Author-provided content"
     },
-    "authorOrder": 1,
+    "authorOrder": 2,
     "topic": "Redox Flow Batteries",
     "tags": [
       "Energy storage",
       "Flow batteries",
       "Graphite felt"
     ],
-    "role": "First author",
+    "role": "Co-author",
     "doiUrl": "https://doi.org/10.1016/j.jpowsour.2025.239216",
     "citation": "Shaheen, Iqra; Chiu, Wei-Hao; Lee, Yu-Xian; Chen, Shih-Hsuan; Hsu, Jen-Fu; Lee, Kun-Mu. Heterogeneous graphite felt electrodes decorated with nanostructured graphitic carbon nitride for enhanced redox kinetics in vanadium redox flow batteries. Journal of Power Sources, 667(1), 239216 (2026). https://doi.org/10.1016/j.jpowsour.2025.239216",
     "citationCount": 2,
     "citedByUrl": "https://scholar.google.com/scholar?hl=en&q=%22Heterogeneous+graphite+felt+electrodes+decorated+with+nanostructured+graphitic+carbon+nitride+for+enhanced+redox+kinetics+in+vanadium+redox+flow+batteries%22",
     "scholarCitedByUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=3458344244005821142",
     "scholarLinkVerified": true,
-    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en"
+    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en",
+    "authorships": [
+      {
+        "name": "Shaheen, Iqra",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chiu, Wei-Hao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lee, Yu-Xian",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chen, Shih-Hsuan",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 4,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Hsu, Jen-Fu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 5,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lee, Kun-Mu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 6,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "pending",
+      "lastChecked": "",
+      "sources": [],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "affiliations",
+        "equalContribution",
+        "correspondingAuthor"
+      ],
+      "warnings": []
+    }
   },
   {
     "date": "2026-01",
@@ -284,7 +673,88 @@
     "citedByUrl": "https://scholar.google.com/scholar?hl=en&q=%22Impact+of+proton+radiation+on+the+performance+of+single-junction+perovskite+solar+cells+for+space+applications%22",
     "scholarCitedByUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=11176020626599801497",
     "scholarLinkVerified": true,
-    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en"
+    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en",
+    "authorships": [
+      {
+        "name": "Rao, Harini Srikanth",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chiu, Wei-Hao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chen, Shih-Hsuan",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Wu, Ming-Chung",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 4,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lee, Kun-Mu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 5,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "pending",
+      "lastChecked": "",
+      "sources": [],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "affiliations",
+        "equalContribution",
+        "correspondingAuthor"
+      ],
+      "warnings": []
+    }
   },
   {
     "date": "2026-01",
@@ -337,7 +807,101 @@
     "citedByUrl": "https://scholar.google.com/scholar?hl=en&q=%22Fused+Dithienoheterocycle%E2%80%90Based+Hole%E2%80%90Transporting+Materials+for+Efficient+Perovskite+Solar+Cells%22",
     "scholarCitedByUrl": "",
     "scholarLinkVerified": false,
-    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en"
+    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en",
+    "authorships": [
+      {
+        "name": "Lee, Kun-Mu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chiu, Wei-Hao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lee, Bo-Chin",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Kao, Yu-Hsin",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 4,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Hsu, Jr-Si",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 5,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Yen, Yung-Sheng",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 6,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "pending",
+      "lastChecked": "",
+      "sources": [],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "affiliations",
+        "equalContribution",
+        "correspondingAuthor"
+      ],
+      "warnings": []
+    }
   },
   {
     "date": "2025-12",
@@ -398,7 +962,75 @@
     "citedByUrl": "https://scholar.google.com/scholar?hl=en&q=%22MOF-%26+COF-integrated+composite+separators%2Fmembranes%3A+innovations+for+sustainable+and+high-performance+redox+flow+batteries%22",
     "scholarCitedByUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=10634179658613968212",
     "scholarLinkVerified": true,
-    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en"
+    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en",
+    "authorships": [
+      {
+        "name": "Shaheen, Iqra",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chiu, Wei-Hao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chen, Shih-Hsuan",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lee, Kun-Mu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 4,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "pending",
+      "lastChecked": "",
+      "sources": [],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "affiliations",
+        "equalContribution",
+        "correspondingAuthor"
+      ],
+      "warnings": []
+    }
   },
   {
     "date": "2025-10",
@@ -497,7 +1129,686 @@
     "citedByUrl": "https://scholar.google.com/scholar?hl=en&q=%22Round-Robin+Interlaboratory+Comparison+of+Large-Area+Organic+Thin-Film+and+Perovskite+Solar+Cells%22",
     "scholarCitedByUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=2623033162244629612",
     "scholarLinkVerified": true,
-    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en"
+    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en",
+    "authorships": [
+      {
+        "name": "Chen, Chia-Yuan",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chang, Yu-Fan",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Shih, Yen-Chen",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Liu, Ying-Chuan",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 4,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chiu, Chi-Feng",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 5,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Dinarlita, Rahma Rahayu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 6,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Tsai, Tsung-Yu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 7,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Hung, Chieh-Ming",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 8,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Cha, Hou-Chin",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 9,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chen, You-Ren",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 10,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Huang, Zhi-Hao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 11,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Zhang, Yu-Cheng",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 12,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lin, Hui-Chieh",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 13,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chu, Wei-Chen",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 14,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chiu, Wei-Hao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 15,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Li, Sie-Rong",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 16,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chang, Ting-Jui",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 17,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Liao, Yi-Hong",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 18,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Rahayu, Siti Utari",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 19,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Han, Bo-Yu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 20,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lin, Yun-Tou",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 21,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Wang, Pei-Ling",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 22,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Liao, Zi-Ting",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 23,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Tsai, Jhao-Yun",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 24,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Shi, Zhong-En",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 25,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Hsu, Chia-Tse",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 26,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Hsu, Po-Shun",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 27,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chen, Po-Yuan",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 28,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Li, Jia-Zhen",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 29,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Thakran, Anjali",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 30,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chen, Yu-Ting",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 31,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Li, Yu-Sheng",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 32,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Yu, Hao-Wei",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 33,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chueh, Chu-Chen",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 34,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Guo, Tzung-Fang",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 35,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chu, Chih-Wei",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 36,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Wang, Leeyih",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 37,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Ho, Kuo-Chuan",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 38,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chen, Fang-Chung",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 39,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chen, Chih-Ping",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 40,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Tai, Yian",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 41,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Li, Chun-Ting",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 42,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lee, Ming-Way",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 43,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Wang, Chih-Liang",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 44,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Sun, Shih-Sheng",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 45,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lee, Kun-Mu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 46,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Tseng, Zong-Liang",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 47,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Huang, Yu-Ching",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 48,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chou, Pi-Tai",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 49,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Ko, Chung-Wen",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 50,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Wu, Chun-Guey",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 51,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "pending",
+      "lastChecked": "",
+      "sources": [],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "affiliations",
+        "equalContribution",
+        "correspondingAuthor"
+      ],
+      "warnings": []
+    }
   },
   {
     "date": "2025-06",
@@ -563,7 +1874,283 @@
       "Long-term stability",
       "Perovskite solar cells",
       "Photo-energy conversion"
-    ]
+    ],
+    "authorships": [
+      {
+        "name": "Lee, Kun-Mu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Pan, Jui-Ting",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chen, Wen-Tzu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lin, Chia-Hui",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 4,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Wang, Zhe-Wei",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 5,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chiu, Wei-Hao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 6,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chu, Wei-Chen",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 7,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chang, Ya-Ho",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 8,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Hsu, Jen-Fu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 9,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Li, Sie-Rong",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 10,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lu, Shih-I",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 11,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Hsieh, Hsiao-Chi",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 12,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Hu, Chih-Wei",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 13,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chen, Chih-Hung",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 14,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chiu, Jian-Ming",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 15,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Liau, Kang-Ling",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 16,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chen, Gao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 17,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Liu, Yun-Shuo",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 18,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Sun, Shih-Sheng",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 19,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lin, Yan-Duo",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 20,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "pending",
+      "lastChecked": "",
+      "sources": [],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "affiliations",
+        "equalContribution",
+        "correspondingAuthor"
+      ],
+      "warnings": []
+    }
   },
   {
     "date": "2025-01",
@@ -627,7 +2214,270 @@
       "long-term stability",
       "perovskite solar cells",
       "photo-energy conversion"
-    ]
+    ],
+    "authorships": [
+      {
+        "name": "Lee, Kun-Mu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lin, Chia-Hui",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chang, Chia-Chi",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Yang, Ting-Yu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 4,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chiu, Wei-Hao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 5,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chu, Wei-Chen",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 6,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chang, Ya-Ho",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 7,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Li, Sie-Rong",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 8,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lu, Shih-I",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 9,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Hsieh, Hsiao-Chi",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 10,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Liau, Kang-Ling",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 11,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Hu, Chia Hui",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 12,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chen, Chih-Hung",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 13,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Liu, Yun-Shuo",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 14,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chou, Wei-Chun",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 15,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lee, Mandy Mei-Ling",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 16,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Sun, Shih-Sheng",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 17,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Tao, Yu-Tai",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 18,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lin, Yan-Duo",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 19,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "pending",
+      "lastChecked": "",
+      "sources": [],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "affiliations",
+        "equalContribution",
+        "correspondingAuthor"
+      ],
+      "warnings": []
+    }
   },
   {
     "date": "2024-10",
@@ -686,7 +2536,101 @@
       "Electron transport layer",
       "Solar energy",
       "Printed Mesoscopic"
-    ]
+    ],
+    "authorships": [
+      {
+        "name": "Chiu, Wei-Hao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Huang, Ying-Kai",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chen, Shih-Hsuan",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Wu, Ming-Chung",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 4,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chen, Gao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 5,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lee, Kun-Mu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 6,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "pending",
+      "lastChecked": "",
+      "sources": [],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "affiliations",
+        "equalContribution",
+        "correspondingAuthor"
+      ],
+      "warnings": []
+    }
   },
   {
     "date": "2024-09",
@@ -738,7 +2682,101 @@
       "Vacuum degradation",
       "Gamma ray",
       "Renewable energy"
-    ]
+    ],
+    "authorships": [
+      {
+        "name": "Ahn, Seoungjun",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chiu, Wei-Hao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chu, Wei-Chen",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chen, Pei-Yu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 4,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lin, Ting-Han",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 5,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lee, Kun-Mu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 6,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "pending",
+      "lastChecked": "",
+      "sources": [],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "affiliations",
+        "equalContribution",
+        "correspondingAuthor"
+      ],
+      "warnings": []
+    }
   },
   {
     "date": "2024-02",
@@ -787,7 +2825,114 @@
       "Graphene",
       "DFT",
       "Photo-induced"
-    ]
+    ],
+    "authorships": [
+      {
+        "name": "Chen, Hsiao-Chien",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Shabir, Abdul",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Tu, Kun-Hua",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Tan, Cher Ming",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 4,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chiu, Wei-Hao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 5,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Fan, Ruei-Cheng",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 6,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Baruah, Nilim Akash",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 7,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "pending",
+      "lastChecked": "",
+      "sources": [],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "affiliations",
+        "equalContribution",
+        "correspondingAuthor"
+      ],
+      "warnings": []
+    }
   },
   {
     "date": "2024-01",
@@ -817,7 +2962,7 @@
     "month": 1,
     "publisher": "Wiley",
     "doi": "10.1002/solr.202300988",
-    "authorOrder": 12,
+    "authorOrder": 11,
     "topic": "Hole-Transporting Materials",
     "tags": [
       "HTM",
@@ -847,7 +2992,218 @@
       "cyclopenta[2,1-b3,4-b']dithiophene",
       "hole-transporting materials",
       "perovskite solar cell"
-    ]
+    ],
+    "authorships": [
+      {
+        "name": "Adugna, Gizachew Belay",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lee, Kun-Mu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Hsieh, Hsiao-Chi",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lu, Shih-I",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 4,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lin, Chia-Hui",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 5,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Hsieh, Yu-Chien",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 6,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Yang, June Hung",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 7,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chiu, Jian-Ming",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 8,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Liu, Yun-Shuo",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 9,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Hu, Chih-Wei",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 10,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chiu, Wei-Hao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 11,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Li, Sie-Rong",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 12,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Liau, Kang-Ling",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 13,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Tao, Yu-Tai",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 14,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lin, Yan-Duo",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 15,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "pending",
+      "lastChecked": "",
+      "sources": [],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "affiliations",
+        "equalContribution",
+        "correspondingAuthor"
+      ],
+      "warnings": []
+    }
   },
   {
     "date": "2023-11",
@@ -898,7 +3254,140 @@
     "citedByUrl": "https://scholar.google.com/scholar?hl=en&q=%22Fluorination+on+cyclopentadithiophene-based+hole-transport+material+for+high-performance+perovskite+solar+cells%22",
     "scholarCitedByUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=3700289862019188729",
     "scholarLinkVerified": true,
-    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en"
+    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en",
+    "authorships": [
+      {
+        "name": "Adugna, Gizachew Belay",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lee, Kun-Mu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Hsieh, Hsiao-Chi",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lu, Shih-I",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 4,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Hsieh, Yu-Chien",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 5,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chiu, Wei-Hao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 6,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Liau, Kang-Ling",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 7,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Tao, Yu-Tai",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 8,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lin, Yan-Duo",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 9,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "pending",
+      "lastChecked": "",
+      "sources": [],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "affiliations",
+        "equalContribution",
+        "correspondingAuthor"
+      ],
+      "warnings": []
+    }
   },
   {
     "date": "2023-10",
@@ -948,7 +3437,140 @@
       "Perovskite solar cells (PSCs)",
       "Dihydronaphthopentaphene",
       "Polycyclic aromatic hydrocarbon"
-    ]
+    ],
+    "authorships": [
+      {
+        "name": "Chandrasekaran, Dharuman",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Liou, Shin-Jyun",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chiu, Wei-Hao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lee, Lee-Che",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 4,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lee, Kun-Mu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 5,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Wu, Yi-Chen",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 6,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chou, Hsien-Hsin",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 7,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chang, Yuan Jay",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 8,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Yen, Yung-Sheng",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 9,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "pending",
+      "lastChecked": "",
+      "sources": [],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "affiliations",
+        "equalContribution",
+        "correspondingAuthor"
+      ],
+      "warnings": []
+    }
   },
   {
     "date": "2023-09",
@@ -997,7 +3619,101 @@
       "Molecular Design",
       "Hole Transporting Materials",
       "Perovskite Solar Cells"
-    ]
+    ],
+    "authorships": [
+      {
+        "name": "Li, Lin",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chiu, Wei-Hao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Cao, Ming-Ling",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lee, Kun-Mu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 4,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Yu, Wei-Lun",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 5,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Liu, Ching-Yuan",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 6,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "pending",
+      "lastChecked": "",
+      "sources": [],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "affiliations",
+        "equalContribution",
+        "correspondingAuthor"
+      ],
+      "warnings": []
+    }
   },
   {
     "date": "2023-09",
@@ -1048,7 +3764,127 @@
       "Cesium halides",
       "Spin -coating",
       "Planar perovskite solar cell"
-    ]
+    ],
+    "authorships": [
+      {
+        "name": "Ahn, Seoungjun",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chiu, Wei-Hao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Cheng, Hsin-Ming",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Suryanarayanan, Vembu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 4,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chen, Gao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 5,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Huang, Yu-Ching",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 6,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Wu, Ming-Chung",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 7,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lee, Kun-Mu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 8,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "pending",
+      "lastChecked": "",
+      "sources": [],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "affiliations",
+        "equalContribution",
+        "correspondingAuthor"
+      ],
+      "warnings": []
+    }
   },
   {
     "date": "2023-07",
@@ -1106,7 +3942,153 @@
     "citedByUrl": "https://scholar.google.com/scholar?hl=en&q=%22Fluorinated+Pentafulvalene%E2%80%90Fused+Hole%E2%80%90Transporting+Material+Enhances+the+Performance+of+Perovskite+Solar+Cells+with+Efficiency+Exceeding+23%25%22",
     "scholarCitedByUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=11684556850239940542",
     "scholarLinkVerified": true,
-    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en"
+    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en",
+    "authorships": [
+      {
+        "name": "Lee, Kun-Mu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Huang, Yao-Shen",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chiu, Wei-Hao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Huang, Ying-Kai",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 4,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chen, Gao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 5,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Adugna, Gizachew Belay",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 6,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Li, Sie-Rong",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 7,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lin, Fang-Ju",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 8,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lu, Shih-I",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 9,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Hsieh, Hsiao-Chi",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 10,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "pending",
+      "lastChecked": "",
+      "sources": [],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "affiliations",
+        "equalContribution",
+        "correspondingAuthor"
+      ],
+      "warnings": []
+    }
   },
   {
     "date": "2023-02",
@@ -1160,7 +4142,140 @@
       "3",
       "4-b?]dithiophene",
       "Long-term stability"
-    ]
+    ],
+    "authorships": [
+      {
+        "name": "Lee, Kun-Mu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Abate, Seid Yimer",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Yang, June Hung",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chiu, Wei-Hao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 4,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Ahn, Seoungjun",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 5,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Li, Sie-Rong",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 6,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Liau, Kang-Ling",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 7,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Tao, Yu-Tai",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 8,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lin, Yan-Duo",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 9,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "pending",
+      "lastChecked": "",
+      "sources": [],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "affiliations",
+        "equalContribution",
+        "correspondingAuthor"
+      ],
+      "warnings": []
+    }
   },
   {
     "date": "2022-08",
@@ -1213,7 +4328,140 @@
       "surfactant Tween 20",
       "thermal-assisted blade coating",
       "power conversion efficiency"
-    ]
+    ],
+    "authorships": [
+      {
+        "name": "Lee, Kun-Mu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chan, Shun-Hsiang",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Ting, Chang-Chieh",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chen, Shih-Hsuan",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 4,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chiu, Wei-Hao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 5,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Suryanarayanan, Vembu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 6,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Hsu, Jen-Fu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 7,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Liu, Ching-Yuan",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 8,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Wu, Ming-Chung",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 9,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "pending",
+      "lastChecked": "",
+      "sources": [],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "affiliations",
+        "equalContribution",
+        "correspondingAuthor"
+      ],
+      "warnings": []
+    }
   },
   {
     "date": "2022-04",
@@ -1263,7 +4511,101 @@
       "perovskite solar cells",
       "hole-transporting materials"
     ],
-    "graphicalAbstract": "GA/10.3390_polym14081580.png"
+    "graphicalAbstract": "GA/10.3390_polym14081580.png",
+    "authorships": [
+      {
+        "name": "Chandrasekaran, Dharuman",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chiu, Wei-Hao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lee, Kun-Mu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Liao, Jian-Ming",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 4,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chou, Hsien-Hsin",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 5,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Yen, Yung-Sheng",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 6,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "pending",
+      "lastChecked": "",
+      "sources": [],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "affiliations",
+        "equalContribution",
+        "correspondingAuthor"
+      ],
+      "warnings": []
+    }
   },
   {
     "date": "2022-01",
@@ -1319,7 +4661,101 @@
       "3,4-b '] dithiophene",
       "Fully printed perovskite solar cell",
       "Thermal-assisted blade-coating"
-    ]
+    ],
+    "authorships": [
+      {
+        "name": "Lee, Kun-Mu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chiu, Wei-Hao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Tsai, Yu-Hsiang",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Wang, Chao-Shian",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 4,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Tao, Yu-Tai",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 5,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lin, Yan-Duo",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 6,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "pending",
+      "lastChecked": "",
+      "sources": [],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "affiliations",
+        "equalContribution",
+        "correspondingAuthor"
+      ],
+      "warnings": []
+    }
   },
   {
     "date": "2021-12",
@@ -1376,7 +4812,101 @@
       "ethylene glycol dimethyl acrylate",
       "poly[2-(tert-butylaminoethyl) methacrylate]"
     ],
-    "graphicalAbstract": "GA/10.3390_polym13234246.png"
+    "graphicalAbstract": "GA/10.3390_polym13234246.png",
+    "authorships": [
+      {
+        "name": "Huang, Yi-Jen",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Huang, Chien-Lin",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lai, Ruo-Yu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Zhuang, Cheng-Han",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 4,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chiu, Wei-Hao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 5,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lee, Kun-Mu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 6,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "pending",
+      "lastChecked": "",
+      "sources": [],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "affiliations",
+        "equalContribution",
+        "correspondingAuthor"
+      ],
+      "warnings": []
+    }
   },
   {
     "date": "2021-08",
@@ -1427,7 +4957,88 @@
       "solar module",
       "photoanode",
       "large"
-    ]
+    ],
+    "authorships": [
+      {
+        "name": "Chiu, Wei-Hao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lee, Kun-Mu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Suryanarayanan, Vembu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Hsu, Jen-Fu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 4,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Wu, Ming-Chung",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 5,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "pending",
+      "lastChecked": "",
+      "sources": [],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "affiliations",
+        "equalContribution",
+        "correspondingAuthor"
+      ],
+      "warnings": []
+    }
   },
   {
     "date": "2021-06",
@@ -1479,7 +5090,140 @@
       "delayed annealing process",
       "defect",
       "additives"
-    ]
+    ],
+    "authorships": [
+      {
+        "name": "Lee, Kun-Mu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chan, Shun-Hsiang",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chiu, Wei-Hao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Ahn, Seoungjun",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 4,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Ting, Chang-Chieh",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 5,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chang, Yin-Hsuan",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 6,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Suryanarayanan, Vembu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 7,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Wu, Ming-Chung",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 8,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Liu, Ching-Yuan",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 9,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "pending",
+      "lastChecked": "",
+      "sources": [],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "affiliations",
+        "equalContribution",
+        "correspondingAuthor"
+      ],
+      "warnings": []
+    }
   },
   {
     "date": "2013-06",
@@ -1526,7 +5270,75 @@
       "Dye-sensitized solar cells",
       "Ti foil",
       "Mesoporous film"
-    ]
+    ],
+    "authorships": [
+      {
+        "name": "Lee, Kun-Mu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chiu, Wei-Hao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Suryanarayanan, Vembu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Wu, Chun-Guey",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 4,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "pending",
+      "lastChecked": "",
+      "sources": [],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "affiliations",
+        "equalContribution",
+        "correspondingAuthor"
+      ],
+      "warnings": []
+    }
   },
   {
     "date": "2012-10",
@@ -1574,7 +5386,101 @@
       "Electrochemical analysis",
       "Ionic diffusion",
       "Tetrapod-like ZnO"
-    ]
+    ],
+    "authorships": [
+      {
+        "name": "Lee, Kun-Mu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chiu, Wei-Hao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Hsu, Chih-Yu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Cheng, Hsin-Ming",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 4,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lee, Chia-Hua",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 5,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Wu, Chun-Guey",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 6,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "pending",
+      "lastChecked": "",
+      "sources": [],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "affiliations",
+        "equalContribution",
+        "correspondingAuthor"
+      ],
+      "warnings": []
+    }
   },
   {
     "date": "2011-10",
@@ -1621,7 +5527,75 @@
       "Long-term stability",
       "Organic iodide",
       "Flexible"
-    ]
+    ],
+    "authorships": [
+      {
+        "name": "Lee, Kun-Mu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chiu, Wei-Hao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lu, Ming-De",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Hsieh, Wen-Feng",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 4,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "pending",
+      "lastChecked": "",
+      "sources": [],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "affiliations",
+        "equalContribution",
+        "correspondingAuthor"
+      ],
+      "warnings": []
+    }
   },
   {
     "date": "2011-04",
@@ -1667,7 +5641,62 @@
       "Dye-sensitized solar cells (DSCs)",
       "Low-temperature fabrication",
       "Photovoltaics"
-    ]
+    ],
+    "authorships": [
+      {
+        "name": "Chiu, Wei-Hao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lee, Kun-Mu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Hsieh, Wen-Feng",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 3,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "pending",
+      "lastChecked": "",
+      "sources": [],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "affiliations",
+        "equalContribution",
+        "correspondingAuthor"
+      ],
+      "warnings": []
+    }
   },
   {
     "date": "2011-02",
@@ -1708,7 +5737,88 @@
       "keywords": "pending",
       "graphicalAbstract": "pending"
     },
-    "abstract": "The recombination reaction of injected electrons with triiodide ion in the electrolyte limits the efficiency of dye-sensitized solar cells (DSSCs). This study reports the preparation of a sponge-like and conformal TiO2 underlayer by hydrogen peroxide oxidation of Ti foil. This underlayer serves as a charge recombination barrier layer at the nanocrystalline TiO2/substrate interface, and suppresses the recombination reaction. This sponge-like TiO2 underlayer increases the electrical contact area between the Ti substrate and nanocrystalline TiO2, helping nanocrystalline TiO2 attach to the Ti substrate. This study compares the performance of DSSCs that were subjected to different Ti surface treatments. Electrochemical impedance spectroscopy results confirm that the proposed sponge-like TiO2 underlayer increased the open-current voltage (V-OC) and fill factor (FF) due to prolonged electron life time (tau(eff)), and minimized resistance at the TiO2/Ti interface (R-CT). With an optimal thickness of nanocrystalline TiO2 and concentration of I-2, we achieved a conversion efficiency of 6.75% for a back-illuminated DSSC."
+    "abstract": "The recombination reaction of injected electrons with triiodide ion in the electrolyte limits the efficiency of dye-sensitized solar cells (DSSCs). This study reports the preparation of a sponge-like and conformal TiO2 underlayer by hydrogen peroxide oxidation of Ti foil. This underlayer serves as a charge recombination barrier layer at the nanocrystalline TiO2/substrate interface, and suppresses the recombination reaction. This sponge-like TiO2 underlayer increases the electrical contact area between the Ti substrate and nanocrystalline TiO2, helping nanocrystalline TiO2 attach to the Ti substrate. This study compares the performance of DSSCs that were subjected to different Ti surface treatments. Electrochemical impedance spectroscopy results confirm that the proposed sponge-like TiO2 underlayer increased the open-current voltage (V-OC) and fill factor (FF) due to prolonged electron life time (tau(eff)), and minimized resistance at the TiO2/Ti interface (R-CT). With an optimal thickness of nanocrystalline TiO2 and concentration of I-2, we achieved a conversion efficiency of 6.75% for a back-illuminated DSSC.",
+    "authorships": [
+      {
+        "name": "Lee, Chia-Hua",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chiu, Wei-Hao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lee, Kun-Mu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Hsieh, Wen-Feng",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 4,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Wu, Jenn-Ming",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 5,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "pending",
+      "lastChecked": "",
+      "sources": [],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "affiliations",
+        "equalContribution",
+        "correspondingAuthor"
+      ],
+      "warnings": []
+    }
   },
   {
     "date": "2010-12",
@@ -1758,7 +5868,114 @@
       "EIS",
       "Dc thermal plasma",
       "Electrolyte additive"
-    ]
+    ],
+    "authorships": [
+      {
+        "name": "Lee, Chia-Hua",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chiu, Wei-Hao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lee, Kun-Mu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Yen, Wen-Hsiang",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 4,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lin, Hsiu-Fen",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 5,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Hsieh, Wen-Feng",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 6,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Wu, Jenn-Ming",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 7,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "pending",
+      "lastChecked": "",
+      "sources": [],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "affiliations",
+        "equalContribution",
+        "correspondingAuthor"
+      ],
+      "warnings": []
+    }
   },
   {
     "date": "2010-01",
@@ -1807,7 +6024,114 @@
       "Counter electrode",
       "Poly(3,4-ethylenedioxythiophene)",
       "Carbon nanotubes"
-    ]
+    ],
+    "authorships": [
+      {
+        "name": "Lee, Kun-Mu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chiu, Wei-Hao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Wei, Hung-Yu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Hu, Chih-Wei",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 4,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Suryanarayanan, Vembu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 5,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Hsieh, Weng-Feng",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 6,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Ho, Kuo-Chuan",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 7,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "pending",
+      "lastChecked": "",
+      "sources": [],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "affiliations",
+        "equalContribution",
+        "correspondingAuthor"
+      ],
+      "warnings": []
+    }
   },
   {
     "date": "2009-11",
@@ -1856,7 +6180,114 @@
       "In situ cross-link reaction",
       "Dye-sensitized solar cells",
       "Micro-porous TiO2 electrode"
-    ]
+    ],
+    "authorships": [
+      {
+        "name": "Lee, Kun-Mu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Hsu, Chih-Yu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chiu, Wei-Hao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Tsui, Meng-Chin",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 4,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Tung, Yung-Liang",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 5,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Tsai, Song-Yeu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 6,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Ho, Kuo-Chuan",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 7,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "pending",
+      "lastChecked": "",
+      "sources": [],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "affiliations",
+        "equalContribution",
+        "correspondingAuthor"
+      ],
+      "warnings": []
+    }
   },
   {
     "date": "2009-03",
@@ -1899,7 +6330,114 @@
       "keywords": "pending",
       "graphicalAbstract": "pending"
     },
-    "abstract": "The tetrapod-like ZnO nanopowders are employed to construct an efficient electron transport network as the photoanode of the dye-sensitized solar cells (DSCs). Due to the high extinction coefficient of the metal-free D149 dye offering a high photocurrent through the ZnO network, the best performance of DSCs based on a 42 mu m terapod-like ZnO film showed a high energy conversion efficiency of 4.9% with a high short-circuit photocurrent density of 12.3 mA cm(-2), an open-circuit photovoltage of 0.6 V, and a fill factor of 0.65 under AM 1.5 irradiation. Highly efficient electron transport may also be ascribed by a long effective electron diffusion length of 46 mu m determined from the electrochemical impedance spectroscopy which is consistent with thickness dependent J(SC) measurements."
+    "abstract": "The tetrapod-like ZnO nanopowders are employed to construct an efficient electron transport network as the photoanode of the dye-sensitized solar cells (DSCs). Due to the high extinction coefficient of the metal-free D149 dye offering a high photocurrent through the ZnO network, the best performance of DSCs based on a 42 mu m terapod-like ZnO film showed a high energy conversion efficiency of 4.9% with a high short-circuit photocurrent density of 12.3 mA cm(-2), an open-circuit photovoltage of 0.6 V, and a fill factor of 0.65 under AM 1.5 irradiation. Highly efficient electron transport may also be ascribed by a long effective electron diffusion length of 46 mu m determined from the electrochemical impedance spectroscopy which is consistent with thickness dependent J(SC) measurements.",
+    "authorships": [
+      {
+        "name": "Chiu, Wei-Hao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lee, Chia-Hua",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Cheng, Hsin-Ming",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lin, Hsiu-Fen",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 4,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Liao, Shih-Chieh",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 5,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Wu, Jenn-Ming",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 6,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Hsieh, Wen-Feng",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 7,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "pending",
+      "lastChecked": "",
+      "sources": [],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "affiliations",
+        "equalContribution",
+        "correspondingAuthor"
+      ],
+      "warnings": []
+    }
   },
   {
     "date": "2008-09",
@@ -1940,7 +6478,88 @@
       "keywords": "pending",
       "graphicalAbstract": "pending"
     },
-    "abstract": "Branched ZnO nanowires have been fabricated on conductive glass substrates via a solvothermal method for dye-sensitized solar cells (DSCs). The 1D branched nanostructures can afford a direct conduction pathway instead of interparticle hops while using nanoparticles. Furthermore, the short-circuit current density and the energy conversion efficiency of the branched ZnO nanowire DSCs are 4.27 mA/cm(2) and 1.51%,which are twice as high as the bare ZnO nanowire ones. The improvement was a consequence of the enlargement of the internal surface area within the photoelectrode and allowed us to achieve higher dye adsorption to significantly enhance the performance of the DSCs."
+    "abstract": "Branched ZnO nanowires have been fabricated on conductive glass substrates via a solvothermal method for dye-sensitized solar cells (DSCs). The 1D branched nanostructures can afford a direct conduction pathway instead of interparticle hops while using nanoparticles. Furthermore, the short-circuit current density and the energy conversion efficiency of the branched ZnO nanowire DSCs are 4.27 mA/cm(2) and 1.51%,which are twice as high as the bare ZnO nanowire ones. The improvement was a consequence of the enlargement of the internal surface area within the photoelectrode and allowed us to achieve higher dye adsorption to significantly enhance the performance of the DSCs.",
+    "authorships": [
+      {
+        "name": "Cheng, Hsin-Ming",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chiu, Wei-Hao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Lee, Chia-Hua",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Tsai, Song-Yeu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 4,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Hsieh, Wen-Feng",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 5,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "pending",
+      "lastChecked": "",
+      "sources": [],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "affiliations",
+        "equalContribution",
+        "correspondingAuthor"
+      ],
+      "warnings": []
+    }
   },
   {
     "date": "2005-01",
@@ -1977,6 +6596,74 @@
       "highlights": "pending",
       "keywords": "pending",
       "graphicalAbstract": "pending"
+    },
+    "authorships": [
+      {
+        "name": "Chen, Ching-Hsu",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Tai, Po-Tse",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Chiu, Wei-Hao",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      },
+      {
+        "name": "Hsieh, Wen-Feng",
+        "orcid": "",
+        "openAlexId": "",
+        "authorOrder": 4,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": []
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "pending",
+      "lastChecked": "",
+      "sources": [],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "affiliations",
+        "equalContribution",
+        "correspondingAuthor"
+      ],
+      "warnings": []
     }
   }
 ]
