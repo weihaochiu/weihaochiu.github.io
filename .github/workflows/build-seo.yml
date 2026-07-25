@@ -14,6 +14,10 @@ on:
       - "data/publication_taxonomy.json"
       - "scripts/build_seo.py"
       - "scripts/sync_publication_authors.py"
+      - "scripts/update_publication_authorships.py"
+      - "assets/css/styles.css"
+      - "assets/js/app.js"
+      - "publication-insights-4d8c7a.html"
       - ".github/workflows/build-seo.yml"
 
 permissions:
@@ -28,6 +32,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -37,6 +43,7 @@ jobs:
         run: python scripts/build_seo.py
       - name: Verify generated publication metadata
         run: |
+          python scripts/update_publication_authorships.py --check --allow-missing
           python scripts/sync_publication_authors.py --check
           python scripts/build_seo.py
           python - <<'PY'
@@ -52,6 +59,7 @@ jobs:
           legacy_scripts = len(re.findall(r'openalex-publications\.js', page, flags=re.I))
           marker_starts = page.count('<!-- SEO_CITATION_META_START -->')
           marker_ends = page.count('<!-- SEO_CITATION_META_END -->')
+          insights = (root / 'publication-insights-4d8c7a.html').read_text(encoding='utf-8')
           errors = []
           if titles != expected:
               errors.append(f'citation_title count: expected {expected}, found {titles}')
@@ -61,15 +69,17 @@ jobs:
               errors.append(f'legacy OpenAlex scripts: expected 0, found {legacy_scripts}')
           if (marker_starts, marker_ends) != (1, 1):
               errors.append(f'citation marker pairs: expected 1/1, found {marker_starts}/{marker_ends}')
+          if 'PUBLICATION_AUTHORSHIP_INSIGHTS_START' not in insights:
+              errors.append('Publication Analytics authorship extension is missing')
           if errors:
               raise SystemExit('\n'.join(errors))
-          print(f'Verified {expected} publications; metadata is idempotent and legacy OpenAlex script is absent.')
+          print(f'Verified {expected} publications; authorship-aware metadata is idempotent.')
           PY
       - name: Commit generated files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -- '*.html' publications assets/js/app.js data/authors.json data/site_meta.json robots.txt sitemap.xml llms.txt
+          git add -- '*.html' publications assets/js/app.js assets/css/styles.css data/authors.json data/site_meta.json robots.txt sitemap.xml llms.txt
           if git diff --cached --quiet; then
             echo "No generated changes."
           else

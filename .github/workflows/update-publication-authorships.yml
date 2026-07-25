@@ -1,0 +1,120 @@
+name: Update publication authorship metadata
+
+on:
+  workflow_dispatch:
+    inputs:
+      doi:
+        description: "Optional single DOI to update"
+        required: false
+        type: string
+      retry_partial:
+        description: "Only retry pending or partial records"
+        required: false
+        default: false
+        type: boolean
+      publisher_html:
+        description: "Enable generic publisher HTML metadata fallback"
+        required: false
+        default: false
+        type: boolean
+  schedule:
+    - cron: "20 3 * * 6"
+  push:
+    branches: [main]
+    paths:
+      - "data/publications.json"
+      - "scripts/update_publication_authorships.py"
+      - ".github/workflows/update-publication-authorships.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: website-content-write
+  cancel-in-progress: false
+
+jobs:
+  update:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    env:
+      OPENALEX_MAILTO: ${{ secrets.SCHOLARLY_API_EMAIL }}
+      CROSSREF_MAILTO: ${{ secrets.SCHOLARLY_API_EMAIL }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Update publication authorship metadata
+        shell: bash
+        run: |
+          args=()
+          if [[ -n "${{ inputs.doi || '' }}" ]]; then
+            args+=(--doi "${{ inputs.doi }}")
+          fi
+          if [[ "${{ inputs.retry_partial || false }}" == "true" ]]; then
+            args+=(--retry-partial)
+          fi
+          if [[ "${{ inputs.publisher_html || false }}" == "true" ]]; then
+            args+=(--publisher-html)
+          fi
+          python scripts/update_publication_authorships.py "${args[@]}"
+
+      - name: Synchronize author directory
+        run: python scripts/sync_publication_authors.py
+
+      - name: Generate website and authorship UI
+        run: python scripts/build_seo.py
+
+      - name: Validate authorship data and generated pages
+        shell: bash
+        run: |
+          python scripts/update_publication_authorships.py --check
+          python scripts/sync_publication_authors.py --check
+          python scripts/build_seo.py
+          python scripts/update_publication_authorships.py --check
+          python - <<'PY'
+          import json
+          import re
+          from pathlib import Path
+
+          root = Path('.')
+          publications = json.loads((root / 'data/publications.json').read_text(encoding='utf-8'))
+          detail_pages = list((root / 'publications').glob('*.html'))
+          errors = []
+          if len(detail_pages) != len(publications):
+              errors.append(f'detail page count: expected {len(publications)}, found {len(detail_pages)}')
+          for publication in publications:
+              slug = re.sub(r'[^a-z0-9]+', '-', str(publication.get('doi') or 'publication').lower()).strip('-')
+              page = root / 'publications' / f'{slug}.html'
+              if not page.exists():
+                  continue
+              text = page.read_text(encoding='utf-8')
+              if publication.get('authorships') and 'publication-affiliations' not in text:
+                  errors.append(f'{publication.get("doi")}: missing static authorship block')
+          insights = (root / 'publication-insights-4d8c7a.html').read_text(encoding='utf-8')
+          if 'PUBLICATION_AUTHORSHIP_INSIGHTS_START' not in insights:
+              errors.append('Publication Analytics authorship extension is not embedded')
+          if errors:
+              raise SystemExit('\n'.join(errors))
+          print(f'Validated {len(publications)} publication authorship records and generated pages.')
+          PY
+
+      - name: Commit metadata and generated files
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- \
+            data/publications.json data/authors.json data/site_meta.json \
+            '*.html' publications assets/js/app.js assets/css/styles.css \
+            robots.txt sitemap.xml llms.txt
+          if git diff --cached --quiet; then
+            echo "No publication authorship changes."
+          else
+            git commit -m "Update publication authorship metadata"
+            git push
+          fi
