@@ -1,38 +1,71 @@
-# Wei-Hao Chiu Academic Profile — V20 update package
+# Wei-Hao Chiu Academic Website
 
-This ZIP is designed to be uploaded **over the existing V19 GitHub Pages repository**.
+Official academic website and research portfolio of **Dr. Wei-Hao Chiu**.
 
-## Important upload rule
+**Website:** https://weihaochiu.github.io/
 
-Do not delete the current `data/publications.json`, `data/patents.json`, `data/projects.json`, or `data/awards.json` files. They contain the verified records and are intentionally not duplicated in this update archive.
+## Overview
 
-Upload all V20 files to the repository root and allow them to replace files with the same names. Existing collection JSON files remain in place.
+This repository hosts a multi-page academic website published through GitHub Pages.  
+The website presents research interests, publications, patents, projects, professional experience, education, and awards.
 
-## V20 changes
+The current primary navigation is:
 
-- Main navigation reduced to **About | Research | Publications | Patents | Projects**.
-- Experience, Education and Awards consolidated into `about.html`.
-- Old Experience, Education and Awards URLs redirect to the relevant About sections.
-- Homepage redesigned as a longer academic-profile page.
-- Photo caption removed; formal unit information moved beside the job title.
-- Publications / All outputs chart switch added.
-- Charts redesigned with clear axes, values, gridlines, hover states and accessible labels.
-- Research-theme selector now uses alphabetical order.
-- Open Graph and Twitter preview metadata upgraded to a 1200 × 630 social image.
-- Profile image supplied in JPEG and WebP formats.
-- Google Scholar cited-by URL construction fixed with `urljoin`.
-- Site version updated to **V20**.
+- About
+- Research
+- Publications
+- Patents
+- Projects
+
+Legacy Experience, Education, and Awards URLs are retained as redirects to the corresponding sections of the About page.
+
+## Repository structure
+
+```text
+.github/workflows/   GitHub Actions workflows
+assets/              Stylesheets, JavaScript, images, icons, and other web assets
+data/                Verified publication, patent, project, award, and metric data
+docs/                Maintenance, setup, requirements, and archived update documentation
+scripts/             Data-processing and maintenance scripts
+*.html               GitHub Pages website pages and redirect pages
+```
+
+## Deployment
+
+The website is deployed from:
+
+- Branch: `main`
+- GitHub Pages source: `/ (root)`
+
+Files required by the website, including HTML pages, `.nojekyll`, `robots.txt`, `sitemap.xml`, and `site.webmanifest`, should remain in the repository root.
 
 ## Local preview
 
-Because the records are loaded from JSON, preview through a web server:
+Because the website loads records from JSON files, preview it through a local web server rather than opening the HTML files directly:
 
 ```bash
 python -m http.server 8000
 ```
 
-## V21 additions
+Then open:
 
-- Unpaywall-powered legal OA links on the Publications page.
-- Compact per-publication sharing with stable DOI-derived anchors.
-- See `UNPAYWALL_SHARE_SETUP.md` for the first workflow run and optional email override.
+```text
+http://localhost:8000/
+```
+
+## Data integrity
+
+Verified records in `data/` are authoritative. Do not replace verified publication, patent, project, award, taxonomy, or metric data with inferred or unverified content.
+
+Automated scripts and GitHub Actions should preserve the last valid data when an external service is temporarily unavailable.
+
+## Documentation
+
+- [Documentation index](docs/README.md)
+- [Website requirements and maintenance record](docs/WEBSITE_REQUIREMENTS.md)
+- [Unpaywall and publication sharing setup](docs/UNPAYWALL_SHARE_SETUP.md)
+- [Archived V20–V21 update notes](docs/archive/V20_V21_UPDATE_NOTES.md)
+
+## Maintenance principle
+
+Keep only this primary `README.md` in the repository root. Place other Markdown documentation under `docs/` so that the GitHub Pages root remains easy to review and maintain.
