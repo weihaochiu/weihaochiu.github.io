@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW" id="top">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Academic Record Monitor | Wei-Hao Chiu</title>
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+  <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+  <meta name="description" content="Private monitor for possible new publications, patents and GRB projects." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="assets/css/styles.css" rel="stylesheet" />
+  <link href="assets/css/academic-monitor.css" rel="stylesheet" />
+  <link href="assets/images/favicon.svg" rel="icon" type="image/svg+xml" />
+</head>
+<body>
+<header class="site-header">
+  <div class="shell nav-shell">
+    <a class="brand" href="index.html"><span>Wei-Hao Chiu</span><small>Academic Profile</small></a>
+  </div>
+</header>
+
+<section class="monitor-header">
+  <div class="shell">
+    <span class="eyebrow">Private dashboard</span>
+    <h1>學術成果監測</h1>
+    <p>定期比對可能的新論文、專利與 GRB 計畫。此頁只顯示待人工確認資料，不會自動修改 publications、patents 或 projects JSON。</p>
+  </div>
+</section>
+
+<main class="shell monitor-main">
+  <div class="monitor-toolbar">
+    <div class="monitor-meta">
+      最後檢查：<strong id="generatedAt">—</strong>　
+      執行狀態：<strong id="monitorStatus">—</strong>
+    </div>
+    <div class="monitor-actions">
+      <a class="monitor-button" href="publication-insights-4d8c7a.html">Publication Analytics</a>
+      <button class="monitor-button primary" id="copyAll" type="button" disabled>複製全部待確認資料</button>
+    </div>
+  </div>
+
+  <div class="monitor-summary">
+    <div class="monitor-summary-card"><span>新論文</span><strong id="summaryPublications">—</strong></div>
+    <div class="monitor-summary-card"><span>新專利</span><strong id="summaryPatents">—</strong></div>
+    <div class="monitor-summary-card"><span>新 GRB 計畫</span><strong id="summaryProjects">—</strong></div>
+    <div class="monitor-summary-card"><span>總待確認數</span><strong id="summaryTotal">—</strong></div>
+    <div class="monitor-summary-card"><span>來源警告／錯誤</span><strong id="summaryErrors">—</strong></div>
+  </div>
+
+  <div class="monitor-grid">
+    <section class="monitor-panel">
+      <div class="monitor-panel-head">
+        <div><span class="eyebrow">ORCID + Crossref</span><h2>新論文</h2></div>
+        <span class="monitor-count" id="publicationsCount">0</span>
+      </div>
+      <div class="monitor-list" id="publicationsList"></div>
+      <button class="monitor-button" data-copy-group="publications" type="button" disabled>複製全部新論文</button>
+    </section>
+
+    <section class="monitor-panel">
+      <div class="monitor-panel-head">
+        <div><span class="eyebrow">Google Patents + verification links</span><h2>新專利</h2></div>
+        <span class="monitor-count" id="patentsCount">0</span>
+      </div>
+      <div class="monitor-list" id="patentsList"></div>
+      <button class="monitor-button" data-copy-group="patents" type="button" disabled>複製全部新專利</button>
+    </section>
+
+    <section class="monitor-panel">
+      <div class="monitor-panel-head">
+        <div><span class="eyebrow">GRB</span><h2>新計畫</h2></div>
+        <span class="monitor-count" id="projectsCount">0</span>
+      </div>
+      <div class="monitor-list" id="projectsList"></div>
+      <button class="monitor-button" data-copy-group="projects" type="button" disabled>複製全部新計畫</button>
+    </section>
+  </div>
+
+  <p class="copy-status" id="copyStatus"></p>
+  <p class="copy-status" id="loadStatus"></p>
+
+  <section class="source-section">
+    <span class="eyebrow">Source health</span>
+    <h2>資料來源狀態</h2>
+    <p class="monitor-meta">來源失敗時會顯示警告，不會將「無法查詢」誤判為「沒有新資料」。</p>
+    <div class="source-grid" id="sourceGrid"></div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="shell footer-grid">
+    <div><strong>Wei-Hao Chiu, Ph.D.</strong><p>Private academic website maintenance dashboard</p></div>
+  </div>
+</footer>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/academic-monitor.js"></script>
+</body>
+</html>

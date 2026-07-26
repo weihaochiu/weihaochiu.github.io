@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": null,
+  "repository": "https://github.com/weihaochiu/weihaochiu.github.io",
+  "status": "not-run",
+  "summary": {
+    "publications": 0,
+    "patents": 0,
+    "projects": 0,
+    "totalCandidates": 0,
+    "sourceErrors": 0,
+    "sourceWarnings": 0
+  },
+  "publications": [],
+  "patents": [],
+  "projects": [],
+  "sources": [],
+  "copyInstructions": {
+    "finalLine": "請根據資料來源逐筆查核，找不到的資料不要自行猜測。更新相關 JSON、作者資料、統計及 SEO，最後只提供實際修改檔案的 ZIP。"
+  }
+}
