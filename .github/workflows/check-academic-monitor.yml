@@ -1,0 +1,59 @@
+name: Check academic records
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Monday and Thursday 09:10 Asia/Taipei (01:10 UTC)
+    - cron: "10 1 * * 1,4"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: academic-monitor-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      ORCID_ID: "0000-0003-4484-3117"
+      CONTACT_EMAIL: "weihao.chiu@gmail.com"
+      REPOSITORY_URL: "https://github.com/weihaochiu/weihaochiu.github.io"
+      TZ: "Asia/Taipei"
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check publications, patents and GRB projects
+        run: python scripts/check_academic_monitor.py
+
+      - name: Validate monitor JSON
+        run: python -m json.tool data/academic-monitor.json > /dev/null
+
+      - name: Commit monitor result
+        shell: bash
+        run: |
+          if git diff --quiet -- data/academic-monitor.json; then
+            echo "No monitor changes."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # Avoid the non-fast-forward commit failures seen when another
+          # workflow updates main during this run.
+          git add data/academic-monitor.json
+          git commit -m "Update academic record monitor"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
