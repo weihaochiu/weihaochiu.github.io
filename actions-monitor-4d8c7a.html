@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://api.github.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; img-src 'self' data:; base-uri 'self'; form-action 'self'">
+  <title>GitHub Actions Monitor | Wei-Hao Chiu</title>
+  <meta name="description" content="Scheduled GitHub Actions monitoring dashboard for Wei-Hao Chiu's academic website.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="assets/css/styles.css" rel="stylesheet">
+  <link href="assets/images/favicon.svg" rel="icon" type="image/svg+xml">
+  <style>
+    .monitor-header{padding:3.3rem 0 2rem;border-bottom:1px solid var(--line,#d9e0e7);background:linear-gradient(180deg,#f4f7fa 0%,#fff 100%)}.monitor-header h1{margin-bottom:.45rem}.monitor-header p{max-width:900px;margin:0;color:var(--muted,#5f6d78)}
+    .admin-nav{border-bottom:1px solid var(--line,#d9e0e7);background:#fff}.admin-nav-inner{display:flex;gap:8px;overflow:auto;padding:10px 0}.admin-nav a{flex:0 0 auto;padding:7px 12px;border:1px solid var(--line,#d9e0e7);border-radius:999px;color:var(--brand,#234a70);font-size:.72rem;font-weight:700;text-decoration:none}
+    .monitor-main{padding-top:2rem;padding-bottom:4rem}.monitor-panel{padding:24px;border:1px solid #dfe6ec;border-radius:10px;background:#fff}.monitor-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:18px}.monitor-heading h2{margin:0}.monitor-heading p{margin:.35rem 0 0;color:#647382;font-size:.74rem}
+    .monitor-button,.action-links button{appearance:none;border:1px solid #b9c5cf;border-radius:6px;background:#fff;color:var(--brand,#234a70);padding:7px 10px;font:inherit;font-size:.67rem;font-weight:750;cursor:pointer}.monitor-button:hover,.action-links button:hover{background:#edf2f6}.monitor-button:disabled,.action-links button:disabled{opacity:.55;cursor:wait}
+    .monitor-summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:18px 0}.monitor-summary div{padding:13px;border:1px solid #dfe6ec;border-radius:8px}.monitor-summary span{display:block;color:#647382;font-size:.63rem;text-transform:uppercase;letter-spacing:.05em}.monitor-summary strong{display:block;margin-top:4px;color:#253846;font-size:1.2rem}
+    .monitor-toolbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:14px 0}.monitor-toolbar input,.monitor-toolbar select{padding:9px 10px;border:1px solid #c9d3dc;border-radius:6px;background:#fff;color:#344654;font:inherit;font-size:.76rem}.monitor-toolbar input{min-width:260px;flex:1}.monitor-toolbar select{min-width:160px}.monitor-toolbar span{margin-left:auto;color:#647382;font-size:.7rem}
+    .monitor-table-wrap{overflow:auto;border:1px solid #dfe6ec;border-radius:8px}.monitor-table{width:100%;min-width:1250px;border-collapse:collapse;font-size:.71rem}.monitor-table th,.monitor-table td{padding:10px;border-bottom:1px solid #e6ebef;text-align:left;vertical-align:top}.monitor-table th{position:sticky;top:0;background:#f4f7f9;z-index:2;color:#344654;font-size:.65rem;text-transform:uppercase;letter-spacing:.04em}.numeric-cell{font-variant-numeric:tabular-nums}.workflow-name{color:#253846}.workflow-path,.muted-text{color:#74818c;font-size:.64rem}.action-status-badge{display:inline-block;padding:4px 8px;border-radius:999px;font-size:.62rem;font-weight:800;white-space:nowrap}.status-success{background:#dfeee8;color:#315f52}.status-failure{background:#f3dddd;color:#8a3838}.status-running,.status-queued{background:#e6edf5;color:#315c82}.status-overdue{background:#f4ead9;color:#80561a}.status-cancelled,.status-unknown,.status-skipped{background:#eceff2;color:#66727c}
+    .action-links{display:flex;align-items:center;gap:6px;flex-wrap:wrap}.action-links a{color:#245f96;font-weight:750;text-decoration:none}.action-links a:hover{text-decoration:underline}.action-links button{padding:5px 7px}.action-detail-row td{background:#f8fafb}.diagnostic-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.diagnostic-grid div{padding:10px;border:1px solid #e0e6eb;border-radius:7px;background:#fff}.diagnostic-grid span{display:block;color:#71808c;font-size:.6rem;text-transform:uppercase;letter-spacing:.04em}.diagnostic-grid strong{display:block;margin-top:4px;color:#304452;font-size:.68rem;overflow-wrap:anywhere}.diagnostic-grid a{color:#245f96}.mono-text{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}.failure-details{margin-top:12px;padding:12px;border-left:3px solid #a64b45;background:#fff}.failure-details h3{margin:0 0 8px;font-size:.76rem}.failure-job ul{margin:6px 0 0;padding-left:20px}.failure-job li{margin:4px 0}.failure-job span{color:#8a3838}.empty-cell{padding:30px!important;text-align:center!important;color:#647382}.monitor-status{margin:12px 0 0;color:#647382;font-size:.7rem}.monitor-status-error{color:#9f2f2f}.monitor-note{margin:10px 0 0;color:#647382;font-size:.66rem;line-height:1.55}.monitor-note strong{color:#455865}
+    @media(max-width:900px){.diagnostic-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:650px){.monitor-header{padding:2.5rem 0 1.5rem}.monitor-heading{flex-direction:column}.monitor-panel{padding:16px}.monitor-summary{grid-template-columns:1fr 1fr}.monitor-toolbar input,.monitor-toolbar select{min-width:100%;width:100%}.monitor-toolbar span{margin-left:0}}
+  </style>
+</head>
+<body>
+  <header class="site-header"><div class="shell nav-shell"><a class="brand" href="index.html"><span>Wei-Hao Chiu</span><small>Academic Profile</small></a></div></header>
+  <section class="monitor-header"><div class="shell"><h1>GitHub Actions Monitor</h1><p>Detailed status for scheduled workflows only. This page exposes operational summaries already available through the public GitHub API, but never reproduces full logs, secrets, environment variables or API response bodies.</p></div></section>
+  <nav class="admin-nav" aria-label="Administration navigation"><div class="shell admin-nav-inner"><a href="website-admin-4d8c7a.html">Admin overview</a><a href="actions-monitor-4d8c7a.html" aria-current="page">Actions monitor</a><a href="publication-insights-4d8c7a.html">Publication analytics</a></div></nav>
+  <main class="content shell monitor-main">
+    <section class="monitor-panel" aria-labelledby="monitor-title">
+      <div class="monitor-heading"><div><span class="eyebrow">Scheduled automation</span><h2 id="monitor-title">Workflow execution status</h2><p>Failures appear first. Recent success rate is based on up to ten scheduled runs per workflow.</p></div><button class="monitor-button" id="refreshActionsMonitor" type="button">Refresh</button></div>
+      <div class="monitor-summary"><div><span>Scheduled workflows</span><strong id="monitorTotal">—</strong></div><div><span>Failed</span><strong id="monitorFailed">—</strong></div><div><span>Running</span><strong id="monitorRunning">—</strong></div><div><span>Overdue</span><strong id="monitorOverdue">—</strong></div></div>
+      <div class="monitor-toolbar"><input id="actionsSearch" type="search" placeholder="Search workflow, file or branch…" aria-label="Search workflows"><select id="actionsStatusFilter" aria-label="Filter by status"><option value="all">All statuses</option><option value="failure">Failed</option><option value="running">Running</option><option value="overdue">Overdue</option><option value="success">Success</option><option value="cancelled">Cancelled</option></select><span id="actionsTableCount">— workflows</span></div>
+      <div class="monitor-table-wrap"><table class="monitor-table"><thead><tr><th>Status</th><th>Workflow</th><th>Latest scheduled run</th><th>Duration</th><th>Recent success</th><th>Failed step</th><th>Branch</th><th>Actions</th></tr></thead><tbody id="actionsTableBody"><tr><td colspan="8" class="empty-cell">Loading scheduled workflows…</td></tr></tbody></table></div>
+      <p class="monitor-status" id="actionsMonitorStatus">Loading scheduled Actions…</p>
+      <p class="monitor-note"><strong>Overdue</strong> is estimated from each workflow’s observed recent cadence and is not a replacement for the workflow’s cron definition. Job and failed-step summaries are requested only for currently failed runs. When a workflow is still queued or running, this page checks once again after 10 minutes while it remains open.</p>
+      <p class="monitor-note">Last checked: <strong id="monitorUpdated">—</strong> Asia/Taipei</p>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="shell footer-grid"><div><strong>Wei-Hao Chiu, Ph.D.</strong><p>Associate Researcher<br>Center for Sustainability and Energy Technologies<br>Chang Gung University</p></div></div></footer>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/actions-data.js"></script>
+  <script src="assets/js/actions-monitor.js"></script>
+</body>
+</html>
