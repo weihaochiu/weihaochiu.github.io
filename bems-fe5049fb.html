@@ -35,6 +35,16 @@ a.kpi:hover{transform:translateY(-2px);border-color:#cbd4e5;box-shadow:0 10px 24
 .actions-meta{display:flex;flex-wrap:wrap;gap:8px 22px;margin:-10px 0 24px;color:var(--muted);font-size:12px}
 .actions-meta strong{color:var(--ink)}
 .admin-status{margin:0;color:var(--muted);font-size:12px}.admin-status-error{color:#9a2222}
+.academic-monitor-card{grid-column:1/-1;display:block;position:relative;overflow:hidden}
+.academic-monitor-card::after{content:"";position:absolute;right:-70px;top:-90px;width:230px;height:230px;border-radius:50%;background:linear-gradient(135deg,rgba(49,87,213,.12),rgba(119,95,232,.04));pointer-events:none}
+.monitor-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;position:relative;z-index:1}
+.monitor-status{font-size:12px;padding:6px 10px;border-radius:999px;background:var(--accent2);color:var(--accent);font-weight:700}
+.monitor-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:18px 0;position:relative;z-index:1}
+.monitor-mini{border:1px solid var(--line);border-radius:14px;padding:14px;background:#fbfcff}
+.monitor-mini .label{font-size:12px;color:var(--muted)}
+.monitor-mini .value{display:block;margin-top:5px;font-size:25px;font-weight:800}
+.monitor-meta{font-size:12px;color:var(--muted);position:relative;z-index:1}
+.monitor-card-link{position:relative;z-index:1}
 .panel-grid{display:grid;grid-template-columns:1.55fr 1fr;gap:20px}
 canvas{width:100%!important;max-height:360px}
 .table-wrap{overflow:auto}
@@ -45,15 +55,15 @@ select{padding:9px 12px;border:1px solid var(--line);border-radius:10px;backgrou
 .error{display:none;background:#fff3f3;color:#9a2222;border:1px solid #ffd6d6;padding:14px;border-radius:12px;margin:16px 0}
 footer{margin:30px 0 8px;color:var(--muted);font-size:13px}
 @media(max-width:1050px){.kpis{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media(max-width:850px){.grid,.panel-grid,.kpis{grid-template-columns:1fr 1fr}.shell{padding:16px}}
-@media(max-width:560px){.grid,.panel-grid,.kpis{grid-template-columns:1fr}.hero{padding:24px}.topbar{align-items:flex-start}.actions-meta{display:block}.actions-meta span{display:block;margin-top:5px}}
+@media(max-width:850px){.grid,.panel-grid,.kpis{grid-template-columns:1fr 1fr}.monitor-kpis{grid-template-columns:1fr 1fr}.shell{padding:16px}}
+@media(max-width:560px){.grid,.panel-grid,.kpis,.monitor-kpis{grid-template-columns:1fr}.hero{padding:24px}.topbar{align-items:flex-start}.actions-meta{display:block}.actions-meta span{display:block;margin-top:5px}.monitor-head{flex-direction:column}}
 </style>
 <script type="application/ld+json" id="person-schema">{"@context":"https://schema.org","@type":"Person","@id":"https://weihaochiu.github.io/#person","name":"Wei-Hao Chiu","alternateName":["邱偉豪","Chiu, Wei-Hao"],"honorificSuffix":"Ph.D.","url":"https://weihaochiu.github.io/","image":"https://weihaochiu.github.io/assets/images/profile.jpg","jobTitle":"Associate Researcher","email":["mailto:weihao.chiu@gmail.com","mailto:d000019005@cgu.edu.tw"],"affiliation":{"@type":"Organization","name":"Chang Gung University","url":"https://www.cgu.edu.tw/"},"worksFor":{"@type":"Organization","name":"Center for Sustainability and Energy Technologies, Chang Gung University"},"knowsAbout":["Perovskite solar cells","Tin and tin-lead perovskite photovoltaics","Scalable photovoltaic manufacturing","Vacuum-flash crystallization","Blade coating","Slot-die coating","Charge-transport layers","Self-assembled monolayers","Photoluminescence and electroluminescence","Quasi-Fermi level splitting","Photovoltaic reliability","Space photovoltaics","Tandem solar cells","Vanadium redox flow batteries"],"sameAs":["https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en","https://orcid.org/0000-0003-4484-3117","https://www.scopus.com/authid/detail.uri?authorId=7201503537","https://www.webofscience.com/wos/author/record/JCE-6812-2023","https://pure.lib.cgu.edu.tw/en/persons/wei-hao-chiu/publications/","https://www.cgu.edu.tw/cset-en/FullTimeProfessorManagement/Detail/e3d82caf-b69a-4ee3-ac95-0d1558e22d83?nodeId=17439","https://www.researchgate.net/profile/Wei-Hao-Chiu","https://www.linkedin.com/in/wei-hao-chiu-a208a9b0/","https://openalex.org/works?filter=authorships.author.id:a5007707999"]}</script></head>
 <body>
 <main class="shell">
   <div class="topbar"><div class="brand"><div class="mark">B</div>BEMS</div><span class="badge">Unlisted management portal</span></div>
   <section class="hero"><div class="badge" style="display:inline-block;background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.25)">Back-end Management System</div>
-  <h1>Research website control center</h1><p>A private-by-obscurity entry point for website performance and publication analytics. This page is intentionally excluded from navigation and search indexing.</p></section>
+  <h1>Research website control center</h1><p>A private-by-obscurity entry point for website performance, academic record monitoring and publication analytics. This page is intentionally excluded from navigation and search indexing.</p></section>
 
   <section class="kpis" aria-label="Automated GitHub Actions summary">
     <a class="kpi" id="actionsTotalCard" href="actions-monitor-4d8c7a.html?status=all"><div class="l">Automated Actions</div><div class="v" data-card-value>—</div><small class="n">Loading automated workflows…</small></a>
@@ -69,15 +79,67 @@ footer{margin:30px 0 8px;color:var(--muted);font-size:13px}
   </div>
 
   <section class="grid">
+    <a class="card academic-monitor-card" href="academic-monitor-4d8c7a.html" aria-label="Open Academic Monitor">
+      <div class="monitor-head">
+        <div><span class="badge">Academic records</span><h2 style="margin:12px 0 6px">Academic Monitor</h2><p class="muted" style="margin:0">Possible new publications, patents and GRB projects awaiting verification.</p></div>
+        <span class="monitor-status" id="academicMonitorStatus">Loading…</span>
+      </div>
+      <div class="monitor-kpis">
+        <div class="monitor-mini"><span class="label">New publications</span><strong class="value" id="academicPublications">—</strong></div>
+        <div class="monitor-mini"><span class="label">New patents</span><strong class="value" id="academicPatents">—</strong></div>
+        <div class="monitor-mini"><span class="label">New GRB projects</span><strong class="value" id="academicProjects">—</strong></div>
+        <div class="monitor-mini"><span class="label">Source warnings / errors</span><strong class="value" id="academicWarnings">—</strong></div>
+      </div>
+      <div class="monitor-meta">Last checked: <strong id="academicGeneratedAt">—</strong> · <span class="monitor-card-link">Open monitor →</span></div>
+    </a>
+
     <article class="card"><h2>Website Insights</h2><p class="muted">GA4 overview, monthly traffic, top pages, acquisition channels, countries, devices and academic-resource events.</p>
       <a class="launch" href="website-insight-ea929558.html">Open dashboard →</a></article>
     <article class="card"><h2>Publication Insights</h2><p class="muted">Publication, citation, journal, quartile and research-field analytics.</p>
       <a class="launch" href="publication-insights-4d8c7a.html">Open dashboard →</a></article>
-    <article class="card"><h2>Future modules</h2><p class="muted">Patent analytics, update validation, citation-source comparison and data-quality checking can be added here later.</p></article>
+    <article class="card"><h2>Future modules</h2><p class="muted">Patent analytics, citation-source comparison and further data-quality validation can be added here later.</p></article>
     <article class="card"><h2>Privacy note</h2><p class="muted">No login is used. Anyone who obtains this URL can open it. Do not place API credentials, visitor-level records or confidential research data in these pages.</p></article>
   </section>
   <footer>BEMS · Static GitHub Pages module</footer>
 </main>
 <script src="assets/js/actions-data.js"></script>
 <script src="assets/js/actions-summary.js"></script>
+<script>
+(() => {
+  'use strict';
+  const formatDate = value => {
+    if (!value) return 'Not run';
+    const date = new Date(value);
+    if (Number.isNaN(date.getTime())) return String(value);
+    return new Intl.DateTimeFormat('en-CA', {
+      timeZone:'Asia/Taipei', year:'numeric', month:'2-digit', day:'2-digit',
+      hour:'2-digit', minute:'2-digit', hour12:false
+    }).format(date).replace(',', '');
+  };
+  fetch('data/academic-monitor.json', {cache:'no-store'})
+    .then(response => {
+      if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
+      return response.json();
+    })
+    .then(data => {
+      const summary = data.summary || {};
+      document.getElementById('academicPublications').textContent = summary.publications ?? 0;
+      document.getElementById('academicPatents').textContent = summary.patents ?? 0;
+      document.getElementById('academicProjects').textContent = summary.projects ?? 0;
+      document.getElementById('academicWarnings').textContent =
+        (summary.sourceWarnings ?? 0) + (summary.sourceErrors ?? 0);
+      document.getElementById('academicGeneratedAt').textContent = formatDate(data.generatedAt);
+      document.getElementById('academicMonitorStatus').textContent =
+        data.status === 'completed' ? 'Completed' :
+        data.status === 'partial' ? 'Needs review' :
+        data.status === 'not-run' ? 'Not run' : (data.status || 'Unknown');
+    })
+    .catch(error => {
+      document.getElementById('academicMonitorStatus').textContent = 'Load failed';
+      document.getElementById('academicGeneratedAt').textContent = error.message;
+      ['academicPublications','academicPatents','academicProjects','academicWarnings']
+        .forEach(id => document.getElementById(id).textContent = '—');
+    });
+})();
+</script>
 </body></html>
