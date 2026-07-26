@@ -8,6 +8,7 @@ on:
     - cron: "0 18 * * 0"
 
   push:
+    branches: [main]
     paths:
       - "data/publications.json"
       - "scripts/update_unpaywall.py"
@@ -16,16 +17,25 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: website-content-write
+  cancel-in-progress: false
+
 jobs:
   update-unpaywall:
     runs-on: ubuntu-latest
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
+        with:
+          # A queued run must use the current main branch rather than its old
+          # push-event SHA.
+          ref: main
+          fetch-depth: 0
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
@@ -35,6 +45,7 @@ jobs:
         run: python scripts/update_unpaywall.py
 
       - name: Commit updated Unpaywall data
+        shell: bash
         run: |
           if git diff --quiet -- data/unpaywall.json; then
             echo "No Unpaywall changes to commit."
@@ -43,7 +54,10 @@ jobs:
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          git add data/unpaywall.json
+          git add -- data/unpaywall.json
           git commit -m "Update Unpaywall open-access links"
-          git push
+
+          # Rebase onto any newer main-branch update; never force-push.
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
