@@ -1,42 +1,46 @@
-# GitHub Actions Monitor installation
+# GitHub Actions Monitor — installation
 
-Copy the following files into the repository while preserving their paths:
+## Files to upload
 
-- `website-admin-4d8c7a.html`
+Copy these files into the repository while preserving their paths:
+
+- `bems-fe5049fb.html`
 - `actions-monitor-4d8c7a.html`
 - `assets/js/actions-data.js`
 - `assets/js/actions-summary.js`
 - `assets/js/actions-monitor.js`
 
-## Behaviour
+## Remove the obsolete file
 
-- Only workflow runs whose GitHub event is `schedule` are included.
-- Manual (`workflow_dispatch`) and push-triggered runs are excluded.
-- The pages read the public GitHub REST API without storing a token.
-- Results are cached in the current browser tab for five minutes.
-- There is no continuous polling when all workflows are idle.
-- If a workflow is queued or running, the open page checks again after ten minutes.
-- Failed Job and Step summaries are fetched only for the latest failed scheduled run.
-- Full logs, environment variables, secrets and external API response bodies are never copied into the page.
+The earlier draft incorrectly created `website-admin-4d8c7a.html`. It is no longer used. Delete it after confirming that `bems-fe5049fb.html` opens normally.
 
-## API usage per page load
+## Monitoring scope
 
-Typical load:
+The dashboard includes automated GitHub Actions runs such as:
 
-- 1 request for the workflow list.
-- 1–3 requests for recent scheduled runs, depending on the number of runs.
-- 1 additional request for each workflow whose latest scheduled run failed.
+- `schedule`
+- `push`
+- `workflow_run`
+- `workflow_call`
+- `repository_dispatch`
+- GitHub Pages/internal automatic runs
 
-The summary page does not request job details.
+The following are excluded:
 
-## Optional navigation link
+- `workflow_dispatch` manual runs
+- `pull_request`
+- `pull_request_target`
+- `merge_group`
 
-Add this link to any existing private-link administration or analytics navigation:
+The table is therefore an automated-workflow monitor, not a copy of every item that may appear in GitHub's workflow sidebar. A workflow that has never produced an automated run in the inspected history will not appear.
 
-```html
-<a href="website-admin-4d8c7a.html">Website administration</a>
-```
+## Refresh behaviour
 
-## Important security boundary
+- Data loads when either page is opened.
+- Results are cached in the browser tab for 5 minutes.
+- If a run is queued or running, the open page checks once again after 10 minutes.
+- Up to the most recent 500 repository runs are inspected.
 
-The random filename and `noindex` directives reduce accidental discovery but do not provide authentication. The detail page intentionally displays only low-to-moderate-risk operational metadata already obtainable from the public repository’s GitHub Actions API.
+## Security boundary
+
+The pages do not reproduce full logs, secrets, environment variables, request headers, or external API response bodies. Failed job and failed-step names are loaded only for the latest failed run.

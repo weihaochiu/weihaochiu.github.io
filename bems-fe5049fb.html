@@ -26,9 +26,15 @@ a{color:inherit;text-decoration:none}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:var(--shadow)}
 .card h2,.card h3{margin-top:0}.muted{color:var(--muted)}
 .launch{display:inline-flex;align-items:center;gap:8px;margin-top:18px;padding:11px 16px;border-radius:12px;background:var(--accent);color:#fff;font-weight:700}
-.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:20px 0}
-.kpi{background:#fff;border:1px solid var(--line);border-radius:17px;padding:18px}
+.kpis{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin:20px 0 24px}
+.kpi{display:block;background:#fff;border:1px solid var(--line);border-radius:17px;padding:18px;transition:transform .15s ease,border-color .15s ease,box-shadow .15s ease}
+a.kpi:hover{transform:translateY(-2px);border-color:#cbd4e5;box-shadow:0 10px 24px rgba(31,42,68,.08)}
 .kpi .v{font-size:28px;font-weight:800;margin-top:6px}.kpi .l{font-size:13px;color:var(--muted)}
+.kpi .n{display:block;margin-top:7px;color:var(--muted);font-size:11px;line-height:1.4}
+.kpi.ok .v{color:#087a55}.kpi.fail .v{color:#a12d2d}.kpi.running .v{color:#3157d5}.kpi.overdue .v{color:#a46715}
+.actions-meta{display:flex;flex-wrap:wrap;gap:8px 22px;margin:-10px 0 24px;color:var(--muted);font-size:12px}
+.actions-meta strong{color:var(--ink)}
+.admin-status{margin:0;color:var(--muted);font-size:12px}.admin-status-error{color:#9a2222}
 .panel-grid{display:grid;grid-template-columns:1.55fr 1fr;gap:20px}
 canvas{width:100%!important;max-height:360px}
 .table-wrap{overflow:auto}
@@ -38,8 +44,9 @@ table{border-collapse:collapse;width:100%}th,td{text-align:left;padding:12px;bor
 select{padding:9px 12px;border:1px solid var(--line);border-radius:10px;background:#fff}
 .error{display:none;background:#fff3f3;color:#9a2222;border:1px solid #ffd6d6;padding:14px;border-radius:12px;margin:16px 0}
 footer{margin:30px 0 8px;color:var(--muted);font-size:13px}
+@media(max-width:1050px){.kpis{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:850px){.grid,.panel-grid,.kpis{grid-template-columns:1fr 1fr}.shell{padding:16px}}
-@media(max-width:560px){.grid,.panel-grid,.kpis{grid-template-columns:1fr}.hero{padding:24px}.topbar{align-items:flex-start}}
+@media(max-width:560px){.grid,.panel-grid,.kpis{grid-template-columns:1fr}.hero{padding:24px}.topbar{align-items:flex-start}.actions-meta{display:block}.actions-meta span{display:block;margin-top:5px}}
 </style>
 <script type="application/ld+json" id="person-schema">{"@context":"https://schema.org","@type":"Person","@id":"https://weihaochiu.github.io/#person","name":"Wei-Hao Chiu","alternateName":["邱偉豪","Chiu, Wei-Hao"],"honorificSuffix":"Ph.D.","url":"https://weihaochiu.github.io/","image":"https://weihaochiu.github.io/assets/images/profile.jpg","jobTitle":"Associate Researcher","email":["mailto:weihao.chiu@gmail.com","mailto:d000019005@cgu.edu.tw"],"affiliation":{"@type":"Organization","name":"Chang Gung University","url":"https://www.cgu.edu.tw/"},"worksFor":{"@type":"Organization","name":"Center for Sustainability and Energy Technologies, Chang Gung University"},"knowsAbout":["Perovskite solar cells","Tin and tin-lead perovskite photovoltaics","Scalable photovoltaic manufacturing","Vacuum-flash crystallization","Blade coating","Slot-die coating","Charge-transport layers","Self-assembled monolayers","Photoluminescence and electroluminescence","Quasi-Fermi level splitting","Photovoltaic reliability","Space photovoltaics","Tandem solar cells","Vanadium redox flow batteries"],"sameAs":["https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en","https://orcid.org/0000-0003-4484-3117","https://www.scopus.com/authid/detail.uri?authorId=7201503537","https://www.webofscience.com/wos/author/record/JCE-6812-2023","https://pure.lib.cgu.edu.tw/en/persons/wei-hao-chiu/publications/","https://www.cgu.edu.tw/cset-en/FullTimeProfessorManagement/Detail/e3d82caf-b69a-4ee3-ac95-0d1558e22d83?nodeId=17439","https://www.researchgate.net/profile/Wei-Hao-Chiu","https://www.linkedin.com/in/wei-hao-chiu-a208a9b0/","https://openalex.org/works?filter=authorships.author.id:a5007707999"]}</script></head>
 <body>
@@ -47,6 +54,20 @@ footer{margin:30px 0 8px;color:var(--muted);font-size:13px}
   <div class="topbar"><div class="brand"><div class="mark">B</div>BEMS</div><span class="badge">Unlisted management portal</span></div>
   <section class="hero"><div class="badge" style="display:inline-block;background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.25)">Back-end Management System</div>
   <h1>Research website control center</h1><p>A private-by-obscurity entry point for website performance and publication analytics. This page is intentionally excluded from navigation and search indexing.</p></section>
+
+  <section class="kpis" aria-label="Automated GitHub Actions summary">
+    <a class="kpi" id="actionsTotalCard" href="actions-monitor-4d8c7a.html?status=all"><div class="l">Automated Actions</div><div class="v" data-card-value>—</div><small class="n">Loading automated workflows…</small></a>
+    <a class="kpi ok" id="actionsSuccessCard" href="actions-monitor-4d8c7a.html?status=success"><div class="l">Successful</div><div class="v" data-card-value>—</div><small class="n">Loading status…</small></a>
+    <a class="kpi fail" id="actionsFailedCard" href="actions-monitor-4d8c7a.html?status=failure"><div class="l">Failed</div><div class="v" data-card-value>—</div><small class="n">Loading status…</small></a>
+    <a class="kpi running" id="actionsRunningCard" href="actions-monitor-4d8c7a.html?status=running"><div class="l">Running</div><div class="v" data-card-value>—</div><small class="n">Loading status…</small></a>
+    <a class="kpi overdue" id="actionsOverdueCard" href="actions-monitor-4d8c7a.html?status=overdue"><div class="l">Overdue</div><div class="v" data-card-value>—</div><small class="n">Loading cadence…</small></a>
+  </section>
+  <div class="actions-meta">
+    <span>Last checked: <strong id="actionsSummaryUpdated">—</strong> Asia/Taipei</span>
+    <span id="actionsSummaryScope">Manual and PR runs excluded</span>
+    <span class="admin-status" id="actionsSummaryStatus">Loading automated Actions status…</span>
+  </div>
+
   <section class="grid">
     <article class="card"><h2>Website Insights</h2><p class="muted">GA4 overview, monthly traffic, top pages, acquisition channels, countries, devices and academic-resource events.</p>
       <a class="launch" href="website-insight-ea929558.html">Open dashboard →</a></article>
@@ -57,4 +78,6 @@ footer{margin:30px 0 8px;color:var(--muted);font-size:13px}
   </section>
   <footer>BEMS · Static GitHub Pages module</footer>
 </main>
+<script src="assets/js/actions-data.js"></script>
+<script src="assets/js/actions-summary.js"></script>
 </body></html>

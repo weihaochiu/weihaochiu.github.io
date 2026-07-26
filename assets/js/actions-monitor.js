@@ -35,6 +35,19 @@
     return `${secs}s`;
   }
 
+  function formatTrigger(value) {
+    const labels = {
+      schedule: 'Schedule',
+      push: 'Push',
+      workflow_run: 'Workflow run',
+      workflow_call: 'Workflow call',
+      repository_dispatch: 'Repository dispatch',
+      pages_build: 'Pages build',
+      dynamic: 'GitHub internal'
+    };
+    return labels[value] || String(value || 'Unknown').replaceAll('_', ' ');
+  }
+
   function rowState(row) {
     if (row.status.key === 'failure') return 'failure';
     if (row.overdue) return 'overdue';
@@ -83,7 +96,7 @@
     visibleRows = model.workflows.filter(row => {
       const state = rowState(row);
       const matchesStatus = status === 'all' || state === status;
-      const haystack = `${row.name} ${row.path} ${row.latest?.head_branch || ''} ${row.latest?.conclusion || ''}`.toLowerCase();
+      const haystack = `${row.name} ${row.path} ${row.latest?.head_branch || ''} ${row.latest?.conclusion || ''} ${row.latest?.event || ''} ${row.triggerEvents.join(' ')}`.toLowerCase();
       return matchesStatus && (!query || haystack.includes(query));
     });
     renderTable();
@@ -93,7 +106,7 @@
     const body = $('#actionsTableBody');
     if (!body) return;
     if (!visibleRows.length) {
-      body.innerHTML = '<tr><td colspan="8" class="empty-cell">No scheduled workflows match the current filter.</td></tr>';
+      body.innerHTML = '<tr><td colspan="9" class="empty-cell">No automated workflows match the current filter.</td></tr>';
       const count = $('#actionsTableCount');
       if (count) count.textContent = '0 workflows';
       return;
@@ -107,6 +120,7 @@
         <tr data-workflow-id="${esc(row.workflowId)}">
           <td>${badge(row)}</td>
           <td><strong class="workflow-name">${esc(row.name)}</strong><br><span class="workflow-path">${esc(row.path || 'Workflow path unavailable')}</span></td>
+          <td>${esc(formatTrigger(run.event))}</td>
           <td>${esc(formatDateTime(run.updated_at || run.created_at))}</td>
           <td class="numeric-cell">${esc(formatDuration(row.durationSeconds))}</td>
           <td>${esc(successRate(row))}</td>
@@ -119,7 +133,7 @@
           </td>
         </tr>
         <tr class="action-detail-row" id="${esc(detailId)}" hidden>
-          <td colspan="8">${detailMarkup(row)}</td>
+          <td colspan="9">${detailMarkup(row)}</td>
         </tr>`;
     }).join('');
 
@@ -145,15 +159,18 @@
       <div class="failure-job"><strong>${esc(job.name)}</strong>${job.failedSteps.length
         ? `<ul>${job.failedSteps.map(step => `<li>${esc(step.name)} <span>(${esc(step.conclusion)})</span></li>`).join('')}</ul>`
         : '<p>No failed step summary was returned by the API.</p>'}</div>`).join('') : '';
+    const cadence = row.hasScheduledRuns
+      ? (row.expectedIntervalSeconds ? `About ${esc(formatDuration(row.expectedIntervalSeconds))}` : 'Not enough scheduled history')
+      : 'Not applicable to event-based workflow';
     return `<div class="diagnostic-grid">
       <div><span>Workflow file</span><strong>${esc(row.path || '—')}</strong></div>
       <div><span>Run ID / attempt</span><strong>${esc(run.id || '—')} / ${esc(run.run_attempt || 1)}</strong></div>
       <div><span>Head SHA</span><strong class="mono-text">${esc(run.head_sha || '—')}</strong></div>
-      <div><span>Trigger</span><strong>schedule</strong></div>
+      <div><span>Trigger</span><strong>${esc(formatTrigger(run.event))}</strong></div>
       <div><span>Started</span><strong>${esc(formatDateTime(run.run_started_at || run.created_at))}</strong></div>
       <div><span>Completed</span><strong>${esc(formatDateTime(run.updated_at))}</strong></div>
       <div><span>Previous success</span><strong>${row.previousSuccess?.html_url ? `<a href="${esc(row.previousSuccess.html_url)}" target="_blank" rel="noopener noreferrer">View run</a>` : '—'}</strong></div>
-      <div><span>Observed cadence</span><strong>${row.expectedIntervalSeconds ? `About ${esc(formatDuration(row.expectedIntervalSeconds))}` : 'Not enough history'}</strong></div>
+      <div><span>Observed schedule cadence</span><strong>${cadence}</strong></div>
     </div>${jobHtml ? `<div class="failure-details"><h3>Failed job and step</h3>${jobHtml}</div>` : ''}`;
   }
 
@@ -175,7 +192,7 @@
       `Repository: ${model.repository}`,
       `Workflow: ${row.name}`,
       `Workflow file: ${row.path || 'Unavailable'}`,
-      'Trigger: schedule',
+      `Trigger: ${run.event || 'Unavailable'}`,
       `Status: ${run.status || 'Unavailable'}`,
       `Conclusion: ${run.conclusion || 'Unavailable'}`,
       `Run ID: ${run.id || 'Unavailable'}`,
@@ -204,7 +221,7 @@
       await navigator.clipboard.writeText(diagnosticText(row));
       button.textContent = 'Copied';
       window.setTimeout(() => { button.textContent = 'Copy diagnostics'; }, 1800);
-    } catch (error) {
+    } catch (_) {
       button.textContent = 'Copy failed';
       window.setTimeout(() => { button.textContent = 'Copy diagnostics'; }, 1800);
     } finally {
@@ -223,7 +240,7 @@
     const refresh = $('#refreshActionsMonitor');
     if (status) {
       status.className = 'monitor-status';
-      status.textContent = force ? 'Refreshing scheduled Actions…' : 'Loading scheduled Actions…';
+      status.textContent = force ? 'Refreshing automated Actions…' : 'Loading automated Actions…';
     }
     if (refresh) refresh.disabled = true;
     try {
@@ -232,7 +249,10 @@
       applyFilters();
       await loadFailureRows();
       applyFilters();
-      if (status) status.textContent = `Scheduled runs only · ${model.totalScheduledRunCount} recent runs inspected · Cached for 5 minutes`;
+      if (status) {
+        const partial = model.runHistoryTruncated ? ' · history limited to the most recent 500 runs' : '';
+        status.textContent = `Automated runs · manual and PR runs excluded · ${model.automatedRunCount} runs inspected${partial} · Cached for 5 minutes`;
+      }
       if (timer) window.clearTimeout(timer);
       if (model.summary.running > 0) timer = window.setTimeout(() => load(true), REFRESH_WHILE_RUNNING_MS);
     } catch (error) {

@@ -4,10 +4,18 @@
   const OWNER = 'weihaochiu';
   const REPO = 'weihaochiu.github.io';
   const API_ROOT = `https://api.github.com/repos/${OWNER}/${REPO}`;
-  const CACHE_KEY = 'weihaochiu-actions-monitor-v1';
+  const CACHE_KEY = 'weihaochiu-actions-monitor-v2';
   const CACHE_TTL_MS = 5 * 60 * 1000;
-  const MAX_RUN_PAGES = 3;
+  const MAX_RUN_PAGES = 5;
 
+  // User-requested scope: include automated runs, but exclude explicit manual
+  // workflow_dispatch runs and pull-request validation runs.
+  const EXCLUDED_EVENTS = new Set([
+    'workflow_dispatch',
+    'pull_request',
+    'pull_request_target',
+    'merge_group'
+  ]);
   const FAILURE_CONCLUSIONS = new Set(['failure', 'timed_out', 'action_required', 'startup_failure']);
   const RUNNING_STATUSES = new Set(['queued', 'requested', 'waiting', 'pending', 'in_progress']);
 
@@ -31,8 +39,12 @@
     return sorted.length % 2 ? sorted[middle] : (sorted[middle - 1] + sorted[middle]) / 2;
   }
 
+  function isAutomatedRun(run) {
+    return Boolean(run && run.event && !EXCLUDED_EVENTS.has(run.event));
+  }
+
   function getStatus(run) {
-    if (!run) return { key: 'never-run', label: 'Never run', priority: 5 };
+    if (!run) return { key: 'never-run', label: 'Never run', priority: 6 };
     if (RUNNING_STATUSES.has(run.status)) {
       return {
         key: run.status === 'in_progress' ? 'running' : 'queued',
@@ -47,19 +59,35 @@
         priority: 0
       };
     }
-    if (run.conclusion === 'success') return { key: 'success', label: 'Success', priority: 4 };
-    if (run.conclusion === 'cancelled') return { key: 'cancelled', label: 'Cancelled', priority: 2 };
-    if (run.conclusion === 'skipped') return { key: 'skipped', label: 'Skipped', priority: 4 };
-    return { key: run.conclusion || run.status || 'unknown', label: run.conclusion || run.status || 'Unknown', priority: 3 };
+    if (run.conclusion === 'success') return { key: 'success', label: 'Success', priority: 5 };
+    if (run.conclusion === 'cancelled') return { key: 'cancelled', label: 'Cancelled', priority: 3 };
+    if (run.conclusion === 'skipped') return { key: 'skipped', label: 'Skipped', priority: 5 };
+    if (run.conclusion === 'neutral') return { key: 'neutral', label: 'Neutral', priority: 4 };
+    return {
+      key: run.conclusion || run.status || 'unknown',
+      label: run.conclusion || run.status || 'Unknown',
+      priority: 4
+    };
   }
 
-  function estimateOverdue(runs, latest) {
-    if (!latest || latest.status !== 'completed') return { overdue: false, expectedIntervalSeconds: null };
-    const completed = runs
+  // Overdue applies only to observed schedule-triggered history. Push-triggered
+  // workflows are intentionally not treated as overdue because their cadence
+  // depends on website changes rather than a clock schedule.
+  function estimateScheduledOverdue(scheduledRuns) {
+    const completed = scheduledRuns
       .filter(run => run.status === 'completed' && run.created_at)
       .sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
       .slice(0, 8);
-    if (completed.length < 3) return { overdue: false, expectedIntervalSeconds: null };
+    const latestScheduled = scheduledRuns
+      .slice()
+      .sort((a, b) => new Date(b.created_at || 0) - new Date(a.created_at || 0))[0] || null;
+
+    if (!latestScheduled || RUNNING_STATUSES.has(latestScheduled.status)) {
+      return { overdue: false, expectedIntervalSeconds: null, latestScheduled };
+    }
+    if (completed.length < 3) {
+      return { overdue: false, expectedIntervalSeconds: null, latestScheduled };
+    }
 
     const intervals = [];
     for (let index = 1; index < completed.length; index += 1) {
@@ -68,20 +96,18 @@
       if (newer && older) intervals.push((newer.getTime() - older.getTime()) / 1000);
     }
     const expected = median(intervals.filter(value => value > 0));
-    if (!expected) return { overdue: false, expectedIntervalSeconds: null };
+    if (!expected) return { overdue: false, expectedIntervalSeconds: null, latestScheduled };
 
-    const latestDate = safeDate(latest.created_at || latest.run_started_at);
-    if (!latestDate) return { overdue: false, expectedIntervalSeconds: expected };
+    const latestDate = safeDate(latestScheduled.created_at || latestScheduled.run_started_at);
+    if (!latestDate) return { overdue: false, expectedIntervalSeconds: expected, latestScheduled };
     const ageSeconds = (Date.now() - latestDate.getTime()) / 1000;
     const threshold = Math.max(expected * 1.75, 36 * 60 * 60);
-    return { overdue: ageSeconds > threshold, expectedIntervalSeconds: expected };
+    return { overdue: ageSeconds > threshold, expectedIntervalSeconds: expected, latestScheduled };
   }
 
   async function apiFetch(path) {
     const response = await fetch(`${API_ROOT}${path}`, {
-      headers: {
-        Accept: 'application/vnd.github+json'
-      }
+      headers: { Accept: 'application/vnd.github+json' }
     });
     if (!response.ok) {
       let message = `${response.status} ${response.statusText}`;
@@ -89,7 +115,7 @@
         const payload = await response.json();
         if (payload && payload.message) message = payload.message;
       } catch (_) {
-        // Keep the HTTP status when the response is not JSON.
+        // Retain the HTTP status when GitHub does not return JSON.
       }
       const remaining = response.headers.get('x-ratelimit-remaining');
       if (response.status === 403 && remaining === '0') {
@@ -100,17 +126,21 @@
     return response.json();
   }
 
-  async function fetchScheduledRuns() {
+  async function fetchRepositoryRuns() {
     const runs = [];
     let totalCount = 0;
     for (let page = 1; page <= MAX_RUN_PAGES; page += 1) {
-      const payload = await apiFetch(`/actions/runs?event=schedule&exclude_pull_requests=true&per_page=100&page=${page}`);
+      const payload = await apiFetch(`/actions/runs?exclude_pull_requests=true&per_page=100&page=${page}`);
       totalCount = Number(payload.total_count) || 0;
       const batch = Array.isArray(payload.workflow_runs) ? payload.workflow_runs : [];
       runs.push(...batch);
       if (batch.length < 100 || runs.length >= totalCount) break;
     }
-    return { runs, totalCount };
+    return {
+      runs,
+      totalCount,
+      truncated: runs.length < totalCount
+    };
   }
 
   async function fetchWorkflows() {
@@ -118,10 +148,13 @@
     return Array.isArray(payload.workflows) ? payload.workflows : [];
   }
 
-  function buildModel(workflows, scheduledRuns, totalScheduledRunCount) {
+  function buildModel(workflows, repositoryRuns, totalRepositoryRunCount, runHistoryTruncated) {
     const workflowById = new Map(workflows.map(workflow => [workflow.id, workflow]));
+    const automatedRuns = repositoryRuns.filter(isAutomatedRun);
+    const manualOrPrExcluded = repositoryRuns.length - automatedRuns.length;
     const grouped = new Map();
-    scheduledRuns.forEach(run => {
+
+    automatedRuns.forEach(run => {
       if (!grouped.has(run.workflow_id)) grouped.set(run.workflow_id, []);
       grouped.get(run.workflow_id).push(run);
     });
@@ -134,7 +167,9 @@
       const completed = runs.filter(run => run.status === 'completed').slice(0, 10);
       const successful = completed.filter(run => run.conclusion === 'success');
       const previousSuccess = runs.find((run, index) => index > 0 && run.status === 'completed' && run.conclusion === 'success') || null;
-      const overdueInfo = estimateOverdue(runs, latest);
+      const scheduledRuns = runs.filter(run => run.event === 'schedule');
+      const overdueInfo = estimateScheduledOverdue(scheduledRuns);
+      const triggerEvents = [...new Set(runs.map(run => run.event).filter(Boolean))];
 
       return {
         workflowId,
@@ -146,6 +181,9 @@
         status,
         overdue: overdueInfo.overdue,
         expectedIntervalSeconds: overdueInfo.expectedIntervalSeconds,
+        latestScheduled: overdueInfo.latestScheduled,
+        hasScheduledRuns: scheduledRuns.length > 0,
+        triggerEvents,
         recentCompleted: completed.length,
         recentSuccessful: successful.length,
         successRate: completed.length ? Math.round((successful.length / completed.length) * 100) : null,
@@ -175,8 +213,12 @@
       repository: `${OWNER}/${REPO}`,
       generatedAt: new Date().toISOString(),
       source: 'GitHub REST API',
-      scope: 'scheduled-runs-only',
-      totalScheduledRunCount,
+      scope: 'automated-runs-manual-and-pr-excluded',
+      totalRepositoryRunCount,
+      inspectedRunCount: repositoryRuns.length,
+      automatedRunCount: automatedRuns.length,
+      excludedRunCount: manualOrPrExcluded,
+      runHistoryTruncated,
       summary,
       workflows: rows
     };
@@ -199,7 +241,7 @@
     try {
       sessionStorage.setItem(CACHE_KEY, JSON.stringify({ savedAt: Date.now(), model }));
     } catch (_) {
-      // The dashboard still works if storage is disabled.
+      // The dashboard still works when sessionStorage is unavailable.
     }
   }
 
@@ -208,8 +250,13 @@
       const cached = readCache();
       if (cached) return cached;
     }
-    const [workflows, runResult] = await Promise.all([fetchWorkflows(), fetchScheduledRuns()]);
-    const model = buildModel(workflows, runResult.runs, runResult.totalCount);
+    const [workflows, runResult] = await Promise.all([fetchWorkflows(), fetchRepositoryRuns()]);
+    const model = buildModel(
+      workflows,
+      runResult.runs,
+      runResult.totalCount,
+      runResult.truncated
+    );
     writeCache(model);
     return model;
   }
@@ -239,6 +286,7 @@
     REPO,
     API_ROOT,
     CACHE_TTL_MS,
+    EXCLUDED_EVENTS,
     load,
     loadFailureDetails,
     getStatus

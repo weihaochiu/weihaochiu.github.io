@@ -29,16 +29,19 @@
 
   function render(model) {
     const { summary } = model;
-    setCard('actionsTotalCard', summary.total, 'Scheduled workflows observed');
-    setCard('actionsSuccessCard', summary.success, 'Latest scheduled run succeeded');
+    setCard('actionsTotalCard', summary.total, 'Automated workflows observed');
+    setCard('actionsSuccessCard', summary.success, 'Latest automated run succeeded');
     setCard('actionsFailedCard', summary.failed, summary.failed ? 'Review required' : 'No current failures');
     setCard('actionsRunningCard', summary.running, summary.running ? 'Automatic recheck in 10 minutes' : 'Nothing queued or running');
-    setCard('actionsOverdueCard', summary.overdue, summary.overdue ? 'Later than observed cadence' : 'No overdue workflows');
+    setCard('actionsOverdueCard', summary.overdue, summary.overdue ? 'Scheduled cadence appears late' : 'No scheduled workflow overdue');
 
     const updated = $('#actionsSummaryUpdated');
     if (updated) updated.textContent = formatDateTime(model.generatedAt);
     const scope = $('#actionsSummaryScope');
-    if (scope) scope.textContent = `Scheduled runs only · ${model.totalScheduledRunCount} recent runs inspected`;
+    if (scope) {
+      const partial = model.runHistoryTruncated ? ' · partial history' : '';
+      scope.textContent = `Automated runs · manual and PR runs excluded · ${model.automatedRunCount} runs inspected${partial}`;
+    }
     const status = $('#actionsSummaryStatus');
     if (status) {
       status.className = 'admin-status';
@@ -46,19 +49,15 @@
     }
 
     if (timer) window.clearTimeout(timer);
-    if (summary.running > 0) {
-      timer = window.setTimeout(() => load(true), REFRESH_WHILE_RUNNING_MS);
-    }
+    if (summary.running > 0) timer = window.setTimeout(() => load(true), REFRESH_WHILE_RUNNING_MS);
   }
 
   async function load(force = false) {
     const status = $('#actionsSummaryStatus');
     if (status) {
       status.className = 'admin-status';
-      status.textContent = force ? 'Refreshing scheduled Actions status…' : 'Loading scheduled Actions status…';
+      status.textContent = force ? 'Refreshing automated Actions status…' : 'Loading automated Actions status…';
     }
-    const button = $('#refreshActionsSummary');
-    if (button) button.disabled = true;
     try {
       render(await window.ActionsData.load({ force }));
     } catch (error) {
@@ -66,13 +65,8 @@
         status.className = 'admin-status admin-status-error';
         status.textContent = `Unable to load GitHub Actions status: ${error.message}`;
       }
-    } finally {
-      if (button) button.disabled = false;
     }
   }
 
-  document.addEventListener('DOMContentLoaded', () => {
-    $('#refreshActionsSummary')?.addEventListener('click', () => load(true));
-    load(false);
-  });
+  document.addEventListener('DOMContentLoaded', () => load(false));
 })();
