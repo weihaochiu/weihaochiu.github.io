@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "source": "OpenAlex Works API",
   "status": "success_with_exclusions",
-  "lastSuccessfulUpdate": "2026-07-19T23:12:07.060462Z",
+  "lastSuccessfulUpdate": "2026-07-26T23:12:17.521276Z",
   "workCount": 37,
   "missingPublicationYearCount": 0,
   "totalCitationsFromPublicationMetrics": 987,
@@ -2246,7 +2246,7 @@
     },
     "W7168190148": {
       "doi": "10.1016/j.mtener.2026.102359",
-      "title": "2T Perovskite Tandem Solar Cells in Space: Failure Mechanisms and Design Strategies",
+      "title": "2T perovskite tandem solar cells in space: Failure mechanisms and design strategies",
       "publicationYear": 2026,
       "currentCitationCount": 0,
       "citationsByYear": [],
