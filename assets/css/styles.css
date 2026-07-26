@@ -104,3 +104,21 @@
 @media(max-width:1000px){.authorship-summary-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:760px){.publication-affiliations{font-size:.73rem}.affiliation-entry,.author-role-legend li{grid-template-columns:22px minmax(0,1fr)}.authorship-summary-grid{grid-template-columns:1fr}.authorship-table{min-width:900px}}
 /* PUBLICATION_AUTHORSHIP_STYLES_END */
+
+/* GRB_PROJECT_CONTENT_STYLES_START */
+/* GRB project abstracts and bilingual keywords */
+.project-research-details{margin:13px 0 12px;border:1px solid var(--line);border-radius:7px;background:#fff;color:var(--muted);font-size:.76rem}
+.project-research-details>summary{padding:8px 11px;color:var(--brand);font-weight:750;cursor:pointer;list-style-position:inside}
+.project-research-details[open]>summary{border-bottom:1px solid var(--line);background:#f6f8fa}
+.project-detail-body{padding:2px 14px 13px}
+.project-detail-section{padding:13px 0}
+.project-detail-section+.project-detail-section{border-top:1px solid #e7ecf0}
+.project-detail-section h5{margin:0 0 7px;color:#374957;font-family:"Source Serif 4","Noto Sans TC",serif;font-size:.88rem}
+.project-detail-section p{max-width:92ch;margin:0;color:#455968;font-size:.78rem;line-height:1.82;white-space:pre-line}
+.project-keywords{display:flex;flex-wrap:wrap;gap:7px}
+.project-keywords span{display:inline-flex;padding:4px 9px;border:1px solid var(--line);border-radius:999px;background:#f4f6f8;color:#425b73;font-size:.7rem;font-weight:700;line-height:1.35}
+.project-detail-source{margin:3px 0 0!important;padding-top:10px;border-top:1px solid #e7ecf0;color:var(--muted)!important;font-size:.68rem!important}
+.project-detail-source a{color:var(--brand);font-weight:700;text-decoration:none}
+.project-detail-source a:hover,.project-detail-source a:focus-visible{text-decoration:underline}
+@media(max-width:760px){.project-research-details{font-size:.73rem}.project-detail-body{padding-left:11px;padding-right:11px}.project-detail-section p{font-size:.76rem;line-height:1.75}}
+/* GRB_PROJECT_CONTENT_STYLES_END */
