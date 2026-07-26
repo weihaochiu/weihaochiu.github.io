@@ -169,13 +169,12 @@ class AffiliationCandidate:
     department: str = ""
     city: str = ""
     country_code: str = ""
-    ror: str = ""
     source: str = ""
     source_id: str = ""
 
     @property
     def key(self) -> str:
-        return normalize_text(self.text or self.institution or self.ror)
+        return normalize_text(self.text or self.institution)
 
 
 @dataclass
@@ -210,11 +209,10 @@ def author_from_crossref(row: dict[str, Any], order: int) -> AuthorCandidate:
     for item in row.get("affiliation") or []:
         if isinstance(item, dict):
             text = clean_space(item.get("name"))
-            ror = clean_space(item.get("id") or item.get("ROR"))
         else:
-            text, ror = clean_space(item), ""
-        if text or ror:
-            affiliations.append(AffiliationCandidate(text=text or ror, institution=text, ror=ror, source="crossref"))
+            text = clean_space(item)
+        if text:
+            affiliations.append(AffiliationCandidate(text=text, institution=text, source="crossref"))
     corresponding = row.get("corresponding")
     if not isinstance(corresponding, bool):
         corresponding = None
@@ -266,13 +264,11 @@ def fetch_openalex(client: JsonHttpClient, doi: str) -> SourceResult:
             if not isinstance(inst, dict):
                 continue
             display = clean_space(inst.get("display_name"))
-            ror = clean_space(inst.get("ror"))
             institutions.append(
                 AffiliationCandidate(
-                    text=display or ror,
+                    text=display,
                     institution=display,
                     country_code=clean_space(inst.get("country_code")),
-                    ror=ror,
                     source="openalex",
                     source_id=clean_space(inst.get("id")),
                 )
@@ -520,7 +516,7 @@ def merge_affiliations(
         aff_id = clean_space(item.get("id")) or f"aff-{len(output) + 1}"
         item["id"] = aff_id
         item.setdefault("label", letters(len(output)))
-        key = normalize_text(item.get("raw") or item.get("address") or item.get("institution") or item.get("ror"))
+        key = normalize_text(item.get("raw") or item.get("address") or item.get("institution"))
         if key and key not in key_to_id:
             key_to_id[key] = aff_id
         output.append(item)
@@ -539,15 +535,12 @@ def merge_affiliations(
             aff_id = key_to_id.get(key)
             matched_row = None
             if not aff_id:
-                candidate_ror = normalize_text(candidate.ror)
                 candidate_institution = normalize_text(candidate.institution)
                 for existing in output:
-                    existing_ror = normalize_text(existing.get("ror"))
                     existing_institution = normalize_text(existing.get("institution"))
                     existing_text = normalize_text(existing.get("address") or existing.get("raw"))
-                    same_ror = bool(candidate_ror and existing_ror and candidate_ror == existing_ror)
                     same_institution = bool(candidate_institution and (candidate_institution == existing_institution or candidate_institution in existing_text))
-                    if same_ror or same_institution:
+                    if same_institution:
                         aff_id = str(existing.get("id") or "")
                         matched_row = existing
                         break
@@ -560,7 +553,6 @@ def merge_affiliations(
                     "institution": candidate.institution,
                     "city": candidate.city,
                     "countryCode": candidate.country_code,
-                    "ror": candidate.ror,
                     "sourceId": candidate.source_id,
                 }
                 for field_name, value in enrichments.items():
@@ -578,7 +570,6 @@ def merge_affiliations(
                         "address": candidate.text,
                         "city": candidate.city,
                         "countryCode": candidate.country_code,
-                        "ror": candidate.ror,
                         "raw": candidate.text,
                         "source": candidate.source,
                         "sourceId": candidate.source_id,
@@ -592,7 +583,7 @@ def merge_affiliations(
     # appended deterministically in first-author/source order.
     for index, row in enumerate(output):
         row.setdefault("label", letters(index))
-        for key in ("department", "institution", "address", "city", "countryCode", "ror", "raw", "source", "sourceId"):
+        for key in ("department", "institution", "address", "city", "countryCode", "raw", "source", "sourceId"):
             row.setdefault(key, "")
     return output, author_ids
 

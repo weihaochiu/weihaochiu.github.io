@@ -102,7 +102,7 @@ def publication_affiliations_html(p,details=False):
   equal=any(row.get('isEqualContributor') is True for row in rows)
   corresponding=[row for row in rows if row.get('isCorresponding') is True]
   if not affiliations and not equal and not corresponding: return ''
-  aff_html=''.join('<li class="affiliation-entry"><span class="affiliation-label">'+esc(row.get('label'))+'</span><span>'+esc(publication_affiliation_text(row))+((' <a href="'+esc(row.get('ror'))+'" target="_blank" rel="noopener noreferrer">ROR ↗</a>') if row.get('ror') else '')+'</span></li>' for row in affiliations)
+  aff_html=''.join('<li class="affiliation-entry"><span class="affiliation-label">'+esc(row.get('label'))+'</span><span>'+esc(publication_affiliation_text(row))+'</span></li>' for row in affiliations)
   legend=[]
   if equal: legend.append('<li><span class="author-role-marker">†</span><span>These authors contributed equally.</span></li>')
   if corresponding:
@@ -119,7 +119,6 @@ def authorship_schema_person(row,p):
     aff=affiliations.get(str(aff_id)); name=publication_affiliation_text(aff or {})
     if not name: continue
     org={'@type':'Organization','name':name}
-    if aff.get('ror'): org['sameAs']=aff.get('ror')
     organizations.append(org)
   person={'@type':'Person','name':row.get('name','')}
   if organizations: person['affiliation']=organizations[0] if len(organizations)==1 else organizations

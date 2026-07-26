@@ -616,8 +616,7 @@ document.addEventListener('DOMContentLoaded',async()=>{
     const affiliationRows = rows.map(row => {
       const text = affiliationText(row);
       if (!text) return '';
-      const ror = row.ror ? ` <a href="${escapeAttr(row.ror)}" target="_blank" rel="noopener noreferrer">ROR ↗</a>` : '';
-      return `<li class="affiliation-entry"><span class="affiliation-label">${escapeHtml(row.label || '')}</span><span>${escapeHtml(text)}${ror}</span></li>`;
+      return `<li class="affiliation-entry"><span class="affiliation-label">${escapeHtml(row.label || '')}</span><span>${escapeHtml(text)}</span></li>`;
     }).filter(Boolean).join('');
     const equal = authorships.some(row => row?.isEqualContributor === true);
     const corresponding = authorships.filter(row => row?.isCorresponding === true);
