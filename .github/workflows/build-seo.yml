@@ -25,22 +25,28 @@ permissions:
 
 concurrency:
   group: website-content-write
+  queue: max
   cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           ref: main
-      - uses: actions/setup-python@v5
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
+
       - name: Synchronize publication authors
         run: python scripts/sync_publication_authors.py
+
       - name: Generate v23 website files
         run: python scripts/build_seo.py
+
       - name: Verify generated publication metadata
         run: |
           python scripts/update_publication_authorships.py --check --allow-missing
@@ -75,14 +81,38 @@ jobs:
               raise SystemExit('\n'.join(errors))
           print(f'Verified {expected} publications; authorship-aware metadata is idempotent.')
           PY
+
       - name: Commit generated files
+        shell: bash
         run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -- '*.html' publications assets/js/app.js assets/css/styles.css data/authors.json data/site_meta.json robots.txt sitemap.xml llms.txt
+
           if git diff --cached --quiet; then
             echo "No generated changes."
-          else
-            git commit -m "Build v23 AI and scholarly metadata"
-            git push
+            exit 0
           fi
+
+          git commit -m "Build v23 AI and scholarly metadata"
+          git reset --hard HEAD
+          git clean -fd
+
+          for attempt in 1 2 3 4; do
+            echo "Push attempt ${attempt}/4"
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort || true
+              echo "::error::Generated website files conflict with newer main-branch changes."
+              exit 1
+            fi
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Main changed during push; retrying safely."
+            sleep $((attempt * 3))
+          done
+
+          echo "::error::Unable to push generated website files after four attempts."
+          exit 1

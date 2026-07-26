@@ -14,11 +14,9 @@ on:
 permissions:
   contents: write
 
-# Every workflow that commits generated website data uses the same group.
-# This prevents Crossref, OpenAlex, Unpaywall, SEO and authorship jobs from
-# trying to push to main at the same time.
 concurrency:
   group: website-content-write
+  queue: max
   cancel-in-progress: false
 
 jobs:
@@ -28,8 +26,6 @@ jobs:
     steps:
       - uses: actions/checkout@v5
         with:
-          # A queued push-triggered run must start from the latest main branch,
-          # not from the older commit that originally triggered the run.
           ref: main
           fetch-depth: 0
 
@@ -51,8 +47,10 @@ jobs:
       - name: Commit updated data and pages
         shell: bash
         run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
           git add -- \
             data/crossref_publication_metrics.json \
             publications.html publications \
@@ -65,8 +63,25 @@ jobs:
 
           git commit -m "Update Crossref publication citations"
 
-          # Protect against a remote update that lands while this job is running.
-          # Rebase rather than force-push so no newer main-branch commit is lost.
-          git fetch origin main
-          git rebase origin/main
-          git push origin HEAD:main
+          # build_seo.py may update files outside this workflow's commit scope.
+          # Remove those runner-local changes so rebase can proceed cleanly.
+          git reset --hard HEAD
+          git clean -fd
+
+          for attempt in 1 2 3 4; do
+            echo "Push attempt ${attempt}/4"
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort || true
+              echo "::error::Crossref update conflicts with newer main-branch changes."
+              exit 1
+            fi
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Main changed during push; retrying safely."
+            sleep $((attempt * 3))
+          done
+
+          echo "::error::Unable to push Crossref update after four attempts."
+          exit 1

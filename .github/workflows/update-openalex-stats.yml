@@ -19,6 +19,7 @@ permissions:
 
 concurrency:
   group: website-content-write
+  queue: max
   cancel-in-progress: false
 
 jobs:
@@ -28,7 +29,6 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v5
         with:
-          # Use the latest main after this job leaves the shared concurrency queue.
           ref: main
           fetch-depth: 0
 
@@ -53,6 +53,7 @@ jobs:
         id: commit-metrics
         shell: bash
         run: |
+          set -euo pipefail
           FILES=(
             data/openalex_metrics.json
             data/openalex_publication_metrics.json
@@ -68,12 +69,27 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -- "${FILES[@]}"
           git commit -m "Update OpenAlex author and publication metrics"
+          git reset --hard HEAD
+          git clean -fd
 
-          # Never overwrite a newer main branch. Integrate it before pushing.
-          git fetch origin main
-          git rebase origin/main
-          git push origin HEAD:main
-          echo "changed=true" >> "$GITHUB_OUTPUT"
+          for attempt in 1 2 3 4; do
+            echo "Push attempt ${attempt}/4"
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort || true
+              echo "::error::OpenAlex update conflicts with newer main-branch changes."
+              exit 1
+            fi
+            if git push origin HEAD:main; then
+              echo "changed=true" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            echo "Main changed during push; retrying safely."
+            sleep $((attempt * 3))
+          done
+
+          echo "::error::Unable to push OpenAlex update after four attempts."
+          exit 1
 
       - name: Rebuild publication HTML after metrics update
         if: steps.commit-metrics.outputs.changed == 'true'
