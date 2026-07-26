@@ -10,6 +10,7 @@ on:
     paths:
       - "scripts/update_grb_projects.py"
       - "scripts/update_grb_projects_browser.py"
+      - "scripts/update_grb_project_content.py"
       - "data/projects.json"
       - "data/grb_project_sources.json"
       - ".github/workflows/update-grb-projects.yml"
@@ -25,7 +26,7 @@ jobs:
   update:
     if: github.event_name != 'push' || github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 18
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -35,8 +36,10 @@ jobs:
         run: |
           python -m pip install --disable-pip-version-check requests beautifulsoup4 playwright
           python -m playwright install --with-deps chromium
-      - name: Test GRB parser
-        run: python scripts/update_grb_projects.py --self-test
+      - name: Test GRB parsers
+        run: |
+          python scripts/update_grb_projects.py --self-test
+          python scripts/update_grb_project_content.py --self-test
       - name: Update GRB projects and funding UI
         run: python scripts/update_grb_projects.py --patch-ui --allow-network-failure
       - name: Capture direct GRB HTTP diagnostics
@@ -57,6 +60,10 @@ jobs:
         env:
           PYTHONUNBUFFERED: "1"
         run: python scripts/update_grb_projects_browser.py
+      - name: Update GRB abstracts, keywords and Projects UI
+        env:
+          PYTHONUNBUFFERED: "1"
+        run: python scripts/update_grb_project_content.py --allow-network-failure
       - name: Upload GRB diagnostics
         if: always()
         uses: actions/upload-artifact@v4
@@ -70,6 +77,7 @@ jobs:
       - name: Validate generated data
         run: |
           python scripts/update_grb_projects.py --validate-only
+          python scripts/update_grb_project_content.py --validate-only
           python -m json.tool data/projects.json >/dev/null
           python -m json.tool data/grb_project_sources.json >/dev/null
           python -m json.tool data/grb_projects_snapshot.json >/dev/null
@@ -81,6 +89,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -- \
             assets/js/app.js \
+            assets/css/styles.css \
             data/projects.json \
             data/grb_project_sources.json \
             data/site_meta.json \
@@ -89,6 +98,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No GRB changes."
           else
-            git commit -m "Update GRB project metadata"
+            git commit -m "Update GRB project metadata and content"
             git push
           fi
