@@ -1,29 +1,29 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-25T04:29:21Z",
+  "generatedAt": "2026-07-26T04:43:35Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 235,
-    "activeUsers": 24,
-    "sessions": 47,
-    "engagementRate": 0.574468085106383
+    "pageViews": 238,
+    "activeUsers": 26,
+    "sessions": 51,
+    "engagementRate": 0.5294117647058824
   },
   "monthlyTrend": [
     {
       "month": "2026-07",
-      "pageViews": 235,
-      "activeUsers": 24
+      "pageViews": 238,
+      "activeUsers": 26
     }
   ],
   "topPages": [
     {
       "title": "Publications | Wei-Hao Chiu",
       "path": "/publications.html",
-      "pageViews": 52,
-      "activeUsers": 9
+      "pageViews": 53,
+      "activeUsers": 10
     },
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
@@ -40,8 +40,8 @@
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 30,
-      "activeUsers": 20
+      "pageViews": 32,
+      "activeUsers": 21
     },
     {
       "title": "Research Projects | Wei-Hao Chiu",
@@ -113,20 +113,25 @@
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 31,
-      "activeUsers": 21
+      "sessions": 34,
+      "activeUsers": 23
     },
     {
       "channel": "Organic Search",
-      "sessions": 16,
+      "sessions": 17,
       "activeUsers": 4
+    },
+    {
+      "channel": "Unassigned",
+      "sessions": 1,
+      "activeUsers": 1
     }
   ],
   "topCountries": [
     {
       "country": "Taiwan",
       "activeUsers": 10,
-      "pageViews": 219
+      "pageViews": 220
     },
     {
       "country": "United States",
@@ -144,6 +149,11 @@
       "pageViews": 2
     },
     {
+      "country": "China",
+      "activeUsers": 1,
+      "pageViews": 1
+    },
+    {
       "country": "Hong Kong",
       "activeUsers": 1,
       "pageViews": 1
@@ -152,12 +162,17 @@
       "country": "India",
       "activeUsers": 1,
       "pageViews": 1
+    },
+    {
+      "country": "Russia",
+      "activeUsers": 1,
+      "pageViews": 1
     }
   ],
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 16
+      "activeUsers": 18
     },
     {
       "device": "mobile",
