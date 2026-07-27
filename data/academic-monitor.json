@@ -1,20 +1,826 @@
 {
   "schemaVersion": 1,
-  "generatedAt": null,
+  "generatedAt": "2026-07-27T12:48:41+08:00",
   "repository": "https://github.com/weihaochiu/weihaochiu.github.io",
-  "status": "not-run",
+  "status": "partial",
   "summary": {
     "publications": 0,
-    "patents": 0,
+    "patents": 17,
     "projects": 0,
-    "totalCandidates": 0,
-    "sourceErrors": 0,
-    "sourceWarnings": 0
+    "totalCandidates": 17,
+    "sourceErrors": 1,
+    "sourceWarnings": 2
   },
   "publications": [],
-  "patents": [],
+  "patents": [
+    {
+      "type": "patent",
+      "confidence": "possible",
+      "number": "US8437441B2",
+      "titleEn": "Voltage-to-time converter, and voltage-to-digital converting device having the …",
+      "titleZh": "",
+      "inventorsEn": [
+        "Wei-Hao Chiu"
+      ],
+      "inventorsZh": "",
+      "assigneeEn": "",
+      "assigneeZh": "",
+      "jurisdiction": "",
+      "filingDate": "",
+      "publicationDate": "",
+      "grantDate": "",
+      "status": "",
+      "abstract": "",
+      "detectionNotes": [
+        "Patent publication number is not present in the current patents JSON.",
+        "Google Patents name matching can include people with similar names; verify inventor, assignee and technical field."
+      ],
+      "sources": [
+        {
+          "name": "Google Patents result",
+          "url": "https://patents.google.com/patent/US8437441B2/en"
+        },
+        {
+          "name": "Google Patents search",
+          "url": "https://patents.google.com/?q=inventor%3D%22Wei-Hao+Chiu%22"
+        },
+        {
+          "name": "TIPO search",
+          "url": "https://twpat1.tipo.gov.tw/twpatc/twpatkm"
+        },
+        {
+          "name": "Espacenet",
+          "url": "https://worldwide.espacenet.com/"
+        },
+        {
+          "name": "WIPO PATENTSCOPE",
+          "url": "https://patentscope.wipo.int/search/en/search.jsf"
+        }
+      ]
+    },
+    {
+      "type": "patent",
+      "confidence": "possible",
+      "number": "US7916064B2",
+      "titleEn": "Phase-locked loop circuit and digital-to-time convertor error cancelation …",
+      "titleZh": "",
+      "inventorsEn": [
+        "Wei-Hao Chiu"
+      ],
+      "inventorsZh": "",
+      "assigneeEn": "",
+      "assigneeZh": "",
+      "jurisdiction": "",
+      "filingDate": "",
+      "publicationDate": "",
+      "grantDate": "",
+      "status": "",
+      "abstract": "",
+      "detectionNotes": [
+        "Patent publication number is not present in the current patents JSON.",
+        "Google Patents name matching can include people with similar names; verify inventor, assignee and technical field."
+      ],
+      "sources": [
+        {
+          "name": "Google Patents result",
+          "url": "https://patents.google.com/patent/US7916064B2/en"
+        },
+        {
+          "name": "Google Patents search",
+          "url": "https://patents.google.com/?q=inventor%3D%22Wei-Hao+Chiu%22"
+        },
+        {
+          "name": "TIPO search",
+          "url": "https://twpat1.tipo.gov.tw/twpatc/twpatkm"
+        },
+        {
+          "name": "Espacenet",
+          "url": "https://worldwide.espacenet.com/"
+        },
+        {
+          "name": "WIPO PATENTSCOPE",
+          "url": "https://patentscope.wipo.int/search/en/search.jsf"
+        }
+      ]
+    },
+    {
+      "type": "patent",
+      "confidence": "possible",
+      "number": "EP3910799B1",
+      "titleEn": "Solar cell",
+      "titleZh": "",
+      "inventorsEn": [
+        "Wei-Hao Chiu"
+      ],
+      "inventorsZh": "",
+      "assigneeEn": "",
+      "assigneeZh": "",
+      "jurisdiction": "",
+      "filingDate": "",
+      "publicationDate": "",
+      "grantDate": "",
+      "status": "",
+      "abstract": "",
+      "detectionNotes": [
+        "Patent publication number is not present in the current patents JSON.",
+        "Google Patents name matching can include people with similar names; verify inventor, assignee and technical field."
+      ],
+      "sources": [
+        {
+          "name": "Google Patents result",
+          "url": "https://patents.google.com/patent/EP3910799B1/en"
+        },
+        {
+          "name": "Google Patents search",
+          "url": "https://patents.google.com/?q=inventor%3D%22Wei-Hao+Chiu%22"
+        },
+        {
+          "name": "TIPO search",
+          "url": "https://twpat1.tipo.gov.tw/twpatc/twpatkm"
+        },
+        {
+          "name": "Espacenet",
+          "url": "https://worldwide.espacenet.com/"
+        },
+        {
+          "name": "WIPO PATENTSCOPE",
+          "url": "https://patentscope.wipo.int/search/en/search.jsf"
+        }
+      ]
+    },
+    {
+      "type": "patent",
+      "confidence": "possible",
+      "number": "US9948265B2",
+      "titleEn": "Plant cultivation device",
+      "titleZh": "",
+      "inventorsEn": [
+        "Wei-Hao Chiu"
+      ],
+      "inventorsZh": "",
+      "assigneeEn": "",
+      "assigneeZh": "",
+      "jurisdiction": "",
+      "filingDate": "",
+      "publicationDate": "",
+      "grantDate": "",
+      "status": "",
+      "abstract": "",
+      "detectionNotes": [
+        "Patent publication number is not present in the current patents JSON.",
+        "Google Patents name matching can include people with similar names; verify inventor, assignee and technical field."
+      ],
+      "sources": [
+        {
+          "name": "Google Patents result",
+          "url": "https://patents.google.com/patent/US9948265B2/en"
+        },
+        {
+          "name": "Google Patents search",
+          "url": "https://patents.google.com/?q=inventor%3D%22Wei-Hao+Chiu%22"
+        },
+        {
+          "name": "TIPO search",
+          "url": "https://twpat1.tipo.gov.tw/twpatc/twpatkm"
+        },
+        {
+          "name": "Espacenet",
+          "url": "https://worldwide.espacenet.com/"
+        },
+        {
+          "name": "WIPO PATENTSCOPE",
+          "url": "https://patentscope.wipo.int/search/en/search.jsf"
+        }
+      ]
+    },
+    {
+      "type": "patent",
+      "confidence": "possible",
+      "number": "JP2016123404A",
+      "titleEn": "Lc-tank oscillator having intrinsic low-pass filter",
+      "titleZh": "",
+      "inventorsEn": [
+        "Wei-Hao Chiu"
+      ],
+      "inventorsZh": "",
+      "assigneeEn": "",
+      "assigneeZh": "",
+      "jurisdiction": "",
+      "filingDate": "",
+      "publicationDate": "",
+      "grantDate": "",
+      "status": "",
+      "abstract": "",
+      "detectionNotes": [
+        "Patent publication number is not present in the current patents JSON.",
+        "Google Patents name matching can include people with similar names; verify inventor, assignee and technical field."
+      ],
+      "sources": [
+        {
+          "name": "Google Patents result",
+          "url": "https://patents.google.com/patent/JP2016123404A/en"
+        },
+        {
+          "name": "Google Patents search",
+          "url": "https://patents.google.com/?q=inventor%3D%22Wei-Hao+Chiu%22"
+        },
+        {
+          "name": "TIPO search",
+          "url": "https://twpat1.tipo.gov.tw/twpatc/twpatkm"
+        },
+        {
+          "name": "Espacenet",
+          "url": "https://worldwide.espacenet.com/"
+        },
+        {
+          "name": "WIPO PATENTSCOPE",
+          "url": "https://patentscope.wipo.int/search/en/search.jsf"
+        }
+      ]
+    },
+    {
+      "type": "patent",
+      "confidence": "possible",
+      "number": "US20170111009A1",
+      "titleEn": "Charge pump with wide operating range",
+      "titleZh": "",
+      "inventorsEn": [
+        "Wei-Hao Chiu"
+      ],
+      "inventorsZh": "",
+      "assigneeEn": "",
+      "assigneeZh": "",
+      "jurisdiction": "",
+      "filingDate": "",
+      "publicationDate": "",
+      "grantDate": "",
+      "status": "",
+      "abstract": "",
+      "detectionNotes": [
+        "Patent publication number is not present in the current patents JSON.",
+        "Google Patents name matching can include people with similar names; verify inventor, assignee and technical field."
+      ],
+      "sources": [
+        {
+          "name": "Google Patents result",
+          "url": "https://patents.google.com/patent/US20170111009A1/en"
+        },
+        {
+          "name": "Google Patents search",
+          "url": "https://patents.google.com/?q=inventor%3D%22Wei-Hao+Chiu%22"
+        },
+        {
+          "name": "TIPO search",
+          "url": "https://twpat1.tipo.gov.tw/twpatc/twpatkm"
+        },
+        {
+          "name": "Espacenet",
+          "url": "https://worldwide.espacenet.com/"
+        },
+        {
+          "name": "WIPO PATENTSCOPE",
+          "url": "https://patentscope.wipo.int/search/en/search.jsf"
+        }
+      ]
+    },
+    {
+      "type": "patent",
+      "confidence": "possible",
+      "number": "EP2947775B1",
+      "titleEn": "Magnetically pumped voltage controlled oscillator",
+      "titleZh": "",
+      "inventorsEn": [
+        "Wei-Hao Chiu"
+      ],
+      "inventorsZh": "",
+      "assigneeEn": "",
+      "assigneeZh": "",
+      "jurisdiction": "",
+      "filingDate": "",
+      "publicationDate": "",
+      "grantDate": "",
+      "status": "",
+      "abstract": "",
+      "detectionNotes": [
+        "Patent publication number is not present in the current patents JSON.",
+        "Google Patents name matching can include people with similar names; verify inventor, assignee and technical field."
+      ],
+      "sources": [
+        {
+          "name": "Google Patents result",
+          "url": "https://patents.google.com/patent/EP2947775B1/en"
+        },
+        {
+          "name": "Google Patents search",
+          "url": "https://patents.google.com/?q=inventor%3D%22Wei-Hao+Chiu%22"
+        },
+        {
+          "name": "TIPO search",
+          "url": "https://twpat1.tipo.gov.tw/twpatc/twpatkm"
+        },
+        {
+          "name": "Espacenet",
+          "url": "https://worldwide.espacenet.com/"
+        },
+        {
+          "name": "WIPO PATENTSCOPE",
+          "url": "https://patentscope.wipo.int/search/en/search.jsf"
+        }
+      ]
+    },
+    {
+      "type": "patent",
+      "confidence": "possible",
+      "number": "EP3678292A1",
+      "titleEn": "Inductor-capacitor oscillator with embedded second harmonic filter and …",
+      "titleZh": "",
+      "inventorsEn": [
+        "Wei-Hao Chiu"
+      ],
+      "inventorsZh": "",
+      "assigneeEn": "",
+      "assigneeZh": "",
+      "jurisdiction": "",
+      "filingDate": "",
+      "publicationDate": "",
+      "grantDate": "",
+      "status": "",
+      "abstract": "",
+      "detectionNotes": [
+        "Patent publication number is not present in the current patents JSON.",
+        "Google Patents name matching can include people with similar names; verify inventor, assignee and technical field."
+      ],
+      "sources": [
+        {
+          "name": "Google Patents result",
+          "url": "https://patents.google.com/patent/EP3678292A1/en"
+        },
+        {
+          "name": "Google Patents search",
+          "url": "https://patents.google.com/?q=inventor%3D%22Wei-Hao+Chiu%22"
+        },
+        {
+          "name": "TIPO search",
+          "url": "https://twpat1.tipo.gov.tw/twpatc/twpatkm"
+        },
+        {
+          "name": "Espacenet",
+          "url": "https://worldwide.espacenet.com/"
+        },
+        {
+          "name": "WIPO PATENTSCOPE",
+          "url": "https://patentscope.wipo.int/search/en/search.jsf"
+        }
+      ]
+    },
+    {
+      "type": "patent",
+      "confidence": "possible",
+      "number": "TW201622557A",
+      "titleEn": "Solar battery",
+      "titleZh": "",
+      "inventorsEn": [
+        "Wei-Hao Chiu"
+      ],
+      "inventorsZh": "",
+      "assigneeEn": "",
+      "assigneeZh": "",
+      "jurisdiction": "",
+      "filingDate": "",
+      "publicationDate": "",
+      "grantDate": "",
+      "status": "",
+      "abstract": "",
+      "detectionNotes": [
+        "Patent publication number is not present in the current patents JSON.",
+        "Google Patents name matching can include people with similar names; verify inventor, assignee and technical field."
+      ],
+      "sources": [
+        {
+          "name": "Google Patents result",
+          "url": "https://patents.google.com/patent/TW201622557A/en"
+        },
+        {
+          "name": "Google Patents search",
+          "url": "https://patents.google.com/?q=inventor%3D%22%E9%82%B1%E5%81%89%E8%B1%AA%22"
+        },
+        {
+          "name": "TIPO search",
+          "url": "https://twpat1.tipo.gov.tw/twpatc/twpatkm"
+        },
+        {
+          "name": "Espacenet",
+          "url": "https://worldwide.espacenet.com/"
+        },
+        {
+          "name": "WIPO PATENTSCOPE",
+          "url": "https://patentscope.wipo.int/search/en/search.jsf"
+        }
+      ]
+    },
+    {
+      "type": "patent",
+      "confidence": "possible",
+      "number": "TWM539701U",
+      "titleEn": "Solar cell module and manufacturing method thereof",
+      "titleZh": "",
+      "inventorsEn": [
+        "Wei-Hao Chiu"
+      ],
+      "inventorsZh": "",
+      "assigneeEn": "",
+      "assigneeZh": "",
+      "jurisdiction": "",
+      "filingDate": "",
+      "publicationDate": "",
+      "grantDate": "",
+      "status": "",
+      "abstract": "",
+      "detectionNotes": [
+        "Patent publication number is not present in the current patents JSON.",
+        "Google Patents name matching can include people with similar names; verify inventor, assignee and technical field."
+      ],
+      "sources": [
+        {
+          "name": "Google Patents result",
+          "url": "https://patents.google.com/patent/TWM539701U/en"
+        },
+        {
+          "name": "Google Patents search",
+          "url": "https://patents.google.com/?q=inventor%3D%22%E9%82%B1%E5%81%89%E8%B1%AA%22"
+        },
+        {
+          "name": "TIPO search",
+          "url": "https://twpat1.tipo.gov.tw/twpatc/twpatkm"
+        },
+        {
+          "name": "Espacenet",
+          "url": "https://worldwide.espacenet.com/"
+        },
+        {
+          "name": "WIPO PATENTSCOPE",
+          "url": "https://patentscope.wipo.int/search/en/search.jsf"
+        }
+      ]
+    },
+    {
+      "type": "patent",
+      "confidence": "possible",
+      "number": "TWI816357B",
+      "titleEn": "Plant growth system and optical radiation control method of light source for …",
+      "titleZh": "",
+      "inventorsEn": [
+        "Wei-Hao Chiu"
+      ],
+      "inventorsZh": "",
+      "assigneeEn": "",
+      "assigneeZh": "",
+      "jurisdiction": "",
+      "filingDate": "",
+      "publicationDate": "",
+      "grantDate": "",
+      "status": "",
+      "abstract": "",
+      "detectionNotes": [
+        "Patent publication number is not present in the current patents JSON.",
+        "Google Patents name matching can include people with similar names; verify inventor, assignee and technical field."
+      ],
+      "sources": [
+        {
+          "name": "Google Patents result",
+          "url": "https://patents.google.com/patent/TWI816357B/en"
+        },
+        {
+          "name": "Google Patents search",
+          "url": "https://patents.google.com/?q=inventor%3D%22%E9%82%B1%E5%81%89%E8%B1%AA%22"
+        },
+        {
+          "name": "TIPO search",
+          "url": "https://twpat1.tipo.gov.tw/twpatc/twpatkm"
+        },
+        {
+          "name": "Espacenet",
+          "url": "https://worldwide.espacenet.com/"
+        },
+        {
+          "name": "WIPO PATENTSCOPE",
+          "url": "https://patentscope.wipo.int/search/en/search.jsf"
+        }
+      ]
+    },
+    {
+      "type": "patent",
+      "confidence": "possible",
+      "number": "TW201620377A",
+      "titleEn": "Switch matching lighting control system and switch matching method",
+      "titleZh": "",
+      "inventorsEn": [
+        "Wei-Hao Chiu"
+      ],
+      "inventorsZh": "",
+      "assigneeEn": "",
+      "assigneeZh": "",
+      "jurisdiction": "",
+      "filingDate": "",
+      "publicationDate": "",
+      "grantDate": "",
+      "status": "",
+      "abstract": "",
+      "detectionNotes": [
+        "Patent publication number is not present in the current patents JSON.",
+        "Google Patents name matching can include people with similar names; verify inventor, assignee and technical field."
+      ],
+      "sources": [
+        {
+          "name": "Google Patents result",
+          "url": "https://patents.google.com/patent/TW201620377A/en"
+        },
+        {
+          "name": "Google Patents search",
+          "url": "https://patents.google.com/?q=inventor%3D%22%E9%82%B1%E5%81%89%E8%B1%AA%22"
+        },
+        {
+          "name": "TIPO search",
+          "url": "https://twpat1.tipo.gov.tw/twpatc/twpatkm"
+        },
+        {
+          "name": "Espacenet",
+          "url": "https://worldwide.espacenet.com/"
+        },
+        {
+          "name": "WIPO PATENTSCOPE",
+          "url": "https://patentscope.wipo.int/search/en/search.jsf"
+        }
+      ]
+    },
+    {
+      "type": "patent",
+      "confidence": "possible",
+      "number": "TWI884762B",
+      "titleEn": "Solar cell module having groove structure and manufacturing method thereof",
+      "titleZh": "",
+      "inventorsEn": [
+        "Wei-Hao Chiu"
+      ],
+      "inventorsZh": "",
+      "assigneeEn": "",
+      "assigneeZh": "",
+      "jurisdiction": "",
+      "filingDate": "",
+      "publicationDate": "",
+      "grantDate": "",
+      "status": "",
+      "abstract": "",
+      "detectionNotes": [
+        "Patent publication number is not present in the current patents JSON.",
+        "Google Patents name matching can include people with similar names; verify inventor, assignee and technical field."
+      ],
+      "sources": [
+        {
+          "name": "Google Patents result",
+          "url": "https://patents.google.com/patent/TWI884762B/en"
+        },
+        {
+          "name": "Google Patents search",
+          "url": "https://patents.google.com/?q=inventor%3D%22%E9%82%B1%E5%81%89%E8%B1%AA%22"
+        },
+        {
+          "name": "TIPO search",
+          "url": "https://twpat1.tipo.gov.tw/twpatc/twpatkm"
+        },
+        {
+          "name": "Espacenet",
+          "url": "https://worldwide.espacenet.com/"
+        },
+        {
+          "name": "WIPO PATENTSCOPE",
+          "url": "https://patentscope.wipo.int/search/en/search.jsf"
+        }
+      ]
+    },
+    {
+      "type": "patent",
+      "confidence": "possible",
+      "number": "TW202341510A",
+      "titleEn": "Water-level adjusting method, a water-level adjusting apparatus and a plant …",
+      "titleZh": "",
+      "inventorsEn": [
+        "Wei-Hao Chiu"
+      ],
+      "inventorsZh": "",
+      "assigneeEn": "",
+      "assigneeZh": "",
+      "jurisdiction": "",
+      "filingDate": "",
+      "publicationDate": "",
+      "grantDate": "",
+      "status": "",
+      "abstract": "",
+      "detectionNotes": [
+        "Patent publication number is not present in the current patents JSON.",
+        "Google Patents name matching can include people with similar names; verify inventor, assignee and technical field."
+      ],
+      "sources": [
+        {
+          "name": "Google Patents result",
+          "url": "https://patents.google.com/patent/TW202341510A/en"
+        },
+        {
+          "name": "Google Patents search",
+          "url": "https://patents.google.com/?q=inventor%3D%22%E9%82%B1%E5%81%89%E8%B1%AA%22"
+        },
+        {
+          "name": "TIPO search",
+          "url": "https://twpat1.tipo.gov.tw/twpatc/twpatkm"
+        },
+        {
+          "name": "Espacenet",
+          "url": "https://worldwide.espacenet.com/"
+        },
+        {
+          "name": "WIPO PATENTSCOPE",
+          "url": "https://patentscope.wipo.int/search/en/search.jsf"
+        }
+      ]
+    },
+    {
+      "type": "patent",
+      "confidence": "possible",
+      "number": "TWI531307B",
+      "titleEn": "Plant harvesting method, plant harvesting system and plant harvesting device",
+      "titleZh": "",
+      "inventorsEn": [
+        "Wei-Hao Chiu"
+      ],
+      "inventorsZh": "",
+      "assigneeEn": "",
+      "assigneeZh": "",
+      "jurisdiction": "",
+      "filingDate": "",
+      "publicationDate": "",
+      "grantDate": "",
+      "status": "",
+      "abstract": "",
+      "detectionNotes": [
+        "Patent publication number is not present in the current patents JSON.",
+        "Google Patents name matching can include people with similar names; verify inventor, assignee and technical field."
+      ],
+      "sources": [
+        {
+          "name": "Google Patents result",
+          "url": "https://patents.google.com/patent/TWI531307B/en"
+        },
+        {
+          "name": "Google Patents search",
+          "url": "https://patents.google.com/?q=inventor%3D%22%E9%82%B1%E5%81%89%E8%B1%AA%22"
+        },
+        {
+          "name": "TIPO search",
+          "url": "https://twpat1.tipo.gov.tw/twpatc/twpatkm"
+        },
+        {
+          "name": "Espacenet",
+          "url": "https://worldwide.espacenet.com/"
+        },
+        {
+          "name": "WIPO PATENTSCOPE",
+          "url": "https://patentscope.wipo.int/search/en/search.jsf"
+        }
+      ]
+    },
+    {
+      "type": "patent",
+      "confidence": "possible",
+      "number": "TWI592090B",
+      "titleEn": "Back chamber expanded type stereo array mems mic chip scale package",
+      "titleZh": "",
+      "inventorsEn": [
+        "Wei-Hao Chiu"
+      ],
+      "inventorsZh": "",
+      "assigneeEn": "",
+      "assigneeZh": "",
+      "jurisdiction": "",
+      "filingDate": "",
+      "publicationDate": "",
+      "grantDate": "",
+      "status": "",
+      "abstract": "",
+      "detectionNotes": [
+        "Patent publication number is not present in the current patents JSON.",
+        "Google Patents name matching can include people with similar names; verify inventor, assignee and technical field."
+      ],
+      "sources": [
+        {
+          "name": "Google Patents result",
+          "url": "https://patents.google.com/patent/TWI592090B/en"
+        },
+        {
+          "name": "Google Patents search",
+          "url": "https://patents.google.com/?q=inventor%3D%22%E9%82%B1%E5%81%89%E8%B1%AA%22"
+        },
+        {
+          "name": "TIPO search",
+          "url": "https://twpat1.tipo.gov.tw/twpatc/twpatkm"
+        },
+        {
+          "name": "Espacenet",
+          "url": "https://worldwide.espacenet.com/"
+        },
+        {
+          "name": "WIPO PATENTSCOPE",
+          "url": "https://patentscope.wipo.int/search/en/search.jsf"
+        }
+      ]
+    },
+    {
+      "type": "patent",
+      "confidence": "possible",
+      "number": "TWM504415U",
+      "titleEn": "Frame unit and frame assembly for solar cells",
+      "titleZh": "",
+      "inventorsEn": [
+        "Wei-Hao Chiu"
+      ],
+      "inventorsZh": "",
+      "assigneeEn": "",
+      "assigneeZh": "",
+      "jurisdiction": "",
+      "filingDate": "",
+      "publicationDate": "",
+      "grantDate": "",
+      "status": "",
+      "abstract": "",
+      "detectionNotes": [
+        "Patent publication number is not present in the current patents JSON.",
+        "Google Patents name matching can include people with similar names; verify inventor, assignee and technical field."
+      ],
+      "sources": [
+        {
+          "name": "Google Patents result",
+          "url": "https://patents.google.com/patent/TWM504415U/en"
+        },
+        {
+          "name": "Google Patents search",
+          "url": "https://patents.google.com/?q=inventor%3D%22%E9%82%B1%E5%81%89%E8%B1%AA%22"
+        },
+        {
+          "name": "TIPO search",
+          "url": "https://twpat1.tipo.gov.tw/twpatc/twpatkm"
+        },
+        {
+          "name": "Espacenet",
+          "url": "https://worldwide.espacenet.com/"
+        },
+        {
+          "name": "WIPO PATENTSCOPE",
+          "url": "https://patentscope.wipo.int/search/en/search.jsf"
+        }
+      ]
+    }
+  ],
   "projects": [],
-  "sources": [],
+  "sources": [
+    {
+      "name": "ORCID",
+      "url": "https://pub.orcid.org/v3.0/0000-0003-4484-3117/works",
+      "status": "error",
+      "message": "AttributeError: 'NoneType' object has no attribute 'get'",
+      "checkedAt": "2026-07-27T12:48:38+08:00"
+    },
+    {
+      "name": "Google Patents",
+      "url": "https://patents.google.com/?q=inventor%3D%22Wei-Hao+Chiu%22",
+      "status": "success",
+      "message": "",
+      "checkedAt": "2026-07-27T12:48:38+08:00",
+      "candidateCount": 8
+    },
+    {
+      "name": "Google Patents",
+      "url": "https://patents.google.com/?q=inventor%3D%22%E9%82%B1%E5%81%89%E8%B1%AA%22",
+      "status": "success",
+      "message": "",
+      "checkedAt": "2026-07-27T12:48:39+08:00",
+      "candidateCount": 9
+    },
+    {
+      "name": "GRB",
+      "url": "https://www.grb.gov.tw/search?query=%E9%82%B1%E5%81%89%E8%B1%AA",
+      "status": "warning",
+      "message": "No structured planDetail links were detected; the GRB page layout or access policy may have changed.",
+      "checkedAt": "2026-07-27T12:48:40+08:00",
+      "candidateCount": 0
+    },
+    {
+      "name": "GRB",
+      "url": "https://www.grb.gov.tw/search?query=Wei-Hao+Chiu",
+      "status": "warning",
+      "message": "No structured planDetail links were detected; the GRB page layout or access policy may have changed.",
+      "checkedAt": "2026-07-27T12:48:41+08:00",
+      "candidateCount": 0
+    }
+  ],
   "copyInstructions": {
     "finalLine": "請根據資料來源逐筆查核，找不到的資料不要自行猜測。更新相關 JSON、作者資料、統計及 SEO，最後只提供實際修改檔案的 ZIP。"
   }
