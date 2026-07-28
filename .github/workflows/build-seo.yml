@@ -94,15 +94,38 @@ jobs:
               errors.append('Publication Analytics authorship extension is missing')
 
           patents = json.loads((root / 'data/patents.json').read_text(encoding='utf-8'))
+          patent_families = json.loads((root / 'data/patent_families.json').read_text(encoding='utf-8'))
           patent_page = (root / 'patents.html').read_text(encoding='utf-8')
-          patent_static_cards = len(re.findall(r'<article class="collection-card patent-card"', patent_page))
-          patent_detail_pages = len(list((root / 'patents').glob('*.html')))
+          patent_static_document_cards = len(
+              re.findall(r'<article class="collection-card patent-card"', patent_page)
+          )
+          patent_static_family_cards = len(
+              re.findall(r'<article class="collection-card patent-family-card"', patent_page)
+          )
+          patent_detail_pages = len([
+              path for path in (root / 'patents').glob('*.html')
+              if not path.name.startswith('families-')
+          ])
+          multi_document_families = [
+              family for family in patent_families
+              if len(family.get('documents') or []) > 1
+          ]
+          patent_family_pages = len(list((root / 'patents').glob('families-*.html')))
           patent_marker_starts = patent_page.count('<!-- PATENT_STATIC_START -->')
           patent_marker_ends = patent_page.count('<!-- PATENT_STATIC_END -->')
-          if patent_static_cards != len(patents):
-              errors.append(f'patent static cards: expected {len(patents)}, found {patent_static_cards}')
+          patent_static_cards = patent_static_document_cards + patent_static_family_cards
+          if patent_static_cards != len(patent_families):
+              errors.append(
+                  f'patent family cards: expected {len(patent_families)}, '
+                  f'found {patent_static_cards}'
+              )
           if patent_detail_pages != len(patents):
               errors.append(f'patent detail pages: expected {len(patents)}, found {patent_detail_pages}')
+          if patent_family_pages != len(multi_document_families):
+              errors.append(
+                  f'integrated patent family pages: expected {len(multi_document_families)}, '
+                  f'found {patent_family_pages}'
+              )
           if (patent_marker_starts, patent_marker_ends) != (1, 1):
               errors.append(
                   f'patent static marker pairs: expected 1/1, '
