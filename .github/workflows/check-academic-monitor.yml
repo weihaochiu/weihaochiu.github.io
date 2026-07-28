@@ -5,6 +5,21 @@ on:
   schedule:
     # Monday and Thursday 09:10 Asia/Taipei (01:10 UTC)
     - cron: "10 1 * * 1,4"
+  push:
+    branches: [main]
+    paths:
+      - "data/academic_monitor_review_decisions.json"
+      - "data/publications.json"
+      - "data/patents.json"
+      - "data/projects.json"
+      - "data/grb_projects_pending.json"
+      - "data/grb_projects_snapshot.json"
+      - "scripts/academic_monitor_common.py"
+      - "scripts/check_academic_monitor.py"
+      - "scripts/check_publications.py"
+      - "scripts/check_patents.py"
+      - "scripts/check_projects.py"
+      - ".github/workflows/check-academic-monitor.yml"
 
 permissions:
   contents: write
@@ -38,7 +53,9 @@ jobs:
         run: python scripts/check_academic_monitor.py
 
       - name: Validate monitor JSON
-        run: python -m json.tool data/academic-monitor.json > /dev/null
+        run: |
+          python -m json.tool data/academic-monitor.json > /dev/null
+          python -m json.tool data/academic_monitor_review_decisions.json > /dev/null
 
       - name: Commit monitor result
         shell: bash

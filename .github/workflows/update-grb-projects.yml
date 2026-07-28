@@ -3,8 +3,8 @@ name: Update GRB projects
 on:
   workflow_dispatch:
   schedule:
-    # 06:30 Asia/Taipei on the 22nd of every month.
-    - cron: "30 22 21 * *"
+    # 08:30 Asia/Taipei every Monday and Thursday, before academic monitoring.
+    - cron: "30 0 * * 1,4"
   push:
     branches: [main]
     paths:
