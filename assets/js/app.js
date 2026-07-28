@@ -382,16 +382,30 @@ function patentDetails(p){
 function patentCard(p){
   const detailUrl=`patents/${patentSlug(p)}.html`;
   const stage=p.documentStage||p.status||'Status unavailable';
-  const family=p.family?`<span class="card-label">${esc(p.family.titleEn||p.familyId)}</span>`:'';
-  return `<article class="collection-card patent-card" id="patent-${esc(patentSlug(p))}"><div class="card-heading"><h4><a href="${esc(detailUrl)}">${esc(p.titleEn)}</a></h4><span class="date-badge">${esc(p.date||formatDate(p.publicationDate||p.grantDate))}</span></div>${p.titleZh?`<div class="local-title" lang="zh-Hant">${esc(p.titleZh)}</div>`:''}<div class="card-labels"><span class="card-label">${esc(p.number)}</span><span class="card-label">${esc(p.jurisdiction)}</span><span class="card-label">${esc(stage)}</span>${p.patentType?`<span class="card-label">${esc(p.patentType)}</span>`:''}${family}</div><div class="meta-row">Inventors: ${patentInventors(p)}</div><div class="meta-row">Assignee: ${esc(p.assigneeEn)}${p.assigneeZh?` <span lang="zh-Hant">(${esc(p.assigneeZh)})</span>`:''}</div>${patentDetails(p)}<div class="card-actions"><a class="action" href="${esc(detailUrl)}">Patent details →</a><a class="action" href="${esc(p.url)}" target="_blank" rel="noopener">Patent record ↗</a></div></article>`;
+  return `<article class="collection-card patent-card" id="patent-${esc(patentSlug(p))}"><div class="card-heading"><h4><a href="${esc(detailUrl)}">${esc(p.titleEn)}</a></h4><span class="date-badge">${esc(p.date||formatDate(p.publicationDate||p.grantDate))}</span></div>${p.titleZh?`<div class="local-title" lang="zh-Hant">${esc(p.titleZh)}</div>`:''}<div class="card-labels"><span class="card-label">${esc(p.number)}</span><span class="card-label">${esc(p.jurisdiction)}</span><span class="card-label">${esc(stage)}</span>${p.patentType?`<span class="card-label">${esc(p.patentType)}</span>`:''}</div><div class="meta-row">Inventors: ${patentInventors(p)}</div><div class="meta-row">Assignee: ${esc(p.assigneeEn)}${p.assigneeZh?` <span lang="zh-Hant">(${esc(p.assigneeZh)})</span>`:''}</div>${patentDetails(p)}<div class="card-actions"><a class="action" href="${esc(detailUrl)}">Patent details →</a><a class="action" href="${esc(p.url)}" target="_blank" rel="noopener">Patent record ↗</a></div></article>`;
+}
+function patentFamilyDocumentRow(p,family={}){
+  const detailUrl=`patents/${patentSlug(p)}.html`;
+  const stage=p.documentStage||p.status||'Status unavailable';
+  const familyTitle=String(family.titleEn||'').trim();
+  const familyTitleZh=String(family.titleZh||'').trim();
+  const documentTitle=String(p.titleEn||'').trim();
+  const documentTitleZh=String(p.titleZh||'').trim();
+  const differentTitle=documentTitle&&documentTitle!==familyTitle?`<p class="patent-family-document-title">${esc(documentTitle)}</p>`:'';
+  const differentTitleZh=documentTitleZh&&documentTitleZh!==familyTitleZh?`<p class="patent-family-document-title" lang="zh-Hant">${esc(documentTitleZh)}</p>`:'';
+  return `<article class="patent-family-document" id="patent-${esc(patentSlug(p))}"><div class="patent-family-document-heading"><div><h5><a href="${esc(detailUrl)}">${esc(p.number||p.canonicalId)}</a></h5>${differentTitle}${differentTitleZh}</div><span class="date-badge">${esc(p.date||formatDate(p.publicationDate||p.grantDate))}</span></div><div class="card-labels"><span class="card-label">${esc(p.jurisdiction)}</span><span class="card-label">${esc(stage)}</span>${p.patentType?`<span class="card-label">${esc(p.patentType)}</span>`:''}</div><div class="card-actions"><a class="action" href="${esc(detailUrl)}">Patent details →</a><a class="action" href="${esc(p.url)}" target="_blank" rel="noopener">Patent record ↗</a></div></article>`;
+}
+function patentFamilyPrimaryDate(group){
+  return group.map(p=>String(p.sortDate||p.publicationDate||p.grantDate||`${yearOf(p)}-12-31`)).filter(Boolean).sort()[0]||'';
 }
 function patentFamilyCard(group){
+  if(group.length===1)return patentCard(group[0]);
   const family=group[0].family||{};
   const title=family.titleEn||group[0].titleEn;
   const titleZh=family.titleZh||group[0].titleZh;
   const jurisdictions=[...new Set(group.map(p=>p.jurisdiction).filter(Boolean))];
-  const latest=[...group].sort((a,b)=>String(b.sortDate).localeCompare(String(a.sortDate)))[0];
-  return `<article class="collection-card patent-family-card"><div class="card-heading"><h4>${esc(title)}</h4><span class="date-badge">${esc(latest.year)}</span></div>${titleZh?`<div class="local-title" lang="zh-Hant">${esc(titleZh)}</div>`:''}<div class="card-labels"><span class="card-label">${group.length} document${group.length===1?'':'s'}</span>${jurisdictions.map(value=>`<span class="card-label">${esc(value)}</span>`).join('')}</div><details class="patent-family-documents"><summary>View family documents</summary><div class="patent-family-list">${group.map(patentCard).join('')}</div></details></article>`;
+  const primaryYear=patentFamilyPrimaryDate(group).slice(0,4);
+  return `<article class="collection-card patent-family-card"><div class="card-heading"><h4>${esc(title)}</h4><span class="date-badge">${esc(primaryYear)}</span></div>${titleZh?`<div class="local-title" lang="zh-Hant">${esc(titleZh)}</div>`:''}<div class="card-labels"><span class="card-label">${group.length} documents</span>${jurisdictions.map(value=>`<span class="card-label">${esc(value)}</span>`).join('')}</div><details class="patent-family-documents"><summary>View ${group.length} family documents</summary><div class="patent-family-list">${group.map(p=>patentFamilyDocumentRow(p,family)).join('')}</div></details></article>`;
 }
 /* GRB_PROJECT_FUNDING_START */
 function formatProjectFunding(p){
@@ -571,13 +585,19 @@ async function initCollection(){
         return map;
       },new Map()).values()];
       groups.sort((a,b)=>{
-        const dateA=[...a].sort((x,y)=>String(y.sortDate).localeCompare(String(x.sortDate)))[0]?.sortDate||'';
-        const dateB=[...b].sort((x,y)=>String(y.sortDate).localeCompare(String(x.sortDate)))[0]?.sortDate||'';
+        const dateA=patentFamilyPrimaryDate(a);
+        const dateB=patentFamilyPrimaryDate(b);
         return mode==='date-asc'?String(dateA).localeCompare(String(dateB)):mode==='title-asc'?String(a[0].family?.titleEn||a[0].titleEn).localeCompare(String(b[0].family?.titleEn||b[0].titleEn)):String(dateB).localeCompare(String(dateA));
       });
       if(count)count.textContent=groups.length;
       if(countUnit)countUnit.textContent='families shown';
-      container.innerHTML=`<div class="collection-list patent-family-results">${groups.map(patentFamilyCard).join('')}</div>`;
+      const familyYears=groups.reduce((byYear,group)=>{
+        const primaryYear=patentFamilyPrimaryDate(group).slice(0,4)||'Unknown';
+        (byYear[primaryYear]??=[]).push(group);
+        return byYear;
+      },{});
+      const yearOrder=Object.keys(familyYears).sort((a,b)=>mode==='date-asc'?a.localeCompare(b):b.localeCompare(a));
+      container.innerHTML=yearOrder.map(primaryYear=>`<section class="year-group"><div class="year-heading"><h3>${esc(primaryYear)}</h3><span>${familyYears[primaryYear].length} famil${familyYears[primaryYear].length===1?'y':'ies'}</span></div><div class="collection-list patent-family-results">${familyYears[primaryYear].map(patentFamilyCard).join('')}</div></section>`).join('');
       return;
     }
     if(count)count.textContent=list.length;

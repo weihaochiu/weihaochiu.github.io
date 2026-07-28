@@ -101,8 +101,15 @@
 .patent-source-note{margin-top:12px!important;padding-top:10px;border-top:1px solid #e7ecf0;font-size:.68rem!important}
 .patent-family-card{padding:24px 4px}
 .patent-family-list{padding:0 14px}
-.patent-family-list .patent-card:last-child{border-bottom:0}
-.patent-family-list .patent-card .patent-details{display:none}
+.patent-family-document{padding:16px 0;border-bottom:1px solid var(--line)}
+.patent-family-document:last-child{border-bottom:0}
+.patent-family-document-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:18px}
+.patent-family-document h5{margin:0;font-family:"Source Serif 4",serif;font-size:1rem}
+.patent-family-document h5 a{color:var(--brand);text-decoration:none}
+.patent-family-document h5 a:hover,.patent-family-document h5 a:focus-visible{text-decoration:underline}
+.patent-family-document-title{margin:5px 0 0;color:var(--muted);font-size:.73rem;line-height:1.5}
+.patent-family-document .card-labels{margin-top:9px}
+.patent-family-document .card-actions{margin-top:10px}
 .patent-detail-page{max-width:1000px;margin:0 auto;padding:32px;background:#fff;border:1px solid var(--line);border-radius:10px}
 .patent-detail-page>h1{font-family:"Source Serif 4",serif;font-size:clamp(1.8rem,4vw,2.75rem);line-height:1.25;margin:0 0 8px}
 .patent-detail-page .local-title{font-size:1.05rem;margin-bottom:18px}
