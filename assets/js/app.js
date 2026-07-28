@@ -92,8 +92,7 @@ function authorCardHtml(author){
   const position=author.currentPosition&&author.currentPosition!==author.role?`<p class="author-role">Current position: ${esc(author.currentPosition)}</p>`:'';
   const patents=patentContributionDirectory.get(String(author.id||''));
   const patentSummary=patents?`<p class="author-contribution">Patent inventor · ${patents.documents.size} document${patents.documents.size===1?'':'s'} · ${patents.families.size} famil${patents.families.size===1?'y':'ies'}</p>`:'';
-  const pending=author.status==='pending'?'<p class="author-verification-note">Patent-record identity only; profile details pending verification.</p>':'';
-  return `<button class="author-popover-close" type="button" aria-label="Close author information">×</button><h2>${esc(author.displayName||author.name)}</h2>${author.nameZh?`<p class="author-name-zh">${esc(author.nameZh)}</p>`:''}${author.role?`<p class="author-role">${esc(author.role)}</p>`:''}${position}${author.affiliation?`<p class="author-affiliation">${esc(author.affiliation)}</p>`:''}${author.affiliationZh?`<p class="author-affiliation">${esc(author.affiliationZh)}</p>`:''}${patentSummary}${pending}${actions?`<div class="author-popover-links">${actions}</div>`:''}`;
+  return `<button class="author-popover-close" type="button" aria-label="Close author information">×</button><h2>${esc(author.displayName||author.name)}</h2>${author.nameZh?`<p class="author-name-zh">${esc(author.nameZh)}</p>`:''}${author.role?`<p class="author-role">${esc(author.role)}</p>`:''}${position}${author.affiliation?`<p class="author-affiliation">${esc(author.affiliation)}</p>`:''}${author.affiliationZh?`<p class="author-affiliation">${esc(author.affiliationZh)}</p>`:''}${patentSummary}${actions?`<div class="author-popover-links">${actions}</div>`:''}`;
 }
 function initAuthorPopover(){
   if(document.documentElement.dataset.authorPopoverReady==='true')return;
@@ -375,9 +374,8 @@ function patentDetails(p){
   const abstract=String(p.abstract||'').trim();
   const application=p.applicationNumber?`<p><strong>Application number:</strong> ${esc(p.applicationNumber)}</p>`:'';
   const legal=p.legalStatus?`<p><strong>Source-reported legal status:</strong> ${esc(p.legalStatus)}</p>`:'';
-  const checked=p.metadataUpdatedAt?`<p class="patent-source-note">Metadata last checked ${esc(formatDate(p.metadataUpdatedAt))}. Source-reported status is informational and is not legal advice.</p>`:'<p class="patent-source-note">Automatic metadata has not yet been successfully checked. Manually verified identity fields remain displayed.</p>';
-  if(!dates&&!application&&!legal&&!classifications.length&&!abstract&&!checked)return '';
-  return `<details class="patent-details"><summary>Patent metadata and abstract</summary><div class="patent-detail-body">${application}${dates?`<dl class="patent-date-grid">${dates}</dl>`:''}${legal}${classifications.length?`<div class="patent-classifications">${classifications.map(item=>`<span>${esc(item)}</span>`).join('')}</div>`:''}${abstract?`<section><h5>Abstract</h5><p>${esc(abstract)}</p></section>`:''}${checked}</div></details>`;
+  if(!dates&&!application&&!legal&&!classifications.length&&!abstract)return '';
+  return `<details class="patent-details"><summary>Patent metadata and abstract</summary><div class="patent-detail-body">${application}${dates?`<dl class="patent-date-grid">${dates}</dl>`:''}${legal}${classifications.length?`<div class="patent-classifications">${classifications.map(item=>`<span>${esc(item)}</span>`).join('')}</div>`:''}${abstract?`<section><h5>Abstract</h5><p>${esc(abstract)}</p></section>`:''}</div></details>`;
 }
 function patentCard(p){
   const detailUrl=`patents/${patentSlug(p)}.html`;
@@ -539,8 +537,6 @@ async function initCollection(){
     $('#patentFamilyTotal')?.replaceChildren(document.createTextNode(String(familyCount)));
     $('#patentGrantedTotal')?.replaceChildren(document.createTextNode(String(granted)));
     $('#patentApplicationTotal')?.replaceChildren(document.createTextNode(String(applications)));
-    const checked=$('#patentMetadataUpdated');
-    if(checked)checked.textContent=metadata.lastSuccessfulUpdate?`Automatic metadata last successfully checked ${formatDate(metadata.lastSuccessfulUpdate)}.`:'Automatic metadata has not yet completed a successful full check.';
   }
   const search=$('#searchInput'),year=$('#yearFilter'),topic=$('#topicFilter'),sort=$('#sortFilter'),count=$('#resultCount'),countUnit=$('#resultUnit'),container=$('#collectionContainer'),empty=$('#emptyState');
   const jurisdiction=$('#jurisdictionFilter'),stage=$('#statusFilter'),assignee=$('#assigneeFilter'),view=$('#patentViewFilter');

@@ -254,10 +254,19 @@ function renderSources() {
   const sources = payload.sources || [];
   host.innerHTML = sources.length ? sources.map(source => {
     const status = source.status || 'not-run';
+    const summary = status === 'success'
+      ? `檢查完成；候選結果：${source.candidateCount ?? '—'}`
+      : status === 'not-run'
+        ? '尚未執行這項來源檢查。'
+        : '這項來源目前未能完成檢查。';
+    const diagnostic = source.message
+      ? `<details class="source-diagnostic"><summary>顯示技術診斷</summary><div>${esc(source.message)}</div></details>`
+      : '';
     return `<div class="source-card">
       <strong>${esc(source.name)}</strong>
       <a href="${esc(source.url)}" target="_blank" rel="noopener noreferrer">${esc(source.url)}</a>
-      <div>${esc(source.message || `候選結果：${source.candidateCount ?? '—'}`)}</div>
+      <div>${esc(summary)}</div>
+      ${diagnostic}
       <span class="status-pill status-${esc(status)}">${esc(status)}</span>
     </div>`;
   }).join('') : '<div class="empty-state">尚未執行監測 Action。</div>';

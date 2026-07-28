@@ -92,12 +92,11 @@
   <p class="copy-status" id="copyStatus" aria-live="polite"></p>
   <p class="copy-status" id="loadStatus"></p>
 
-  <section class="source-section">
-    <span class="eyebrow">Source health</span>
-    <h2>資料來源狀態</h2>
-    <p class="monitor-meta">來源失敗時會顯示警告，不會將「無法查詢」誤判為「沒有新資料」。</p>
+  <details class="source-section">
+    <summary>資料來源檢查細節</summary>
+    <p class="monitor-meta">此區供網站維護使用；來源暫時無法查詢時，不會被判定為沒有新資料。</p>
     <div class="source-grid" id="sourceGrid"></div>
-  </section>
+  </details>
 </main>
 
 <footer class="site-footer">

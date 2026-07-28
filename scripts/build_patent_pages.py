@@ -184,7 +184,6 @@ def detail_page(record: dict[str, Any], authors: dict[str, dict[str, Any]]) -> s
         + (f'<p><strong>Source-reported legal status:</strong> {esc(record.get("legalStatus"))}</p>' if record.get("legalStatus") else "")
         + (f'<div class="patent-classifications">{classifications}</div>' if classifications else "")
         + (f'<section><h5>Abstract</h5><p>{esc(record.get("abstract"))}</p></section>' if record.get("abstract") else "")
-        + '<p class="patent-source-note">Source-reported status is informational and is not legal advice.</p>'
     )
     description = record.get("abstract") or (
         f"{record.get('titleEn')} — {record.get('canonicalId')}, "
