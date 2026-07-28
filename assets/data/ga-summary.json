@@ -1,29 +1,29 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-27T04:53:18Z",
+  "generatedAt": "2026-07-28T04:29:48Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 244,
-    "activeUsers": 27,
-    "sessions": 54,
-    "engagementRate": 0.5555555555555556
+    "pageViews": 247,
+    "activeUsers": 29,
+    "sessions": 56,
+    "engagementRate": 0.5535714285714286
   },
   "monthlyTrend": [
     {
       "month": "2026-07",
-      "pageViews": 244,
-      "activeUsers": 27
+      "pageViews": 247,
+      "activeUsers": 29
     }
   ],
   "topPages": [
     {
       "title": "Publications | Wei-Hao Chiu",
       "path": "/publications.html",
-      "pageViews": 54,
-      "activeUsers": 10
+      "pageViews": 55,
+      "activeUsers": 11
     },
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
@@ -40,8 +40,8 @@
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 33,
-      "activeUsers": 21
+      "pageViews": 35,
+      "activeUsers": 23
     },
     {
       "title": "Research Projects | Wei-Hao Chiu",
@@ -113,8 +113,8 @@
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 34,
-      "activeUsers": 23
+      "sessions": 36,
+      "activeUsers": 25
     },
     {
       "channel": "Organic Search",
@@ -125,8 +125,8 @@
   "topCountries": [
     {
       "country": "Taiwan",
-      "activeUsers": 10,
-      "pageViews": 225
+      "activeUsers": 12,
+      "pageViews": 228
     },
     {
       "country": "United States",
@@ -172,11 +172,11 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 19
+      "activeUsers": 20
     },
     {
       "device": "mobile",
-      "activeUsers": 8
+      "activeUsers": 9
     }
   ],
   "academicEvents": [
