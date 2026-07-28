@@ -97,7 +97,33 @@ jobs:
             data/grb_projects_pending.json
           if git diff --cached --quiet; then
             echo "No GRB changes."
+            exit 0
           else
             git commit -m "Fill blank GRB project fields"
-            git push
           fi
+
+          # Generated diagnostics and other files outside the commit scope can
+          # prevent a rebase. Keep only the committed GRB update.
+          git reset --hard HEAD
+          git clean -fd
+
+          # Another content workflow or a manual edit may update main while
+          # this job is running. Rebase and retry instead of failing with
+          # "main -> main (fetch first)".
+          for attempt in 1 2 3 4; do
+            echo "Push attempt ${attempt}/4"
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort || true
+              echo "::error::GRB update conflicts with newer main-branch changes."
+              exit 1
+            fi
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Main changed during push; retrying safely."
+            sleep $((attempt * 3))
+          done
+
+          echo "::error::Unable to push GRB update after four attempts."
+          exit 1
