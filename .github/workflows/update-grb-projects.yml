@@ -40,7 +40,7 @@ jobs:
         run: |
           python scripts/update_grb_projects.py --self-test
           python scripts/update_grb_project_content.py --self-test
-      - name: Update GRB projects and funding UI
+      - name: Fill blank GRB fields from exact-format records
         run: python scripts/update_grb_projects.py --patch-ui --allow-network-failure
       - name: Capture direct GRB HTTP diagnostics
         continue-on-error: true
@@ -60,7 +60,7 @@ jobs:
         env:
           PYTHONUNBUFFERED: "1"
         run: python scripts/update_grb_projects_browser.py
-      - name: Update GRB abstracts, keywords and Projects UI
+      - name: Fill blank GRB content fields from exact labels
         env:
           PYTHONUNBUFFERED: "1"
         run: python scripts/update_grb_project_content.py --allow-network-failure
@@ -98,6 +98,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No GRB changes."
           else
-            git commit -m "Update GRB project metadata and content"
+            git commit -m "Fill blank GRB project fields"
             git push
           fi
