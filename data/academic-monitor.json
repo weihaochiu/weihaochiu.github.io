@@ -1,14 +1,14 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-07-28T02:36:04+00:00",
+  "generatedAt": "2026-07-28T10:42:55+08:00",
   "repository": "https://github.com/weihaochiu/weihaochiu.github.io",
-  "status": "partial",
+  "status": "completed",
   "summary": {
     "publications": 4,
     "patents": 17,
     "projects": 0,
     "totalCandidates": 21,
-    "sourceErrors": 2,
+    "sourceErrors": 0,
     "sourceWarnings": 0,
     "resolvedRecordsSuppressed": 0
   },
@@ -939,29 +939,31 @@
       "url": "https://pub.orcid.org/v3.0/0000-0003-4484-3117/works",
       "status": "success",
       "message": "",
-      "checkedAt": "2026-07-28T02:35:55+00:00",
+      "checkedAt": "2026-07-28T10:42:54+08:00",
       "candidateCount": 4
     },
     {
       "name": "Google Patents",
       "url": "https://patents.google.com/?q=inventor%3D%22Wei-Hao+Chiu%22",
-      "status": "error",
-      "message": "HTTP 503: Service Unavailable The previous candidate list was retained; these are cached candidates, not a successful new check.",
-      "checkedAt": "2026-07-28T02:36:01+00:00"
+      "status": "success",
+      "message": "",
+      "checkedAt": "2026-07-28T10:42:55+08:00",
+      "candidateCount": 8
     },
     {
       "name": "Google Patents",
       "url": "https://patents.google.com/?q=inventor%3D%22%E9%82%B1%E5%81%89%E8%B1%AA%22",
-      "status": "error",
-      "message": "HTTP 503: Service Unavailable The previous candidate list was retained; these are cached candidates, not a successful new check.",
-      "checkedAt": "2026-07-28T02:36:04+00:00"
+      "status": "success",
+      "message": "",
+      "checkedAt": "2026-07-28T10:42:55+08:00",
+      "candidateCount": 9
     },
     {
       "name": "GRB (Playwright snapshot)",
       "url": "https://www.grb.gov.tw/advq?queryStr=%E9%82%B1%E5%81%89%E8%B1%AA&queryType=grb05",
       "status": "success",
       "message": "GRB Playwright discovery completed; 0 pending record(s) require review.",
-      "checkedAt": "2026-07-28T02:36:04+00:00",
+      "checkedAt": "2026-07-28T10:42:55+08:00",
       "candidateCount": 0
     }
   ],
