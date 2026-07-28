@@ -11,6 +11,9 @@ on:
       - "data/academic_monitor_review_decisions.json"
       - "data/publications.json"
       - "data/patents.json"
+      - "data/patent_families.json"
+      - "data/patent_metadata.json"
+      - "data/authors.json"
       - "data/projects.json"
       - "data/grb_projects_pending.json"
       - "data/grb_projects_snapshot.json"
@@ -18,6 +21,9 @@ on:
       - "scripts/check_academic_monitor.py"
       - "scripts/check_publications.py"
       - "scripts/check_patents.py"
+      - "scripts/patent_common.py"
+      - "scripts/sync_patent_inventors.py"
+      - "scripts/validate_patents.py"
       - "scripts/check_projects.py"
       - ".github/workflows/check-academic-monitor.yml"
 
@@ -50,7 +56,10 @@ jobs:
           python-version: "3.12"
 
       - name: Check publications, patents and GRB projects
-        run: python scripts/check_academic_monitor.py
+        run: |
+          python scripts/sync_patent_inventors.py --check
+          python scripts/validate_patents.py
+          python scripts/check_academic_monitor.py
 
       - name: Validate monitor JSON
         run: |

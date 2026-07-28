@@ -1,0 +1,69 @@
+name: Update patent metadata
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Monthly on the first day at 09:30 Asia/Taipei (01:30 UTC).
+    - cron: "30 1 1 * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: website-content-write
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Refresh exact-record metadata
+        run: python scripts/update_patent_metadata.py
+
+      - name: Validate patent data
+        run: |
+          python -m json.tool data/patent_metadata.json > /dev/null
+          python scripts/sync_patent_inventors.py --check
+          python scripts/validate_patents.py
+
+      - name: Commit metadata cache
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- data/patent_metadata.json; then
+            echo "No patent metadata changes."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/patent_metadata.json
+          git commit -m "Update patent metadata"
+
+          for attempt in 1 2 3 4; do
+            echo "Push attempt ${attempt}/4"
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort || true
+              echo "::error::Patent metadata conflicts with newer main-branch changes."
+              exit 1
+            fi
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Main changed during push; retrying safely."
+            sleep $((attempt * 3))
+          done
+
+          echo "::error::Unable to push patent metadata after four attempts."
+          exit 1

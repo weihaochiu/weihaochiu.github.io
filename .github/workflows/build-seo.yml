@@ -7,17 +7,25 @@ on:
     paths:
       - "data/publications.json"
       - "data/authors.json"
+      - "data/patents.json"
+      - "data/patent_families.json"
+      - "data/patent_metadata.json"
       - "data/openalex_publication_metrics.json"
       - "data/crossref_publication_metrics.json"
       - "data/mendeley_metrics.json"
       - "data/unpaywall.json"
       - "data/publication_taxonomy.json"
       - "scripts/build_seo.py"
+      - "scripts/build_patent_pages.py"
+      - "scripts/patent_common.py"
       - "scripts/sync_publication_authors.py"
+      - "scripts/sync_patent_inventors.py"
+      - "scripts/validate_patents.py"
       - "scripts/update_publication_authorships.py"
       - "assets/css/styles.css"
       - "assets/js/app.js"
       - "publication-insights-4d8c7a.html"
+      - "patents.html"
       - ".github/workflows/build-seo.yml"
 
 permissions:
@@ -25,7 +33,6 @@ permissions:
 
 concurrency:
   group: website-content-write
-  queue: max
   cancel-in-progress: false
 
 jobs:
@@ -44,14 +51,22 @@ jobs:
       - name: Synchronize publication authors
         run: python scripts/sync_publication_authors.py
 
-      - name: Generate v23 website files
-        run: python scripts/build_seo.py
+      - name: Synchronize patent inventors
+        run: python scripts/sync_patent_inventors.py
 
-      - name: Verify generated publication metadata
+      - name: Generate v23 website files
+        run: |
+          python scripts/build_seo.py
+          python scripts/build_patent_pages.py
+
+      - name: Verify generated publication and patent metadata
         run: |
           python scripts/update_publication_authorships.py --check --allow-missing
           python scripts/sync_publication_authors.py --check
+          python scripts/sync_patent_inventors.py --check
+          python scripts/validate_patents.py
           python scripts/build_seo.py
+          python scripts/build_patent_pages.py
           python - <<'PY'
           import json
           import re
@@ -77,9 +92,28 @@ jobs:
               errors.append(f'citation marker pairs: expected 1/1, found {marker_starts}/{marker_ends}')
           if 'PUBLICATION_AUTHORSHIP_INSIGHTS_START' not in insights:
               errors.append('Publication Analytics authorship extension is missing')
+
+          patents = json.loads((root / 'data/patents.json').read_text(encoding='utf-8'))
+          patent_page = (root / 'patents.html').read_text(encoding='utf-8')
+          patent_static_cards = len(re.findall(r'<article class="collection-card patent-card"', patent_page))
+          patent_detail_pages = len(list((root / 'patents').glob('*.html')))
+          patent_marker_starts = patent_page.count('<!-- PATENT_STATIC_START -->')
+          patent_marker_ends = patent_page.count('<!-- PATENT_STATIC_END -->')
+          if patent_static_cards != len(patents):
+              errors.append(f'patent static cards: expected {len(patents)}, found {patent_static_cards}')
+          if patent_detail_pages != len(patents):
+              errors.append(f'patent detail pages: expected {len(patents)}, found {patent_detail_pages}')
+          if (patent_marker_starts, patent_marker_ends) != (1, 1):
+              errors.append(
+                  f'patent static marker pairs: expected 1/1, '
+                  f'found {patent_marker_starts}/{patent_marker_ends}'
+              )
           if errors:
               raise SystemExit('\n'.join(errors))
-          print(f'Verified {expected} publications; authorship-aware metadata is idempotent.')
+          print(
+              f'Verified {expected} publications and {len(patents)} patent documents; '
+              'generated metadata is idempotent.'
+          )
           PY
 
       - name: Commit generated files
@@ -88,7 +122,7 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -- '*.html' publications assets/js/app.js assets/css/styles.css data/authors.json data/site_meta.json robots.txt sitemap.xml llms.txt
+          git add -- '*.html' publications patents assets/js/app.js assets/css/styles.css data/authors.json data/site_meta.json robots.txt sitemap.xml llms.txt
 
           if git diff --cached --quiet; then
             echo "No generated changes."
