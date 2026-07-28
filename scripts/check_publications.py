@@ -47,20 +47,22 @@ def run() -> dict:
         payload = request_json(orcid_url, accept="application/vnd.orcid+json")
         groups = payload.get("group", []) or []
         for group in groups:
+            group = group or {}
             summaries = group.get("work-summary", []) or []
             summary = summaries[0] if summaries else {}
-            external_ids = summary.get("external-ids", {}).get("external-id", []) or []
+            summary = summary or {}
+            external_ids = (summary.get("external-ids") or {}).get("external-id", []) or []
             doi = ""
             for external in external_ids:
+                external = external or {}
                 if str(external.get("external-id-type", "")).lower() == "doi":
                     doi = normalize_doi(external.get("external-id-value"))
                     break
 
-            orcid_title = (
-                summary.get("title", {})
-                .get("title", {})
-                .get("value", "")
-            )
+            title_node = summary.get("title") or {}
+            nested_title = title_node.get("title") or {}
+            orcid_title = nested_title.get("value") or ""
+            journal_node = summary.get("journal-title") or {}
             key = doi or normalize_title(orcid_title)
             if not key or key in seen:
                 continue
@@ -83,7 +85,7 @@ def run() -> dict:
                 ],
                 "doi": doi,
                 "title": orcid_title,
-                "journal": first(summary.get("journal-title", {}).get("value")),
+                "journal": first(journal_node.get("value")),
                 "publicationDate": "",
                 "authors": [],
                 "publisher": "",

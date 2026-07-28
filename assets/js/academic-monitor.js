@@ -1,17 +1,74 @@
 (() => {
 'use strict';
 
-const esc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({
-  '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
-})[ch]);
-
+const STORAGE_KEY = 'academicMonitorReviews.v2';
+const TYPES = ['publications', 'patents', 'projects'];
 const labels = {
   publications: '新論文',
   patents: '新專利',
   projects: '新 GRB 計畫'
 };
+const targetFiles = {
+  publications: 'data/publications.json',
+  patents: 'data/patents.json',
+  projects: 'data/projects.json'
+};
+const statuses = {
+  confirmed_mine: '已確認是本人的',
+  confirmed_not_mine: '已確認非本人的',
+  unconfirmed: '尚未確認'
+};
+
+const esc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({
+  '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+})[ch]);
 
 let payload = null;
+let reviews = loadReviews();
+
+function loadReviews() {
+  try {
+    const value = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+    return value && typeof value === 'object' && !Array.isArray(value) ? value : {};
+  } catch (_) {
+    return {};
+  }
+}
+
+function saveReviews() {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(reviews));
+  } catch (_) {
+    showCopyStatus('瀏覽器無法保存確認狀態；本頁仍可複製，但重新整理後可能遺失。');
+  }
+}
+
+function normalize(value) {
+  return String(value || '').toLowerCase().replace(/[^a-z0-9]+/g, '');
+}
+
+function keyOf(type, item) {
+  if (item.reviewKey) return item.reviewKey;
+  if (type === 'publications') {
+    return item.doi
+      ? `publication:doi:${String(item.doi).toLowerCase().replace(/^https?:\/\/(?:dx\.)?doi\.org\//, '')}`
+      : `publication:title:${normalize(item.title)}`;
+  }
+  if (type === 'patents') {
+    return item.number
+      ? `patent:number:${String(item.number).toUpperCase().replace(/[^A-Z0-9]/g, '')}`
+      : `patent:title:${normalize(item.titleEn || item.titleZh)}`;
+  }
+  return item.grbId
+    ? `project:grb-id:${item.grbId}`
+    : item.number
+      ? `project:number:${String(item.number).toUpperCase().replace(/[^A-Z0-9]/g, '')}`
+      : `project:title:${normalize(item.titleEn || item.titleZh)}`;
+}
+
+function reviewOf(type, item) {
+  return reviews[keyOf(type, item)] || {status: 'unconfirmed', note: '', reviewedAt: ''};
+}
 
 function formatDate(value) {
   if (!value) return '尚未執行';
@@ -51,22 +108,41 @@ function fieldLines(type, item) {
   ];
 }
 
-function sourceText(sources) {
-  return (sources || []).map(source => `- ${source.name}: ${source.url}`).join('\n');
+function decisionEntry(type, item) {
+  const review = reviewOf(type, item);
+  return {
+    reviewKey: keyOf(type, item),
+    status: review.status || 'unconfirmed',
+    statusLabel: statuses[review.status] || statuses.unconfirmed,
+    recordType: type.replace(/s$/, ''),
+    targetFile: targetFiles[type],
+    userNote: review.note || '',
+    reviewedAt: review.reviewedAt || '',
+    record: item
+  };
 }
 
-function copyText(type, items) {
-  const heading = labels[type];
-  const blocks = items.map((item, index) => {
-    const fields = fieldLines(type, item)
-      .filter(([, value]) => Array.isArray(value) ? value.length : String(value ?? '').trim())
-      .map(([name, value]) => `${name}:\n${Array.isArray(value) ? value.join('; ') : value}`)
-      .join('\n\n');
-    const notes = (item.detectionNotes || []).map(note => `- ${note}`).join('\n');
-    return `【${heading} ${index + 1}】\n${fields}\n\n資料來源：\n${sourceText(item.sources)}\n\n偵測說明：\n${notes}`;
-  }).join('\n\n------------------------------\n\n');
-
-  return `請更新我的學術網站：\nRepository: ${payload.repository}\n資料取得時間：${payload.generatedAt || '尚未執行'}\n監測類型：${heading}\n\n${blocks}\n\n${payload.copyInstructions?.finalLine || ''}`.trim();
+function copyText(entries, includeInstructions = true) {
+  const body = {
+    schemaVersion: 1,
+    repository: payload.repository,
+    monitorGeneratedAt: payload.generatedAt || '',
+    copiedAt: new Date().toISOString(),
+    decisionRegistry: 'data/academic_monitor_review_decisions.json',
+    decisions: entries
+  };
+  const instructions = includeInstructions
+    ? [
+        '請依下方確認結果更新網站 JSON：',
+        '1. 所有 confirmed_mine 與 confirmed_not_mine 都寫入 data/academic_monitor_review_decisions.json，保留 reviewKey、完整 record、userNote 與時間。',
+        '2. confirmed_mine：先查核來源，再更新 targetFile；只補空白或明確經使用者確認的欄位，不猜測資料。',
+        '3. confirmed_not_mine：不要寫入成果 JSON；以 reviewKey 建立永久排除紀錄，後續監控不得再次要求確認。',
+        '4. unconfirmed：不可修改成果 JSON，也不可建立永久排除。',
+        '5. 同一 reviewKey 若已有紀錄，以這次結果更新；不要產生重複紀錄。',
+        payload.copyInstructions?.finalLine || ''
+      ].join('\n')
+    : '';
+  return `${instructions}\n\n【ACADEMIC_MONITOR_REVIEW_JSON】\n${JSON.stringify(body, null, 2)}`.trim();
 }
 
 async function writeClipboard(text) {
@@ -88,7 +164,44 @@ function showCopyStatus(message) {
   const status = document.getElementById('copyStatus');
   status.textContent = message;
   window.clearTimeout(showCopyStatus.timer);
-  showCopyStatus.timer = window.setTimeout(() => status.textContent = '', 3500);
+  showCopyStatus.timer = window.setTimeout(() => status.textContent = '', 4500);
+}
+
+function allEntries() {
+  return TYPES.flatMap(type => (payload[type] || []).map(item => decisionEntry(type, item)));
+}
+
+function updateReviewSummary() {
+  const entries = allEntries();
+  const mine = entries.filter(row => row.status === 'confirmed_mine').length;
+  const notMine = entries.filter(row => row.status === 'confirmed_not_mine').length;
+  const confirmed = mine + notMine;
+  document.getElementById('summaryMine').textContent = mine;
+  document.getElementById('summaryNotMine').textContent = notMine;
+  document.getElementById('summaryUnconfirmed').textContent = entries.length - confirmed;
+  document.getElementById('copyReviewed').disabled = !confirmed;
+  document.getElementById('clearReviews').disabled = !confirmed &&
+    !entries.some(row => row.userNote);
+}
+
+function reviewControls(type, item, index) {
+  const review = reviewOf(type, item);
+  const key = keyOf(type, item);
+  const buttons = Object.entries(statuses).map(([status, label]) => {
+    const selected = review.status === status;
+    return `<button class="review-choice status-${esc(status)}${selected ? ' is-selected' : ''}"
+      type="button" data-review-status="${esc(status)}" data-review-type="${esc(type)}"
+      data-index="${index}" aria-pressed="${selected}">${esc(label)}</button>`;
+  }).join('');
+  return `<div class="review-block" data-review-key="${esc(key)}">
+    <div class="review-label">這筆資料是否屬於您？</div>
+    <div class="review-choices" role="group" aria-label="資料確認狀態">${buttons}</div>
+    <label class="review-note-label">
+      補充說明（選填）
+      <textarea class="review-note" data-review-note="${esc(type)}" data-index="${index}"
+        rows="2" placeholder="例如：同名不同人、確認的機構或需要補查的資訊">${esc(review.note || '')}</textarea>
+    </label>
+  </div>`;
 }
 
 function renderItem(type, item, index) {
@@ -101,14 +214,19 @@ function renderItem(type, item, index) {
     `<a href="${esc(source.url)}" target="_blank" rel="noopener noreferrer">${esc(source.name)} ↗</a>`
   ).join('');
   const notes = (item.detectionNotes || []).map(note => `<li>${esc(note)}</li>`).join('');
-  return `<article class="record-card">
-    <span class="record-type">${esc(item.confidence || 'possible')}</span>
+  const review = reviewOf(type, item);
+  return `<article class="record-card review-${esc(review.status)}">
+    <div class="record-topline">
+      <span class="record-type">${esc(item.confidence || 'possible')}</span>
+      <span class="record-review-status">${esc(statuses[review.status] || statuses.unconfirmed)}</span>
+    </div>
     <h3>${esc(titleOf(item))}</h3>
     <div class="record-meta">${fields}</div>
     ${notes ? `<ul class="record-note">${notes}</ul>` : ''}
     <div class="record-sources">${sources}</div>
+    ${reviewControls(type, item, index)}
     <div class="record-actions">
-      <button class="monitor-button" type="button" data-copy-one="${type}" data-index="${index}">複製此筆</button>
+      <button class="monitor-button" type="button" data-copy-one="${type}" data-index="${index}">複製此筆含確認狀態</button>
     </div>
   </article>`;
 }
@@ -138,31 +256,88 @@ function renderSources() {
   }).join('') : '<div class="empty-state">尚未執行監測 Action。</div>';
 }
 
+function setReview(type, index, status) {
+  const item = payload[type][index];
+  const key = keyOf(type, item);
+  const existing = reviewOf(type, item);
+  if (status === 'unconfirmed' && !existing.note) {
+    delete reviews[key];
+  } else {
+    reviews[key] = {
+      status,
+      note: existing.note || '',
+      reviewedAt: status === 'unconfirmed' ? '' : new Date().toISOString()
+    };
+  }
+  saveReviews();
+  renderPanel(type);
+  updateReviewSummary();
+}
+
+function setReviewNote(type, index, note) {
+  const item = payload[type][index];
+  const key = keyOf(type, item);
+  const existing = reviewOf(type, item);
+  if (!note.trim() && existing.status === 'unconfirmed') {
+    delete reviews[key];
+  } else {
+    reviews[key] = {...existing, note};
+  }
+  saveReviews();
+  updateReviewSummary();
+}
+
 function bindActions() {
   document.addEventListener('click', async event => {
+    const choice = event.target.closest('[data-review-status]');
+    if (choice) {
+      setReview(choice.dataset.reviewType, Number(choice.dataset.index), choice.dataset.reviewStatus);
+      return;
+    }
     const one = event.target.closest('[data-copy-one]');
     if (one) {
       const type = one.dataset.copyOne;
       const item = payload[type][Number(one.dataset.index)];
-      await writeClipboard(copyText(type, [item]));
-      showCopyStatus('已複製 1 筆資料，可直接貼到 ChatGPT。');
+      await writeClipboard(copyText([decisionEntry(type, item)]));
+      showCopyStatus('已複製 1 筆資料與確認狀態，可直接貼到 ChatGPT。');
       return;
     }
     const group = event.target.closest('[data-copy-group]');
     if (group) {
       const type = group.dataset.copyGroup;
-      await writeClipboard(copyText(type, payload[type] || []));
-      showCopyStatus(`已複製 ${(payload[type] || []).length} 筆資料，可直接貼到 ChatGPT。`);
+      const entries = (payload[type] || []).map(item => decisionEntry(type, item));
+      await writeClipboard(copyText(entries));
+      showCopyStatus(`已複製 ${entries.length} 筆資料與確認狀態。`);
+      return;
+    }
+    if (event.target.closest('#copyReviewed')) {
+      const entries = allEntries().filter(row => row.status !== 'unconfirmed');
+      if (!entries.length) return;
+      await writeClipboard(copyText(entries));
+      showCopyStatus(`已複製 ${entries.length} 筆已確認結果，可直接貼到 ChatGPT。`);
       return;
     }
     if (event.target.closest('#copyAll')) {
-      const sections = ['publications','patents','projects']
-        .filter(type => (payload[type] || []).length)
-        .map(type => copyText(type, payload[type]));
-      if (!sections.length) return;
-      await writeClipboard(sections.join('\n\n================================\n\n'));
-      showCopyStatus(`已複製 ${payload.summary.totalCandidates} 筆待確認資料。`);
+      const entries = allEntries();
+      if (!entries.length) return;
+      await writeClipboard(copyText(entries));
+      showCopyStatus(`已複製 ${entries.length} 筆候選資料（含尚未確認項目）。`);
+      return;
     }
+    if (event.target.closest('#clearReviews')) {
+      if (!window.confirm('要清除這個瀏覽器中目前候選資料的所有確認狀態與備註嗎？')) return;
+      allEntries().forEach(row => delete reviews[row.reviewKey]);
+      saveReviews();
+      TYPES.forEach(renderPanel);
+      updateReviewSummary();
+      showCopyStatus('已清除本機確認狀態；伺服器端判定 JSON 不受影響。');
+    }
+  });
+
+  document.addEventListener('input', event => {
+    const note = event.target.closest('[data-review-note]');
+    if (!note) return;
+    setReviewNote(note.dataset.reviewNote, Number(note.dataset.index), note.value);
   });
 }
 
@@ -180,9 +355,10 @@ async function init() {
     document.getElementById('summaryErrors').textContent =
       (payload.summary?.sourceErrors ?? 0) + (payload.summary?.sourceWarnings ?? 0);
     document.getElementById('summaryTotal').textContent = payload.summary?.totalCandidates ?? 0;
-    ['publications','patents','projects'].forEach(renderPanel);
+    TYPES.forEach(renderPanel);
     renderSources();
     document.getElementById('copyAll').disabled = !(payload.summary?.totalCandidates);
+    updateReviewSummary();
   } catch (error) {
     document.getElementById('loadStatus').textContent = `無法載入監測資料：${error.message}`;
     document.getElementById('loadStatus').className = 'copy-status status-error';

@@ -73,6 +73,33 @@ def normalize_identifier(value: Any) -> str:
 def normalize_title(value: Any) -> str:
     return re.sub(r"[^a-z0-9]+", "", str(value or "").lower())
 
+def review_key(record_type: str, item: dict[str, Any]) -> str:
+    """Return a stable key used by the review registry and browser UI."""
+    singular = {
+        "publications": "publication",
+        "patents": "patent",
+        "projects": "project",
+    }.get(record_type, record_type.rstrip("s"))
+    if singular == "publication":
+        identity_type = "doi" if item.get("doi") else "title"
+        identity = normalize_doi(item.get("doi")) or normalize_title(item.get("title"))
+    elif singular == "patent":
+        identity_type = "number" if item.get("number") else "title"
+        identity = normalize_identifier(item.get("number")) or normalize_title(
+            item.get("titleEn") or item.get("titleZh")
+        )
+    else:
+        if item.get("grbId"):
+            identity_type = "grb-id"
+            identity = str(item.get("grbId")).strip()
+        elif item.get("number"):
+            identity_type = "number"
+            identity = normalize_identifier(item.get("number"))
+        else:
+            identity_type = "title"
+            identity = normalize_title(item.get("titleEn") or item.get("titleZh"))
+    return f"{singular}:{identity_type}:{identity}" if identity else ""
+
 def first(value: Any, default: str = "") -> str:
     if isinstance(value, list):
         return str(value[0]) if value else default

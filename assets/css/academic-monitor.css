@@ -6,13 +6,18 @@
 .monitor-button{appearance:none;border:1px solid #b9c5cf;border-radius:7px;background:#fff;color:var(--brand,#234a70);padding:9px 12px;font:inherit;font-size:.75rem;font-weight:750;cursor:pointer;text-decoration:none}
 .monitor-button:hover,.monitor-button:focus-visible{border-color:var(--brand,#234a70);background:#edf2f6}
 .monitor-button.primary{background:var(--brand,#234a70);border-color:var(--brand,#234a70);color:#fff}
+.monitor-button.danger{border-color:#d6b7b7;color:#874040}
 .monitor-button[disabled]{opacity:.5;cursor:not-allowed}
 .monitor-meta{color:#647382;font-size:.73rem}
-.monitor-summary{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-bottom:22px}
+.monitor-summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:14px}
 .monitor-summary-card,.monitor-panel,.record-card,.source-card{border:1px solid #dfe6ec;border-radius:9px;background:#fff}
 .monitor-summary-card{padding:17px}
 .monitor-summary-card span{display:block;color:#647382;font-size:.66rem;text-transform:uppercase;letter-spacing:.05em}
 .monitor-summary-card strong{display:block;margin-top:5px;font-size:1.5rem;color:#23313d}
+.monitor-summary-card.review-mine{border-color:#a7d3bf;background:#f3faf6}
+.monitor-summary-card.review-not-mine{border-color:#e0b7b7;background:#fff7f7}
+.monitor-summary-card.review-unconfirmed{border-color:#d7c798;background:#fffaf0}
+.review-help{margin:0 0 22px;padding:13px 15px;border:1px solid #c9d7e2;border-radius:8px;background:#f4f8fb;color:#435a6c;font-size:.73rem;line-height:1.7}
 .monitor-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
 .monitor-panel{padding:18px;min-width:0}
 .monitor-panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:12px}
@@ -20,13 +25,29 @@
 .monitor-count{display:inline-grid;place-items:center;min-width:31px;height:31px;border-radius:999px;background:#edf2f6;color:#234a70;font-weight:800}
 .monitor-list{display:grid;gap:12px}
 .record-card{padding:14px;background:#fbfcfd}
+.record-card.review-confirmed_mine{border-color:#8dc6ad;background:#f7fcf9}
+.record-card.review-confirmed_not_mine{border-color:#d9a8a8;background:#fff9f9}
 .record-card h3{margin:0 0 7px;font-size:.9rem;line-height:1.4}
+.record-topline{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:5px}
 .record-type{font-size:.63rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#647382}
+.record-review-status{padding:3px 7px;border-radius:999px;background:#edf0f2;color:#5b6872;font-size:.61rem;font-weight:800}
 .record-meta{display:grid;gap:4px;margin:8px 0;color:#52616e;font-size:.72rem}
 .record-note{margin:8px 0;padding-left:17px;color:#6b5a42;font-size:.68rem}
 .record-sources{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
 .record-sources a{font-size:.66rem;font-weight:700;color:#245f96;text-decoration:none}
 .record-actions{display:flex;gap:7px;flex-wrap:wrap}
+.review-block{margin:12px 0;padding:11px;border:1px solid #dde5eb;border-radius:8px;background:#fff}
+.review-label{margin-bottom:7px;color:#394b59;font-size:.7rem;font-weight:800}
+.review-choices{display:grid;grid-template-columns:1fr;gap:6px}
+.review-choice{appearance:none;border:1px solid #c3cdd5;border-radius:6px;background:#fff;color:#44535f;padding:8px 9px;font:inherit;font-size:.68rem;font-weight:750;text-align:left;cursor:pointer}
+.review-choice:hover,.review-choice:focus-visible{border-color:#617b91;background:#f3f7fa}
+.review-choice.is-selected{box-shadow:inset 0 0 0 2px currentColor}
+.review-choice.status-confirmed_mine.is-selected{border-color:#39775b;background:#e8f5ed;color:#285b43}
+.review-choice.status-confirmed_not_mine.is-selected{border-color:#9b4949;background:#faeaea;color:#7b3434}
+.review-choice.status-unconfirmed.is-selected{border-color:#927325;background:#faf3df;color:#725915}
+.review-note-label{display:block;margin-top:9px;color:#5d6c78;font-size:.66rem;font-weight:700}
+.review-note{display:block;width:100%;margin-top:5px;box-sizing:border-box;resize:vertical;border:1px solid #cbd5dc;border-radius:6px;padding:7px 8px;background:#fff;color:#263743;font:inherit;font-size:.68rem;line-height:1.45}
+.review-note:focus{outline:2px solid #8ab1cf;outline-offset:1px}
 .empty-state{padding:18px 4px;color:#577b72;font-size:.76rem}
 .source-section{margin-top:22px}
 .source-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}

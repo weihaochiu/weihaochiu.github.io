@@ -37,7 +37,9 @@
     </div>
     <div class="monitor-actions">
       <a class="monitor-button" href="publication-insights-4d8c7a.html">Publication Analytics</a>
-      <button class="monitor-button primary" id="copyAll" type="button" disabled>複製全部待確認資料</button>
+      <button class="monitor-button primary" id="copyReviewed" type="button" disabled>複製已確認結果</button>
+      <button class="monitor-button" id="copyAll" type="button" disabled>複製全部候選資料</button>
+      <button class="monitor-button danger" id="clearReviews" type="button" disabled>清除本機確認</button>
     </div>
   </div>
 
@@ -47,6 +49,15 @@
     <div class="monitor-summary-card"><span>新 GRB 計畫</span><strong id="summaryProjects">—</strong></div>
     <div class="monitor-summary-card"><span>總待確認數</span><strong id="summaryTotal">—</strong></div>
     <div class="monitor-summary-card"><span>來源警告／錯誤</span><strong id="summaryErrors">—</strong></div>
+    <div class="monitor-summary-card review-mine"><span>已確認是本人的</span><strong id="summaryMine">0</strong></div>
+    <div class="monitor-summary-card review-not-mine"><span>已確認非本人的</span><strong id="summaryNotMine">0</strong></div>
+    <div class="monitor-summary-card review-unconfirmed"><span>尚未確認</span><strong id="summaryUnconfirmed">—</strong></div>
+  </div>
+
+  <div class="review-help">
+    <strong>確認方式：</strong>逐筆選擇「已確認是本人的」、「已確認非本人的」或保留「尚未確認」。
+    確認結果會先保存在這個瀏覽器；按「複製已確認結果」貼回 ChatGPT 後，會更新判定 JSON。
+    「已確認非本人的」將建立永久排除資料，日後不再重複要求確認。
   </div>
 
   <div class="monitor-grid">
@@ -78,7 +89,7 @@
     </section>
   </div>
 
-  <p class="copy-status" id="copyStatus"></p>
+  <p class="copy-status" id="copyStatus" aria-live="polite"></p>
   <p class="copy-status" id="loadStatus"></p>
 
   <section class="source-section">

@@ -1,27 +1,70 @@
-"""Check GRB project records conservatively.
+"""Expose GRB discovery results from the dedicated Playwright updater.
 
-GRB pages can change and may return unrelated content. This module only accepts
-records that expose a planDetail id and a project-number-like value. Any
-unexpected response becomes a visible source error.
+The GRB site is JavaScript-driven. The academic monitor therefore consumes the
+structured pending/snapshot files produced by update_grb_projects_browser.py
+instead of issuing unsupported ``/search?query=...`` requests.
 """
 from __future__ import annotations
 
-import html
-import re
-import urllib.parse
+from datetime import datetime
 
 from academic_monitor_common import (
     normalize_identifier,
     read_json,
-    request_text,
-    safe_error,
     source_result,
 )
 
-NAMES = ["邱偉豪", "Wei-Hao Chiu"]
+DEFAULT_SEARCH_URL = (
+    "https://www.grb.gov.tw/advq?"
+    "queryStr=%E9%82%B1%E5%81%89%E8%B1%AA&queryType=grb05"
+)
 
-def clean(value: str) -> str:
-    return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", value))).strip()
+
+def snapshot_age_days(checked_at: str) -> int | None:
+    try:
+        checked = datetime.fromisoformat(str(checked_at))
+        now = datetime.now().astimezone()
+        return max(0, (now - checked.astimezone()).days)
+    except (TypeError, ValueError):
+        return None
+
+
+def normalize_pending(row: dict) -> dict:
+    parsed = row.get("parsed") if isinstance(row.get("parsed"), dict) else row
+    grb_id = str(parsed.get("grbId") or row.get("grbId") or "").strip()
+    detail_url = (
+        parsed.get("url")
+        or row.get("url")
+        or (f"https://www.grb.gov.tw/search/planDetail?id={grb_id}" if grb_id else "")
+    )
+    search_url = str(row.get("searchUrl") or DEFAULT_SEARCH_URL)
+    return {
+        "type": "project",
+        "confidence": "possible",
+        "grbId": grb_id,
+        "number": str(parsed.get("number") or ""),
+        "titleZh": str(parsed.get("titleZh") or ""),
+        "titleEn": str(parsed.get("titleEn") or ""),
+        "roleZh": str(parsed.get("roleZh") or ""),
+        "role": str(parsed.get("role") or ""),
+        "agencyZh": str(parsed.get("agencyZh") or ""),
+        "agencyEn": str(parsed.get("agencyEn") or ""),
+        "institutionZh": str(parsed.get("institutionZh") or ""),
+        "period": str(parsed.get("period") or ""),
+        "startDate": str(parsed.get("startDate") or ""),
+        "endDate": str(parsed.get("endDate") or ""),
+        "fundingAmountTwd": parsed.get("fundingAmountTwd"),
+        "abstractZh": str(parsed.get("abstractZh") or ""),
+        "detectionNotes": [
+            "This exact GRB record was discovered by the JavaScript-capable Playwright updater.",
+            "It is not present in the current projects JSON and requires manual confirmation.",
+        ],
+        "sources": [
+            {"name": "GRB project detail", "url": detail_url},
+            {"name": "GRB researcher search", "url": search_url},
+        ],
+    }
+
 
 def run() -> dict:
     current = read_json("projects.json", [])
@@ -31,70 +74,57 @@ def run() -> dict:
         if row.get("number")
     }
     known_ids = {str(row.get("grbId")) for row in current if row.get("grbId")}
+    pending = read_json("grb_projects_pending.json", [])
+    snapshot = read_json("grb_projects_snapshot.json", {})
+
+    discovery = snapshot.get("discovery", []) if isinstance(snapshot, dict) else []
+    successful = next(
+        (row for row in discovery if isinstance(row, dict) and row.get("ok")),
+        None,
+    )
+    search_url = str((successful or {}).get("url") or DEFAULT_SEARCH_URL)
 
     items = []
-    sources = []
     seen = set()
+    for row in pending if isinstance(pending, list) else []:
+        if not isinstance(row, dict):
+            continue
+        item = normalize_pending(row)
+        grb_id = item["grbId"]
+        number = normalize_identifier(item["number"])
+        identity = grb_id or number
+        if not identity or identity in seen:
+            continue
+        seen.add(identity)
+        if grb_id in known_ids or (number and number in known_numbers):
+            continue
+        item["sources"][1]["url"] = search_url
+        items.append(item)
 
-    for name in NAMES:
-        # GRB currently exposes search pages rather than a documented public API.
-        search_url = "https://www.grb.gov.tw/search"
-        display_url = search_url + "?" + urllib.parse.urlencode({"query": name})
-        try:
-            text = request_text(display_url)
-            detail_ids = set(re.findall(r"planDetail\?id=(\d+)", text))
-            # Common NSTC/MOST/NSC project-number forms.
-            number_matches = set(re.findall(
-                r"\b(?:NSTC|MOST|NSC)\s*[-–]?\s*\d{2,3}\s*[-–]\s*\d{3,4}\s*[-–]\s*[A-Z]\s*[-–]?\s*\d{2,4}(?:\s*[-–]\s*[A-Z0-9]+)*\b",
-                clean(text),
-                flags=re.I,
-            ))
+    checked_at = snapshot.get("checkedAt", "") if isinstance(snapshot, dict) else ""
+    age_days = snapshot_age_days(checked_at)
+    if successful and age_days is not None and age_days <= 5:
+        status = "success"
+        message = (
+            f"GRB Playwright discovery completed; {len(items)} pending "
+            "record(s) require review."
+        )
+    elif successful:
+        status = "warning"
+        message = (
+            f"Last successful Playwright discovery is {age_days if age_days is not None else 'an unknown number of'} "
+            f"day(s) old; {len(items)} pending record(s) require review."
+        )
+    else:
+        status = "warning"
+        message = (
+            "No successful structured GRB Playwright discovery snapshot is available. "
+            "The monitor did not fall back to the unsupported query URL."
+        )
 
-            # Do not manufacture a relationship between ids and numbers when
-            # the page structure does not expose one clearly.
-            if detail_ids and number_matches:
-                for grb_id in sorted(detail_ids):
-                    if grb_id in known_ids or grb_id in seen:
-                        continue
-                    seen.add(grb_id)
-                    number = next(iter(sorted(number_matches)), "")
-                    if number and normalize_identifier(number) in known_numbers:
-                        continue
-                    detail_url = f"https://www.grb.gov.tw/search/planDetail?id={grb_id}"
-                    items.append({
-                        "type": "project",
-                        "confidence": "possible",
-                        "grbId": grb_id,
-                        "number": number,
-                        "titleZh": "",
-                        "titleEn": "",
-                        "roleZh": "",
-                        "role": "",
-                        "agencyZh": "",
-                        "agencyEn": "",
-                        "institutionZh": "",
-                        "period": "",
-                        "startDate": "",
-                        "endDate": "",
-                        "fundingAmountTwd": None,
-                        "abstractZh": "",
-                        "detectionNotes": [
-                            "GRB plan id is not present in the current projects JSON.",
-                            "The public GRB search page did not expose enough structured metadata; verify the detail page before adding.",
-                        ],
-                        "sources": [
-                            {"name": "GRB project detail", "url": detail_url},
-                            {"name": "GRB search", "url": display_url},
-                        ],
-                    })
-            sources.append(source_result(
-                "GRB",
-                display_url,
-                "success" if detail_ids else "warning",
-                "" if detail_ids else "No structured planDetail links were detected; the GRB page layout or access policy may have changed.",
-                count=len(detail_ids),
-            ))
-        except Exception as error:
-            sources.append(source_result("GRB", display_url, "error", safe_error(error)))
-
-    return {"items": items, "sources": sources}
+    return {
+        "items": items,
+        "sources": [
+            source_result("GRB (Playwright snapshot)", search_url, status, message, len(items))
+        ],
+    }

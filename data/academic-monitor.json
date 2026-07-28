@@ -1,17 +1,153 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-07-27T12:48:41+08:00",
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-28T02:36:04+00:00",
   "repository": "https://github.com/weihaochiu/weihaochiu.github.io",
   "status": "partial",
   "summary": {
-    "publications": 0,
+    "publications": 4,
     "patents": 17,
     "projects": 0,
-    "totalCandidates": 17,
-    "sourceErrors": 1,
-    "sourceWarnings": 2
+    "totalCandidates": 21,
+    "sourceErrors": 2,
+    "sourceWarnings": 0,
+    "resolvedRecordsSuppressed": 0
   },
-  "publications": [],
+  "publications": [
+    {
+      "type": "publication",
+      "confidence": "high",
+      "detectionNotes": [
+        "ORCID work is not present in the current publications JSON.",
+        "Please verify authorship and publication status before adding."
+      ],
+      "sources": [
+        {
+          "name": "ORCID",
+          "url": "https://orcid.org/0000-0003-4484-3117"
+        },
+        {
+          "name": "DOI",
+          "url": "https://doi.org/10.21203/rs.3.rs-9068209/v1"
+        },
+        {
+          "name": "Crossref",
+          "url": "https://api.crossref.org/works/10.21203%2Frs.3.rs-9068209%2Fv1"
+        },
+        {
+          "name": "OpenAlex search",
+          "url": "https://openalex.org/works?filter=doi%3Ahttps%3A%2F%2Fdoi.org%2F10.21203%2Frs.3.rs-9068209%2Fv1"
+        }
+      ],
+      "doi": "10.21203/rs.3.rs-9068209/v1",
+      "title": "Bifunctional Multidentate Linker Tailoring Interfacial Dipole and Residual Stress to Enhance Photovoltaic Performance",
+      "journal": "",
+      "publicationDate": "2026-03-23",
+      "authors": [
+        "Lin, Hong-Yi",
+        "Hsiao, Kai-Chi",
+        "Lin, Ting-Han",
+        "Chang, Jia-Mao",
+        "Chu, Wei-Chen",
+        "Chiu, Wei-Hao",
+        "Lee, Kun-Mu",
+        "Wu, Ming-Chung"
+      ],
+      "publisher": "Springer Science and Business Media LLC",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "abstract": "<title>Abstract</title>\n                <p>\n                  Buried layer crystallization at an electron transport layer interface is seldom discussed but crucial for obtaining a high-quality perovskite layer. This study demonstrates a novel interfacial engineering concept by using 2-aminoethylphosphonic acid (APA) to bridge the mechanical and electronic disparities at the SnO\n                  <sub>2</sub>\n                  /perovskite interface. The bifunctional synergy of the APA molecule, which serves as both an electronic dipole and a mechanical geometrical tuner. The flexible backbone of APA renders it to alleviate the strain by over 20% through releasing residual compressive stress. The electron-withdrawing phosphonate and electron-donating amino headgroups anchor preferred-orientationally onto SnO\n                  <sub>2</sub>\n                  and perovskite terminal facets. The directional dipole and releasing stress help expand the quasi-Fermi level splitting and accelerate electron transfer from the perovskite layer to the electron transport layer of SnO\n                  <sub>2</sub>\n                  . The champion device can achieve power conversion efficiency of 22.92% with over 1,500 h stability in air without encapsulation. By harmonizing molecular orientation with mechanical stress relief, this study establishes a new paradigm for high-performance and durable perovskite photovoltaics.\n                </p>",
+      "keywords": [],
+      "reviewKey": "publication:doi:10.21203/rs.3.rs-9068209/v1"
+    },
+    {
+      "type": "publication",
+      "confidence": "possible",
+      "detectionNotes": [
+        "ORCID work is not present in the current publications JSON.",
+        "Please verify authorship and publication status before adding."
+      ],
+      "sources": [
+        {
+          "name": "ORCID",
+          "url": "https://orcid.org/0000-0003-4484-3117"
+        }
+      ],
+      "doi": "",
+      "title": "Fluorination of Star-Shaped Cyclopenta[2,1-b;3,4-b 0]dithiophene Derivatives and Its Application as Hole-Transporting Materials in Scalable Perovskite Solar Cell Fabrication by Bar Coating",
+      "journal": "Solar RRL",
+      "publicationDate": "",
+      "authors": [],
+      "publisher": "",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "abstract": "",
+      "keywords": [],
+      "reviewKey": "publication:title:fluorinationofstarshapedcyclopenta21b34b0dithiophenederivativesanditsapplicationasholetransportingmaterialsinscalableperovskitesolarcellfabricationbybarcoating"
+    },
+    {
+      "type": "publication",
+      "confidence": "high",
+      "detectionNotes": [
+        "ORCID work is not present in the current publications JSON.",
+        "Please verify authorship and publication status before adding.",
+        "Crossref enrichment failed: HTTP 404: Not Found"
+      ],
+      "sources": [
+        {
+          "name": "ORCID",
+          "url": "https://orcid.org/0000-0003-4484-3117"
+        },
+        {
+          "name": "DOI",
+          "url": "https://doi.org/10.29803/ce.202108_68(4).0006"
+        },
+        {
+          "name": "Crossref",
+          "url": "https://api.crossref.org/works/10.29803%2Fce.202108_68%284%29.0006"
+        }
+      ],
+      "doi": "10.29803/ce.202108_68(4).0006",
+      "title": "鈣鈦礦太陽能模組技術現況與展望",
+      "journal": "化工",
+      "publicationDate": "",
+      "authors": [],
+      "publisher": "",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "abstract": "",
+      "keywords": [],
+      "reviewKey": "publication:doi:10.29803/ce.202108_68(4).0006"
+    },
+    {
+      "type": "publication",
+      "confidence": "possible",
+      "detectionNotes": [
+        "ORCID work is not present in the current publications JSON.",
+        "Please verify authorship and publication status before adding."
+      ],
+      "sources": [
+        {
+          "name": "ORCID",
+          "url": "https://orcid.org/0000-0003-4484-3117"
+        }
+      ],
+      "doi": "",
+      "title": "Branched ZnO nanowires for enhancing energy conversion efficiency of dye-sensitized solar cells",
+      "journal": "Next-Generation and Nano-Architectured Photovoltaics",
+      "publicationDate": "",
+      "authors": [],
+      "publisher": "",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "abstract": "",
+      "keywords": [],
+      "reviewKey": "publication:title:branchedznonanowiresforenhancingenergyconversionefficiencyofdyesensitizedsolarcells"
+    }
+  ],
   "patents": [
     {
       "type": "patent",
@@ -56,7 +192,8 @@
           "name": "WIPO PATENTSCOPE",
           "url": "https://patentscope.wipo.int/search/en/search.jsf"
         }
-      ]
+      ],
+      "reviewKey": "patent:number:US8437441B2"
     },
     {
       "type": "patent",
@@ -101,7 +238,8 @@
           "name": "WIPO PATENTSCOPE",
           "url": "https://patentscope.wipo.int/search/en/search.jsf"
         }
-      ]
+      ],
+      "reviewKey": "patent:number:US7916064B2"
     },
     {
       "type": "patent",
@@ -146,7 +284,8 @@
           "name": "WIPO PATENTSCOPE",
           "url": "https://patentscope.wipo.int/search/en/search.jsf"
         }
-      ]
+      ],
+      "reviewKey": "patent:number:EP3910799B1"
     },
     {
       "type": "patent",
@@ -191,7 +330,8 @@
           "name": "WIPO PATENTSCOPE",
           "url": "https://patentscope.wipo.int/search/en/search.jsf"
         }
-      ]
+      ],
+      "reviewKey": "patent:number:US9948265B2"
     },
     {
       "type": "patent",
@@ -236,7 +376,8 @@
           "name": "WIPO PATENTSCOPE",
           "url": "https://patentscope.wipo.int/search/en/search.jsf"
         }
-      ]
+      ],
+      "reviewKey": "patent:number:JP2016123404A"
     },
     {
       "type": "patent",
@@ -281,7 +422,8 @@
           "name": "WIPO PATENTSCOPE",
           "url": "https://patentscope.wipo.int/search/en/search.jsf"
         }
-      ]
+      ],
+      "reviewKey": "patent:number:US20170111009A1"
     },
     {
       "type": "patent",
@@ -326,7 +468,8 @@
           "name": "WIPO PATENTSCOPE",
           "url": "https://patentscope.wipo.int/search/en/search.jsf"
         }
-      ]
+      ],
+      "reviewKey": "patent:number:EP2947775B1"
     },
     {
       "type": "patent",
@@ -371,7 +514,8 @@
           "name": "WIPO PATENTSCOPE",
           "url": "https://patentscope.wipo.int/search/en/search.jsf"
         }
-      ]
+      ],
+      "reviewKey": "patent:number:EP3678292A1"
     },
     {
       "type": "patent",
@@ -416,7 +560,8 @@
           "name": "WIPO PATENTSCOPE",
           "url": "https://patentscope.wipo.int/search/en/search.jsf"
         }
-      ]
+      ],
+      "reviewKey": "patent:number:TW201622557A"
     },
     {
       "type": "patent",
@@ -461,7 +606,8 @@
           "name": "WIPO PATENTSCOPE",
           "url": "https://patentscope.wipo.int/search/en/search.jsf"
         }
-      ]
+      ],
+      "reviewKey": "patent:number:TWM539701U"
     },
     {
       "type": "patent",
@@ -506,7 +652,8 @@
           "name": "WIPO PATENTSCOPE",
           "url": "https://patentscope.wipo.int/search/en/search.jsf"
         }
-      ]
+      ],
+      "reviewKey": "patent:number:TWI816357B"
     },
     {
       "type": "patent",
@@ -551,7 +698,8 @@
           "name": "WIPO PATENTSCOPE",
           "url": "https://patentscope.wipo.int/search/en/search.jsf"
         }
-      ]
+      ],
+      "reviewKey": "patent:number:TW201620377A"
     },
     {
       "type": "patent",
@@ -596,7 +744,8 @@
           "name": "WIPO PATENTSCOPE",
           "url": "https://patentscope.wipo.int/search/en/search.jsf"
         }
-      ]
+      ],
+      "reviewKey": "patent:number:TWI884762B"
     },
     {
       "type": "patent",
@@ -641,7 +790,8 @@
           "name": "WIPO PATENTSCOPE",
           "url": "https://patentscope.wipo.int/search/en/search.jsf"
         }
-      ]
+      ],
+      "reviewKey": "patent:number:TW202341510A"
     },
     {
       "type": "patent",
@@ -686,7 +836,8 @@
           "name": "WIPO PATENTSCOPE",
           "url": "https://patentscope.wipo.int/search/en/search.jsf"
         }
-      ]
+      ],
+      "reviewKey": "patent:number:TWI531307B"
     },
     {
       "type": "patent",
@@ -731,7 +882,8 @@
           "name": "WIPO PATENTSCOPE",
           "url": "https://patentscope.wipo.int/search/en/search.jsf"
         }
-      ]
+      ],
+      "reviewKey": "patent:number:TWI592090B"
     },
     {
       "type": "patent",
@@ -776,7 +928,8 @@
           "name": "WIPO PATENTSCOPE",
           "url": "https://patentscope.wipo.int/search/en/search.jsf"
         }
-      ]
+      ],
+      "reviewKey": "patent:number:TWM504415U"
     }
   ],
   "projects": [],
@@ -784,44 +937,35 @@
     {
       "name": "ORCID",
       "url": "https://pub.orcid.org/v3.0/0000-0003-4484-3117/works",
-      "status": "error",
-      "message": "AttributeError: 'NoneType' object has no attribute 'get'",
-      "checkedAt": "2026-07-27T12:48:38+08:00"
+      "status": "success",
+      "message": "",
+      "checkedAt": "2026-07-28T02:35:55+00:00",
+      "candidateCount": 4
     },
     {
       "name": "Google Patents",
       "url": "https://patents.google.com/?q=inventor%3D%22Wei-Hao+Chiu%22",
-      "status": "success",
-      "message": "",
-      "checkedAt": "2026-07-27T12:48:38+08:00",
-      "candidateCount": 8
+      "status": "error",
+      "message": "HTTP 503: Service Unavailable The previous candidate list was retained; these are cached candidates, not a successful new check.",
+      "checkedAt": "2026-07-28T02:36:01+00:00"
     },
     {
       "name": "Google Patents",
       "url": "https://patents.google.com/?q=inventor%3D%22%E9%82%B1%E5%81%89%E8%B1%AA%22",
+      "status": "error",
+      "message": "HTTP 503: Service Unavailable The previous candidate list was retained; these are cached candidates, not a successful new check.",
+      "checkedAt": "2026-07-28T02:36:04+00:00"
+    },
+    {
+      "name": "GRB (Playwright snapshot)",
+      "url": "https://www.grb.gov.tw/advq?queryStr=%E9%82%B1%E5%81%89%E8%B1%AA&queryType=grb05",
       "status": "success",
-      "message": "",
-      "checkedAt": "2026-07-27T12:48:39+08:00",
-      "candidateCount": 9
-    },
-    {
-      "name": "GRB",
-      "url": "https://www.grb.gov.tw/search?query=%E9%82%B1%E5%81%89%E8%B1%AA",
-      "status": "warning",
-      "message": "No structured planDetail links were detected; the GRB page layout or access policy may have changed.",
-      "checkedAt": "2026-07-27T12:48:40+08:00",
-      "candidateCount": 0
-    },
-    {
-      "name": "GRB",
-      "url": "https://www.grb.gov.tw/search?query=Wei-Hao+Chiu",
-      "status": "warning",
-      "message": "No structured planDetail links were detected; the GRB page layout or access policy may have changed.",
-      "checkedAt": "2026-07-27T12:48:41+08:00",
+      "message": "GRB Playwright discovery completed; 0 pending record(s) require review.",
+      "checkedAt": "2026-07-28T02:36:04+00:00",
       "candidateCount": 0
     }
   ],
   "copyInstructions": {
-    "finalLine": "請根據資料來源逐筆查核，找不到的資料不要自行猜測。更新相關 JSON、作者資料、統計及 SEO，最後只提供實際修改檔案的 ZIP。"
+    "finalLine": "請根據資料來源逐筆查核，找不到的資料不要自行猜測。把所有已確認結果寫入 data/academic_monitor_review_decisions.json。「已確認是本人的」再更新對應成果 JSON；「已確認非本人的」只建立永久排除紀錄，不要加入成果 JSON；「尚未確認」不可修改成果 JSON。保留現有非空白人工內容，最後只提供實際修改檔案的 ZIP。"
   }
 }
