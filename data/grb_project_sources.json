@@ -15,14 +15,12 @@
       "grbId": "18623445",
       "number": "NSTC114-2622-E182-006",
       "url": "https://www.grb.gov.tw/search/planDetail?id=18623445",
-      "allowTitleUpdate": false,
       "autoManaged": true
     },
     {
       "grbId": "19484167",
       "number": "NSTC115-2221-E182-052",
       "url": "https://www.grb.gov.tw/search/planDetail?id=19484167",
-      "allowTitleUpdate": false,
       "autoManaged": true
     }
   ],
@@ -31,7 +29,7 @@
   ],
   "maxDiscoveryCandidates": 20,
   "userAgent": "Wei-Hao-Chiu-Academic-Site-GRB-Updater/1.0 (+https://weihaochiu.github.io/)",
-  "autoAddVerifiedProjects": true,
+  "discoveryMode": "review-only",
   "autoTrackFormalProjects": true,
   "treatMissingTrackedProjectsAsIgnored": true,
   "ignoredGrbIds": [],

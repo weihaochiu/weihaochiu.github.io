@@ -2,12 +2,13 @@
 """Synchronize selected GRB project records with data/projects.json.
 
 The updater keeps data/projects.json as the single formal source of truth:
-- known GRB records are refreshed in place;
-- newly discovered records are published automatically after strict researcher and institution matching;
-- manually maintained summaries and English wording are preserved;
+- known GRB records only receive values for fields that are currently blank;
+- values are accepted only from exact GRB labels/selectors and fixed formats;
+- newly discovered records are retained for manual review instead of being published;
+- all non-blank JSON values remain authoritative;
 - failed or incomplete GRB responses never blank existing data;
 - removing a tracked GRB project from projects.json records a persistent ignore tombstone;
-- ambiguous or incomplete discoveries remain in a pending-review file;
+- every newly discovered project remains in a pending-review file;
 - the projects page is patched once to display GRB-reported funding.
 """
 
@@ -36,31 +37,35 @@ TAIPEI = ZoneInfo("Asia/Taipei")
 DEFAULT_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_TIMEOUT = 35
 
-LABEL_ALIASES: dict[str, tuple[str, ...]] = {
-    "systemId": ("計畫系統編號", "系統編號"),
-    "number": ("計畫編號", "原計畫編號"),
-    "titleZh": ("計畫中文名稱", "中文計畫名稱", "中文名稱"),
-    "titleEn": ("計畫英文名稱", "英文計畫名稱", "英文名稱"),
-    "agencyZh": ("主管機關", "計畫主管機關"),
-    "periodRaw": ("研究期間", "本期研究期間", "計畫期間", "有效的開始/結束日期"),
-    "institutionZh": ("執行機構", "執行單位"),
-    "yearRaw": ("年度", "年 度", "計畫年度"),
-    "fundingRaw": (
-        "研究經費",
-        "本期經費",
-        "本期經費(千元)",
-        "本期經費（千元）",
-        "計畫經費",
-    ),
-    "researchersRaw": ("研究人員", "計畫主持人", "主持人"),
+EXACT_LABELS: dict[str, str] = {
+    "計畫系統編號": "systemId",
+    "計畫編號": "number",
+    "計畫中文名稱": "titleZh",
+    "計畫英文名稱": "titleEn",
+    "主管機關": "agencyZh",
+    "研究性質": "researchNatureZh",
+    "研究方式": "researchMethodZh",
+    "研究期間": "periodRaw",
+    "本期研究期間": "periodRaw",
+    "執行機構": "institutionZh",
+    "年度": "yearRaw",
+    "研究領域": "researchFieldZh",
+    "研究經費": "fundingRaw",
+    "本期經費(千元)": "fundingRaw",
+    "本期經費（千元）": "fundingRaw",
+    "研究人員": "researchersRaw",
 }
 
-GENERIC_TITLES = {
-    "政府研究資訊系統 grb",
-    "政府研究資訊系統",
-    "搜尋結果詳目內容",
-    "計畫詳目",
-    "研究計畫查詢",
+REQUIRED_EXACT_FIELDS = {
+    "systemId",
+    "number",
+    "titleZh",
+    "titleEn",
+    "agencyZh",
+    "periodRaw",
+    "institutionZh",
+    "fundingRaw",
+    "researchersRaw",
 }
 
 AGENCY_EN = {
@@ -129,23 +134,12 @@ def clean_text(value: Any) -> str:
     return re.sub(r"\s+", " ", str(value or "").replace("\u3000", " ")).strip(" \t\r\n:：|")
 
 
-def compact_label(value: Any) -> str:
-    return re.sub(r"[\s:：()（）]", "", clean_text(value)).lower()
+def exact_label(value: Any) -> str:
+    return re.sub(r"\s+", "", clean_text(value)).rstrip(":：")
 
 
 def normalized_identity(value: Any) -> str:
     return re.sub(r"[^0-9a-z\u4e00-\u9fff]+", "", clean_text(value).lower())
-
-
-def alias_lookup() -> dict[str, str]:
-    lookup: dict[str, str] = {}
-    for key, aliases in LABEL_ALIASES.items():
-        for alias in aliases:
-            lookup[compact_label(alias)] = key
-    return lookup
-
-
-ALIASES = alias_lookup()
 
 
 def value_from_adjacent(element: Tag) -> str:
@@ -181,63 +175,33 @@ def value_from_adjacent(element: Tag) -> str:
 def extract_label_values(soup: BeautifulSoup) -> dict[str, str]:
     fields: dict[str, str] = {}
 
-    # Tables are the highest-confidence source.
+    # Accept only exact, allow-listed labels with an explicit paired value.
     for row in soup.find_all("tr"):
         cells = row.find_all(["th", "td"], recursive=False)
-        if len(cells) < 2:
+        if len(cells) != 2:
             continue
-        label = compact_label(cells[0].get_text(" ", strip=True))
-        key = ALIASES.get(label)
-        value = clean_text(" ".join(cell.get_text(" ", strip=True) for cell in cells[1:]))
+        key = EXACT_LABELS.get(exact_label(cells[0].get_text(" ", strip=True)))
+        value = clean_text(cells[1].get_text(" ", strip=True))
         if key and value and key not in fields:
             fields[key] = value
 
-    # Definition lists.
     for dt in soup.find_all("dt"):
-        key = ALIASES.get(compact_label(dt.get_text(" ", strip=True)))
+        key = EXACT_LABELS.get(exact_label(dt.get_text(" ", strip=True)))
         dd = dt.find_next_sibling("dd")
         value = clean_text(dd.get_text(" ", strip=True)) if dd else ""
         if key and value and key not in fields:
             fields[key] = value
 
-    # Label elements in div/span based layouts.
-    for element in soup.find_all(["th", "td", "label", "strong", "span", "div", "p"]):
+    # Current GRB detail pages use paired div/span columns. The label itself
+    # must still be an exact allow-listed value; no page-wide line fallback.
+    for element in soup.find_all(["label", "strong", "span", "div", "p"]):
         direct_text = clean_text(" ".join(element.find_all(string=True, recursive=False)))
-        key = ALIASES.get(compact_label(direct_text))
+        key = EXACT_LABELS.get(exact_label(direct_text))
         if not key or key in fields:
             continue
         value = value_from_adjacent(element)
-        if value and compact_label(value) not in ALIASES:
+        if value and exact_label(value) not in EXACT_LABELS:
             fields[key] = value
-
-    # Fallback to line-oriented text, including "label: value" forms.
-    lines = [clean_text(line) for line in soup.get_text("\n", strip=True).splitlines()]
-    lines = [line for line in lines if line]
-    for index, line in enumerate(lines):
-        matched = False
-        for alias_compact, key in ALIASES.items():
-            line_compact = compact_label(line)
-            if line_compact == alias_compact:
-                if key not in fields and index + 1 < len(lines):
-                    candidate = lines[index + 1]
-                    if compact_label(candidate) not in ALIASES:
-                        fields[key] = candidate
-                matched = True
-                break
-            for separator in ("：", ":"):
-                raw_aliases = LABEL_ALIASES[key]
-                for raw_alias in raw_aliases:
-                    prefix = f"{raw_alias}{separator}"
-                    if line.startswith(prefix):
-                        candidate = clean_text(line[len(prefix):])
-                        if candidate and key not in fields:
-                            fields[key] = candidate
-                        matched = True
-                        break
-                if matched:
-                    break
-            if matched:
-                break
 
     return fields
 
@@ -263,68 +227,20 @@ def extract_title(soup: BeautifulSoup, fields: dict[str, str], language: str) ->
             if direct:
                 return direct
 
-    candidates: list[str] = []
-    for selector in ("meta[property='og:title']", "meta[name='twitter:title']"):
-        meta = soup.select_one(selector)
-        if meta and meta.get("content"):
-            candidates.append(clean_text(meta["content"]))
-    for heading in soup.find_all(["h1", "h2", "h3", "h4"]):
-        candidates.append(clean_text(heading.get_text(" ", strip=True)))
-
-    for candidate in candidates:
-        low = candidate.lower()
-        if not candidate or low in GENERIC_TITLES:
-            continue
-        if any(generic in low for generic in GENERIC_TITLES):
-            continue
-        has_cjk = bool(re.search(r"[\u4e00-\u9fff]", candidate))
-        if language == "zh" and has_cjk and len(candidate) >= 8:
-            return candidate
-        if language == "en" and not has_cjk and len(candidate.split()) >= 4:
-            return candidate
+    # Do not guess titles from generic page headings or metadata.
     return ""
 
 
 def parse_funding_k(raw: str) -> int | None:
     text = clean_text(raw).replace(",", "")
-    if not text:
-        return None
-    match = re.search(r"(-?\d+(?:\.\d+)?)", text)
+    match = re.fullmatch(r"(\d+)千元", text)
     if not match:
         return None
-    value = float(match.group(1))
-    if value < 0:
-        return None
-    if "億元" in text or "億" in text:
-        value *= 100_000
-    elif "萬元" in text or ("萬" in text and "元" in text):
-        value *= 10
-    elif "元" in text and "千元" not in text:
-        value /= 1000
-    # GRB's documented field is expressed in thousands of TWD when no unit is shown.
-    return int(round(value))
+    return int(match.group(1))
 
 
 def roc_to_ad(year: int) -> int:
     return year + 1911 if 0 < year < 1911 else year
-
-
-def date_candidates(raw: str) -> list[date]:
-    text = clean_text(raw)
-    patterns = (
-        r"(?<!\d)(\d{2,4})\s*[./年-]\s*(\d{1,2})\s*[./月-]\s*(\d{1,2})\s*日?",
-        r"(?<!\d)(\d{2,4})(\d{2})(\d{2})(?!\d)",
-    )
-    values: list[date] = []
-    for pattern in patterns:
-        for match in re.finditer(pattern, text):
-            try:
-                values.append(date(roc_to_ad(int(match.group(1))), int(match.group(2)), int(match.group(3))))
-            except ValueError:
-                continue
-        if values:
-            break
-    return values
 
 
 def format_site_date(value: date) -> str:
@@ -332,39 +248,46 @@ def format_site_date(value: date) -> str:
 
 
 def parse_period(raw: str) -> dict[str, Any]:
-    values = date_candidates(raw)
-
-    # Current GRB pages often use compact ROC year-month ranges such as
-    # "11411 ~ 11510". Interpret the first month from day 1 and the final
-    # month through its last calendar day.
-    if not values:
-        compact_months = re.findall(r"(?<!\d)(\d{2,3})(0[1-9]|1[0-2])(?!\d)", clean_text(raw))
-        if compact_months:
-            converted: list[date] = []
-            for index, (year_raw, month_raw) in enumerate(compact_months[:2]):
-                year = roc_to_ad(int(year_raw))
-                month = int(month_raw)
-                day = 1 if index == 0 else calendar.monthrange(year, month)[1]
-                converted.append(date(year, month, day))
-            values = converted
-
-    if not values:
+    match = re.fullmatch(
+        r"(\d{3})(0[1-9]|1[0-2])\s*[~～]\s*(\d{3})(0[1-9]|1[0-2])",
+        clean_text(raw),
+    )
+    if not match:
         return {}
-    start = values[0]
-    end = values[1] if len(values) > 1 else None
+    start_year, start_month, end_year, end_month = map(int, match.groups())
+    start = date(roc_to_ad(start_year), start_month, 1)
+    end_ad_year = roc_to_ad(end_year)
+    end = date(end_ad_year, end_month, calendar.monthrange(end_ad_year, end_month)[1])
     result: dict[str, Any] = {
         "startYear": start.year,
         "sortDate": start.isoformat(),
         "startDate": start.isoformat(),
+        "endDate": end.isoformat(),
+        "period": f"{format_site_date(start)} – {format_site_date(end)}",
     }
-    if end:
-        result["endDate"] = end.isoformat()
-        result["period"] = f"{format_site_date(start)} – {format_site_date(end)}"
-        today = datetime.now(TAIPEI).date()
-        result["status"] = "Upcoming" if today < start else ("Completed" if today > end else "Ongoing")
-    else:
-        result["period"] = format_site_date(start)
+    today = datetime.now(TAIPEI).date()
+    result["status"] = "Upcoming" if today < start else ("Completed" if today > end else "Ongoing")
     return result
+
+
+def validate_fixed_record(fields: dict[str, str]) -> None:
+    missing = sorted(REQUIRED_EXACT_FIELDS - fields.keys())
+    if missing:
+        raise UpdateError(f"Missing exact GRB labels: {', '.join(missing)}")
+    if not re.fullmatch(r"PB\d{5}-\d{4}", fields["systemId"]):
+        raise UpdateError("GRB system number does not match PB#####-####")
+    if not re.fullmatch(r"(?:NSTC|MOST|NSC)\d{3}-\d{4}-[A-Z]\d{3}-\d{3}", fields["number"]):
+        raise UpdateError("GRB plan number does not match the approved fixed format")
+    if len(fields["titleZh"]) < 8 or not re.search(r"[\u3400-\u9fff]", fields["titleZh"]):
+        raise UpdateError("GRB Chinese title does not match the approved fixed format")
+    if len(fields["titleEn"].split()) < 4 or re.search(r"[\u3400-\u9fff]", fields["titleEn"]):
+        raise UpdateError("GRB English title does not match the approved fixed format")
+    if not parse_period(fields["periodRaw"]):
+        raise UpdateError("GRB research period does not match RRRMM ~ RRRMM")
+    if parse_funding_k(fields["fundingRaw"]) is None:
+        raise UpdateError("GRB funding does not match NNN千元")
+    if fields.get("yearRaw") and not re.fullmatch(r"\d{3}年?", fields["yearRaw"]):
+        raise UpdateError("GRB year does not match RRR年")
 
 
 def parse_plan_html(html: str, url: str) -> dict[str, Any]:
@@ -391,6 +314,7 @@ def parse_plan_html(html: str, url: str) -> dict[str, Any]:
     fields = extract_label_values(soup)
     fields["titleZh"] = extract_title(soup, fields, "zh")
     fields["titleEn"] = extract_title(soup, fields, "en")
+    validate_fixed_record(fields)
 
     # Only treat a response as maintenance when no formal project identity was
     # found. This prevents hidden announcement markup from causing false errors.
@@ -403,6 +327,7 @@ def parse_plan_html(html: str, url: str) -> dict[str, Any]:
     record: dict[str, Any] = {
         "url": url,
         "grbId": extract_grb_id(url),
+        "grbSystemNumber": fields["systemId"],
         **{key: clean_text(value) for key, value in fields.items() if clean_text(value)},
         **period,
     }
@@ -479,21 +404,37 @@ def plan_matches(project: dict[str, Any], source: dict[str, Any]) -> bool:
     return bool(source_number and source_number == project_number)
 
 
-def should_replace(existing: Any, incoming: Any) -> bool:
-    return incoming not in (None, "", [], {}) and existing != incoming
+def is_blank(value: Any) -> bool:
+    if value in (None, "", [], {}):
+        return True
+    return isinstance(value, str) and not value.strip()
+
+
+def should_fill_blank(existing: Any, incoming: Any) -> bool:
+    return is_blank(existing) and not is_blank(incoming)
 
 
 def merge_known_project(project: dict[str, Any], parsed: dict[str, Any], source: dict[str, Any]) -> tuple[dict[str, Any], list[str]]:
     updated = copy.deepcopy(project)
     changed: list[str] = []
 
-    # These fields are authoritative in GRB when present.
+    # Automation may only fill empty JSON fields. Non-empty values are
+    # maintained manually and must never be replaced by a GRB fetch.
     automatic_fields = (
         "grbId",
+        "grbSystemNumber",
         "url",
         "number",
         "agencyZh",
         "agencyEn",
+        "researchNatureZh",
+        "researchMethodZh",
+        "researchFieldZh",
+        "institutionZh",
+        "researchersRaw",
+        "yearRaw",
+        "periodRaw",
+        "fundingRaw",
         "period",
         "startYear",
         "sortDate",
@@ -509,21 +450,26 @@ def merge_known_project(project: dict[str, Any], parsed: dict[str, Any], source:
     )
     for field in automatic_fields:
         incoming = parsed.get(field)
-        if should_replace(updated.get(field), incoming):
+        if should_fill_blank(updated.get(field), incoming):
             updated[field] = incoming
             changed.append(field)
 
-    # Titles are refreshed only when explicitly enabled or currently missing.
+    # Titles follow the same blank-only rule; configuration cannot overwrite
+    # manually maintained wording.
     for field in ("titleZh", "titleEn"):
         incoming = parsed.get(field)
-        allow_update = bool(source.get("allowTitleUpdate"))
-        if incoming and (allow_update or not clean_text(updated.get(field))) and updated.get(field) != incoming:
+        if should_fill_blank(updated.get(field), incoming):
             updated[field] = incoming
             changed.append(field)
 
-    updated["dataSource"] = "GRB"
-    updated["grbSourceUrl"] = parsed.get("url") or source.get("url")
-    if changed:
+    for field, incoming in (
+        ("dataSource", "GRB"),
+        ("grbSourceUrl", parsed.get("url") or source.get("url")),
+    ):
+        if should_fill_blank(updated.get(field), incoming):
+            updated[field] = incoming
+            changed.append(field)
+    if changed and is_blank(updated.get("grbLastChanged")):
         updated["grbLastChanged"] = now_iso()
     return updated, changed
 
@@ -547,83 +493,6 @@ def strict_discovery_match(parsed: dict[str, Any], config: dict[str, Any]) -> bo
     return all(details.values())
 
 
-def infer_year_from_record(record: dict[str, Any]) -> int | None:
-    value = record.get("startYear")
-    if isinstance(value, int) and 1900 <= value <= 2200:
-        return value
-    for field in ("yearRaw", "number"):
-        text = clean_text(record.get(field))
-        if not text:
-            continue
-        if field == "number":
-            match = re.search(r"(?:NSTC|MOST|NSC)\s*(\d{2,3})\s*-", text, flags=re.I)
-        else:
-            match = re.search(r"(?<!\d)(\d{2,4})(?!\d)", text)
-        if match:
-            year = roc_to_ad(int(match.group(1)))
-            if 1900 <= year <= 2200:
-                return year
-    return None
-
-
-def infer_project_role(parsed: dict[str, Any], config: dict[str, Any]) -> tuple[str, str]:
-    raw = clean_text(parsed.get("researchersRaw"))
-    normalized = normalized_identity(raw)
-    # More specific roles must be checked before the generic 主持人 token.
-    if "共同主持人" in raw or "共同主持人" in normalized:
-        return "Co-Principal Investigator", "共同主持人"
-    if "協同主持人" in raw or "協同主持人" in normalized:
-        return "Co-Investigator", "協同主持人"
-    if "計畫主持人" in raw or "主持人" in raw:
-        return "Principal Investigator", "計畫主持人"
-    return "Researcher", "研究人員"
-
-
-def build_new_project(parsed: dict[str, Any], config: dict[str, Any], detected_at: str) -> dict[str, Any]:
-    year = infer_year_from_record(parsed)
-    title_zh = clean_text(parsed.get("titleZh") or parsed.get("titleEn"))
-    title_en = clean_text(parsed.get("titleEn")) or title_zh
-    if not year:
-        raise UpdateError("Matched GRB project has no usable year or period")
-    if not title_zh:
-        raise UpdateError("Matched GRB project has no usable title")
-    role, role_zh = infer_project_role(parsed, config)
-    project: dict[str, Any] = {
-        "titleEn": title_en,
-        "titleZh": title_zh,
-        "agencyEn": clean_text(parsed.get("agencyEn")) or clean_text(parsed.get("agencyZh")),
-        "agencyZh": clean_text(parsed.get("agencyZh")),
-        "role": role,
-        "roleZh": role_zh,
-        "number": clean_text(parsed.get("number")),
-        "period": clean_text(parsed.get("period")) or str(year),
-        "status": clean_text(parsed.get("status")) or "Research project",
-        "scopeEn": "",
-        "scopeZh": "",
-        "url": clean_text(parsed.get("url")),
-        "grbId": clean_text(parsed.get("grbId")),
-        "startYear": year,
-        "sortDate": clean_text(parsed.get("sortDate")) or f"{year:04d}-01-01",
-        "dataSource": "GRB",
-        "grbSourceUrl": clean_text(parsed.get("url")),
-        "grbInstitution": clean_text(parsed.get("institutionZh")),
-        "grbResearchers": clean_text(parsed.get("researchersRaw")),
-        "autoAddedFromGRB": True,
-        "grbFirstDetected": detected_at,
-        "grbLastChanged": detected_at,
-    }
-    for field in (
-        "startDate", "endDate", "fundingAmountK", "fundingAmountTwd",
-        "fundingDisplayEn", "fundingDisplayZh", "fundingSource", "fundingNote",
-    ):
-        if parsed.get(field) not in (None, ""):
-            project[field] = parsed[field]
-    if not clean_text(parsed.get("titleEn")):
-        project["needsEnglishTitle"] = True
-        project["titleEnSource"] = "GRB Chinese title fallback"
-    return project
-
-
 def project_grb_id(project: dict[str, Any]) -> str:
     return clean_text(project.get("grbId")) or extract_grb_id(project.get("grbSourceUrl", "")) or extract_grb_id(project.get("url", ""))
 
@@ -636,7 +505,6 @@ def source_from_project(project: dict[str, Any]) -> dict[str, Any] | None:
         "grbId": grb_id,
         "number": clean_text(project.get("number")),
         "url": clean_text(project.get("grbSourceUrl") or project.get("url")) or f"https://www.grb.gov.tw/search/planDetail?id={grb_id}",
-        "allowTitleUpdate": False,
         "autoManaged": True,
     }
 
@@ -845,9 +713,7 @@ def run_update(root: Path, allow_network_failure: bool, patch_ui: bool) -> int:
             discovery_entry["error"] = result.error
         snapshot["discovery"].append(discovery_entry)
 
-    auto_added: list[str] = []
     max_candidates = int(config.get("maxDiscoveryCandidates", 20))
-    auto_add_verified = bool(config.get("autoAddVerifiedProjects", True))
     for url in list(dict.fromkeys(discovered_urls))[:max_candidates]:
         candidate_id = extract_grb_id(url)
         candidate_key = f"grb:{candidate_id}"
@@ -862,42 +728,18 @@ def run_update(root: Path, allow_network_failure: bool, patch_ui: bool) -> int:
         except UpdateError:
             continue
         details = discovery_match_details(parsed, config)
-        if strict_discovery_match(parsed, config) and auto_add_verified:
-            try:
-                project = build_new_project(parsed, config, checked_at)
-                projects.append(project)
-                known_keys.add(record_key(project))
-                pending_by_key.pop(record_key(project), None)
-                auto_added.append(candidate_id)
-                snapshot["records"][candidate_id] = {
-                    "grbId": candidate_id,
-                    "url": url,
-                    "ok": True,
-                    "autoAdded": True,
-                    "match": details,
-                    "parsed": parsed,
-                }
-            except UpdateError as exc:
-                parsed.update({
-                    "reviewRequired": True,
-                    "detectedAt": checked_at,
-                    "reviewReason": str(exc),
-                    "match": details,
-                })
-                pending_by_key[record_key(parsed)] = parsed
-            continue
-
-        # Only near-matches are retained for inspection. Clear false positives silently.
-        if details["nameMatch"] or details["institutionMatch"]:
+        # Discovery is review-only. Even a complete exact-format match must be
+        # added to projects.json manually before automation can fill blanks.
+        if strict_discovery_match(parsed, config) or details["nameMatch"] or details["institutionMatch"]:
             parsed.update({
                 "reviewRequired": True,
                 "detectedAt": checked_at,
-                "reviewReason": "Automatic publication requires matching researcher name, institution, GRB ID, plan number, and title.",
+                "reviewReason": "Discovery is review-only; add the project to data/projects.json manually.",
                 "match": details,
             })
             pending_by_key[record_key(parsed)] = parsed
 
-    # Newly published records are immediately added to continuous tracking.
+    # Manually published records are added to continuous tracking.
     config = sync_tracking_config(projects, config, detect_manual_removal=False)
     active_ids = {project_grb_id(project) for project in projects if project_grb_id(project)}
     ignored_ids = {clean_text(value) for value in config.get("ignoredGrbIds", []) if clean_text(value)}
@@ -931,10 +773,9 @@ def run_update(root: Path, allow_network_failure: bool, patch_ui: bool) -> int:
         site_meta_changed = update_site_meta(site_meta_path)
 
     LOGGER.info(
-        "GRB update complete: %d/%d known records fetched; auto_added=%d; projects_changed=%s; config_changed=%s; ui_changed=%s; pending=%d; site_meta_changed=%s",
+        "GRB update complete: %d/%d known records fetched; discovery_mode=review-only; projects_changed=%s; config_changed=%s; ui_changed=%s; pending=%d; site_meta_changed=%s",
         success_count,
         len(known_sources),
-        len(auto_added),
         projects_changed,
         config_changed,
         ui_changed,
@@ -949,20 +790,25 @@ def run_validation(root: Path) -> int:
     app_js = (root / "assets/js/app.js").read_text(encoding="utf-8")
     if PROJECT_UI_MARKER_START not in app_js or PROJECT_UI_MARKER_END not in app_js:
         raise UpdateError("GRB funding UI marker is missing from assets/js/app.js")
-    json.loads((root / "data/grb_project_sources.json").read_text(encoding="utf-8"))
+    config = json.loads((root / "data/grb_project_sources.json").read_text(encoding="utf-8"))
+    if config.get("discoveryMode") != "review-only":
+        raise UpdateError("GRB discoveryMode must remain review-only")
     LOGGER.info("Validation completed successfully")
     return 0
 
 
 def run_self_test() -> int:
     sample = """
-    <html><head><meta property="og:title" content="測試型鈣鈦礦計畫"></head><body>
+    <html><body>
+    <div class="planTitle">測試型鈣鈦礦計畫
+      <span class="planTitleen">Test Perovskite Research Project</span>
+    </div>
     <table>
-      <tr><th>計畫系統編號</th><td>TEST-001</td></tr>
-      <tr><th>計畫編號</th><td>NSTC 114-0000-E-182-001</td></tr>
+      <tr><th>計畫系統編號</th><td>PB11411-0001</td></tr>
+      <tr><th>計畫編號</th><td>NSTC114-0000-E182-001</td></tr>
       <tr><th>主管機關</th><td>國家科學及技術委員會</td></tr>
-      <tr><th>本期研究期間</th><td>114/11/01 ～ 115/10/31</td></tr>
-      <tr><th>本期經費(千元)</th><td>1,200</td></tr>
+      <tr><th>本期研究期間</th><td>11411 ～ 11510</td></tr>
+      <tr><th>本期經費(千元)</th><td>1,200千元</td></tr>
       <tr><th>執行機構</th><td>長庚大學</td></tr>
       <tr><th>研究人員</th><td>計畫主持人：邱偉豪</td></tr>
     </table></body></html>
@@ -972,7 +818,8 @@ def run_self_test() -> int:
     assert parsed["fundingAmountTwd"] == 1_200_000
     assert parsed["startDate"] == "2025-11-01"
     assert parsed["endDate"] == "2026-10-31"
-    assert parsed["number"] == "NSTC 114-0000-E-182-001"
+    assert parsed["number"] == "NSTC114-0000-E182-001"
+    assert parsed["grbSystemNumber"] == "PB11411-0001"
 
     rendered_sample = """
     <html><body>
@@ -1003,6 +850,18 @@ def run_self_test() -> int:
     assert rendered["endDate"] == "2026-10-31"
     assert rendered["agencyEn"] == "National Science and Technology Council, Taiwan"
 
+    existing = {
+        "titleZh": "人工中文題名",
+        "titleEn": "",
+        "number": "NSTC114-0000-E182-001",
+        "fundingAmountK": 999,
+    }
+    merged, changed = merge_known_project(existing, parsed, {"url": parsed["url"]})
+    assert merged["titleZh"] == "人工中文題名"
+    assert merged["fundingAmountK"] == 999
+    assert merged["titleEn"] == "Test Perovskite Research Project"
+    assert "titleEn" in changed and "titleZh" not in changed and "fundingAmountK" not in changed
+
     config = {
         "researcherAliases": ["邱偉豪"],
         "institutionAliases": ["長庚大學"],
@@ -1011,9 +870,15 @@ def run_self_test() -> int:
         "treatMissingTrackedProjectsAsIgnored": True,
     }
     assert strict_discovery_match(parsed, config)
-    project = build_new_project(parsed, config, "2026-07-24T12:00:00+08:00")
-    assert project["autoAddedFromGRB"] is True
-    assert project["startYear"] == 2025
+    project = {
+        "titleEn": "",
+        "titleZh": "人工新增測試計畫",
+        "startYear": 2025,
+        "sortDate": "2025-11-01",
+        "number": parsed["number"],
+        "grbId": parsed["grbId"],
+        "grbSourceUrl": parsed["url"],
+    }
     tracked = sync_tracking_config([project], config, detect_manual_removal=True)
     assert tracked["knownPlans"][0]["grbId"] == "12345678"
     removed = sync_tracking_config([], tracked, detect_manual_removal=True)

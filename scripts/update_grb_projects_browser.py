@@ -3,8 +3,8 @@
 
 This is a browser fallback for update_grb_projects.py. GRB currently returns an
 HTML shell to requests-based clients and injects the actual project values in
-the browser. Existing project entries remain authoritative for manually written
-summaries and English wording.
+the browser. Existing non-blank project fields remain authoritative, and new
+discoveries are review-only.
 """
 
 from __future__ import annotations
@@ -21,7 +21,6 @@ from playwright.sync_api import BrowserContext, Page, sync_playwright
 
 from update_grb_projects import (
     UpdateError,
-    build_new_project,
     clean_text,
     discover_links,
     discovery_match_details,
@@ -364,8 +363,6 @@ def main() -> int:
 
     success_count = 0
     discovered_urls: list[str] = []
-    auto_added: list[str] = []
-
     with sync_playwright() as playwright:
         browser = playwright.chromium.launch(
             headless=True,
@@ -490,8 +487,6 @@ def main() -> int:
             }
             known_keys = {record_key(project) for project in projects}
             max_candidates = int(config.get("maxDiscoveryCandidates", 20))
-            auto_add_verified = bool(config.get("autoAddVerifiedProjects", True))
-
             for url in list(dict.fromkeys(discovered_urls))[:max_candidates]:
                 candidate_id = extract_grb_id(url)
                 candidate_key = f"grb:{candidate_id}"
@@ -506,29 +501,12 @@ def main() -> int:
                         debug_name=f"candidate-{candidate_id or 'unknown'}",
                     )
                     details = discovery_match_details(parsed, config)
-                    if strict_discovery_match(parsed, config) and auto_add_verified:
-                        project = build_new_project(parsed, config, checked_at)
-                        projects.append(project)
-                        known_keys.add(record_key(project))
-                        pending_by_key.pop(record_key(project), None)
-                        auto_added.append(candidate_id)
-                        snapshot["records"][candidate_id] = {
-                            "grbId": candidate_id,
-                            "url": url,
-                            "ok": True,
-                            "fetchMode": "playwright",
-                            "statusCode": status,
-                            "autoAdded": True,
-                            "match": details,
-                            "parsed": parsed,
-                            "textExcerpt": excerpt,
-                        }
-                    elif details["nameMatch"] or details["institutionMatch"]:
+                    if strict_discovery_match(parsed, config) or details["nameMatch"] or details["institutionMatch"]:
                         upsert_pending(
                             pending_by_key,
                             parsed,
                             checked_at,
-                            "Automatic publication requires matching researcher name, institution, GRB ID, plan number, and title.",
+                            "Discovery is review-only; add the project to data/projects.json manually.",
                             details,
                         )
                 except Exception as exc:
@@ -581,9 +559,8 @@ def main() -> int:
         )
 
     LOGGER.info(
-        "Browser GRB update complete: known_success=%d auto_added=%d projects_changed=%s pending=%d",
+        "Browser GRB update complete: known_success=%d discovery_mode=review-only projects_changed=%s pending=%d",
         success_count,
-        len(auto_added),
         projects_changed,
         len(pending),
     )

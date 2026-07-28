@@ -5,7 +5,8 @@ This module is intentionally separate from update_grb_projects.py so the existin
 project/funding synchronizer remains stable. It:
 
 - reads official Chinese/English abstracts and keywords from GRB detail pages;
-- preserves the last valid value whenever GRB is unavailable or incomplete;
+- accepts only exact labels or exact structured keys;
+- fills only fields that are currently blank;
 - stores structured fields in data/projects.json;
 - replaces the generated projectCard block in assets/js/app.js;
 - installs matching responsive styles in assets/css/styles.css.
@@ -46,22 +47,19 @@ ABSTRACT_FIELDS = ("abstractZh", "abstractEn")
 KEYWORD_FIELDS = ("keywordsZh", "keywordsEn")
 
 LABEL_ALIASES: dict[str, tuple[str, ...]] = {
-    "abstractZh": (
-        "中文摘要", "計畫中文摘要", "研究計畫中文摘要", "研究摘要", "中文研究摘要",
-        "摘要（中文）", "摘要(中文)",
-    ),
-    "abstractEn": (
-        "英文摘要", "計畫英文摘要", "研究計畫英文摘要", "英文研究摘要",
-        "摘要（英文）", "摘要(英文)", "abstract", "english abstract",
-    ),
-    "keywordsZh": (
-        "中文關鍵字", "中文關鍵詞", "計畫中文關鍵字", "研究計畫中文關鍵字",
-        "關鍵字（中文）", "關鍵字(中文)",
-    ),
-    "keywordsEn": (
-        "英文關鍵字", "英文關鍵詞", "計畫英文關鍵字", "研究計畫英文關鍵字",
-        "關鍵字（英文）", "關鍵字(英文)", "keywords", "english keywords",
-    ),
+    "abstractZh": ("中文摘要",),
+    "abstractEn": ("英文摘要",),
+    "keywordsZh": ("中文關鍵字",),
+    "keywordsEn": ("英文關鍵字",),
+}
+
+EXACT_STRUCTURED_KEYS = {
+    "planAbstractCh": "abstractZh",
+    "planAbstractZh": "abstractZh",
+    "planAbstractEn": "abstractEn",
+    "chKeywords": "keywordsZh",
+    "zhKeywords": "keywordsZh",
+    "enKeywords": "keywordsEn",
 }
 
 MAINTENANCE_MARKERS = (
@@ -171,18 +169,18 @@ def alias_lookup() -> dict[str, str]:
 ALIASES = alias_lookup()
 
 
-def has_cjk(value: str) -> bool:
-    return bool(re.search(r"[\u3400-\u9fff]", value))
-
-
 def valid_abstract(value: Any) -> str:
     text = clean_text(value)
-    if len(text) < 40 or len(text) > 80_000:
+    if len(text) < 40 or len(text) > 8_000:
         return ""
     low = text.lower()
     if any(marker.lower() in low for marker in MAINTENANCE_MARKERS):
         return ""
     if text.count("|") > 20 or text.count("[Button") > 2:
+        return ""
+    if all(marker in text for marker in ("序號", "機構名稱", "管考人姓名", "連絡電話")):
+        return ""
+    if len(re.findall(r"\b0\d{1,3}[-()0-9#]{6,}", text)) > 5:
         return ""
     return text
 
@@ -206,18 +204,12 @@ def split_keywords(value: Any) -> list[str]:
             continue
         seen.add(key)
         output.append(term)
-    return output[:80]
+    return output if len(output) <= 20 else []
 
 
 def field_from_label(label: Any) -> str:
     key = compact_key(label)
-    if key in ALIASES:
-        return ALIASES[key]
-    # GRB occasionally adds punctuation or explanatory suffixes to labels.
-    for alias, field in ALIASES.items():
-        if len(alias) >= 4 and (key.startswith(alias) or alias.startswith(key)):
-            return field
-    return ""
+    return ALIASES.get(key, "")
 
 
 def adjacent_value(element: Tag) -> str:
@@ -245,11 +237,11 @@ def extract_labeled_content(soup: BeautifulSoup) -> dict[str, list[Any]]:
 
     for row in soup.find_all("tr"):
         cells = row.find_all(["th", "td"], recursive=False)
-        if len(cells) < 2:
+        if len(cells) != 2:
             continue
         field = field_from_label(cells[0].get_text(" ", strip=True))
         if field:
-            found[field].append("\n".join(cell.get_text("\n", strip=True) for cell in cells[1:]))
+            found[field].append(cells[1].get_text("\n", strip=True))
 
     for dt in soup.find_all("dt"):
         field = field_from_label(dt.get_text(" ", strip=True))
@@ -257,7 +249,7 @@ def extract_labeled_content(soup: BeautifulSoup) -> dict[str, list[Any]]:
         if field and dd:
             found[field].append(dd.get_text("\n", strip=True))
 
-    for element in soup.find_all(["label", "strong", "span", "div", "p", "h4", "h5"]):
+    for element in soup.find_all(["label", "strong", "span", "div", "p"]):
         direct = clean_text(" ".join(element.find_all(string=True, recursive=False)))
         field = field_from_label(direct)
         if not field:
@@ -266,39 +258,11 @@ def extract_labeled_content(soup: BeautifulSoup) -> dict[str, list[Any]]:
         if value and not field_from_label(value):
             found[field].append(value)
 
-    lines = [clean_text(line) for line in soup.get_text("\n", strip=True).splitlines()]
-    lines = [line for line in lines if line]
-    for index, line in enumerate(lines):
-        field = field_from_label(line)
-        if field and index + 1 < len(lines):
-            value = lines[index + 1]
-            if not field_from_label(value):
-                found[field].append(value)
-        for separator in ("：", ":"):
-            if separator not in line:
-                continue
-            label, value = line.split(separator, 1)
-            field = field_from_label(label)
-            if field and clean_text(value):
-                found[field].append(value)
-
     return found
 
 
 def classify_structured_key(key: Any, value: Any) -> str:
-    normalized = compact_key(key)
-    if not normalized:
-        return ""
-    is_abstract = any(token in normalized for token in ("abstract", "summary", "摘要"))
-    is_keyword = any(token in normalized for token in ("keyword", "keywords", "keyw", "關鍵字", "關鍵詞"))
-    if not (is_abstract or is_keyword):
-        return ""
-
-    zh_hint = any(token in normalized for token in ("zh", "ch", "chi", "cht", "cn", "中文", "chinese"))
-    en_hint = any(token in normalized for token in ("en", "eng", "英文", "english"))
-    text = clean_text(value)
-    language = "Zh" if zh_hint and not en_hint else "En" if en_hint and not zh_hint else ("Zh" if has_cjk(text) else "En")
-    return ("abstract" if is_abstract else "keywords") + language
+    return EXACT_STRUCTURED_KEYS.get(str(key), "")
 
 
 def recursive_structured_candidates(value: Any, output: dict[str, list[Any]]) -> None:
@@ -519,29 +483,31 @@ def merge_project_content(project: dict[str, Any], incoming: dict[str, Any], che
     changed: list[str] = []
     for field in ABSTRACT_FIELDS:
         value = valid_abstract(incoming.get(field))
-        if value and updated.get(field) != value:
+        if value and not clean_text(updated.get(field)):
             updated[field] = value
             changed.append(field)
     for field in KEYWORD_FIELDS:
         value = split_keywords(incoming.get(field))
-        if value and updated.get(field) != value:
+        if value and not updated.get(field):
             updated[field] = value
             changed.append(field)
 
-    if incoming.get("abstractZh") or incoming.get("abstractEn"):
-        if updated.get("abstractSource") != "GRB":
+    filled_abstract = any(field in changed for field in ABSTRACT_FIELDS)
+    filled_keywords = any(field in changed for field in KEYWORD_FIELDS)
+    if filled_abstract:
+        if not clean_text(updated.get("abstractSource")):
             updated["abstractSource"] = "GRB"
             changed.append("abstractSource")
-    if incoming.get("keywordsZh") or incoming.get("keywordsEn"):
-        if updated.get("keywordsSource") != "GRB":
+    if filled_keywords:
+        if not clean_text(updated.get("keywordsSource")):
             updated["keywordsSource"] = "GRB"
             changed.append("keywordsSource")
-    if any(incoming.get(field) for field in CONTENT_FIELDS):
-        if updated.get("grbContentSourceUrl") != source_url:
+    if filled_abstract or filled_keywords:
+        if not clean_text(updated.get("grbContentSourceUrl")):
             updated["grbContentSourceUrl"] = source_url
             changed.append("grbContentSourceUrl")
-        updated["grbContentLastChecked"] = checked_at
-        if "grbContentLastChecked" not in changed:
+        if not clean_text(updated.get("grbContentLastChecked")):
+            updated["grbContentLastChecked"] = checked_at
             changed.append("grbContentLastChecked")
     return updated, changed
 
@@ -674,6 +640,31 @@ def self_test() -> None:
     parsed_json = parse_documents([], [structured])
     assert parsed_json["keywordsZh"] == ["薄膜", "可靠度"]
     assert parsed_json["keywordsEn"] == ["Thin films", "Reliability"]
+
+    fuzzy = parse_documents([
+        "<table><tr><th>研究計畫中文摘要</th><td>"
+        "這段內容雖然足夠長，但標籤不在精確允許清單中，因此不得自動寫入正式資料。"
+        "</td></tr></table>"
+    ])
+    assert not fuzzy
+
+    existing = {
+        "abstractZh": "人工維護的中文摘要，內容不得被自動更新覆蓋，即使 GRB 回傳另一段看似有效而且更長的摘要文字。",
+        "abstractEn": "",
+        "keywordsZh": ["人工關鍵字"],
+    }
+    merged, changed_fields = merge_project_content(
+        existing,
+        parsed,
+        "2026-07-28T12:00:00+08:00",
+        "https://www.grb.gov.tw/search/planDetail?id=12345678",
+    )
+    assert merged["abstractZh"] == existing["abstractZh"]
+    assert merged["keywordsZh"] == ["人工關鍵字"]
+    assert merged["abstractEn"] == parsed["abstractEn"]
+    assert "abstractEn" in changed_fields
+    assert "abstractZh" not in changed_fields
+    assert "keywordsZh" not in changed_fields
 
     source = f"before\n{UI_START}\nold\n{UI_END}\nafter\n"
     updated, changed = replace_marked_block(source, UI_START, UI_END, UI_BLOCK)
