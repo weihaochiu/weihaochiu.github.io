@@ -3870,5 +3870,280 @@
       "https://openalex.org/A5111648315",
       "https://doi.org/10.1016/j.optcom.2004.10.003"
     ]
+  },
+  {
+    "id": "chao-sung-lai",
+    "name": "Chao-Sung Lai",
+    "displayName": "Chao-Sung Lai",
+    "nameZh": "賴朝松",
+    "aliases": [],
+    "role": "Professor",
+    "currentPosition": "Professor",
+    "affiliation": "",
+    "affiliationZh": "",
+    "email": [],
+    "telephone": "",
+    "orcid": "0000-0002-2069-7533",
+    "links": {
+      "orcid": "https://orcid.org/0000-0002-2069-7533"
+    },
+    "status": "verified",
+    "verificationLevel": "User-provided ORCID",
+    "lastVerified": "2026-07-28",
+    "sources": [
+      "https://patents.google.com/patent/TWI851990B/zh",
+      "https://patents.google.com/patent/TWI816357B/zh",
+      "https://orcid.org/0000-0002-2069-7533"
+    ],
+    "contributionTypes": ["patent-inventor"]
+  },
+  {
+    "id": "cheng-hung-chen",
+    "name": "Cheng-Hung Chen",
+    "displayName": "Cheng-Hung Chen",
+    "nameZh": "陳正宏",
+    "aliases": [],
+    "role": "",
+    "currentPosition": "",
+    "affiliation": "",
+    "affiliationZh": "",
+    "email": [],
+    "telephone": "",
+    "orcid": "",
+    "links": {},
+    "status": "pending",
+    "verificationLevel": "Patent-record name only",
+    "lastVerified": "",
+    "sources": [
+      "https://patents.google.com/patent/TWM612985U/en",
+      "https://patents.google.com/patent/TWM611184U/en"
+    ],
+    "contributionTypes": ["patent-inventor"]
+  },
+  {
+    "id": "chien-chun-chen",
+    "name": "Chien-Chun Chen",
+    "displayName": "Chien-Chun Chen",
+    "nameZh": "陳建均",
+    "aliases": [],
+    "role": "",
+    "currentPosition": "",
+    "affiliation": "",
+    "affiliationZh": "",
+    "email": [],
+    "telephone": "",
+    "orcid": "",
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/james-pvsg/"
+    },
+    "status": "verified",
+    "verificationLevel": "User-provided LinkedIn profile",
+    "lastVerified": "2026-07-28",
+    "sources": [
+      "https://patents.google.com/patent/TWM612985U/en",
+      "https://patents.google.com/patent/TWM611184U/en",
+      "https://www.linkedin.com/in/james-pvsg/"
+    ],
+    "contributionTypes": ["patent-inventor"]
+  },
+  {
+    "id": "hsiu-hung-liu",
+    "name": "Hsiu-Hung Liu",
+    "displayName": "Hsiu-Hung Liu",
+    "nameZh": "劉修宏",
+    "aliases": [],
+    "role": "",
+    "currentPosition": "",
+    "affiliation": "",
+    "affiliationZh": "",
+    "email": [],
+    "telephone": "",
+    "orcid": "",
+    "links": {},
+    "status": "pending",
+    "verificationLevel": "Patent-record name only",
+    "lastVerified": "",
+    "sources": [
+      "https://patents.google.com/patent/TWM612985U/en",
+      "https://patents.google.com/patent/TWM611184U/en"
+    ],
+    "contributionTypes": ["patent-inventor"]
+  },
+  {
+    "id": "sz-ping-fu",
+    "name": "Sz-Ping Fu",
+    "displayName": "Sz-Ping Fu",
+    "nameZh": "傅思萍",
+    "aliases": [],
+    "role": "",
+    "currentPosition": "",
+    "affiliation": "",
+    "affiliationZh": "",
+    "email": [],
+    "telephone": "",
+    "orcid": "",
+    "links": {},
+    "status": "pending",
+    "verificationLevel": "Patent-record name only",
+    "lastVerified": "",
+    "sources": [
+      "https://patents.google.com/patent/US8470150B2/en",
+      "https://patents.google.com/patent/CN102456482B/en",
+      "https://patents.google.com/patent/TWI407579B/en"
+    ],
+    "contributionTypes": ["patent-inventor"]
+  },
+  {
+    "id": "chuan-ya-hung",
+    "name": "Chuan-Ya Hung",
+    "displayName": "Chuan-Ya Hung",
+    "nameZh": "洪詮雅",
+    "aliases": ["洪诠雅"],
+    "role": "",
+    "currentPosition": "",
+    "affiliation": "",
+    "affiliationZh": "",
+    "email": [],
+    "telephone": "",
+    "orcid": "",
+    "links": {},
+    "status": "pending",
+    "verificationLevel": "Patent-record name only",
+    "lastVerified": "",
+    "sources": [
+      "https://patents.google.com/patent/US8470150B2/en",
+      "https://patents.google.com/patent/CN102456480A/en",
+      "https://patents.google.com/patent/CN102456482B/en",
+      "https://patents.google.com/patent/TWI407579B/en"
+    ],
+    "contributionTypes": ["patent-inventor"]
+  },
+  {
+    "id": "je-wei-lin",
+    "name": "Je-Wei Lin",
+    "displayName": "Je-Wei Lin",
+    "nameZh": "林哲緯",
+    "aliases": [],
+    "role": "",
+    "currentPosition": "",
+    "affiliation": "",
+    "affiliationZh": "",
+    "email": [],
+    "telephone": "",
+    "orcid": "",
+    "links": {},
+    "status": "pending",
+    "verificationLevel": "Patent-record name only",
+    "lastVerified": "",
+    "sources": [
+      "https://patents.google.com/patent/US20180062002A1/en",
+      "https://patents.google.com/patent/CN206236681U/en",
+      "https://patents.google.com/patent/TWM539701U/en"
+    ],
+    "contributionTypes": ["patent-inventor"]
+  },
+  {
+    "id": "wei-ming-chen",
+    "name": "Wei-Ming Chen",
+    "displayName": "Wei-Ming Chen",
+    "nameZh": "陳偉銘",
+    "aliases": [],
+    "role": "",
+    "currentPosition": "",
+    "affiliation": "",
+    "affiliationZh": "",
+    "email": [],
+    "telephone": "",
+    "orcid": "",
+    "links": {},
+    "status": "pending",
+    "verificationLevel": "Patent-record name only",
+    "lastVerified": "",
+    "sources": [
+      "https://patents.google.com/patent/US20180062002A1/en",
+      "https://patents.google.com/patent/CN206236681U/en",
+      "https://patents.google.com/patent/TWM539701U/en"
+    ],
+    "contributionTypes": ["patent-inventor"]
+  },
+  {
+    "id": "chie-sheng-liu",
+    "name": "Chie-Sheng Liu",
+    "displayName": "Chie-Sheng Liu",
+    "nameZh": "劉智生",
+    "aliases": [],
+    "role": "",
+    "currentPosition": "",
+    "affiliation": "",
+    "affiliationZh": "",
+    "email": [],
+    "telephone": "",
+    "orcid": "",
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/chie-sheng-liu-62485330/"
+    },
+    "status": "verified",
+    "verificationLevel": "User-provided LinkedIn profile",
+    "lastVerified": "2026-07-28",
+    "sources": [
+      "https://patents.google.com/patent/US20180062002A1/en",
+      "https://patents.google.com/patent/CN206236681U/en",
+      "https://patents.google.com/patent/TWM539701U/en",
+      "https://www.linkedin.com/in/chie-sheng-liu-62485330/"
+    ],
+    "contributionTypes": ["patent-inventor"]
+  },
+  {
+    "id": "shan-chuang-pei",
+    "name": "Shan-Chuang Pei",
+    "displayName": "Shan-Chuang Pei",
+    "nameZh": "裴善莊",
+    "aliases": [],
+    "role": "",
+    "currentPosition": "",
+    "affiliation": "",
+    "affiliationZh": "",
+    "email": [],
+    "telephone": "",
+    "orcid": "",
+    "links": {},
+    "status": "pending",
+    "verificationLevel": "Patent-record name only",
+    "lastVerified": "",
+    "sources": [
+      "https://patents.google.com/patent/US20180062002A1/en",
+      "https://patents.google.com/patent/CN206236681U/en",
+      "https://patents.google.com/patent/TWM539701U/en"
+    ],
+    "contributionTypes": ["patent-inventor"]
+  },
+  {
+    "id": "wei-chih-hsu",
+    "name": "Wei-Chih Hsu",
+    "displayName": "Wei-Chih Hsu",
+    "nameZh": "徐偉智",
+    "aliases": ["徐伟智"],
+    "role": "",
+    "currentPosition": "",
+    "affiliation": "",
+    "affiliationZh": "",
+    "email": [],
+    "telephone": "",
+    "orcid": "",
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/alexhsulove/"
+    },
+    "status": "verified",
+    "verificationLevel": "User-provided LinkedIn profile",
+    "lastVerified": "2026-07-28",
+    "sources": [
+      "https://patents.google.com/patent/US20180062002A1/en",
+      "https://patents.google.com/patent/CN206236681U/en",
+      "https://patents.google.com/patent/CN207367985U/en",
+      "https://patents.google.com/patent/TWM539701U/en",
+      "https://patents.google.com/patent/TWM551346U/en",
+      "https://www.linkedin.com/in/alexhsulove/"
+    ],
+    "contributionTypes": ["patent-inventor"]
   }
 ]

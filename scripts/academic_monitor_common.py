@@ -84,8 +84,8 @@ def review_key(record_type: str, item: dict[str, Any]) -> str:
         identity_type = "doi" if item.get("doi") else "title"
         identity = normalize_doi(item.get("doi")) or normalize_title(item.get("title"))
     elif singular == "patent":
-        identity_type = "number" if item.get("number") else "title"
-        identity = normalize_identifier(item.get("number")) or normalize_title(
+        identity_type = "number" if item.get("canonicalId") or item.get("number") else "title"
+        identity = normalize_identifier(item.get("canonicalId") or item.get("number")) or normalize_title(
             item.get("titleEn") or item.get("titleZh")
         )
     else:

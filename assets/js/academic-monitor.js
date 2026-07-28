@@ -55,8 +55,8 @@ function keyOf(type, item) {
       : `publication:title:${normalize(item.title)}`;
   }
   if (type === 'patents') {
-    return item.number
-      ? `patent:number:${String(item.number).toUpperCase().replace(/[^A-Z0-9]/g, '')}`
+    return item.canonicalId || item.number
+      ? `patent:number:${String(item.canonicalId || item.number).toUpperCase().replace(/[^A-Z0-9]/g, '')}`
       : `patent:title:${normalize(item.titleEn || item.titleZh)}`;
   }
   return item.grbId
@@ -90,12 +90,19 @@ function fieldLines(type, item) {
     ['出版者', item.publisher]
   ];
   if (type === 'patents') return [
+    ['標準專利號', item.canonicalId],
     ['專利號／公開號', item.number],
     ['中文名稱', item.titleZh],
     ['英文名稱', item.titleEn],
     ['發明人', (item.inventorsEn || []).join('; ') || item.inventorsZh],
     ['申請人', item.assigneeEn || item.assigneeZh],
-    ['狀態', item.status]
+    ['管轄區', item.jurisdiction],
+    ['申請日', item.filingDate],
+    ['公開日', item.publicationDate],
+    ['核准日', item.grantDate],
+    ['文件階段', item.documentStage || item.status],
+    ['法律狀態', item.legalStatus],
+    ['可信度', item.confidence]
   ];
   return [
     ['GRB ID', item.grbId],

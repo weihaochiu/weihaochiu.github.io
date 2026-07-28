@@ -1,0 +1,79 @@
+[
+  {
+    "familyId": "grooved-solar-module",
+    "titleEn": "Solar Cell Module Having Groove Structure and Manufacturing Method Thereof",
+    "titleZh": "槽式太陽能電池模組及其製備方法",
+    "documents": [
+      "TWI851990B"
+    ]
+  },
+  {
+    "familyId": "parallel-electrode-solar-module",
+    "titleEn": "Solar Cell Module and Manufacturing Method Thereof",
+    "titleZh": "太陽能電池模組及其製備方法",
+    "documents": [
+      "TWI816357B"
+    ]
+  },
+  {
+    "familyId": "adjustable-illuminance-scaffold",
+    "titleEn": "Scaffold with Adjustable Illuminance",
+    "titleZh": "照度可調整之棚架",
+    "documents": [
+      "TWM612985U"
+    ]
+  },
+  {
+    "familyId": "substrate-electrode-structures",
+    "titleEn": "Method of Fabricating Electrode Structures on a Substrate",
+    "titleZh": "基板電極結構的製造方法",
+    "documents": [
+      "US8470150B2",
+      "CN102456482B",
+      "TWI407579B"
+    ]
+  },
+  {
+    "familyId": "solar-cell-structure",
+    "titleEn": "Solar Cell Structure",
+    "titleZh": "太陽電池結構",
+    "documents": [
+      "CN102456480A"
+    ]
+  },
+  {
+    "familyId": "solar-cell-2017",
+    "titleEn": "Solar Cell",
+    "titleZh": "太陽能電池",
+    "documents": [
+      "US20180062002A1",
+      "CN206236681U",
+      "TWM539701U"
+    ]
+  },
+  {
+    "familyId": "bifacial-solar-cell-module",
+    "titleEn": "Bifacial Solar Cell and Solar Cell Module",
+    "titleZh": "雙面太陽能電池及太陽能電池模組",
+    "documents": [
+      "CN207367985U",
+      "TWM551346U"
+    ]
+  },
+  {
+    "familyId": "dye-sensitized-solar-cell",
+    "titleEn": "Dye-Sensitized Solar Cell",
+    "titleZh": "染料敏化太陽能電池",
+    "documents": [
+      "TWI449190B"
+    ]
+  },
+  {
+    "familyId": "solar-cell-module-2021",
+    "titleEn": "Solar Cell Module",
+    "titleZh": "太陽能電池模組",
+    "documents": [
+      "TWM611184U"
+    ]
+  }
+]

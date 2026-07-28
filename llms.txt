@@ -72,3 +72,22 @@
 - [Efficient electron transport in tetrapod-like ZnO metal-free dye-sensitized solar cells](https://weihaochiu.github.io/publications/10-1039-b902595m.html) — Energy & Environmental Science, 2009; DOI: 10.1039/B902595M
 - [Formation of branched ZnO nanowires from solvothermal method and dye-sensitized solar cells applications](https://weihaochiu.github.io/publications/10-1021-jp805239k.html) — The Journal of Physical Chemistry C, 2008; DOI: 10.1021/jp805239k
 - [Transverse excess noise factor and transverse mode locking in a gain-guided laser](https://weihaochiu.github.io/publications/10-1016-j-optcom-2004-10-003.html) — Optics Communications, 2005; DOI: 10.1016/j.optcom.2004.10.003
+
+<!-- PATENT_LLMS_START -->
+## Patents
+
+- [Solar Cell Module Having Groove Structure and Manufacturing Method Thereof](https://weihaochiu.github.io/patents/twi851990b.html) — TWI851990B; Taiwan; Granted
+- [Solar Cell Module and Manufacturing Method Thereof](https://weihaochiu.github.io/patents/twi816357b.html) — TWI816357B; Taiwan; Granted
+- [Scaffold with Adjustable Illuminance](https://weihaochiu.github.io/patents/twm612985u.html) — TWM612985U; Taiwan; Granted
+- [Solar Cell Module](https://weihaochiu.github.io/patents/twm611184u.html) — TWM611184U; Taiwan; Granted
+- [Bifacial Solar Cell and Solar Cell Module](https://weihaochiu.github.io/patents/cn207367985u.html) — CN207367985U; China; Granted
+- [Solar Cell](https://weihaochiu.github.io/patents/us20180062002a1.html) — US20180062002A1; United States; Published application
+- [Solar Cell](https://weihaochiu.github.io/patents/twm539701u.html) — TWM539701U; Taiwan; Granted
+- [Bifacial Solar Cell and Solar Cell Module](https://weihaochiu.github.io/patents/twm551346u.html) — TWM551346U; Taiwan; Granted
+- [Solar Cell](https://weihaochiu.github.io/patents/cn206236681u.html) — CN206236681U; China; Granted
+- [Method for Manufacturing a Substrate Electrode Structure](https://weihaochiu.github.io/patents/cn102456482b.html) — CN102456482B; China; Granted
+- [Dye-Sensitized Solar Cell](https://weihaochiu.github.io/patents/twi449190b.html) — TWI449190B; Taiwan; Granted
+- [Method of Fabricating Electrode Structures on a Substrate](https://weihaochiu.github.io/patents/twi407579b.html) — TWI407579B; Taiwan; Granted
+- [Method of Fabricating Electrode Structures on Substrate](https://weihaochiu.github.io/patents/us8470150b2.html) — US8470150B2; United States; Granted
+- [Solar Cell Structure](https://weihaochiu.github.io/patents/cn102456480a.html) — CN102456480A; China; Published application
+<!-- PATENT_LLMS_END -->

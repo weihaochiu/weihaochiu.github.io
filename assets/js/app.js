@@ -44,13 +44,20 @@ async function loadData(name){
 function yearOf(x){return Number(x.year||x.startYear||String(x.sortDate||x.date||'').slice(0,4)||0)}
 function highlightAuthor(name){return /Chiu, Wei-Hao|Wei-Hao Chiu/.test(name)?`<strong class="me">${esc(name)}</strong>`:esc(name)}
 const authorDirectory=new Map();
-function normalizeAuthorName(name){return String(name||'').normalize('NFKD').toLowerCase().replace(/[^a-z0-9]+/g,'').trim()}
-function authorHasInformation(author){return Boolean(author&&(author.role||author.currentPosition||author.affiliation||author.affiliationZh||(author.email||[]).length||author.telephone||author.orcid||Object.values(author.links||{}).some(Boolean)))}
+const authorIdDirectory=new Map();
+const patentContributionDirectory=new Map();
+function normalizeAuthorName(name){return String(name||'').normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase().replace(/[^\p{L}\p{N}]+/gu,'').trim()}
+function authorHasInformation(author){return Boolean(author&&(author.role||author.currentPosition||author.affiliation||author.affiliationZh||(author.email||[]).length||author.telephone||author.orcid||Object.values(author.links||{}).some(Boolean)||(author.contributionTypes||[]).length))}
 function buildAuthorDirectory(authors=[]){
   authorDirectory.clear();
+  authorIdDirectory.clear();
   authors.forEach(author=>{
     if(!authorHasInformation(author))return;
-    [author.name,author.displayName,author.nameZh,...(author.aliases||[])].filter(Boolean).forEach(name=>authorDirectory.set(normalizeAuthorName(name),author));
+    if(author.id)authorIdDirectory.set(String(author.id),author);
+    [author.name,author.displayName,author.nameZh,...(author.aliases||[])].filter(Boolean).forEach(name=>{
+      const key=normalizeAuthorName(name);
+      if(key)authorDirectory.set(key,author);
+    });
   });
 }
 function renderAuthor(name){
@@ -59,14 +66,34 @@ function renderAuthor(name){
   const me=/Chiu, Wei-Hao|Wei-Hao Chiu/.test(name)?' me':'';
   return `<button class="author-trigger${me}" type="button" data-author-name="${esc(name)}" aria-haspopup="dialog" aria-expanded="false">${esc(name)}</button>`;
 }
+function renderPersonReference(personId,name){
+  const author=authorIdDirectory.get(String(personId||''));
+  if(!author)return highlightAuthor(name);
+  const me=personId==='wei-hao-chiu'?' me':'';
+  return `<button class="author-trigger${me}" type="button" data-author-id="${esc(personId)}" data-author-name="${esc(name)}" aria-haspopup="dialog" aria-expanded="false">${esc(name)}</button>`;
+}
+function buildPatentContributions(rows=[]){
+  patentContributionDirectory.clear();
+  rows.forEach(patent=>(patent.inventors||[]).forEach(inventor=>{
+    const personId=String(inventor.personId||'');
+    if(!personId)return;
+    const entry=patentContributionDirectory.get(personId)||{documents:new Set(),families:new Set()};
+    entry.documents.add(patent.canonicalId||patent.number);
+    entry.families.add(patent.familyId||patent.canonicalId||patent.number);
+    patentContributionDirectory.set(personId,entry);
+  }));
+}
 function authorCardHtml(author){
   const emails=(author.email||[]).map(item=>typeof item==='string'?{address:item,label:'Email'}:item).filter(item=>item.address);
   const telephone=typeof author.telephone==='string'?{display:author.telephone}:author.telephone;
   const phoneAction=telephone?.display?`<a${telephone.href?` href="${esc(telephone.href)}"`:''}>Phone: ${esc(telephone.display)}</a>`:'';
-  const links={ORCID:author.links?.orcid||(author.orcid?`https://orcid.org/${author.orcid}`:''),'Google Scholar':author.links?.googleScholar,OpenAlex:author.links?.openAlex,Scopus:author.links?.scopus,'Web of Science':author.links?.webOfScience,Institution:author.links?.institution,'Personal website':author.links?.personalWebsite};
+  const links={ORCID:author.links?.orcid||(author.orcid?`https://orcid.org/${author.orcid}`:''),LinkedIn:author.links?.linkedin,'Google Scholar':author.links?.googleScholar,OpenAlex:author.links?.openAlex,Scopus:author.links?.scopus,'Web of Science':author.links?.webOfScience,Institution:author.links?.institution,'Personal website':author.links?.personalWebsite};
   const actions=[...emails.map(item=>`<a href="mailto:${esc(item.address)}">${esc(item.label||'Email')}</a>`),phoneAction,...Object.entries(links).filter(([,url])=>url).map(([label,url])=>`<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(label)} ↗</a>`)].filter(Boolean).join('');
   const position=author.currentPosition&&author.currentPosition!==author.role?`<p class="author-role">Current position: ${esc(author.currentPosition)}</p>`:'';
-  return `<button class="author-popover-close" type="button" aria-label="Close author information">×</button><h2>${esc(author.displayName||author.name)}</h2>${author.nameZh?`<p class="author-name-zh">${esc(author.nameZh)}</p>`:''}${author.role?`<p class="author-role">${esc(author.role)}</p>`:''}${position}${author.affiliation?`<p class="author-affiliation">${esc(author.affiliation)}</p>`:''}${author.affiliationZh?`<p class="author-affiliation">${esc(author.affiliationZh)}</p>`:''}<div class="author-popover-links">${actions}</div>`;
+  const patents=patentContributionDirectory.get(String(author.id||''));
+  const patentSummary=patents?`<p class="author-contribution">Patent inventor · ${patents.documents.size} document${patents.documents.size===1?'':'s'} · ${patents.families.size} famil${patents.families.size===1?'y':'ies'}</p>`:'';
+  const pending=author.status==='pending'?'<p class="author-verification-note">Patent-record identity only; profile details pending verification.</p>':'';
+  return `<button class="author-popover-close" type="button" aria-label="Close author information">×</button><h2>${esc(author.displayName||author.name)}</h2>${author.nameZh?`<p class="author-name-zh">${esc(author.nameZh)}</p>`:''}${author.role?`<p class="author-role">${esc(author.role)}</p>`:''}${position}${author.affiliation?`<p class="author-affiliation">${esc(author.affiliation)}</p>`:''}${author.affiliationZh?`<p class="author-affiliation">${esc(author.affiliationZh)}</p>`:''}${patentSummary}${pending}${actions?`<div class="author-popover-links">${actions}</div>`:''}`;
 }
 function initAuthorPopover(){
   if(document.documentElement.dataset.authorPopoverReady==='true')return;
@@ -75,11 +102,11 @@ function initAuthorPopover(){
   if(!popover){popover=document.createElement('div');popover.id='authorPopover';popover.className='author-popover';popover.setAttribute('role','dialog');popover.setAttribute('aria-label','Author information');popover.hidden=true;document.body.append(popover)}
   let active=null;
   const close=()=>{if(popover.hidden)return null;const previous=active;popover.hidden=true;active?.setAttribute('aria-expanded','false');active=null;return previous};
-  const open=trigger=>{const author=authorDirectory.get(normalizeAuthorName(trigger.dataset.authorName));if(!author)return;active?.setAttribute('aria-expanded','false');active=trigger;active.setAttribute('aria-expanded','true');popover.innerHTML=authorCardHtml(author);popover.hidden=false;const r=trigger.getBoundingClientRect(),w=Math.min(360,window.innerWidth-24),left=Math.max(12,Math.min(window.innerWidth-w-12,r.left));popover.style.width=`${w}px`;popover.style.left=`${left}px`;popover.style.top=`${Math.min(window.scrollY+r.bottom+8,window.scrollY+window.innerHeight-popover.offsetHeight-12)}px`;popover.querySelector('.author-popover-close')?.focus({preventScroll:true})};
-  document.addEventListener('click',event=>{const trigger=event.target.closest('.author-trigger[data-author-name]');if(trigger){event.preventDefault();active===trigger&&!popover.hidden?close():open(trigger);return}if(event.target.closest('.author-popover-close')||(!popover.hidden&&!event.target.closest('#authorPopover')))close()});
+  const open=trigger=>{const author=authorIdDirectory.get(String(trigger.dataset.authorId||''))||authorDirectory.get(normalizeAuthorName(trigger.dataset.authorName));if(!author)return;active?.setAttribute('aria-expanded','false');active=trigger;active.setAttribute('aria-expanded','true');popover.innerHTML=authorCardHtml(author);popover.hidden=false;const r=trigger.getBoundingClientRect(),w=Math.min(360,window.innerWidth-24),left=Math.max(12,Math.min(window.innerWidth-w-12,r.left));popover.style.width=`${w}px`;popover.style.left=`${left}px`;popover.style.top=`${Math.min(window.scrollY+r.bottom+8,window.scrollY+window.innerHeight-popover.offsetHeight-12)}px`;popover.querySelector('.author-popover-close')?.focus({preventScroll:true})};
+  document.addEventListener('click',event=>{const trigger=event.target.closest('.author-trigger[data-author-name],.author-trigger[data-author-id]');if(trigger){event.preventDefault();active===trigger&&!popover.hidden?close():open(trigger);return}if(event.target.closest('.author-popover-close')||(!popover.hidden&&!event.target.closest('#authorPopover')))close()});
   document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!popover.hidden)close()?.focus()});
 }
-window.AuthorCards={build:buildAuthorDirectory,render:renderAuthor,init:initAuthorPopover,has:author=>authorHasInformation(author)};
+window.AuthorCards={build:buildAuthorDirectory,render:renderAuthor,renderPerson:renderPersonReference,init:initAuthorPopover,has:author=>authorHasInformation(author)};
 function fillSelect(el,vals,label='All',mode='numeric-desc'){
   if(!el)return;
   let items=[...new Set(vals.filter(v=>v!==undefined&&v!==null&&v!==''))];
@@ -96,8 +123,10 @@ function setNavigation(){
   const nav=$('.site-nav');if(!nav)return;
   const links=[['about.html','About'],['research.html','Research'],['publications.html','Publications'],['patents.html','Patents'],['projects.html','Projects']];
   const p=(location.pathname.split('/').pop()||'index.html').toLowerCase();
+  const detailSection=location.pathname.toLowerCase().match(/\/(publications|patents)\//)?.[1]||'';
+  const prefix=detailSection?'../':'';
   const aboutPages=new Set(['about.html','experience.html','education.html','awards.html']);
-  nav.innerHTML=links.map(([href,label])=>{const active=(href===p)||(href==='about.html'&&aboutPages.has(p));return `<a ${active?'aria-current="page" ':''}href="${href}">${label}</a>`}).join('');
+  nav.innerHTML=links.map(([href,label])=>{const active=(href===p)||(href===`${detailSection}.html`)||(href==='about.html'&&aboutPages.has(p));return `<a ${active?'aria-current="page" ':''}href="${prefix}${href}">${label}</a>`}).join('');
 }
 
 async function initMeta(){
@@ -135,13 +164,17 @@ async function initMeta(){
 
 async function initOutputCounts(){
   const names=['publications','patents','projects','awards'];
-  const rows=await Promise.all(names.map(name=>loadData(name).catch(()=>null)));
+  const [rows,families]=await Promise.all([
+    Promise.all(names.map(name=>loadData(name).catch(()=>null))),
+    loadData('patent_families').catch(()=>[])
+  ]);
   rows.forEach((records,index)=>{
     if(!Array.isArray(records))return;
     $$(`[data-output-count="${names[index]}"]`).forEach(element=>{
       element.textContent=records.length.toLocaleString();
     });
   });
+  if(Array.isArray(families))$$('[data-patent-family-count]').forEach(element=>{element.textContent=families.length.toLocaleString()});
 }
 
 const FALLBACK_CATEGORY_LABELS={
@@ -304,7 +337,62 @@ function publicationCard(p){
   const share=`<span class="share-wrap"><button class="action action-button share-trigger" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="${esc(shareMenuId)}" data-share-title="${esc(p.title)}" data-share-text="${esc(shareText)}" data-share-url="${esc(shareUrl)}">${SHARE_ICON}<span>Share</span></button><span class="share-menu" id="${esc(shareMenuId)}" role="menu" hidden><button type="button" role="menuitem" data-copy-share-url="${esc(shareUrl)}">Copy link</button><a role="menuitem" href="${esc(emailUrl)}">Email</a><a role="menuitem" href="${esc(linkedinUrl)}" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a role="menuitem" href="${esc(xUrl)}" target="_blank" rel="noopener noreferrer">X (Twitter) ↗</a><a role="menuitem" href="${esc(facebookUrl)}" target="_blank" rel="noopener noreferrer">Facebook ↗</a></span></span>`;
   return `<article class="collection-card publication-card" id="${esc(anchor)}"><div class="card-heading"><h4><a href="${esc(shareUrl)}">${esc(p.title)}</a></h4><span class="date-badge">${esc(p.date)}</span></div><p class="authors">${authors}</p><p class="journal"><em>${esc(p.journal)}</em>${p.volume?`, ${esc(p.volume)}`:''}${p.pages?`, ${esc(p.pages)}`:''} (${p.year}).</p><div class="card-labels">${labels.map(label=>`<span class="card-label">${esc(label)}</span>`).join('')}</div><div class="card-actions">${detailAction}<a class="action" href="${esc(p.doiUrl)}" target="_blank" rel="noopener">DOI ↗</a>${oaAction}${cited}${openalexAction}${openalexImpact}${crossrefAction}${readers}${share}</div></article>`;
 }
-function patentCard(p){return `<article class="collection-card"><div class="card-heading"><h4><a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.titleEn)}</a></h4><span class="date-badge">${esc(p.date)}</span></div>${p.titleZh?`<div class="local-title" lang="zh-Hant">${esc(p.titleZh)}</div>`:''}<div class="card-labels"><span class="card-label">${esc(p.number)}</span><span class="card-label">${esc(p.jurisdiction)}</span><span class="card-label">${esc(p.status)}</span></div><div class="meta-row">Inventors: ${(p.inventorsEn||[]).map(highlightAuthor).join(', ')}</div>${p.inventorsZh?`<div class="meta-row" lang="zh-Hant">發明人／創作人：${esc(p.inventorsZh)}</div>`:''}<div class="meta-row">Assignee: ${esc(p.assigneeEn)}</div><div class="card-actions"><a class="action" href="${esc(p.url)}" target="_blank" rel="noopener">Patent record ↗</a></div></article>`}
+function patentSlug(p){return String(p.canonicalId||p.number||'patent').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')}
+function enrichPatents(rows,metadata={},families=[]){
+  const records=metadata.records||{};
+  const familyMap=new Map((families||[]).map(family=>[family.familyId,family]));
+  const protectedFields=new Set(['titleEn','titleZh','inventors','assigneeEn','assigneeZh','number','canonicalId','aliases','familyId']);
+  const enriched=rows.map(p=>{
+    const automatic=records[p.canonicalId]||{};
+    const merged={...p};
+    Object.entries(automatic).forEach(([key,value])=>{
+      if(protectedFields.has(key)||value===null||value===''||(Array.isArray(value)&&!value.length))return;
+      merged[key]=value;
+    });
+    merged.family=familyMap.get(p.familyId)||null;
+    merged.metadataUpdatedAt=automatic.updatedAt||metadata.lastSuccessfulUpdate||'';
+    return merged;
+  });
+  buildPatentContributions(enriched);
+  return enriched;
+}
+function patentInventors(p){
+  const structured=Array.isArray(p.inventors)?p.inventors:[];
+  if(structured.length)return structured.map(inventor=>{
+    const name=inventor.nameEn||inventor.nameZh||'';
+    const trigger=renderPersonReference(inventor.personId,name);
+    return inventor.nameZh?`${trigger} <span lang="zh-Hant">(${esc(inventor.nameZh)})</span>`:trigger;
+  }).join(', ');
+  return (p.inventorsEn||[]).map(renderAuthor).join(', ');
+}
+function patentDateRows(p){
+  const fields=[['Priority date',p.priorityDate],['Filing date',p.filingDate],['Publication date',p.publicationDate],['Grant date',p.grantDate]];
+  return fields.filter(([,value])=>value).map(([label,value])=>`<div><dt>${label}</dt><dd>${esc(formatDate(value))}</dd></div>`).join('');
+}
+function patentDetails(p){
+  const dates=patentDateRows(p);
+  const classifications=(p.classifications||[]).filter(Boolean);
+  const abstract=String(p.abstract||'').trim();
+  const application=p.applicationNumber?`<p><strong>Application number:</strong> ${esc(p.applicationNumber)}</p>`:'';
+  const legal=p.legalStatus?`<p><strong>Source-reported legal status:</strong> ${esc(p.legalStatus)}</p>`:'';
+  const checked=p.metadataUpdatedAt?`<p class="patent-source-note">Metadata last checked ${esc(formatDate(p.metadataUpdatedAt))}. Source-reported status is informational and is not legal advice.</p>`:'<p class="patent-source-note">Automatic metadata has not yet been successfully checked. Manually verified identity fields remain displayed.</p>';
+  if(!dates&&!application&&!legal&&!classifications.length&&!abstract&&!checked)return '';
+  return `<details class="patent-details"><summary>Patent metadata and abstract</summary><div class="patent-detail-body">${application}${dates?`<dl class="patent-date-grid">${dates}</dl>`:''}${legal}${classifications.length?`<div class="patent-classifications">${classifications.map(item=>`<span>${esc(item)}</span>`).join('')}</div>`:''}${abstract?`<section><h5>Abstract</h5><p>${esc(abstract)}</p></section>`:''}${checked}</div></details>`;
+}
+function patentCard(p){
+  const detailUrl=`patents/${patentSlug(p)}.html`;
+  const stage=p.documentStage||p.status||'Status unavailable';
+  const family=p.family?`<span class="card-label">${esc(p.family.titleEn||p.familyId)}</span>`:'';
+  return `<article class="collection-card patent-card" id="patent-${esc(patentSlug(p))}"><div class="card-heading"><h4><a href="${esc(detailUrl)}">${esc(p.titleEn)}</a></h4><span class="date-badge">${esc(p.date||formatDate(p.publicationDate||p.grantDate))}</span></div>${p.titleZh?`<div class="local-title" lang="zh-Hant">${esc(p.titleZh)}</div>`:''}<div class="card-labels"><span class="card-label">${esc(p.number)}</span><span class="card-label">${esc(p.jurisdiction)}</span><span class="card-label">${esc(stage)}</span>${p.patentType?`<span class="card-label">${esc(p.patentType)}</span>`:''}${family}</div><div class="meta-row">Inventors: ${patentInventors(p)}</div><div class="meta-row">Assignee: ${esc(p.assigneeEn)}${p.assigneeZh?` <span lang="zh-Hant">(${esc(p.assigneeZh)})</span>`:''}</div>${patentDetails(p)}<div class="card-actions"><a class="action" href="${esc(detailUrl)}">Patent details →</a><a class="action" href="${esc(p.url)}" target="_blank" rel="noopener">Patent record ↗</a></div></article>`;
+}
+function patentFamilyCard(group){
+  const family=group[0].family||{};
+  const title=family.titleEn||group[0].titleEn;
+  const titleZh=family.titleZh||group[0].titleZh;
+  const jurisdictions=[...new Set(group.map(p=>p.jurisdiction).filter(Boolean))];
+  const latest=[...group].sort((a,b)=>String(b.sortDate).localeCompare(String(a.sortDate)))[0];
+  return `<article class="collection-card patent-family-card"><div class="card-heading"><h4>${esc(title)}</h4><span class="date-badge">${esc(latest.year)}</span></div>${titleZh?`<div class="local-title" lang="zh-Hant">${esc(titleZh)}</div>`:''}<div class="card-labels"><span class="card-label">${group.length} document${group.length===1?'':'s'}</span>${jurisdictions.map(value=>`<span class="card-label">${esc(value)}</span>`).join('')}</div><details class="patent-family-documents"><summary>View family documents</summary><div class="patent-family-list">${group.map(patentCard).join('')}</div></details></article>`;
+}
 /* GRB_PROJECT_FUNDING_START */
 function formatProjectFunding(p){
   const amount=Number(p.fundingAmountTwd);
@@ -422,15 +510,35 @@ async function initCollection(){
   const root=$('[data-collection]');if(!root)return;
   const name=root.dataset.collection;
   const rawRows=await loadData(name);
-  const [taxonomy,mendeley,unpaywall,crossref,openalex]=name==='publications'
-    ?await Promise.all([loadData('publication_taxonomy').catch(()=>({})),loadData('mendeley_metrics').catch(()=>({})),loadData('unpaywall').catch(()=>({})),loadData('crossref_publication_metrics').catch(()=>({})),loadData('openalex_publication_metrics').catch(()=>({}))])
-    :[{},{},{},{},{}];
-  const rows=name==='publications'?enrichPublications(rawRows,taxonomy,mendeley,unpaywall,crossref,openalex):rawRows;
-  const search=$('#searchInput'),year=$('#yearFilter'),topic=$('#topicFilter'),sort=$('#sortFilter'),count=$('#resultCount'),container=$('#collectionContainer'),empty=$('#emptyState');
+  let taxonomy={},rows=rawRows;
+  if(name==='publications'){
+    const [loadedTaxonomy,mendeley,unpaywall,crossref,openalex]=await Promise.all([loadData('publication_taxonomy').catch(()=>({})),loadData('mendeley_metrics').catch(()=>({})),loadData('unpaywall').catch(()=>({})),loadData('crossref_publication_metrics').catch(()=>({})),loadData('openalex_publication_metrics').catch(()=>({}))]);
+    taxonomy=loadedTaxonomy;
+    rows=enrichPublications(rawRows,taxonomy,mendeley,unpaywall,crossref,openalex);
+  }else if(name==='patents'){
+    const [metadata,families]=await Promise.all([loadData('patent_metadata').catch(()=>({})),loadData('patent_families').catch(()=>[])]);
+    rows=enrichPatents(rawRows,metadata,families);
+    const granted=rows.filter(p=>(p.documentStage||p.status||'').toLowerCase().startsWith('granted')).length;
+    const applications=rows.filter(p=>(p.documentStage||p.status||'').toLowerCase().includes('application')).length;
+    const familyCount=new Set(rows.map(p=>p.familyId).filter(Boolean)).size;
+    $('#patentDocumentTotal')?.replaceChildren(document.createTextNode(String(rows.length)));
+    $('#patentFamilyTotal')?.replaceChildren(document.createTextNode(String(familyCount)));
+    $('#patentGrantedTotal')?.replaceChildren(document.createTextNode(String(granted)));
+    $('#patentApplicationTotal')?.replaceChildren(document.createTextNode(String(applications)));
+    const checked=$('#patentMetadataUpdated');
+    if(checked)checked.textContent=metadata.lastSuccessfulUpdate?`Automatic metadata last successfully checked ${formatDate(metadata.lastSuccessfulUpdate)}.`:'Automatic metadata has not yet completed a successful full check.';
+  }
+  const search=$('#searchInput'),year=$('#yearFilter'),topic=$('#topicFilter'),sort=$('#sortFilter'),count=$('#resultCount'),countUnit=$('#resultUnit'),container=$('#collectionContainer'),empty=$('#emptyState');
+  const jurisdiction=$('#jurisdictionFilter'),stage=$('#statusFilter'),assignee=$('#assigneeFilter'),view=$('#patentViewFilter');
   fillSelect(year,rows.map(yearOf),'All years','numeric-desc');
   if(topic){
     if(name==='publications')fillPublicationThemeSelect(topic,taxonomy);
     else fillSelect(topic,rows.map(x=>x.topic).filter(Boolean),'All themes','alpha');
+  }
+  if(name==='patents'){
+    fillSelect(jurisdiction,rows.map(x=>x.jurisdiction),'All jurisdictions','alpha');
+    fillSelect(stage,rows.map(x=>x.documentStage||x.status),'All stages','alpha');
+    fillSelect(assignee,rows.map(x=>x.assigneeEn||x.assigneeZh),'All assignees','alpha');
   }
   const card={publications:publicationCard,patents:patentCard,projects:projectCard,awards:awardCard}[name];
   function applyChartSelection(selectedYear,category){
@@ -447,18 +555,39 @@ async function initCollection(){
       const searchMatch=!q||JSON.stringify(x).toLowerCase().includes(q);
       const yearMatch=!year?.value||String(yearOf(x))===year.value;
       const topicMatch=!topic||!topic.value||(name==='publications'?publicationMatchesTheme(x,topic.value):x.topic===topic.value);
-      return searchMatch&&yearMatch&&topicMatch;
+      const jurisdictionMatch=!jurisdiction?.value||x.jurisdiction===jurisdiction.value;
+      const stageMatch=!stage?.value||(x.documentStage||x.status)===stage.value;
+      const assigneeMatch=!assignee?.value||(x.assigneeEn||x.assigneeZh)===assignee.value;
+      return searchMatch&&yearMatch&&topicMatch&&jurisdictionMatch&&stageMatch&&assigneeMatch;
     });
     const mode=sort?.value||'date-desc';
     list.sort((a,b)=>mode==='date-asc'?String(a.sortDate||a.date).localeCompare(String(b.sortDate||b.date)):mode==='title-asc'?String(a.title||a.titleEn).localeCompare(String(b.title||b.titleEn)):mode==='citations-desc'?Number(b.citationCount||0)-Number(a.citationCount||0):String(b.sortDate||b.date).localeCompare(String(a.sortDate||a.date)));
-    if(count)count.textContent=list.length;
     if(empty)empty.hidden=!!list.length;
+    if(name==='patents'&&view?.value==='families'){
+      const groups=[...list.reduce((map,item)=>{
+        const key=item.familyId||item.canonicalId||item.number;
+        if(!map.has(key))map.set(key,[]);
+        map.get(key).push(item);
+        return map;
+      },new Map()).values()];
+      groups.sort((a,b)=>{
+        const dateA=[...a].sort((x,y)=>String(y.sortDate).localeCompare(String(x.sortDate)))[0]?.sortDate||'';
+        const dateB=[...b].sort((x,y)=>String(y.sortDate).localeCompare(String(x.sortDate)))[0]?.sortDate||'';
+        return mode==='date-asc'?String(dateA).localeCompare(String(dateB)):mode==='title-asc'?String(a[0].family?.titleEn||a[0].titleEn).localeCompare(String(b[0].family?.titleEn||b[0].titleEn)):String(dateB).localeCompare(String(dateA));
+      });
+      if(count)count.textContent=groups.length;
+      if(countUnit)countUnit.textContent='families shown';
+      container.innerHTML=`<div class="collection-list patent-family-results">${groups.map(patentFamilyCard).join('')}</div>`;
+      return;
+    }
+    if(count)count.textContent=list.length;
+    if(countUnit)countUnit.textContent=name==='patents'?'documents shown':'shown';
     const g=list.reduce((o,x)=>((o[yearOf(x)]??=[]).push(x),o),{});
     container.innerHTML=Object.keys(g).sort((a,b)=>mode==='date-asc'?a-b:b-a).map(y=>`<section class="year-group"><div class="year-heading"><h3>${y}</h3><span>${g[y].length} record${g[y].length===1?'':'s'}</span></div><div class="collection-list">${g[y].map(card).join('')}</div></section>`).join('');
     if(name==='publications')requestAnimationFrame(focusHashPublication);
   }
-  [search,year,topic,sort].filter(Boolean).forEach(e=>e.addEventListener(e===search?'input':'change',render));
-  $('#clearFilters')?.addEventListener('click',()=>{if(search)search.value='';if(year)year.value='';if(topic)topic.value='';if(sort)sort.value='date-desc';render()});
+  [search,year,topic,sort,jurisdiction,stage,assignee,view].filter(Boolean).forEach(e=>e.addEventListener(e===search?'input':'change',render));
+  $('#clearFilters')?.addEventListener('click',()=>{if(search)search.value='';if(year)year.value='';if(topic)topic.value='';if(jurisdiction)jurisdiction.value='';if(stage)stage.value='';if(assignee)assignee.value='';if(view)view.value='families';if(sort)sort.value='date-desc';render()});
   render();
 }
 
@@ -559,7 +688,10 @@ document.addEventListener('DOMContentLoaded',async()=>{
   initOutputCounts().catch(console.error);
   combinedChart().catch(console.error);
   researchCharts().catch(console.error);
-  const authors=await loadData('authors').catch(()=>[]);buildAuthorDirectory(authors);initAuthorPopover();
+  const [authors,patents]=await Promise.all([loadData('authors').catch(()=>[]),loadData('patents').catch(()=>[])]);
+  buildAuthorDirectory(authors);
+  buildPatentContributions(patents);
+  initAuthorPopover();
   initCollection().catch(console.error);
 });
 
