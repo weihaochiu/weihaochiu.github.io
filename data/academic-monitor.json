@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-07-28T15:01:11+08:00",
+  "generatedAt": "2026-07-29T12:18:09+08:00",
   "repository": "https://github.com/weihaochiu/weihaochiu.github.io",
   "status": "completed",
   "summary": {
@@ -1289,7 +1289,7 @@
       "url": "https://pub.orcid.org/v3.0/0000-0003-4484-3117/works",
       "status": "success",
       "message": "",
-      "checkedAt": "2026-07-28T15:00:44+08:00",
+      "checkedAt": "2026-07-29T12:18:01+08:00",
       "candidateCount": 4
     },
     {
@@ -1297,7 +1297,7 @@
       "url": "https://patents.google.com/?q=inventor%3D%22Wei-Hao+Chiu%22",
       "status": "success",
       "message": "",
-      "checkedAt": "2026-07-28T15:00:46+08:00",
+      "checkedAt": "2026-07-29T12:18:01+08:00",
       "candidateCount": 10
     },
     {
@@ -1305,7 +1305,7 @@
       "url": "https://patents.google.com/?q=inventor%3D%22%E9%82%B1%E5%81%89%E8%B1%AA%22",
       "status": "success",
       "message": "",
-      "checkedAt": "2026-07-28T15:01:00+08:00",
+      "checkedAt": "2026-07-29T12:18:06+08:00",
       "candidateCount": 10
     },
     {
@@ -1313,7 +1313,7 @@
       "url": "https://www.grb.gov.tw/advq?queryStr=%E9%82%B1%E5%81%89%E8%B1%AA&queryType=grb05",
       "status": "success",
       "message": "GRB Playwright discovery completed; 0 pending record(s) require review.",
-      "checkedAt": "2026-07-28T15:01:11+08:00",
+      "checkedAt": "2026-07-29T12:18:09+08:00",
       "candidateCount": 0
     }
   ],
