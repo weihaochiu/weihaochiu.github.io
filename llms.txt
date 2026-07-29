@@ -72,3 +72,17 @@
 - [Efficient electron transport in tetrapod-like ZnO metal-free dye-sensitized solar cells](https://weihaochiu.github.io/publications/10-1039-b902595m.html) — Energy & Environmental Science, 2009; DOI: 10.1039/B902595M
 - [Formation of branched ZnO nanowires from solvothermal method and dye-sensitized solar cells applications](https://weihaochiu.github.io/publications/10-1021-jp805239k.html) — The Journal of Physical Chemistry C, 2008; DOI: 10.1021/jp805239k
 - [Transverse excess noise factor and transverse mode locking in a gain-guided laser](https://weihaochiu.github.io/publications/10-1016-j-optcom-2004-10-003.html) — Optics Communications, 2005; DOI: 10.1016/j.optcom.2004.10.003
+
+<!-- PATENT_LLMS_START -->
+## Patents
+
+- [Solar Cell Module Having Groove Structure and Manufacturing Method Thereof](https://weihaochiu.github.io/patents/twi851990b.html) — TWI851990B; Taiwan; Granted
+- [Solar Cell Module and Manufacturing Method Thereof](https://weihaochiu.github.io/patents/twi816357b.html) — TWI816357B; Taiwan; Granted
+- [Scaffold with Adjustable Illuminance](https://weihaochiu.github.io/patents/twm612985u.html) — TWM612985U; Taiwan; Granted
+- [Solar Cell Module](https://weihaochiu.github.io/patents/twm611184u.html) — TWM611184U; Taiwan; Granted
+- [Bifacial Solar Cell and Solar Cell Module](https://weihaochiu.github.io/patents/families-bifacial-solar-cell-module.html) — Patent family with 2 documents: CN207367985U, TWM551346U
+- [Solar Cell](https://weihaochiu.github.io/patents/families-solar-cell-2017.html) — Patent family with 3 documents: US20180062002A1, TWM539701U, CN206236681U
+- [Dye-Sensitized Solar Cell](https://weihaochiu.github.io/patents/twi449190b.html) — TWI449190B; Taiwan; Granted
+- [Method of Fabricating Electrode Structures on a Substrate](https://weihaochiu.github.io/patents/families-substrate-electrode-structures.html) — Patent family with 3 documents: CN102456482B, TWI407579B, US8470150B2
+- [Solar Cell Structure](https://weihaochiu.github.io/patents/cn102456480a.html) — CN102456480A; China; Published application
+<!-- PATENT_LLMS_END -->
