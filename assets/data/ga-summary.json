@@ -1,35 +1,41 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-28T04:29:48Z",
+  "generatedAt": "2026-07-29T04:32:09Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 247,
-    "activeUsers": 29,
-    "sessions": 56,
-    "engagementRate": 0.5535714285714286
+    "pageViews": 290,
+    "activeUsers": 31,
+    "sessions": 66,
+    "engagementRate": 0.4696969696969697
   },
   "monthlyTrend": [
     {
       "month": "2026-07",
-      "pageViews": 247,
-      "activeUsers": 29
+      "pageViews": 290,
+      "activeUsers": 31
     }
   ],
   "topPages": [
     {
       "title": "Publications | Wei-Hao Chiu",
       "path": "/publications.html",
-      "pageViews": 55,
-      "activeUsers": 11
+      "pageViews": 57,
+      "activeUsers": 12
     },
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/index.html",
-      "pageViews": 45,
-      "activeUsers": 2
+      "pageViews": 47,
+      "activeUsers": 3
+    },
+    {
+      "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
+      "path": "/",
+      "pageViews": 39,
+      "activeUsers": 23
     },
     {
       "title": "2T Perovskite Tandem Solar Cells in Space: Failure Mechanisms and Design Strategies | Wei-Hao Chiu",
@@ -38,33 +44,33 @@
       "activeUsers": 3
     },
     {
-      "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
-      "path": "/",
-      "pageViews": 35,
-      "activeUsers": 23
-    },
-    {
       "title": "Research Projects | Wei-Hao Chiu",
       "path": "/projects.html",
+      "pageViews": 31,
+      "activeUsers": 7
+    },
+    {
+      "title": "Patents | Wei-Hao Chiu",
+      "path": "/patents.html",
       "pageViews": 25,
       "activeUsers": 5
     },
     {
       "title": "About | Wei-Hao Chiu",
       "path": "/about.html",
-      "pageViews": 9,
-      "activeUsers": 4
-    },
-    {
-      "title": "Patents | Wei-Hao Chiu",
-      "path": "/patents.html",
-      "pageViews": 7,
-      "activeUsers": 3
+      "pageViews": 14,
+      "activeUsers": 5
     },
     {
       "title": "Reliability enhancement of PVDF-HFP modified perovskite solar cells under synergistic space-relevant stress conditions | Wei-Hao Chiu",
       "path": "/publications/10-1016-j-cej-2026-177494.html",
       "pageViews": 7,
+      "activeUsers": 3
+    },
+    {
+      "title": "Research | Wei-Hao Chiu",
+      "path": "/research.html",
+      "pageViews": 5,
       "activeUsers": 3
     },
     {
@@ -76,12 +82,6 @@
     {
       "title": "MOF-& COF-integrated composite separators/membranes: innovations for sustainable and high-performance redox flow batteries | Wei-Hao Chiu",
       "path": "/publications/10-1016-j-seppur-2025-134157.html",
-      "pageViews": 4,
-      "activeUsers": 2
-    },
-    {
-      "title": "Research | Wei-Hao Chiu",
-      "path": "/research.html",
       "pageViews": 4,
       "activeUsers": 2
     },
@@ -113,20 +113,25 @@
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 36,
-      "activeUsers": 25
+      "sessions": 39,
+      "activeUsers": 27
     },
     {
       "channel": "Organic Search",
-      "sessions": 20,
+      "sessions": 26,
       "activeUsers": 5
+    },
+    {
+      "channel": "Unassigned",
+      "sessions": 7,
+      "activeUsers": 2
     }
   ],
   "topCountries": [
     {
       "country": "Taiwan",
-      "activeUsers": 12,
-      "pageViews": 228
+      "activeUsers": 13,
+      "pageViews": 259
     },
     {
       "country": "United States",
@@ -144,17 +149,17 @@
       "pageViews": 2
     },
     {
+      "country": "India",
+      "activeUsers": 2,
+      "pageViews": 13
+    },
+    {
       "country": "China",
       "activeUsers": 1,
       "pageViews": 1
     },
     {
       "country": "Hong Kong",
-      "activeUsers": 1,
-      "pageViews": 1
-    },
-    {
-      "country": "India",
       "activeUsers": 1,
       "pageViews": 1
     },
@@ -172,7 +177,7 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 20
+      "activeUsers": 22
     },
     {
       "device": "mobile",
@@ -180,6 +185,10 @@
     }
   ],
   "academicEvents": [
+    {
+      "eventName": "patent_click",
+      "eventCount": 16
+    },
     {
       "eventName": "doi_click",
       "eventCount": 13
@@ -191,10 +200,6 @@
     {
       "eventName": "scholar_click",
       "eventCount": 7
-    },
-    {
-      "eventName": "patent_click",
-      "eventCount": 6
     },
     {
       "eventName": "crossref_click",
