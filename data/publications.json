@@ -801,7 +801,7 @@
       "Flow batteries",
       "Graphite felt"
     ],
-    "role": "Co-author",
+    "role": "Co-first author",
     "doiUrl": "https://doi.org/10.1016/j.jpowsour.2025.239216",
     "citation": "Shaheen, Iqra; Chiu, Wei-Hao; Lee, Yu-Xian; Chen, Shih-Hsuan; Hsu, Jen-Fu; Lee, Kun-Mu. Heterogeneous graphite felt electrodes decorated with nanostructured graphitic carbon nitride for enhanced redox kinetics in vanadium redox flow batteries. Journal of Power Sources, 667(1), 239216 (2026). https://doi.org/10.1016/j.jpowsour.2025.239216",
     "citationCount": 2,
@@ -819,13 +819,14 @@
         "affiliationIds": [
           "aff-1"
         ],
-        "isEqualContributor": null,
-        "equalContributionGroup": "",
+        "isEqualContributor": true,
+        "equalContributionGroup": "co-first-1",
         "isCorresponding": false,
         "correspondingEmail": "",
         "sources": [
           "crossref",
-          "openalex"
+          "openalex",
+          "publisher"
         ]
       },
       {
@@ -837,13 +838,14 @@
         "affiliationIds": [
           "aff-1"
         ],
-        "isEqualContributor": null,
-        "equalContributionGroup": "",
+        "isEqualContributor": true,
+        "equalContributionGroup": "co-first-1",
         "isCorresponding": false,
         "correspondingEmail": "",
         "sources": [
           "crossref",
-          "openalex"
+          "openalex",
+          "publisher"
         ]
       },
       {
@@ -857,13 +859,14 @@
           "aff-1",
           "aff-3"
         ],
-        "isEqualContributor": null,
-        "equalContributionGroup": "",
+        "isEqualContributor": true,
+        "equalContributionGroup": "co-first-1",
         "isCorresponding": true,
         "correspondingEmail": "",
         "sources": [
           "crossref",
-          "openalex"
+          "openalex",
+          "publisher"
         ]
       },
       {
@@ -966,18 +969,19 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-07-25",
+      "lastChecked": "2026-07-29",
       "sources": [
         "crossref",
-        "openalex"
+        "openalex",
+        "publisher"
       ],
       "sourceUrls": {
         "crossref": "https://api.crossref.org/works/10.1016%2Fj.jpowsour.2025.239216",
-        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1016%2Fj.jpowsour.2025.239216"
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1016%2Fj.jpowsour.2025.239216",
+        "publisher": "https://www.sciencedirect.com/science/article/abs/pii/S0378775325030538"
       },
       "requiresManualReview": true,
       "missingFields": [
-        "equalContribution",
         "affiliationAddresses"
       ],
       "warnings": [
