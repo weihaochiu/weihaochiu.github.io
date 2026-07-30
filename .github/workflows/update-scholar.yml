@@ -86,6 +86,23 @@ jobs:
 
           errors = []
           works = history.get("works") or {}
+          metrics = json.loads(
+              (root / "data/openalex_publication_metrics.json").read_text(
+                  encoding="utf-8"
+              )
+          ).get("records") or {}
+          def normalize_doi(value):
+              value = str(value or "").strip().lower()
+              return value.removeprefix("https://doi.org/")
+          def is_verified_zero(record):
+              return (
+                  record.get("status") == "verified"
+                  and int(record.get("citationCount") or 0) == 0
+              )
+          expected_static_sections = sum(
+              not is_verified_zero(metrics.get(normalize_doi(record.get("doi")), {}))
+              for record in works.values()
+          )
           for work_id, record in works.items():
               articles = record.get("citingArticlesWithDoi") or []
               if record.get("citingArticlesWithDoiCount") != len(articles):
@@ -100,23 +117,39 @@ jobs:
               errors.append(
                   f"detail pages: expected {len(publications)}, found {len(detail_pages)}"
               )
+          pages_with_author_links = sum(
+              'class="author-trigger' in page.read_text(encoding="utf-8")
+              for page in detail_pages
+          )
+          if pages_with_author_links != len(publications):
+              errors.append(
+                  f"detail pages with author links: expected {len(publications)}, "
+                  f"found {pages_with_author_links}"
+              )
           pages_with_history = sum(
               'id="citations-by-year"' in page.read_text(encoding="utf-8")
               for page in detail_pages
           )
-          if pages_with_history != len(works):
+          if pages_with_history != expected_static_sections:
               errors.append(
-                  f"static citation histories: expected {len(works)}, "
+                  f"static citation histories: expected {expected_static_sections}, "
                   f"found {pages_with_history}"
               )
           pages_with_lists = sum(
               'id="citing-articles"' in page.read_text(encoding="utf-8")
               for page in detail_pages
           )
-          if pages_with_lists != len(works):
+          if pages_with_lists != expected_static_sections:
               errors.append(
-                  f"static citing lists: expected {len(works)}, found {pages_with_lists}"
+                  f"static citing lists: expected {expected_static_sections}, "
+                  f"found {pages_with_lists}"
               )
+          for page in detail_pages:
+              detail = page.read_text(encoding="utf-8")
+              if '<span class="citation-year-count"></span>' in detail:
+                  errors.append(f"{page.name}: empty chart citation count")
+              if re.search(r'<th scope="row">\d{4}</th><td></td>', detail):
+                  errors.append(f"{page.name}: empty table citation count")
           if errors:
               raise SystemExit("\n".join(errors))
           print(

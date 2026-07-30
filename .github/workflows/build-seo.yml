@@ -78,6 +78,10 @@ jobs:
           page = (root / 'publications.html').read_text(encoding='utf-8')
           titles = len(re.findall(r'<meta\s+name=["\']citation_title["\']', page, flags=re.I))
           detail_pages = len(list((root / 'publications').glob('*.html')))
+          detail_pages_with_author_triggers = sum(
+              'class="author-trigger' in path.read_text(encoding='utf-8')
+              for path in (root / 'publications').glob('*.html')
+          )
           legacy_scripts = len(re.findall(r'openalex-publications\.js', page, flags=re.I))
           marker_starts = page.count('<!-- SEO_CITATION_META_START -->')
           marker_ends = page.count('<!-- SEO_CITATION_META_END -->')
@@ -87,16 +91,39 @@ jobs:
               errors.append(f'citation_title count: expected {expected}, found {titles}')
           if detail_pages != expected:
               errors.append(f'detail page count: expected {expected}, found {detail_pages}')
+          if detail_pages_with_author_triggers != expected:
+              errors.append(
+                  f'detail pages with author links: expected {expected}, '
+                  f'found {detail_pages_with_author_triggers}'
+              )
           if legacy_scripts:
               errors.append(f'legacy OpenAlex scripts: expected 0, found {legacy_scripts}')
           if (marker_starts, marker_ends) != (1, 1):
               errors.append(f'citation marker pairs: expected 1/1, found {marker_starts}/{marker_ends}')
           if 'PUBLICATION_AUTHORSHIP_INSIGHTS_START' not in insights:
               errors.append('Publication Analytics authorship extension is missing')
+          app_js = (root / 'assets/js/app.js').read_text(encoding='utf-8')
+          if 'ready:authorCardsReady' not in app_js or 'await window.AuthorCards?.ready' not in app_js:
+              errors.append('Author-card data readiness guard is missing')
           history = json.loads(
               (root / 'data/openalex_citation_history.json').read_text(encoding='utf-8')
           )
-          history_work_count = len(history.get('works') or {})
+          metrics = json.loads(
+              (root / 'data/openalex_publication_metrics.json').read_text(encoding='utf-8')
+          ).get('records') or {}
+          def normalize_doi(value):
+              value = str(value or '').strip().lower()
+              return value.removeprefix('https://doi.org/')
+          def is_verified_zero(record):
+              return (
+                  record.get('status') == 'verified'
+                  and int(record.get('citationCount') or 0) == 0
+              )
+          history_works = history.get('works') or {}
+          expected_static_histories = sum(
+              not is_verified_zero(metrics.get(normalize_doi(record.get('doi')), {}))
+              for record in history_works.values()
+          )
           static_histories = sum(
               'id="citations-by-year"' in path.read_text(encoding='utf-8')
               for path in (root / 'publications').glob('*.html')
@@ -105,16 +132,24 @@ jobs:
               'id="citing-articles"' in path.read_text(encoding='utf-8')
               for path in (root / 'publications').glob('*.html')
           )
-          if static_histories != history_work_count:
+          zero_value_errors = []
+          for path in (root / 'publications').glob('*.html'):
+              detail = path.read_text(encoding='utf-8')
+              if '<span class="citation-year-count"></span>' in detail:
+                  zero_value_errors.append(path.name + ': empty chart citation count')
+              if re.search(r'<th scope="row">\d{4}</th><td></td>', detail):
+                  zero_value_errors.append(path.name + ': empty table citation count')
+          if static_histories != expected_static_histories:
               errors.append(
-                  f'static citation histories: expected {history_work_count}, '
+                  f'static citation histories: expected {expected_static_histories}, '
                   f'found {static_histories}'
               )
-          if static_citing_lists != history_work_count:
+          if static_citing_lists != expected_static_histories:
               errors.append(
-                  f'static citing lists: expected {history_work_count}, '
+                  f'static citing lists: expected {expected_static_histories}, '
                   f'found {static_citing_lists}'
               )
+          errors.extend(zero_value_errors)
 
           patents = json.loads((root / 'data/patents.json').read_text(encoding='utf-8'))
           patent_families = json.loads((root / 'data/patent_families.json').read_text(encoding='utf-8'))
