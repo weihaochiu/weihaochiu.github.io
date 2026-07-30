@@ -1,4 +1,4 @@
-name: Build v23 AI and scholarly metadata
+name: Build v24 AI and scholarly metadata
 
 on:
   workflow_dispatch:
@@ -11,6 +11,7 @@ on:
       - "data/patent_families.json"
       - "data/patent_metadata.json"
       - "data/openalex_publication_metrics.json"
+      - "data/openalex_citation_history.json"
       - "data/crossref_publication_metrics.json"
       - "data/mendeley_metrics.json"
       - "data/unpaywall.json"
@@ -54,7 +55,7 @@ jobs:
       - name: Synchronize patent inventors
         run: python scripts/sync_patent_inventors.py
 
-      - name: Generate v23 website files
+      - name: Generate v24 website files
         run: |
           python scripts/build_seo.py
           python scripts/build_patent_pages.py
@@ -92,6 +93,28 @@ jobs:
               errors.append(f'citation marker pairs: expected 1/1, found {marker_starts}/{marker_ends}')
           if 'PUBLICATION_AUTHORSHIP_INSIGHTS_START' not in insights:
               errors.append('Publication Analytics authorship extension is missing')
+          history = json.loads(
+              (root / 'data/openalex_citation_history.json').read_text(encoding='utf-8')
+          )
+          history_work_count = len(history.get('works') or {})
+          static_histories = sum(
+              'id="citations-by-year"' in path.read_text(encoding='utf-8')
+              for path in (root / 'publications').glob('*.html')
+          )
+          static_citing_lists = sum(
+              'id="citing-articles"' in path.read_text(encoding='utf-8')
+              for path in (root / 'publications').glob('*.html')
+          )
+          if static_histories != history_work_count:
+              errors.append(
+                  f'static citation histories: expected {history_work_count}, '
+                  f'found {static_histories}'
+              )
+          if static_citing_lists != history_work_count:
+              errors.append(
+                  f'static citing lists: expected {history_work_count}, '
+                  f'found {static_citing_lists}'
+              )
 
           patents = json.loads((root / 'data/patents.json').read_text(encoding='utf-8'))
           patent_families = json.loads((root / 'data/patent_families.json').read_text(encoding='utf-8'))
@@ -152,7 +175,7 @@ jobs:
             exit 0
           fi
 
-          git commit -m "Build v23 AI and scholarly metadata"
+          git commit -m "Build v24 AI and scholarly metadata"
           git reset --hard HEAD
           git clean -fd
 

@@ -1,4 +1,4 @@
-name: Update Google Scholar Metrics
+name: Update Scholar and OpenAlex publication citations
 
 on:
   workflow_dispatch:
@@ -10,13 +10,20 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: website-content-write
+  cancel-in-progress: false
+
 jobs:
-  update-scholar:
+  update-publication-citations:
     runs-on: ubuntu-latest
 
     steps:
       - name: Check out repository
         uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v6
@@ -29,19 +36,140 @@ jobs:
           pip install -r scripts/requirements.txt
 
       - name: Update Scholar metrics
-        run: |
-          python scripts/update_scholar.py
+        run: python scripts/update_scholar.py
 
-      - name: Commit updated metrics
+      - name: Update Google Scholar profile citation history
+        continue-on-error: true
+        env:
+          SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
+        run: python scripts/update_google_scholar_citation_history.py
+
+      - name: Update OpenAlex publication metrics
+        id: openalex_metrics
+        continue-on-error: true
+        env:
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+          OPENALEX_MAILTO: ${{ secrets.OPENALEX_MAILTO }}
+        run: python scripts/update_openalex_publications.py
+
+      - name: Update OpenAlex annual histories and DOI citing-article lists
+        id: openalex_citations
+        continue-on-error: true
+        env:
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+          OPENALEX_MAILTO: ${{ secrets.OPENALEX_MAILTO }}
+        run: python scripts/update_openalex_citation_history.py
+
+      - name: Build static publication pages
         run: |
+          python scripts/build_seo.py
+          python scripts/build_patent_pages.py
+
+      - name: Verify static OpenAlex citation content
+        run: |
+          python - <<'PY'
+          import json
+          import re
+          from pathlib import Path
+
+          root = Path(".")
+          publications = json.loads(
+              (root / "data/publications.json").read_text(encoding="utf-8")
+          )
+          history = json.loads(
+              (root / "data/openalex_citation_history.json").read_text(encoding="utf-8")
+          )
+          if int(history.get("schemaVersion") or 0) < 3:
+              raise SystemExit(
+                  "OpenAlex citation-history schema v3 has not been generated yet."
+              )
+
+          errors = []
+          works = history.get("works") or {}
+          for work_id, record in works.items():
+              articles = record.get("citingArticlesWithDoi") or []
+              if record.get("citingArticlesWithDoiCount") != len(articles):
+                  errors.append(f"{work_id}: DOI citing-article count mismatch")
+              for article in articles:
+                  doi = str(article.get("doi") or "")
+                  if not doi or article.get("doiUrl") != f"https://doi.org/{doi}":
+                      errors.append(f"{work_id}: invalid DOI link")
+
+          detail_pages = list((root / "publications").glob("*.html"))
+          if len(detail_pages) != len(publications):
+              errors.append(
+                  f"detail pages: expected {len(publications)}, found {len(detail_pages)}"
+              )
+          pages_with_history = sum(
+              'id="citations-by-year"' in page.read_text(encoding="utf-8")
+              for page in detail_pages
+          )
+          if pages_with_history != len(works):
+              errors.append(
+                  f"static citation histories: expected {len(works)}, "
+                  f"found {pages_with_history}"
+              )
+          pages_with_lists = sum(
+              'id="citing-articles"' in page.read_text(encoding="utf-8")
+              for page in detail_pages
+          )
+          if pages_with_lists != len(works):
+              errors.append(
+                  f"static citing lists: expected {len(works)}, found {pages_with_lists}"
+              )
+          if errors:
+              raise SystemExit("\n".join(errors))
+          print(
+              f"Verified {pages_with_history} static citation charts and "
+              f"{pages_with_lists} static citing-article sections."
+          )
+          PY
+
+      - name: Commit updated data and generated pages
+        shell: bash
+        run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add data/scholar_metrics.json data/publications.json
+          git add -- \
+            data/scholar_metrics.json \
+            data/google_scholar_citation_history.json \
+            data/publications.json \
+            data/openalex_publication_metrics.json \
+            data/openalex_citation_history.json \
+            data/site_meta.json \
+            publications.html publications patents.html patents \
+            robots.txt sitemap.xml llms.txt
 
           if git diff --cached --quiet; then
-            echo "No Scholar metric changes to commit."
-          else
-            git commit -m "Update Google Scholar metrics"
-            git push
+            echo "No citation or generated-page changes to commit."
+            exit 0
           fi
+
+          git commit -m "Update Scholar and OpenAlex publication citations"
+
+          for attempt in 1 2 3 4; do
+            echo "Push attempt ${attempt}/4"
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort || true
+              echo "::error::Citation update conflicts with newer main-branch changes."
+              exit 1
+            fi
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Main changed during push; retrying safely."
+            sleep $((attempt * 3))
+          done
+
+          echo "::error::Unable to push citation update after four attempts."
+          exit 1
+
+      - name: Report retained OpenAlex data
+        if: steps.openalex_metrics.outcome == 'failure' || steps.openalex_citations.outcome == 'failure'
+        run: |
+          echo "::warning::One or more OpenAlex requests failed. Existing valid data was retained."
+          echo "Metrics outcome: ${{ steps.openalex_metrics.outcome }}"
+          echo "Citation-list outcome: ${{ steps.openalex_citations.outcome }}"
