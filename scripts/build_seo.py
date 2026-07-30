@@ -211,10 +211,148 @@ def openalex_impact_actions(record):
     actions.append('<span class="action openalex-impact openalex-impact-strong">Top 10% normalized citations</span>')
   return actions
 
-def publication_page(p, openalex_record=None, unpaywall_record=None, crossref_record=None, mendeley_record=None):
+def normalize_doi(value):
+  text=str(value or '').strip().lower()
+  for prefix in ('https://doi.org/','http://doi.org/','https://dx.doi.org/','http://dx.doi.org/','doi:'):
+    if text.startswith(prefix):
+      text=text[len(prefix):]
+      break
+  return text.strip()
+
+def openalex_history_by_doi(payload):
+  records={}
+  for work_id,record in (payload.get('works') or {}).items():
+    if not isinstance(record,dict): continue
+    doi=normalize_doi(record.get('doi'))
+    if doi:
+      records[doi]={**record,'openAlexId':record.get('openAlexId') or work_id}
+  return records
+
+def complete_citation_years(p,history_record):
+  counts={}
+  for row in history_record.get('citationsByYear') or []:
+    if not isinstance(row,dict): continue
+    try:
+      year=int(row.get('year')); citations=max(0,int(row.get('citations') or 0))
+    except (TypeError,ValueError):
+      continue
+    if year>=1900: counts[year]=citations
+  try: publication_year=int(p.get('year'))
+  except (TypeError,ValueError): publication_year=min(counts) if counts else date.today().year
+  final_year=max([date.today().year,*counts.keys()])
+  return [{'year':year,'citations':counts.get(year,0)} for year in range(publication_year,final_year+1)]
+
+def citing_article_schema(record):
+  obj={
+    '@type':'ScholarlyArticle',
+    '@id':record.get('doiUrl'),
+    'url':record.get('doiUrl'),
+    'name':record.get('title'),
+    'headline':record.get('title'),
+    'datePublished':record.get('publicationDate') or record.get('publicationYear'),
+    'author':[{'@type':'Person','name':name} for name in (record.get('authors') or [])],
+    'isPartOf':{'@type':'Periodical','name':record.get('journal')},
+    'identifier':{'@type':'PropertyValue','propertyID':'DOI','value':record.get('doi')},
+    'volumeNumber':record.get('volume'),
+    'issueNumber':record.get('issue'),
+    'pagination':record.get('pages'),
+  }
+  if not record.get('journal'): obj.pop('isPartOf',None)
+  return {key:value for key,value in obj.items() if value not in ('',[],None)}
+
+def citing_item_list_schema(p,url,history_record):
+  articles=[row for row in (history_record.get('citingArticlesWithDoi') or []) if isinstance(row,dict) and row.get('doi')]
+  if not articles: return None
+  return {
+    '@type':'ItemList',
+    '@id':url+'#citing-articles',
+    'name':'Articles citing '+str(p.get('title') or 'this work'),
+    'url':url+'#citing-articles',
+    'numberOfItems':len(articles),
+    'about':{'@id':url+'#article'},
+    'itemListOrder':'https://schema.org/ItemListOrderDescending',
+    'itemListElement':[
+      {'@type':'ListItem','position':index,'item':citing_article_schema(record)}
+      for index,record in enumerate(articles,start=1)
+    ],
+  }
+
+def citation_history_html(p,openalex_record,history_record):
+  if not history_record: return ''
+  rows=complete_citation_years(p,history_record)
+  maximum=max([row['citations'] for row in rows],default=0)
+  bars=[]
+  table_rows=[]
+  for row in rows:
+    year=row['year']; citations=row['citations']
+    height=(citations/maximum*100) if maximum else 0
+    bars.append(
+      '<li class="citation-year-item'+(' is-zero' if citations==0 else '')+'" '
+      'aria-label="'+esc(year)+': '+esc(citations)+' citations">'
+      '<span class="citation-year-count">'+esc(citations)+'</span>'
+      '<span class="citation-year-track" aria-hidden="true"><span class="citation-year-bar" '
+      'style="--citation-height:'+f'{height:.2f}'+'%"></span></span>'
+      '<span class="citation-year-label">'+esc(year)+'</span></li>'
+    )
+    table_rows.append('<tr><th scope="row">'+esc(year)+'</th><td>'+esc(citations)+'</td></tr>')
+  updated=str(history_record.get('lastSuccessfulUpdate') or '')[:10]
+  source_note='Source: OpenAlex'
+  if updated: source_note+=' · Last updated '+updated
+  history_total=sum(row['citations'] for row in rows)
+  return (
+    '<section class="publication-detail-section citation-history-section" id="citations-by-year">'
+    '<div class="citation-section-heading"><div><p class="kicker">OpenAlex citation history</p>'
+    '<h2>Citations by year</h2></div><strong>'+f'{history_total:,}'+' assigned citations</strong></div>'
+    '<figure class="citation-history-figure"><div class="citation-chart-scroll">'
+    '<ol class="citation-year-chart" aria-label="OpenAlex citations by year">'+''.join(bars)+'</ol>'
+    '</div><figcaption>'+esc(source_note)+'. Zero-citation years are included.</figcaption></figure>'
+    '<details class="citation-year-data"><summary>View citation counts as a table</summary>'
+    '<div class="table-wrap"><table><thead><tr><th scope="col">Year</th><th scope="col">Citations</th>'
+    '</tr></thead><tbody>'+''.join(table_rows)+'</tbody></table></div></details></section>'
+  )
+
+def citing_articles_html(openalex_record,history_record):
+  if not history_record: return ''
+  articles=[row for row in (history_record.get('citingArticlesWithDoi') or []) if isinstance(row,dict) and row.get('doi')]
+  indexed=int(history_record.get('citingWorkCount') or openalex_record.get('citationCount') or 0)
+  listed=len(articles)
+  summary=f'{listed:,} citing article'+('' if listed==1 else 's')+f' with DOI, from {indexed:,} records indexed by OpenAlex.'
+  items=[]
+  for record in articles:
+    authors=', '.join(str(name) for name in (record.get('authors') or []) if str(name).strip())
+    journal=esc(record.get('journal') or 'Source not supplied by OpenAlex')
+    bits=[]
+    if record.get('volume'): bits.append('vol. '+esc(record.get('volume')))
+    if record.get('issue'): bits.append('no. '+esc(record.get('issue')))
+    if record.get('pages'): bits.append('pp. '+esc(record.get('pages')))
+    if record.get('publicationYear'): bits.append(esc(record.get('publicationYear')))
+    bibliographic=', '.join(bits)
+    items.append(
+      '<li class="citing-article" itemscope itemtype="https://schema.org/ScholarlyArticle">'
+      '<h3 itemprop="headline"><a href="'+esc(record.get('doiUrl'))+'" target="_blank" '
+      'rel="noopener noreferrer">'+esc(record.get('title') or record.get('doi'))+' ↗</a></h3>'
+      +('<p class="citing-article-authors" itemprop="author">'+esc(authors)+'</p>' if authors else '')+
+      '<p class="citing-article-source"><em itemprop="isPartOf">'+journal+'</em>'
+      +((' · '+bibliographic) if bibliographic else '')+'</p>'
+      '<p class="citing-article-doi">DOI: <a itemprop="sameAs" href="'+esc(record.get('doiUrl'))+
+      '" target="_blank" rel="noopener noreferrer">'+esc(record.get('doi'))+'</a></p></li>'
+    )
+  empty='<p class="citation-empty">No citing articles with a DOI are currently indexed by OpenAlex.</p>'
+  return (
+    '<section class="publication-detail-section citing-articles-section" id="citing-articles">'
+    '<p class="kicker">OpenAlex citing works</p><h2>Articles citing this work</h2>'
+    '<p class="citation-list-summary">'+esc(summary)+'</p>'
+    +('<ol class="citing-article-list">'+''.join(items)+'</ol>' if items else empty)+'</section>'
+  )
+
+def publication_page(p, openalex_record=None, unpaywall_record=None, crossref_record=None, mendeley_record=None, history_record=None):
   doi=p.get('doi',''); slug=slugify(doi); url=SITE_URL+'/publications/'+slug+'.html'
   title=esc(p.get('title')); desc=esc(p.get('citation')); authors=publication_authors_html(p)
-  graph={'@context':'https://schema.org','@graph':[PERSON,article_schema(p,url)]}
+  history_record=history_record or {}
+  graph_items=[PERSON,article_schema(p,url)]
+  citing_schema=citing_item_list_schema(p,url,history_record)
+  if citing_schema: graph_items.append(citing_schema)
+  graph={'@context':'https://schema.org','@graph':graph_items}
   vol=', '+esc(p.get('volume')) if p.get('volume') else ''
   pages=', '+esc(p.get('pages')) if p.get('pages') else ''
   abstract = str(p.get('abstract') or '').strip()
@@ -263,7 +401,8 @@ def publication_page(p, openalex_record=None, unpaywall_record=None, crossref_re
   email_url = 'mailto:?subject='+quote(share_text)+'&body='+quote(url)
   actions.append('<span class="share-wrap"><button class="action action-button share-trigger" type="button" aria-haspopup="menu" aria-expanded="false" data-share-title="'+title+'" data-share-text="'+title+'" data-share-url="'+esc(url)+'">Share</button><span class="share-menu" role="menu" hidden><button type="button" role="menuitem" data-copy-share-url="'+esc(url)+'">Copy link</button><a role="menuitem" href="'+esc(email_url)+'">Email</a><a role="menuitem" href="https://www.linkedin.com/sharing/share-offsite/?url='+quote(url, safe='')+'" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></span></span>')
   actions_html = '<div class="card-actions publication-detail-actions">'+''.join(actions)+'</div>'
-  return '''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>{title} | Wei-Hao Chiu</title><meta name="description" content="{desc}"/><link rel="canonical" href="{url}"/><meta property="og:type" content="article"/><meta property="og:title" content="{title}"/><meta property="og:description" content="{desc}"/><meta property="og:url" content="{url}"/><meta property="og:image" content="{site}/assets/images/og-profile.jpg"/><meta property="article:published_time" content="{date}"/><meta property="article:author" content="{site}/"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="{title}"/><meta name="twitter:description" content="{desc}"/><meta name="twitter:image" content="{site}/assets/images/og-profile.jpg"/>{ga}{citation}<script type="application/ld+json">{schema}</script><link href="../assets/css/styles.css" rel="stylesheet"/></head><body><header class="site-header"><div class="shell nav-shell"><a class="brand" href="../index.html"><span>Wei-Hao Chiu</span><small>Academic Profile</small></a><nav aria-label="Main navigation" class="site-nav"><a href="../about.html">About</a><a href="../research.html">Research</a><a href="../publications.html">Publications</a><a href="../patents.html">Patents</a><a href="../projects.html">Projects</a></nav></div></header><main class="content shell"><article class="collection-card publication-card publication-detail" itemscope itemtype="https://schema.org/ScholarlyArticle"><p class="kicker">Scholarly article</p><h1 itemprop="headline">{title}</h1><p class="authors publication-authors" itemprop="author">{authors}</p>{author_info}<p class="journal"><em>{journal}</em>{vol}{pages} ({year}).</p><p><strong>Research topic:</strong> {topic}</p>{details}{actions}<a class="action publication-return" href="../publications.html#pub-{slug}">← Return to publications</a></article></main><footer class="site-footer"><div class="shell footer-grid"><div><strong>Wei-Hao Chiu, Ph.D.</strong><p>Associate Researcher<br/>Center for Sustainability and Energy Technologies<br/>Chang Gung University</p></div><div class="footer-links">{emails}</div></div></footer><script src="../assets/js/app.js"></script></body></html>'''.format(title=title,desc=desc,url=url,site=SITE_URL,date=esc(p.get('date')),ga=GA_TAG,citation=citation_meta(p),schema=json.dumps(graph,ensure_ascii=False,separators=(',',':')),authors=authors,author_info=author_info,journal=esc(p.get('journal')),vol=vol,pages=pages,year=esc(p.get('year')),topic=esc(p.get('topic')),details=details,actions=actions_html,slug=slug,emails=EMAIL_LINKS)
+  citation_sections=citation_history_html(p,openalex_record,history_record)+citing_articles_html(openalex_record,history_record)
+  return '''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>{title} | Wei-Hao Chiu</title><meta name="description" content="{desc}"/><link rel="canonical" href="{url}"/><meta property="og:type" content="article"/><meta property="og:title" content="{title}"/><meta property="og:description" content="{desc}"/><meta property="og:url" content="{url}"/><meta property="og:image" content="{site}/assets/images/og-profile.jpg"/><meta property="article:published_time" content="{date}"/><meta property="article:author" content="{site}/"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="{title}"/><meta name="twitter:description" content="{desc}"/><meta name="twitter:image" content="{site}/assets/images/og-profile.jpg"/>{ga}{citation}<script type="application/ld+json">{schema}</script><link href="../assets/css/styles.css" rel="stylesheet"/></head><body><header class="site-header"><div class="shell nav-shell"><a class="brand" href="../index.html"><span>Wei-Hao Chiu</span><small>Academic Profile</small></a><nav aria-label="Main navigation" class="site-nav"><a href="../about.html">About</a><a href="../research.html">Research</a><a href="../publications.html">Publications</a><a href="../patents.html">Patents</a><a href="../projects.html">Projects</a></nav></div></header><main class="content shell"><article class="collection-card publication-card publication-detail" itemscope itemtype="https://schema.org/ScholarlyArticle"><p class="kicker">Scholarly article</p><h1 itemprop="headline">{title}</h1><p class="authors publication-authors" itemprop="author">{authors}</p>{author_info}<p class="journal"><em>{journal}</em>{vol}{pages} ({year}).</p><p><strong>Research topic:</strong> {topic}</p>{details}{actions}{citation_sections}<a class="action publication-return" href="../publications.html#pub-{slug}">← Return to publications</a></article></main><footer class="site-footer"><div class="shell footer-grid"><div><strong>Wei-Hao Chiu, Ph.D.</strong><p>Associate Researcher<br/>Center for Sustainability and Energy Technologies<br/>Chang Gung University</p></div><div class="footer-links">{emails}</div></div></footer><script src="../assets/js/app.js"></script></body></html>'''.format(title=title,desc=desc,url=url,site=SITE_URL,date=esc(p.get('date')),ga=GA_TAG,citation=citation_meta(p),schema=json.dumps(graph,ensure_ascii=False,separators=(',',':')),authors=authors,author_info=author_info,journal=esc(p.get('journal')),vol=vol,pages=pages,year=esc(p.get('year')),topic=esc(p.get('topic')),details=details,actions=actions_html,citation_sections=citation_sections,slug=slug,emails=EMAIL_LINKS)
 
 def main():
   global AUTHOR_MAP
@@ -273,6 +412,9 @@ def main():
   AUTHOR_MAP={normalize_author_name(name):author for author in author_rows if author_has_information(author) for name in [author.get('name'),author.get('displayName'),author.get('nameZh'),*(author.get('aliases') or [])] if name}
   openalex_path=ROOT/'data/openalex_publication_metrics.json'
   openalex_records=json.loads(openalex_path.read_text(encoding='utf-8')).get('records',{}) if openalex_path.exists() else {}
+  openalex_history_path=ROOT/'data/openalex_citation_history.json'
+  openalex_history_payload=json.loads(openalex_history_path.read_text(encoding='utf-8')) if openalex_history_path.exists() else {}
+  openalex_history_records=openalex_history_by_doi(openalex_history_payload)
   crossref_path=ROOT/'data/crossref_publication_metrics.json'
   crossref_records=json.loads(crossref_path.read_text(encoding='utf-8')).get('records',{}) if crossref_path.exists() else {}
   unpaywall_path=ROOT/'data/unpaywall.json'
@@ -298,7 +440,10 @@ def main():
     oa_record=unpaywall_records.get(str(p.get('doi') or '').strip().lower(),{})
     cr_record=crossref_records.get(str(p.get('doi') or '').strip().lower(),{})
     md_record=mendeley_records.get(str(p.get('doi') or '').strip().lower(),{})
-    (pdir/(slugify(p.get('doi',''))+'.html')).write_text(publication_page(p,record,oa_record,cr_record,md_record),encoding='utf-8')
+    history_record=openalex_history_records.get(normalize_doi(p.get('doi')),{})
+    if history_record and not history_record.get('lastSuccessfulUpdate'):
+      history_record={**history_record,'lastSuccessfulUpdate':openalex_history_payload.get('lastSuccessfulUpdate')}
+    (pdir/(slugify(p.get('doi',''))+'.html')).write_text(publication_page(p,record,oa_record,cr_record,md_record,history_record),encoding='utf-8')
   app=ROOT/'assets/js/app.js'; js=app.read_text(encoding='utf-8')
   js=re.sub(r'function publicationShareUrl\(anchor\)\{.*?\n\}', "function publicationShareUrl(anchor){\n  const slug=String(anchor||'').replace(/^pub-/,'');\n  return new URL(`publications/${slug}.html`,window.location.href).toString();\n}", js, count=1, flags=re.S)
   app.write_text(js,encoding='utf-8')
@@ -310,6 +455,6 @@ def main():
   lines += ['- '+x for x in PERSON['knowsAbout']]; lines += ['','## Publications','']
   for p in pubs: lines.append(f"- [{p.get('title')}]({SITE_URL}/publications/{slugify(p.get('doi',''))}.html) — {p.get('journal')}, {p.get('year')}; DOI: {p.get('doi')}")
   (ROOT/'llms.txt').write_text('\n'.join(lines)+'\n',encoding='utf-8')
-  mp=ROOT/'data/site_meta.json'; meta=json.loads(mp.read_text(encoding='utf-8')); meta.update({'version':'v23','lastUpdated':TODAY,'notes':f'V23 provides {len(pubs)} static crawler-readable ScholarlyArticle records, upgraded Person schema, corrected email links on every page, article-specific citation and Open Graph metadata, expanded llms.txt, and crawler-aware robots and sitemap files.'}); mp.write_text(json.dumps(meta,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+  mp=ROOT/'data/site_meta.json'; meta=json.loads(mp.read_text(encoding='utf-8')); meta.update({'version':'v24','lastUpdated':TODAY,'notes':f'V24 provides {len(pubs)} static crawler-readable ScholarlyArticle records with OpenAlex citations by year and DOI-linked citing-article lists, while retaining Google Scholar totals and article-specific scholarly metadata.'}); mp.write_text(json.dumps(meta,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 
 if __name__=='__main__': main()

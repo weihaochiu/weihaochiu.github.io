@@ -128,6 +128,41 @@
 .openalex-impact{display:inline-flex;align-items:center;padding:2px 7px;border:1px solid #c7d6e2;border-radius:999px;background:#f4f8fb;color:#315b76}
 .openalex-impact-strong{border-color:#83a8bf;background:#e8f2f8;color:#174c6a}
 
+/* Static OpenAlex citation history and DOI-linked citing articles */
+.citation-history-section,.citing-articles-section{margin-top:30px;padding-top:24px;border-top:1px solid var(--line)}
+.citation-section-heading{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:14px}
+.citation-section-heading .kicker,.citing-articles-section>.kicker{margin:0 0 4px}
+.citation-section-heading h2,.citing-articles-section>h2{margin:0}
+.citation-section-heading>strong{color:var(--brand);font-size:.82rem;white-space:nowrap}
+.citation-history-figure{margin:0}
+.citation-chart-scroll{overflow-x:auto;padding:14px 8px 8px;border:1px solid var(--line);border-radius:8px;background:linear-gradient(180deg,#fbfcfd,#f5f8fa)}
+.citation-year-chart{display:flex;align-items:stretch;gap:7px;min-width:max-content;height:225px;margin:0;padding:0;list-style:none}
+.citation-year-item{display:grid;grid-template-rows:24px minmax(120px,1fr) 24px;align-items:end;width:38px;text-align:center}
+.citation-year-count{align-self:center;color:#315b76;font-size:.67rem;font-weight:800}
+.citation-year-track{display:flex;align-items:flex-end;justify-content:center;height:100%;border-bottom:1px solid #afbec9}
+.citation-year-bar{display:block;width:23px;height:max(3px,var(--citation-height));border-radius:4px 4px 0 0;background:linear-gradient(180deg,#2f7fa8,#245a78)}
+.citation-year-item.is-zero .citation-year-bar{height:2px;background:#aebbc5}
+.citation-year-label{align-self:center;color:var(--muted);font-size:.64rem;font-weight:700;transform:rotate(-45deg)}
+.citation-history-figure figcaption{margin-top:8px;color:var(--muted);font-size:.72rem}
+.citation-year-data{margin-top:12px;border:1px solid var(--line);border-radius:7px;background:#fff}
+.citation-year-data>summary{padding:9px 12px;color:var(--brand);font-size:.76rem;font-weight:750;cursor:pointer}
+.citation-year-data[open]>summary{border-bottom:1px solid var(--line);background:#f6f8fa}
+.citation-year-data .table-wrap{max-height:360px;overflow:auto}
+.citation-year-data table{width:100%;border-collapse:collapse;font-size:.76rem}
+.citation-year-data th,.citation-year-data td{padding:7px 12px;border-bottom:1px solid #e7ecf0;text-align:left}
+.citation-year-data thead th{position:sticky;top:0;background:#f6f8fa;color:#374957}
+.citation-list-summary{margin:8px 0 16px;color:var(--muted)}
+.citing-article-list{display:grid;gap:12px;margin:0;padding:0;list-style:none;counter-reset:citing-article}
+.citing-article{position:relative;padding:14px 15px 13px 47px;border:1px solid var(--line);border-radius:8px;background:#fff;counter-increment:citing-article}
+.citing-article::before{content:counter(citing-article);position:absolute;top:14px;left:14px;display:flex;align-items:center;justify-content:center;width:23px;height:23px;border-radius:50%;background:#e8f2f8;color:#174c6a;font-size:.68rem;font-weight:800}
+.citing-article h3{margin:0 0 7px;font-family:"Source Serif 4","Noto Sans TC",serif;font-size:.94rem;line-height:1.45}
+.citing-article h3 a{color:#203f54;text-decoration:none}
+.citing-article h3 a:hover,.citing-article h3 a:focus-visible{text-decoration:underline}
+.citing-article p{margin:4px 0;color:var(--muted);font-size:.74rem;line-height:1.55}
+.citing-article-doi a{color:var(--brand);font-weight:700;overflow-wrap:anywhere}
+.citation-empty{padding:14px;border:1px dashed var(--line);border-radius:7px;color:var(--muted);background:#f9fbfc}
+@media(max-width:760px){.citation-section-heading{align-items:start;flex-direction:column;gap:7px}.citation-year-chart{height:205px}.citation-year-item{width:34px}.citing-article{padding-left:43px}.citing-article-list{gap:10px}}
+
 /* PUBLICATION_AUTHORSHIP_STYLES_START */
 /* Publication authorship and affiliation metadata */
 .publication-authors{line-height:1.9}

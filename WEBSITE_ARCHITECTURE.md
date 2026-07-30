@@ -120,7 +120,7 @@ flowchart TD
 | `data/google_scholar_citation_history.json` | Google Scholar 年度引用歷史與總指標。 | `update_google_scholar_citation_history.py` |
 | `data/openalex_metrics.json` | OpenAlex 作者層級 citations、h-index、i10-index。 | `update_openalex_stats.py`；OpenAlex author `A5007707999` |
 | `data/openalex_publication_metrics.json` | DOI 對應 OpenAlex work、每篇 cited-by count、verified/not-found 狀態。 | `update_openalex_publications.py` |
-| `data/openalex_citation_history.json` | 依年份彙整 OpenAlex 引用、validation difference、無法分配與排除資料。 | `update_openalex_citation_history.py` |
+| `data/openalex_citation_history.json` | 依年份彙整 OpenAlex 引用、validation difference、無法分配與排除資料；每篇 work 另含僅保留 DOI 的 citing articles（標題、作者、期刊、年卷期頁碼與 DOI URL）。 | `update_openalex_citation_history.py` |
 | `data/crossref_publication_metrics.json` | DOI 對應 Crossref `is-referenced-by-count` 與驗證狀態。 | `update_crossref_publications.py` |
 | `data/mendeley_metrics.json` | 每篇 DOI 的 Mendeley readers、catalogue 連結、fresh/stale/not-found/error 狀態。 | `update_mendeley.py`；Mendeley API |
 | `data/unpaywall.json` | DOI 對應合法 OA 狀態、best OA location 與 PDF URL。 | `update_unpaywall.py`；Unpaywall API |
@@ -133,12 +133,12 @@ flowchart TD
 
 | 檔案 | 功能 | 重要輸入 → 輸出 |
 |---|---|---|
-| `scripts/build_seo.py` | 全站產生器：統一 GA4、canonical、Open Graph、Twitter、Person/ScholarlyArticle JSON-LD、citation meta；產生／更新 publication 個別頁、`sitemap.xml`、`robots.txt`、`llms.txt` 與部分 HTML。 | `publications.json` + metrics/OA/site meta → HTML 與 SEO 檔 |
+| `scripts/build_seo.py` | 全站產生器：統一 GA4、canonical、Open Graph、Twitter、Person/ScholarlyArticle/ItemList JSON-LD、citation meta；產生／更新 publication 個別頁、OpenAlex 靜態逐年圖表與 DOI citing-article 清單、`sitemap.xml`、`robots.txt`、`llms.txt` 與部分 HTML。 | `publications.json` + metrics/OA/site meta → HTML 與 SEO 檔 |
 | `scripts/update_scholar.py` | 更新 Scholar 作者 metrics，並可能更新 publication citation 欄位／連結。 | Scholar profile + publications → `scholar_metrics.json`、`publications.json` |
 | `scripts/update_google_scholar_citation_history.py` | 抓取／整理 Scholar 年度引用資料。 | Scholar profile → Scholar history JSON |
 | `scripts/update_openalex_stats.py` | 更新 OpenAlex 作者總 citations、h-index、i10-index。 | OpenAlex author API → `openalex_metrics.json` |
 | `scripts/update_openalex_publications.py` | 逐 DOI 對應 OpenAlex work 並驗證 citation 數與 URL。 | publications + OpenAlex API → publication metrics JSON |
-| `scripts/update_openalex_citation_history.py` | 整理 OpenAlex works 與年度 citation histories，保留驗證與例外資訊。 | publications/OpenAlex metrics/API → history JSON |
+| `scripts/update_openalex_citation_history.py` | 以 cursor 取回各篇全部 citing works，整理逐年 citation histories，排除不合理年份，並建立去重後的 DOI citing-article 清單；寫入採 atomic replace，失敗不覆蓋舊檔。 | publications/OpenAlex metrics/API → history JSON |
 | `scripts/update_crossref_publications.py` | 逐 DOI 查 Crossref metadata 與 citation count。 | publications + Crossref API → Crossref metrics JSON |
 | `scripts/update_mendeley.py` | 逐 DOI 查 reader count 與 catalogue URL，處理 token、重試、stale/error。 | publications + Mendeley credentials/API → Mendeley JSON |
 | `scripts/test_mendeley_api.py` | 診斷 Mendeley API credentials、token 與 DOI lookup，不修改正式資料。 | repository secrets/API → console test report |
@@ -156,13 +156,13 @@ flowchart TD
 
 | Workflow | 觸發時間 | 執行內容 | 主要輸出 |
 |---|---|---|---|
-| `build-seo.yml` | 手動 | 執行與驗證 `build_seo.py`，提交 HTML、publication pages、app.js、site meta 與 SEO files | 公開頁與 SEO |
+| `build-seo.yml` | 相關資料／generator push＋手動 | 執行與驗證 `build_seo.py`，包括 OpenAlex 靜態圖表與 citing lists，提交 HTML、publication pages、app.js、site meta 與 SEO files | 公開頁與 SEO |
 | `update-openalex-stats.yml` | 每日 02:17 UTC（台灣 10:17）＋手動 | 作者與逐篇 OpenAlex metrics | `openalex_metrics.json`、`openalex_publication_metrics.json` |
 | `update-crossref.yml` | 每週一 02:37 UTC（台灣 10:37）＋手動 | 更新 Crossref、重建 SEO/論文頁 | Crossref JSON、publication HTML、SEO files |
-| `update-scholar.yml` | 每週一 04:00 UTC（台灣 12:00）＋手動 | 更新 Scholar metrics 與 publication 資料 | Scholar JSON、`publications.json` |
+| `update-scholar.yml` | 每週一 04:00 UTC（台灣 12:00）＋手動 | 更新 Scholar 總指標、OpenAlex 逐篇 metrics／逐年 histories／DOI citing lists，並在同一 job 重建靜態 publication pages | Scholar/OpenAlex JSON、`publications.json`、publication HTML、SEO files |
 | `update-mendeley.yml` | 每週一 04:20 UTC（台灣 12:20）＋手動 | 更新 Mendeley readers | Mendeley JSON |
 | `update-unpaywall.yml` | 每週日 18:00 UTC（週一台灣 02:00）＋手動 | 更新 OA links | Unpaywall JSON |
-| `update-citation-histories.yml` | 每週日 22:17 UTC（週一台灣 06:17）＋手動 | 更新 Scholar/OpenAlex 年度 citation histories | 兩個 history JSON |
+| `update-citation-histories.yml` | 僅手動 | Scholar/OpenAlex citation-history 診斷與臨時重跑；固定週排程已整併至 `update-scholar.yml` | 兩個 history JSON |
 | `update-ga4-summary.yml` | 每日 01:20 UTC（台灣 09:20）＋手動 | 匯出 GA4 summary | `assets/data/ga-summary.json` |
 | `update-journals.yml` | 每月 1 日 03:17 UTC（台灣 11:17）＋手動 | 更新 journal/JCR metadata | `journals.json` |
 | `test-mendeley-api.yml` | 手動 | 只做 Mendeley API 診斷 | 不提交正式資料 |
@@ -247,6 +247,9 @@ flowchart TD
 - [ ] DOI 連結實際開啟該 DOI。
 - [ ] Google Scholar、OpenAlex、Crossref、Mendeley 的數字、名稱、單複數與按鈕格式一致。
 - [ ] OpenAlex 按鈕不重複出現。
+- [ ] 每篇有 OpenAlex history 的個別頁都含靜態 `Citations by year` 圖表、零引用年份與可讀的年度資料表。
+- [ ] `Articles citing this work` 僅列出有 DOI 的 OpenAlex citing works，數量與 JSON 一致，DOI URL 可開啟。
+- [ ] citing-article `ItemList`／`ScholarlyArticle` JSON-LD 與頁面可見清單一致，內容不是依賴 JavaScript 後載入。
 - [ ] Crossref 不是錯誤 API response 頁，且逐篇抽樣點擊驗證。
 - [ ] Web of Science 未使用 API 時只顯示搜尋連結，不顯示未驗證數字。
 - [ ] OA PDF 只在 Unpaywall／出版社確認為合法 OA 時顯示，且連結不是 404／登入錯誤頁。

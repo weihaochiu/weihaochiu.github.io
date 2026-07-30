@@ -17,6 +17,10 @@ OPENALEX_METRICS_PATH = Path("data/openalex_publication_metrics.json")
 PUBLICATIONS_PATH = Path("data/publications.json")
 OUTPUT_PATH = Path("data/openalex_citation_history.json")
 API_URL = "https://api.openalex.org/works"
+SELECT_FIELDS = (
+    "id,doi,display_name,publication_year,publication_date,"
+    "authorships,primary_location,biblio,type"
+)
 
 
 def utc_now() -> str:
@@ -114,44 +118,130 @@ def build_session() -> requests.Session:
     return session
 
 
-def fetch_history(
+def openalex_params(api_key: str) -> dict[str, str]:
+    params: dict[str, str] = {}
+    if api_key:
+        params["api_key"] = api_key
+    mailto = (
+        os.environ.get("OPENALEX_MAILTO", "").strip()
+        or "weihao.chiu@gmail.com"
+    )
+    if mailto:
+        params["mailto"] = mailto
+    return params
+
+
+def fetch_citing_works(
     session: requests.Session,
     api_key: str,
     work_id: str,
-) -> dict[int, int]:
-    """Return citation events grouped by publication year of the citing work."""
-    response = session.get(
-        API_URL,
-        params={
+) -> tuple[int, list[dict[str, Any]]]:
+    """Return every OpenAlex work that cites ``work_id`` using cursor pagination."""
+    cursor = "*"
+    expected_count = 0
+    results: list[dict[str, Any]] = []
+
+    while cursor:
+        params = {
             "filter": f"cites:{work_id}",
-            "group_by": "publication_year",
-            "per-page": 200,
-            "api_key": api_key,
-        },
-        timeout=90,
+            "select": SELECT_FIELDS,
+            "sort": "publication_date:desc",
+            "per-page": "200",
+            "cursor": cursor,
+            **openalex_params(api_key),
+        }
+        response = session.get(API_URL, params=params, timeout=90)
+        response.raise_for_status()
+        payload: dict[str, Any] = response.json()
+        meta = payload.get("meta") if isinstance(payload.get("meta"), dict) else {}
+        expected_count = as_nonnegative_int(meta.get("count")) or expected_count
+        page = payload.get("results")
+        if not isinstance(page, list):
+            raise RuntimeError(f"OpenAlex returned an invalid results page for {work_id}.")
+        results.extend(item for item in page if isinstance(item, dict))
+        cursor = str(meta.get("next_cursor") or "")
+
+    return expected_count, results
+
+
+def citing_work_years(works: list[dict[str, Any]]) -> dict[int, int]:
+    history: Counter[int] = Counter()
+    for work in works:
+        year = as_nonnegative_int(work.get("publication_year"))
+        if year is not None and year >= 1900:
+            history[year] += 1
+    return dict(history)
+
+
+def citing_work_is_valid(work: dict[str, Any], publication_year: int | None) -> bool:
+    year = as_nonnegative_int(work.get("publication_year"))
+    return publication_year is None or year is None or year >= publication_year
+
+
+def citing_article_record(work: dict[str, Any]) -> dict[str, Any] | None:
+    doi = normalize_doi(work.get("doi"))
+    if not doi:
+        return None
+
+    authors = []
+    for authorship in work.get("authorships") or []:
+        if not isinstance(authorship, dict):
+            continue
+        author = authorship.get("author")
+        name = str(author.get("display_name") or "").strip() if isinstance(author, dict) else ""
+        if name and name not in authors:
+            authors.append(name)
+
+    location = work.get("primary_location")
+    source = location.get("source") if isinstance(location, dict) else None
+    journal = str(source.get("display_name") or "").strip() if isinstance(source, dict) else ""
+    biblio = work.get("biblio") if isinstance(work.get("biblio"), dict) else {}
+    first_page = str(biblio.get("first_page") or "").strip()
+    last_page = str(biblio.get("last_page") or "").strip()
+    pages = first_page
+    if last_page and last_page != first_page:
+        pages = f"{first_page}-{last_page}" if first_page else last_page
+
+    return {
+        "openAlexId": normalize_openalex_id(work.get("id")),
+        "doi": doi,
+        "doiUrl": f"https://doi.org/{doi}",
+        "title": str(work.get("display_name") or "").strip(),
+        "authors": authors,
+        "journal": journal,
+        "publicationYear": as_nonnegative_int(work.get("publication_year")),
+        "publicationDate": str(work.get("publication_date") or "").strip(),
+        "volume": str(biblio.get("volume") or "").strip(),
+        "issue": str(biblio.get("issue") or "").strip(),
+        "pages": pages,
+        "type": str(work.get("type") or "").strip(),
+    }
+
+
+def citing_articles_with_doi(
+    works: list[dict[str, Any]],
+    publication_year: int | None,
+) -> list[dict[str, Any]]:
+    """Return one normalized, newest-first record per DOI."""
+    records: dict[str, dict[str, Any]] = {}
+    for work in works:
+        if not citing_work_is_valid(work, publication_year):
+            continue
+        record = citing_article_record(work)
+        if record and record["doi"] not in records:
+            records[record["doi"]] = record
+    alphabetized = sorted(
+        records.values(),
+        key=lambda row: str(row.get("title") or "").lower(),
     )
-    response.raise_for_status()
-    payload: dict[str, Any] = response.json()
-
-    history: dict[int, int] = {}
-    groups = payload.get("group_by", [])
-
-    if not isinstance(groups, list):
-        return history
-
-    for group in groups:
-        if not isinstance(group, dict):
-            continue
-
-        year = as_nonnegative_int(group.get("key"))
-        count = as_nonnegative_int(group.get("count"))
-
-        if year is None or count is None or year < 1900:
-            continue
-
-        history[year] = count
-
-    return history
+    return sorted(
+        alphabetized,
+        key=lambda row: (
+            row.get("publicationYear") or 0,
+            str(row.get("publicationDate") or ""),
+        ),
+        reverse=True,
+    )
 
 
 def split_valid_and_invalid_history(
@@ -201,8 +291,8 @@ def write_json_atomic(path: Path, payload: dict[str, Any]) -> None:
 def main() -> None:
     api_key = os.environ.get("OPENALEX_API_KEY", "").strip()
     if not api_key:
-        raise RuntimeError(
-            "OPENALEX_API_KEY is not configured in GitHub Actions secrets."
+        print(
+            "OPENALEX_API_KEY is not configured; using the public API quota.",
         )
 
     input_payload = load_openalex_metrics()
@@ -248,7 +338,12 @@ def main() -> None:
             sorted(works.items()),
             start=1,
         ):
-            raw_history = fetch_history(session, api_key, work_id)
+            fetched_count, citing_works = fetch_citing_works(
+                session,
+                api_key,
+                work_id,
+            )
+            raw_history = citing_work_years(citing_works)
             raw_work_total = sum(raw_history.values())
             raw_history_total += raw_work_total
 
@@ -279,10 +374,19 @@ def main() -> None:
                 )
 
             current_total = int(metadata["currentCitationCount"])
-            raw_unassigned_count = max(0, current_total - raw_work_total)
+            source_total = max(current_total, fetched_count, len(citing_works))
+            raw_unassigned_count = max(0, source_total - raw_work_total)
+            citing_articles = citing_articles_with_doi(
+                citing_works,
+                publication_year,
+            )
 
             per_work[work_id] = {
                 **metadata,
+                "sourceUrl": (
+                    f"https://api.openalex.org/works?"
+                    f"filter=cites:{work_id}"
+                ),
                 "citationsByYear": [
                     {"year": year, "citations": count}
                     for year, count in sorted(valid_history.items())
@@ -296,13 +400,17 @@ def main() -> None:
                 "excludedInvalidCitationCount": work_excluded_total,
                 "excludedInvalidCitations": excluded,
                 "unassignedCitationCount": raw_unassigned_count,
+                "citingWorkCount": len(citing_works),
+                "citingArticlesWithDoiCount": len(citing_articles),
+                "citingArticlesWithDoi": citing_articles,
             }
 
             print(
                 f"[{index}/{len(works)}] {work_id}: "
                 f"{sum(valid_history.values())} valid, "
                 f"{work_excluded_total} excluded, "
-                f"{raw_unassigned_count} unassigned"
+                f"{raw_unassigned_count} unassigned, "
+                f"{len(citing_articles)} with DOI"
             )
             time.sleep(0.15)
 
@@ -326,7 +434,7 @@ def main() -> None:
         status = "success"
 
     output = {
-        "schemaVersion": 2,
+        "schemaVersion": 3,
         "source": "OpenAlex Works API",
         "status": status,
         "lastSuccessfulUpdate": utc_now(),
