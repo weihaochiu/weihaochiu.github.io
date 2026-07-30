@@ -228,6 +228,14 @@ def openalex_history_by_doi(payload):
       records[doi]={**record,'openAlexId':record.get('openAlexId') or work_id}
   return records
 
+def openalex_citation_count_is_zero(record):
+  if record.get('status') != 'verified':
+    return False
+  try:
+    return int(record.get('citationCount') or 0) == 0
+  except (TypeError,ValueError):
+    return False
+
 def complete_citation_years(p,history_record):
   counts={}
   for row in history_record.get('citationsByYear') or []:
@@ -278,7 +286,7 @@ def citing_item_list_schema(p,url,history_record):
   }
 
 def citation_history_html(p,openalex_record,history_record):
-  if not history_record: return ''
+  if not history_record or openalex_citation_count_is_zero(openalex_record): return ''
   rows=complete_citation_years(p,history_record)
   maximum=max([row['citations'] for row in rows],default=0)
   bars=[]
@@ -289,12 +297,12 @@ def citation_history_html(p,openalex_record,history_record):
     bars.append(
       '<li class="citation-year-item'+(' is-zero' if citations==0 else '')+'" '
       'aria-label="'+esc(year)+': '+esc(citations)+' citations">'
-      '<span class="citation-year-count">'+esc(citations)+'</span>'
+      '<span class="citation-year-count">'+esc(str(citations))+'</span>'
       '<span class="citation-year-track" aria-hidden="true"><span class="citation-year-bar" '
       'style="--citation-height:'+f'{height:.2f}'+'%"></span></span>'
       '<span class="citation-year-label">'+esc(year)+'</span></li>'
     )
-    table_rows.append('<tr><th scope="row">'+esc(year)+'</th><td>'+esc(citations)+'</td></tr>')
+    table_rows.append('<tr><th scope="row">'+esc(year)+'</th><td>'+esc(str(citations))+'</td></tr>')
   updated=str(history_record.get('lastSuccessfulUpdate') or '')[:10]
   source_note='Source: OpenAlex'
   if updated: source_note+=' · Last updated '+updated
@@ -312,7 +320,7 @@ def citation_history_html(p,openalex_record,history_record):
   )
 
 def citing_articles_html(openalex_record,history_record):
-  if not history_record: return ''
+  if not history_record or openalex_citation_count_is_zero(openalex_record): return ''
   articles=[row for row in (history_record.get('citingArticlesWithDoi') or []) if isinstance(row,dict) and row.get('doi')]
   indexed=int(history_record.get('citingWorkCount') or openalex_record.get('citationCount') or 0)
   listed=len(articles)
@@ -350,7 +358,7 @@ def publication_page(p, openalex_record=None, unpaywall_record=None, crossref_re
   title=esc(p.get('title')); desc=esc(p.get('citation')); authors=publication_authors_html(p)
   history_record=history_record or {}
   graph_items=[PERSON,article_schema(p,url)]
-  citing_schema=citing_item_list_schema(p,url,history_record)
+  citing_schema=None if openalex_citation_count_is_zero(openalex_record) else citing_item_list_schema(p,url,history_record)
   if citing_schema: graph_items.append(citing_schema)
   graph={'@context':'https://schema.org','@graph':graph_items}
   vol=', '+esc(p.get('volume')) if p.get('volume') else ''

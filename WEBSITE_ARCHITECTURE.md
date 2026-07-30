@@ -244,11 +244,12 @@ flowchart TD
 
 - [ ] 年份／研究主題 filter 可用，切換後筆數與 URL anchor 正確。
 - [ ] 每篇 publication 從列表可開啟個別頁。
+- [ ] Publications 列表與自動產生的單篇頁面都保留可點擊作者姓名；作者資料完成載入後才可重繪作者列，避免載入競速把作者按鈕覆寫為純文字。
 - [ ] DOI 連結實際開啟該 DOI。
 - [ ] Google Scholar、OpenAlex、Crossref、Mendeley 的數字、名稱、單複數與按鈕格式一致。
 - [ ] OpenAlex 按鈕不重複出現。
-- [ ] 每篇有 OpenAlex history 的個別頁都含靜態 `Citations by year` 圖表、零引用年份與可讀的年度資料表。
-- [ ] `Articles citing this work` 僅列出有 DOI 的 OpenAlex citing works，數量與 JSON 一致，DOI URL 可開啟。
+- [ ] OpenAlex 引用數大於 0 的個別頁都含靜態 `Citations by year` 圖表、以數字 `0` 顯示零引用年份，並提供可讀的年度資料表；OpenAlex 引用數為 0 時不顯示此區塊。
+- [ ] `Articles citing this work` 僅列出有 DOI 的 OpenAlex citing works，數量與 JSON 一致，DOI URL 可開啟；OpenAlex 引用數為 0 時不顯示此區塊。
 - [ ] citing-article `ItemList`／`ScholarlyArticle` JSON-LD 與頁面可見清單一致，內容不是依賴 JavaScript 後載入。
 - [ ] Crossref 不是錯誤 API response 頁，且逐篇抽樣點擊驗證。
 - [ ] Web of Science 未使用 API 時只顯示搜尋連結，不顯示未驗證數字。

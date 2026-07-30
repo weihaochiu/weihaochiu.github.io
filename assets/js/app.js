@@ -1,6 +1,8 @@
 const $=(s,r=document)=>r.querySelector(s);
 const $$=(s,r=document)=>[...r.querySelectorAll(s)];
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const appScriptUrl=document.currentScript?.src||new URL('assets/js/app.js',document.baseURI).toString();
+const siteDataBaseUrl=new URL('../../data/',appScriptUrl);
 
 function sendAnalyticsEvent(eventName,link){
   if(typeof window.gtag!=='function'||!eventName)return;
@@ -33,7 +35,7 @@ function analyticsEventFor(target){
 }
 
 async function loadData(name){
-  const local=`data/${name}.json`;
+  const local=new URL(`${name}.json`,siteDataBaseUrl).toString();
   try{const r=await fetch(local,{cache:'no-store'});if(r.ok)return r.json()}catch(e){}
   const remote=`https://weihaochiu.github.io/data/${name}.json`;
   const r=await fetch(remote,{cache:'no-store'});
@@ -46,6 +48,8 @@ function highlightAuthor(name){return /Chiu, Wei-Hao|Wei-Hao Chiu/.test(name)?`<
 const authorDirectory=new Map();
 const authorIdDirectory=new Map();
 const patentContributionDirectory=new Map();
+let resolveAuthorCardsReady;
+const authorCardsReady=new Promise(resolve=>{resolveAuthorCardsReady=resolve});
 function normalizeAuthorName(name){return String(name||'').normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase().replace(/[^\p{L}\p{N}]+/gu,'').trim()}
 function authorHasInformation(author){return Boolean(author&&(author.role||author.currentPosition||author.affiliation||author.affiliationZh||(author.email||[]).length||author.telephone||author.orcid||Object.values(author.links||{}).some(Boolean)||(author.contributionTypes||[]).length))}
 function buildAuthorDirectory(authors=[]){
@@ -59,6 +63,8 @@ function buildAuthorDirectory(authors=[]){
       if(key)authorDirectory.set(key,author);
     });
   });
+  resolveAuthorCardsReady?.();
+  resolveAuthorCardsReady=null;
 }
 function renderAuthor(name){
   const author=authorDirectory.get(normalizeAuthorName(name));
@@ -105,7 +111,7 @@ function initAuthorPopover(){
   document.addEventListener('click',event=>{const trigger=event.target.closest('.author-trigger[data-author-name],.author-trigger[data-author-id]');if(trigger){event.preventDefault();active===trigger&&!popover.hidden?close():open(trigger);return}if(event.target.closest('.author-popover-close')||(!popover.hidden&&!event.target.closest('#authorPopover')))close()});
   document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!popover.hidden)close()?.focus()});
 }
-window.AuthorCards={build:buildAuthorDirectory,render:renderAuthor,renderPerson:renderPersonReference,init:initAuthorPopover,has:author=>authorHasInformation(author)};
+window.AuthorCards={build:buildAuthorDirectory,render:renderAuthor,renderPerson:renderPersonReference,init:initAuthorPopover,has:author=>authorHasInformation(author),ready:authorCardsReady};
 function fillSelect(el,vals,label='All',mode='numeric-desc'){
   if(!el)return;
   let items=[...new Set(vals.filter(v=>v!==undefined&&v!==null&&v!==''))];
@@ -861,6 +867,7 @@ document.addEventListener('DOMContentLoaded',async()=>{
 
   async function load() {
     try {
+      await window.AuthorCards?.ready;
       const response = await fetch(publicationsUrl, {cache:'no-store'});
       if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
       publications = await response.json();
