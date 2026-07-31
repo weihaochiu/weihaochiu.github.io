@@ -4,9 +4,12 @@
   const OWNER = 'weihaochiu';
   const REPO = 'weihaochiu.github.io';
   const API_ROOT = `https://api.github.com/repos/${OWNER}/${REPO}`;
-  const CACHE_KEY = 'weihaochiu-actions-monitor-v2';
-  const CACHE_TTL_MS = 5 * 60 * 1000;
+  const CACHE_KEY = 'weihaochiu-actions-monitor-v3';
+  const CACHE_TTL_MS = 30 * 60 * 1000;
   const MAX_RUN_PAGES = 5;
+  const EXCLUDED_WORKFLOW_PATHS = new Set([
+    '.github/workflows/update-actions-summary.yml'
+  ]);
 
   // User-requested scope: include automated runs, but exclude explicit manual
   // workflow_dispatch runs and pull-request validation runs.
@@ -40,7 +43,12 @@
   }
 
   function isAutomatedRun(run) {
-    return Boolean(run && run.event && !EXCLUDED_EVENTS.has(run.event));
+    return Boolean(
+      run &&
+      run.event &&
+      !EXCLUDED_EVENTS.has(run.event) &&
+      !EXCLUDED_WORKFLOW_PATHS.has(run.path)
+    );
   }
 
   function getStatus(run) {
@@ -127,15 +135,23 @@
   }
 
   async function fetchRepositoryRuns() {
-    const runs = [];
-    let totalCount = 0;
-    for (let page = 1; page <= MAX_RUN_PAGES; page += 1) {
-      const payload = await apiFetch(`/actions/runs?exclude_pull_requests=true&per_page=100&page=${page}`);
-      totalCount = Number(payload.total_count) || 0;
-      const batch = Array.isArray(payload.workflow_runs) ? payload.workflow_runs : [];
-      runs.push(...batch);
-      if (batch.length < 100 || runs.length >= totalCount) break;
-    }
+    const firstPayload = await apiFetch('/actions/runs?exclude_pull_requests=true&per_page=100&page=1');
+    const firstBatch = Array.isArray(firstPayload.workflow_runs) ? firstPayload.workflow_runs : [];
+    const totalCount = Number(firstPayload.total_count) || 0;
+    const pageCount = Math.min(MAX_RUN_PAGES, Math.max(1, Math.ceil(totalCount / 100)));
+    const remainingPayloads = pageCount > 1
+      ? await Promise.all(
+          Array.from({ length: pageCount - 1 }, (_, index) =>
+            apiFetch(`/actions/runs?exclude_pull_requests=true&per_page=100&page=${index + 2}`)
+          )
+        )
+      : [];
+    const runs = [
+      ...firstBatch,
+      ...remainingPayloads.flatMap(payload =>
+        Array.isArray(payload.workflow_runs) ? payload.workflow_runs : []
+      )
+    ];
     return {
       runs,
       totalCount,
@@ -226,7 +242,7 @@
 
   function readCache() {
     try {
-      const raw = sessionStorage.getItem(CACHE_KEY);
+      const raw = localStorage.getItem(CACHE_KEY);
       if (!raw) return null;
       const cached = JSON.parse(raw);
       if (!cached || !cached.savedAt || !cached.model) return null;
@@ -239,9 +255,9 @@
 
   function writeCache(model) {
     try {
-      sessionStorage.setItem(CACHE_KEY, JSON.stringify({ savedAt: Date.now(), model }));
+      localStorage.setItem(CACHE_KEY, JSON.stringify({ savedAt: Date.now(), model }));
     } catch (_) {
-      // The dashboard still works when sessionStorage is unavailable.
+      // The dashboard still works when localStorage is unavailable.
     }
   }
 
@@ -287,6 +303,7 @@
     API_ROOT,
     CACHE_TTL_MS,
     EXCLUDED_EVENTS,
+    EXCLUDED_WORKFLOW_PATHS,
     load,
     loadFailureDetails,
     getStatus

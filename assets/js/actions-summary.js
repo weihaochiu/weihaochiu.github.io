@@ -1,8 +1,8 @@
 (() => {
   'use strict';
 
-  const REFRESH_WHILE_RUNNING_MS = 10 * 60 * 1000;
-  let timer = null;
+  const SNAPSHOT_URL = 'data/actions-summary.json';
+  const FALLBACK_CACHE_KEY = 'weihaochiu-actions-summary-snapshot-v1';
 
   const $ = selector => document.querySelector(selector);
 
@@ -45,28 +45,56 @@
     const status = $('#actionsSummaryStatus');
     if (status) {
       status.className = 'admin-status';
-      status.textContent = 'Loaded from the GitHub Actions API. Results are cached in this tab for 5 minutes.';
+      status.textContent = 'Loaded instantly from the latest scheduled status snapshot.';
     }
-
-    if (timer) window.clearTimeout(timer);
-    if (summary.running > 0) timer = window.setTimeout(() => load(true), REFRESH_WHILE_RUNNING_MS);
   }
 
-  async function load(force = false) {
+  function readFallback() {
+    try {
+      const raw = localStorage.getItem(FALLBACK_CACHE_KEY);
+      return raw ? JSON.parse(raw) : null;
+    } catch (_) {
+      return null;
+    }
+  }
+
+  function writeFallback(model) {
+    try {
+      localStorage.setItem(FALLBACK_CACHE_KEY, JSON.stringify(model));
+    } catch (_) {
+      // The page remains usable when localStorage is unavailable.
+    }
+  }
+
+  async function load() {
     const status = $('#actionsSummaryStatus');
     if (status) {
       status.className = 'admin-status';
-      status.textContent = force ? 'Refreshing automated Actions status…' : 'Loading automated Actions status…';
+      status.textContent = 'Loading the latest automated Actions snapshot…';
     }
     try {
-      render(await window.ActionsData.load({ force }));
+      const response = await fetch(SNAPSHOT_URL, { cache: 'no-cache' });
+      if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
+      const model = await response.json();
+      if (!model || !model.summary) throw new Error('Snapshot data is incomplete.');
+      writeFallback(model);
+      render(model);
     } catch (error) {
+      const fallback = readFallback();
+      if (fallback && fallback.summary) {
+        render(fallback);
+        if (status) {
+          status.className = 'admin-status admin-status-error';
+          status.textContent = `Showing the last saved snapshot because the latest file could not be loaded: ${error.message}`;
+        }
+        return;
+      }
       if (status) {
         status.className = 'admin-status admin-status-error';
-        status.textContent = `Unable to load GitHub Actions status: ${error.message}`;
+        status.textContent = `Unable to load the automated Actions snapshot: ${error.message}`;
       }
     }
   }
 
-  document.addEventListener('DOMContentLoaded', () => load(false));
+  document.addEventListener('DOMContentLoaded', load);
 })();
