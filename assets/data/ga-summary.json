@@ -1,20 +1,20 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-30T04:22:12Z",
+  "generatedAt": "2026-07-31T04:42:28Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 297,
+    "pageViews": 307,
     "activeUsers": 31,
-    "sessions": 69,
-    "engagementRate": 0.5942028985507246
+    "sessions": 71,
+    "engagementRate": 0.6197183098591549
   },
   "monthlyTrend": [
     {
       "month": "2026-07",
-      "pageViews": 297,
+      "pageViews": 307,
       "activeUsers": 31
     }
   ],
@@ -22,7 +22,7 @@
     {
       "title": "Publications | Wei-Hao Chiu",
       "path": "/publications.html",
-      "pageViews": 58,
+      "pageViews": 60,
       "activeUsers": 12
     },
     {
@@ -34,7 +34,7 @@
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 43,
+      "pageViews": 46,
       "activeUsers": 23
     },
     {
@@ -64,8 +64,14 @@
     {
       "title": "Reliability enhancement of PVDF-HFP modified perovskite solar cells under synergistic space-relevant stress conditions | Wei-Hao Chiu",
       "path": "/publications/10-1016-j-cej-2026-177494.html",
-      "pageViews": 7,
+      "pageViews": 8,
       "activeUsers": 3
+    },
+    {
+      "title": "MOF-& COF-integrated composite separators/membranes: innovations for sustainable and high-performance redox flow batteries | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-seppur-2025-134157.html",
+      "pageViews": 5,
+      "activeUsers": 2
     },
     {
       "title": "Research | Wei-Hao Chiu",
@@ -80,9 +86,9 @@
       "activeUsers": 3
     },
     {
-      "title": "MOF-& COF-integrated composite separators/membranes: innovations for sustainable and high-performance redox flow batteries | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-seppur-2025-134157.html",
-      "pageViews": 4,
+      "title": "Impact of proton radiation on the performance of single-junction perovskite solar cells for space applications | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-solmat-2025-114015.html",
+      "pageViews": 3,
       "activeUsers": 2
     },
     {
@@ -102,36 +108,30 @@
       "path": "/publications/10-1002-asia-70245.html",
       "pageViews": 2,
       "activeUsers": 1
-    },
-    {
-      "title": "Synergistic preheating and moderate temperature liquid medium annealing for high performance perovskite solar cells | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-solener-2026-114430.html",
-      "pageViews": 2,
-      "activeUsers": 2
     }
   ],
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 40,
+      "sessions": 41,
       "activeUsers": 27
     },
     {
       "channel": "Organic Search",
-      "sessions": 28,
+      "sessions": 30,
       "activeUsers": 5
     },
     {
       "channel": "Unassigned",
-      "sessions": 2,
-      "activeUsers": 2
+      "sessions": 1,
+      "activeUsers": 1
     }
   ],
   "topCountries": [
     {
       "country": "Taiwan",
       "activeUsers": 13,
-      "pageViews": 266
+      "pageViews": 276
     },
     {
       "country": "United States",
@@ -199,7 +199,7 @@
     },
     {
       "eventName": "scholar_click",
-      "eventCount": 8
+      "eventCount": 9
     },
     {
       "eventName": "crossref_click",
