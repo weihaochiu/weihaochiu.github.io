@@ -1,0 +1,235 @@
+name: Run all website workflows
+run-name: Run all workflows · ${{ github.actor }}
+
+on:
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: run-all-workflows
+  cancel-in-progress: false
+
+jobs:
+  dispatch-and-wait:
+    name: Dispatch and verify every workflow
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+
+    steps:
+      - name: Discover, run, and verify workflows
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          TARGET_REF: ${{ github.ref_name }}
+          SELF_PATH: .github/workflows/run-all-workflows.yml
+        shell: bash
+        run: |
+          set -u -o pipefail
+
+          started_at="$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+          branch_query="$(jq -rn --arg value "$TARGET_REF" '$value | @uri')"
+          workflow_file="$RUNNER_TEMP/workflows.tsv"
+          : > "$workflow_file"
+
+          page=1
+          while true; do
+            response="$(
+              gh api \
+                "repos/$REPOSITORY/actions/workflows?per_page=100&page=$page"
+            )"
+
+            jq -r \
+              --arg self "$SELF_PATH" \
+              '.workflows[]
+              | select(.state == "active")
+              | select(.path | startswith(".github/workflows/"))
+              | select(.path != $self)
+              | [
+                  (if .path == ".github/workflows/build-seo.yml" then 90
+                   elif .path == ".github/workflows/update-actions-summary.yml" then 100
+                   else 10 end),
+                  .id,
+                  .name,
+                  .path
+                ]
+              | @tsv' <<< "$response" >> "$workflow_file"
+
+            count="$(jq '.workflows | length' <<< "$response")"
+            if (( count < 100 )); then
+              break
+            fi
+            page=$((page + 1))
+          done
+
+          sort -n -k1,1 -k3,3 "$workflow_file" -o "$workflow_file"
+
+          total="$(wc -l < "$workflow_file" | tr -d ' ')"
+          success_count=0
+          failure_count=0
+
+          {
+            echo "## Run all website workflows"
+            echo
+            echo "- Branch: \`$TARGET_REF\`"
+            echo "- Started: \`$started_at\`"
+            echo "- Discovered workflows: **$total**"
+            echo
+            echo "| Workflow | Source | Result | Run |"
+            echo "|---|---|---|---|"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+          record_result() {
+            local workflow_name="$1"
+            local source="$2"
+            local result="$3"
+            local run_id="${4:-}"
+            local safe_name safe_source safe_result run_link
+
+            safe_name="${workflow_name//|/\\|}"
+            safe_source="${source//|/\\|}"
+            safe_result="${result//|/\\|}"
+
+            if [[ -n "$run_id" ]]; then
+              run_link="[View](https://github.com/$REPOSITORY/actions/runs/$run_id)"
+            else
+              run_link="—"
+            fi
+
+            echo "| $safe_name | $safe_source | $safe_result | $run_link |" \
+              >> "$GITHUB_STEP_SUMMARY"
+          }
+
+          recent_runs() {
+            local workflow_id="$1"
+            gh api \
+              "repos/$REPOSITORY/actions/workflows/$workflow_id/runs?branch=$branch_query&per_page=30"
+          }
+
+          wait_for_run() {
+            local run_id="$1"
+            gh run watch "$run_id" \
+              --repo "$REPOSITORY" \
+              --exit-status \
+              --interval 10
+          }
+
+          find_dispatched_run() {
+            local workflow_id="$1"
+            local dispatched_at="$2"
+            local run_id=""
+
+            for _ in {1..30}; do
+              run_id="$(
+                recent_runs "$workflow_id" \
+                  | jq -r \
+                    --arg dispatched "$dispatched_at" \
+                    '[.workflow_runs[]
+                      | select(.event == "workflow_dispatch")
+                      | select(.created_at >= $dispatched)]
+                    | sort_by(.created_at)
+                    | last
+                    | .id // empty'
+              )"
+
+              if [[ -n "$run_id" ]]; then
+                printf '%s\n' "$run_id"
+                return 0
+              fi
+              sleep 2
+            done
+
+            return 1
+          }
+
+          while IFS=$'\t' read -r _priority workflow_id workflow_name workflow_path; do
+            [[ -n "$workflow_id" ]] || continue
+            echo "Processing: $workflow_name ($workflow_path)"
+
+            runs_json="$(recent_runs "$workflow_id")"
+            successful_run="$(
+              jq -r \
+                --arg started "$started_at" \
+                '[.workflow_runs[]
+                  | select(.created_at >= $started)
+                  | select(.conclusion == "success")]
+                | sort_by(.created_at)
+                | last
+                | .id // empty' <<< "$runs_json"
+            )"
+
+            if [[ -n "$successful_run" ]]; then
+              record_result "$workflow_name" "Already triggered" "✅ Success" "$successful_run"
+              success_count=$((success_count + 1))
+              continue
+            fi
+
+            active_run="$(
+              jq -r \
+                --arg started "$started_at" \
+                '[.workflow_runs[]
+                  | select(.created_at >= $started)
+                  | select(.status != "completed")]
+                | sort_by(.created_at)
+                | last
+                | .id // empty' <<< "$runs_json"
+            )"
+
+            if [[ -n "$active_run" ]]; then
+              if wait_for_run "$active_run"; then
+                record_result "$workflow_name" "Already running" "✅ Success" "$active_run"
+                success_count=$((success_count + 1))
+              else
+                record_result "$workflow_name" "Already running" "❌ Failed or cancelled" "$active_run"
+                failure_count=$((failure_count + 1))
+              fi
+              continue
+            fi
+
+            dispatched_at="$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+            dispatch_error="$RUNNER_TEMP/dispatch-error.txt"
+            : > "$dispatch_error"
+
+            if ! gh api \
+              --method POST \
+              "repos/$REPOSITORY/actions/workflows/$workflow_id/dispatches" \
+              -f ref="$TARGET_REF" 2> "$dispatch_error"; then
+              error_text="$(tr '\n' ' ' < "$dispatch_error")"
+              record_result \
+                "$workflow_name" \
+                "Manual dispatch" \
+                "❌ Could not start: ${error_text:-workflow_dispatch may be missing}" \
+                ""
+              failure_count=$((failure_count + 1))
+              continue
+            fi
+
+            if ! run_id="$(find_dispatched_run "$workflow_id" "$dispatched_at")"; then
+              record_result "$workflow_name" "Manual dispatch" "❌ Run was not created" ""
+              failure_count=$((failure_count + 1))
+              continue
+            fi
+
+            if wait_for_run "$run_id"; then
+              record_result "$workflow_name" "Manual dispatch" "✅ Success" "$run_id"
+              success_count=$((success_count + 1))
+            else
+              record_result "$workflow_name" "Manual dispatch" "❌ Failed or cancelled" "$run_id"
+              failure_count=$((failure_count + 1))
+            fi
+          done < "$workflow_file"
+
+          {
+            echo
+            echo "### Result"
+            echo
+            echo "- Successful: **$success_count**"
+            echo "- Failed or unavailable: **$failure_count**"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+          if (( failure_count > 0 )); then
+            echo "$failure_count workflow(s) failed or could not be dispatched." >&2
+            exit 1
+          fi
