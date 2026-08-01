@@ -140,6 +140,9 @@
   background:#fff;
   object-fit:contain;
 }
+.metrics-band .metric-source-card .metric-source-name .metric-logo-crossref{
+  padding:1px;
+}
 .button-with-logo{
   display:inline-flex!important;
   align-items:center;
@@ -189,6 +192,20 @@
   flex:0 0 24px;
   padding:3px;
   object-fit:contain;
+}
+.profile-logo-frame.profile-logo-scopus img{
+  width:25px!important;
+  height:25px!important;
+  max-width:25px!important;
+  max-height:25px!important;
+  padding:2px;
+}
+.profile-logo-frame.profile-logo-wos img{
+  width:26px!important;
+  height:26px!important;
+  max-width:26px!important;
+  max-height:26px!important;
+  padding:1px;
 }
 .profile-logo-text{
   color:var(--brand);
