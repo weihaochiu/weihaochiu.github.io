@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-08-01T00:34:49.705353Z",
+  "lastUpdated": "2026-08-01T06:09:41.179564Z",
   "journalCount": 22,
   "activeJournalCount": 22,
   "sourcePolicy": {
@@ -2895,8 +2895,8 @@
       "eissn": "2213-3437",
       "issnL": "2213-2929",
       "allIssns": [
-        "2213-2929",
-        "2213-3437"
+        "2213-3437",
+        "2213-2929"
       ],
       "homepage": "https://www.journals.elsevier.com/journal-of-environmental-chemical-engineering",
       "countryCode": "NL",
