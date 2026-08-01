@@ -1,20 +1,20 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-31T04:42:28Z",
+  "generatedAt": "2026-08-01T00:35:22Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 307,
+    "pageViews": 313,
     "activeUsers": 31,
-    "sessions": 71,
-    "engagementRate": 0.6197183098591549
+    "sessions": 74,
+    "engagementRate": 0.6081081081081081
   },
   "monthlyTrend": [
     {
       "month": "2026-07",
-      "pageViews": 307,
+      "pageViews": 313,
       "activeUsers": 31
     }
   ],
@@ -22,20 +22,20 @@
     {
       "title": "Publications | Wei-Hao Chiu",
       "path": "/publications.html",
-      "pageViews": 60,
+      "pageViews": 62,
       "activeUsers": 12
+    },
+    {
+      "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
+      "path": "/",
+      "pageViews": 48,
+      "activeUsers": 23
     },
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/index.html",
       "pageViews": 47,
       "activeUsers": 3
-    },
-    {
-      "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
-      "path": "/",
-      "pageViews": 46,
-      "activeUsers": 23
     },
     {
       "title": "2T Perovskite Tandem Solar Cells in Space: Failure Mechanisms and Design Strategies | Wei-Hao Chiu",
@@ -64,7 +64,13 @@
     {
       "title": "Reliability enhancement of PVDF-HFP modified perovskite solar cells under synergistic space-relevant stress conditions | Wei-Hao Chiu",
       "path": "/publications/10-1016-j-cej-2026-177494.html",
-      "pageViews": 8,
+      "pageViews": 9,
+      "activeUsers": 3
+    },
+    {
+      "title": "Heterogeneous graphite felt electrodes decorated with nanostructured graphitic carbon nitride for enhanced redox kinetics in vanadium redox flow batteries | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-jpowsour-2025-239216.html",
+      "pageViews": 5,
       "activeUsers": 3
     },
     {
@@ -77,12 +83,6 @@
       "title": "Research | Wei-Hao Chiu",
       "path": "/research.html",
       "pageViews": 5,
-      "activeUsers": 3
-    },
-    {
-      "title": "Heterogeneous graphite felt electrodes decorated with nanostructured graphitic carbon nitride for enhanced redox kinetics in vanadium redox flow batteries | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-jpowsour-2025-239216.html",
-      "pageViews": 4,
       "activeUsers": 3
     },
     {
@@ -118,12 +118,12 @@
     },
     {
       "channel": "Organic Search",
-      "sessions": 30,
+      "sessions": 33,
       "activeUsers": 5
     },
     {
       "channel": "Unassigned",
-      "sessions": 1,
+      "sessions": 2,
       "activeUsers": 1
     }
   ],
@@ -131,7 +131,7 @@
     {
       "country": "Taiwan",
       "activeUsers": 13,
-      "pageViews": 276
+      "pageViews": 282
     },
     {
       "country": "United States",
