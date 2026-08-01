@@ -1,19 +1,19 @@
 {
   "schemaVersion": 1,
   "repository": "weihaochiu/weihaochiu.github.io",
-  "generatedAt": "2026-07-31T21:21:14.377Z",
+  "generatedAt": "2026-08-01T00:38:14.257Z",
   "source": "GitHub Actions scheduled snapshot",
   "scope": "automated-runs-manual-pr-and-summary-updater-excluded",
-  "totalRepositoryRunCount": 478,
-  "inspectedRunCount": 478,
-  "automatedRunCount": 438,
-  "excludedRunCount": 40,
-  "runHistoryTruncated": false,
+  "totalRepositoryRunCount": 510,
+  "inspectedRunCount": 500,
+  "automatedRunCount": 445,
+  "excludedRunCount": 55,
+  "runHistoryTruncated": true,
   "summary": {
     "total": 14,
-    "success": 12,
+    "success": 11,
     "failed": 0,
-    "running": 0,
+    "running": 1,
     "overdue": 0,
     "other": 2
   }
