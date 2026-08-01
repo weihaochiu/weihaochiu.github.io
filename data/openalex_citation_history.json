@@ -2,12 +2,12 @@
   "schemaVersion": 3,
   "source": "OpenAlex Works API",
   "status": "success_with_exclusions",
-  "lastSuccessfulUpdate": "2026-07-30T08:30:25.566923Z",
+  "lastSuccessfulUpdate": "2026-08-01T00:28:51.609038Z",
   "workCount": 37,
   "missingPublicationYearCount": 0,
-  "totalCitationsFromPublicationMetrics": 988,
-  "rawTotalCitationsFromHistory": 988,
-  "totalCitationsIncludedInAnnualChart": 982,
+  "totalCitationsFromPublicationMetrics": 989,
+  "rawTotalCitationsFromHistory": 989,
+  "totalCitationsIncludedInAnnualChart": 983,
   "rawValidationDifference": 0,
   "unassignedCitationCount": 0,
   "excludedInvalidCitationCount": 6,
@@ -133,7 +133,7 @@
     },
     {
       "year": 2025,
-      "citations": 90
+      "citations": 91
     },
     {
       "year": 2026,
@@ -5536,7 +5536,7 @@
           "volume": "59",
           "issue": "10",
           "pages": "807-816",
-          "type": "article"
+          "type": "book-chapter"
         },
         {
           "openAlexId": "W2503319497",
@@ -21467,12 +21467,12 @@
       "doi": "10.1016/j.mtchem.2024.102329",
       "title": "Exploring the efficiency enhancement of perovskite solar cells by chemical bath depositing SnO2 on mesoporous TiO2 electrode",
       "publicationYear": 2024,
-      "currentCitationCount": 7,
+      "currentCitationCount": 8,
       "sourceUrl": "https://api.openalex.org/works?filter=cites:W4402883453",
       "citationsByYear": [
         {
           "year": 2025,
-          "citations": 5
+          "citations": 6
         },
         {
           "year": 2026,
@@ -21482,20 +21482,20 @@
       "rawCitationsByYear": [
         {
           "year": 2025,
-          "citations": 5
+          "citations": 6
         },
         {
           "year": 2026,
           "citations": 2
         }
       ],
-      "historyTotal": 7,
-      "rawHistoryTotal": 7,
+      "historyTotal": 8,
+      "rawHistoryTotal": 8,
       "excludedInvalidCitationCount": 0,
       "excludedInvalidCitations": [],
       "unassignedCitationCount": 0,
-      "citingWorkCount": 7,
-      "citingArticlesWithDoiCount": 7,
+      "citingWorkCount": 8,
+      "citingArticlesWithDoiCount": 8,
       "citingArticlesWithDoi": [
         {
           "openAlexId": "W7156905916",
@@ -21541,6 +21541,23 @@
           "volume": "45",
           "issue": "3",
           "pages": "",
+          "type": "article"
+        },
+        {
+          "openAlexId": "W4416939684",
+          "doi": "10.5757/asct.2025.34.6.177",
+          "doiUrl": "https://doi.org/10.5757/asct.2025.34.6.177",
+          "title": "Surface and Interface Engineering of Tin Oxide Electron Transport Layers: Recent Progress and Perspectives for Perovskite Photovoltaics",
+          "authors": [
+            "Il‐Wook Cho",
+            "Mee‐Yi Ryu"
+          ],
+          "journal": "Applied Science and Convergence Technology",
+          "publicationYear": 2025,
+          "publicationDate": "2025-10-17",
+          "volume": "34",
+          "issue": "6",
+          "pages": "177-183",
           "type": "article"
         },
         {
@@ -22333,6 +22350,23 @@
       "citingArticlesWithDoiCount": 9,
       "citingArticlesWithDoi": [
         {
+          "openAlexId": "W7171540118",
+          "doi": "10.1016/j.mtphys.2026.102179",
+          "doiUrl": "https://doi.org/10.1016/j.mtphys.2026.102179",
+          "title": "Fully 2D Dion-Jacobson perovskite photovoltaics for low Earth orbit space missions",
+          "authors": [
+            "Mustafa Kareem",
+            "Bassam Thaban"
+          ],
+          "journal": "Materials Today Physics",
+          "publicationYear": 2026,
+          "publicationDate": "2026-07-28",
+          "volume": "66",
+          "issue": "",
+          "pages": "102179",
+          "type": "article"
+        },
+        {
           "openAlexId": "W7169008371",
           "doi": "10.1016/j.jallcom.2026.189862",
           "doiUrl": "https://doi.org/10.1016/j.jallcom.2026.189862",
@@ -22369,23 +22403,6 @@
           "volume": "60",
           "issue": "",
           "pages": "102359",
-          "type": "article"
-        },
-        {
-          "openAlexId": "W7171540118",
-          "doi": "10.1016/j.mtphys.2026.102179",
-          "doiUrl": "https://doi.org/10.1016/j.mtphys.2026.102179",
-          "title": "Fully 2D Dion-Jacobson perovskite photovoltaics for low Earth orbit space missions",
-          "authors": [
-            "Mustafa Kareem",
-            "Bassam Thaban"
-          ],
-          "journal": "Materials Today Physics",
-          "publicationYear": 2026,
-          "publicationDate": "2026-07-01",
-          "volume": "",
-          "issue": "",
-          "pages": "102179",
           "type": "article"
         },
         {

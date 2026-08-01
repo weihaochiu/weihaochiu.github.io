@@ -5,7 +5,7 @@
   "publicationCount": 37,
   "verifiedCount": 37,
   "notFoundCount": 0,
-  "lastSuccessfulUpdate": "2026-07-31T05:46:44Z",
+  "lastSuccessfulUpdate": "2026-08-01T00:28:31Z",
   "records": {
     "10.1016/j.cej.2026.177494": {
       "status": "verified",
@@ -66,8 +66,8 @@
       "openAlexId": "W4415443362",
       "url": "https://openalex.org/W4415443362",
       "citationCount": 10,
-      "fwci": 3.0885,
-      "citationPercentile": 0.92464579,
+      "fwci": 3.0751,
+      "citationPercentile": 0.92416254,
       "isTop1Percent": false,
       "isTop10Percent": true,
       "openAlexUpdatedDate": "2026-07-29T09:40:50.615796"
@@ -80,10 +80,10 @@
       "url": "https://openalex.org/W4413117344",
       "citationCount": 0,
       "fwci": 0.0,
-      "citationPercentile": 0.12089876,
+      "citationPercentile": 0.12059761,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-07-28T07:46:37.118299"
+      "openAlexUpdatedDate": "2026-07-31T08:31:51.225901"
     },
     "10.1016/j.seppur.2025.134157": {
       "status": "verified",
@@ -143,12 +143,12 @@
       "title": "Exploring the efficiency enhancement of perovskite solar cells by chemical bath depositing SnO2 on mesoporous TiO2 electrode",
       "openAlexId": "W4402883453",
       "url": "https://openalex.org/W4402883453",
-      "citationCount": 7,
-      "fwci": 1.2116,
-      "citationPercentile": 0.79234316,
+      "citationCount": 8,
+      "fwci": 0.9956,
+      "citationPercentile": 0.73474937,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-06-15T08:34:33.830935"
+      "openAlexUpdatedDate": "2026-07-31T08:31:51.225901"
     },
     "10.1016/j.cej.2024.153974": {
       "status": "verified",
@@ -209,8 +209,8 @@
       "openAlexId": "W4385773304",
       "url": "https://openalex.org/W4385773304",
       "citationCount": 10,
-      "fwci": 0.8315,
-      "citationPercentile": 0.68670275,
+      "fwci": 0.8307,
+      "citationPercentile": 0.68653456,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-07-29T09:40:50.615796"
@@ -274,8 +274,8 @@
       "openAlexId": "W4289524742",
       "url": "https://openalex.org/W4289524742",
       "citationCount": 10,
-      "fwci": 0.7447,
-      "citationPercentile": 0.66215819,
+      "fwci": 0.745,
+      "citationPercentile": 0.66227218,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-07-30T17:31:21.811387"
@@ -287,8 +287,8 @@
       "openAlexId": "W4224023899",
       "url": "https://openalex.org/W4224023899",
       "citationCount": 3,
-      "fwci": 0.1489,
-      "citationPercentile": 0.38024938,
+      "fwci": 0.149,
+      "citationPercentile": 0.38044599,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-07-30T17:31:21.811387"
@@ -314,7 +314,7 @@
       "url": "https://openalex.org/W4200568401",
       "citationCount": 18,
       "fwci": 1.1115,
-      "citationPercentile": 0.74169131,
+      "citationPercentile": 0.74163592,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-07-30T17:31:21.811387"
@@ -326,8 +326,8 @@
       "openAlexId": "W3195032786",
       "url": "https://openalex.org/W3195032786",
       "citationCount": 11,
-      "fwci": 0.3129,
-      "citationPercentile": 0.45354287,
+      "fwci": 0.3128,
+      "citationPercentile": 0.45356237,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-07-30T17:31:21.811387"
@@ -340,7 +340,7 @@
       "url": "https://openalex.org/W3174093177",
       "citationCount": 8,
       "fwci": 0.5628,
-      "citationPercentile": 0.61794267,
+      "citationPercentile": 0.61792062,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-07-30T17:31:21.811387"
@@ -352,8 +352,8 @@
       "openAlexId": "W2149766360",
       "url": "https://openalex.org/W2149766360",
       "citationCount": 14,
-      "fwci": 1.1342,
-      "citationPercentile": 0.77399508,
+      "fwci": 1.1343,
+      "citationPercentile": 0.77400631,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-07-29T09:40:50.615796"
@@ -443,8 +443,8 @@
       "openAlexId": "W2053005710",
       "url": "https://openalex.org/W2053005710",
       "citationCount": 40,
-      "fwci": 2.4738,
-      "citationPercentile": 0.88897094,
+      "fwci": 2.4742,
+      "citationPercentile": 0.8889885,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-07-29T09:40:50.615796"
@@ -483,7 +483,7 @@
       "url": "https://openalex.org/W2022329244",
       "citationCount": 5,
       "fwci": 0.3176,
-      "citationPercentile": 0.65651666,
+      "citationPercentile": 0.65651702,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-07-29T09:40:50.615796"
