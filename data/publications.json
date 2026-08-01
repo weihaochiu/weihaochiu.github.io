@@ -969,7 +969,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-07-29",
+      "lastChecked": "2026-08-01",
       "sources": [
         "crossref",
         "openalex",
@@ -977,11 +977,11 @@
       ],
       "sourceUrls": {
         "crossref": "https://api.crossref.org/works/10.1016%2Fj.jpowsour.2025.239216",
-        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1016%2Fj.jpowsour.2025.239216",
-        "publisher": "https://www.sciencedirect.com/science/article/abs/pii/S0378775325030538"
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1016%2Fj.jpowsour.2025.239216"
       },
       "requiresManualReview": true,
       "missingFields": [
+        "equalContribution",
         "affiliationAddresses"
       ],
       "warnings": [
@@ -5963,7 +5963,7 @@
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
-        "isCorresponding": false,
+        "isCorresponding": true,
         "correspondingEmail": "",
         "sources": [
           "crossref",
@@ -5983,7 +5983,7 @@
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
-        "isCorresponding": true,
+        "isCorresponding": false,
         "correspondingEmail": "",
         "sources": [
           "crossref",
@@ -6147,7 +6147,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-07-25",
+      "lastChecked": "2026-08-01",
       "sources": [
         "crossref",
         "openalex"
