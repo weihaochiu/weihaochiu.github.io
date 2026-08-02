@@ -1,21 +1,26 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-01T04:35:49Z",
+  "generatedAt": "2026-08-02T04:39:14Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 313,
+    "pageViews": 315,
     "activeUsers": 31,
-    "sessions": 74,
-    "engagementRate": 0.6081081081081081
+    "sessions": 76,
+    "engagementRate": 0.6052631578947368
   },
   "monthlyTrend": [
     {
       "month": "2026-07",
       "pageViews": 313,
       "activeUsers": 31
+    },
+    {
+      "month": "2026-08",
+      "pageViews": 2,
+      "activeUsers": 1
     }
   ],
   "topPages": [
@@ -27,15 +32,15 @@
     },
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
-      "path": "/",
-      "pageViews": 48,
-      "activeUsers": 23
+      "path": "/index.html",
+      "pageViews": 49,
+      "activeUsers": 3
     },
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
-      "path": "/index.html",
-      "pageViews": 47,
-      "activeUsers": 3
+      "path": "/",
+      "pageViews": 48,
+      "activeUsers": 23
     },
     {
       "title": "2T Perovskite Tandem Solar Cells in Space: Failure Mechanisms and Design Strategies | Wei-Hao Chiu",
@@ -118,20 +123,15 @@
     },
     {
       "channel": "Organic Search",
-      "sessions": 33,
+      "sessions": 35,
       "activeUsers": 5
-    },
-    {
-      "channel": "Unassigned",
-      "sessions": 2,
-      "activeUsers": 1
     }
   ],
   "topCountries": [
     {
       "country": "Taiwan",
       "activeUsers": 13,
-      "pageViews": 282
+      "pageViews": 284
     },
     {
       "country": "United States",
