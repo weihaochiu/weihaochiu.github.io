@@ -2,10 +2,10 @@
   "schemaVersion": 2,
   "source": "OpenAlex Works API",
   "status": "success",
-  "publicationCount": 37,
+  "publicationCount": 38,
   "verifiedCount": 37,
-  "notFoundCount": 0,
-  "lastSuccessfulUpdate": "2026-08-03T06:55:58Z",
+  "notFoundCount": 1,
+  "lastSuccessfulUpdate": "2026-08-03T12:03:48Z",
   "records": {
     "10.1016/j.cej.2026.177494": {
       "status": "verified",
@@ -487,6 +487,10 @@
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-07-29T09:40:50.615796"
+    },
+    "10.29803/ce.202108_68(4).0006": {
+      "status": "not_found",
+      "doi": "10.29803/ce.202108_68(4).0006"
     }
   }
 }
