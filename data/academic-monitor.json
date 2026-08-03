@@ -1,20 +1,20 @@
 {
   "schemaVersion": 3,
-  "generatedAt": "2026-08-03T20:53:32+08:00",
+  "generatedAt": "2026-08-04T02:34:33+08:00",
   "repository": "https://github.com/weihaochiu/weihaochiu.github.io",
   "status": "completed",
   "summary": {
-    "publications": 4,
+    "publications": 2,
     "patents": 17,
     "projects": 0,
     "publicationTypes": {
       "international-journal": 1,
-      "chinese-journal": 1,
-      "conference": 1,
+      "chinese-journal": 0,
+      "conference": 0,
       "other": 1,
       "unclassified": 0
     },
-    "totalCandidates": 21,
+    "totalCandidates": 19,
     "sourceErrors": 0,
     "sourceWarnings": 0,
     "resolvedRecordsSuppressed": 0
@@ -74,46 +74,6 @@
     },
     {
       "type": "publication",
-      "confidence": "high",
-      "detectionNotes": [
-        "ORCID work is not present in the current publications JSON.",
-        "Please verify authorship and publication status before adding.",
-        "Crossref enrichment failed: HTTP 404: Not Found"
-      ],
-      "sources": [
-        {
-          "name": "ORCID",
-          "url": "https://orcid.org/0000-0003-4484-3117"
-        },
-        {
-          "name": "DOI",
-          "url": "https://doi.org/10.29803/ce.202402_71(1).0002"
-        },
-        {
-          "name": "Crossref",
-          "url": "https://api.crossref.org/works/10.29803%2Fce.202402_71%281%29.0002"
-        }
-      ],
-      "doi": "10.29803/ce.202402_71(1).0002",
-      "title": "鈣鈦礦太陽能電池於太空應用的研究與展望",
-      "journal": "化工",
-      "publicationDate": "",
-      "authors": [],
-      "publisher": "",
-      "volume": "",
-      "issue": "",
-      "pages": "",
-      "abstract": "",
-      "keywords": [],
-      "sourceDocumentType": "journal-article",
-      "language": "zh-tw",
-      "suggestedPublicationType": "chinese-journal",
-      "publicationTypeConfidence": "high",
-      "publicationTypeReason": "Journal article with Chinese title, source, or language metadata.",
-      "reviewKey": "publication:doi:10.29803/ce.202402_71(1).0002"
-    },
-    {
-      "type": "publication",
       "confidence": "possible",
       "detectionNotes": [
         "ORCID work is not present in the current publications JSON.",
@@ -142,37 +102,6 @@
       "publicationTypeConfidence": "medium",
       "publicationTypeReason": "Journal article with non-Chinese title and source metadata.",
       "reviewKey": "publication:title:fluorinationofstarshapedcyclopenta21b34b0dithiophenederivativesanditsapplicationasholetransportingmaterialsinscalableperovskitesolarcellfabricationbybarcoating"
-    },
-    {
-      "type": "publication",
-      "confidence": "possible",
-      "detectionNotes": [
-        "ORCID work is not present in the current publications JSON.",
-        "Please verify authorship and publication status before adding."
-      ],
-      "sources": [
-        {
-          "name": "ORCID",
-          "url": "https://orcid.org/0000-0003-4484-3117"
-        }
-      ],
-      "doi": "",
-      "title": "Branched ZnO nanowires for enhancing energy conversion efficiency of dye-sensitized solar cells",
-      "journal": "Next-Generation and Nano-Architectured Photovoltaics",
-      "publicationDate": "",
-      "authors": [],
-      "publisher": "",
-      "volume": "",
-      "issue": "",
-      "pages": "",
-      "abstract": "",
-      "keywords": [],
-      "sourceDocumentType": "conference-paper",
-      "language": "",
-      "suggestedPublicationType": "conference",
-      "publicationTypeConfidence": "high",
-      "publicationTypeReason": "Source document type: conference-paper.",
-      "reviewKey": "publication:title:branchedznonanowiresforenhancingenergyconversionefficiencyofdyesensitizedsolarcells"
     }
   ],
   "patents": [
@@ -1316,15 +1245,15 @@
       "url": "https://pub.orcid.org/v3.0/0000-0003-4484-3117/works",
       "status": "success",
       "message": "",
-      "checkedAt": "2026-08-03T20:53:23+08:00",
-      "candidateCount": 4
+      "checkedAt": "2026-08-04T02:34:28+08:00",
+      "candidateCount": 2
     },
     {
       "name": "Google Patents",
       "url": "https://patents.google.com/?q=inventor%3D%22Wei-Hao+Chiu%22",
       "status": "success",
       "message": "",
-      "checkedAt": "2026-08-03T20:53:24+08:00",
+      "checkedAt": "2026-08-04T02:34:28+08:00",
       "candidateCount": 10
     },
     {
@@ -1332,7 +1261,7 @@
       "url": "https://patents.google.com/?q=inventor%3D%22%E9%82%B1%E5%81%89%E8%B1%AA%22",
       "status": "success",
       "message": "",
-      "checkedAt": "2026-08-03T20:53:28+08:00",
+      "checkedAt": "2026-08-04T02:34:31+08:00",
       "candidateCount": 10
     },
     {
@@ -1340,7 +1269,7 @@
       "url": "https://www.grb.gov.tw/advq?queryStr=%E9%82%B1%E5%81%89%E8%B1%AA&queryType=grb05",
       "status": "success",
       "message": "GRB Playwright discovery completed; 0 pending record(s) require review.",
-      "checkedAt": "2026-08-03T20:53:32+08:00",
+      "checkedAt": "2026-08-04T02:34:33+08:00",
       "candidateCount": 0
     }
   ],
