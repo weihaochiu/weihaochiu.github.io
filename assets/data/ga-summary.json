@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-03T12:48:44Z",
+  "generatedAt": "2026-08-03T18:53:34Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 315,
-    "activeUsers": 31,
-    "sessions": 76,
-    "engagementRate": 0.631578947368421
+    "pageViews": 329,
+    "activeUsers": 35,
+    "sessions": 83,
+    "engagementRate": 0.5783132530120482
   },
   "monthlyTrend": [
     {
@@ -19,28 +19,28 @@
     },
     {
       "month": "2026-08",
-      "pageViews": 2,
-      "activeUsers": 1
+      "pageViews": 16,
+      "activeUsers": 5
     }
   ],
   "topPages": [
     {
       "title": "Publications | Wei-Hao Chiu",
       "path": "/publications.html",
-      "pageViews": 62,
-      "activeUsers": 12
-    },
-    {
-      "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
-      "path": "/index.html",
-      "pageViews": 49,
-      "activeUsers": 3
+      "pageViews": 67,
+      "activeUsers": 13
     },
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 48,
-      "activeUsers": 23
+      "pageViews": 54,
+      "activeUsers": 26
+    },
+    {
+      "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
+      "path": "/index.html",
+      "pageViews": 50,
+      "activeUsers": 3
     },
     {
       "title": "2T Perovskite Tandem Solar Cells in Space: Failure Mechanisms and Design Strategies | Wei-Hao Chiu",
@@ -57,7 +57,7 @@
     {
       "title": "Patents | Wei-Hao Chiu",
       "path": "/patents.html",
-      "pageViews": 27,
+      "pageViews": 28,
       "activeUsers": 5
     },
     {
@@ -118,25 +118,30 @@
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 41,
-      "activeUsers": 27
+      "sessions": 44,
+      "activeUsers": 30
     },
     {
       "channel": "Organic Search",
-      "sessions": 35,
-      "activeUsers": 5
+      "sessions": 39,
+      "activeUsers": 6
+    },
+    {
+      "channel": "Unassigned",
+      "sessions": 1,
+      "activeUsers": 1
     }
   ],
   "topCountries": [
     {
       "country": "Taiwan",
       "activeUsers": 13,
-      "pageViews": 284
+      "pageViews": 294
     },
     {
       "country": "United States",
-      "activeUsers": 8,
-      "pageViews": 10
+      "activeUsers": 12,
+      "pageViews": 14
     },
     {
       "country": "(not set)",
@@ -177,7 +182,7 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 22
+      "activeUsers": 26
     },
     {
       "device": "mobile",
@@ -187,11 +192,11 @@
   "academicEvents": [
     {
       "eventName": "patent_click",
-      "eventCount": 17
+      "eventCount": 18
     },
     {
       "eventName": "doi_click",
-      "eventCount": 14
+      "eventCount": 15
     },
     {
       "eventName": "orcid_click",
