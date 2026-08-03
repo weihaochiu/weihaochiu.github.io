@@ -2,14 +2,14 @@
   "schemaVersion": 1,
   "source": "Mendeley Catalog API",
   "status": "success",
-  "lastAttemptedUpdate": "2026-08-03T07:50:03Z",
-  "lastSuccessfulUpdate": "2026-08-03T07:50:03Z",
+  "lastAttemptedUpdate": "2026-08-03T12:06:16Z",
+  "lastSuccessfulUpdate": "2026-08-03T12:06:16Z",
   "totalReaders": 951,
-  "publicationCount": 37,
+  "publicationCount": 38,
   "matchedPublications": 37,
   "freshPublications": 37,
   "stalePublications": 0,
-  "notFoundPublications": 0,
+  "notFoundPublications": 1,
   "errorPublications": 0,
   "note": "Total readers is the sum of per-publication Mendeley reader counts and is not a count of unique people.",
   "records": {
@@ -22,7 +22,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-08-03T07:50:03Z",
+      "updatedAt": "2026-08-03T12:06:16Z",
       "stale": false
     },
     "10.1002/advs.202410666": {
@@ -34,7 +34,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-08-03T07:50:03Z",
+      "updatedAt": "2026-08-03T12:06:16Z",
       "stale": false
     },
     "10.1002/asia.202300681": {
@@ -46,7 +46,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-08-03T07:50:03Z",
+      "updatedAt": "2026-08-03T12:06:16Z",
       "stale": false
     },
     "10.1002/asia.202500719": {
@@ -58,7 +58,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-08-03T07:50:03Z",
+      "updatedAt": "2026-08-03T12:06:16Z",
       "stale": false
     },
     "10.1002/asia.70245": {
@@ -70,7 +70,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-08-03T07:50:03Z",
+      "updatedAt": "2026-08-03T12:06:16Z",
       "stale": false
     },
     "10.1002/solr.202300988": {
@@ -82,7 +82,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-08-03T07:50:03Z",
+      "updatedAt": "2026-08-03T12:06:16Z",
       "stale": false
     },
     "10.1002/solr.202500538": {
@@ -94,7 +94,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-08-03T07:50:03Z",
+      "updatedAt": "2026-08-03T12:06:16Z",
       "stale": false
     },
     "10.1016/j.cej.2021.131609": {
@@ -106,7 +106,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-08-03T07:50:03Z",
+      "updatedAt": "2026-08-03T12:06:16Z",
       "stale": false
     },
     "10.1016/j.cej.2022.139926": {
@@ -118,7 +118,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-08-03T07:50:03Z",
+      "updatedAt": "2026-08-03T12:06:16Z",
       "stale": false
     },
     "10.1016/j.cej.2024.153974": {
@@ -130,7 +130,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-08-03T07:50:03Z",
+      "updatedAt": "2026-08-03T12:06:16Z",
       "stale": false
     },
     "10.1016/j.cej.2026.177494": {
@@ -142,7 +142,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-08-03T07:50:03Z",
+      "updatedAt": "2026-08-03T12:06:16Z",
       "stale": false
     },
     "10.1016/j.electacta.2010.07.061": {
@@ -154,7 +154,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-08-03T07:50:03Z",
+      "updatedAt": "2026-08-03T12:06:16Z",
       "stale": false
     },
     "10.1016/j.jece.2023.111741": {
@@ -166,7 +166,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-08-03T07:50:03Z",
+      "updatedAt": "2026-08-03T12:06:16Z",
       "stale": false
     },
     "10.1016/j.jpowsour.2010.12.063": {
@@ -178,7 +178,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-08-03T07:50:03Z",
+      "updatedAt": "2026-08-03T12:06:16Z",
       "stale": false
     },
     "10.1016/j.jpowsour.2011.06.049": {
@@ -190,7 +190,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-08-03T07:50:03Z",
+      "updatedAt": "2026-08-03T12:06:16Z",
       "stale": false
     },
     "10.1016/j.jpowsour.2012.05.079": {
@@ -202,7 +202,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-08-03T07:50:03Z",
+      "updatedAt": "2026-08-03T12:06:16Z",
       "stale": false
     },
     "10.1016/j.jpowsour.2012.12.094": {
@@ -214,7 +214,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-08-03T07:50:03Z",
+      "updatedAt": "2026-08-03T12:06:16Z",
       "stale": false
     },
     "10.1016/j.jpowsour.2023.233496": {
@@ -226,7 +226,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-08-03T07:50:03Z",
+      "updatedAt": "2026-08-03T12:06:16Z",
       "stale": false
     },
     "10.1016/j.jpowsour.2025.239216": {
@@ -238,7 +238,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-08-03T07:50:03Z",
+      "updatedAt": "2026-08-03T12:06:16Z",
       "stale": false
     },
     "10.1016/j.mtchem.2024.102329": {
@@ -250,7 +250,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-08-03T07:50:03Z",
+      "updatedAt": "2026-08-03T12:06:16Z",
       "stale": false
     },
     "10.1016/j.mtener.2026.102359": {
@@ -262,7 +262,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-08-03T07:50:03Z",
+      "updatedAt": "2026-08-03T12:06:16Z",
       "stale": false
     },
     "10.1016/j.optcom.2004.10.003": {
@@ -274,7 +274,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-08-03T07:50:03Z",
+      "updatedAt": "2026-08-03T12:06:16Z",
       "stale": false
     },
     "10.1016/j.orgel.2023.106847": {
@@ -286,7 +286,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-08-03T07:50:03Z",
+      "updatedAt": "2026-08-03T12:06:16Z",
       "stale": false
     },
     "10.1016/j.seppur.2025.134157": {
@@ -298,7 +298,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-08-03T07:50:03Z",
+      "updatedAt": "2026-08-03T12:06:16Z",
       "stale": false
     },
     "10.1016/j.solener.2026.114430": {
@@ -310,7 +310,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-08-03T07:50:03Z",
+      "updatedAt": "2026-08-03T12:06:16Z",
       "stale": false
     },
     "10.1016/j.solmat.2009.07.017": {
@@ -322,7 +322,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-08-03T07:50:03Z",
+      "updatedAt": "2026-08-03T12:06:16Z",
       "stale": false
     },
     "10.1016/j.solmat.2025.114015": {
@@ -334,7 +334,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-08-03T07:50:03Z",
+      "updatedAt": "2026-08-03T12:06:16Z",
       "stale": false
     },
     "10.1016/j.tsf.2009.11.058": {
@@ -346,7 +346,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-08-03T07:50:03Z",
+      "updatedAt": "2026-08-03T12:06:16Z",
       "stale": false
     },
     "10.1021/jp805239k": {
@@ -358,7 +358,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-08-03T07:50:03Z",
+      "updatedAt": "2026-08-03T12:06:16Z",
       "stale": false
     },
     "10.1039/b902595m": {
@@ -370,7 +370,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-08-03T07:50:03Z",
+      "updatedAt": "2026-08-03T12:06:16Z",
       "stale": false
     },
     "10.1039/c0jm04099a": {
@@ -382,7 +382,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-08-03T07:50:03Z",
+      "updatedAt": "2026-08-03T12:06:16Z",
       "stale": false
     },
     "10.1039/d3cc04699k": {
@@ -394,8 +394,13 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-08-03T07:50:03Z",
+      "updatedAt": "2026-08-03T12:06:16Z",
       "stale": false
+    },
+    "10.29803/ce.202108_68(4).0006": {
+      "status": "not_found",
+      "title": "鈣鈦礦太陽能模組技術現況與展望",
+      "lastAttemptedUpdate": "2026-08-03T12:06:16Z"
     },
     "10.3390/nano11061607": {
       "status": "verified",
@@ -406,7 +411,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-08-03T07:50:03Z",
+      "updatedAt": "2026-08-03T12:06:16Z",
       "stale": false
     },
     "10.3390/nano11082125": {
@@ -418,7 +423,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-08-03T07:50:03Z",
+      "updatedAt": "2026-08-03T12:06:16Z",
       "stale": false
     },
     "10.3390/nano12152651": {
@@ -430,7 +435,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-08-03T07:50:03Z",
+      "updatedAt": "2026-08-03T12:06:16Z",
       "stale": false
     },
     "10.3390/polym13234246": {
@@ -442,7 +447,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-08-03T07:50:03Z",
+      "updatedAt": "2026-08-03T12:06:16Z",
       "stale": false
     },
     "10.3390/polym14081580": {
@@ -454,7 +459,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-08-03T07:50:03Z",
+      "updatedAt": "2026-08-03T12:06:16Z",
       "stale": false
     }
   }
