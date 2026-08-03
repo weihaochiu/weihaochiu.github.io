@@ -58,3 +58,15 @@ Verified collection files in `data/` remain authoritative. Do not replace them w
 - Records with conflicting or incomplete source data must use `requiresManualReview: true` and list the unresolved fields.
 - Generated HTML must be rebuilt from the authoritative JSON; individual files under `publications/` must not be edited manually.
 <!-- PUBLICATION_AUTHORSHIP_REQUIREMENTS_END -->
+
+## Publication types and analytics scope — 3 August 2026
+
+- `data/publications.json` remains the single source for all scholarly outputs; do not split it into separate files by type.
+- Every output must have a unique `id`, `publicationType`, `documentType`, `language`, `peerReviewStatus`, and four explicit boolean `analytics` flags.
+- Public presentation is divided into International Journal Publications, Chinese Journal Publications, and Conference Publications; Other and Unclassified sections appear only when records exist.
+- Only records with `analytics.coreJournalCount: true` count toward the homepage core-publication number, Research-page peer-reviewed totals, and the default annual publication charts.
+- JCR, journal IF, quartile, journal and publisher analytics use only `analytics.journalMetrics: true` records.
+- FWCI is displayed or analyzed only for `analytics.fwci: true` records.
+- Content-completeness requirements are type-aware. Conference and Chinese professional outputs are not automatically required to have Highlights or a Graphical Abstract.
+- Academic Monitor must preserve source document type and language, propose an explainable publication type, show confidence and reason, and require a manually editable final type before a confirmed record is added.
+- DOI-less outputs must use the stable `id` for detail-page slugs, anchors, sitemap entries, and duplicate validation.

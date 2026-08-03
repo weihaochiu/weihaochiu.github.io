@@ -45,7 +45,17 @@ PERSON = {
 }
 
 def esc(v): return html.escape(str(v or ''), quote=True)
-def slugify(doi): return re.sub(r'[^a-z0-9]+','-',str(doi).lower()).strip('-') or 'publication'
+def slugify(value): return re.sub(r'[^a-z0-9]+','-',str(value).lower()).strip('-') or 'publication'
+def publication_slug(p): return slugify(p.get('id') or p.get('doi') or p.get('title'))
+def publication_type(p): return str(p.get('publicationType') or 'international-journal')
+def publication_type_label(p):
+  return {
+    'international-journal':'International Journal Publication',
+    'chinese-journal':'Chinese Journal Publication',
+    'conference':'Conference Publication',
+    'other':'Other Scholarly Output',
+    'unclassified':'Unclassified Scholarly Output',
+  }.get(publication_type(p),'Scholarly Output')
 AUTHOR_MAP = {}
 def normalize_author_name(name): return re.sub(r'[^a-z0-9]+', '', str(name or '').lower())
 def author_has_information(author):
@@ -146,7 +156,10 @@ def graphical_abstract_path(p):
   return ''
 
 def article_schema(p, url):
-  obj = {'@type':'ScholarlyArticle','@id':url+'#article','url':url,'mainEntityOfPage':url,'headline':p.get('title',''),'name':p.get('title',''),'datePublished':p.get('date') or str(p.get('year','')),'author':[authorship_schema_person(row,p) for row in publication_authorships(p)],'isPartOf':{'@type':'Periodical','name':p.get('journal','')},'publisher':{'@type':'Organization','name':p.get('publisher','')},'identifier':[{'@type':'PropertyValue','propertyID':'DOI','value':p.get('doi','')},p.get('doiUrl','')],'sameAs':p.get('doiUrl',''),'citation':p.get('citation',''),'keywords':p.get('keywords',[]),'about':p.get('topic',''),'pagination':p.get('pages',''),'volumeNumber':p.get('volume',''),'issueNumber':p.get('issue',''),'inLanguage':'en'}
+  identifiers=[]
+  if p.get('doi'): identifiers.append({'@type':'PropertyValue','propertyID':'DOI','value':p.get('doi')})
+  if p.get('id'): identifiers.append({'@type':'PropertyValue','propertyID':'Output ID','value':p.get('id')})
+  obj = {'@type':'ScholarlyArticle','@id':url+'#article','url':url,'mainEntityOfPage':url,'headline':p.get('title',''),'name':p.get('title',''),'datePublished':p.get('date') or str(p.get('year','')),'author':[authorship_schema_person(row,p) for row in publication_authorships(p)],'isPartOf':{'@type':'Periodical','name':p.get('journal','')},'publisher':{'@type':'Organization','name':p.get('publisher','')},'identifier':identifiers,'sameAs':p.get('doiUrl') or p.get('publicationUrl',''),'citation':p.get('citation',''),'keywords':p.get('keywords',[]),'about':p.get('topic',''),'pagination':p.get('pages',''),'volumeNumber':p.get('volume',''),'issueNumber':p.get('issue',''),'inLanguage':p.get('language') or 'en','genre':publication_type_label(p)}
   if p.get('abstract'): obj['abstract'] = p.get('abstract')
   ga_path = graphical_abstract_path(p)
   if ga_path: obj['image'] = SITE_URL + '/' + ga_path
@@ -182,18 +195,45 @@ def replace_emails(text):
   return text
 
 def static_card(p, openalex_record=None):
-  doi=p.get('doi',''); slug=slugify(doi); local='publications/'+slug+'.html'
+  doi=p.get('doi',''); slug=publication_slug(p); local='publications/'+slug+'.html'
   authors=publication_authors_html(p)
   journal='<em>'+esc(p.get('journal'))+'</em>'
   if p.get('volume'): journal += ', '+esc(p.get('volume'))
   if p.get('pages'): journal += ', '+esc(p.get('pages'))
   journal += ' ('+esc(p.get('year'))+').'
-  labels=[p.get('topic')]+list(p.get('tags',[]))
-  labels_html=''.join('<span class="card-label">'+esc(x)+'</span>' for x in labels if x)
+  labels=[publication_type_label(p),p.get('topic')]+list(p.get('tags',[]))
+  labels_html=''.join('<span class="card-label'+(' publication-type-label' if index==0 else '')+'">'+esc(x)+'</span>' for index,x in enumerate(labels) if x)
   n=int(p.get('citationCount') or 0)
   openalex_record = openalex_record or {}
-  impact_html = ''.join(openalex_impact_actions(openalex_record)) if openalex_record.get('status') == 'verified' else ''
-  return '<article class="collection-card publication-card seo-static-card" id="pub-'+slug+'" itemscope itemtype="https://schema.org/ScholarlyArticle"><meta itemprop="identifier" content="'+esc(doi)+'"/><div class="card-heading"><h4 itemprop="headline"><a href="'+esc(local)+'">'+esc(p.get('title'))+'</a></h4><span class="date-badge" itemprop="datePublished">'+esc(p.get('date'))+'</span></div><p class="authors publication-authors" itemprop="author">'+authors+'</p>'+publication_affiliations_html(p,details=False)+'<p class="journal" itemprop="isPartOf">'+journal+'</p><div class="card-labels">'+labels_html+'</div><div class="card-actions"><a class="action" href="'+esc(p.get('doiUrl'))+'" target="_blank" rel="noopener">DOI ↗</a><a class="action" href="'+esc(local)+'">Abstract, Highlights &amp; GA →</a><span class="action">'+str(n)+' Google Scholar citation'+('s' if n!=1 else '')+'</span>'+impact_html+'</div></article>'
+  impact_html = ''.join(openalex_impact_actions(openalex_record)) if p.get('analytics',{}).get('fwci') is True and openalex_record.get('status') == 'verified' else ''
+  doi_html='<a class="action" href="'+esc(p.get('doiUrl'))+'" target="_blank" rel="noopener">DOI ↗</a>' if p.get('doiUrl') else ''
+  identifier=doi or p.get('id','')
+  return '<article class="collection-card publication-card seo-static-card" id="pub-'+slug+'" itemscope itemtype="https://schema.org/ScholarlyArticle"><meta itemprop="identifier" content="'+esc(identifier)+'"/><div class="card-heading"><h4 itemprop="headline"><a href="'+esc(local)+'">'+esc(p.get('title'))+'</a></h4><span class="date-badge" itemprop="datePublished">'+esc(p.get('date'))+'</span></div><p class="authors publication-authors" itemprop="author">'+authors+'</p>'+publication_affiliations_html(p,details=False)+'<p class="journal" itemprop="isPartOf">'+journal+'</p><div class="card-labels">'+labels_html+'</div><div class="card-actions">'+doi_html+'<a class="action" href="'+esc(local)+'">Publication details →</a><span class="action">'+str(n)+' Google Scholar citation'+('s' if n!=1 else '')+'</span>'+impact_html+'</div></article>'
+
+def static_publication_sections(pubs,openalex_records):
+  types=[
+    ('international-journal','International Journal Publications'),
+    ('chinese-journal','Chinese Journal Publications'),
+    ('conference','Conference Publications'),
+    ('other','Other Scholarly Outputs'),
+    ('unclassified','Unclassified Outputs'),
+  ]
+  visible=[(key,label,[p for p in pubs if publication_type(p)==key]) for key,label in types]
+  visible=[entry for entry in visible if entry[2]]
+  nav=''
+  if len(visible)>1:
+    nav='<nav class="publication-section-nav" aria-label="Publication sections">'+''.join('<a href="#publication-section-'+esc(key)+'">'+esc(label)+' <span>'+str(len(rows))+'</span></a>' for key,label,rows in visible)+'</nav>'
+  sections=[]
+  for key,label,rows in visible:
+    by_year={}
+    for p in rows: by_year.setdefault(str(p.get('year') or 'Unknown'),[]).append(p)
+    year_blocks=[]
+    for year in sorted(by_year,key=lambda value:(value!='Unknown',int(value) if value.isdigit() else 0),reverse=True):
+      year_rows=by_year[year]
+      cards='\n'.join(static_card(p,openalex_records.get(normalize_doi(p.get('doi')),{})) for p in year_rows)
+      year_blocks.append('<section class="year-group"><div class="year-heading"><h3>'+esc(year)+'</h3><span>'+str(len(year_rows))+' record'+('' if len(year_rows)==1 else 's')+'</span></div><div class="collection-list">'+cards+'</div></section>')
+    sections.append('<section class="publication-type-section" id="publication-section-'+esc(key)+'"><div class="publication-section-heading"><div><span class="eyebrow">Publication type</span><h2>'+esc(label)+'</h2></div><strong>'+str(len(rows))+'</strong></div>'+''.join(year_blocks)+'</section>')
+  return nav+''.join(sections)
 
 def openalex_impact_actions(record):
   actions=[]
@@ -354,7 +394,7 @@ def citing_articles_html(openalex_record,history_record):
   )
 
 def publication_page(p, openalex_record=None, unpaywall_record=None, crossref_record=None, mendeley_record=None, history_record=None):
-  doi=p.get('doi',''); slug=slugify(doi); url=SITE_URL+'/publications/'+slug+'.html'
+  doi=p.get('doi',''); slug=publication_slug(p); url=SITE_URL+'/publications/'+slug+'.html'
   title=esc(p.get('title')); desc=esc(p.get('citation')); authors=publication_authors_html(p)
   history_record=history_record or {}
   graph_items=[PERSON,article_schema(p,url)]
@@ -387,7 +427,11 @@ def publication_page(p, openalex_record=None, unpaywall_record=None, crossref_re
     detail_sections.append('<section class="publication-detail-section"><h2>Keywords</h2><div class="publication-keywords">'+''.join('<span itemprop="keywords">'+esc(item)+'</span>' for item in keywords)+'</div></section>')
   details = ''.join(detail_sections)
   author_info=publication_affiliations_html(p,details=True)
-  actions = ['<a class="action" href="'+esc(p.get('doiUrl'))+'" target="_blank" rel="noopener">DOI ↗</a>']
+  actions = []
+  if p.get('doiUrl'):
+    actions.append('<a class="action" href="'+esc(p.get('doiUrl'))+'" target="_blank" rel="noopener">DOI ↗</a>')
+  if p.get('publicationUrl'):
+    actions.append('<a class="action" href="'+esc(p.get('publicationUrl'))+'" target="_blank" rel="noopener noreferrer">Publication record ↗</a>')
   if unpaywall_record.get('isOa') and unpaywall_record.get('urlForPdf'):
     actions.append('<a class="action oa-action" href="'+esc(unpaywall_record.get('urlForPdf'))+'" target="_blank" rel="noopener noreferrer">Open Access PDF ↗</a>')
   scholar_url = p.get('citedByUrl') or p.get('scholarProfileUrl')
@@ -397,7 +441,8 @@ def publication_page(p, openalex_record=None, unpaywall_record=None, crossref_re
   if openalex_record.get('status') == 'verified' and openalex_record.get('url'):
     oa_count = int(openalex_record.get('citationCount') or 0)
     actions.append('<a class="action" href="'+esc(openalex_record.get('url'))+'" target="_blank" rel="noopener noreferrer">'+f'{oa_count:,}'+' OpenAlex citation'+('' if oa_count == 1 else 's')+' ↗</a>')
-    actions.extend(openalex_impact_actions(openalex_record))
+    if p.get('analytics',{}).get('fwci') is True:
+      actions.extend(openalex_impact_actions(openalex_record))
   if crossref_record.get('status') == 'verified' and doi:
     cr_count = int(crossref_record.get('citationCount') or 0)
     crossref_url = 'https://search.crossref.org/search/works?q=' + quote(str(doi), safe='') + '&from_ui=yes'
@@ -410,7 +455,7 @@ def publication_page(p, openalex_record=None, unpaywall_record=None, crossref_re
   actions.append('<span class="share-wrap"><button class="action action-button share-trigger" type="button" aria-haspopup="menu" aria-expanded="false" data-share-title="'+title+'" data-share-text="'+title+'" data-share-url="'+esc(url)+'">Share</button><span class="share-menu" role="menu" hidden><button type="button" role="menuitem" data-copy-share-url="'+esc(url)+'">Copy link</button><a role="menuitem" href="'+esc(email_url)+'">Email</a><a role="menuitem" href="https://www.linkedin.com/sharing/share-offsite/?url='+quote(url, safe='')+'" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></span></span>')
   actions_html = '<div class="card-actions publication-detail-actions">'+''.join(actions)+'</div>'
   citation_sections=citation_history_html(p,openalex_record,history_record)+citing_articles_html(openalex_record,history_record)
-  return '''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>{title} | Wei-Hao Chiu</title><meta name="description" content="{desc}"/><link rel="canonical" href="{url}"/><meta property="og:type" content="article"/><meta property="og:title" content="{title}"/><meta property="og:description" content="{desc}"/><meta property="og:url" content="{url}"/><meta property="og:image" content="{site}/assets/images/og-profile.jpg"/><meta property="article:published_time" content="{date}"/><meta property="article:author" content="{site}/"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="{title}"/><meta name="twitter:description" content="{desc}"/><meta name="twitter:image" content="{site}/assets/images/og-profile.jpg"/>{ga}{citation}<script type="application/ld+json">{schema}</script><link href="../assets/css/styles.css" rel="stylesheet"/></head><body><header class="site-header"><div class="shell nav-shell"><a class="brand" href="../index.html"><span>Wei-Hao Chiu</span><small>Academic Profile</small></a><nav aria-label="Main navigation" class="site-nav"><a href="../about.html">About</a><a href="../research.html">Research</a><a href="../publications.html">Publications</a><a href="../patents.html">Patents</a><a href="../projects.html">Projects</a></nav></div></header><main class="content shell"><article class="collection-card publication-card publication-detail" itemscope itemtype="https://schema.org/ScholarlyArticle"><p class="kicker">Scholarly article</p><h1 itemprop="headline">{title}</h1><p class="authors publication-authors" itemprop="author">{authors}</p>{author_info}<p class="journal"><em>{journal}</em>{vol}{pages} ({year}).</p><p><strong>Research topic:</strong> {topic}</p>{details}{actions}{citation_sections}<a class="action publication-return" href="../publications.html#pub-{slug}">← Return to publications</a></article></main><footer class="site-footer"><div class="shell footer-grid"><div><strong>Wei-Hao Chiu, Ph.D.</strong><p>Associate Researcher<br/>Center for Sustainability and Energy Technologies<br/>Chang Gung University</p></div><div class="footer-links">{emails}</div></div></footer><script src="../assets/js/app.js"></script></body></html>'''.format(title=title,desc=desc,url=url,site=SITE_URL,date=esc(p.get('date')),ga=GA_TAG,citation=citation_meta(p),schema=json.dumps(graph,ensure_ascii=False,separators=(',',':')),authors=authors,author_info=author_info,journal=esc(p.get('journal')),vol=vol,pages=pages,year=esc(p.get('year')),topic=esc(p.get('topic')),details=details,actions=actions_html,citation_sections=citation_sections,slug=slug,emails=EMAIL_LINKS)
+  return '''<!DOCTYPE html><html lang="{language}"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>{title} | Wei-Hao Chiu</title><meta name="description" content="{desc}"/><link rel="canonical" href="{url}"/><meta property="og:type" content="article"/><meta property="og:title" content="{title}"/><meta property="og:description" content="{desc}"/><meta property="og:url" content="{url}"/><meta property="og:image" content="{site}/assets/images/og-profile.jpg"/><meta property="article:published_time" content="{date}"/><meta property="article:author" content="{site}/"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="{title}"/><meta name="twitter:description" content="{desc}"/><meta name="twitter:image" content="{site}/assets/images/og-profile.jpg"/>{ga}{citation}<script type="application/ld+json">{schema}</script><link href="../assets/css/styles.css" rel="stylesheet"/></head><body><header class="site-header"><div class="shell nav-shell"><a class="brand" href="../index.html"><span>Wei-Hao Chiu</span><small>Academic Profile</small></a><nav aria-label="Main navigation" class="site-nav"><a href="../about.html">About</a><a href="../research.html">Research</a><a href="../publications.html">Publications</a><a href="../patents.html">Patents</a><a href="../projects.html">Projects</a></nav></div></header><main class="content shell"><article class="collection-card publication-card publication-detail" itemscope itemtype="https://schema.org/ScholarlyArticle"><p class="kicker">{publication_type}</p><h1 itemprop="headline">{title}</h1><p class="authors publication-authors" itemprop="author">{authors}</p>{author_info}<p class="journal"><em>{journal}</em>{vol}{pages} ({year}).</p><p><strong>Research topic:</strong> {topic}</p>{details}{actions}{citation_sections}<a class="action publication-return" href="../publications.html#pub-{slug}">← Return to publications</a></article></main><footer class="site-footer"><div class="shell footer-grid"><div><strong>Wei-Hao Chiu, Ph.D.</strong><p>Associate Researcher<br/>Center for Sustainability and Energy Technologies<br/>Chang Gung University</p></div><div class="footer-links">{emails}</div></div></footer><script src="../assets/js/app.js"></script></body></html>'''.format(language=esc(p.get('language') or 'en'),publication_type=esc(publication_type_label(p)),title=title,desc=desc,url=url,site=SITE_URL,date=esc(p.get('date')),ga=GA_TAG,citation=citation_meta(p),schema=json.dumps(graph,ensure_ascii=False,separators=(',',':')),authors=authors,author_info=author_info,journal=esc(p.get('journal')),vol=vol,pages=pages,year=esc(p.get('year')),topic=esc(p.get('topic')),details=details,actions=actions_html,citation_sections=citation_sections,slug=slug,emails=EMAIL_LINKS)
 
 def main():
   global AUTHOR_MAP
@@ -432,9 +477,17 @@ def main():
   for path in ROOT.glob('*.html'):
     text=path.read_text(encoding='utf-8'); text=replace_person_schema(text); text=replace_emails(text); path.write_text(text,encoding='utf-8')
   pubpath=ROOT/'publications.html'; text=clean_publications_head(pubpath.read_text(encoding='utf-8'))
-  cards='\n'.join(static_card(p,openalex_records.get(str(p.get('doi') or '').strip().lower(),{})) for p in pubs)
-  text=re.sub(r'<div id="collectionContainer">.*?</div>', '<div id="collectionContainer" data-static-publications="'+str(len(pubs))+'">\n'+cards+'\n</div>', text, count=1, flags=re.S)
-  graph={'@context':'https://schema.org','@graph':[PERSON]+[article_schema(p,SITE_URL+'/publications/'+slugify(p.get('doi',''))+'.html') for p in pubs]}
+  text=text.replace('Peer-reviewed journal publications of Wei-Hao Chiu with research-theme filtering, legal open-access links and per-publication sharing.','International and Chinese journal publications, conference publications and other scholarly outputs of Wei-Hao Chiu, with clearly separated core bibliometric scope.')
+  if 'id="publicationTypeFilter"' not in text:
+    text=text.replace('<div class="select-field"><span>Sort</span><select id="sortFilter">','<div class="select-field"><span>Type</span><select aria-label="Filter by publication type" id="publicationTypeFilter"></select></div><div class="select-field"><span>Sort</span><select id="sortFilter">',1)
+  static_content='<!-- SEO_STATIC_PUBLICATIONS_START -->\n'+static_publication_sections(pubs,openalex_records)+'\n<!-- SEO_STATIC_PUBLICATIONS_END -->'
+  marker_pattern=r'<!-- SEO_STATIC_PUBLICATIONS_START -->.*?<!-- SEO_STATIC_PUBLICATIONS_END -->'
+  if re.search(marker_pattern,text,flags=re.S):
+    text=re.sub(marker_pattern,static_content,text,count=1,flags=re.S)
+  else:
+    text=re.sub(r'(<div id="collectionContainer"[^>]*>).*?(</div>)',r'\1\n'+static_content+r'\n\2',text,count=1,flags=re.S)
+  text=re.sub(r'(<div id="collectionContainer")[^>]*>',r'\1 data-static-publications="'+str(len(pubs))+'">',text,count=1)
+  graph={'@context':'https://schema.org','@graph':[PERSON]+[article_schema(p,SITE_URL+'/publications/'+publication_slug(p)+'.html') for p in pubs]}
   schema='<script type="application/ld+json" id="publications-schema">'+json.dumps(graph,ensure_ascii=False,separators=(',',':'))+'</script>'
   text=re.sub(r'<script type="application/ld\+json" id="publications-schema">.*?</script>','',text,flags=re.S)
   text=re.sub(r'\s*</head>', '\n</head>', text, count=1)
@@ -444,25 +497,33 @@ def main():
   pdir=ROOT/'publications'; pdir.mkdir(exist_ok=True)
   for f in pdir.glob('*.html'): f.unlink()
   for p in pubs:
-    record=openalex_records.get(str(p.get('doi') or '').strip().lower(),{})
-    oa_record=unpaywall_records.get(str(p.get('doi') or '').strip().lower(),{})
-    cr_record=crossref_records.get(str(p.get('doi') or '').strip().lower(),{})
-    md_record=mendeley_records.get(str(p.get('doi') or '').strip().lower(),{})
+    key=normalize_doi(p.get('doi'))
+    record=openalex_records.get(key,{})
+    oa_record=unpaywall_records.get(key,{})
+    cr_record=crossref_records.get(key,{})
+    md_record=mendeley_records.get(key,{})
     history_record=openalex_history_records.get(normalize_doi(p.get('doi')),{})
     if history_record and not history_record.get('lastSuccessfulUpdate'):
       history_record={**history_record,'lastSuccessfulUpdate':openalex_history_payload.get('lastSuccessfulUpdate')}
-    (pdir/(slugify(p.get('doi',''))+'.html')).write_text(publication_page(p,record,oa_record,cr_record,md_record,history_record),encoding='utf-8')
+    (pdir/(publication_slug(p)+'.html')).write_text(publication_page(p,record,oa_record,cr_record,md_record,history_record),encoding='utf-8')
   app=ROOT/'assets/js/app.js'; js=app.read_text(encoding='utf-8')
   js=re.sub(r'function publicationShareUrl\(anchor\)\{.*?\n\}', "function publicationShareUrl(anchor){\n  const slug=String(anchor||'').replace(/^pub-/,'');\n  return new URL(`publications/${slug}.html`,window.location.href).toString();\n}", js, count=1, flags=re.S)
   app.write_text(js,encoding='utf-8')
   (ROOT/'robots.txt').write_text(robots_text(),encoding='utf-8')
-  urls=['','about.html','research.html','publications.html','patents.html','projects.html','llms.txt']+['publications/'+slugify(p.get('doi',''))+'.html' for p in pubs]
+  urls=['','about.html','research.html','publications.html','patents.html','projects.html','llms.txt']+['publications/'+publication_slug(p)+'.html' for p in pubs]
   rows='\n'.join('  <url><loc>'+SITE_URL+'/'+esc(u)+'</loc><lastmod>'+TODAY+'</lastmod></url>' for u in urls)
   (ROOT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+rows+'\n</urlset>\n',encoding='utf-8')
   lines=['# Wei-Hao Chiu Academic Website','', '> Official academic website of Wei-Hao Chiu, Ph.D., Associate Researcher at Chang Gung University.','','## Main Pages','',f'- [Home]({SITE_URL}/)',f'- [About]({SITE_URL}/about.html)',f'- [Research]({SITE_URL}/research.html)',f'- [Publications]({SITE_URL}/publications.html)',f'- [Patents]({SITE_URL}/patents.html)',f'- [Projects]({SITE_URL}/projects.html)','','## Contact','','- Personal email: weihao.chiu@gmail.com','- Chang Gung University email: d000019005@cgu.edu.tw','','## Research Expertise','']
-  lines += ['- '+x for x in PERSON['knowsAbout']]; lines += ['','## Publications','']
-  for p in pubs: lines.append(f"- [{p.get('title')}]({SITE_URL}/publications/{slugify(p.get('doi',''))}.html) — {p.get('journal')}, {p.get('year')}; DOI: {p.get('doi')}")
+  lines += ['- '+x for x in PERSON['knowsAbout']]; lines += ['','## Scholarly Outputs','']
+  for key,label in [('international-journal','International Journal Publications'),('chinese-journal','Chinese Journal Publications'),('conference','Conference Publications'),('other','Other Scholarly Outputs'),('unclassified','Unclassified Outputs')]:
+    rows=[p for p in pubs if publication_type(p)==key]
+    if not rows: continue
+    lines += ['',f'### {label}','']
+    for p in rows:
+      doi_note=f"; DOI: {p.get('doi')}" if p.get('doi') else ''
+      lines.append(f"- [{p.get('title')}]({SITE_URL}/publications/{publication_slug(p)}.html) — {p.get('journal')}, {p.get('year')}{doi_note}")
   (ROOT/'llms.txt').write_text('\n'.join(lines)+'\n',encoding='utf-8')
-  mp=ROOT/'data/site_meta.json'; meta=json.loads(mp.read_text(encoding='utf-8')); meta.update({'version':'v24','lastUpdated':TODAY,'notes':f'V24 provides {len(pubs)} static crawler-readable ScholarlyArticle records with OpenAlex citations by year and DOI-linked citing-article lists, while retaining Google Scholar totals and article-specific scholarly metadata.'}); mp.write_text(json.dumps(meta,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+  core_count=sum(p.get('analytics',{}).get('coreJournalCount') is True for p in pubs)
+  mp=ROOT/'data/site_meta.json'; meta=json.loads(mp.read_text(encoding='utf-8')); meta.update({'version':'v25','lastUpdated':TODAY,'coreJournalPublications':core_count,'scholarlyOutputs':len(pubs),'notes':f'V25 separates {len(pubs)} scholarly outputs by publication type while retaining {core_count} core international journal publications as the scope for JCR, journal IF and FWCI analytics.'}); mp.write_text(json.dumps(meta,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 
 if __name__=='__main__': main()

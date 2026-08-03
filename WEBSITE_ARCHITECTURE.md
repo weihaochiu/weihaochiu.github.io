@@ -312,8 +312,8 @@ flowchart TD
 
 ### `assets/`
 
-- CSS：`assets/css/styles.css`、`assets/css/research.css`、`assets/css/openalex-metrics.css`
-- JavaScript：`assets/js/app.js`、`assets/js/research.js`、`assets/js/openalex-metrics.js`、`assets/js/openalex-publications.js`
+- CSS：`assets/css/styles.css`、`assets/css/research.css`、`assets/css/openalex-metrics.css`、`assets/css/academic-monitor.css`
+- JavaScript：`assets/js/app.js`、`assets/js/research.js`、`assets/js/openalex-metrics.js`、`assets/js/openalex-publications.js`、`assets/js/academic-monitor.js`
 - Data：`assets/data/ga-summary.json`
 - Images：`assets/images/profile.webp`、`assets/images/profile.jpg`、`assets/images/og-profile.jpg`、`assets/images/apple-touch-icon.png`、`assets/images/favicon.svg`
 
@@ -323,15 +323,27 @@ flowchart TD
 
 ### `scripts/`
 
-`build_seo.py`、`export_ga4_summary.py`、`requirements.txt`、`test_mendeley_api.py`、`update_crossref_publications.py`、`update_google_scholar_citation_history.py`、`update_journals.py`、`update_mendeley.py`、`update_openalex_citation_history.py`、`update_openalex_publications.py`、`update_openalex_stats.py`、`update_scholar.py`、`update_unpaywall.py`，以及非必要 cache `__pycache__/update_openalex_publications.cpython-313.pyc`。
+`build_seo.py`、`validate_publications.py`、`export_ga4_summary.py`、`requirements.txt`、`test_mendeley_api.py`、`update_crossref_publications.py`、`update_google_scholar_citation_history.py`、`update_journals.py`、`update_mendeley.py`、`update_openalex_citation_history.py`、`update_openalex_publications.py`、`update_openalex_stats.py`、`update_scholar.py`、`update_unpaywall.py`，以及非必要 cache `__pycache__/update_openalex_publications.cpython-313.pyc`。
 
 ### `publications/`
 
-目前 37 個 DOI 個別頁：
+目前 38 個學術成果個別頁（37 篇核心國際期刊論文＋1 篇中文期刊論文）：
+
+新增中文期刊頁：`10-29803-ce-202108-68-4-0006.html`。
 
 `10-1002-adfm-202306367.html`、`10-1002-advs-202410666.html`、`10-1002-asia-202300681.html`、`10-1002-asia-202500719.html`、`10-1002-asia-70245.html`、`10-1002-solr-202300988.html`、`10-1002-solr-202500538.html`、`10-1016-j-cej-2021-131609.html`、`10-1016-j-cej-2022-139926.html`、`10-1016-j-cej-2024-153974.html`、`10-1016-j-cej-2026-177494.html`、`10-1016-j-electacta-2010-07-061.html`、`10-1016-j-jece-2023-111741.html`、`10-1016-j-jpowsour-2010-12-063.html`、`10-1016-j-jpowsour-2011-06-049.html`、`10-1016-j-jpowsour-2012-05-079.html`、`10-1016-j-jpowsour-2012-12-094.html`、`10-1016-j-jpowsour-2023-233496.html`、`10-1016-j-jpowsour-2025-239216.html`、`10-1016-j-mtchem-2024-102329.html`、`10-1016-j-mtener-2026-102359.html`、`10-1016-j-optcom-2004-10-003.html`、`10-1016-j-orgel-2023-106847.html`、`10-1016-j-seppur-2025-134157.html`、`10-1016-j-solener-2026-114430.html`、`10-1016-j-solmat-2009-07-017.html`、`10-1016-j-solmat-2025-114015.html`、`10-1016-j-tsf-2009-11-058.html`、`10-1021-jp805239k.html`、`10-1039-b902595m.html`、`10-1039-c0jm04099a.html`、`10-1039-d3cc04699k.html`、`10-3390-nano11061607.html`、`10-3390-nano11082125.html`、`10-3390-nano12152651.html`、`10-3390-polym13234246.html`、`10-3390-polym14081580.html`。
 
-這些頁面原則上全部由 `scripts/build_seo.py` 管理。新增論文時，應由 DOI 產生一致 slug，重新 build，並確認舊頁沒有殘留、重複或漏列。
+這些頁面原則上全部由 `scripts/build_seo.py` 管理。新增成果時優先以穩定 `id` 產生 slug（有 DOI 時 `id` 通常為正規化 DOI），重新 build，並確認舊頁沒有殘留、重複或漏列。
+
+### 學術成果類型與統計範圍（2026-08-03）
+
+- `data/publications.json` 統一保存國際期刊、中文期刊、會議論文、其他及待分類成果。
+- `data/publication_taxonomy.json` 的 `publicationTypes` 定義顯示順序、標籤、預設 analytics 範圍與內容完整度要求。
+- `assets/js/app.js` 依 `publicationType` 產生前台 section；搜尋、年份、研究主題與類型篩選可交叉使用。
+- `publication-insights-4d8c7a.html` 先建立 all outputs、core publications 與 journal-metric publications 三個集合，再供各圖表使用。
+- `scripts/check_publications.py` 從 Crossref／ORCID type、語言與中日韓文字判定建議類型；資料不足必須回傳 `unclassified`，不可猜測。
+- `assets/js/academic-monitor.js` 將人工選定的 `selectedPublicationType` 寫入複製結果，與系統建議及是否人工變更一併保存。
+- `scripts/validate_publications.py` 驗證唯一 ID、允許的類型、document type 與 analytics 布林值，並阻止非核心成果進入 JCR／IF／FWCI 範圍。
 
 ## 15. 本文件的維護規則
 

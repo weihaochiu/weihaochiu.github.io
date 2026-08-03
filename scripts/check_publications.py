@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import os
+import re
 import urllib.parse
 from typing import Any
 
@@ -17,6 +18,74 @@ from academic_monitor_common import (
 )
 
 ORCID_ID = os.getenv("ORCID_ID", "0000-0003-4484-3117")
+
+CONFERENCE_TYPES = {
+    "conference-paper",
+    "conference-poster",
+    "conference-abstract",
+    "conference-output",
+    "proceedings-article",
+    "proceedings",
+}
+OTHER_TYPES = {
+    "book-chapter",
+    "book",
+    "edited-book",
+    "dissertation",
+    "preprint",
+    "posted-content",
+    "working-paper",
+    "editorial",
+}
+
+def contains_cjk(value: Any) -> bool:
+    return bool(re.search(r"[\u3400-\u4dbf\u4e00-\u9fff]", str(value or "")))
+
+def classify_publication(
+    *,
+    title: str,
+    journal: str,
+    crossref_type: str = "",
+    orcid_type: str = "",
+    language: str = "",
+) -> dict[str, str]:
+    """Return an explainable suggested publication type for manual review."""
+    source_type = str(crossref_type or orcid_type or "").strip().lower()
+    language_value = str(language or "").strip().lower()
+    has_chinese = contains_cjk(title) or contains_cjk(journal) or language_value.startswith("zh")
+
+    if source_type in CONFERENCE_TYPES or "proceeding" in source_type or "conference" in source_type:
+        suggested = "conference"
+        confidence = "high"
+        reason = f"Source document type: {source_type}."
+    elif source_type in {"journal-article", "journal article"}:
+        suggested = "chinese-journal" if has_chinese else "international-journal"
+        confidence = "high" if crossref_type else "medium"
+        reason = (
+            "Journal article with Chinese title, source, or language metadata."
+            if has_chinese
+            else "Journal article with non-Chinese title and source metadata."
+        )
+    elif source_type in OTHER_TYPES:
+        suggested = "other"
+        confidence = "high"
+        reason = f"Source document type: {source_type}."
+    elif has_chinese and journal:
+        suggested = "chinese-journal"
+        confidence = "medium"
+        reason = "Chinese title or source and a journal title are present; source type is incomplete."
+    else:
+        suggested = "unclassified"
+        confidence = "low"
+        reason = "Source metadata is insufficient or ambiguous; manual classification is required."
+
+    return {
+        "sourceDocumentType": source_type,
+        "language": language_value or ("zh-TW" if has_chinese else ""),
+        "suggestedPublicationType": suggested,
+        "publicationTypeConfidence": confidence,
+        "publicationTypeReason": reason,
+    }
 
 def crossref_record(doi: str) -> dict[str, Any]:
     encoded = urllib.parse.quote(doi, safe="")
@@ -63,6 +132,7 @@ def run() -> dict:
             nested_title = title_node.get("title") or {}
             orcid_title = nested_title.get("value") or ""
             journal_node = summary.get("journal-title") or {}
+            orcid_type = str(summary.get("type") or "").strip().lower()
             key = doi or normalize_title(orcid_title)
             if not key or key in seen:
                 continue
@@ -94,6 +164,8 @@ def run() -> dict:
                 "pages": "",
                 "abstract": "",
                 "keywords": [],
+                "sourceDocumentType": orcid_type,
+                "language": "zh-TW" if contains_cjk(orcid_title) or contains_cjk(journal_node.get("value")) else "",
             }
 
             if doi:
@@ -114,6 +186,8 @@ def run() -> dict:
                         "issue": str(message.get("issue") or ""),
                         "pages": str(message.get("page") or message.get("article-number") or ""),
                         "abstract": str(message.get("abstract") or ""),
+                        "sourceDocumentType": str(message.get("type") or orcid_type),
+                        "language": str(message.get("language") or item.get("language") or ""),
                     })
                     item["sources"].append({
                         "name": "OpenAlex search",
@@ -124,6 +198,13 @@ def run() -> dict:
                     item["detectionNotes"].append(
                         f"Crossref enrichment failed: {safe_error(error)}"
                     )
+            item.update(classify_publication(
+                title=str(item.get("title") or ""),
+                journal=str(item.get("journal") or ""),
+                crossref_type=str(item.get("sourceDocumentType") or "") if doi else "",
+                orcid_type=orcid_type,
+                language=str(item.get("language") or ""),
+            ))
             candidates.append(item)
 
         sources.append(source_result("ORCID", orcid_url, "success", count=len(candidates)))

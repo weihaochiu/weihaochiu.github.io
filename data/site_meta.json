@@ -1,5 +1,7 @@
 {
-  "version": "v24",
+  "version": "v25",
   "lastUpdated": "2026-08-03",
-  "notes": "V24 provides 37 static crawler-readable ScholarlyArticle records with OpenAlex citations by year and DOI-linked citing-article lists, while retaining Google Scholar totals and article-specific scholarly metadata."
+  "notes": "V25 separates 38 scholarly outputs by publication type while retaining 37 core international journal publications as the scope for JCR, journal IF and FWCI analytics.",
+  "coreJournalPublications": 37,
+  "scholarlyOutputs": 38
 }

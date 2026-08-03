@@ -175,6 +175,12 @@ async function initOutputCounts(){
   ]);
   rows.forEach((records,index)=>{
     if(!Array.isArray(records))return;
+    if(names[index]==='publications'){
+      const core=records.filter(record=>record.analytics?.coreJournalCount===true).length;
+      $$('[data-output-count="publications"]').forEach(element=>{element.textContent=core.toLocaleString()});
+      $$('[data-output-count="scholarly-outputs"]').forEach(element=>{element.textContent=records.length.toLocaleString()});
+      return;
+    }
     $$(`[data-output-count="${names[index]}"]`).forEach(element=>{
       element.textContent=records.length.toLocaleString();
     });
@@ -189,11 +195,21 @@ const FALLBACK_CATEGORY_LABELS={
   Other:'Other Research'
 };
 
-function publicationKey(p){return String(p.doi||'').trim().toLowerCase()}
+const FALLBACK_PUBLICATION_TYPES=[
+  {value:'international-journal',label:'International Journal Publications',shortLabel:'International journal',order:1},
+  {value:'chinese-journal',label:'Chinese Journal Publications',shortLabel:'Chinese journal',order:2},
+  {value:'conference',label:'Conference Publications',shortLabel:'Conference',order:3},
+  {value:'other',label:'Other Scholarly Outputs',shortLabel:'Other',order:4},
+  {value:'unclassified',label:'Unclassified Outputs',shortLabel:'Unclassified',order:5}
+];
+
+function publicationKey(p){return String(p.doi||p.id||'').trim().toLowerCase()}
+function publicationSlug(p){
+  const source=String(p.id||p.doi||p.title||'publication').trim().toLowerCase();
+  return source.replace(/^https?:\/\/(dx\.)?doi\.org\//,'').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'')||'publication';
+}
 function publicationAnchor(p){
-  const source=publicationKey(p)||String(p.title||'publication').toLowerCase();
-  const slug=source.replace(/^https?:\/\/(dx\.)?doi\.org\//,'').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
-  return `pub-${slug||'record'}`;
+  return `pub-${publicationSlug(p)}`;
 }
 function normalizeExternalUrl(value){
   const url=String(value||'').trim();
@@ -221,13 +237,22 @@ function enrichPublications(rows,taxonomy={},mendeley={},unpaywall={},crossref={
   const crossrefMap=crossref.records||{};
   const openalexMap=openalex.records||{};
   const labels={...FALLBACK_CATEGORY_LABELS,...(taxonomy.categoryLabels||{})};
+  const publicationTypes=Array.isArray(taxonomy.publicationTypes)&&taxonomy.publicationTypes.length?taxonomy.publicationTypes:FALLBACK_PUBLICATION_TYPES;
+  const typeMap=new Map(publicationTypes.map(type=>[type.value,type]));
   return rows.map(p=>{
     const key=publicationKey(p);
     const entry=map[key]||{};
     const category=entry.category||inferPublicationCategory(p);
     const subtopics=Array.isArray(entry.subtopics)?[...new Set(entry.subtopics)]:[];
-    return {...p,category,categoryLabel:labels[category]||category,subtopics,mendeley:metricMap[key]||null,openAccess:oaMap[key]||null,crossref:crossrefMap[key]||null,openalex:openalexMap[key]||null};
+    const publicationType=p.publicationType||'international-journal';
+    const typeInfo=typeMap.get(publicationType)||typeMap.get('unclassified')||FALLBACK_PUBLICATION_TYPES.at(-1);
+    return {...p,publicationType,publicationTypeLabel:typeInfo.label,publicationTypeShortLabel:typeInfo.shortLabel,publicationTypeOrder:typeInfo.order,category,categoryLabel:labels[category]||category,subtopics,mendeley:metricMap[key]||null,openAccess:oaMap[key]||null,crossref:crossrefMap[key]||null,openalex:openalexMap[key]||null};
   });
+}
+function fillPublicationTypeSelect(el,taxonomy={}){
+  if(!el)return;
+  const types=Array.isArray(taxonomy.publicationTypes)&&taxonomy.publicationTypes.length?taxonomy.publicationTypes:FALLBACK_PUBLICATION_TYPES;
+  el.innerHTML=['<option value="">All publication types</option>',...types.filter(type=>type.value!=='unclassified').sort((a,b)=>(a.order||99)-(b.order||99)).map(type=>`<option value="${esc(type.value)}">${esc(type.shortLabel||type.label)}</option>`)].join('');
 }
 function fillPublicationThemeSelect(el,taxonomy={}){
   if(!el)return;
@@ -308,7 +333,7 @@ function publicationCard(p){
   const openalexAction=openalex.status==='verified'&&Number.isFinite(openalexCount)&&openalexCount>=0&&openalexUrl
     ?`<a class="action" href="${esc(openalexUrl)}" target="_blank" rel="noopener noreferrer">${openalexCount.toLocaleString()} OpenAlex citation${openalexCount===1?'':'s'} ↗</a>`
     :'';
-  const openalexImpact=openalex.status==='verified'?openAlexImpactMetrics(openalex):'';
+  const openalexImpact=p.analytics?.fwci===true&&openalex.status==='verified'?openAlexImpactMetrics(openalex):'';
   const crossref=p.crossref||{};
   const crossrefCount=Number(crossref.citationCount);
   const crossrefUrl=p.doi?`https://search.crossref.org/search/works?q=${encodeURIComponent(p.doi)}&from_ui=yes`:'';
@@ -329,18 +354,19 @@ function publicationCard(p){
     :oa.isOa&&versionUrl
       ?`<a class="action oa-action" href="${esc(versionUrl)}" target="_blank" rel="noopener noreferrer" title="Legal open-access version identified by Unpaywall">${OPEN_ACCESS_ICON}<span>Open Access Version ↗</span></a>`
       :'';
-  const labels=[p.categoryLabel,...(p.subtopics||[])].filter(Boolean);
+  const labels=[p.publicationTypeShortLabel,p.categoryLabel,...(p.subtopics||[])].filter(Boolean);
   const anchor=publicationAnchor(p);
   const shareUrl=publicationShareUrl(anchor);
-  const detailAction=`<a class="action publication-detail-link" href="${esc(shareUrl)}">Abstract, Highlights, GA &amp; Keywords →</a>`;
-  const shareText=`${p.title}\n${p.journal||''}${p.year?`, ${p.year}`:''}\nDOI: ${p.doi||''}`;
+  const detailAction=`<a class="action publication-detail-link" href="${esc(shareUrl)}">Publication details →</a>`;
+  const shareText=`${p.title}\n${p.journal||''}${p.year?`, ${p.year}`:''}${p.doi?`\nDOI: ${p.doi}`:''}`;
   const emailUrl=`mailto:?subject=${encodeURIComponent(p.title||'Publication')}&body=${encodeURIComponent(`${shareText}\n\n${shareUrl}`)}`;
   const linkedinUrl=`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`;
   const xUrl=`https://twitter.com/intent/tweet?text=${encodeURIComponent(`${p.title}${p.doi?` | DOI: ${p.doi}`:''}`)}&url=${encodeURIComponent(shareUrl)}`;
   const facebookUrl=`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
   const shareMenuId=`share-menu-${anchor}`;
   const share=`<span class="share-wrap"><button class="action action-button share-trigger" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="${esc(shareMenuId)}" data-share-title="${esc(p.title)}" data-share-text="${esc(shareText)}" data-share-url="${esc(shareUrl)}">${SHARE_ICON}<span>Share</span></button><span class="share-menu" id="${esc(shareMenuId)}" role="menu" hidden><button type="button" role="menuitem" data-copy-share-url="${esc(shareUrl)}">Copy link</button><a role="menuitem" href="${esc(emailUrl)}">Email</a><a role="menuitem" href="${esc(linkedinUrl)}" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a role="menuitem" href="${esc(xUrl)}" target="_blank" rel="noopener noreferrer">X (Twitter) ↗</a><a role="menuitem" href="${esc(facebookUrl)}" target="_blank" rel="noopener noreferrer">Facebook ↗</a></span></span>`;
-  return `<article class="collection-card publication-card" id="${esc(anchor)}"><div class="card-heading"><h4><a href="${esc(shareUrl)}">${esc(p.title)}</a></h4><span class="date-badge">${esc(p.date)}</span></div><p class="authors">${authors}</p><p class="journal"><em>${esc(p.journal)}</em>${p.volume?`, ${esc(p.volume)}`:''}${p.pages?`, ${esc(p.pages)}`:''} (${p.year}).</p><div class="card-labels">${labels.map(label=>`<span class="card-label">${esc(label)}</span>`).join('')}</div><div class="card-actions">${detailAction}<a class="action" href="${esc(p.doiUrl)}" target="_blank" rel="noopener">DOI ↗</a>${oaAction}${cited}${openalexAction}${openalexImpact}${crossrefAction}${readers}${share}</div></article>`;
+  const doiAction=p.doiUrl?`<a class="action" href="${esc(p.doiUrl)}" target="_blank" rel="noopener">DOI ↗</a>`:'';
+  return `<article class="collection-card publication-card" id="${esc(anchor)}"><div class="card-heading"><h4><a href="${esc(shareUrl)}">${esc(p.title)}</a></h4><span class="date-badge">${esc(p.date)}</span></div><p class="authors">${authors}</p><p class="journal"><em>${esc(p.journal)}</em>${p.volume?`, ${esc(p.volume)}`:''}${p.issue?`(${esc(p.issue)})`:''}${p.pages?`, ${esc(p.pages)}`:''} (${p.year}).</p><div class="card-labels">${labels.map((label,index)=>`<span class="card-label${index===0?' publication-type-label':''}">${esc(label)}</span>`).join('')}</div><div class="card-actions">${detailAction}${doiAction}${oaAction}${cited}${openalexAction}${openalexImpact}${crossrefAction}${readers}${share}</div></article>`;
 }
 function patentSlug(p){return String(p.canonicalId||p.number||'patent').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')}
 function enrichPatents(rows,metadata={},families=[]){
@@ -530,14 +556,15 @@ function renderPublicationStackedChart(el,rows,onSelection,taxonomy={}){
 async function combinedChart(){
   const el=$('#combinedYearChart');if(!el)return;
   const [p,pa,pr,a]=await Promise.all(['publications','patents','projects','awards'].map(loadData));
-  const all=[{key:'publications',label:'Publications',values:counts(p)},{key:'patents',label:'Patents',values:counts(pa)},{key:'projects',label:'Projects',values:counts(pr)},{key:'awards',label:'Awards',values:counts(a)}];
+  const corePublications=p.filter(record=>record.analytics?.coreJournalCount===true);
+  const all=[{key:'publications',label:'Core journal publications',values:counts(corePublications)},{key:'patents',label:'Patents',values:counts(pa)},{key:'projects',label:'Projects',values:counts(pr)},{key:'awards',label:'Awards',values:counts(a)}];
   const legend=$('#combinedChartLegend'),caption=$('#combinedChartCaption');
   function draw(mode){
     const selected=mode==='all'?all:[all[0]];
     renderBarChart(el,selected);
-    el.setAttribute('aria-label',mode==='all'?'Publications, patents, projects and awards by year':'Publications by year');
+    el.setAttribute('aria-label',mode==='all'?'Core journal publications, patents, projects and awards by year':'Core journal publications by year');
     legend.innerHTML=selected.map(s=>`<span class="legend-${s.key}">${s.label}</span>`).join('');
-    caption.textContent=mode==='all'?'Grouped annual counts for publications, patents, projects and awards.':'Publication counts by year. Switch to “All outputs” to compare publications, patents, projects and awards.';
+    caption.textContent=mode==='all'?'Grouped annual counts for core journal publications, patents, projects and awards.':'Core journal publication counts by year. Switch to “All outputs” to compare publications, patents, projects and awards.';
     $$('[data-chart-mode]').forEach(b=>{const active=b.dataset.chartMode===mode;b.classList.toggle('is-active',active);b.setAttribute('aria-pressed',active)});
   }
   $$('[data-chart-mode]').forEach(b=>b.addEventListener('click',()=>draw(b.dataset.chartMode)));
@@ -547,7 +574,7 @@ async function combinedChart(){
 async function researchCharts(){
   if(!$('#yearChart'))return;
   const [raw,taxonomy]=await Promise.all([loadData('publications'),loadData('publication_taxonomy').catch(()=>({}))]);
-  const p=enrichPublications(raw,taxonomy);
+  const p=enrichPublications(raw,taxonomy).filter(record=>record.analytics?.coreJournalCount===true);
   singleChart($('#yearChart'),p);
   const t=p.reduce((a,x)=>(a[x.categoryLabel]=(a[x.categoryLabel]||0)+1,a),{}),max=Math.max(...Object.values(t),1);
   $('#topicList').innerHTML=Object.entries(t).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0])).map(([n,v])=>`<div class="topic-row"><span>${esc(n)}</span><span class="topic-track"><span class="topic-fill" style="display:block;width:${v/max*100}%"></span></span><strong>${v}</strong></div>`).join('');
@@ -573,13 +600,14 @@ async function initCollection(){
     $('#patentGrantedTotal')?.replaceChildren(document.createTextNode(String(granted)));
     $('#patentApplicationTotal')?.replaceChildren(document.createTextNode(String(applications)));
   }
-  const search=$('#searchInput'),year=$('#yearFilter'),topic=$('#topicFilter'),sort=$('#sortFilter'),count=$('#resultCount'),countUnit=$('#resultUnit'),container=$('#collectionContainer'),empty=$('#emptyState');
+  const search=$('#searchInput'),year=$('#yearFilter'),topic=$('#topicFilter'),publicationType=$('#publicationTypeFilter'),sort=$('#sortFilter'),count=$('#resultCount'),countUnit=$('#resultUnit'),container=$('#collectionContainer'),empty=$('#emptyState');
   const jurisdiction=$('#jurisdictionFilter'),stage=$('#statusFilter'),assignee=$('#assigneeFilter'),view=$('#patentViewFilter');
   fillSelect(year,rows.map(yearOf),'All years','numeric-desc');
   if(topic){
     if(name==='publications')fillPublicationThemeSelect(topic,taxonomy);
     else fillSelect(topic,rows.map(x=>x.topic).filter(Boolean),'All themes','alpha');
   }
+  if(name==='publications')fillPublicationTypeSelect(publicationType,taxonomy);
   if(name==='patents'){
     fillSelect(jurisdiction,rows.map(x=>x.jurisdiction),'All jurisdictions','alpha');
     fillSelect(stage,rows.map(x=>x.documentStage||x.status),'All stages','alpha');
@@ -592,7 +620,7 @@ async function initCollection(){
     render();
     $('.filter-bar')?.scrollIntoView({behavior:'smooth',block:'center'});
   }
-  if(name==='publications')renderPublicationStackedChart($('#collectionYearChart'),rows,applyChartSelection,taxonomy);
+  if(name==='publications')renderPublicationStackedChart($('#collectionYearChart'),rows.filter(record=>record.analytics?.coreJournalCount===true),applyChartSelection,taxonomy);
   else singleChart($('#collectionYearChart'),rows,y=>applyChartSelection(y,''));
   function render(){
     const q=(search?.value||'').trim().toLowerCase();
@@ -600,10 +628,11 @@ async function initCollection(){
       const searchMatch=!q||JSON.stringify(x).toLowerCase().includes(q);
       const yearMatch=!year?.value||String(yearOf(x))===year.value;
       const topicMatch=!topic||!topic.value||(name==='publications'?publicationMatchesTheme(x,topic.value):x.topic===topic.value);
+      const publicationTypeMatch=!publicationType?.value||x.publicationType===publicationType.value;
       const jurisdictionMatch=!jurisdiction?.value||x.jurisdiction===jurisdiction.value;
       const stageMatch=!stage?.value||(x.documentStage||x.status)===stage.value;
       const assigneeMatch=!assignee?.value||(x.assigneeEn||x.assigneeZh)===assignee.value;
-      return searchMatch&&yearMatch&&topicMatch&&jurisdictionMatch&&stageMatch&&assigneeMatch;
+      return searchMatch&&yearMatch&&topicMatch&&publicationTypeMatch&&jurisdictionMatch&&stageMatch&&assigneeMatch;
     });
     const mode=sort?.value||'date-desc';
     list.sort((a,b)=>mode==='date-asc'?String(a.sortDate||a.date).localeCompare(String(b.sortDate||b.date)):mode==='title-asc'?String(a.title||a.titleEn).localeCompare(String(b.title||b.titleEn)):mode==='citations-desc'?Number(b.citationCount||0)-Number(a.citationCount||0):String(b.sortDate||b.date).localeCompare(String(a.sortDate||a.date)));
@@ -633,12 +662,28 @@ async function initCollection(){
     }
     if(count)count.textContent=list.length;
     if(countUnit)countUnit.textContent=name==='patents'?'documents shown':'shown';
+    if(name==='publications'){
+      const configuredTypes=Array.isArray(taxonomy.publicationTypes)&&taxonomy.publicationTypes.length?taxonomy.publicationTypes:FALLBACK_PUBLICATION_TYPES;
+      const visibleTypes=configuredTypes
+        .filter(type=>list.some(record=>record.publicationType===type.value))
+        .sort((a,b)=>(a.order||99)-(b.order||99));
+      const navigation=visibleTypes.length>1?`<nav class="publication-section-nav" aria-label="Publication sections">${visibleTypes.map(type=>{const total=list.filter(record=>record.publicationType===type.value).length;return `<a href="#publication-section-${esc(type.value)}">${esc(type.shortLabel||type.label)} <span>${total}</span></a>`}).join('')}</nav>`:'';
+      const sections=visibleTypes.map(type=>{
+        const typed=list.filter(record=>record.publicationType===type.value);
+        const groups=typed.reduce((output,record)=>((output[yearOf(record)]??=[]).push(record),output),{});
+        const years=Object.keys(groups).sort((a,b)=>mode==='date-asc'?a-b:b-a);
+        return `<section class="publication-type-section" id="publication-section-${esc(type.value)}"><div class="publication-section-heading"><div><span class="eyebrow">Publication type</span><h2>${esc(type.label)}</h2></div><strong>${typed.length}</strong></div>${years.map(value=>`<section class="year-group"><div class="year-heading"><h3>${value}</h3><span>${groups[value].length} record${groups[value].length===1?'':'s'}</span></div><div class="collection-list">${groups[value].map(card).join('')}</div></section>`).join('')}</section>`;
+      }).join('');
+      container.innerHTML=navigation+sections;
+      requestAnimationFrame(focusHashPublication);
+      return;
+    }
     const g=list.reduce((o,x)=>((o[yearOf(x)]??=[]).push(x),o),{});
     container.innerHTML=Object.keys(g).sort((a,b)=>mode==='date-asc'?a-b:b-a).map(y=>`<section class="year-group"><div class="year-heading"><h3>${y}</h3><span>${g[y].length} record${g[y].length===1?'':'s'}</span></div><div class="collection-list">${g[y].map(card).join('')}</div></section>`).join('');
     if(name==='publications')requestAnimationFrame(focusHashPublication);
   }
-  [search,year,topic,sort,jurisdiction,stage,assignee,view].filter(Boolean).forEach(e=>e.addEventListener(e===search?'input':'change',render));
-  $('#clearFilters')?.addEventListener('click',()=>{if(search)search.value='';if(year)year.value='';if(topic)topic.value='';if(jurisdiction)jurisdiction.value='';if(stage)stage.value='';if(assignee)assignee.value='';if(view)view.value='families';if(sort)sort.value='date-desc';render()});
+  [search,year,topic,publicationType,sort,jurisdiction,stage,assignee,view].filter(Boolean).forEach(e=>e.addEventListener(e===search?'input':'change',render));
+  $('#clearFilters')?.addEventListener('click',()=>{if(search)search.value='';if(year)year.value='';if(topic)topic.value='';if(publicationType)publicationType.value='';if(jurisdiction)jurisdiction.value='';if(stage)stage.value='';if(assignee)assignee.value='';if(view)view.value='families';if(sort)sort.value='date-desc';render()});
   render();
 }
 

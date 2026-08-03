@@ -60,12 +60,30 @@
     「已確認非本人的」將建立永久排除資料，日後不再重複要求確認。
   </div>
 
+  <div class="publication-type-summary" aria-label="新論文分類統計">
+    <div><span>國際期刊</span><strong data-publication-type-count="international-journal">0</strong></div>
+    <div><span>中文期刊</span><strong data-publication-type-count="chinese-journal">0</strong></div>
+    <div><span>會議論文</span><strong data-publication-type-count="conference">0</strong></div>
+    <div><span>其他成果</span><strong data-publication-type-count="other">0</strong></div>
+    <div><span>待人工判定</span><strong data-publication-type-count="unclassified">0</strong></div>
+  </div>
+
   <div class="monitor-grid">
     <section class="monitor-panel">
       <div class="monitor-panel-head">
         <div><span class="eyebrow">ORCID + Crossref</span><h2>新論文</h2></div>
         <span class="monitor-count" id="publicationsCount">0</span>
       </div>
+      <label class="publication-candidate-filter">顯示分類
+        <select id="publicationTypeCandidateFilter">
+          <option value="">全部類型</option>
+          <option value="international-journal">國際期刊論文</option>
+          <option value="chinese-journal">中文期刊論文</option>
+          <option value="conference">會議論文</option>
+          <option value="other">其他學術成果</option>
+          <option value="unclassified">待人工判定</option>
+        </select>
+      </label>
       <div class="monitor-list" id="publicationsList"></div>
       <button class="monitor-button" data-copy-group="publications" type="button" disabled>複製全部新論文</button>
     </section>

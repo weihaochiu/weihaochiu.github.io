@@ -1,5 +1,108 @@
 {
-  "version": "2026-07-15",
+  "version": "2026-08-03",
+  "publicationTypes": [
+    {
+      "value": "international-journal",
+      "label": "International Journal Publications",
+      "shortLabel": "International journal",
+      "order": 1,
+      "analytics": {
+        "coreJournalCount": true,
+        "journalMetrics": true,
+        "fwci": true,
+        "citationMetrics": true
+      },
+      "contentRequirements": [
+        "abstract",
+        "highlights",
+        "keywords",
+        "graphicalAbstract"
+      ]
+    },
+    {
+      "value": "chinese-journal",
+      "label": "Chinese Journal Publications",
+      "shortLabel": "Chinese journal",
+      "order": 2,
+      "analytics": {
+        "coreJournalCount": false,
+        "journalMetrics": false,
+        "fwci": false,
+        "citationMetrics": true
+      },
+      "contentRequirements": [
+        "abstract",
+        "keywords"
+      ]
+    },
+    {
+      "value": "conference",
+      "label": "Conference Publications",
+      "shortLabel": "Conference",
+      "order": 3,
+      "analytics": {
+        "coreJournalCount": false,
+        "journalMetrics": false,
+        "fwci": false,
+        "citationMetrics": true
+      },
+      "contentRequirements": [
+        "abstract",
+        "keywords"
+      ]
+    },
+    {
+      "value": "other",
+      "label": "Other Scholarly Outputs",
+      "shortLabel": "Other",
+      "order": 4,
+      "analytics": {
+        "coreJournalCount": false,
+        "journalMetrics": false,
+        "fwci": false,
+        "citationMetrics": false
+      },
+      "contentRequirements": []
+    },
+    {
+      "value": "unclassified",
+      "label": "Unclassified Outputs",
+      "shortLabel": "Unclassified",
+      "order": 5,
+      "analytics": {
+        "coreJournalCount": false,
+        "journalMetrics": false,
+        "fwci": false,
+        "citationMetrics": false
+      },
+      "contentRequirements": []
+    }
+  ],
+  "documentTypes": [
+    "journal-article",
+    "review-article",
+    "professional-review",
+    "proceedings-paper",
+    "conference-full-paper",
+    "conference-extended-abstract",
+    "conference-abstract",
+    "preprint",
+    "book-chapter",
+    "editorial",
+    "other"
+  ],
+  "sourceTypeMappings": {
+    "journal-article": "international-journal",
+    "conference-paper": "conference",
+    "conference-poster": "conference",
+    "conference-abstract": "conference",
+    "proceedings-article": "conference",
+    "proceedings": "conference",
+    "posted-content": "other",
+    "preprint": "other",
+    "book-chapter": "other",
+    "editorial": "other"
+  },
   "categoryLabels": {
     "DSSC": "Dye-Sensitized Solar Cells (DSSC)",
     "PSC": "Perovskite Solar Cells (PSC)",
@@ -89,6 +192,12 @@
     }
   ],
   "publications": {
+    "10.29803/ce.202108_68(4).0006": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Scalable Processing"
+      ]
+    },
     "10.1016/j.cej.2026.177494": {
       "category": "PSC",
       "subtopics": [

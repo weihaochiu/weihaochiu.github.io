@@ -85,7 +85,7 @@ def main() -> None:
     source_warnings = sum(1 for source in all_sources if source.get("status") == "warning")
 
     payload = {
-        "schemaVersion": 2,
+        "schemaVersion": 3,
         "generatedAt": now_iso(),
         "repository": os.getenv(
             "REPOSITORY_URL",
@@ -94,6 +94,19 @@ def main() -> None:
         "status": "partial" if source_errors or source_warnings else "completed",
         "summary": {
             **counts,
+            "publicationTypes": {
+                publication_type: sum(
+                    1 for item in result_sets["publications"].get("items", [])
+                    if item.get("suggestedPublicationType") == publication_type
+                )
+                for publication_type in (
+                    "international-journal",
+                    "chinese-journal",
+                    "conference",
+                    "other",
+                    "unclassified",
+                )
+            },
             "totalCandidates": sum(counts.values()),
             "sourceErrors": source_errors,
             "sourceWarnings": source_warnings,

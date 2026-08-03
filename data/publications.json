@@ -260,6 +260,17 @@
       "warnings": [
         "europe-pmc: No DOI match"
       ]
+    },
+    "id": "10.1016/j.cej.2026.177494",
+    "publicationType": "international-journal",
+    "documentType": "journal-article",
+    "language": "en",
+    "peerReviewStatus": "peer-reviewed",
+    "analytics": {
+      "coreJournalCount": true,
+      "journalMetrics": true,
+      "fwci": true,
+      "citationMetrics": true
     }
   },
   {
@@ -469,6 +480,17 @@
       "warnings": [
         "europe-pmc: No DOI match"
       ]
+    },
+    "id": "10.1016/j.mtener.2026.102359",
+    "publicationType": "international-journal",
+    "documentType": "journal-article",
+    "language": "en",
+    "peerReviewStatus": "peer-reviewed",
+    "analytics": {
+      "coreJournalCount": true,
+      "journalMetrics": true,
+      "fwci": true,
+      "citationMetrics": true
     }
   },
   {
@@ -747,6 +769,17 @@
       "warnings": [
         "europe-pmc: No DOI match"
       ]
+    },
+    "id": "10.1016/j.solener.2026.114430",
+    "publicationType": "international-journal",
+    "documentType": "journal-article",
+    "language": "en",
+    "peerReviewStatus": "peer-reviewed",
+    "analytics": {
+      "coreJournalCount": true,
+      "journalMetrics": true,
+      "fwci": true,
+      "citationMetrics": true
     }
   },
   {
@@ -987,6 +1020,17 @@
       "warnings": [
         "europe-pmc: No DOI match"
       ]
+    },
+    "id": "10.1016/j.jpowsour.2025.239216",
+    "publicationType": "international-journal",
+    "documentType": "journal-article",
+    "language": "en",
+    "peerReviewStatus": "peer-reviewed",
+    "analytics": {
+      "coreJournalCount": true,
+      "journalMetrics": true,
+      "fwci": true,
+      "citationMetrics": true
     }
   },
   {
@@ -1038,7 +1082,7 @@
     "role": "Co-author",
     "doiUrl": "https://doi.org/10.1016/j.solmat.2025.114015",
     "citation": "Rao, Harini Srikanth; Chiu, Wei-Hao; Chen, Shih-Hsuan; Wu, Ming-Chung; Lee, Kun-Mu. Impact of proton radiation on the performance of single-junction perovskite solar cells for space applications. Solar Energy Materials and Solar Cells, 295(15), 114015 (2026). https://doi.org/10.1016/j.solmat.2025.114015",
-    "citationCount": 11,
+    "citationCount": 9,
     "citedByUrl": "https://scholar.google.com/scholar?hl=en&q=%22Impact+of+proton+radiation+on+the+performance+of+single-junction+perovskite+solar+cells+for+space+applications%22",
     "scholarCitedByUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=11176020626599801497",
     "scholarLinkVerified": true,
@@ -1199,6 +1243,17 @@
       "warnings": [
         "europe-pmc: No DOI match"
       ]
+    },
+    "id": "10.1016/j.solmat.2025.114015",
+    "publicationType": "international-journal",
+    "documentType": "journal-article",
+    "language": "en",
+    "peerReviewStatus": "peer-reviewed",
+    "analytics": {
+      "coreJournalCount": true,
+      "journalMetrics": true,
+      "fwci": true,
+      "citationMetrics": true
     }
   },
   {
@@ -1482,6 +1537,17 @@
       "warnings": [
         "europe-pmc: No open full-text XML"
       ]
+    },
+    "id": "10.1002/asia.70245",
+    "publicationType": "international-journal",
+    "documentType": "journal-article",
+    "language": "en",
+    "peerReviewStatus": "peer-reviewed",
+    "analytics": {
+      "coreJournalCount": true,
+      "journalMetrics": true,
+      "fwci": true,
+      "citationMetrics": true
     }
   },
   {
@@ -1680,6 +1746,17 @@
       "warnings": [
         "europe-pmc: No DOI match"
       ]
+    },
+    "id": "10.1016/j.seppur.2025.134157",
+    "publicationType": "international-journal",
+    "documentType": "journal-article",
+    "language": "en",
+    "peerReviewStatus": "peer-reviewed",
+    "analytics": {
+      "coreJournalCount": true,
+      "journalMetrics": true,
+      "fwci": true,
+      "citationMetrics": true
     }
   },
   {
@@ -3128,6 +3205,17 @@
       "warnings": [
         "europe-pmc: No DOI match"
       ]
+    },
+    "id": "10.1002/solr.202500538",
+    "publicationType": "international-journal",
+    "documentType": "journal-article",
+    "language": "en",
+    "peerReviewStatus": "peer-reviewed",
+    "analytics": {
+      "coreJournalCount": true,
+      "journalMetrics": true,
+      "fwci": true,
+      "citationMetrics": true
     }
   },
   {
@@ -3725,6 +3813,17 @@
       "warnings": [
         "europe-pmc: No open full-text XML"
       ]
+    },
+    "id": "10.1002/asia.202500719",
+    "publicationType": "international-journal",
+    "documentType": "journal-article",
+    "language": "en",
+    "peerReviewStatus": "peer-reviewed",
+    "analytics": {
+      "coreJournalCount": true,
+      "journalMetrics": true,
+      "fwci": true,
+      "citationMetrics": true
     }
   },
   {
@@ -4296,6 +4395,17 @@
         "affiliationAddresses"
       ],
       "warnings": []
+    },
+    "id": "10.1002/advs.202410666",
+    "publicationType": "international-journal",
+    "documentType": "journal-article",
+    "language": "en",
+    "peerReviewStatus": "peer-reviewed",
+    "analytics": {
+      "coreJournalCount": true,
+      "journalMetrics": true,
+      "fwci": true,
+      "citationMetrics": true
     }
   },
   {
@@ -4543,6 +4653,17 @@
       "warnings": [
         "europe-pmc: No DOI match"
       ]
+    },
+    "id": "10.1016/j.mtchem.2024.102329",
+    "publicationType": "international-journal",
+    "documentType": "journal-article",
+    "language": "en",
+    "peerReviewStatus": "peer-reviewed",
+    "analytics": {
+      "coreJournalCount": true,
+      "journalMetrics": true,
+      "fwci": true,
+      "citationMetrics": true
     }
   },
   {
@@ -4768,6 +4889,17 @@
       "warnings": [
         "europe-pmc: No DOI match"
       ]
+    },
+    "id": "10.1016/j.cej.2024.153974",
+    "publicationType": "international-journal",
+    "documentType": "journal-article",
+    "language": "en",
+    "peerReviewStatus": "peer-reviewed",
+    "analytics": {
+      "coreJournalCount": true,
+      "journalMetrics": true,
+      "fwci": true,
+      "citationMetrics": true
     }
   },
   {
@@ -5009,6 +5141,17 @@
       "warnings": [
         "europe-pmc: No DOI match"
       ]
+    },
+    "id": "10.1016/j.jece.2023.111741",
+    "publicationType": "international-journal",
+    "documentType": "journal-article",
+    "language": "en",
+    "peerReviewStatus": "peer-reviewed",
+    "analytics": {
+      "coreJournalCount": true,
+      "journalMetrics": true,
+      "fwci": true,
+      "citationMetrics": true
     }
   },
   {
@@ -5498,6 +5641,17 @@
       "warnings": [
         "europe-pmc: No DOI match"
       ]
+    },
+    "id": "10.1002/solr.202300988",
+    "publicationType": "international-journal",
+    "documentType": "journal-article",
+    "language": "en",
+    "peerReviewStatus": "peer-reviewed",
+    "analytics": {
+      "coreJournalCount": true,
+      "journalMetrics": true,
+      "fwci": true,
+      "citationMetrics": true
     }
   },
   {
@@ -5844,6 +5998,17 @@
       "warnings": [
         "europe-pmc: No open full-text XML"
       ]
+    },
+    "id": "10.1039/d3cc04699k",
+    "publicationType": "international-journal",
+    "documentType": "journal-article",
+    "language": "en",
+    "peerReviewStatus": "peer-reviewed",
+    "analytics": {
+      "coreJournalCount": true,
+      "journalMetrics": true,
+      "fwci": true,
+      "citationMetrics": true
     }
   },
   {
@@ -6164,6 +6329,17 @@
       "warnings": [
         "europe-pmc: No DOI match"
       ]
+    },
+    "id": "10.1016/j.jpowsour.2023.233496",
+    "publicationType": "international-journal",
+    "documentType": "journal-article",
+    "language": "en",
+    "peerReviewStatus": "peer-reviewed",
+    "analytics": {
+      "coreJournalCount": true,
+      "journalMetrics": true,
+      "fwci": true,
+      "citationMetrics": true
     }
   },
   {
@@ -6400,6 +6576,17 @@
       "warnings": [
         "europe-pmc: No open full-text XML"
       ]
+    },
+    "id": "10.1002/asia.202300681",
+    "publicationType": "international-journal",
+    "documentType": "journal-article",
+    "language": "en",
+    "peerReviewStatus": "peer-reviewed",
+    "analytics": {
+      "coreJournalCount": true,
+      "journalMetrics": true,
+      "fwci": true,
+      "citationMetrics": true
     }
   },
   {
@@ -6434,7 +6621,7 @@
     "role": "Co-author",
     "doiUrl": "https://doi.org/10.1016/j.orgel.2023.106847",
     "citation": "Ahn, Seoungjun; Chiu, Wei-Hao; Cheng, Hsin-Ming; Suryanarayanan, Vembu; Chen, Gao; Huang, Yu-Ching; Wu, Ming-Chung; Lee, Kun-Mu. Enhancing efficiency and stability of perovskite solar cells through two-step deposition method with the addition of cesium halides to PbI2 precursor. Organic Electronics, 120, 106847 (2023). https://doi.org/10.1016/j.orgel.2023.106847",
-    "citationCount": 13,
+    "citationCount": 12,
     "citedByUrl": "https://scholar.google.com/scholar?hl=en&q=%22Enhancing+efficiency+and+stability+of+perovskite+solar+cells+through+two-step+deposition+method+with+the+addition+of+cesium+halides+to+PbI2+precursor%22",
     "scholarCitedByUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=15913086561685731338",
     "scholarLinkVerified": true,
@@ -6701,6 +6888,17 @@
       "warnings": [
         "europe-pmc: No DOI match"
       ]
+    },
+    "id": "10.1016/j.orgel.2023.106847",
+    "publicationType": "international-journal",
+    "documentType": "journal-article",
+    "language": "en",
+    "peerReviewStatus": "peer-reviewed",
+    "analytics": {
+      "coreJournalCount": true,
+      "journalMetrics": true,
+      "fwci": true,
+      "citationMetrics": true
     }
   },
   {
@@ -7076,6 +7274,17 @@
       "warnings": [
         "europe-pmc: No DOI match"
       ]
+    },
+    "id": "10.1002/adfm.202306367",
+    "publicationType": "international-journal",
+    "documentType": "journal-article",
+    "language": "en",
+    "peerReviewStatus": "peer-reviewed",
+    "analytics": {
+      "coreJournalCount": true,
+      "journalMetrics": true,
+      "fwci": true,
+      "citationMetrics": true
     }
   },
   {
@@ -7396,6 +7605,17 @@
       "warnings": [
         "europe-pmc: No DOI match"
       ]
+    },
+    "id": "10.1016/j.cej.2022.139926",
+    "publicationType": "international-journal",
+    "documentType": "journal-article",
+    "language": "en",
+    "peerReviewStatus": "peer-reviewed",
+    "analytics": {
+      "coreJournalCount": true,
+      "journalMetrics": true,
+      "fwci": true,
+      "citationMetrics": true
     }
   },
   {
@@ -7745,6 +7965,17 @@
         "affiliationAddresses"
       ],
       "warnings": []
+    },
+    "id": "10.3390/nano12152651",
+    "publicationType": "international-journal",
+    "documentType": "journal-article",
+    "language": "en",
+    "peerReviewStatus": "peer-reviewed",
+    "analytics": {
+      "coreJournalCount": true,
+      "journalMetrics": true,
+      "fwci": true,
+      "citationMetrics": true
     }
   },
   {
@@ -8028,6 +8259,17 @@
         "affiliationAddresses"
       ],
       "warnings": []
+    },
+    "id": "10.3390/polym14081580",
+    "publicationType": "international-journal",
+    "documentType": "journal-article",
+    "language": "en",
+    "peerReviewStatus": "peer-reviewed",
+    "analytics": {
+      "coreJournalCount": true,
+      "journalMetrics": true,
+      "fwci": true,
+      "citationMetrics": true
     }
   },
   {
@@ -8296,6 +8538,17 @@
       "warnings": [
         "europe-pmc: No DOI match"
       ]
+    },
+    "id": "10.1016/j.cej.2021.131609",
+    "publicationType": "international-journal",
+    "documentType": "journal-article",
+    "language": "en",
+    "peerReviewStatus": "peer-reviewed",
+    "analytics": {
+      "coreJournalCount": true,
+      "journalMetrics": true,
+      "fwci": true,
+      "citationMetrics": true
     }
   },
   {
@@ -8562,6 +8815,17 @@
       "warnings": [
         "Corresponding-author conflict for Huang, Yi-Jen: europe-pmc=True, openalex=False"
       ]
+    },
+    "id": "10.3390/polym13234246",
+    "publicationType": "international-journal",
+    "documentType": "journal-article",
+    "language": "en",
+    "peerReviewStatus": "peer-reviewed",
+    "analytics": {
+      "coreJournalCount": true,
+      "journalMetrics": true,
+      "fwci": true,
+      "citationMetrics": true
     }
   },
   {
@@ -8821,6 +9085,17 @@
       "warnings": [
         "Corresponding-author conflict for Chiu, Wei-Hao: europe-pmc=True, openalex=False"
       ]
+    },
+    "id": "10.3390/nano11082125",
+    "publicationType": "international-journal",
+    "documentType": "journal-article",
+    "language": "en",
+    "peerReviewStatus": "peer-reviewed",
+    "analytics": {
+      "coreJournalCount": true,
+      "journalMetrics": true,
+      "fwci": true,
+      "citationMetrics": true
     }
   },
   {
@@ -9169,6 +9444,17 @@
         "affiliationAddresses"
       ],
       "warnings": []
+    },
+    "id": "10.3390/nano11061607",
+    "publicationType": "international-journal",
+    "documentType": "journal-article",
+    "language": "en",
+    "peerReviewStatus": "peer-reviewed",
+    "analytics": {
+      "coreJournalCount": true,
+      "journalMetrics": true,
+      "fwci": true,
+      "citationMetrics": true
     }
   },
   {
@@ -9338,6 +9624,17 @@
       "warnings": [
         "europe-pmc: No DOI match"
       ]
+    },
+    "id": "10.1016/j.jpowsour.2012.12.094",
+    "publicationType": "international-journal",
+    "documentType": "journal-article",
+    "language": "en",
+    "peerReviewStatus": "peer-reviewed",
+    "analytics": {
+      "coreJournalCount": true,
+      "journalMetrics": true,
+      "fwci": true,
+      "citationMetrics": true
     }
   },
   {
@@ -9570,6 +9867,17 @@
       "warnings": [
         "europe-pmc: No DOI match"
       ]
+    },
+    "id": "10.1016/j.jpowsour.2012.05.079",
+    "publicationType": "international-journal",
+    "documentType": "journal-article",
+    "language": "en",
+    "peerReviewStatus": "peer-reviewed",
+    "analytics": {
+      "coreJournalCount": true,
+      "journalMetrics": true,
+      "fwci": true,
+      "citationMetrics": true
     }
   },
   {
@@ -9753,6 +10061,17 @@
       "warnings": [
         "europe-pmc: No DOI match"
       ]
+    },
+    "id": "10.1016/j.jpowsour.2011.06.049",
+    "publicationType": "international-journal",
+    "documentType": "journal-article",
+    "language": "en",
+    "peerReviewStatus": "peer-reviewed",
+    "analytics": {
+      "coreJournalCount": true,
+      "journalMetrics": true,
+      "fwci": true,
+      "citationMetrics": true
     }
   },
   {
@@ -9781,7 +10100,7 @@
     "role": "First author",
     "doiUrl": "https://doi.org/10.1016/j.jpowsour.2010.12.063",
     "citation": "Chiu, Wei-Hao; Lee, Kun-Mu; Hsieh, Wen-Feng. High efficiency flexible dye-sensitized solar cells by multiple electrophoretic depositions. Journal of Power Sources, 196(7), 3683–3687 (2011). https://doi.org/10.1016/j.jpowsour.2010.12.063",
-    "citationCount": 91,
+    "citationCount": 90,
     "citedByUrl": "https://scholar.google.com/scholar?hl=en&q=%22High+efficiency+flexible+dye-sensitized+solar+cells+by+multiple+electrophoretic+depositions%22",
     "scholarCitedByUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=17171960631027043282",
     "scholarLinkVerified": true,
@@ -9917,6 +10236,17 @@
       "warnings": [
         "europe-pmc: No DOI match"
       ]
+    },
+    "id": "10.1016/j.jpowsour.2010.12.063",
+    "publicationType": "international-journal",
+    "documentType": "journal-article",
+    "language": "en",
+    "peerReviewStatus": "peer-reviewed",
+    "analytics": {
+      "coreJournalCount": true,
+      "journalMetrics": true,
+      "fwci": true,
+      "citationMetrics": true
     }
   },
   {
@@ -10127,6 +10457,17 @@
       "warnings": [
         "europe-pmc: No DOI match"
       ]
+    },
+    "id": "10.1039/c0jm04099a",
+    "publicationType": "international-journal",
+    "documentType": "journal-article",
+    "language": "en",
+    "peerReviewStatus": "peer-reviewed",
+    "analytics": {
+      "coreJournalCount": true,
+      "journalMetrics": true,
+      "fwci": true,
+      "citationMetrics": true
     }
   },
   {
@@ -10382,6 +10723,17 @@
       "warnings": [
         "europe-pmc: No DOI match"
       ]
+    },
+    "id": "10.1016/j.electacta.2010.07.061",
+    "publicationType": "international-journal",
+    "documentType": "journal-article",
+    "language": "en",
+    "peerReviewStatus": "peer-reviewed",
+    "analytics": {
+      "coreJournalCount": true,
+      "journalMetrics": true,
+      "fwci": true,
+      "citationMetrics": true
     }
   },
   {
@@ -10633,6 +10985,17 @@
       "warnings": [
         "europe-pmc: No DOI match"
       ]
+    },
+    "id": "10.1016/j.tsf.2009.11.058",
+    "publicationType": "international-journal",
+    "documentType": "journal-article",
+    "language": "en",
+    "peerReviewStatus": "peer-reviewed",
+    "analytics": {
+      "coreJournalCount": true,
+      "journalMetrics": true,
+      "fwci": true,
+      "citationMetrics": true
     }
   },
   {
@@ -10871,6 +11234,17 @@
       "warnings": [
         "europe-pmc: No DOI match"
       ]
+    },
+    "id": "10.1016/j.solmat.2009.07.017",
+    "publicationType": "international-journal",
+    "documentType": "journal-article",
+    "language": "en",
+    "peerReviewStatus": "peer-reviewed",
+    "analytics": {
+      "coreJournalCount": true,
+      "journalMetrics": true,
+      "fwci": true,
+      "citationMetrics": true
     }
   },
   {
@@ -11133,6 +11507,17 @@
       "warnings": [
         "europe-pmc: No DOI match"
       ]
+    },
+    "id": "10.1039/b902595m",
+    "publicationType": "international-journal",
+    "documentType": "journal-article",
+    "language": "en",
+    "peerReviewStatus": "peer-reviewed",
+    "analytics": {
+      "coreJournalCount": true,
+      "journalMetrics": true,
+      "fwci": true,
+      "citationMetrics": true
     }
   },
   {
@@ -11163,7 +11548,7 @@
     "role": "Co-author",
     "doiUrl": "https://doi.org/10.1021/jp805239k",
     "citation": "Cheng, Hsin-Ming; Chiu, Wei-Hao; Lee, Chia-Hua; Tsai, Song-Yeu; Hsieh, Wen-Feng. Formation of branched ZnO nanowires from solvothermal method and dye-sensitized solar cells applications. The Journal of Physical Chemistry C, 112(42), 16359–16364 (2008). https://doi.org/10.1021/jp805239k",
-    "citationCount": 341,
+    "citationCount": 340,
     "citedByUrl": "https://scholar.google.com/scholar?hl=en&q=%22Formation+of+branched+ZnO+nanowires+from+solvothermal+method+and+dye-sensitized+solar+cells+applications%22",
     "scholarCitedByUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=4372183802790834142",
     "scholarLinkVerified": true,
@@ -11319,6 +11704,17 @@
       "warnings": [
         "europe-pmc: No DOI match"
       ]
+    },
+    "id": "10.1021/jp805239k",
+    "publicationType": "international-journal",
+    "documentType": "journal-article",
+    "language": "en",
+    "peerReviewStatus": "peer-reviewed",
+    "analytics": {
+      "coreJournalCount": true,
+      "journalMetrics": true,
+      "fwci": true,
+      "citationMetrics": true
     }
   },
   {
@@ -11478,6 +11874,125 @@
       "warnings": [
         "europe-pmc: No DOI match"
       ]
+    },
+    "id": "10.1016/j.optcom.2004.10.003",
+    "publicationType": "international-journal",
+    "documentType": "journal-article",
+    "language": "en",
+    "peerReviewStatus": "peer-reviewed",
+    "analytics": {
+      "coreJournalCount": true,
+      "journalMetrics": true,
+      "fwci": true,
+      "citationMetrics": true
+    }
+  },
+  {
+    "date": "2021-08",
+    "authors": [
+      "Chiu, Wei-Hao",
+      "Lee, Kun-Mu"
+    ],
+    "title": "鈣鈦礦太陽能模組技術現況與展望",
+    "journal": "化工",
+    "volume": "68",
+    "issue": "4",
+    "pages": "48–59",
+    "year": 2021,
+    "month": 8,
+    "publisher": "",
+    "doi": "10.29803/CE.202108_68(4).0006",
+    "abstract": "",
+    "highlights": [],
+    "keywords": [],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "contentStatus": {
+      "abstract": "pending",
+      "highlights": "not-available",
+      "keywords": "pending",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-08-03",
+      "verifiedSource": "Airiti Library and National Central Library bibliographic records"
+    },
+    "authorOrder": 1,
+    "topic": "Perovskite Solar Cells",
+    "tags": [
+      "Perovskite",
+      "Photovoltaic modules",
+      "Technology review",
+      "Chinese publication"
+    ],
+    "role": "First author",
+    "doiUrl": "https://doi.org/10.29803/CE.202108_68%284%29.0006",
+    "publicationUrl": "https://www.airitilibrary.com/Article/Detail/10158359-202108-202109170004-202109170004-48-59",
+    "citation": "邱偉豪；李坤穆。鈣鈦礦太陽能模組技術現況與展望。化工，68(4)，48–59（2021）。https://doi.org/10.29803/CE.202108_68(4).0006",
+    "citationCount": 0,
+    "citedByUrl": "https://scholar.google.com/scholar?hl=zh-TW&q=%22%E9%88%A3%E9%88%A6%E7%A4%A6%E5%A4%AA%E9%99%BD%E8%83%BD%E6%A8%A1%E7%B5%84%E6%8A%80%E8%A1%93%E7%8F%BE%E6%B3%81%E8%88%87%E5%B1%95%E6%9C%9B%22",
+    "scholarCitedByUrl": "",
+    "scholarLinkVerified": false,
+    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=zh-TW",
+    "authorships": [
+      {
+        "name": "Chiu, Wei-Hao",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": false,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "bibliographic-record"
+        ]
+      },
+      {
+        "name": "Lee, Kun-Mu",
+        "authorOrder": 2,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": false,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "bibliographic-record"
+        ]
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "partial",
+      "lastChecked": "2026-08-03",
+      "sources": [
+        "Airiti Library",
+        "National Central Library"
+      ],
+      "sourceUrls": {
+        "airiti": "https://www.airitilibrary.com/Article/Detail/10158359-202108-202109170004-202109170004-48-59",
+        "ncl": "https://tpl.ncl.edu.tw/NclService/JournalContent?cn%5B0%5D=468&directQuery=true&nestedSearch=false&py%5B0%5D=2021"
+      },
+      "requiresManualReview": true,
+      "missingFields": [
+        "abstract",
+        "keywords",
+        "affiliations",
+        "correspondingAuthor"
+      ],
+      "warnings": [
+        "Crossref record unavailable; bibliographic data verified from Airiti Library and the National Central Library."
+      ]
+    },
+    "id": "10.29803/ce.202108_68(4).0006",
+    "publicationType": "chinese-journal",
+    "documentType": "professional-review",
+    "language": "zh-TW",
+    "peerReviewStatus": "unverified",
+    "analytics": {
+      "coreJournalCount": false,
+      "journalMetrics": false,
+      "fwci": false,
+      "citationMetrics": true
     }
   }
 ]

@@ -343,6 +343,9 @@ def load_publication_groups() -> dict[str, dict[str, Any]]:
     for row in rows:
         if not isinstance(row, dict):
             continue
+        analytics = row.get("analytics") or {}
+        if analytics.get("journalMetrics") is not True:
+            continue
         title = compact_whitespace(row.get("journal"))
         if not title:
             continue

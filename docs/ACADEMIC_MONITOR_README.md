@@ -1,5 +1,13 @@
 # Academic Record Monitor
 
+## Publication classification (v3)
+
+Publication candidates retain `sourceDocumentType` and `language` and receive an explainable `suggestedPublicationType`, confidence level, and reason. The dashboard displays the suggested type and lets the reviewer choose the final `selectedPublicationType` before copying a confirmed result.
+
+Allowed final types are `international-journal`, `chinese-journal`, `conference`, `other`, and `unclassified`. Crossref or ORCID conference/proceedings types are classified as conference outputs. Journal articles with Chinese title, source, or `zh` language metadata are suggested as Chinese journal publications. Ambiguous records remain unclassified and require manual review.
+
+The copied decision records both the suggested and selected types and sets `publicationTypeManuallyChanged` when they differ. When a confirmed publication is added to `data/publications.json`, its analytics flags must follow `data/publication_taxonomy.json`.
+
 ## Included behavior
 
 - One GitHub Action: `.github/workflows/check-academic-monitor.yml`

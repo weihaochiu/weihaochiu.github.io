@@ -1,12 +1,19 @@
 {
-  "schemaVersion": 2,
-  "generatedAt": "2026-08-03T12:41:07+08:00",
+  "schemaVersion": 3,
+  "generatedAt": "2026-08-03T15:24:05+09:00",
   "repository": "https://github.com/weihaochiu/weihaochiu.github.io",
   "status": "completed",
   "summary": {
     "publications": 4,
     "patents": 17,
     "projects": 0,
+    "publicationTypes": {
+      "international-journal": 1,
+      "chinese-journal": 1,
+      "conference": 1,
+      "other": 1,
+      "unclassified": 0
+    },
     "totalCandidates": 21,
     "sourceErrors": 0,
     "sourceWarnings": 0,
@@ -58,7 +65,52 @@
       "pages": "",
       "abstract": "<title>Abstract</title>\n                <p>\n                  Buried layer crystallization at an electron transport layer interface is seldom discussed but crucial for obtaining a high-quality perovskite layer. This study demonstrates a novel interfacial engineering concept by using 2-aminoethylphosphonic acid (APA) to bridge the mechanical and electronic disparities at the SnO\n                  <sub>2</sub>\n                  /perovskite interface. The bifunctional synergy of the APA molecule, which serves as both an electronic dipole and a mechanical geometrical tuner. The flexible backbone of APA renders it to alleviate the strain by over 20% through releasing residual compressive stress. The electron-withdrawing phosphonate and electron-donating amino headgroups anchor preferred-orientationally onto SnO\n                  <sub>2</sub>\n                  and perovskite terminal facets. The directional dipole and releasing stress help expand the quasi-Fermi level splitting and accelerate electron transfer from the perovskite layer to the electron transport layer of SnO\n                  <sub>2</sub>\n                  . The champion device can achieve power conversion efficiency of 22.92% with over 1,500 h stability in air without encapsulation. By harmonizing molecular orientation with mechanical stress relief, this study establishes a new paradigm for high-performance and durable perovskite photovoltaics.\n                </p>",
       "keywords": [],
+      "sourceDocumentType": "posted-content",
+      "language": "",
+      "suggestedPublicationType": "other",
+      "publicationTypeConfidence": "high",
+      "publicationTypeReason": "Source document type: posted-content.",
       "reviewKey": "publication:doi:10.21203/rs.3.rs-9068209/v1"
+    },
+    {
+      "type": "publication",
+      "confidence": "high",
+      "detectionNotes": [
+        "ORCID work is not present in the current publications JSON.",
+        "Please verify authorship and publication status before adding.",
+        "Crossref enrichment failed: HTTP 404: Not Found"
+      ],
+      "sources": [
+        {
+          "name": "ORCID",
+          "url": "https://orcid.org/0000-0003-4484-3117"
+        },
+        {
+          "name": "DOI",
+          "url": "https://doi.org/10.29803/ce.202402_71(1).0002"
+        },
+        {
+          "name": "Crossref",
+          "url": "https://api.crossref.org/works/10.29803%2Fce.202402_71%281%29.0002"
+        }
+      ],
+      "doi": "10.29803/ce.202402_71(1).0002",
+      "title": "鈣鈦礦太陽能電池於太空應用的研究與展望",
+      "journal": "化工",
+      "publicationDate": "",
+      "authors": [],
+      "publisher": "",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "abstract": "",
+      "keywords": [],
+      "sourceDocumentType": "journal-article",
+      "language": "zh-tw",
+      "suggestedPublicationType": "chinese-journal",
+      "publicationTypeConfidence": "high",
+      "publicationTypeReason": "Journal article with Chinese title, source, or language metadata.",
+      "reviewKey": "publication:doi:10.29803/ce.202402_71(1).0002"
     },
     {
       "type": "publication",
@@ -84,42 +136,12 @@
       "pages": "",
       "abstract": "",
       "keywords": [],
+      "sourceDocumentType": "journal-article",
+      "language": "",
+      "suggestedPublicationType": "international-journal",
+      "publicationTypeConfidence": "medium",
+      "publicationTypeReason": "Journal article with non-Chinese title and source metadata.",
       "reviewKey": "publication:title:fluorinationofstarshapedcyclopenta21b34b0dithiophenederivativesanditsapplicationasholetransportingmaterialsinscalableperovskitesolarcellfabricationbybarcoating"
-    },
-    {
-      "type": "publication",
-      "confidence": "high",
-      "detectionNotes": [
-        "ORCID work is not present in the current publications JSON.",
-        "Please verify authorship and publication status before adding.",
-        "Crossref enrichment failed: HTTP 404: Not Found"
-      ],
-      "sources": [
-        {
-          "name": "ORCID",
-          "url": "https://orcid.org/0000-0003-4484-3117"
-        },
-        {
-          "name": "DOI",
-          "url": "https://doi.org/10.29803/ce.202108_68(4).0006"
-        },
-        {
-          "name": "Crossref",
-          "url": "https://api.crossref.org/works/10.29803%2Fce.202108_68%284%29.0006"
-        }
-      ],
-      "doi": "10.29803/ce.202108_68(4).0006",
-      "title": "鈣鈦礦太陽能模組技術現況與展望",
-      "journal": "化工",
-      "publicationDate": "",
-      "authors": [],
-      "publisher": "",
-      "volume": "",
-      "issue": "",
-      "pages": "",
-      "abstract": "",
-      "keywords": [],
-      "reviewKey": "publication:doi:10.29803/ce.202108_68(4).0006"
     },
     {
       "type": "publication",
@@ -145,6 +167,11 @@
       "pages": "",
       "abstract": "",
       "keywords": [],
+      "sourceDocumentType": "conference-paper",
+      "language": "",
+      "suggestedPublicationType": "conference",
+      "publicationTypeConfidence": "high",
+      "publicationTypeReason": "Source document type: conference-paper.",
       "reviewKey": "publication:title:branchedznonanowiresforenhancingenergyconversionefficiencyofdyesensitizedsolarcells"
     }
   ],
@@ -1289,7 +1316,7 @@
       "url": "https://pub.orcid.org/v3.0/0000-0003-4484-3117/works",
       "status": "success",
       "message": "",
-      "checkedAt": "2026-08-03T12:40:58+08:00",
+      "checkedAt": "2026-08-03T15:22:45+09:00",
       "candidateCount": 4
     },
     {
@@ -1297,7 +1324,7 @@
       "url": "https://patents.google.com/?q=inventor%3D%22Wei-Hao+Chiu%22",
       "status": "success",
       "message": "",
-      "checkedAt": "2026-08-03T12:40:59+08:00",
+      "checkedAt": "2026-08-03T15:22:49+09:00",
       "candidateCount": 10
     },
     {
@@ -1305,7 +1332,7 @@
       "url": "https://patents.google.com/?q=inventor%3D%22%E9%82%B1%E5%81%89%E8%B1%AA%22",
       "status": "success",
       "message": "",
-      "checkedAt": "2026-08-03T12:41:03+08:00",
+      "checkedAt": "2026-08-03T15:23:32+09:00",
       "candidateCount": 10
     },
     {
@@ -1313,7 +1340,7 @@
       "url": "https://www.grb.gov.tw/advq?queryStr=%E9%82%B1%E5%81%89%E8%B1%AA&queryType=grb05",
       "status": "success",
       "message": "GRB Playwright discovery completed; 0 pending record(s) require review.",
-      "checkedAt": "2026-08-03T12:41:07+08:00",
+      "checkedAt": "2026-08-03T15:24:05+09:00",
       "candidateCount": 0
     }
   ],

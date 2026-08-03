@@ -173,7 +173,8 @@
         loadResearchData('publication_taxonomy').catch(()=>({})),
         loadResearchData('mendeley_metrics').catch(()=>({}))
       ]);
-      const publications=enrichPublications(rawPublications,taxonomy,mendeley);
+      const publications=enrichPublications(rawPublications,taxonomy,mendeley)
+        .filter(publication=>publication.analytics?.coreJournalCount===true);
       const featuredCount=Math.max(1,Number(configuration.featuredPublicationCount||3));
       root.innerHTML=(configuration.areas||[])
         .map((area,index)=>researchArea(area,index,publications,featuredCount))

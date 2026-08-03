@@ -18,6 +18,13 @@ const statuses = {
   confirmed_not_mine: '已確認非本人的',
   unconfirmed: '尚未確認'
 };
+const publicationTypes = {
+  'international-journal': '國際期刊論文',
+  'chinese-journal': '中文期刊論文',
+  conference: '會議論文',
+  other: '其他學術成果',
+  unclassified: '待人工判定'
+};
 
 const esc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({
   '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
@@ -67,7 +74,11 @@ function keyOf(type, item) {
 }
 
 function reviewOf(type, item) {
-  return reviews[keyOf(type, item)] || {status: 'unconfirmed', note: '', reviewedAt: ''};
+  const review = reviews[keyOf(type, item)] || {status: 'unconfirmed', note: '', reviewedAt: ''};
+  if (type === 'publications' && !review.selectedPublicationType) {
+    return {...review, selectedPublicationType: item.suggestedPublicationType || 'unclassified'};
+  }
+  return review;
 }
 
 function formatDate(value) {
@@ -85,6 +96,8 @@ function fieldLines(type, item) {
   if (type === 'publications') return [
     ['DOI', item.doi],
     ['期刊', item.journal],
+    ['來源文件類型', item.sourceDocumentType],
+    ['語言', item.language],
     ['發表日期', item.publicationDate],
     ['作者', (item.authors || []).join('; ')],
     ['出版者', item.publisher]
@@ -117,7 +130,7 @@ function fieldLines(type, item) {
 
 function decisionEntry(type, item) {
   const review = reviewOf(type, item);
-  return {
+  const entry = {
     reviewKey: keyOf(type, item),
     status: review.status || 'unconfirmed',
     statusLabel: statuses[review.status] || statuses.unconfirmed,
@@ -127,6 +140,16 @@ function decisionEntry(type, item) {
     reviewedAt: review.reviewedAt || '',
     record: item
   };
+  if (type === 'publications') {
+    const suggested = item.suggestedPublicationType || 'unclassified';
+    const selected = review.selectedPublicationType || suggested;
+    entry.suggestedPublicationType = suggested;
+    entry.selectedPublicationType = selected;
+    entry.publicationTypeManuallyChanged = selected !== suggested;
+    entry.publicationTypeConfidence = item.publicationTypeConfidence || 'low';
+    entry.publicationTypeReason = item.publicationTypeReason || '';
+  }
+  return entry;
 }
 
 function copyText(entries, includeInstructions = true) {
@@ -143,6 +166,7 @@ function copyText(entries, includeInstructions = true) {
         '請依下方確認結果更新網站 JSON：',
         '1. 所有 confirmed_mine 與 confirmed_not_mine 都寫入 data/academic_monitor_review_decisions.json，保留 reviewKey、完整 record、userNote 與時間。',
         '2. confirmed_mine：先查核來源，再更新 targetFile；只補空白或明確經使用者確認的欄位，不猜測資料。',
+        '   論文必須使用 selectedPublicationType 寫入 publicationType；同時寫入對應 analytics 範圍。',
         '3. confirmed_not_mine：不要寫入成果 JSON；以 reviewKey 建立永久排除紀錄，後續監控不得再次要求確認。',
         '4. unconfirmed：不可修改成果 JSON，也不可建立永久排除。',
         '5. 同一 reviewKey 若已有紀錄，以這次結果更新；不要產生重複紀錄。',
@@ -188,7 +212,7 @@ function updateReviewSummary() {
   document.getElementById('summaryUnconfirmed').textContent = entries.length - confirmed;
   document.getElementById('copyReviewed').disabled = !confirmed;
   document.getElementById('clearReviews').disabled = !confirmed &&
-    !entries.some(row => row.userNote);
+    !entries.some(row => row.userNote || row.publicationTypeManuallyChanged);
 }
 
 function reviewControls(type, item, index) {
@@ -200,7 +224,20 @@ function reviewControls(type, item, index) {
       type="button" data-review-status="${esc(status)}" data-review-type="${esc(type)}"
       data-index="${index}" aria-pressed="${selected}">${esc(label)}</button>`;
   }).join('');
+  const classification = type === 'publications' ? `<div class="publication-classification">
+    <div class="publication-classification-grid">
+      <div><span>系統建議</span><strong>${esc(publicationTypes[item.suggestedPublicationType] || publicationTypes.unclassified)}</strong></div>
+      <div><span>判定信心</span><strong>${esc(item.publicationTypeConfidence || 'low')}</strong></div>
+    </div>
+    <p>${esc(item.publicationTypeReason || '資料不足，請人工判定。')}</p>
+    <label>實際分類
+      <select class="publication-type-select" data-publication-type="${esc(type)}" data-index="${index}">
+        ${Object.entries(publicationTypes).map(([value,label])=>`<option value="${esc(value)}"${review.selectedPublicationType===value?' selected':''}>${esc(label)}</option>`).join('')}
+      </select>
+    </label>
+  </div>` : '';
   return `<div class="review-block" data-review-key="${esc(key)}">
+    ${classification}
     <div class="review-label">這筆資料是否屬於您？</div>
     <div class="review-choices" role="group" aria-label="資料確認狀態">${buttons}</div>
     <label class="review-note-label">
@@ -225,6 +262,7 @@ function renderItem(type, item, index) {
   return `<article class="record-card review-${esc(review.status)}">
     <div class="record-topline">
       <span class="record-type">${esc(item.confidence || 'possible')}</span>
+      ${type==='publications'?`<span class="publication-type-pill type-${esc(review.selectedPublicationType||item.suggestedPublicationType||'unclassified')}">${esc(publicationTypes[review.selectedPublicationType||item.suggestedPublicationType]||publicationTypes.unclassified)}</span>`:''}
       <span class="record-review-status">${esc(statuses[review.status] || statuses.unconfirmed)}</span>
     </div>
     <h3>${esc(titleOf(item))}</h3>
@@ -240,13 +278,28 @@ function renderItem(type, item, index) {
 
 function renderPanel(type) {
   const items = payload[type] || [];
-  document.getElementById(`${type}Count`).textContent = items.length;
+  const filter = type === 'publications' ? document.getElementById('publicationTypeCandidateFilter')?.value || '' : '';
+  const visible = items.map((item,index)=>({item,index})).filter(({item})=>!filter||(reviewOf(type,item).selectedPublicationType||item.suggestedPublicationType||'unclassified')===filter);
+  document.getElementById(`${type}Count`).textContent = visible.length;
   const host = document.getElementById(`${type}List`);
-  host.innerHTML = items.length
-    ? items.map((item, index) => renderItem(type, item, index)).join('')
+  host.innerHTML = visible.length
+    ? visible.map(({item,index}) => renderItem(type, item, index)).join('')
     : '<div class="empty-state">目前沒有待確認資料。若來源檢查失敗，請查看下方「資料來源狀態」，不能將此狀態解讀為確定沒有新資料。</div>';
   const button = document.querySelector(`[data-copy-group="${type}"]`);
   button.disabled = !items.length;
+}
+
+function renderPublicationTypeSummary() {
+  const items = payload?.publications || [];
+  const counts = Object.fromEntries(Object.keys(publicationTypes).map(value=>[value,0]));
+  items.forEach(item=>{
+    const value=reviewOf('publications',item).selectedPublicationType||item.suggestedPublicationType||'unclassified';
+    counts[value]=(counts[value]||0)+1;
+  });
+  Object.entries(counts).forEach(([value,count])=>{
+    const element=document.querySelector(`[data-publication-type-count="${value}"]`);
+    if(element)element.textContent=count;
+  });
 }
 
 function renderSources() {
@@ -276,17 +329,30 @@ function setReview(type, index, status) {
   const item = payload[type][index];
   const key = keyOf(type, item);
   const existing = reviewOf(type, item);
-  if (status === 'unconfirmed' && !existing.note) {
+  const typeChanged=type==='publications'&&existing.selectedPublicationType!==(item.suggestedPublicationType||'unclassified');
+  if (status === 'unconfirmed' && !existing.note && !typeChanged) {
     delete reviews[key];
   } else {
     reviews[key] = {
       status,
       note: existing.note || '',
+      selectedPublicationType: existing.selectedPublicationType,
       reviewedAt: status === 'unconfirmed' ? '' : new Date().toISOString()
     };
   }
   saveReviews();
   renderPanel(type);
+  updateReviewSummary();
+}
+
+function setPublicationType(type, index, selectedPublicationType) {
+  const item=payload[type][index];
+  const key=keyOf(type,item);
+  const existing=reviewOf(type,item);
+  reviews[key]={...existing,selectedPublicationType};
+  saveReviews();
+  renderPanel(type);
+  renderPublicationTypeSummary();
   updateReviewSummary();
 }
 
@@ -345,6 +411,7 @@ function bindActions() {
       allEntries().forEach(row => delete reviews[row.reviewKey]);
       saveReviews();
       TYPES.forEach(renderPanel);
+      renderPublicationTypeSummary();
       updateReviewSummary();
       showCopyStatus('已清除本機確認狀態；伺服器端判定 JSON 不受影響。');
     }
@@ -354,6 +421,14 @@ function bindActions() {
     const note = event.target.closest('[data-review-note]');
     if (!note) return;
     setReviewNote(note.dataset.reviewNote, Number(note.dataset.index), note.value);
+  });
+  document.addEventListener('change', event => {
+    const typeSelect=event.target.closest('[data-publication-type]');
+    if(typeSelect){
+      setPublicationType(typeSelect.dataset.publicationType,Number(typeSelect.dataset.index),typeSelect.value);
+      return;
+    }
+    if(event.target.matches('#publicationTypeCandidateFilter'))renderPanel('publications');
   });
 }
 
@@ -372,6 +447,7 @@ async function init() {
       (payload.summary?.sourceErrors ?? 0) + (payload.summary?.sourceWarnings ?? 0);
     document.getElementById('summaryTotal').textContent = payload.summary?.totalCandidates ?? 0;
     TYPES.forEach(renderPanel);
+    renderPublicationTypeSummary();
     renderSources();
     document.getElementById('copyAll').disabled = !(payload.summary?.totalCandidates);
     updateReviewSummary();

@@ -18,6 +18,10 @@
 .monitor-summary-card.review-not-mine{border-color:#e0b7b7;background:#fff7f7}
 .monitor-summary-card.review-unconfirmed{border-color:#d7c798;background:#fffaf0}
 .review-help{margin:0 0 22px;padding:13px 15px;border:1px solid #c9d7e2;border-radius:8px;background:#f4f8fb;color:#435a6c;font-size:.73rem;line-height:1.7}
+.publication-type-summary{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px;margin:0 0 18px}
+.publication-type-summary>div{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 12px;border:1px solid #dbe4ea;border-radius:8px;background:#fff}
+.publication-type-summary span{color:#647382;font-size:.66rem;font-weight:700}
+.publication-type-summary strong{font-size:1rem;color:#234a70}
 .monitor-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
 .monitor-panel{padding:18px;min-width:0}
 .monitor-panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:12px}
@@ -28,15 +32,26 @@
 .record-card.review-confirmed_mine{border-color:#8dc6ad;background:#f7fcf9}
 .record-card.review-confirmed_not_mine{border-color:#d9a8a8;background:#fff9f9}
 .record-card h3{margin:0 0 7px;font-size:.9rem;line-height:1.4}
-.record-topline{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:5px}
+.record-topline{display:flex;justify-content:flex-start;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:5px}
 .record-type{font-size:.63rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#647382}
 .record-review-status{padding:3px 7px;border-radius:999px;background:#edf0f2;color:#5b6872;font-size:.61rem;font-weight:800}
+.publication-type-pill{padding:3px 7px;border-radius:999px;background:#e6eef5;color:#294f70;font-size:.61rem;font-weight:800}
+.record-review-status{margin-left:auto}
 .record-meta{display:grid;gap:4px;margin:8px 0;color:#52616e;font-size:.72rem}
 .record-note{margin:8px 0;padding-left:17px;color:#6b5a42;font-size:.68rem}
 .record-sources{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
 .record-sources a{font-size:.66rem;font-weight:700;color:#245f96;text-decoration:none}
 .record-actions{display:flex;gap:7px;flex-wrap:wrap}
 .review-block{margin:12px 0;padding:11px;border:1px solid #dde5eb;border-radius:8px;background:#fff}
+.publication-classification{margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid #e2e8ed}
+.publication-classification-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.publication-classification-grid div{padding:8px;border-radius:6px;background:#f3f7fa}
+.publication-classification-grid span{display:block;color:#687681;font-size:.6rem;font-weight:700}
+.publication-classification-grid strong{display:block;margin-top:3px;color:#294b67;font-size:.7rem}
+.publication-classification p{margin:7px 0;color:#5d6c78;font-size:.65rem;line-height:1.5}
+.publication-classification label,.publication-candidate-filter{display:grid;gap:5px;color:#52616e;font-size:.66rem;font-weight:750}
+.publication-type-select,.publication-candidate-filter select{width:100%;height:36px;border:1px solid #becbd4;border-radius:6px;background:#fff;padding:0 8px;color:#263743;font:inherit;font-size:.68rem}
+.publication-candidate-filter{margin:-2px 0 12px}
 .review-label{margin-bottom:7px;color:#394b59;font-size:.7rem;font-weight:800}
 .review-choices{display:grid;grid-template-columns:1fr;gap:6px}
 .review-choice{appearance:none;border:1px solid #c3cdd5;border-radius:6px;background:#fff;color:#44535f;padding:8px 9px;font:inherit;font-size:.68rem;font-weight:750;text-align:left;cursor:pointer}
@@ -60,5 +75,5 @@
 .status-error{background:#f3dddd;color:#8a3838}
 .status-not-run{background:#eceff2;color:#66727c}
 .copy-status{min-height:1.2rem;margin-top:9px;color:#577b72;font-size:.7rem}
-@media(max-width:1000px){.monitor-grid,.source-grid{grid-template-columns:1fr}.monitor-summary{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:1000px){.monitor-grid,.source-grid{grid-template-columns:1fr}.monitor-summary{grid-template-columns:repeat(2,minmax(0,1fr))}.publication-type-summary{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.monitor-summary{grid-template-columns:1fr 1fr}.monitor-header{padding:2.2rem 0 1.4rem}.monitor-toolbar{align-items:flex-start;flex-direction:column}}
