@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-08-03T12:11:27.149193Z",
+  "lastUpdated": "2026-08-03T18:32:12.883134Z",
   "journalCount": 22,
   "activeJournalCount": 22,
   "sourcePolicy": {
@@ -1869,7 +1869,7 @@
         }
       },
       "abbreviation": "Chemical Engineering Journal",
-      "publisher": "Elsevier BV",
+      "publisher": "Elsevier",
       "issn": "1385-8947",
       "eissn": "1873-3212",
       "issnL": "1385-8947",
@@ -2186,14 +2186,13 @@
         }
       },
       "abbreviation": "Electrochimica Acta",
-      "publisher": "Elsevier BV",
+      "publisher": "Elsevier",
       "issn": "0013-4686",
       "eissn": "1873-3859",
       "issnL": "0013-4686",
       "allIssns": [
         "0013-4686",
-        "1873-3859",
-        "0965-5441"
+        "1873-3859"
       ],
       "homepage": "http://www.elsevier.com/wps/find/journaldescription.cws_home/205/description#description",
       "countryCode": "GB",
@@ -2890,7 +2889,7 @@
         }
       },
       "abbreviation": "Journal of Environmental Chemical Engineering",
-      "publisher": "Elsevier BV",
+      "publisher": "Elsevier",
       "issn": "2213-3437",
       "eissn": "2213-3437",
       "issnL": "2213-2929",
@@ -3233,14 +3232,13 @@
         }
       },
       "abbreviation": "Journal of Power Sources",
-      "publisher": "Elsevier BV",
+      "publisher": "Elsevier",
       "issn": "0378-7753",
       "eissn": "1873-2755",
       "issnL": "0378-7753",
       "allIssns": [
         "0378-7753",
-        "1873-2755",
-        "0965-5441"
+        "1873-2755"
       ],
       "homepage": "http://www.elsevier.com/wps/find/journaldescription.cws_home/504093/description",
       "countryCode": "NL",
@@ -3404,7 +3402,7 @@
         }
       },
       "abbreviation": "Materials Today Chemistry",
-      "publisher": "Elsevier BV",
+      "publisher": "Elsevier",
       "issn": "2468-5194",
       "eissn": "2468-5194",
       "issnL": "2468-5194",
@@ -3560,7 +3558,7 @@
         }
       },
       "abbreviation": "Materials Today Energy",
-      "publisher": "Elsevier BV",
+      "publisher": "Elsevier",
       "issn": "2468-6069",
       "eissn": "2468-6069",
       "issnL": "2468-6069",
@@ -3720,7 +3718,7 @@
         }
       },
       "abbreviation": "Nanomaterials",
-      "publisher": "Multidisciplinary Digital Publishing Institute",
+      "publisher": "MDPI",
       "issn": "2079-4991",
       "eissn": "2079-4991",
       "issnL": "2079-4991",
@@ -3869,14 +3867,13 @@
         }
       },
       "abbreviation": "Optics Communications",
-      "publisher": "Elsevier BV",
+      "publisher": "Elsevier",
       "issn": "0030-4018",
       "eissn": "1873-0310",
       "issnL": "0030-4018",
       "allIssns": [
         "0030-4018",
-        "1873-0310",
-        "0217-7323"
+        "1873-0310"
       ],
       "homepage": "http://www.elsevier.com/wps/find/journaldescription.cws_home/505711/description",
       "countryCode": "NL",
@@ -4023,7 +4020,7 @@
         }
       },
       "abbreviation": "Organic Electronics",
-      "publisher": "Elsevier BV",
+      "publisher": "Elsevier",
       "issn": "1566-1199",
       "eissn": "1878-5530",
       "issnL": "1566-1199",
@@ -4172,7 +4169,7 @@
         }
       },
       "abbreviation": "Polymers",
-      "publisher": "Multidisciplinary Digital Publishing Institute",
+      "publisher": "MDPI",
       "issn": "2073-4360",
       "eissn": "2073-4360",
       "issnL": "2073-4360",
@@ -4321,7 +4318,7 @@
         }
       },
       "abbreviation": "Separation and Purification Technology",
-      "publisher": "Elsevier BV",
+      "publisher": "Elsevier",
       "issn": "1383-5866",
       "eissn": "1873-3794",
       "issnL": "1383-5866",
@@ -4470,7 +4467,7 @@
         }
       },
       "abbreviation": "Solar Energy",
-      "publisher": "Elsevier BV",
+      "publisher": "Elsevier",
       "issn": "0038-092X",
       "eissn": "1471-1257",
       "issnL": "0038-092X",
@@ -4627,14 +4624,13 @@
         }
       },
       "abbreviation": "Solar Energy Materials and Solar Cells",
-      "publisher": "Elsevier BV",
+      "publisher": "Elsevier",
       "issn": "0927-0248",
       "eissn": "1879-3398",
       "issnL": "0927-0248",
       "allIssns": [
         "0927-0248",
-        "1879-3398",
-        "1537-6494"
+        "1879-3398"
       ],
       "homepage": "https://www.sciencedirect.com/journal/solar-energy-materials-and-solar-cellsnals&journal=09270248",
       "countryCode": "NL",
@@ -5851,14 +5847,13 @@
         }
       },
       "abbreviation": "Thin Solid Films",
-      "publisher": "Elsevier BV",
+      "publisher": "Elsevier",
       "issn": "0040-6090",
       "eissn": "1879-2731",
       "issnL": "0040-6090",
       "allIssns": [
         "0040-6090",
-        "1879-2731",
-        "0217-7323"
+        "1879-2731"
       ],
       "homepage": "http://www.journals.elsevier.com/thin-solid-films/",
       "countryCode": "NL",
