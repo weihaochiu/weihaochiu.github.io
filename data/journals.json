@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-08-01T06:09:41.179564Z",
+  "lastUpdated": "2026-08-03T12:11:27.149193Z",
   "journalCount": 22,
   "activeJournalCount": 22,
   "sourcePolicy": {
@@ -546,11 +546,11 @@
       "openAlexId": "S135204980",
       "openAlexUrl": "https://openalex.org/S135204980",
       "openAlexStats": {
-        "worksCount": 43008,
-        "citedByCount": 2533191,
-        "twoYearMeanCitedness": 14.563263747454176,
-        "hIndex": 478,
-        "i10Index": 27187
+        "worksCount": 43041,
+        "citedByCount": 2535140,
+        "twoYearMeanCitedness": 14.589329946014608,
+        "hIndex": 479,
+        "i10Index": 27206
       },
       "foundedYear": 2001,
       "publicationCount": 1,
@@ -731,11 +731,11 @@
       "openAlexId": "S2737737698",
       "openAlexUrl": "https://openalex.org/S2737737698",
       "openAlexStats": {
-        "worksCount": 20977,
-        "citedByCount": 658391,
-        "twoYearMeanCitedness": 8.604435934258817,
+        "worksCount": 21004,
+        "citedByCount": 659276,
+        "twoYearMeanCitedness": 8.622959955417562,
         "hIndex": 277,
-        "i10Index": 10183
+        "i10Index": 10196
       },
       "publicationCount": 1,
       "publicationYears": [
@@ -1299,11 +1299,11 @@
       "openAlexId": "S152760256",
       "openAlexUrl": "https://openalex.org/S152760256",
       "openAlexStats": {
-        "worksCount": 78267,
-        "citedByCount": 3209801,
-        "twoYearMeanCitedness": 4.009844799629373,
+        "worksCount": 78276,
+        "citedByCount": 3210448,
+        "twoYearMeanCitedness": 4.024412819622816,
         "hIndex": 402,
-        "i10Index": 54931
+        "i10Index": 54942
       },
       "foundedYear": 1996,
       "publicationCount": 1,
@@ -1888,11 +1888,11 @@
       "openAlexId": "S149937609",
       "openAlexUrl": "https://openalex.org/S149937609",
       "openAlexStats": {
-        "worksCount": 77801,
-        "citedByCount": 3389285,
-        "twoYearMeanCitedness": 10.63608465943244,
+        "worksCount": 77874,
+        "citedByCount": 3392809,
+        "twoYearMeanCitedness": 10.658828356795658,
         "hIndex": 390,
-        "i10Index": 52690
+        "i10Index": 52729
       },
       "publicationCount": 4,
       "publicationYears": [
@@ -2055,10 +2055,10 @@
       "openAlexUrl": "https://openalex.org/S188582317",
       "openAlexStats": {
         "worksCount": 10280,
-        "citedByCount": 217856,
-        "twoYearMeanCitedness": 3.150329877474081,
+        "citedByCount": 217951,
+        "twoYearMeanCitedness": 3.167766258246937,
         "hIndex": 145,
-        "i10Index": 5282
+        "i10Index": 5285
       },
       "publicationCount": 3,
       "publicationYears": [
@@ -2206,11 +2206,11 @@
       "openAlexId": "S198339081",
       "openAlexUrl": "https://openalex.org/S198339081",
       "openAlexStats": {
-        "worksCount": 53915,
-        "citedByCount": 2022577,
-        "twoYearMeanCitedness": 4.807753164556962,
+        "worksCount": 53939,
+        "citedByCount": 2023278,
+        "twoYearMeanCitedness": 4.809055118110236,
         "hIndex": 327,
-        "i10Index": 36952
+        "i10Index": 36959
       },
       "publicationCount": 1,
       "publicationYears": [
@@ -2764,11 +2764,11 @@
       "openAlexId": "S117082959",
       "openAlexUrl": "https://openalex.org/S117082959",
       "openAlexStats": {
-        "worksCount": 8271,
-        "citedByCount": 1331719,
-        "twoYearMeanCitedness": 29.48831300813008,
+        "worksCount": 8274,
+        "citedByCount": 1332488,
+        "twoYearMeanCitedness": 29.556570268899037,
         "hIndex": 521,
-        "i10Index": 6401
+        "i10Index": 6403
       },
       "publicationCount": 1,
       "publicationYears": [
@@ -2909,11 +2909,11 @@
       "openAlexId": "S2764859491",
       "openAlexUrl": "https://openalex.org/S2764859491",
       "openAlexStats": {
-        "worksCount": 24371,
-        "citedByCount": 537579,
-        "twoYearMeanCitedness": 5.708436427488227,
+        "worksCount": 24414,
+        "citedByCount": 538472,
+        "twoYearMeanCitedness": 5.721046770601336,
         "hIndex": 188,
-        "i10Index": 12490
+        "i10Index": 12519
       },
       "publicationCount": 1,
       "publicationYears": [
@@ -3070,7 +3070,7 @@
       "openAlexUrl": "https://openalex.org/S45305740",
       "openAlexStats": {
         "worksCount": 18793,
-        "citedByCount": 1192906,
+        "citedByCount": 1193036,
         "twoYearMeanCitedness": 26.0,
         "hIndex": 362,
         "i10Index": 14933
@@ -3253,11 +3253,11 @@
       "openAlexId": "S177147899",
       "openAlexUrl": "https://openalex.org/S177147899",
       "openAlexStats": {
-        "worksCount": 41349,
-        "citedByCount": 2245443,
-        "twoYearMeanCitedness": 7.558623954552627,
+        "worksCount": 41369,
+        "citedByCount": 2246352,
+        "twoYearMeanCitedness": 7.571024067956583,
         "hIndex": 413,
-        "i10Index": 30394
+        "i10Index": 30402
       },
       "foundedYear": 1976,
       "publicationCount": 6,
@@ -3422,9 +3422,9 @@
       "openAlexId": "S2898120712",
       "openAlexUrl": "https://openalex.org/S2898120712",
       "openAlexStats": {
-        "worksCount": 3832,
-        "citedByCount": 65896,
-        "twoYearMeanCitedness": 4.822645290581162,
+        "worksCount": 3836,
+        "citedByCount": 65974,
+        "twoYearMeanCitedness": 4.8305,
         "hIndex": 95,
         "i10Index": 1697
       },
@@ -3578,11 +3578,11 @@
       "openAlexId": "S2898308537",
       "openAlexUrl": "https://openalex.org/S2898308537",
       "openAlexStats": {
-        "worksCount": 2321,
-        "citedByCount": 59915,
-        "twoYearMeanCitedness": 5.501750291715286,
+        "worksCount": 2322,
+        "citedByCount": 59959,
+        "twoYearMeanCitedness": 5.516317016317016,
         "hIndex": 96,
-        "i10Index": 1387
+        "i10Index": 1388
       },
       "publicationCount": 1,
       "publicationYears": [
@@ -3738,11 +3738,11 @@
       "openAlexId": "S2764646681",
       "openAlexUrl": "https://openalex.org/S2764646681",
       "openAlexStats": {
-        "worksCount": 22713,
-        "citedByCount": 535733,
-        "twoYearMeanCitedness": 6.008539887523432,
-        "hIndex": 201,
-        "i10Index": 13159
+        "worksCount": 22718,
+        "citedByCount": 536543,
+        "twoYearMeanCitedness": 6.0378693300041615,
+        "hIndex": 202,
+        "i10Index": 13171
       },
       "publicationCount": 3,
       "publicationYears": [
@@ -3889,11 +3889,11 @@
       "openAlexId": "S186881120",
       "openAlexUrl": "https://openalex.org/S186881120",
       "openAlexStats": {
-        "worksCount": 40358,
-        "citedByCount": 676393,
-        "twoYearMeanCitedness": 2.6999657885733837,
+        "worksCount": 40369,
+        "citedByCount": 676516,
+        "twoYearMeanCitedness": 2.703476482617587,
         "hIndex": 190,
-        "i10Index": 17782
+        "i10Index": 17785
       },
       "publicationCount": 1,
       "publicationYears": [
@@ -4043,8 +4043,8 @@
       "openAlexUrl": "https://openalex.org/S99846442",
       "openAlexStats": {
         "worksCount": 7707,
-        "citedByCount": 189672,
-        "twoYearMeanCitedness": 3.3993506493506493,
+        "citedByCount": 189696,
+        "twoYearMeanCitedness": 3.405844155844156,
         "hIndex": 126,
         "i10Index": 5011
       },
@@ -4190,11 +4190,11 @@
       "openAlexId": "S123288148",
       "openAlexUrl": "https://openalex.org/S123288148",
       "openAlexStats": {
-        "worksCount": 32343,
-        "citedByCount": 778974,
-        "twoYearMeanCitedness": 6.81285140562249,
-        "hIndex": 229,
-        "i10Index": 18907
+        "worksCount": 32363,
+        "citedByCount": 780197,
+        "twoYearMeanCitedness": 6.833314253005152,
+        "hIndex": 230,
+        "i10Index": 18934
       },
       "publicationCount": 2,
       "publicationYears": [
@@ -4340,11 +4340,11 @@
       "openAlexId": "S69753523",
       "openAlexUrl": "https://openalex.org/S69753523",
       "openAlexStats": {
-        "worksCount": 31168,
-        "citedByCount": 968044,
-        "twoYearMeanCitedness": 9.079816813869806,
+        "worksCount": 31193,
+        "citedByCount": 969172,
+        "twoYearMeanCitedness": 9.10356647351669,
         "hIndex": 235,
-        "i10Index": 20108
+        "i10Index": 20143
       },
       "publicationCount": 1,
       "publicationYears": [
@@ -4489,11 +4489,11 @@
       "openAlexId": "S5745031",
       "openAlexUrl": "https://openalex.org/S5745031",
       "openAlexStats": {
-        "worksCount": 20330,
-        "citedByCount": 847275,
-        "twoYearMeanCitedness": 7.80824295010846,
+        "worksCount": 20333,
+        "citedByCount": 847681,
+        "twoYearMeanCitedness": 7.830155979202773,
         "hIndex": 286,
-        "i10Index": 13116
+        "i10Index": 13121
       },
       "publicationCount": 1,
       "publicationYears": [
@@ -4647,11 +4647,11 @@
       "openAlexId": "S166040772",
       "openAlexUrl": "https://openalex.org/S166040772",
       "openAlexStats": {
-        "worksCount": 14003,
-        "citedByCount": 600991,
-        "twoYearMeanCitedness": 7.055012224938875,
-        "hIndex": 248,
-        "i10Index": 9874
+        "worksCount": 14007,
+        "citedByCount": 601226,
+        "twoYearMeanCitedness": 7.083536585365854,
+        "hIndex": 249,
+        "i10Index": 9879
       },
       "publicationCount": 2,
       "publicationYears": [
@@ -4801,10 +4801,10 @@
       "openAlexUrl": "https://openalex.org/S4210176222",
       "openAlexStats": {
         "worksCount": 4023,
-        "citedByCount": 78334,
-        "twoYearMeanCitedness": 4.176795580110498,
+        "citedByCount": 78395,
+        "twoYearMeanCitedness": 4.1878453038674035,
         "hIndex": 99,
-        "i10Index": 2057
+        "i10Index": 2058
       },
       "publicationCount": 2,
       "publicationYears": [
@@ -5337,11 +5337,11 @@
       "openAlexId": "S95739953",
       "openAlexUrl": "https://openalex.org/S95739953",
       "openAlexStats": {
-        "worksCount": 59368,
-        "citedByCount": 2342695,
-        "twoYearMeanCitedness": 3.6277787657833898,
+        "worksCount": 59370,
+        "citedByCount": 2343353,
+        "twoYearMeanCitedness": 3.6412444444444443,
         "hIndex": 371,
-        "i10Index": 42564
+        "i10Index": 42571
       },
       "publicationCount": 1,
       "publicationYears": [
@@ -5871,11 +5871,11 @@
       "openAlexId": "S84339699",
       "openAlexUrl": "https://openalex.org/S84339699",
       "openAlexStats": {
-        "worksCount": 47364,
-        "citedByCount": 1105994,
-        "twoYearMeanCitedness": 2.6507462686567163,
+        "worksCount": 47366,
+        "citedByCount": 1106124,
+        "twoYearMeanCitedness": 2.6473214285714284,
         "hIndex": 253,
-        "i10Index": 26402
+        "i10Index": 26404
       },
       "publicationCount": 1,
       "publicationYears": [
