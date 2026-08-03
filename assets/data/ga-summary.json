@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-02T04:39:14Z",
+  "generatedAt": "2026-08-03T04:47:55Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
@@ -9,7 +9,7 @@
     "pageViews": 315,
     "activeUsers": 31,
     "sessions": 76,
-    "engagementRate": 0.6052631578947368
+    "engagementRate": 0.631578947368421
   },
   "monthlyTrend": [
     {
