@@ -6128,7 +6128,7 @@
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
-        "isCorresponding": false,
+        "isCorresponding": true,
         "correspondingEmail": "",
         "sources": [
           "crossref",
@@ -6148,7 +6148,7 @@
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
-        "isCorresponding": true,
+        "isCorresponding": false,
         "correspondingEmail": "",
         "sources": [
           "crossref",
@@ -6312,7 +6312,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-08-03",
+      "lastChecked": "2026-08-01",
       "sources": [
         "crossref",
         "openalex"
@@ -11988,6 +11988,283 @@
     "documentType": "professional-review",
     "language": "zh-TW",
     "peerReviewStatus": "unverified",
+    "analytics": {
+      "coreJournalCount": false,
+      "journalMetrics": false,
+      "fwci": false,
+      "citationMetrics": true
+    }
+  },
+  {
+    "date": "2024-02",
+    "authors": [
+      "Chiu, Wei-Hao",
+      "Lee, Kun-Mu"
+    ],
+    "title": "鈣鈦礦太陽能電池於太空應用的研究與展望",
+    "journal": "化工",
+    "volume": "71",
+    "issue": "1",
+    "pages": "3–11",
+    "year": 2024,
+    "month": 2,
+    "publisher": "",
+    "doi": "10.29803/CE.202402_71(1).0002",
+    "abstract": "世界能源署預估至2050年時，太陽能將是全球最主要的能源來源，另外目前全球科技巨擘爭相投入太空產業，預計在未來的十年，計畫發射上萬枚人造衛星提供通訊服務、遙測探勘服務，甚至提供太空旅行或是太空發電再微波回傳地球使用。然而，這些太空計畫要能持續進行下去，如何取得價格低廉且可靠的能源變成為了一個重要的問題。目前的太空中使用的太陽能面板普遍使用砷化鎵（GaAs）等三五族（III-V）族化合物半導體太陽能電池，雖然效率高（可達>30%），但價格高昂，未來將不利於將來的太空產業。近年來，鈣鈦礦電池（Perovskite solar cell）的轉換效率快速成長至超過25%，且持續地在快速成長中，再搭配製程皆屬低溫／非真空的簡易製程，可大幅降低製造成本，故鈣鈦礦電池就成了太空應用的明日潛力新星。本文將整理介紹目前鈣鈦礦電池於全球研究中的結果、挑戰與未來。",
+    "highlights": [],
+    "keywords": [],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "contentStatus": {
+      "abstract": "available",
+      "highlights": "not-available",
+      "keywords": "not-available",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-08-03",
+      "verifiedSource": "Airiti Library bibliographic record"
+    },
+    "authorOrder": 1,
+    "topic": "Perovskite Solar Cells",
+    "tags": [
+      "Perovskite",
+      "Space applications",
+      "Chinese publication"
+    ],
+    "role": "First author",
+    "doiUrl": "https://doi.org/10.29803/CE.202402_71%281%29.0002",
+    "publicationUrl": "https://www.airitilibrary.com/Article/Detail/10158359-N202403060002-00002",
+    "citation": "邱偉豪；李坤穆。鈣鈦礦太陽能電池於太空應用的研究與展望。化工，71(1)，3–11（2024）。https://doi.org/10.29803/CE.202402_71(1).0002",
+    "citedByUrl": "https://scholar.google.com/scholar?hl=zh-TW&q=%22%E9%88%A3%E9%88%A6%E7%A4%A6%E5%A4%AA%E9%99%BD%E8%83%BD%E9%9B%BB%E6%B1%A0%E6%96%BC%E5%A4%AA%E7%A9%BA%E6%87%89%E7%94%A8%E7%9A%84%E7%A0%94%E7%A9%B6%E8%88%87%E5%B1%95%E6%9C%9B%22",
+    "scholarCitedByUrl": "",
+    "scholarLinkVerified": false,
+    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=zh-TW",
+    "authorships": [
+      {
+        "name": "Chiu, Wei-Hao",
+        "orcid": "0000-0003-4484-3117",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "orcid",
+          "bibliographic-record"
+        ]
+      },
+      {
+        "name": "Lee, Kun-Mu",
+        "authorOrder": 2,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "bibliographic-record"
+        ]
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "partial",
+      "lastChecked": "2026-08-03",
+      "sources": [
+        "Airiti Library",
+        "ORCID",
+        "Chang Gung University"
+      ],
+      "sourceUrls": {
+        "airiti": "https://www.airitilibrary.com/Article/Detail/10158359-N202403060002-00002",
+        "orcid": "https://orcid.org/0000-0003-4484-3117",
+        "cgu": "https://www.cgu.edu.tw/cset/Subject/Detail/70836?nodeId=13671"
+      },
+      "requiresManualReview": true,
+      "missingFields": [
+        "affiliations",
+        "correspondingAuthor"
+      ],
+      "warnings": [
+        "Crossref record unavailable; bibliographic data verified from Airiti Library."
+      ]
+    },
+    "id": "10.29803/ce.202402_71(1).0002",
+    "publicationType": "chinese-journal",
+    "documentType": "journal-article",
+    "language": "zh-TW",
+    "peerReviewStatus": "unverified",
+    "analytics": {
+      "coreJournalCount": false,
+      "journalMetrics": false,
+      "fwci": false,
+      "citationMetrics": true
+    }
+  },
+  {
+    "date": "2008",
+    "authors": [
+      "Cheng, Hsin-Ming",
+      "Chiu, Wei-Hao",
+      "Lee, Chia-Hua",
+      "Tsai, Song-Yeu",
+      "Hsieh, Wen-Feng"
+    ],
+    "title": "Branched ZnO nanowires for enhancing energy conversion efficiency of dye-sensitized solar cells",
+    "journal": "Next-Generation and Nano-Architectured Photovoltaics",
+    "volume": "1121",
+    "issue": "",
+    "pages": "104–109",
+    "year": 2008,
+    "publisher": "Materials Research Society",
+    "doi": "10.1557/proc-1121-n14-01",
+    "abstract": "Branched ZnO nanowires have been fabricated on conductive glass substrates via a solvothermal method for dye-sensitized solar cells (DSCs). The one-dimensional branched nanostructures can afford a direct conduction pathway instead of interparticle hops while using nanoparticles. Furthermore, the short-circuit current density and the energy conversion efficiency of the branched ZnO nanowire DSCs are 4.27 mA/cm² and 1.51%, which are twice higher than the bare ZnO nanowire ones. The improvement was consequent on the enlargement of internal surface area within the photoelectrode and achieving higher dye adsorption to significantly enhance the performance of the DSCs.",
+    "highlights": [],
+    "keywords": [],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "contentStatus": {
+      "abstract": "available",
+      "highlights": "not-available",
+      "keywords": "pending",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-08-03",
+      "verifiedSource": "Crossref, OpenAlex, and Chang Gung University Pure records"
+    },
+    "authorOrder": 2,
+    "topic": "Dye-Sensitized Solar Cells",
+    "tags": [
+      "Dye-sensitized solar cells",
+      "ZnO nanowires",
+      "Conference publication"
+    ],
+    "role": "Co-author",
+    "doiUrl": "https://doi.org/10.1557/proc-1121-n14-01",
+    "publicationUrl": "https://pure.lib.cgu.edu.tw/en/publications/branched-zno-nanowires-for-enhancing-energy-conversion-efficiency/",
+    "citation": "Cheng, Hsin-Ming; Chiu, Wei-Hao; Lee, Chia-Hua; Tsai, Song-Yeu; Hsieh, Wen-Feng. Branched ZnO nanowires for enhancing energy conversion efficiency of dye-sensitized solar cells. Next-Generation and Nano-Architectured Photovoltaics, 1121, 104–109 (2008). https://doi.org/10.1557/proc-1121-n14-01",
+    "citationCount": 0,
+    "citedByUrl": "https://scholar.google.com/scholar?hl=en&q=%22Branched+ZnO+nanowires+for+enhancing+energy+conversion+efficiency+of+dye-sensitized+solar+cells%22",
+    "scholarCitedByUrl": "",
+    "scholarLinkVerified": false,
+    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en",
+    "authorships": [
+      {
+        "name": "Cheng, Hsin-Ming",
+        "openAlexId": "A5059052235",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": true,
+        "correspondingEmail": "",
+        "sources": [
+          "crossref",
+          "openalex",
+          "institutional-record"
+        ]
+      },
+      {
+        "name": "Chiu, Wei-Hao",
+        "orcid": "0000-0003-4484-3117",
+        "openAlexId": "A5007707999",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": false,
+        "correspondingEmail": "",
+        "sources": [
+          "orcid",
+          "crossref",
+          "openalex",
+          "institutional-record"
+        ]
+      },
+      {
+        "name": "Lee, Chia-Hua",
+        "openAlexId": "A5001300090",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": false,
+        "correspondingEmail": "",
+        "sources": [
+          "crossref",
+          "openalex",
+          "institutional-record"
+        ]
+      },
+      {
+        "name": "Tsai, Song-Yeu",
+        "openAlexId": "A5085196803",
+        "authorOrder": 4,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": false,
+        "correspondingEmail": "",
+        "sources": [
+          "crossref",
+          "openalex",
+          "institutional-record"
+        ]
+      },
+      {
+        "name": "Hsieh, Wen-Feng",
+        "openAlexId": "A5112067710",
+        "authorOrder": 5,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": false,
+        "correspondingEmail": "",
+        "sources": [
+          "crossref",
+          "openalex",
+          "institutional-record"
+        ]
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "partial",
+      "lastChecked": "2026-08-03",
+      "sources": [
+        "Crossref",
+        "OpenAlex",
+        "Chang Gung University Pure",
+        "ORCID"
+      ],
+      "sourceUrls": {
+        "crossref": "https://api.crossref.org/works/10.1557%2Fproc-1121-n14-01",
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1557%2Fproc-1121-n14-01",
+        "cguPure": "https://pure.lib.cgu.edu.tw/en/publications/branched-zno-nanowires-for-enhancing-energy-conversion-efficiency/",
+        "orcid": "https://orcid.org/0000-0003-4484-3117"
+      },
+      "requiresManualReview": true,
+      "missingFields": [
+        "keywords",
+        "affiliations",
+        "correspondingEmail",
+        "equalContribution"
+      ],
+      "warnings": [
+        "Crossref and OpenAlex identify publication year 2008, while the Chang Gung University Pure record identifies 2009; the DOI registration year 2008 is used."
+      ]
+    },
+    "id": "10.1557/proc-1121-n14-01",
+    "publicationType": "conference",
+    "documentType": "proceedings-paper",
+    "language": "en",
+    "peerReviewStatus": "peer-reviewed",
     "analytics": {
       "coreJournalCount": false,
       "journalMetrics": false,

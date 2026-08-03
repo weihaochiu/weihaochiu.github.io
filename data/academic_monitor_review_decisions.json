@@ -1,5 +1,105 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "",
-  "decisions": []
+  "updatedAt": "2026-08-03T18:30:12Z",
+  "decisions": [
+    {
+      "reviewKey": "publication:title:branchedznonanowiresforenhancingenergyconversionefficiencyofdyesensitizedsolarcells",
+      "status": "confirmed_mine",
+      "statusLabel": "已確認是本人的",
+      "recordType": "publication",
+      "targetFile": "data/publications.json",
+      "userNote": "",
+      "reviewedAt": "2026-08-03T12:11:25.943Z",
+      "record": {
+        "type": "publication",
+        "confidence": "possible",
+        "detectionNotes": [
+          "ORCID work is not present in the current publications JSON.",
+          "Please verify authorship and publication status before adding."
+        ],
+        "sources": [
+          {
+            "name": "ORCID",
+            "url": "https://orcid.org/0000-0003-4484-3117"
+          }
+        ],
+        "doi": "",
+        "title": "Branched ZnO nanowires for enhancing energy conversion efficiency of dye-sensitized solar cells",
+        "journal": "Next-Generation and Nano-Architectured Photovoltaics",
+        "publicationDate": "",
+        "authors": [],
+        "publisher": "",
+        "volume": "",
+        "issue": "",
+        "pages": "",
+        "abstract": "",
+        "keywords": [],
+        "sourceDocumentType": "conference-paper",
+        "language": "",
+        "suggestedPublicationType": "conference",
+        "publicationTypeConfidence": "high",
+        "publicationTypeReason": "Source document type: conference-paper.",
+        "reviewKey": "publication:title:branchedznonanowiresforenhancingenergyconversionefficiencyofdyesensitizedsolarcells"
+      },
+      "suggestedPublicationType": "conference",
+      "selectedPublicationType": "conference",
+      "publicationTypeManuallyChanged": false,
+      "publicationTypeConfidence": "high",
+      "publicationTypeReason": "Source document type: conference-paper."
+    },
+    {
+      "reviewKey": "publication:doi:10.29803/ce.202402_71(1).0002",
+      "status": "confirmed_mine",
+      "statusLabel": "已確認是本人的",
+      "recordType": "publication",
+      "targetFile": "data/publications.json",
+      "userNote": "",
+      "reviewedAt": "2026-08-03T12:28:25.178Z",
+      "record": {
+        "type": "publication",
+        "confidence": "high",
+        "detectionNotes": [
+          "ORCID work is not present in the current publications JSON.",
+          "Please verify authorship and publication status before adding.",
+          "Crossref enrichment failed: HTTP 404: Not Found"
+        ],
+        "sources": [
+          {
+            "name": "ORCID",
+            "url": "https://orcid.org/0000-0003-4484-3117"
+          },
+          {
+            "name": "DOI",
+            "url": "https://doi.org/10.29803/ce.202402_71(1).0002"
+          },
+          {
+            "name": "Crossref",
+            "url": "https://api.crossref.org/works/10.29803%2Fce.202402_71%281%29.0002"
+          }
+        ],
+        "doi": "10.29803/ce.202402_71(1).0002",
+        "title": "鈣鈦礦太陽能電池於太空應用的研究與展望",
+        "journal": "化工",
+        "publicationDate": "",
+        "authors": [],
+        "publisher": "",
+        "volume": "",
+        "issue": "",
+        "pages": "",
+        "abstract": "",
+        "keywords": [],
+        "sourceDocumentType": "journal-article",
+        "language": "zh-tw",
+        "suggestedPublicationType": "chinese-journal",
+        "publicationTypeConfidence": "high",
+        "publicationTypeReason": "Journal article with Chinese title, source, or language metadata.",
+        "reviewKey": "publication:doi:10.29803/ce.202402_71(1).0002"
+      },
+      "suggestedPublicationType": "chinese-journal",
+      "selectedPublicationType": "chinese-journal",
+      "publicationTypeManuallyChanged": false,
+      "publicationTypeConfidence": "high",
+      "publicationTypeReason": "Journal article with Chinese title, source, or language metadata."
+    }
+  ]
 }
