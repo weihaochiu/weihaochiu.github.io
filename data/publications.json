@@ -6128,7 +6128,7 @@
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
-        "isCorresponding": true,
+        "isCorresponding": false,
         "correspondingEmail": "",
         "sources": [
           "crossref",
@@ -6148,7 +6148,7 @@
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
-        "isCorresponding": false,
+        "isCorresponding": true,
         "correspondingEmail": "",
         "sources": [
           "crossref",
@@ -6312,7 +6312,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-08-01",
+      "lastChecked": "2026-08-03",
       "sources": [
         "crossref",
         "openalex"
@@ -12152,13 +12152,14 @@
     "authorships": [
       {
         "name": "Cheng, Hsin-Ming",
+        "orcid": "0000-0002-4332-4721",
         "openAlexId": "A5059052235",
         "authorOrder": 1,
         "authorPosition": "first",
         "affiliationIds": [],
         "isEqualContributor": null,
         "equalContributionGroup": "",
-        "isCorresponding": true,
+        "isCorresponding": false,
         "correspondingEmail": "",
         "sources": [
           "crossref",
@@ -12186,6 +12187,7 @@
       },
       {
         "name": "Lee, Chia-Hua",
+        "orcid": "0000-0003-4229-3027",
         "openAlexId": "A5001300090",
         "authorOrder": 3,
         "authorPosition": "middle",
@@ -12202,6 +12204,7 @@
       },
       {
         "name": "Tsai, Song-Yeu",
+        "orcid": "0000-0001-6039-242X",
         "openAlexId": "A5085196803",
         "authorOrder": 4,
         "authorPosition": "middle",
@@ -12218,6 +12221,7 @@
       },
       {
         "name": "Hsieh, Wen-Feng",
+        "orcid": "",
         "openAlexId": "A5112067710",
         "authorOrder": 5,
         "authorPosition": "last",
@@ -12245,19 +12249,16 @@
       ],
       "sourceUrls": {
         "crossref": "https://api.crossref.org/works/10.1557%2Fproc-1121-n14-01",
-        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1557%2Fproc-1121-n14-01",
-        "cguPure": "https://pure.lib.cgu.edu.tw/en/publications/branched-zno-nanowires-for-enhancing-energy-conversion-efficiency/",
-        "orcid": "https://orcid.org/0000-0003-4484-3117"
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1557%2Fproc-1121-n14-01"
       },
       "requiresManualReview": true,
       "missingFields": [
-        "keywords",
-        "affiliations",
-        "correspondingEmail",
-        "equalContribution"
+        "equalContribution",
+        "affiliations"
       ],
       "warnings": [
-        "Crossref and OpenAlex identify publication year 2008, while the Chang Gung University Pure record identifies 2009; the DOI registration year 2008 is used."
+        "Crossref and OpenAlex identify publication year 2008, while the Chang Gung University Pure record identifies 2009; the DOI registration year 2008 is used.",
+        "europe-pmc: No DOI match"
       ]
     },
     "id": "10.1557/proc-1121-n14-01",
