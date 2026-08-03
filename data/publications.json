@@ -6128,7 +6128,7 @@
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
-        "isCorresponding": true,
+        "isCorresponding": false,
         "correspondingEmail": "",
         "sources": [
           "crossref",
@@ -6148,7 +6148,7 @@
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
-        "isCorresponding": false,
+        "isCorresponding": true,
         "correspondingEmail": "",
         "sources": [
           "crossref",
@@ -6312,7 +6312,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-08-01",
+      "lastChecked": "2026-08-03",
       "sources": [
         "crossref",
         "openalex"
