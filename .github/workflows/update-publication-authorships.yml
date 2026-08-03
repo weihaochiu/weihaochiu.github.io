@@ -88,16 +88,45 @@ jobs:
           publications = json.loads((root / 'data/publications.json').read_text(encoding='utf-8'))
           detail_pages = list((root / 'publications').glob('*.html'))
           errors = []
+
+          def slugify(value):
+              return re.sub(r'[^a-z0-9]+', '-', str(value).lower()).strip('-') or 'publication'
+
+          def publication_slug(publication):
+              return slugify(publication.get('id') or publication.get('doi') or publication.get('title'))
+
+          def has_static_authorship_details(publication):
+              affiliations = publication.get('affiliations') or []
+              has_affiliation = any(
+                  isinstance(row, dict)
+                  and any(
+                      str(row.get(key) or '').strip()
+                      for key in ('department', 'institution', 'address', 'raw', 'city', 'countryCode')
+                  )
+                  for row in affiliations
+              )
+              authorships = publication.get('authorships') or []
+              has_role = any(
+                  isinstance(row, dict)
+                  and (row.get('isEqualContributor') is True or row.get('isCorresponding') is True)
+                  for row in authorships
+              )
+              return has_affiliation or has_role
+
           if len(detail_pages) != len(publications):
               errors.append(f'detail page count: expected {len(publications)}, found {len(detail_pages)}')
           for publication in publications:
-              slug = re.sub(r'[^a-z0-9]+', '-', str(publication.get('doi') or 'publication').lower()).strip('-')
+              slug = publication_slug(publication)
               page = root / 'publications' / f'{slug}.html'
+              identifier = publication.get('doi') or publication.get('id') or publication.get('title')
               if not page.exists():
+                  errors.append(f'{identifier}: missing generated detail page ({page.as_posix()})')
                   continue
               text = page.read_text(encoding='utf-8')
-              if publication.get('authorships') and 'publication-affiliations' not in text:
-                  errors.append(f'{publication.get("doi")}: missing static authorship block')
+              if 'publication-authors' not in text:
+                  errors.append(f'{identifier}: missing static author row')
+              if has_static_authorship_details(publication) and 'publication-affiliations' not in text:
+                  errors.append(f'{identifier}: missing static affiliation or author-role block')
           insights = (root / 'publication-insights-4d8c7a.html').read_text(encoding='utf-8')
           if 'PUBLICATION_AUTHORSHIP_INSIGHTS_START' not in insights:
               errors.append('Publication Analytics authorship extension is not embedded')

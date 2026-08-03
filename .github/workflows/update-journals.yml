@@ -8,6 +8,7 @@ on:
       - "data/publications.json"
       - "data/publication_taxonomy.json"
       - "scripts/update_journals.py"
+      - ".github/workflows/update-journals.yml"
   schedule:
     # 03:17 UTC on the first day of each month = 11:17 Asia/Taipei.
     - cron: "17 3 1 * *"
@@ -26,7 +27,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: update-journal-metadata
+  group: website-content-write
   cancel-in-progress: false
 
 jobs:
@@ -37,6 +38,9 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -84,6 +88,7 @@ jobs:
       - name: Commit journal data when changed
         shell: bash
         run: |
+          set -euo pipefail
           git add data/journals.json
           if git diff --cached --quiet; then
             echo "No journal metadata changes to commit."
@@ -93,4 +98,21 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "Update journal metadata"
-          git push
+
+          for attempt in 1 2 3 4; do
+            echo "Push attempt ${attempt}/4"
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort || true
+              echo "::error::Journal metadata update conflicts with newer main-branch changes."
+              exit 1
+            fi
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Main changed during push; retrying safely."
+            sleep $((attempt * 3))
+          done
+
+          echo "::error::Unable to push journal metadata after four attempts."
+          exit 1
