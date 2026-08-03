@@ -2,8 +2,8 @@
   "schemaVersion": 3,
   "source": "OpenAlex Works API",
   "status": "success_with_exclusions",
-  "lastSuccessfulUpdate": "2026-08-03T12:45:32.958876Z",
-  "workCount": 37,
+  "lastSuccessfulUpdate": "2026-08-03T18:47:26.786683Z",
+  "workCount": 38,
   "missingPublicationYearCount": 0,
   "totalCitationsFromPublicationMetrics": 989,
   "rawTotalCitationsFromHistory": 989,
@@ -15530,6 +15530,23 @@
           "type": "article"
         }
       ]
+    },
+    "W2316396476": {
+      "doi": "10.1557/proc-1121-n14-01",
+      "title": "Branched ZnO Nanowires for Enhancing Energy Conversion Efficiency of Dye-Sensitized Solar Cells",
+      "publicationYear": 2008,
+      "currentCitationCount": 0,
+      "sourceUrl": "https://api.openalex.org/works?filter=cites:W2316396476",
+      "citationsByYear": [],
+      "rawCitationsByYear": [],
+      "historyTotal": 0,
+      "rawHistoryTotal": 0,
+      "excludedInvalidCitationCount": 0,
+      "excludedInvalidCitations": [],
+      "unassignedCitationCount": 0,
+      "citingWorkCount": 0,
+      "citingArticlesWithDoiCount": 0,
+      "citingArticlesWithDoi": []
     },
     "W3174093177": {
       "doi": "10.3390/nano11061607",
