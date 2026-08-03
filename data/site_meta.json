@@ -1,5 +1,5 @@
 {
   "version": "v24",
-  "lastUpdated": "2026-08-02",
+  "lastUpdated": "2026-08-03",
   "notes": "V24 provides 37 static crawler-readable ScholarlyArticle records with OpenAlex citations by year and DOI-linked citing-article lists, while retaining Google Scholar totals and article-specific scholarly metadata."
 }
