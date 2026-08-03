@@ -2,7 +2,7 @@
   "schemaVersion": 3,
   "source": "OpenAlex Works API",
   "status": "success_with_exclusions",
-  "lastSuccessfulUpdate": "2026-08-01T00:28:51.609038Z",
+  "lastSuccessfulUpdate": "2026-08-03T06:56:18.460138Z",
   "workCount": 37,
   "missingPublicationYearCount": 0,
   "totalCitationsFromPublicationMetrics": 989,
@@ -5536,7 +5536,7 @@
           "volume": "59",
           "issue": "10",
           "pages": "807-816",
-          "type": "book-chapter"
+          "type": "article"
         },
         {
           "openAlexId": "W2503319497",
