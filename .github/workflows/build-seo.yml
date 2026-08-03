@@ -1,4 +1,4 @@
-name: Build v24 AI and scholarly metadata
+name: Build v25 typed scholarly metadata
 
 on:
   workflow_dispatch:
@@ -22,6 +22,7 @@ on:
       - "scripts/sync_publication_authors.py"
       - "scripts/sync_patent_inventors.py"
       - "scripts/validate_patents.py"
+      - "scripts/validate_publications.py"
       - "scripts/update_publication_authorships.py"
       - "assets/css/styles.css"
       - "assets/js/app.js"
@@ -55,7 +56,7 @@ jobs:
       - name: Synchronize patent inventors
         run: python scripts/sync_patent_inventors.py
 
-      - name: Generate v24 website files
+      - name: Generate v25 website files
         run: |
           python scripts/build_seo.py
           python scripts/build_patent_pages.py
@@ -66,6 +67,7 @@ jobs:
           python scripts/sync_publication_authors.py --check
           python scripts/sync_patent_inventors.py --check
           python scripts/validate_patents.py
+          python scripts/validate_publications.py
           python scripts/build_seo.py
           python scripts/build_patent_pages.py
           python - <<'PY'
@@ -74,7 +76,8 @@ jobs:
           from pathlib import Path
 
           root = Path('.')
-          expected = len(json.loads((root / 'data/publications.json').read_text(encoding='utf-8')))
+          publications = json.loads((root / 'data/publications.json').read_text(encoding='utf-8'))
+          expected = len(publications)
           page = (root / 'publications.html').read_text(encoding='utf-8')
           titles = len(re.findall(r'<meta\s+name=["\']citation_title["\']', page, flags=re.I))
           detail_pages = len(list((root / 'publications').glob('*.html')))
@@ -100,6 +103,18 @@ jobs:
               errors.append(f'legacy OpenAlex scripts: expected 0, found {legacy_scripts}')
           if (marker_starts, marker_ends) != (1, 1):
               errors.append(f'citation marker pairs: expected 1/1, found {marker_starts}/{marker_ends}')
+          static_marker_starts = page.count('<!-- SEO_STATIC_PUBLICATIONS_START -->')
+          static_marker_ends = page.count('<!-- SEO_STATIC_PUBLICATIONS_END -->')
+          if (static_marker_starts, static_marker_ends) != (1, 1):
+              errors.append(
+                  f'static publication marker pairs: expected 1/1, '
+                  f'found {static_marker_starts}/{static_marker_ends}'
+              )
+          for publication in publications:
+              source = publication.get('id') or publication.get('doi') or publication.get('title') or 'publication'
+              slug = re.sub(r'[^a-z0-9]+', '-', str(source).lower()).strip('-') or 'publication'
+              if not (root / 'publications' / f'{slug}.html').exists():
+                  errors.append(f'missing detail page for publication id {source}')
           if 'PUBLICATION_AUTHORSHIP_INSIGHTS_START' not in insights:
               errors.append('Publication Analytics authorship extension is missing')
           app_js = (root / 'assets/js/app.js').read_text(encoding='utf-8')
@@ -210,7 +225,7 @@ jobs:
             exit 0
           fi
 
-          git commit -m "Build v24 AI and scholarly metadata"
+          git commit -m "Build v25 typed scholarly metadata"
           git reset --hard HEAD
           git clean -fd
 

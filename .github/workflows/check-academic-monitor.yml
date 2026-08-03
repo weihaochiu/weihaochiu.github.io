@@ -10,6 +10,7 @@ on:
     paths:
       - "data/academic_monitor_review_decisions.json"
       - "data/publications.json"
+      - "data/publication_taxonomy.json"
       - "data/patents.json"
       - "data/patent_families.json"
       - "data/patent_metadata.json"
@@ -20,6 +21,7 @@ on:
       - "scripts/academic_monitor_common.py"
       - "scripts/check_academic_monitor.py"
       - "scripts/check_publications.py"
+      - "scripts/validate_publications.py"
       - "scripts/check_patents.py"
       - "scripts/patent_common.py"
       - "scripts/sync_patent_inventors.py"
@@ -59,6 +61,7 @@ jobs:
         run: |
           python scripts/sync_patent_inventors.py --check
           python scripts/validate_patents.py
+          python scripts/validate_publications.py
           python scripts/check_academic_monitor.py
 
       - name: Validate monitor JSON

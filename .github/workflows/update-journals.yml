@@ -6,6 +6,8 @@ on:
       - main
     paths:
       - "data/publications.json"
+      - "data/publication_taxonomy.json"
+      - "scripts/update_journals.py"
   schedule:
     # 03:17 UTC on the first day of each month = 11:17 Asia/Taipei.
     - cron: "17 3 1 * *"
