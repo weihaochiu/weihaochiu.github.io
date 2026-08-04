@@ -25,7 +25,9 @@ on:
       - "scripts/validate_publications.py"
       - "scripts/update_publication_authorships.py"
       - "assets/css/styles.css"
+      - "assets/css/international-collaboration.css"
       - "assets/js/app.js"
+      - "assets/js/international-collaboration-insights.js"
       - "publication-insights-4d8c7a.html"
       - "patents.html"
       - ".github/workflows/build-seo.yml"
@@ -117,6 +119,13 @@ jobs:
                   errors.append(f'missing detail page for publication id {source}')
           if 'PUBLICATION_AUTHORSHIP_INSIGHTS_START' not in insights:
               errors.append('Publication Analytics authorship extension is missing')
+          if 'assets/js/international-collaboration-insights.js' not in insights:
+              errors.append('Publication Analytics international-collaboration extension is missing')
+          collaboration_js = (
+              root / 'assets/js/international-collaboration-insights.js'
+          ).read_text(encoding='utf-8')
+          if 'internationalCollaboration' not in collaboration_js:
+              errors.append('International-collaboration analytics script is invalid')
           app_js = (root / 'assets/js/app.js').read_text(encoding='utf-8')
           if 'ready:authorCardsReady' not in app_js or 'await window.AuthorCards?.ready' not in app_js:
               errors.append('Author-card data readiness guard is missing')

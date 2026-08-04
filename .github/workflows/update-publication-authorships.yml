@@ -76,6 +76,7 @@ jobs:
         shell: bash
         run: |
           python scripts/update_publication_authorships.py --check
+          python scripts/validate_publications.py
           python scripts/sync_publication_authors.py --check
           python scripts/build_seo.py
           python scripts/update_publication_authorships.py --check
@@ -130,6 +131,8 @@ jobs:
           insights = (root / 'publication-insights-4d8c7a.html').read_text(encoding='utf-8')
           if 'PUBLICATION_AUTHORSHIP_INSIGHTS_START' not in insights:
               errors.append('Publication Analytics authorship extension is not embedded')
+          if 'assets/js/international-collaboration-insights.js' not in insights:
+              errors.append('Publication Analytics international-collaboration extension is not embedded')
           if errors:
               raise SystemExit('\n'.join(errors))
           print(f'Validated {len(publications)} publication authorship records and generated pages.')
