@@ -243,7 +243,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-07-25",
+      "lastChecked": "2026-08-04",
       "sources": [
         "crossref",
         "openalex"
@@ -312,7 +312,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-08-03",
+      "lastEvaluated": "2026-08-04",
       "inputSignature": "a9df6e1577a9b272b067"
     }
   },
@@ -506,7 +506,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-07-25",
+      "lastChecked": "2026-08-04",
       "sources": [
         "crossref",
         "openalex"
@@ -564,7 +564,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-08-03",
+      "lastEvaluated": "2026-08-04",
       "inputSignature": "0b8e463cfe1fafa81577"
     }
   },
@@ -827,7 +827,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-07-25",
+      "lastChecked": "2026-08-04",
       "sources": [
         "crossref",
         "openalex"
@@ -897,7 +897,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-08-03",
+      "lastEvaluated": "2026-08-04",
       "inputSignature": "1c132b074bcac6477ba2"
     }
   },
@@ -1121,7 +1121,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-08-01",
+      "lastChecked": "2026-08-04",
       "sources": [
         "crossref",
         "openalex",
@@ -1181,7 +1181,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-08-03",
+      "lastEvaluated": "2026-08-04",
       "inputSignature": "c852093d4e34311602e9"
     }
   },
@@ -1378,7 +1378,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-07-25",
+      "lastChecked": "2026-08-04",
       "sources": [
         "crossref",
         "openalex"
@@ -1436,7 +1436,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-08-03",
+      "lastEvaluated": "2026-08-04",
       "inputSignature": "4fd783570c853dddda2a"
     }
   },
@@ -1673,25 +1673,22 @@
       }
     ],
     "authorshipMetadata": {
-      "status": "manually-verified",
-      "lastChecked": "2026-08-03",
+      "status": "manual",
+      "lastChecked": "2026-08-04",
       "sources": [
         "crossref",
         "openalex"
       ],
       "sourceUrls": {
         "crossref": "https://api.crossref.org/works/10.1002%2Fasia.70245",
-        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1002%2Fasia.70245",
-        "publisher": "https://aces.onlinelibrary.wiley.com/doi/10.1002/asia.70245"
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1002%2Fasia.70245"
       },
       "requiresManualReview": true,
       "missingFields": [
         "equalContribution",
         "affiliationAddresses"
       ],
-      "warnings": [
-        "europe-pmc: No open full-text XML"
-      ],
+      "warnings": [],
       "manualOverride": true,
       "manualAffiliations": true,
       "lockedFields": [
@@ -1924,7 +1921,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-07-25",
+      "lastChecked": "2026-08-04",
       "sources": [
         "crossref",
         "openalex"
@@ -1982,7 +1979,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-08-03",
+      "lastEvaluated": "2026-08-04",
       "inputSignature": "22173ef86142290a3bae"
     }
   },
@@ -3398,25 +3395,22 @@
       }
     ],
     "authorshipMetadata": {
-      "status": "manually-verified",
-      "lastChecked": "2026-08-03",
+      "status": "manual",
+      "lastChecked": "2026-08-04",
       "sources": [
         "crossref",
         "openalex"
       ],
       "sourceUrls": {
         "crossref": "https://api.crossref.org/works/10.1002%2Fsolr.202500538",
-        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1002%2Fsolr.202500538",
-        "publisher": "https://onlinelibrary.wiley.com/doi/10.1002/solr.202500538"
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1002%2Fsolr.202500538"
       },
       "requiresManualReview": true,
       "missingFields": [
         "equalContribution",
         "affiliationAddresses"
       ],
-      "warnings": [
-        "europe-pmc: No DOI match"
-      ],
+      "warnings": [],
       "manualOverride": true,
       "manualAffiliations": true,
       "lockedFields": [
@@ -4080,7 +4074,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-07-25",
+      "lastChecked": "2026-08-04",
       "sources": [
         "crossref",
         "openalex"
@@ -4156,7 +4150,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-08-03",
+      "lastEvaluated": "2026-08-04",
       "inputSignature": "1ea6740465eff16b3c12"
     }
   },
@@ -4712,7 +4706,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-07-25",
+      "lastChecked": "2026-08-04",
       "sources": [
         "europe-pmc",
         "crossref",
@@ -4778,7 +4772,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-08-03",
+      "lastEvaluated": "2026-08-04",
       "inputSignature": "ccdbdcf351f04079cb9f"
     }
   },
@@ -5010,7 +5004,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-07-25",
+      "lastChecked": "2026-08-04",
       "sources": [
         "crossref",
         "openalex"
@@ -5079,7 +5073,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-08-03",
+      "lastEvaluated": "2026-08-04",
       "inputSignature": "595d62940a5cafe590c7"
     }
   },
@@ -5289,7 +5283,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-07-25",
+      "lastChecked": "2026-08-04",
       "sources": [
         "crossref",
         "openalex"
@@ -5347,7 +5341,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-08-03",
+      "lastEvaluated": "2026-08-04",
       "inputSignature": "79c1857d0278fd87bc24"
     }
   },
@@ -5573,7 +5567,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-07-25",
+      "lastChecked": "2026-08-04",
       "sources": [
         "crossref",
         "openalex"
@@ -5631,7 +5625,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-08-03",
+      "lastEvaluated": "2026-08-04",
       "inputSignature": "ed8222cb4d9f298fb4eb"
     }
   },
@@ -6105,7 +6099,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-07-25",
+      "lastChecked": "2026-08-04",
       "sources": [
         "crossref",
         "openalex"
@@ -6170,7 +6164,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-08-03",
+      "lastEvaluated": "2026-08-04",
       "inputSignature": "6f04b5cec05ac54acf48"
     }
   },
@@ -6501,7 +6495,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-07-25",
+      "lastChecked": "2026-08-04",
       "sources": [
         "crossref",
         "openalex"
@@ -6564,7 +6558,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-08-03",
+      "lastEvaluated": "2026-08-04",
       "inputSignature": "0592a38ec9f5c6f74306"
     }
   },
@@ -6869,7 +6863,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-08-03",
+      "lastChecked": "2026-08-04",
       "sources": [
         "crossref",
         "openalex"
@@ -6930,7 +6924,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-08-03",
+      "lastEvaluated": "2026-08-04",
       "inputSignature": "f760ab4ff05561de4789"
     }
   },
@@ -7151,7 +7145,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-07-25",
+      "lastChecked": "2026-08-04",
       "sources": [
         "crossref",
         "openalex"
@@ -7210,7 +7204,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-08-03",
+      "lastEvaluated": "2026-08-04",
       "inputSignature": "b3bd572def205f68c298"
     }
   },
@@ -7496,7 +7490,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-07-25",
+      "lastChecked": "2026-08-04",
       "sources": [
         "crossref",
         "openalex"
@@ -7574,7 +7568,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-08-03",
+      "lastEvaluated": "2026-08-04",
       "inputSignature": "456af595fa939258495f"
     }
   },
@@ -7934,7 +7928,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-07-25",
+      "lastChecked": "2026-08-04",
       "sources": [
         "crossref",
         "openalex"
@@ -8007,7 +8001,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-08-03",
+      "lastEvaluated": "2026-08-04",
       "inputSignature": "287a0d951068e32d0268"
     }
   },
@@ -8312,7 +8306,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-07-25",
+      "lastChecked": "2026-08-04",
       "sources": [
         "crossref",
         "openalex"
@@ -8373,7 +8367,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-08-03",
+      "lastEvaluated": "2026-08-04",
       "inputSignature": "5df207a978ca0afbe279"
     }
   },
@@ -8707,7 +8701,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-07-25",
+      "lastChecked": "2026-08-04",
       "sources": [
         "europe-pmc",
         "crossref",
@@ -8781,7 +8775,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-08-03",
+      "lastEvaluated": "2026-08-04",
       "inputSignature": "31222619993b94a45835"
     }
   },
@@ -9049,7 +9043,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-07-25",
+      "lastChecked": "2026-08-04",
       "sources": [
         "europe-pmc",
         "crossref",
@@ -9113,7 +9107,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-08-03",
+      "lastEvaluated": "2026-08-04",
       "inputSignature": "c8a7b8f07b3dfd6f79df"
     }
   },
@@ -9366,7 +9360,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-07-25",
+      "lastChecked": "2026-08-04",
       "sources": [
         "crossref",
         "openalex"
@@ -9427,7 +9421,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-08-03",
+      "lastEvaluated": "2026-08-04",
       "inputSignature": "fa86ca80d91d75d79cfa"
     }
   },
@@ -9676,7 +9670,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-07-25",
+      "lastChecked": "2026-08-04",
       "sources": [
         "europe-pmc",
         "crossref",
@@ -9740,7 +9734,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-08-03",
+      "lastEvaluated": "2026-08-04",
       "inputSignature": "72269bb3b7bfb46dd1a7"
     }
   },
@@ -9982,7 +9976,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-07-25",
+      "lastChecked": "2026-08-04",
       "sources": [
         "europe-pmc",
         "crossref",
@@ -10057,7 +10051,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-08-03",
+      "lastEvaluated": "2026-08-04",
       "inputSignature": "a936294a2e78ca55a0d6"
     }
   },
@@ -10390,7 +10384,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-07-25",
+      "lastChecked": "2026-08-04",
       "sources": [
         "europe-pmc",
         "crossref",
@@ -10464,7 +10458,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-08-03",
+      "lastEvaluated": "2026-08-04",
       "inputSignature": "89da534aa25a2f954072"
     }
   },
@@ -10618,7 +10612,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-07-25",
+      "lastChecked": "2026-08-04",
       "sources": [
         "crossref",
         "openalex"
@@ -10685,7 +10679,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-08-03",
+      "lastEvaluated": "2026-08-04",
       "inputSignature": "cb9b786771da7e1909e8"
     }
   },
@@ -10902,7 +10896,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-07-25",
+      "lastChecked": "2026-08-04",
       "sources": [
         "crossref",
         "openalex"
@@ -10961,7 +10955,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-08-03",
+      "lastEvaluated": "2026-08-04",
       "inputSignature": "4a5fc1ba8d3849cec8b8"
     }
   },
@@ -11129,7 +11123,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-07-25",
+      "lastChecked": "2026-08-04",
       "sources": [
         "crossref",
         "openalex"
@@ -11187,7 +11181,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-08-03",
+      "lastEvaluated": "2026-08-04",
       "inputSignature": "b8839a489b614cca19c1"
     }
   },
@@ -11336,7 +11330,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-07-25",
+      "lastChecked": "2026-08-04",
       "sources": [
         "crossref",
         "openalex"
@@ -11394,7 +11388,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-08-03",
+      "lastEvaluated": "2026-08-04",
       "inputSignature": "b04f3d7f64ab5607593b"
     }
   },
@@ -11573,25 +11567,22 @@
       }
     ],
     "authorshipMetadata": {
-      "status": "manually-verified",
-      "lastChecked": "2026-08-03",
+      "status": "manual",
+      "lastChecked": "2026-08-04",
       "sources": [
         "crossref",
         "openalex"
       ],
       "sourceUrls": {
         "crossref": "https://api.crossref.org/works/10.1039%2Fc0jm04099a",
-        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1039%2Fc0jm04099a",
-        "publisher": "https://pubs.rsc.org/en/content/articlehtml/2011/jm/c0jm04099a"
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1039%2Fc0jm04099a"
       },
       "requiresManualReview": true,
       "missingFields": [
         "equalContribution",
         "affiliationAddresses"
       ],
-      "warnings": [
-        "europe-pmc: No DOI match"
-      ],
+      "warnings": [],
       "manualOverride": true,
       "manualAffiliations": true,
       "lockedFields": [
@@ -11879,7 +11870,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-07-25",
+      "lastChecked": "2026-08-04",
       "sources": [
         "crossref",
         "openalex"
@@ -11938,7 +11929,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-08-03",
+      "lastEvaluated": "2026-08-04",
       "inputSignature": "7a8110569239686bcb7b"
     }
   },
@@ -12174,7 +12165,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-07-25",
+      "lastChecked": "2026-08-04",
       "sources": [
         "crossref",
         "openalex"
@@ -12243,7 +12234,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-08-03",
+      "lastEvaluated": "2026-08-04",
       "inputSignature": "0c9eb1fab311e5c1a508"
     }
   },
@@ -12466,7 +12457,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-07-25",
+      "lastChecked": "2026-08-04",
       "sources": [
         "crossref",
         "openalex"
@@ -12524,7 +12515,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-08-03",
+      "lastEvaluated": "2026-08-04",
       "inputSignature": "f5018d2affca6a20b0fb"
     }
   },
@@ -12756,25 +12747,22 @@
       }
     ],
     "authorshipMetadata": {
-      "status": "manually-verified",
-      "lastChecked": "2026-08-03",
+      "status": "manual",
+      "lastChecked": "2026-08-04",
       "sources": [
         "crossref",
         "openalex"
       ],
       "sourceUrls": {
         "crossref": "https://api.crossref.org/works/10.1039%2Fb902595m",
-        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1039%2Fb902595m",
-        "publisher": "https://pubs.rsc.org/en/content/articlehtml/2009/ee/b902595m"
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1039%2Fb902595m"
       },
       "requiresManualReview": true,
       "missingFields": [
         "equalContribution",
         "affiliationAddresses"
       ],
-      "warnings": [
-        "europe-pmc: No DOI match"
-      ],
+      "warnings": [],
       "manualOverride": true,
       "manualAffiliations": true,
       "lockedFields": [
@@ -12975,25 +12963,22 @@
       }
     ],
     "authorshipMetadata": {
-      "status": "manually-verified",
-      "lastChecked": "2026-08-03",
+      "status": "manual",
+      "lastChecked": "2026-08-04",
       "sources": [
         "crossref",
         "openalex"
       ],
       "sourceUrls": {
         "crossref": "https://api.crossref.org/works/10.1021%2Fjp805239k",
-        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1021%2Fjp805239k",
-        "publisher": "https://pubs.acs.org/doi/10.1021/jp805239k"
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1021%2Fjp805239k"
       },
       "requiresManualReview": true,
       "missingFields": [
         "equalContribution",
         "affiliationAddresses"
       ],
-      "warnings": [
-        "europe-pmc: No DOI match"
-      ],
+      "warnings": [],
       "manualOverride": true,
       "manualAffiliations": true,
       "lockedFields": [
@@ -13183,7 +13168,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-07-25",
+      "lastChecked": "2026-08-04",
       "sources": [
         "crossref",
         "openalex"
@@ -13240,7 +13225,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-08-03",
+      "lastEvaluated": "2026-08-04",
       "inputSignature": "513bac3036da26f159e9"
     }
   },
@@ -13659,7 +13644,7 @@
     "affiliations": [],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-08-03",
+      "lastChecked": "2026-08-04",
       "sources": [
         "Crossref",
         "OpenAlex",
@@ -13723,7 +13708,7 @@
         "No usable author-address country data"
       ],
       "manualOverride": false,
-      "lastEvaluated": "2026-08-03",
+      "lastEvaluated": "2026-08-04",
       "inputSignature": "de4bab5ed0b91be06006"
     }
   }
