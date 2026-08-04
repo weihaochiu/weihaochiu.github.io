@@ -20,6 +20,7 @@ def main() -> None:
     errors: list[str] = []
     seen_ids: set[str] = set()
     seen_dois: set[str] = set()
+    collaboration_statuses = {"international", "domestic", "foreign-only", "needs-review"}
 
     if not isinstance(publications, list):
         raise SystemExit("data/publications.json must contain a JSON array.")
@@ -32,6 +33,7 @@ def main() -> None:
         publication_type = publication.get("publicationType")
         document_type = publication.get("documentType")
         analytics = publication.get("analytics")
+        collaboration = publication.get("internationalCollaboration")
 
         if not output_id:
             errors.append(f"{label}: missing stable id")
@@ -64,6 +66,28 @@ def main() -> None:
             for field in ("coreJournalCount", "journalMetrics", "fwci"):
                 if analytics.get(field) is not False:
                     errors.append(f"{label}: non-core output requires analytics.{field}=false")
+
+        if not isinstance(collaboration, dict):
+            errors.append(f"{label}: internationalCollaboration must be an object")
+            continue
+        status = collaboration.get("status")
+        if status not in collaboration_statuses:
+            errors.append(f"{label}: invalid internationalCollaboration.status {status!r}")
+        if collaboration.get("isInternational") is not (status == "international"):
+            errors.append(f"{label}: collaboration status and isInternational disagree")
+        if collaboration.get("homeCountryCode") != "TW":
+            errors.append(f"{label}: collaboration homeCountryCode must be TW")
+        if status == "international" and not collaboration.get("partnerCountryCodes"):
+            errors.append(f"{label}: international collaboration requires a partner country")
+        if status != "international" and collaboration.get("partnerCountryCodes"):
+            errors.append(f"{label}: non-international record cannot have partner countries")
+        if collaboration.get("manualOverride") not in {True, False}:
+            errors.append(f"{label}: collaboration manualOverride must be boolean")
+        if collaboration.get("requiresManualReview") not in {True, False}:
+            errors.append(f"{label}: collaboration requiresManualReview must be boolean")
+        for field in ("countryCodes", "partnerCountryCodes", "partnerInstitutions", "sources", "warnings"):
+            if not isinstance(collaboration.get(field), list):
+                errors.append(f"{label}: collaboration {field} must be an array")
 
     if errors:
         raise SystemExit("\n".join(errors))

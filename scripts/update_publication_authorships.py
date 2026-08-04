@@ -22,6 +22,7 @@ from __future__ import annotations
 
 import argparse
 import copy
+import hashlib
 import html
 import json
 import os
@@ -50,6 +51,7 @@ ME_ALIASES = {
 }
 SOURCE_PRIORITY = {"manual": 0, "europe-pmc": 1, "crossref": 2, "openalex": 3, "publisher-html": 4}
 USER_AGENT = "Wei-Hao-Chiu-Academic-Website/1.0 (publication metadata updater)"
+COLLABORATION_STATUSES = {"international", "domestic", "foreign-only", "needs-review"}
 
 
 def normalize_text(value: Any) -> str:
@@ -112,6 +114,152 @@ def ordered_unique(values: Iterable[str]) -> list[str]:
             seen.add(key)
             output.append(value)
     return output
+
+
+def infer_country_code(affiliation: dict[str, Any]) -> str:
+    """Return a stored country code or one explicitly stated by the address."""
+    stored = clean_space(affiliation.get("countryCode")).upper()
+    if stored:
+        return stored
+    text = clean_space(" ".join(str(affiliation.get(key) or "") for key in ("institution", "address", "raw"))).lower()
+    explicit_names = {
+        "taiwan": "TW",
+        "hong kong": "HK",
+        "india": "IN",
+        "indonesia": "ID",
+        "united states": "US",
+        "u.s.a.": "US",
+        "usa": "US",
+    }
+    for name, code in explicit_names.items():
+        if name in text:
+            return code
+    return ""
+
+
+def collaboration_input_signature(publication: dict[str, Any]) -> str:
+    payload = {
+        "authors": publication.get("authors") or [],
+        "authorships": [
+            {
+                "name": row.get("name"),
+                "affiliationIds": row.get("affiliationIds") or [],
+            }
+            for row in publication.get("authorships") or []
+            if isinstance(row, dict)
+        ],
+        "affiliations": [
+            {
+                key: row.get(key)
+                for key in ("id", "institution", "address", "raw", "countryCode", "ror", "source", "sourceId")
+            }
+            for row in publication.get("affiliations") or []
+            if isinstance(row, dict)
+        ],
+    }
+    encoded = json.dumps(payload, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode("utf-8")
+    return hashlib.sha256(encoded).hexdigest()[:20]
+
+
+def evaluate_international_collaboration(publication: dict[str, Any]) -> dict[str, Any]:
+    """Persist a publication-level collaboration decision from author addresses.
+
+    A manual override is authoritative. Automatic decisions use only affiliation
+    records actually referenced by an authorship; an explicit Taiwan and foreign
+    address is sufficient for an international result, while domestic and
+    foreign-only results require country coverage for every author.
+    """
+    existing = publication.get("internationalCollaboration") or {}
+    if isinstance(existing, dict) and existing.get("manualOverride") is True:
+        return copy.deepcopy(existing)
+
+    affiliations = {
+        str(row.get("id") or ""): row
+        for row in publication.get("affiliations") or []
+        if isinstance(row, dict) and row.get("id")
+    }
+    authorships = [row for row in publication.get("authorships") or [] if isinstance(row, dict)]
+    referenced_ids: list[str] = []
+    author_country_sets: list[set[str]] = []
+    warnings: list[str] = []
+    for row in authorships:
+        ids = [str(value) for value in row.get("affiliationIds") or [] if str(value) in affiliations]
+        referenced_ids.extend(ids)
+        countries = {infer_country_code(affiliations[aff_id]) for aff_id in ids}
+        countries.discard("")
+        author_country_sets.append(countries)
+        if not countries:
+            warnings.append(f"No country-qualified affiliation for {clean_space(row.get('name')) or 'an author'}")
+
+    referenced_ids = ordered_unique(referenced_ids)
+    country_codes = sorted({infer_country_code(affiliations[aff_id]) for aff_id in referenced_ids} - {""})
+    taiwan_ids = [aff_id for aff_id in referenced_ids if infer_country_code(affiliations[aff_id]) == "TW"]
+    foreign_ids = [aff_id for aff_id in referenced_ids if infer_country_code(affiliations[aff_id]) not in {"", "TW"}]
+    complete_author_coverage = bool(authorships) and len(author_country_sets) == len(authorships) and all(author_country_sets)
+
+    if taiwan_ids and foreign_ids:
+        status = "international"
+        requires_review = False
+    elif complete_author_coverage and taiwan_ids and not foreign_ids:
+        status = "domestic"
+        requires_review = False
+    elif complete_author_coverage and foreign_ids and not taiwan_ids:
+        status = "foreign-only"
+        requires_review = False
+    else:
+        status = "needs-review"
+        requires_review = True
+        if not country_codes:
+            warnings.append("No usable author-address country data")
+        elif not complete_author_coverage:
+            warnings.append("Country coverage is incomplete for one or more authors")
+
+    partner_codes = [code for code in country_codes if code != "TW"] if status == "international" else []
+    partner_institutions = []
+    seen_institutions: set[tuple[str, str]] = set()
+    for aff_id in foreign_ids if status == "international" else []:
+        row = affiliations[aff_id]
+        name = clean_space(row.get("institution") or row.get("address") or row.get("raw"))
+        code = infer_country_code(row)
+        key = (normalize_text(name), code)
+        if not name or key in seen_institutions:
+            continue
+        seen_institutions.add(key)
+        partner_institutions.append(
+            {
+                "name": name,
+                "countryCode": code,
+                "ror": clean_space(row.get("ror")),
+            }
+        )
+
+    sources = ordered_unique(
+        [
+            *(publication.get("authorshipMetadata", {}).get("sources") or []),
+            *(str(affiliations[aff_id].get("source") or "") for aff_id in referenced_ids),
+        ]
+    )
+    has_dual_affiliation = any("TW" in codes and any(code != "TW" for code in codes) for codes in author_country_sets)
+    return {
+        "status": status,
+        "isInternational": status == "international",
+        "homeCountryCode": "TW",
+        "countryCodes": country_codes,
+        "partnerCountryCodes": partner_codes,
+        "partnerInstitutions": partner_institutions,
+        "taiwanAffiliationIds": taiwan_ids,
+        "foreignAffiliationIds": foreign_ids,
+        "hasDualAffiliation": has_dual_affiliation,
+        "determinationMethod": "author-affiliation-address",
+        "confidence": "verified" if not requires_review else "incomplete",
+        "sources": sources,
+        "evidenceUrls": copy.deepcopy(publication.get("authorshipMetadata", {}).get("sourceUrls") or {}),
+        "requiresManualReview": requires_review,
+        "warnings": ordered_unique(warnings),
+        "manualOverride": False,
+        "lastEvaluated": date.today().isoformat(),
+        "inputSignature": collaboration_input_signature(publication),
+    }
 
 
 class FetchError(RuntimeError):
@@ -607,6 +755,7 @@ def merge_publication(publication: dict[str, Any], results: list[SourceResult]) 
     merged_candidates: list[list[AffiliationCandidate]] = [[] for _ in names]
     authorships: list[dict[str, Any]] = []
     existing_metadata = dict(output.get("authorshipMetadata") or {})
+    manual_affiliations = bool(existing_metadata.get("manualAffiliations")) or "affiliations" in set(existing_metadata.get("lockedFields") or [])
     prior_status = str(existing_metadata.get("status") or "").lower()
     sources_used: list[str] = list(existing_metadata.get("sources") or [])
     warnings: list[str] = [] if prior_status in {"verified", "manual", "manually-verified"} else list(existing_metadata.get("warnings") or [])
@@ -651,7 +800,8 @@ def merge_publication(publication: dict[str, Any], results: list[SourceResult]) 
             if not row["correspondingEmail"] and candidate.corresponding_email:
                 row["correspondingEmail"] = candidate.corresponding_email
             row["sources"] = ordered_unique([*row["sources"], *candidate.sources])
-            merged_candidates[index].extend(candidate.affiliations)
+            if not manual_affiliations:
+                merged_candidates[index].extend(candidate.affiliations)
         if not manual and row["isEqualContributor"] is None:
             row["isEqualContributor"] = existing_equal
         if not manual and row["isCorresponding"] is None:
@@ -724,6 +874,7 @@ def merge_publication(publication: dict[str, Any], results: list[SourceResult]) 
     output["authorships"] = authorships
     output["authorshipMetadata"] = metadata
     update_legacy_me_fields(output)
+    output["internationalCollaboration"] = evaluate_international_collaboration(output)
 
     comparable_before = json_clone(original)
     comparable_after = json_clone(output)
@@ -784,7 +935,9 @@ def initialize_publication(publication: dict[str, Any]) -> tuple[dict[str, Any],
     names = output.get("authors") or []
     existing = output.get("authorships")
     if isinstance(existing, list) and len(existing) == len(names):
-        return output, False
+        before = json_clone(output.get("internationalCollaboration"))
+        output["internationalCollaboration"] = evaluate_international_collaboration(output)
+        return output, before != output["internationalCollaboration"]
     output["authorships"] = [
         {
             "name": clean_space(name),
@@ -812,6 +965,7 @@ def initialize_publication(publication: dict[str, Any]) -> tuple[dict[str, Any],
         "warnings": [],
     }
     update_legacy_me_fields(output)
+    output["internationalCollaboration"] = evaluate_international_collaboration(output)
     return output, True
 
 
@@ -856,6 +1010,25 @@ def validate_publications(publications: list[dict[str, Any]], allow_missing: boo
         mine = next((row for row in rows if isinstance(row, dict) and is_me(row)), None)
         if mine and publication.get("authorOrder") not in {None, int(mine.get("authorOrder") or 0)}:
             errors.append(f"{label}: legacy authorOrder does not match Wei-Hao Chiu authorship")
+        collaboration = publication.get("internationalCollaboration")
+        if not isinstance(collaboration, dict):
+            if not allow_missing:
+                errors.append(f"{label}: missing internationalCollaboration object")
+            continue
+        status = collaboration.get("status")
+        if status not in COLLABORATION_STATUSES:
+            errors.append(f"{label}: invalid internationalCollaboration.status {status!r}")
+        if collaboration.get("isInternational") is not (status == "international"):
+            errors.append(f"{label}: internationalCollaboration.isInternational disagrees with status")
+        if collaboration.get("homeCountryCode") != "TW":
+            errors.append(f"{label}: internationalCollaboration.homeCountryCode must be TW")
+        for field_name in ("countryCodes", "partnerCountryCodes", "partnerInstitutions", "taiwanAffiliationIds", "foreignAffiliationIds", "sources", "warnings"):
+            if not isinstance(collaboration.get(field_name), list):
+                errors.append(f"{label}: internationalCollaboration.{field_name} must be an array")
+        if collaboration.get("manualOverride") not in {True, False}:
+            errors.append(f"{label}: internationalCollaboration.manualOverride must be boolean")
+        if collaboration.get("requiresManualReview") not in {True, False}:
+            errors.append(f"{label}: internationalCollaboration.requiresManualReview must be boolean")
     return errors
 
 
@@ -883,6 +1056,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--check", action="store_true", help="Validate existing JSON without contacting APIs")
     parser.add_argument("--allow-missing", action="store_true", help="Permit records without authorships during validation")
     parser.add_argument("--initialize-only", action="store_true", help="Create schema placeholders without contacting APIs")
+    parser.add_argument("--collaboration-only", action="store_true", help="Recalculate collaboration decisions without contacting APIs")
     parser.add_argument("--publisher-html", action="store_true", default=os.environ.get("ENABLE_PUBLISHER_HTML") == "1")
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--timeout", type=float, default=25.0)
@@ -895,7 +1069,7 @@ def should_update(publication: dict[str, Any], args: argparse.Namespace) -> bool
         return False
     if args.retry_partial:
         status = str((publication.get("authorshipMetadata") or {}).get("status") or "").lower()
-        return not publication.get("authorships") or status in {"", "pending", "partial", "error"}
+        return not publication.get("authorships") or not publication.get("internationalCollaboration") or status in {"", "pending", "partial", "error"}
     return True
 
 
@@ -920,7 +1094,12 @@ def main() -> None:
             output.append(publication)
             continue
         doi = normalize_doi(publication.get("doi"))
-        if args.initialize_only:
+        if args.collaboration_only:
+            updated = copy.deepcopy(publication)
+            before = json_clone(updated.get("internationalCollaboration"))
+            updated["internationalCollaboration"] = evaluate_international_collaboration(updated)
+            changed = before != updated["internationalCollaboration"]
+        elif args.initialize_only:
             updated, changed = initialize_publication(publication)
         elif not doi:
             updated, changed = initialize_publication(publication)

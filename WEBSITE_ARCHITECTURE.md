@@ -3,7 +3,7 @@
 > Repository：<https://github.com/weihaochiu/weihaochiu.github.io>  
 > 正式網站：<https://weihaochiu.github.io/>  
 > 預設分支：`main`  
-> 本文件盤點日期：2026-07-21  
+> 本文件盤點日期：2026-08-03
 > 本文件用途：作為網站的單一架構索引。每次修改網站、資料格式、自動化流程、外部連結或分析功能時，必須同步更新本文件，並完成第 12 節的回歸檢查，避免原有功能遺失。
 
 ## 1. 網站定位與技術架構
@@ -50,7 +50,7 @@ flowchart TD
 
 | 檔案 | 功能 | 主要依賴 |
 |---|---|---|
-| `publication-insights-4d8c7a.html` | Publication Insights：內容完整度、年度論文與引用、Google Scholar／OpenAlex／Crossref 比較、JCR quartile、出版社、IF、合作關係、期刊表格；圖表可切換形式與下載 | D3.js CDN；`publications.json`、`journals.json`、OpenAlex/Crossref publication metrics、Scholar/OpenAlex citation histories |
+| `publication-insights-4d8c7a.html` | Publication Insights：內容完整度、年度論文與引用、JCR／IF、共同作者網路、國際合作摘要、年度趨勢、合作國家／機構、影響力比較與逐篇查核表；支援 CSV／PNG | `publications.json`、`journals.json`、OpenAlex/Crossref metrics、`international-collaboration-insights.js` |
 | `website-insight-ea929558.html` | Website Insights：GA4 流量摘要與 DOI、OA PDF、Google Scholar、OpenAlex、Crossref、ORCID、Email、CV、Share、Patent 等互動事件 | `assets/data/ga-summary.json`、`app.js` |
 | `bems-fe5049fb.html` | BEMS 專用 GA4／網站分析頁 | `assets/data/ga-summary.json` 或頁面內指定資料 |
 
@@ -65,6 +65,7 @@ flowchart TD
 | `assets/css/styles.css` | 全站主樣式：layout、header/nav、cards、buttons、publication actions、share menu、responsive、footer、分析元件共用外觀。 |
 | `assets/css/research.css` | Research 頁的研究領域、卡片、featured publications 與專屬響應式樣式。 |
 | `assets/css/openalex-metrics.css` | OpenAlex metrics 元件樣式；與 `openalex-metrics.js` 搭配。 |
+| `assets/css/international-collaboration.css` | Publication Insights 國際合作摘要、篩選器、狀態標籤、圖表與查核表的響應式樣式。 |
 
 ### 4.2 JavaScript
 
@@ -74,6 +75,7 @@ flowchart TD
 | `assets/js/research.js` | 載入研究領域與 publication 資料，產生 research cards、代表論文與研究主題內容。 |
 | `assets/js/openalex-metrics.js` | 讀取作者層級 OpenAlex metrics，顯示 citations、h-index、i10-index 與更新狀態。 |
 | `assets/js/openalex-publications.js` | 將每篇論文對應 OpenAlex work、citation count 與連結；需避免與 HTML/server-generated 按鈕重複渲染。 |
+| `assets/js/international-collaboration-insights.js` | 只讀取每篇已保存的 `internationalCollaboration` 判定，產生摘要、年度趨勢、合作國家／機構、影響力比較及可下載逐篇查核表。 |
 
 ### 4.3 圖片與 PWA 資源
 
@@ -104,7 +106,7 @@ flowchart TD
 
 | 檔案 | 結構／用途 | 主要消費者 |
 |---|---|---|
-| `data/publications.json` | 37 篇論文的單一核心資料源。欄位含 title、authors、DOI、日期、journal、publisher、topic/tags、citation、abstract、highlights、keywords、GA、contentStatus、Scholar 連結等。 | Publications、Research、首頁、個別論文頁、Insights、所有 citation/OA 更新 scripts、SEO build |
+| `data/publications.json` | 40 筆成果的單一核心資料源。除出版與作者欄位外，每筆保存 `internationalCollaboration` 狀態、國家、合作機構、證據、信心、人工鎖定與輸入指紋。 | Publications、Research、首頁、個別論文頁、Insights、所有 citation/OA 更新 scripts、SEO build |
 | `data/publication_taxonomy.json` | category labels、theme options 與每篇 publication 分類 mapping。 | Publications filter、分類一致性 |
 | `data/patents.json` | 14 筆專利；含中英文名稱、發明人、assignee、jurisdiction、number、status、date、URL。 | Patents、首頁統計 |
 | `data/projects.json` | 4 筆計畫；含中英文標題、機構、計畫編號、期間、角色、scope、URL。 | Projects、首頁統計 |
@@ -144,6 +146,7 @@ flowchart TD
 | `scripts/test_mendeley_api.py` | 診斷 Mendeley API credentials、token 與 DOI lookup，不修改正式資料。 | repository secrets/API → console test report |
 | `scripts/update_unpaywall.py` | 查 OA 狀態並選擇可公開使用的 PDF landing/PDF URL。 | publications + Unpaywall API → `unpaywall.json` |
 | `scripts/update_journals.py` | 大型期刊資料更新器；彙整期刊識別、JCR profile、IF、quartile、來源與保留政策。 | publications + journal sources + existing JSON → `journals.json` |
+| `scripts/update_publication_authorships.py` | 更新作者／地址後立即計算並保存國際合作；人工鎖定 affiliation 與 collaboration 不受 OpenAlex/Crossref 覆蓋；`--collaboration-only` 可離線重算未鎖定資料。 | publications + Europe PMC/Crossref/OpenAlex/出版社 metadata → `publications.json` |
 | `scripts/export_ga4_summary.py` | 透過 GA4 Data API 匯出網站與互動事件摘要；敏感憑證只由 GitHub Secrets／環境變數提供。 | GA4 property/credentials → `assets/data/ga-summary.json` |
 | `scripts/requirements.txt` | citation/OA scripts 的 Python dependencies。 | pip install 用 |
 | `requirements-ga4.txt` | GA4 export 專用 dependencies。 | pip install 用 |

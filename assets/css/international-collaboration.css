@@ -1,0 +1,14 @@
+.international-collaboration-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:14px 0 20px}
+.international-collaboration-grid .summary-card{margin:0}
+.international-collaboration-filters{display:grid;grid-template-columns:repeat(4,minmax(150px,1fr));gap:10px;margin:14px 0;padding:13px;border:1px solid #d9e0e7;border-radius:8px;background:#f7f9fa}
+.international-collaboration-filters label{display:grid;gap:5px;color:#52616e;font-size:.67rem;font-weight:750;text-transform:uppercase;letter-spacing:.04em}
+.international-collaboration-filters select,.international-collaboration-filters input{min-width:0;padding:8px 9px;border:1px solid #bdc9d2;border-radius:6px;background:#fff;color:#344654;font:inherit;font-size:.74rem;text-transform:none;letter-spacing:0}
+.international-collaboration-charts{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(320px,.65fr);gap:20px}
+.international-collaboration-charts .analytics-chart-host{min-height:390px}
+.international-impact-table{min-width:760px}
+.collaboration-status{display:inline-block;padding:3px 7px;border-radius:999px;font-size:.62rem;font-weight:750;white-space:nowrap}
+.collaboration-status.international{background:#dfeee8;color:#315f52}.collaboration-status.domestic{background:#e6edf5;color:#315c82}.collaboration-status.foreign-only{background:#efe6f4;color:#68477d}.collaboration-status.needs-review{background:#fff1e4;color:#8a4b16}
+.international-audit-table{min-width:1450px}.international-audit-table td{max-width:380px}.international-audit-table a{color:#245f96;font-weight:700;text-decoration:none}
+.international-audit-table small{color:#647382}.international-section-spacer{margin-top:24px}
+@media(max-width:980px){.international-collaboration-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.international-collaboration-charts{grid-template-columns:1fr}.international-collaboration-filters{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.international-collaboration-grid,.international-collaboration-filters{grid-template-columns:1fr}}

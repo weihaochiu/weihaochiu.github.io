@@ -271,6 +271,49 @@
       "journalMetrics": true,
       "fwci": true,
       "citationMetrics": true
+    },
+    "internationalCollaboration": {
+      "status": "international",
+      "isInternational": true,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "HK",
+        "TW"
+      ],
+      "partnerCountryCodes": [
+        "HK"
+      ],
+      "partnerInstitutions": [
+        {
+          "name": "Hong Kong Polytechnic University",
+          "countryCode": "HK",
+          "ror": "https://ror.org/0030zas98"
+        }
+      ],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-3",
+        "aff-4"
+      ],
+      "foreignAffiliationIds": [
+        "aff-2"
+      ],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "crossref",
+        "openalex"
+      ],
+      "evidenceUrls": {
+        "crossref": "https://api.crossref.org/works/10.1016%2Fj.cej.2026.177494",
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1016%2Fj.cej.2026.177494"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-08-03",
+      "inputSignature": "a9df6e1577a9b272b067"
     }
   },
   {
@@ -491,6 +534,38 @@
       "journalMetrics": true,
       "fwci": true,
       "citationMetrics": true
+    },
+    "internationalCollaboration": {
+      "status": "domestic",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "TW"
+      ],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2",
+        "aff-3"
+      ],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "crossref",
+        "openalex"
+      ],
+      "evidenceUrls": {
+        "crossref": "https://api.crossref.org/works/10.1016%2Fj.mtener.2026.102359",
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1016%2Fj.mtener.2026.102359"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-08-03",
+      "inputSignature": "0b8e463cfe1fafa81577"
     }
   },
   {
@@ -780,6 +855,50 @@
       "journalMetrics": true,
       "fwci": true,
       "citationMetrics": true
+    },
+    "internationalCollaboration": {
+      "status": "international",
+      "isInternational": true,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "HK",
+        "TW"
+      ],
+      "partnerCountryCodes": [
+        "HK"
+      ],
+      "partnerInstitutions": [
+        {
+          "name": "Hong Kong Polytechnic University",
+          "countryCode": "HK",
+          "ror": "https://ror.org/0030zas98"
+        }
+      ],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2",
+        "aff-3",
+        "aff-5"
+      ],
+      "foreignAffiliationIds": [
+        "aff-4"
+      ],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "crossref",
+        "openalex"
+      ],
+      "evidenceUrls": {
+        "crossref": "https://api.crossref.org/works/10.1016%2Fj.solener.2026.114430",
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1016%2Fj.solener.2026.114430"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-08-03",
+      "inputSignature": "1c132b074bcac6477ba2"
     }
   },
   {
@@ -1031,6 +1150,39 @@
       "journalMetrics": true,
       "fwci": true,
       "citationMetrics": true
+    },
+    "internationalCollaboration": {
+      "status": "domestic",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "TW"
+      ],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2",
+        "aff-3"
+      ],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "crossref",
+        "openalex",
+        "publisher"
+      ],
+      "evidenceUrls": {
+        "crossref": "https://api.crossref.org/works/10.1016%2Fj.jpowsour.2025.239216",
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1016%2Fj.jpowsour.2025.239216"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-08-03",
+      "inputSignature": "c852093d4e34311602e9"
     }
   },
   {
@@ -1254,6 +1406,38 @@
       "journalMetrics": true,
       "fwci": true,
       "citationMetrics": true
+    },
+    "internationalCollaboration": {
+      "status": "domestic",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "TW"
+      ],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2",
+        "aff-3"
+      ],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "crossref",
+        "openalex"
+      ],
+      "evidenceUrls": {
+        "crossref": "https://api.crossref.org/works/10.1016%2Fj.solmat.2025.114015",
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1016%2Fj.solmat.2025.114015"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-08-03",
+      "inputSignature": "4fd783570c853dddda2a"
     }
   },
   {
@@ -1319,8 +1503,7 @@
           "aff-1",
           "aff-2",
           "aff-3",
-          "aff-4",
-          "aff-5"
+          "aff-4"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -1338,9 +1521,7 @@
         "authorOrder": 2,
         "authorPosition": "middle",
         "affiliationIds": [
-          "aff-1",
-          "aff-5",
-          "aff-6"
+          "aff-1"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -1358,8 +1539,7 @@
         "authorOrder": 3,
         "authorPosition": "middle",
         "affiliationIds": [
-          "aff-7",
-          "aff-6"
+          "aff-7"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -1459,7 +1639,7 @@
         "institution": "Department of Chemical and Materials Engineering Chang Gung University Taoyuan 33302 Taiwan",
         "address": "Department of Chemical and Materials Engineering Chang Gung University Taoyuan 33302 Taiwan",
         "city": "",
-        "countryCode": "",
+        "countryCode": "TW",
         "ror": "",
         "raw": "Department of Chemical and Materials Engineering Chang Gung University Taoyuan 33302 Taiwan",
         "source": "crossref",
@@ -1479,32 +1659,6 @@
         "sourceId": "https://openalex.org/I3020100970"
       },
       {
-        "id": "aff-5",
-        "label": "e",
-        "department": "",
-        "institution": "Chang Gung University of Science and Technology",
-        "address": "Chang Gung University of Science and Technology",
-        "city": "",
-        "countryCode": "TW",
-        "ror": "https://ror.org/009knm296",
-        "raw": "Chang Gung University of Science and Technology",
-        "source": "openalex",
-        "sourceId": "https://openalex.org/I141243467"
-      },
-      {
-        "id": "aff-6",
-        "label": "f",
-        "department": "",
-        "institution": "Zero to Three",
-        "address": "Zero to Three",
-        "city": "",
-        "countryCode": "US",
-        "ror": "https://ror.org/01qvk6016",
-        "raw": "Zero to Three",
-        "source": "openalex",
-        "sourceId": "https://openalex.org/I4210119046"
-      },
-      {
         "id": "aff-7",
         "label": "g",
         "department": "",
@@ -1519,15 +1673,16 @@
       }
     ],
     "authorshipMetadata": {
-      "status": "partial",
-      "lastChecked": "2026-07-25",
+      "status": "manually-verified",
+      "lastChecked": "2026-08-03",
       "sources": [
         "crossref",
         "openalex"
       ],
       "sourceUrls": {
         "crossref": "https://api.crossref.org/works/10.1002%2Fasia.70245",
-        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1002%2Fasia.70245"
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1002%2Fasia.70245",
+        "publisher": "https://aces.onlinelibrary.wiley.com/doi/10.1002/asia.70245"
       },
       "requiresManualReview": true,
       "missingFields": [
@@ -1536,7 +1691,14 @@
       ],
       "warnings": [
         "europe-pmc: No open full-text XML"
-      ]
+      ],
+      "manualOverride": true,
+      "manualAffiliations": true,
+      "lockedFields": [
+        "affiliations",
+        "authorships.affiliationIds"
+      ],
+      "manualVerificationNote": "Publisher author affiliations list only institutions in Taiwan; rejected the OpenAlex matches to Zero to Three and Chang Gung University of Science and Technology."
     },
     "id": "10.1002/asia.70245",
     "publicationType": "international-journal",
@@ -1548,6 +1710,39 @@
       "journalMetrics": true,
       "fwci": true,
       "citationMetrics": true
+    },
+    "internationalCollaboration": {
+      "status": "domestic",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "TW"
+      ],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2",
+        "aff-3",
+        "aff-4",
+        "aff-7"
+      ],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "manual-publisher-verification",
+      "confidence": "verified",
+      "sources": [
+        "publisher"
+      ],
+      "evidenceUrls": {
+        "publisher": "https://aces.onlinelibrary.wiley.com/doi/10.1002/asia.70245"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": true,
+      "manualNote": "Publisher author affiliations list only institutions in Taiwan; rejected the OpenAlex matches to Zero to Three and Chang Gung University of Science and Technology.",
+      "lastEvaluated": "2026-08-03",
+      "inputSignature": "03587656c001c61c4c10"
     }
   },
   {
@@ -1757,6 +1952,38 @@
       "journalMetrics": true,
       "fwci": true,
       "citationMetrics": true
+    },
+    "internationalCollaboration": {
+      "status": "domestic",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "TW"
+      ],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2",
+        "aff-3"
+      ],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "crossref",
+        "openalex"
+      ],
+      "evidenceUrls": {
+        "crossref": "https://api.crossref.org/works/10.1016%2Fj.seppur.2025.134157",
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1016%2Fj.seppur.2025.134157"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-08-03",
+      "inputSignature": "22173ef86142290a3bae"
     }
   },
   {
@@ -1885,8 +2112,7 @@
         "authorOrder": 2,
         "authorPosition": "middle",
         "affiliationIds": [
-          "aff-4",
-          "aff-5"
+          "aff-4"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -1904,8 +2130,7 @@
         "authorOrder": 3,
         "authorPosition": "middle",
         "affiliationIds": [
-          "aff-4",
-          "aff-5"
+          "aff-4"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -2788,8 +3013,7 @@
         "authorOrder": 50,
         "authorPosition": "middle",
         "affiliationIds": [
-          "aff-4",
-          "aff-5"
+          "aff-4"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -2841,7 +3065,7 @@
         "institution": "Photovoltaic Efficiency Verification Laboratory (PVEVL) National Central University Taiwan",
         "address": "Photovoltaic Efficiency Verification Laboratory (PVEVL) National Central University Taiwan",
         "city": "",
-        "countryCode": "",
+        "countryCode": "TW",
         "ror": "",
         "raw": "Photovoltaic Efficiency Verification Laboratory (PVEVL) National Central University Taiwan",
         "source": "crossref",
@@ -2867,24 +3091,11 @@
         "institution": "Ways Technical Corp. Ltd. Taoyuan Taiwan",
         "address": "Ways Technical Corp. Ltd. Taoyuan Taiwan",
         "city": "",
-        "countryCode": "",
+        "countryCode": "TW",
         "ror": "",
         "raw": "Ways Technical Corp. Ltd. Taoyuan Taiwan",
         "source": "crossref",
         "sourceId": ""
-      },
-      {
-        "id": "aff-5",
-        "label": "e",
-        "department": "",
-        "institution": "Wayside House",
-        "address": "Wayside House",
-        "city": "",
-        "countryCode": "US",
-        "ror": "https://ror.org/02pgrmd66",
-        "raw": "Wayside House",
-        "source": "openalex",
-        "sourceId": "https://openalex.org/I4210123548"
       },
       {
         "id": "aff-6",
@@ -2906,7 +3117,7 @@
         "institution": "Department of Materials Engineering Ming Chi University of Technology New Taipei City Taiwan",
         "address": "Department of Materials Engineering Ming Chi University of Technology New Taipei City Taiwan",
         "city": "",
-        "countryCode": "",
+        "countryCode": "TW",
         "ror": "",
         "raw": "Department of Materials Engineering Ming Chi University of Technology New Taipei City Taiwan",
         "source": "crossref",
@@ -2932,7 +3143,7 @@
         "institution": "Organic Electronics Research Center Ming Chi University of Technology New Taipei City Taiwan",
         "address": "Organic Electronics Research Center Ming Chi University of Technology New Taipei City Taiwan",
         "city": "",
-        "countryCode": "",
+        "countryCode": "TW",
         "ror": "",
         "raw": "Organic Electronics Research Center Ming Chi University of Technology New Taipei City Taiwan",
         "source": "crossref",
@@ -2958,7 +3169,7 @@
         "institution": "Center for Sustainability and Energy Technologies Chang Gung University Taoyuan Taiwan",
         "address": "Center for Sustainability and Energy Technologies Chang Gung University Taoyuan Taiwan",
         "city": "",
-        "countryCode": "",
+        "countryCode": "TW",
         "ror": "",
         "raw": "Center for Sustainability and Energy Technologies Chang Gung University Taoyuan Taiwan",
         "source": "crossref",
@@ -3062,7 +3273,7 @@
         "institution": "Department of Chemical Engineering Institute of Polymer Science and Engineering and Advanced Research Center for Green Materials Science and Technology National Taiwan University Taipei Taiwan",
         "address": "Department of Chemical Engineering Institute of Polymer Science and Engineering and Advanced Research Center for Green Materials Science and Technology National Taiwan University Taipei Taiwan",
         "city": "",
-        "countryCode": "",
+        "countryCode": "TW",
         "ror": "",
         "raw": "Department of Chemical Engineering Institute of Polymer Science and Engineering and Advanced Research Center for Green Materials Science and Technology National Taiwan University Taipei Taiwan",
         "source": "crossref",
@@ -3075,7 +3286,7 @@
         "institution": "Center for Condensed Matter Sciences National Taiwan University Taipei Taiwan",
         "address": "Center for Condensed Matter Sciences National Taiwan University Taipei Taiwan",
         "city": "",
-        "countryCode": "",
+        "countryCode": "TW",
         "ror": "",
         "raw": "Center for Condensed Matter Sciences National Taiwan University Taipei Taiwan",
         "source": "crossref",
@@ -3088,7 +3299,7 @@
         "institution": "Department of Physics National Taiwan University Taipei Taiwan",
         "address": "Department of Physics National Taiwan University Taipei Taiwan",
         "city": "",
-        "countryCode": "",
+        "countryCode": "TW",
         "ror": "",
         "raw": "Department of Physics National Taiwan University Taipei Taiwan",
         "source": "crossref",
@@ -3101,7 +3312,7 @@
         "institution": "Research Center for Applied Sciences Academia Sinica Taipei Taiwan",
         "address": "Research Center for Applied Sciences Academia Sinica Taipei Taiwan",
         "city": "",
-        "countryCode": "",
+        "countryCode": "TW",
         "ror": "",
         "raw": "Research Center for Applied Sciences Academia Sinica Taipei Taiwan",
         "source": "crossref",
@@ -3127,7 +3338,7 @@
         "institution": "Department of Photonics and Program on Key Materials Academy of Innovative Semiconductor and Sustainable Manufacturing National Cheng Kung University Tainan Taiwan",
         "address": "Department of Photonics and Program on Key Materials Academy of Innovative Semiconductor and Sustainable Manufacturing National Cheng Kung University Tainan Taiwan",
         "city": "",
-        "countryCode": "",
+        "countryCode": "TW",
         "ror": "",
         "raw": "Department of Photonics and Program on Key Materials Academy of Innovative Semiconductor and Sustainable Manufacturing National Cheng Kung University Tainan Taiwan",
         "source": "crossref",
@@ -3140,7 +3351,7 @@
         "institution": "Department of Chemical Engineering National Taiwan University Taipei Taiwan",
         "address": "Department of Chemical Engineering National Taiwan University Taipei Taiwan",
         "city": "",
-        "countryCode": "",
+        "countryCode": "TW",
         "ror": "",
         "raw": "Department of Chemical Engineering National Taiwan University Taipei Taiwan",
         "source": "crossref",
@@ -3153,7 +3364,7 @@
         "institution": "College of Environment and Resources Ming Chi University of Technology Taoyuan Taiwan",
         "address": "College of Environment and Resources Ming Chi University of Technology Taoyuan Taiwan",
         "city": "",
-        "countryCode": "",
+        "countryCode": "TW",
         "ror": "",
         "raw": "College of Environment and Resources Ming Chi University of Technology Taoyuan Taiwan",
         "source": "crossref",
@@ -3187,15 +3398,16 @@
       }
     ],
     "authorshipMetadata": {
-      "status": "partial",
-      "lastChecked": "2026-07-25",
+      "status": "manually-verified",
+      "lastChecked": "2026-08-03",
       "sources": [
         "crossref",
         "openalex"
       ],
       "sourceUrls": {
         "crossref": "https://api.crossref.org/works/10.1002%2Fsolr.202500538",
-        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1002%2Fsolr.202500538"
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1002%2Fsolr.202500538",
+        "publisher": "https://onlinelibrary.wiley.com/doi/10.1002/solr.202500538"
       },
       "requiresManualReview": true,
       "missingFields": [
@@ -3204,7 +3416,14 @@
       ],
       "warnings": [
         "europe-pmc: No DOI match"
-      ]
+      ],
+      "manualOverride": true,
+      "manualAffiliations": true,
+      "lockedFields": [
+        "affiliations",
+        "authorships.affiliationIds"
+      ],
+      "manualVerificationNote": "Publisher/Crossref affiliations confirm Taiwan–Indonesia collaboration; rejected the OpenAlex match to Wayside House (US)."
     },
     "id": "10.1002/solr.202500538",
     "publicationType": "international-journal",
@@ -3216,6 +3435,71 @@
       "journalMetrics": true,
       "fwci": true,
       "citationMetrics": true
+    },
+    "internationalCollaboration": {
+      "status": "international",
+      "isInternational": true,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "TW",
+        "ID"
+      ],
+      "partnerCountryCodes": [
+        "ID"
+      ],
+      "partnerInstitutions": [
+        {
+          "name": "Department of Physics Faculty of Mathematics and Natural Sciences Universitas Sumatera Utara Medan Indonesia",
+          "countryCode": "ID",
+          "ror": "https://ror.org/01kknrc90"
+        }
+      ],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2",
+        "aff-3",
+        "aff-4",
+        "aff-6",
+        "aff-7",
+        "aff-8",
+        "aff-9",
+        "aff-10",
+        "aff-11",
+        "aff-12",
+        "aff-13",
+        "aff-14",
+        "aff-16",
+        "aff-17",
+        "aff-18",
+        "aff-19",
+        "aff-20",
+        "aff-21",
+        "aff-22",
+        "aff-23",
+        "aff-24",
+        "aff-25",
+        "aff-26",
+        "aff-27",
+        "aff-28"
+      ],
+      "foreignAffiliationIds": [
+        "aff-15"
+      ],
+      "hasDualAffiliation": false,
+      "determinationMethod": "manual-publisher-verification",
+      "confidence": "verified",
+      "sources": [
+        "publisher"
+      ],
+      "evidenceUrls": {
+        "publisher": "https://onlinelibrary.wiley.com/doi/10.1002/solr.202500538"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": true,
+      "manualNote": "Publisher/Crossref affiliations confirm Taiwan–Indonesia collaboration; rejected the OpenAlex match to Wayside House (US).",
+      "lastEvaluated": "2026-08-03",
+      "inputSignature": "09079e2cc55e80987f84"
     }
   },
   {
@@ -3824,6 +4108,56 @@
       "journalMetrics": true,
       "fwci": true,
       "citationMetrics": true
+    },
+    "internationalCollaboration": {
+      "status": "international",
+      "isInternational": true,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "HK",
+        "TW"
+      ],
+      "partnerCountryCodes": [
+        "HK"
+      ],
+      "partnerInstitutions": [
+        {
+          "name": "Department of Applied Physics The Hong Kong Polytechnic University Hung Hom Kowloon Hong Kong 999077 P. R. China",
+          "countryCode": "HK",
+          "ror": "https://ror.org/0030zas98"
+        }
+      ],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2",
+        "aff-3",
+        "aff-4",
+        "aff-5",
+        "aff-6",
+        "aff-7",
+        "aff-8",
+        "aff-9",
+        "aff-10"
+      ],
+      "foreignAffiliationIds": [
+        "aff-11"
+      ],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "crossref",
+        "openalex"
+      ],
+      "evidenceUrls": {
+        "crossref": "https://api.crossref.org/works/10.1002%2Fasia.202500719",
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1002%2Fasia.202500719"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-08-03",
+      "inputSignature": "1ea6740465eff16b3c12"
     }
   },
   {
@@ -4406,6 +4740,46 @@
       "journalMetrics": true,
       "fwci": true,
       "citationMetrics": true
+    },
+    "internationalCollaboration": {
+      "status": "domestic",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "TW"
+      ],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2",
+        "aff-3",
+        "aff-4",
+        "aff-5",
+        "aff-6",
+        "aff-7",
+        "aff-8",
+        "aff-9"
+      ],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "europe-pmc",
+        "crossref",
+        "openalex"
+      ],
+      "evidenceUrls": {
+        "europe-pmc": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11744647/fullTextXML",
+        "crossref": "https://api.crossref.org/works/10.1002%2Fadvs.202410666",
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1002%2Fadvs.202410666"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-08-03",
+      "inputSignature": "ccdbdcf351f04079cb9f"
     }
   },
   {
@@ -4664,6 +5038,49 @@
       "journalMetrics": true,
       "fwci": true,
       "citationMetrics": true
+    },
+    "internationalCollaboration": {
+      "status": "international",
+      "isInternational": true,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "HK",
+        "TW"
+      ],
+      "partnerCountryCodes": [
+        "HK"
+      ],
+      "partnerInstitutions": [
+        {
+          "name": "Hong Kong Polytechnic University",
+          "countryCode": "HK",
+          "ror": "https://ror.org/0030zas98"
+        }
+      ],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-3",
+        "aff-4"
+      ],
+      "foreignAffiliationIds": [
+        "aff-2"
+      ],
+      "hasDualAffiliation": true,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "crossref",
+        "openalex"
+      ],
+      "evidenceUrls": {
+        "crossref": "https://api.crossref.org/works/10.1016%2Fj.mtchem.2024.102329",
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1016%2Fj.mtchem.2024.102329"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-08-03",
+      "inputSignature": "595d62940a5cafe590c7"
     }
   },
   {
@@ -4900,6 +5317,38 @@
       "journalMetrics": true,
       "fwci": true,
       "citationMetrics": true
+    },
+    "internationalCollaboration": {
+      "status": "domestic",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "TW"
+      ],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2",
+        "aff-3"
+      ],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "crossref",
+        "openalex"
+      ],
+      "evidenceUrls": {
+        "crossref": "https://api.crossref.org/works/10.1016%2Fj.cej.2024.153974",
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1016%2Fj.cej.2024.153974"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-08-03",
+      "inputSignature": "79c1857d0278fd87bc24"
     }
   },
   {
@@ -5152,6 +5601,38 @@
       "journalMetrics": true,
       "fwci": true,
       "citationMetrics": true
+    },
+    "internationalCollaboration": {
+      "status": "domestic",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "TW"
+      ],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2",
+        "aff-3"
+      ],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "crossref",
+        "openalex"
+      ],
+      "evidenceUrls": {
+        "crossref": "https://api.crossref.org/works/10.1016%2Fj.jece.2023.111741",
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1016%2Fj.jece.2023.111741"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-08-03",
+      "inputSignature": "ed8222cb4d9f298fb4eb"
     }
   },
   {
@@ -5652,6 +6133,45 @@
       "journalMetrics": true,
       "fwci": true,
       "citationMetrics": true
+    },
+    "internationalCollaboration": {
+      "status": "domestic",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "TW"
+      ],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2",
+        "aff-3",
+        "aff-4",
+        "aff-5",
+        "aff-6",
+        "aff-7",
+        "aff-8",
+        "aff-9",
+        "aff-10"
+      ],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "crossref",
+        "openalex"
+      ],
+      "evidenceUrls": {
+        "crossref": "https://api.crossref.org/works/10.1002%2Fsolr.202300988",
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1002%2Fsolr.202300988"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-08-03",
+      "inputSignature": "6f04b5cec05ac54acf48"
     }
   },
   {
@@ -6009,6 +6529,43 @@
       "journalMetrics": true,
       "fwci": true,
       "citationMetrics": true
+    },
+    "internationalCollaboration": {
+      "status": "domestic",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "TW"
+      ],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2",
+        "aff-3",
+        "aff-4",
+        "aff-5",
+        "aff-6",
+        "aff-7",
+        "aff-8"
+      ],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "crossref",
+        "openalex"
+      ],
+      "evidenceUrls": {
+        "crossref": "https://api.crossref.org/works/10.1039%2Fd3cc04699k",
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1039%2Fd3cc04699k"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-08-03",
+      "inputSignature": "0592a38ec9f5c6f74306"
     }
   },
   {
@@ -6340,6 +6897,41 @@
       "journalMetrics": true,
       "fwci": true,
       "citationMetrics": true
+    },
+    "internationalCollaboration": {
+      "status": "domestic",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "TW"
+      ],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2",
+        "aff-3",
+        "aff-4",
+        "aff-5",
+        "aff-6"
+      ],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "crossref",
+        "openalex"
+      ],
+      "evidenceUrls": {
+        "crossref": "https://api.crossref.org/works/10.1016%2Fj.jpowsour.2023.233496",
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1016%2Fj.jpowsour.2023.233496"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-08-03",
+      "inputSignature": "f760ab4ff05561de4789"
     }
   },
   {
@@ -6587,6 +7179,39 @@
       "journalMetrics": true,
       "fwci": true,
       "citationMetrics": true
+    },
+    "internationalCollaboration": {
+      "status": "domestic",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "TW"
+      ],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2",
+        "aff-3",
+        "aff-4"
+      ],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "crossref",
+        "openalex"
+      ],
+      "evidenceUrls": {
+        "crossref": "https://api.crossref.org/works/10.1002%2Fasia.202300681",
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1002%2Fasia.202300681"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-08-03",
+      "inputSignature": "b3bd572def205f68c298"
     }
   },
   {
@@ -6899,6 +7524,58 @@
       "journalMetrics": true,
       "fwci": true,
       "citationMetrics": true
+    },
+    "internationalCollaboration": {
+      "status": "international",
+      "isInternational": true,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "HK",
+        "IN",
+        "TW"
+      ],
+      "partnerCountryCodes": [
+        "HK",
+        "IN"
+      ],
+      "partnerInstitutions": [
+        {
+          "name": "Central Electrochemical Research Institute",
+          "countryCode": "IN",
+          "ror": "https://ror.org/01qek3q18"
+        },
+        {
+          "name": "Hong Kong Polytechnic University",
+          "countryCode": "HK",
+          "ror": "https://ror.org/0030zas98"
+        }
+      ],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2",
+        "aff-5",
+        "aff-6"
+      ],
+      "foreignAffiliationIds": [
+        "aff-3",
+        "aff-4"
+      ],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "crossref",
+        "openalex"
+      ],
+      "evidenceUrls": {
+        "crossref": "https://api.crossref.org/works/10.1016%2Fj.orgel.2023.106847",
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1016%2Fj.orgel.2023.106847"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-08-03",
+      "inputSignature": "456af595fa939258495f"
     }
   },
   {
@@ -7285,6 +7962,53 @@
       "journalMetrics": true,
       "fwci": true,
       "citationMetrics": true
+    },
+    "internationalCollaboration": {
+      "status": "international",
+      "isInternational": true,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "HK",
+        "TW"
+      ],
+      "partnerCountryCodes": [
+        "HK"
+      ],
+      "partnerInstitutions": [
+        {
+          "name": "Department of Applied Physics The Hong Kong Polytechnic University Hung Hom Kowloon Hong Kong 999077 P. R. China",
+          "countryCode": "HK",
+          "ror": "https://ror.org/0030zas98"
+        }
+      ],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2",
+        "aff-3",
+        "aff-4",
+        "aff-5",
+        "aff-7",
+        "aff-8"
+      ],
+      "foreignAffiliationIds": [
+        "aff-6"
+      ],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "crossref",
+        "openalex"
+      ],
+      "evidenceUrls": {
+        "crossref": "https://api.crossref.org/works/10.1002%2Fadfm.202306367",
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1002%2Fadfm.202306367"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-08-03",
+      "inputSignature": "287a0d951068e32d0268"
     }
   },
   {
@@ -7616,6 +8340,41 @@
       "journalMetrics": true,
       "fwci": true,
       "citationMetrics": true
+    },
+    "internationalCollaboration": {
+      "status": "domestic",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "TW"
+      ],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2",
+        "aff-3",
+        "aff-4",
+        "aff-5",
+        "aff-6"
+      ],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "crossref",
+        "openalex"
+      ],
+      "evidenceUrls": {
+        "crossref": "https://api.crossref.org/works/10.1016%2Fj.cej.2022.139926",
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1016%2Fj.cej.2022.139926"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-08-03",
+      "inputSignature": "5df207a978ca0afbe279"
     }
   },
   {
@@ -7976,6 +8735,54 @@
       "journalMetrics": true,
       "fwci": true,
       "citationMetrics": true
+    },
+    "internationalCollaboration": {
+      "status": "international",
+      "isInternational": true,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "IN",
+        "TW"
+      ],
+      "partnerCountryCodes": [
+        "IN"
+      ],
+      "partnerInstitutions": [
+        {
+          "name": "6 Electroorganic and Materials Electrochemistry Division, CSIR-Central Electrochemical Research Institute, Karaikudi 630003, India; vidhyasur@yahoo.co.in",
+          "countryCode": "IN",
+          "ror": "https://ror.org/01qek3q18"
+        }
+      ],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2",
+        "aff-3",
+        "aff-4",
+        "aff-5",
+        "aff-6"
+      ],
+      "foreignAffiliationIds": [
+        "aff-7"
+      ],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "europe-pmc",
+        "crossref",
+        "openalex"
+      ],
+      "evidenceUrls": {
+        "europe-pmc": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9370445/fullTextXML",
+        "crossref": "https://api.crossref.org/works/10.3390%2Fnano12152651",
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.3390%2Fnano12152651"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-08-03",
+      "inputSignature": "31222619993b94a45835"
     }
   },
   {
@@ -8270,6 +9077,44 @@
       "journalMetrics": true,
       "fwci": true,
       "citationMetrics": true
+    },
+    "internationalCollaboration": {
+      "status": "domestic",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "TW"
+      ],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2",
+        "aff-3",
+        "aff-4",
+        "aff-5",
+        "aff-6",
+        "aff-7"
+      ],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "europe-pmc",
+        "crossref",
+        "openalex"
+      ],
+      "evidenceUrls": {
+        "europe-pmc": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9024987/fullTextXML",
+        "crossref": "https://api.crossref.org/works/10.3390%2Fpolym14081580",
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.3390%2Fpolym14081580"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-08-03",
+      "inputSignature": "c8a7b8f07b3dfd6f79df"
     }
   },
   {
@@ -8549,6 +9394,41 @@
       "journalMetrics": true,
       "fwci": true,
       "citationMetrics": true
+    },
+    "internationalCollaboration": {
+      "status": "domestic",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "TW"
+      ],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2",
+        "aff-3",
+        "aff-4",
+        "aff-5",
+        "aff-6"
+      ],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "crossref",
+        "openalex"
+      ],
+      "evidenceUrls": {
+        "crossref": "https://api.crossref.org/works/10.1016%2Fj.cej.2021.131609",
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1016%2Fj.cej.2021.131609"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-08-03",
+      "inputSignature": "fa86ca80d91d75d79cfa"
     }
   },
   {
@@ -8826,6 +9706,42 @@
       "journalMetrics": true,
       "fwci": true,
       "citationMetrics": true
+    },
+    "internationalCollaboration": {
+      "status": "domestic",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "TW"
+      ],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2",
+        "aff-3",
+        "aff-4",
+        "aff-5"
+      ],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "europe-pmc",
+        "crossref",
+        "openalex"
+      ],
+      "evidenceUrls": {
+        "europe-pmc": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8659835/fullTextXML",
+        "crossref": "https://api.crossref.org/works/10.3390%2Fpolym13234246",
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.3390%2Fpolym13234246"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-08-03",
+      "inputSignature": "72269bb3b7bfb46dd1a7"
     }
   },
   {
@@ -9096,6 +10012,53 @@
       "journalMetrics": true,
       "fwci": true,
       "citationMetrics": true
+    },
+    "internationalCollaboration": {
+      "status": "international",
+      "isInternational": true,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "IN",
+        "TW"
+      ],
+      "partnerCountryCodes": [
+        "IN"
+      ],
+      "partnerInstitutions": [
+        {
+          "name": "4 Electroorganic and Materials Electrochemistry Division, CSIR-Central Electrochemical Research Institute, Karaikudi 630003, India; vidhyasur@yahoo.co.in",
+          "countryCode": "IN",
+          "ror": "https://ror.org/01qek3q18"
+        }
+      ],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2",
+        "aff-3",
+        "aff-4",
+        "aff-6"
+      ],
+      "foreignAffiliationIds": [
+        "aff-5"
+      ],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "europe-pmc",
+        "crossref",
+        "openalex"
+      ],
+      "evidenceUrls": {
+        "europe-pmc": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8398926/fullTextXML",
+        "crossref": "https://api.crossref.org/works/10.3390%2Fnano11082125",
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.3390%2Fnano11082125"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-08-03",
+      "inputSignature": "a936294a2e78ca55a0d6"
     }
   },
   {
@@ -9455,6 +10418,54 @@
       "journalMetrics": true,
       "fwci": true,
       "citationMetrics": true
+    },
+    "internationalCollaboration": {
+      "status": "international",
+      "isInternational": true,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "IN",
+        "TW"
+      ],
+      "partnerCountryCodes": [
+        "IN"
+      ],
+      "partnerInstitutions": [
+        {
+          "name": "5 Electroorganic and Materials Electrochemistry Division, CSIR-Central Electrochemical Research Institute, Karaikudi 630003, India; vidhyasur@yahoo.co.in",
+          "countryCode": "IN",
+          "ror": "https://ror.org/01qek3q18"
+        }
+      ],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2",
+        "aff-3",
+        "aff-4",
+        "aff-5",
+        "aff-7"
+      ],
+      "foreignAffiliationIds": [
+        "aff-6"
+      ],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "europe-pmc",
+        "crossref",
+        "openalex"
+      ],
+      "evidenceUrls": {
+        "europe-pmc": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8234527/fullTextXML",
+        "crossref": "https://api.crossref.org/works/10.3390%2Fnano11061607",
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.3390%2Fnano11061607"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-08-03",
+      "inputSignature": "89da534aa25a2f954072"
     }
   },
   {
@@ -9635,6 +10646,47 @@
       "journalMetrics": true,
       "fwci": true,
       "citationMetrics": true
+    },
+    "internationalCollaboration": {
+      "status": "international",
+      "isInternational": true,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "IN",
+        "TW"
+      ],
+      "partnerCountryCodes": [
+        "IN"
+      ],
+      "partnerInstitutions": [
+        {
+          "name": "Central Electrochemical Research Institute",
+          "countryCode": "IN",
+          "ror": "https://ror.org/01qek3q18"
+        }
+      ],
+      "taiwanAffiliationIds": [
+        "aff-1"
+      ],
+      "foreignAffiliationIds": [
+        "aff-2"
+      ],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "crossref",
+        "openalex"
+      ],
+      "evidenceUrls": {
+        "crossref": "https://api.crossref.org/works/10.1016%2Fj.jpowsour.2012.12.094",
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1016%2Fj.jpowsour.2012.12.094"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-08-03",
+      "inputSignature": "cb9b786771da7e1909e8"
     }
   },
   {
@@ -9878,6 +10930,39 @@
       "journalMetrics": true,
       "fwci": true,
       "citationMetrics": true
+    },
+    "internationalCollaboration": {
+      "status": "domestic",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "TW"
+      ],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2",
+        "aff-3",
+        "aff-4"
+      ],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "crossref",
+        "openalex"
+      ],
+      "evidenceUrls": {
+        "crossref": "https://api.crossref.org/works/10.1016%2Fj.jpowsour.2012.05.079",
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1016%2Fj.jpowsour.2012.05.079"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-08-03",
+      "inputSignature": "4a5fc1ba8d3849cec8b8"
     }
   },
   {
@@ -10072,6 +11157,38 @@
       "journalMetrics": true,
       "fwci": true,
       "citationMetrics": true
+    },
+    "internationalCollaboration": {
+      "status": "domestic",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "TW"
+      ],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2",
+        "aff-3"
+      ],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "crossref",
+        "openalex"
+      ],
+      "evidenceUrls": {
+        "crossref": "https://api.crossref.org/works/10.1016%2Fj.jpowsour.2011.06.049",
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1016%2Fj.jpowsour.2011.06.049"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-08-03",
+      "inputSignature": "b8839a489b614cca19c1"
     }
   },
   {
@@ -10247,6 +11364,38 @@
       "journalMetrics": true,
       "fwci": true,
       "citationMetrics": true
+    },
+    "internationalCollaboration": {
+      "status": "domestic",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "TW"
+      ],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2",
+        "aff-3"
+      ],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "crossref",
+        "openalex"
+      ],
+      "evidenceUrls": {
+        "crossref": "https://api.crossref.org/works/10.1016%2Fj.jpowsour.2010.12.063",
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1016%2Fj.jpowsour.2010.12.063"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-08-03",
+      "inputSignature": "b04f3d7f64ab5607593b"
     }
   },
   {
@@ -10298,7 +11447,6 @@
         "authorPosition": "first",
         "affiliationIds": [
           "aff-1",
-          "aff-2",
           "aff-3"
         ],
         "isEqualContributor": null,
@@ -10335,8 +11483,7 @@
         "authorOrder": 3,
         "authorPosition": "middle",
         "affiliationIds": [
-          "aff-1",
-          "aff-2"
+          "aff-1"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -10399,19 +11546,6 @@
         "sourceId": "https://openalex.org/I4210148468"
       },
       {
-        "id": "aff-2",
-        "label": "b",
-        "department": "",
-        "institution": "ITRI International",
-        "address": "ITRI International",
-        "city": "",
-        "countryCode": "US",
-        "ror": "https://ror.org/04wwsbd59",
-        "raw": "ITRI International",
-        "source": "openalex",
-        "sourceId": "https://openalex.org/I142066694"
-      },
-      {
         "id": "aff-3",
         "label": "c",
         "department": "",
@@ -10439,15 +11573,16 @@
       }
     ],
     "authorshipMetadata": {
-      "status": "partial",
-      "lastChecked": "2026-07-25",
+      "status": "manually-verified",
+      "lastChecked": "2026-08-03",
       "sources": [
         "crossref",
         "openalex"
       ],
       "sourceUrls": {
         "crossref": "https://api.crossref.org/works/10.1039%2Fc0jm04099a",
-        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1039%2Fc0jm04099a"
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1039%2Fc0jm04099a",
+        "publisher": "https://pubs.rsc.org/en/content/articlehtml/2011/jm/c0jm04099a"
       },
       "requiresManualReview": true,
       "missingFields": [
@@ -10456,7 +11591,14 @@
       ],
       "warnings": [
         "europe-pmc: No DOI match"
-      ]
+      ],
+      "manualOverride": true,
+      "manualAffiliations": true,
+      "lockedFields": [
+        "affiliations",
+        "authorships.affiliationIds"
+      ],
+      "manualVerificationNote": "RSC author addresses are in Taiwan, including Green Energy & Environment Research Laboratories, Industrial Technology Research Institute; rejected OpenAlex ITRI International (US)."
     },
     "id": "10.1039/c0jm04099a",
     "publicationType": "international-journal",
@@ -10468,6 +11610,37 @@
       "journalMetrics": true,
       "fwci": true,
       "citationMetrics": true
+    },
+    "internationalCollaboration": {
+      "status": "domestic",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "TW"
+      ],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-3",
+        "aff-4"
+      ],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "manual-publisher-verification",
+      "confidence": "verified",
+      "sources": [
+        "publisher"
+      ],
+      "evidenceUrls": {
+        "publisher": "https://pubs.rsc.org/en/content/articlehtml/2011/jm/c0jm04099a"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": true,
+      "manualNote": "RSC author addresses are in Taiwan, including Green Energy & Environment Research Laboratories, Industrial Technology Research Institute; rejected OpenAlex ITRI International (US).",
+      "lastEvaluated": "2026-08-03",
+      "inputSignature": "99e67e906372959ad00a"
     }
   },
   {
@@ -10734,6 +11907,39 @@
       "journalMetrics": true,
       "fwci": true,
       "citationMetrics": true
+    },
+    "internationalCollaboration": {
+      "status": "domestic",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "TW"
+      ],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2",
+        "aff-3",
+        "aff-4"
+      ],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "crossref",
+        "openalex"
+      ],
+      "evidenceUrls": {
+        "crossref": "https://api.crossref.org/works/10.1016%2Fj.electacta.2010.07.061",
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1016%2Fj.electacta.2010.07.061"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-08-03",
+      "inputSignature": "7a8110569239686bcb7b"
     }
   },
   {
@@ -10996,6 +12202,49 @@
       "journalMetrics": true,
       "fwci": true,
       "citationMetrics": true
+    },
+    "internationalCollaboration": {
+      "status": "international",
+      "isInternational": true,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "IN",
+        "TW"
+      ],
+      "partnerCountryCodes": [
+        "IN"
+      ],
+      "partnerInstitutions": [
+        {
+          "name": "Central Electrochemical Research Institute",
+          "countryCode": "IN",
+          "ror": "https://ror.org/01qek3q18"
+        }
+      ],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2",
+        "aff-3"
+      ],
+      "foreignAffiliationIds": [
+        "aff-4"
+      ],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "crossref",
+        "openalex"
+      ],
+      "evidenceUrls": {
+        "crossref": "https://api.crossref.org/works/10.1016%2Fj.tsf.2009.11.058",
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1016%2Fj.tsf.2009.11.058"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-08-03",
+      "inputSignature": "0c9eb1fab311e5c1a508"
     }
   },
   {
@@ -11245,6 +12494,38 @@
       "journalMetrics": true,
       "fwci": true,
       "citationMetrics": true
+    },
+    "internationalCollaboration": {
+      "status": "domestic",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "TW"
+      ],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2",
+        "aff-3"
+      ],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "crossref",
+        "openalex"
+      ],
+      "evidenceUrls": {
+        "crossref": "https://api.crossref.org/works/10.1016%2Fj.solmat.2009.07.017",
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1016%2Fj.solmat.2009.07.017"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-08-03",
+      "inputSignature": "f5018d2affca6a20b0fb"
     }
   },
   {
@@ -11335,7 +12616,6 @@
         "authorPosition": "middle",
         "affiliationIds": [
           "aff-2",
-          "aff-4",
           "aff-1"
         ],
         "isEqualContributor": null,
@@ -11462,19 +12742,6 @@
         "sourceId": "https://openalex.org/I25846049"
       },
       {
-        "id": "aff-4",
-        "label": "d",
-        "department": "",
-        "institution": "ITRI International",
-        "address": "ITRI International",
-        "city": "",
-        "countryCode": "US",
-        "ror": "https://ror.org/04wwsbd59",
-        "raw": "ITRI International",
-        "source": "openalex",
-        "sourceId": "https://openalex.org/I142066694"
-      },
-      {
         "id": "aff-5",
         "label": "e",
         "department": "",
@@ -11489,15 +12756,16 @@
       }
     ],
     "authorshipMetadata": {
-      "status": "partial",
-      "lastChecked": "2026-07-25",
+      "status": "manually-verified",
+      "lastChecked": "2026-08-03",
       "sources": [
         "crossref",
         "openalex"
       ],
       "sourceUrls": {
         "crossref": "https://api.crossref.org/works/10.1039%2Fb902595m",
-        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1039%2Fb902595m"
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1039%2Fb902595m",
+        "publisher": "https://pubs.rsc.org/en/content/articlehtml/2009/ee/b902595m"
       },
       "requiresManualReview": true,
       "missingFields": [
@@ -11506,7 +12774,14 @@
       ],
       "warnings": [
         "europe-pmc: No DOI match"
-      ]
+      ],
+      "manualOverride": true,
+      "manualAffiliations": true,
+      "lockedFields": [
+        "affiliations",
+        "authorships.affiliationIds"
+      ],
+      "manualVerificationNote": "RSC author addresses are in Taiwan, including Materials and Chemical Research Laboratories, Industrial Technology Research Institute, Hsinchu; rejected OpenAlex ITRI International (US)."
     },
     "id": "10.1039/b902595m",
     "publicationType": "international-journal",
@@ -11518,6 +12793,38 @@
       "journalMetrics": true,
       "fwci": true,
       "citationMetrics": true
+    },
+    "internationalCollaboration": {
+      "status": "domestic",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "TW"
+      ],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2",
+        "aff-3",
+        "aff-5"
+      ],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "manual-publisher-verification",
+      "confidence": "verified",
+      "sources": [
+        "publisher"
+      ],
+      "evidenceUrls": {
+        "publisher": "https://pubs.rsc.org/en/content/articlehtml/2009/ee/b902595m"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": true,
+      "manualNote": "RSC author addresses are in Taiwan, including Materials and Chemical Research Laboratories, Industrial Technology Research Institute, Hsinchu; rejected OpenAlex ITRI International (US).",
+      "lastEvaluated": "2026-08-03",
+      "inputSignature": "9c95d318bb2ffa4068b0"
     }
   },
   {
@@ -11568,8 +12875,7 @@
         "authorOrder": 1,
         "authorPosition": "first",
         "affiliationIds": [
-          "aff-1",
-          "aff-2"
+          "aff-1"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -11587,8 +12893,7 @@
         "authorOrder": 2,
         "authorPosition": "middle",
         "affiliationIds": [
-          "aff-1",
-          "aff-2"
+          "aff-1"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -11606,8 +12911,7 @@
         "authorOrder": 3,
         "authorPosition": "middle",
         "affiliationIds": [
-          "aff-1",
-          "aff-2"
+          "aff-1"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -11625,8 +12929,7 @@
         "authorOrder": 4,
         "authorPosition": "middle",
         "affiliationIds": [
-          "aff-1",
-          "aff-2"
+          "aff-1"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -11644,8 +12947,7 @@
         "authorOrder": 5,
         "authorPosition": "last",
         "affiliationIds": [
-          "aff-1",
-          "aff-2"
+          "aff-1"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -11670,31 +12972,19 @@
         "raw": "Department of Photonics and Institute of Electro-Optical Engineering, National Chiao Tung University, 1001 Tahsueh Road., Hsinchu 30050, Taiwan, Republic of China, and Photovoltaics Technology Center, Industrial Technology Research Institute, Hsinchu 310, Taiwan, Republic of China",
         "source": "crossref",
         "sourceId": "https://openalex.org/I4210148468"
-      },
-      {
-        "id": "aff-2",
-        "label": "b",
-        "department": "",
-        "institution": "ITRI International",
-        "address": "ITRI International",
-        "city": "",
-        "countryCode": "US",
-        "ror": "https://ror.org/04wwsbd59",
-        "raw": "ITRI International",
-        "source": "openalex",
-        "sourceId": "https://openalex.org/I142066694"
       }
     ],
     "authorshipMetadata": {
-      "status": "partial",
-      "lastChecked": "2026-07-25",
+      "status": "manually-verified",
+      "lastChecked": "2026-08-03",
       "sources": [
         "crossref",
         "openalex"
       ],
       "sourceUrls": {
         "crossref": "https://api.crossref.org/works/10.1021%2Fjp805239k",
-        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1021%2Fjp805239k"
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1021%2Fjp805239k",
+        "publisher": "https://pubs.acs.org/doi/10.1021/jp805239k"
       },
       "requiresManualReview": true,
       "missingFields": [
@@ -11703,7 +12993,14 @@
       ],
       "warnings": [
         "europe-pmc: No DOI match"
-      ]
+      ],
+      "manualOverride": true,
+      "manualAffiliations": true,
+      "lockedFields": [
+        "affiliations",
+        "authorships.affiliationIds"
+      ],
+      "manualVerificationNote": "ACS author address is National Chiao Tung University and the Photovoltaics Technology Center, Industrial Technology Research Institute, Hsinchu, Taiwan; rejected OpenAlex ITRI International (US)."
     },
     "id": "10.1021/jp805239k",
     "publicationType": "international-journal",
@@ -11715,6 +13012,35 @@
       "journalMetrics": true,
       "fwci": true,
       "citationMetrics": true
+    },
+    "internationalCollaboration": {
+      "status": "domestic",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "TW"
+      ],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [
+        "aff-1"
+      ],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "manual-publisher-verification",
+      "confidence": "verified",
+      "sources": [
+        "publisher"
+      ],
+      "evidenceUrls": {
+        "publisher": "https://pubs.acs.org/doi/10.1021/jp805239k"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": true,
+      "manualNote": "ACS author address is National Chiao Tung University and the Photovoltaics Technology Center, Industrial Technology Research Institute, Hsinchu, Taiwan; rejected OpenAlex ITRI International (US).",
+      "lastEvaluated": "2026-08-03",
+      "inputSignature": "23a8ade453423d9eec1f"
     }
   },
   {
@@ -11885,6 +13211,37 @@
       "journalMetrics": true,
       "fwci": true,
       "citationMetrics": true
+    },
+    "internationalCollaboration": {
+      "status": "domestic",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "TW"
+      ],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2"
+      ],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "crossref",
+        "openalex"
+      ],
+      "evidenceUrls": {
+        "crossref": "https://api.crossref.org/works/10.1016%2Fj.optcom.2004.10.003",
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1016%2Fj.optcom.2004.10.003"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-08-03",
+      "inputSignature": "513bac3036da26f159e9"
     }
   },
   {
@@ -11993,6 +13350,36 @@
       "journalMetrics": false,
       "fwci": false,
       "citationMetrics": true
+    },
+    "internationalCollaboration": {
+      "status": "needs-review",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "incomplete",
+      "sources": [
+        "Airiti Library",
+        "National Central Library"
+      ],
+      "evidenceUrls": {
+        "airiti": "https://www.airitilibrary.com/Article/Detail/10158359-202108-202109170004-202109170004-48-59",
+        "ncl": "https://tpl.ncl.edu.tw/NclService/JournalContent?cn%5B0%5D=468&directQuery=true&nestedSearch=false&py%5B0%5D=2021"
+      },
+      "requiresManualReview": true,
+      "warnings": [
+        "No country-qualified affiliation for Chiu, Wei-Hao",
+        "No country-qualified affiliation for Lee, Kun-Mu",
+        "No usable author-address country data"
+      ],
+      "manualOverride": false,
+      "lastEvaluated": "2026-08-03",
+      "inputSignature": "dc40e97dbbc7dd214684"
     }
   },
   {
@@ -12101,6 +13488,38 @@
       "journalMetrics": false,
       "fwci": false,
       "citationMetrics": true
+    },
+    "internationalCollaboration": {
+      "status": "needs-review",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "incomplete",
+      "sources": [
+        "Airiti Library",
+        "ORCID",
+        "Chang Gung University"
+      ],
+      "evidenceUrls": {
+        "airiti": "https://www.airitilibrary.com/Article/Detail/10158359-N202403060002-00002",
+        "orcid": "https://orcid.org/0000-0003-4484-3117",
+        "cgu": "https://www.cgu.edu.tw/cset/Subject/Detail/70836?nodeId=13671"
+      },
+      "requiresManualReview": true,
+      "warnings": [
+        "No country-qualified affiliation for Chiu, Wei-Hao",
+        "No country-qualified affiliation for Lee, Kun-Mu",
+        "No usable author-address country data"
+      ],
+      "manualOverride": false,
+      "lastEvaluated": "2026-08-03",
+      "inputSignature": "dc40e97dbbc7dd214684"
     }
   },
   {
@@ -12271,6 +13690,41 @@
       "journalMetrics": false,
       "fwci": false,
       "citationMetrics": true
+    },
+    "internationalCollaboration": {
+      "status": "needs-review",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "incomplete",
+      "sources": [
+        "Crossref",
+        "OpenAlex",
+        "Chang Gung University Pure",
+        "ORCID"
+      ],
+      "evidenceUrls": {
+        "crossref": "https://api.crossref.org/works/10.1557%2Fproc-1121-n14-01",
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1557%2Fproc-1121-n14-01"
+      },
+      "requiresManualReview": true,
+      "warnings": [
+        "No country-qualified affiliation for Cheng, Hsin-Ming",
+        "No country-qualified affiliation for Chiu, Wei-Hao",
+        "No country-qualified affiliation for Lee, Chia-Hua",
+        "No country-qualified affiliation for Tsai, Song-Yeu",
+        "No country-qualified affiliation for Hsieh, Wen-Feng",
+        "No usable author-address country data"
+      ],
+      "manualOverride": false,
+      "lastEvaluated": "2026-08-03",
+      "inputSignature": "de4bab5ed0b91be06006"
     }
   }
 ]

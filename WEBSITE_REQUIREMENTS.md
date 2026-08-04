@@ -70,3 +70,12 @@ Verified collection files in `data/` remain authoritative. Do not replace them w
 - Content-completeness requirements are type-aware. Conference and Chinese professional outputs are not automatically required to have Highlights or a Graphical Abstract.
 - Academic Monitor must preserve source document type and language, propose an explainable publication type, show confidence and reason, and require a manually editable final type before a confirmed record is added.
 - DOI-less outputs must use the stable `id` for detail-page slugs, anchors, sitemap entries, and duplicate validation.
+
+## International collaboration analytics — 3 August 2026
+
+- Every record in `data/publications.json` stores an `internationalCollaboration` object; the dashboard reads the saved decision and must not recalculate it on every page load.
+- International collaboration requires at least one linked Taiwan author address and at least one linked non-Taiwan author address. Author names, nationality and journal country are never used as evidence.
+- `needs-review` records are excluded from the collaboration-rate denominator. The denominator is `international + domestic`.
+- A manually publisher-verified decision uses `manualOverride: true`. Manually corrected affiliations use `authorshipMetadata.manualAffiliations: true` and locked affiliation fields; automatic Crossref/OpenAlex refreshes must not append rejected affiliations again.
+- Partner-country and partner-institution charts count each publication once per unique partner. Publication-level evidence, confidence, warnings and evaluation date remain downloadable as CSV.
+- Impact comparisons are descriptive and do not claim that collaboration caused citation or FWCI differences.
