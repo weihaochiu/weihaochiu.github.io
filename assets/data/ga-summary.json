@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-04T04:32:10Z",
+  "generatedAt": "2026-08-05T04:30:06Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 329,
-    "activeUsers": 35,
-    "sessions": 83,
-    "engagementRate": 0.5783132530120482
+    "pageViews": 341,
+    "activeUsers": 39,
+    "sessions": 90,
+    "engagementRate": 0.5666666666666667
   },
   "monthlyTrend": [
     {
@@ -19,22 +19,22 @@
     },
     {
       "month": "2026-08",
-      "pageViews": 16,
-      "activeUsers": 5
+      "pageViews": 28,
+      "activeUsers": 9
     }
   ],
   "topPages": [
     {
       "title": "Publications | Wei-Hao Chiu",
       "path": "/publications.html",
-      "pageViews": 67,
-      "activeUsers": 13
+      "pageViews": 70,
+      "activeUsers": 14
     },
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 54,
-      "activeUsers": 26
+      "pageViews": 60,
+      "activeUsers": 30
     },
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
@@ -75,7 +75,13 @@
     {
       "title": "Heterogeneous graphite felt electrodes decorated with nanostructured graphitic carbon nitride for enhanced redox kinetics in vanadium redox flow batteries | Wei-Hao Chiu",
       "path": "/publications/10-1016-j-jpowsour-2025-239216.html",
-      "pageViews": 5,
+      "pageViews": 6,
+      "activeUsers": 3
+    },
+    {
+      "title": "Research | Wei-Hao Chiu",
+      "path": "/research.html",
+      "pageViews": 6,
       "activeUsers": 3
     },
     {
@@ -85,22 +91,16 @@
       "activeUsers": 2
     },
     {
-      "title": "Research | Wei-Hao Chiu",
-      "path": "/research.html",
-      "pageViews": 5,
-      "activeUsers": 3
+      "title": "Round-Robin Interlaboratory Comparison of Large-Area Organic Thin-Film and Perovskite Solar Cells | Wei-Hao Chiu",
+      "path": "/publications/10-1002-solr-202500538.html",
+      "pageViews": 4,
+      "activeUsers": 2
     },
     {
       "title": "Impact of proton radiation on the performance of single-junction perovskite solar cells for space applications | Wei-Hao Chiu",
       "path": "/publications/10-1016-j-solmat-2025-114015.html",
       "pageViews": 3,
       "activeUsers": 2
-    },
-    {
-      "title": "Round-Robin Interlaboratory Comparison of Large-Area Organic Thin-Film and Perovskite Solar Cells | Wei-Hao Chiu",
-      "path": "/publications/10-1002-solr-202500538.html",
-      "pageViews": 3,
-      "activeUsers": 1
     },
     {
       "title": "Exploring the efficiency enhancement of perovskite solar cells by chemical bath depositing SnO2 on mesoporous TiO2 electrode | Wei-Hao Chiu",
@@ -118,30 +118,30 @@
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 44,
-      "activeUsers": 30
+      "sessions": 48,
+      "activeUsers": 34
     },
     {
       "channel": "Organic Search",
-      "sessions": 39,
+      "sessions": 42,
       "activeUsers": 6
     },
     {
       "channel": "Unassigned",
-      "sessions": 1,
+      "sessions": 3,
       "activeUsers": 1
     }
   ],
   "topCountries": [
     {
-      "country": "Taiwan",
-      "activeUsers": 13,
-      "pageViews": 294
+      "country": "United States",
+      "activeUsers": 15,
+      "pageViews": 18
     },
     {
-      "country": "United States",
-      "activeUsers": 12,
-      "pageViews": 14
+      "country": "Taiwan",
+      "activeUsers": 13,
+      "pageViews": 301
     },
     {
       "country": "(not set)",
@@ -159,6 +159,11 @@
       "pageViews": 13
     },
     {
+      "country": "Russia",
+      "activeUsers": 2,
+      "pageViews": 2
+    },
+    {
       "country": "China",
       "activeUsers": 1,
       "pageViews": 1
@@ -172,17 +177,12 @@
       "country": "Pakistan",
       "activeUsers": 1,
       "pageViews": 1
-    },
-    {
-      "country": "Russia",
-      "activeUsers": 1,
-      "pageViews": 1
     }
   ],
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 26
+      "activeUsers": 30
     },
     {
       "device": "mobile",
@@ -196,7 +196,7 @@
     },
     {
       "eventName": "doi_click",
-      "eventCount": 15
+      "eventCount": 16
     },
     {
       "eventName": "orcid_click",
