@@ -5,7 +5,7 @@
   "publicationCount": 40,
   "verifiedCount": 38,
   "notFoundCount": 2,
-  "lastSuccessfulUpdate": "2026-08-05T05:26:13Z",
+  "lastSuccessfulUpdate": "2026-08-06T05:28:26Z",
   "records": {
     "10.1016/j.cej.2026.177494": {
       "status": "verified",
@@ -52,12 +52,12 @@
       "title": "Heterogeneous graphite felt electrodes decorated with nanostructured graphitic carbon nitride for enhanced redox kinetics in vanadium redox flow batteries",
       "openAlexId": "W7118007754",
       "url": "https://openalex.org/W7118007754",
-      "citationCount": 1,
-      "fwci": 3.2866,
-      "citationPercentile": 0.85130513,
+      "citationCount": 2,
+      "fwci": 6.1921,
+      "citationPercentile": 0.93781901,
       "isTop1Percent": false,
-      "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-07-28T07:46:37.118299"
+      "isTop10Percent": true,
+      "openAlexUpdatedDate": "2026-08-05T07:39:15.569665"
     },
     "10.1016/j.solmat.2025.114015": {
       "status": "verified",
@@ -209,8 +209,8 @@
       "openAlexId": "W4385773304",
       "url": "https://openalex.org/W4385773304",
       "citationCount": 10,
-      "fwci": 0.8289,
-      "citationPercentile": 0.68611108,
+      "fwci": 0.8278,
+      "citationPercentile": 0.68581283,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-08-03T07:22:36.454288"
