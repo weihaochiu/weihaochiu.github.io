@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-05T04:30:06Z",
+  "generatedAt": "2026-08-06T04:31:23Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 341,
-    "activeUsers": 39,
-    "sessions": 90,
-    "engagementRate": 0.5666666666666667
+    "pageViews": 344,
+    "activeUsers": 42,
+    "sessions": 93,
+    "engagementRate": 0.5913978494623656
   },
   "monthlyTrend": [
     {
@@ -19,8 +19,8 @@
     },
     {
       "month": "2026-08",
-      "pageViews": 28,
-      "activeUsers": 9
+      "pageViews": 31,
+      "activeUsers": 12
     }
   ],
   "topPages": [
@@ -33,8 +33,8 @@
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 60,
-      "activeUsers": 30
+      "pageViews": 63,
+      "activeUsers": 33
     },
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
@@ -118,25 +118,20 @@
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 48,
-      "activeUsers": 34
+      "sessions": 51,
+      "activeUsers": 37
     },
     {
       "channel": "Organic Search",
       "sessions": 42,
       "activeUsers": 6
-    },
-    {
-      "channel": "Unassigned",
-      "sessions": 3,
-      "activeUsers": 1
     }
   ],
   "topCountries": [
     {
       "country": "United States",
-      "activeUsers": 15,
-      "pageViews": 18
+      "activeUsers": 17,
+      "pageViews": 20
     },
     {
       "country": "Taiwan",
@@ -144,12 +139,12 @@
       "pageViews": 301
     },
     {
-      "country": "(not set)",
-      "activeUsers": 2,
-      "pageViews": 2
+      "country": "Germany",
+      "activeUsers": 3,
+      "pageViews": 3
     },
     {
-      "country": "Germany",
+      "country": "(not set)",
       "activeUsers": 2,
       "pageViews": 2
     },
@@ -182,7 +177,7 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 30
+      "activeUsers": 33
     },
     {
       "device": "mobile",
