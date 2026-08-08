@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-07T04:03:53Z",
+  "generatedAt": "2026-08-08T03:01:14Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
@@ -9,7 +9,7 @@
     "pageViews": 349,
     "activeUsers": 47,
     "sessions": 98,
-    "engagementRate": 0.5612244897959183
+    "engagementRate": 0.5714285714285714
   },
   "monthlyTrend": [
     {
@@ -123,18 +123,8 @@
     },
     {
       "channel": "Organic Search",
-      "sessions": 42,
-      "activeUsers": 6
-    },
-    {
-      "channel": "Cross-network",
-      "sessions": 1,
-      "activeUsers": 1
-    },
-    {
-      "channel": "Unassigned",
-      "sessions": 1,
-      "activeUsers": 1
+      "sessions": 43,
+      "activeUsers": 7
     }
   ],
   "topCountries": [
