@@ -1,6 +1,6 @@
 {
   "version": "v25",
-  "lastUpdated": "2026-08-08",
+  "lastUpdated": "2026-08-09",
   "notes": "V25 separates 40 scholarly outputs by publication type while retaining 37 core international journal publications as the scope for JCR, journal IF and FWCI analytics.",
   "coreJournalPublications": 37,
   "scholarlyOutputs": 40
