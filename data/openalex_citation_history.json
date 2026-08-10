@@ -2,12 +2,12 @@
   "schemaVersion": 3,
   "source": "OpenAlex Works API",
   "status": "success_with_exclusions",
-  "lastSuccessfulUpdate": "2026-08-03T18:47:26.786683Z",
+  "lastSuccessfulUpdate": "2026-08-10T05:22:44.661769Z",
   "workCount": 38,
   "missingPublicationYearCount": 0,
-  "totalCitationsFromPublicationMetrics": 989,
-  "rawTotalCitationsFromHistory": 989,
-  "totalCitationsIncludedInAnnualChart": 983,
+  "totalCitationsFromPublicationMetrics": 990,
+  "rawTotalCitationsFromHistory": 990,
+  "totalCitationsIncludedInAnnualChart": 984,
   "rawValidationDifference": 0,
   "unassignedCitationCount": 0,
   "excludedInvalidCitationCount": 6,
@@ -137,7 +137,7 @@
     },
     {
       "year": 2026,
-      "citations": 54
+      "citations": 55
     }
   ],
   "works": {
@@ -13797,7 +13797,7 @@
           "volume": "55",
           "issue": "11",
           "pages": "1013-1034",
-          "type": "article"
+          "type": "book-chapter"
         },
         {
           "openAlexId": "W2793044490",
@@ -17298,7 +17298,7 @@
           "volume": "57",
           "issue": "1",
           "pages": "",
-          "type": "article"
+          "type": "book-chapter"
         },
         {
           "openAlexId": "W4402183735",
@@ -22489,8 +22489,8 @@
           "journal": "Advanced Energy Materials",
           "publicationYear": 2026,
           "publicationDate": "2026-06-03",
-          "volume": "",
-          "issue": "",
+          "volume": "16",
+          "issue": "29",
           "pages": "",
           "type": "article"
         },
@@ -22570,28 +22570,49 @@
       "doi": "10.1016/j.jpowsour.2025.239216",
       "title": "Heterogeneous graphite felt electrodes decorated with nanostructured graphitic carbon nitride for enhanced redox kinetics in vanadium redox flow batteries",
       "publicationYear": 2026,
-      "currentCitationCount": 1,
+      "currentCitationCount": 2,
       "sourceUrl": "https://api.openalex.org/works?filter=cites:W7118007754",
       "citationsByYear": [
         {
           "year": 2026,
-          "citations": 1
+          "citations": 2
         }
       ],
       "rawCitationsByYear": [
         {
           "year": 2026,
-          "citations": 1
+          "citations": 2
         }
       ],
-      "historyTotal": 1,
-      "rawHistoryTotal": 1,
+      "historyTotal": 2,
+      "rawHistoryTotal": 2,
       "excludedInvalidCitationCount": 0,
       "excludedInvalidCitations": [],
       "unassignedCitationCount": 0,
-      "citingWorkCount": 1,
-      "citingArticlesWithDoiCount": 1,
+      "citingWorkCount": 2,
+      "citingArticlesWithDoiCount": 2,
       "citingArticlesWithDoi": [
+        {
+          "openAlexId": "W7172421124",
+          "doi": "10.1016/j.matre.2026.100450",
+          "doiUrl": "https://doi.org/10.1016/j.matre.2026.100450",
+          "title": "Electrochemical water splitting for green hydrogen: Key material roles, persistent challenges, and outlook",
+          "authors": [
+            "Yousuf Abir Bari",
+            "Md Mahamudul Hasan Pranto",
+            "Zarin Tasnim Biva",
+            "Fuad Uddin Ahmad",
+            "Labiba Luzain",
+            "Monjur Mourshed"
+          ],
+          "journal": "Materials Reports Energy",
+          "publicationYear": 2026,
+          "publicationDate": "2026-08-01",
+          "volume": "",
+          "issue": "",
+          "pages": "100450",
+          "type": "article"
+        },
         {
           "openAlexId": "W7165137692",
           "doi": "10.1007/s10853-026-13140-w",
