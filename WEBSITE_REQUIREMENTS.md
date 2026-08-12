@@ -79,3 +79,11 @@ Verified collection files in `data/` remain authoritative. Do not replace them w
 - A manually publisher-verified decision uses `manualOverride: true`. Manually corrected affiliations use `authorshipMetadata.manualAffiliations: true` and locked affiliation fields; automatic Crossref/OpenAlex refreshes must not append rejected affiliations again.
 - Partner-country and partner-institution charts count each publication once per unique partner. Publication-level evidence, confidence, warnings and evaluation date remain downloadable as CSV.
 - Impact comparisons are descriptive and do not claim that collaboration caused citation or FWCI differences.
+
+## Website Insights traffic sources — 13 August 2026
+
+- Website Insights retains the existing GA4 Traffic channels visualization based on `sessionDefaultChannelGroup`.
+- A separate Top traffic sources table displays the GA4 `sessionSource` and `sessionMedium` values with sessions and active users for the last 28 days through yesterday.
+- Source and medium values are preserved exactly as returned by GA4; they are not reclassified or converted to hyperlinks.
+- The GA4 export stores up to 20 traffic sources ordered by sessions descending in the top-level `trafficSources` array of `assets/data/ga-summary.json`.
+- The table remains readable on desktop, tablet and mobile. Missing or empty `trafficSources` data displays `No data` without preventing the rest of Website Insights from loading.

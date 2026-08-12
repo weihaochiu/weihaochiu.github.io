@@ -51,7 +51,7 @@ flowchart TD
 | 檔案 | 功能 | 主要依賴 |
 |---|---|---|
 | `publication-insights-4d8c7a.html` | Publication Insights：內容完整度、年度論文與引用、JCR／IF、共同作者網路、國際合作摘要、年度趨勢、合作國家／機構、影響力比較與逐篇查核表；支援 CSV／PNG | `publications.json`、`journals.json`、OpenAlex/Crossref metrics、`international-collaboration-insights.js` |
-| `website-insight-ea929558.html` | Website Insights：GA4 流量摘要與 DOI、OA PDF、Google Scholar、OpenAlex、Crossref、ORCID、Email、CV、Share、Patent 等互動事件 | `assets/data/ga-summary.json`、`app.js` |
+| `website-insight-ea929558.html` | Website Insights：GA4 流量摘要、Traffic channels、Top traffic sources，以及 DOI、OA PDF、Google Scholar、OpenAlex、Crossref、ORCID、Email、CV、Share、Patent 等互動事件 | `assets/data/ga-summary.json`、`app.js` |
 | `bems-fe5049fb.html` | BEMS 專用 GA4／網站分析頁 | `assets/data/ga-summary.json` 或頁面內指定資料 |
 
 隱藏網址只能降低被一般訪客發現的機率，不能視為真正的存取控制。不要在這些頁面或 JSON 放置密碼、API secret、service-account private key 或其他敏感資料。
@@ -127,7 +127,7 @@ flowchart TD
 | `data/mendeley_metrics.json` | 每篇 DOI 的 Mendeley readers、catalogue 連結、fresh/stale/not-found/error 狀態。 | `update_mendeley.py`；Mendeley API |
 | `data/unpaywall.json` | DOI 對應合法 OA 狀態、best OA location 與 PDF URL。 | `update_unpaywall.py`；Unpaywall API |
 | `data/journals.json` | 期刊、ISSN、publisher、JIF、5-year IF、JCR quartile、category、來源政策與更新時間。 | `update_journals.py`；JCR/公開來源與既有資料 |
-| `assets/data/ga-summary.json` | GA4 page views、users、sessions、country/device/page 與自訂互動事件摘要。 | `export_ga4_summary.py`；GA4 Data API |
+| `assets/data/ga-summary.json` | GA4 page views、users、sessions、country/device/page、`trafficSources` 與自訂互動事件摘要；`trafficSources` 保存 `sessionSource`、`sessionMedium`、sessions 及 active users。 | `export_ga4_summary.py`；GA4 Data API |
 
 `data/README_KEEP_EXISTING_JSON.txt` 是資料保留提醒，更新 ZIP 或合併檔案時不可誤刪既有 JSON。
 
@@ -147,7 +147,7 @@ flowchart TD
 | `scripts/update_unpaywall.py` | 查 OA 狀態並選擇可公開使用的 PDF landing/PDF URL。 | publications + Unpaywall API → `unpaywall.json` |
 | `scripts/update_journals.py` | 大型期刊資料更新器；彙整期刊識別、JCR profile、IF、quartile、來源與保留政策。 | publications + journal sources + existing JSON → `journals.json` |
 | `scripts/update_publication_authorships.py` | 更新作者／地址後立即計算並保存國際合作；人工鎖定 affiliation 與 collaboration 不受 OpenAlex/Crossref 覆蓋；`--collaboration-only` 可離線重算未鎖定資料。 | publications + Europe PMC/Crossref/OpenAlex/出版社 metadata → `publications.json` |
-| `scripts/export_ga4_summary.py` | 透過 GA4 Data API 匯出網站與互動事件摘要；敏感憑證只由 GitHub Secrets／環境變數提供。 | GA4 property/credentials → `assets/data/ga-summary.json` |
+| `scripts/export_ga4_summary.py` | 透過 GA4 Data API 匯出網站與互動事件摘要；另以 `sessionSource` 與 `sessionMedium` 匯出依 sessions 排序的 Top traffic sources；敏感憑證只由 GitHub Secrets／環境變數提供。 | GA4 property/credentials → `assets/data/ga-summary.json` |
 | `scripts/requirements.txt` | citation/OA scripts 的 Python dependencies。 | pip install 用 |
 | `requirements-ga4.txt` | GA4 export 專用 dependencies。 | pip install 用 |
 

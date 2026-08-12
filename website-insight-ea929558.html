@@ -34,13 +34,18 @@ a{color:inherit;text-decoration:none}
 canvas{width:100%!important;max-height:360px}
 .table-wrap{overflow:auto}
 table{border-collapse:collapse;width:100%}th,td{text-align:left;padding:12px;border-bottom:1px solid var(--line);font-size:14px}th{color:var(--muted);font-weight:600}
+.traffic-source-card{grid-column:1/-1}
+.traffic-source-table{table-layout:fixed}
+.traffic-source-table th,.traffic-source-table td{vertical-align:top}
+.traffic-source-table th:nth-child(n+3),.traffic-source-table td:nth-child(n+3){text-align:right;white-space:nowrap}
+.source-value,.medium-value{display:block;overflow-wrap:anywhere}
 .status{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted)}.dot{width:9px;height:9px;border-radius:50%;background:var(--ok)}
 .toolbar{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:16px}
 select{padding:9px 12px;border:1px solid var(--line);border-radius:10px;background:#fff}
 .error{display:none;background:#fff3f3;color:#9a2222;border:1px solid #ffd6d6;padding:14px;border-radius:12px;margin:16px 0}
 footer{margin:30px 0 8px;color:var(--muted);font-size:13px}
 @media(max-width:850px){.grid,.panel-grid,.kpis{grid-template-columns:1fr 1fr}.shell{padding:16px}}
-@media(max-width:560px){.grid,.panel-grid,.kpis{grid-template-columns:1fr}.hero{padding:24px}.topbar{align-items:flex-start}}
+@media(max-width:560px){.grid,.panel-grid,.kpis{grid-template-columns:1fr}.hero{padding:24px}.topbar{align-items:flex-start}.traffic-source-table th,.traffic-source-table td{padding:10px 6px;font-size:12px}}
 </style>
 <script type="application/ld+json" id="person-schema">{"@context":"https://schema.org","@type":"Person","@id":"https://weihaochiu.github.io/#person","name":"Wei-Hao Chiu","alternateName":["邱偉豪","Chiu, Wei-Hao"],"honorificSuffix":"Ph.D.","url":"https://weihaochiu.github.io/","image":"https://weihaochiu.github.io/assets/images/profile.jpg","jobTitle":"Associate Researcher","email":["mailto:weihao.chiu@gmail.com","mailto:d000019005@cgu.edu.tw"],"affiliation":{"@type":"Organization","name":"Chang Gung University","url":"https://www.cgu.edu.tw/"},"worksFor":{"@type":"Organization","name":"Center for Sustainability and Energy Technologies, Chang Gung University"},"knowsAbout":["Perovskite solar cells","Tin and tin-lead perovskite photovoltaics","Scalable photovoltaic manufacturing","Vacuum-flash crystallization","Blade coating","Slot-die coating","Charge-transport layers","Self-assembled monolayers","Photoluminescence and electroluminescence","Quasi-Fermi level splitting","Photovoltaic reliability","Space photovoltaics","Tandem solar cells","Vanadium redox flow batteries"],"sameAs":["https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en","https://orcid.org/0000-0003-4484-3117","https://www.scopus.com/authid/detail.uri?authorId=7201503537","https://www.webofscience.com/wos/author/record/JCE-6812-2023","https://pure.lib.cgu.edu.tw/en/persons/wei-hao-chiu/publications/","https://www.cgu.edu.tw/cset-en/FullTimeProfessorManagement/Detail/e3d82caf-b69a-4ee3-ac95-0d1558e22d83?nodeId=17439","https://www.researchgate.net/profile/Wei-Hao-Chiu","https://www.linkedin.com/in/wei-hao-chiu-a208a9b0/","https://openalex.org/works?filter=authorships.author.id:a5007707999"]}</script></head>
 <body>
@@ -59,6 +64,7 @@ footer{margin:30px 0 8px;color:var(--muted);font-size:13px}
   <section class="panel-grid">
     <article class="card"><h2>Top pages</h2><div class="table-wrap"><table><thead><tr><th>Page</th><th>Views</th><th>Users</th></tr></thead><tbody id="topPages"></tbody></table></div></article>
     <article class="card"><h2>Traffic channels</h2><canvas id="channelsChart"></canvas></article>
+    <article class="card traffic-source-card"><h2>Top traffic sources</h2><div class="table-wrap"><table class="traffic-source-table" aria-label="Top traffic sources"><colgroup><col style="width:46%"><col style="width:24%"><col style="width:15%"><col style="width:15%"></colgroup><thead><tr><th>Source</th><th>Medium</th><th>Sessions</th><th>Users</th></tr></thead><tbody id="trafficSources"></tbody></table></div></article>
     <article class="card"><h2>Top countries</h2><div class="table-wrap"><table><thead><tr><th>Country</th><th>Users</th><th>Views</th></tr></thead><tbody id="countries"></tbody></table></div></article>
     <article class="card"><h2>Devices</h2><canvas id="devicesChart"></canvas></article>
   </section>
@@ -69,7 +75,7 @@ footer{margin:30px 0 8px;color:var(--muted);font-size:13px}
 const DATA_URL='assets/data/ga-summary.json';
 const nf=new Intl.NumberFormat('en-US');
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-function rows(id,data,fn){document.getElementById(id).innerHTML=(data||[]).map(fn).join('')||'<tr><td colspan="3" class="muted">No data</td></tr>';}
+function rows(id,data,fn,colspan=3){document.getElementById(id).innerHTML=(data||[]).map(fn).join('')||`<tr><td colspan="${colspan}" class="muted">No data</td></tr>`;}
 function chart(id,type,labels,datasets,options={}){new Chart(document.getElementById(id),{type,data:{labels,datasets},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom'}},...options}});}
 fetch(DATA_URL,{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(d=>{
  document.getElementById('updated').textContent='Updated '+new Date(d.generatedAt).toLocaleString();
@@ -81,6 +87,8 @@ fetch(DATA_URL,{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.s
  ],{scales:{y:{beginAtZero:true,position:'left'},y1:{beginAtZero:true,position:'right',grid:{drawOnChartArea:false}}}});
  rows('topPages',d.topPages,x=>`<tr><td><strong>${esc(x.title||x.path)}</strong><br><span class="muted">${esc(x.path)}</span></td><td>${nf.format(x.pageViews||0)}</td><td>${nf.format(x.activeUsers||0)}</td></tr>`);
  const c=d.trafficChannels||[];chart('channelsChart','bar',c.map(x=>x.channel),[{label:'Sessions',data:c.map(x=>x.sessions)}],{indexAxis:'y'});
+ const trafficSources=(d.trafficSources||[]).slice().sort((a,b)=>(Number(b.sessions)||0)-(Number(a.sessions)||0));
+ rows('trafficSources',trafficSources,x=>`<tr><td><span class="source-value">${esc(x.source)}</span></td><td><span class="medium-value">${esc(x.medium)}</span></td><td>${nf.format(x.sessions||0)}</td><td>${nf.format(x.activeUsers||0)}</td></tr>`,4);
  rows('countries',d.topCountries,x=>`<tr><td>${esc(x.country)}</td><td>${nf.format(x.activeUsers||0)}</td><td>${nf.format(x.pageViews||0)}</td></tr>`);
  const dv=d.devices||[];chart('devicesChart','doughnut',dv.map(x=>x.device),[{label:'Users',data:dv.map(x=>x.activeUsers)}]);
  const eventLabels=[

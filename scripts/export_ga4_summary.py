@@ -46,6 +46,9 @@ def main():
     channels = report(client, ["sessionDefaultChannelGroup"], ["sessions","activeUsers"], "28daysAgo", limit=10, order_metric="sessions")
     traffic=[{"channel":r.dimension_values[0].value,"sessions":val(r,0,int),"activeUsers":val(r,1,int)} for r in channels.rows]
 
+    sources = report(client, ["sessionSource","sessionMedium"], ["sessions","activeUsers"], "28daysAgo", limit=20, order_metric="sessions")
+    traffic_sources=[{"source":r.dimension_values[0].value,"medium":r.dimension_values[1].value,"sessions":val(r,0,int),"activeUsers":val(r,1,int)} for r in sources.rows]
+
     countries_r = report(client, ["country"], ["activeUsers","screenPageViews"], "28daysAgo", limit=15, order_metric="activeUsers")
     countries=[{"country":r.dimension_values[0].value,"activeUsers":val(r,0,int),"pageViews":val(r,1,int)} for r in countries_r.rows]
 
@@ -68,7 +71,8 @@ def main():
         "generatedAt":datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00","Z"),
         "period":{"overview":"28daysAgo to yesterday","trend":"365daysAgo to yesterday"},
         "overview":overview,"monthlyTrend":monthly_trend,"topPages":top_pages,
-        "trafficChannels":traffic,"topCountries":countries,"devices":devices,
+        "trafficChannels":traffic,"trafficSources":traffic_sources,
+        "topCountries":countries,"devices":devices,
         "academicEvents":events
     }
     OUTPUT.parent.mkdir(parents=True,exist_ok=True)
