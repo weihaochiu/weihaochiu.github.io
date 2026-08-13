@@ -16,6 +16,8 @@ from urllib.error import HTTPError, URLError
 from urllib.parse import quote, urlencode
 from urllib.request import Request, urlopen
 
+from publication_scope import is_research_publication
+
 ROOT = Path(__file__).resolve().parents[1]
 PUBLICATIONS_PATH = ROOT / "data" / "publications.json"
 OUTPUT_PATH = ROOT / "data" / "openalex_publication_metrics.json"
@@ -161,6 +163,8 @@ def main() -> int:
         publications = json.loads(PUBLICATIONS_PATH.read_text(encoding="utf-8"))
         dois: list[str] = []
         for publication in publications:
+            if not is_research_publication(publication):
+                continue
             doi = normalize_doi(publication.get("doi"))
             if doi and doi not in dois:
                 dois.append(doi)

@@ -13711,5 +13711,243 @@
       "lastEvaluated": "2026-08-08",
       "inputSignature": "de4bab5ed0b91be06006"
     }
+  },
+  {
+    "id": "phd-thesis-2011",
+    "date": "2011",
+    "year": 2011,
+    "authors": [
+      "Wei-Hao Chiu"
+    ],
+    "authorZh": "邱偉豪",
+    "title": "Study on Electron Transport Mechanism in Metal Oxide Photoanode Electrode for Dye-Sensitized Solar Cells",
+    "titleZh": "染料敏化太陽電池的金屬氧化物光電極中電子傳遞機制之研究",
+    "degree": "Ph.D.",
+    "institution": "National Chiao Tung University",
+    "institutionZh": "國立交通大學",
+    "department": "Institute of Electro-Optical Engineering",
+    "departmentZh": "光電工程學系",
+    "advisor": "Wen-Feng Hsieh",
+    "advisorZh": "謝文峰",
+    "pages": "104",
+    "language": "en",
+    "languageLabel": "English",
+    "repositoryUrl": "https://hdl.handle.net/11296/y6376u",
+    "publicationUrl": "https://ir.lib.nycu.edu.tw/handle/11536/40833",
+    "abstract": "In early 2011, the oil price broke through 110 U.S. dollars per barrel. People are paying more and more effort to find the alternative energy sources that would suffice in the following high-oil-price era. In this thesis, the works are associated with some fundamental research in one of the solutions to the energy sources, dye-sensitized solar cells. The dye-sensitized solar cell is taken as the system where the effects of the structure and the quality of the photoanode electrodes will be studied and rationalized. Firstly, the tetrapod-like ZnO (T-ZnO) nanopartipcles (NPs) are employed to construct an efficient electron transport network as the photoanode of the dye-sensitized solar cells (DSCs). The best performance of DSCs based on 42 μm terapod-like ZnO film showed high energy conversion efficiency of 4.9% with high short-circuit current density of 12.3 mA cm-2, open-circuit voltage of 0.6 V, and filling factor of 0.65 under AM 1.5 irradiation. High efficient electron transport may be also ascribed by long effective electron diffusion length of 46 μm determined from the electrochemical impedance spectroscopy (EIS) which is consistent with thickness dependent JSC measurement. On the other hand, from time-response photocurrent transient analysis and EIS studies on the ionic diffusion dynamics of the high-viscosity electrolyte, we observed the presence of a tetrapod-like framework as the photoanode provides more efficient ionic diffusion pathway than the conventional photoanode made of C-ZnO (commercial spherical ZnO) nanopowders. And the concept of tetrapod structure is also suitable for other semiconductor photoanode in DSCs for future applications. In the second part of this thesis, a multiple electrophoretic deposition (EPD) of binder-free TiO2 photoanode has been developed to successfully fill the crack occurring after air-drying on the first EPD-TiO2 film surface. With the slow 2nd EPD, high quality TiO2 thin films are acquired on flexible ITO/PEN substrates at room temperature and the device efficiency of the dye-sensitized solar cell achieves 5.54% with a high fill factor of 0.721. EIS measurements analyze the great enhancement of the photovoltaic performance through the multiple EPD. The electron diffusion coefficient improved by about 1 order of magnitude in crack-less multiple-EPD TiO2 films. With the scattering layer, the device reveals a high conversion efficiency of up to 6.63% under AM 1.5 one sun irradiation, having a short circuit current density, open circuit voltage, and filling factor of 12.06mA cm-2, 0.763V and 0.72, respectively. Moreover, the durability of dye-sensitized plastic solar cells using two organic iodides (TBAI and PMII) are investigated. Plastic DSCs with MPN-based electrolyte containing TBAI provide good long-term stability than PMII ones. They maintain 96.9 % of baseline efficiency after 100 h under a prolonged visible light irradiation and thermal (60 oC) stress aging. We will also report the effects of organic iodides, cell-sealing conditions, and the sheet resistance of indium tin oxide coated polyethylene naphthalate substrate on device durability using the EIS.",
+    "abstractZh": "在2011年初，原油的價格突破了每桶110美元的價格。人們花費越來越多的努力來尋找替代能源，以度過接下來的高油價時代。在這篇論文中主要是探討其中一種替代能源—染料敏化太陽能電池的基礎研究，進而針對染料敏化太陽能電池光電極的結構以及品質進行研究以及探討。本文的第一部分，首先四針錐狀氧化鋅奈米粉體將被使用於染敏太陽電池之光電極以提供有效率之電子傳遞。在AM1.5的光源量測下，以厚度為42微米之氧化鋅作為光電極的電池表現出最高效率4.9%，而其短路電流、開路電壓以及填充因子分別為12.3 mA cm-2、0.6 V和0.65。藉由交流阻抗分析技術，我們發現四針錐狀氧化鋅奈米結構之光電極有46微米的有效電子擴散長度，此結果也與短路電流之相關量測結果一致。另外一方面，對於高黏度之離子液體，我們觀察到四針錐狀氧化鋅奈米結構之光電極相對於一般傳統之光電極結構，也提供了更有效率的離子擴散路徑。而對於四針錐狀氧化鋅奈米結構之光電極這種概念的結構，也適用於其他半導體光電極在DSC的未來應用上。本文的第二部分將使用透過多次電泳沉積無黏結劑之二氧化鈦光電極來填補第一次電泳沉積所產生之裂縫。透過較慢的二次電泳沉積，我們成功地在室溫下製備高品質之二氧化鈦薄膜於ITO/PEN塑膠基板上，此元件達到5.54%的效率及0.721的填充因子。透過交流阻抗分析技術，我們證實了多次電泳沉積所帶來在元件表現上的效益。電子擴散常數在較少裂縫之光電極中增加了約10倍。透過散射層的沉積，元件在AM 1.5一個模擬太陽光照射下達到的開路電壓、短路電流、填充因子及光電轉換效率分別為0.763V、12.06 mA cm-2、0.72及6.63%。此外，分別使用兩種有機碘化物（TBAI和PMII）的塑膠基板染料敏化電池的實驗結果顯示，含有TBAI的MPN電解液的塑膠元件比含有PMII的表現出較好的長期穩定性。在攝氏60度及可見光1000小時照射的加速老化測試下，含有TBAI的元件維持了96.9%的元件效率表現。",
+    "keywords": [
+      "Dye-sensitized solar cells",
+      "Electrochemical impedance spectroscopy (EIS)",
+      "Photoanode electrode",
+      "Metal oxide"
+    ],
+    "keywordsZh": [
+      "染料敏化太陽電池",
+      "交流阻抗分析",
+      "光電極",
+      "金屬氧化物"
+    ],
+    "topic": "Dye-Sensitized Solar Cells",
+    "tags": [
+      "Doctoral dissertation",
+      "Dye-sensitized solar cells",
+      "Photoanodes"
+    ],
+    "contentStatus": {
+      "abstract": "available",
+      "highlights": "not-required",
+      "keywords": "available",
+      "graphicalAbstract": "not-required",
+      "verifiedDate": "2026-08-13",
+      "verifiedSource": "National Yang Ming Chiao Tung University Institutional Repository"
+    },
+    "authorships": [
+      {
+        "name": "Wei-Hao Chiu",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "institutional-repository"
+        ]
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "manual",
+      "lastChecked": "2026-08-13",
+      "sources": [
+        "National Yang Ming Chiao Tung University Institutional Repository"
+      ],
+      "sourceUrls": {
+        "institutionalRepository": "https://ir.lib.nycu.edu.tw/handle/11536/40833",
+        "permanentRecord": "https://hdl.handle.net/11296/y6376u"
+      },
+      "requiresManualReview": false,
+      "manualOverride": true,
+      "missingFields": [],
+      "warnings": []
+    },
+    "publicationType": "thesis",
+    "documentType": "doctoral-thesis",
+    "peerReviewStatus": "not-applicable",
+    "metadataSource": "manual_verified",
+    "automationProtection": {
+      "protected": true,
+      "reason": "Verified DOI-less thesis metadata must not be enriched or replaced by journal APIs."
+    },
+    "analytics": {
+      "coreJournalCount": false,
+      "journalMetrics": false,
+      "fwci": false,
+      "citationMetrics": false,
+      "excludeFromResearchAnalytics": true
+    },
+    "internationalCollaboration": {
+      "status": "needs-review",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "excluded-thesis",
+      "confidence": "not-applicable",
+      "sources": [
+        "National Yang Ming Chiao Tung University Institutional Repository"
+      ],
+      "evidenceUrls": {
+        "institutionalRepository": "https://ir.lib.nycu.edu.tw/handle/11536/40833"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": true,
+      "lastEvaluated": "2026-08-13"
+    }
+  },
+  {
+    "id": "ms-thesis-2005",
+    "date": "2005",
+    "year": 2005,
+    "authors": [
+      "Wei-Hao Chiu"
+    ],
+    "authorZh": "邱偉豪",
+    "title": "Modified Spontaneous Emission in a Tightly Pumped Nd:YVO4 Laser with Degenerate Resonator",
+    "titleZh": "微聚焦端泵浦摻釹釩酸釔雷射在簡併共振腔下被修正過的自發輻射",
+    "degree": "M.S.",
+    "institution": "National Chiao Tung University",
+    "institutionZh": "國立交通大學",
+    "department": "Institute of Electro-Optical Engineering",
+    "departmentZh": "光電工程系所",
+    "advisor": "Wen-Feng Hsieh",
+    "advisorZh": "謝文峰",
+    "pages": "42",
+    "language": "en",
+    "languageLabel": "English",
+    "repositoryUrl": "https://hdl.handle.net/11296/mc89fj",
+    "publicationUrl": "https://ir.lib.nycu.edu.tw/handle/11536/76743",
+    "abstract": "The queer spontaneous emission behavior of an axially pumped Nd:YVO4 laser is observed under a small pumping spot size. We experimentally demonstrate that the output power of spontaneous emission in degeneracy cavity is larger than in non-degeneracy cavity. From the qualitative analysis of single mode rate equation, we conclude β (the spontaneous emission coupling efficiency) and 1/tf (tf is the spontaneous decay time) at degeneracy is larger than at non-degeneracy. In addition, we also observed modified spontaneous emission pattern.",
+    "abstractZh": "我們在小光束端泵浦摻釹釩酸釔雷射中觀察到不尋常的自發輻射行為。我們在實驗上也證明了在簡併腔位置自發輻射的輸出功率會比非簡併腔位置高。從單模速率方程式的定性分析，我們可以得到在簡併腔位置的β（自發輻射的耦合效率）和1/tf（tf是自發輻射的衰減時間）比非簡併腔位置的值大。另外，我們也觀察到了被修正過的自發輻射的場形。",
+    "keywords": [
+      "spontaneous emission",
+      "solid-state laser",
+      "degenerate cavity"
+    ],
+    "keywordsZh": [
+      "自發輻射",
+      "固態雷射",
+      "簡併共振腔"
+    ],
+    "topic": "Laser Physics",
+    "tags": [
+      "Master's thesis",
+      "Solid-state laser",
+      "Spontaneous emission"
+    ],
+    "contentStatus": {
+      "abstract": "available",
+      "highlights": "not-required",
+      "keywords": "available",
+      "graphicalAbstract": "not-required",
+      "verifiedDate": "2026-08-13",
+      "verifiedSource": "National Yang Ming Chiao Tung University Institutional Repository"
+    },
+    "authorships": [
+      {
+        "name": "Wei-Hao Chiu",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "institutional-repository"
+        ]
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "manual",
+      "lastChecked": "2026-08-13",
+      "sources": [
+        "National Yang Ming Chiao Tung University Institutional Repository"
+      ],
+      "sourceUrls": {
+        "institutionalRepository": "https://ir.lib.nycu.edu.tw/handle/11536/76743",
+        "permanentRecord": "https://hdl.handle.net/11296/mc89fj"
+      },
+      "requiresManualReview": false,
+      "manualOverride": true,
+      "missingFields": [],
+      "warnings": []
+    },
+    "publicationType": "thesis",
+    "documentType": "masters-thesis",
+    "peerReviewStatus": "not-applicable",
+    "metadataSource": "manual_verified",
+    "automationProtection": {
+      "protected": true,
+      "reason": "Verified DOI-less thesis metadata must not be enriched or replaced by journal APIs."
+    },
+    "analytics": {
+      "coreJournalCount": false,
+      "journalMetrics": false,
+      "fwci": false,
+      "citationMetrics": false,
+      "excludeFromResearchAnalytics": true
+    },
+    "internationalCollaboration": {
+      "status": "needs-review",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "excluded-thesis",
+      "confidence": "not-applicable",
+      "sources": [
+        "National Yang Ming Chiao Tung University Institutional Repository"
+      ],
+      "evidenceUrls": {
+        "institutionalRepository": "https://ir.lib.nycu.edu.tw/handle/11536/76743"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": true,
+      "lastEvaluated": "2026-08-13"
+    }
   }
 ]

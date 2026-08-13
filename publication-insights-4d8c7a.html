@@ -337,24 +337,26 @@ function buildCollaboration(pubs){
 document.addEventListener('DOMContentLoaded',async()=>{
  try{
  const [pubs,jpayload,oaMetrics,crMetrics,gsHist,oaHist,authors,taxonomy]=await Promise.all([loadJson('data/publications.json'),loadJson('data/journals.json'),loadJson('data/openalex_publication_metrics.json').catch(()=>({records:{}})),loadJson('data/crossref_publication_metrics.json').catch(()=>({records:{}})),loadJson('data/google_scholar_citation_history.json').catch(()=>({})),loadJson('data/openalex_citation_history.json').catch(()=>({})),loadJson('data/authors.json').catch(()=>[]),loadJson('data/publication_taxonomy.json').catch(()=>({}))]);
- const allOutputs=pubs;
- const corePublications=pubs.filter(p=>p.analytics?.coreJournalCount===true);
- const journalMetricPublications=pubs.filter(p=>p.analytics?.journalMetrics===true);
- const citationPublications=pubs.filter(p=>p.analytics?.citationMetrics===true);
- const typeCounts=pubs.reduce((counts,p)=>{const key=p.publicationType||'unclassified';counts[key]=(counts[key]||0)+1;return counts},{});
+ const includedInResearchAnalytics=p=>p?.analytics?.excludeFromResearchAnalytics!==true;
+ const researchPublications=pubs.filter(includedInResearchAnalytics);
+ const allOutputs=researchPublications;
+ const corePublications=researchPublications.filter(p=>p.analytics?.coreJournalCount===true);
+ const journalMetricPublications=researchPublications.filter(p=>p.analytics?.journalMetrics===true);
+ const citationPublications=researchPublications.filter(p=>p.analytics?.citationMetrics===true);
+ const typeCounts=researchPublications.reduce((counts,p)=>{const key=p.publicationType||'unclassified';counts[key]=(counts[key]||0)+1;return counts},{});
  window.AuthorCards?.build(authors);window.AuthorCards?.init();
- buildPendingAuthors(pubs,authors);
- buildCollaboration(pubs);
- const gaResults=await Promise.all(pubs.map(hasGraphicalAbstract));
+ buildPendingAuthors(researchPublications,authors);
+ buildCollaboration(researchPublications);
+ const gaResults=await Promise.all(researchPublications.map(hasGraphicalAbstract));
  const hasItems=v=>Array.isArray(v)?v.some(x=>String(x||'').trim()):Boolean(String(v||'').trim());
  const auditState=(p,key,hasContent)=>{if(hasContent)return'available';const value=String(p.contentStatus?.[key]||'pending').toLowerCase();return value==='not-available'?'not-available':'pending'};
  const typeRequirements=new Map((taxonomy.publicationTypes||[]).map(type=>[type.value,new Set(type.contentRequirements||[])]));
- const contentAudit=pubs.map((p,i)=>{const requirements=typeRequirements.get(p.publicationType)||new Set(['abstract','highlights','keywords','graphicalAbstract']);const states={Abstract:requirements.has('abstract')?auditState(p,'abstract',Boolean(String(p.abstract||'').trim())):'not-required',Highlights:requirements.has('highlights')?auditState(p,'highlights',hasItems(p.highlights)):'not-required',Keywords:requirements.has('keywords')?auditState(p,'keywords',hasItems(p.keywords)):'not-required',GA:requirements.has('graphicalAbstract')?auditState(p,'graphicalAbstract',gaResults[i]):'not-required'};return{p,states,missing:Object.entries(states).filter(([,state])=>state==='pending').map(([label])=>label)}});
+ const contentAudit=researchPublications.map((p,i)=>{const requirements=typeRequirements.get(p.publicationType)||new Set(['abstract','highlights','keywords','graphicalAbstract']);const states={Abstract:requirements.has('abstract')?auditState(p,'abstract',Boolean(String(p.abstract||'').trim())):'not-required',Highlights:requirements.has('highlights')?auditState(p,'highlights',hasItems(p.highlights)):'not-required',Keywords:requirements.has('keywords')?auditState(p,'keywords',hasItems(p.keywords)):'not-required',GA:requirements.has('graphicalAbstract')?auditState(p,'graphicalAbstract',gaResults[i]):'not-required'};return{p,states,missing:Object.entries(states).filter(([,state])=>state==='pending').map(([label])=>label)}});
  const missingAbstract=contentAudit.filter(x=>x.missing.includes('Abstract')).length,missingHighlights=contentAudit.filter(x=>x.missing.includes('Highlights')).length,missingKeywords=contentAudit.filter(x=>x.missing.includes('Keywords')).length,missingGa=contentAudit.filter(x=>x.missing.includes('GA')).length,complete=contentAudit.filter(x=>!x.missing.length).length;
- document.getElementById('contentAuditCards').innerHTML=[['Missing Abstract',missingAbstract,`${pubs.length-missingAbstract} completed`],['Missing Highlights',missingHighlights,`${pubs.length-missingHighlights} completed`],['Missing Keywords',missingKeywords,`${pubs.length-missingKeywords} completed`],['Missing Graphical Abstract',missingGa,`${pubs.length-missingGa} completed`]].map(x=>`<div class="content-audit-card"><span>${x[0]}</span><strong>${x[1]}</strong><small>${x[2]} of ${pubs.length}</small></div>`).join('');
+ document.getElementById('contentAuditCards').innerHTML=[['Missing Abstract',missingAbstract,`${researchPublications.length-missingAbstract} completed`],['Missing Highlights',missingHighlights,`${researchPublications.length-missingHighlights} completed`],['Missing Keywords',missingKeywords,`${researchPublications.length-missingKeywords} completed`],['Missing Graphical Abstract',missingGa,`${researchPublications.length-missingGa} completed`]].map(x=>`<div class="content-audit-card"><span>${x[0]}</span><strong>${x[1]}</strong><small>${x[2]} of ${researchPublications.length}</small></div>`).join('');
  document.getElementById('missingPublicationList').innerHTML=contentAudit.filter(x=>x.missing.length).map(x=>{const slug=publicationSlug(x.p);return `<li><a href="publications/${esc(slug)}.html">${esc(x.p.title||x.p.doi)}</a><span class="missing-tags">${x.missing.map(m=>`<span class="missing-tag">Missing ${m}</span>`).join('')}</span></li>`}).join('');
  const unavailableCount=contentAudit.reduce((sum,x)=>sum+Object.values(x.states).filter(state=>state==='not-available').length,0),notRequiredCount=contentAudit.reduce((sum,x)=>sum+Object.values(x.states).filter(state=>state==='not-required').length,0);
- document.getElementById('contentAuditStatus').textContent=`${complete} of ${pubs.length} scholarly outputs are fully resolved for their publication type. ${pubs.length-complete} still require one or more applicable items; ${unavailableCount} verified unavailable and ${notRequiredCount} not-required items are excluded from missing statistics.`;
+ document.getElementById('contentAuditStatus').textContent=`${complete} of ${researchPublications.length} research publications are fully resolved for their publication type. ${researchPublications.length-complete} still require one or more applicable items; ${unavailableCount} verified unavailable and ${notRequiredCount} not-required items are excluded from missing statistics. Theses and dissertations are display-only and excluded.`;
  const journals=jpayload.journals||{},idx=journalIndex(journals),pubCount={};corePublications.forEach(p=>{const y=pubYear(p);if(y)pubCount[y]=(pubCount[y]||0)+1});const years=yearsUnion([pubCount]);
  const gsCohort={},oaCohort={},crCohort={};corePublications.forEach(p=>{const y=pubYear(p);if(!y)return;gsCohort[y]=(gsCohort[y]||0)+(Number(p.citationCount)||0);const key=doi(p.doi),oa=(oaMetrics.records||{})[key],cr=(crMetrics.records||{})[key];oaCohort[y]=(oaCohort[y]||0)+(oa?.status==='verified'?Number(oa.citationCount)||0:0);crCohort[y]=(crCohort[y]||0)+(cr?.status==='verified'?Number(cr.citationCount)||0:0)});
  const hist=o=>Object.fromEntries((o.citationsByYear||[]).map(r=>[Number(r.year),Number(r.citations)||0]));const gsAnnual=hist(gsHist),oaAnnual=hist(oaHist);
@@ -503,7 +505,7 @@ document.addEventListener('DOMContentLoaded',async()=>{
     try {
       const response = await fetch(publicationsUrl, {cache:'no-store'});
       if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
-      const publications = await response.json();
+      const publications = (await response.json()).filter(publication => publication?.analytics?.excludeFromResearchAnalytics !== true);
       const rows = publications.map(derive).filter(Boolean);
       const existing = document.getElementById('authorship-analysis');
       existing?.remove();

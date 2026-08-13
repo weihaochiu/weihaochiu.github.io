@@ -24,6 +24,8 @@ from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode, urlparse
 from urllib.request import Request, urlopen
 
+from publication_scope import is_research_publication
+
 ROOT = Path(__file__).resolve().parents[1]
 PUBLICATIONS_PATH = ROOT / "data" / "publications.json"
 OUTPUT_PATH = ROOT / "data" / "mendeley_metrics.json"
@@ -265,6 +267,8 @@ def main() -> int:
     doi_titles: dict[str, str] = {}
     for publication in publications:
         if not isinstance(publication, dict):
+            continue
+        if not is_research_publication(publication):
             continue
         doi = normalize_doi(publication.get("doi"))
         if doi:

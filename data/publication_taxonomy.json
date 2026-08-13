@@ -1,5 +1,5 @@
 {
-  "version": "2026-08-03",
+  "version": "2026-08-13",
   "publicationTypes": [
     {
       "value": "international-journal",
@@ -76,6 +76,23 @@
         "citationMetrics": false
       },
       "contentRequirements": []
+    },
+    {
+      "value": "thesis",
+      "label": "Theses & Dissertations",
+      "shortLabel": "Theses & Dissertations",
+      "order": 6,
+      "analytics": {
+        "coreJournalCount": false,
+        "journalMetrics": false,
+        "fwci": false,
+        "citationMetrics": false,
+        "excludeFromResearchAnalytics": true
+      },
+      "contentRequirements": [
+        "abstract",
+        "keywords"
+      ]
     }
   ],
   "documentTypes": [
@@ -89,7 +106,9 @@
     "preprint",
     "book-chapter",
     "editorial",
-    "other"
+    "other",
+    "doctoral-thesis",
+    "masters-thesis"
   ],
   "sourceTypeMappings": {
     "journal-article": "international-journal",
@@ -101,7 +120,11 @@
     "posted-content": "other",
     "preprint": "other",
     "book-chapter": "other",
-    "editorial": "other"
+    "editorial": "other",
+    "dissertation": "thesis",
+    "doctoral-thesis": "thesis",
+    "masters-thesis": "thesis",
+    "thesis": "thesis"
   },
   "categoryLabels": {
     "DSSC": "Dye-Sensitized Solar Cells (DSSC)",

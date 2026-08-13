@@ -12,6 +12,8 @@ import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
+from publication_scope import is_research_publication
+
 
 OPENALEX_METRICS_PATH = Path("data/openalex_publication_metrics.json")
 PUBLICATIONS_PATH = Path("data/publications.json")
@@ -78,6 +80,8 @@ def load_publication_years() -> dict[str, int]:
 
     for row in rows:
         if not isinstance(row, dict):
+            continue
+        if not is_research_publication(row):
             continue
 
         doi = normalize_doi(row.get("doi") or row.get("doiUrl"))

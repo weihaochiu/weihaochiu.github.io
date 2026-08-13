@@ -34,6 +34,9 @@ def main() -> None:
         document_type = publication.get("documentType")
         analytics = publication.get("analytics")
         collaboration = publication.get("internationalCollaboration")
+        excluded_from_research = isinstance(analytics, dict) and analytics.get(
+            "excludeFromResearchAnalytics"
+        ) is True
 
         if not output_id:
             errors.append(f"{label}: missing stable id")
@@ -58,6 +61,13 @@ def main() -> None:
             if not isinstance(analytics.get(field), bool):
                 errors.append(f"{label}: analytics.{field} must be boolean")
 
+        if "excludeFromResearchAnalytics" in analytics and not isinstance(
+            analytics.get("excludeFromResearchAnalytics"), bool
+        ):
+            errors.append(
+                f"{label}: analytics.excludeFromResearchAnalytics must be boolean"
+            )
+
         if publication_type == "international-journal":
             for field in ("coreJournalCount", "journalMetrics", "fwci"):
                 if analytics.get(field) is not True:
@@ -66,6 +76,21 @@ def main() -> None:
             for field in ("coreJournalCount", "journalMetrics", "fwci"):
                 if analytics.get(field) is not False:
                     errors.append(f"{label}: non-core output requires analytics.{field}=false")
+
+        if publication_type == "thesis":
+            if not excluded_from_research:
+                errors.append(f"{label}: thesis must be excluded from research analytics")
+            for field in ("coreJournalCount", "journalMetrics", "fwci", "citationMetrics"):
+                if analytics.get(field) is not False:
+                    errors.append(f"{label}: thesis requires analytics.{field}=false")
+            if str(publication.get("doi") or "").strip():
+                errors.append(f"{label}: thesis must not contain an unverified DOI")
+            if not str(publication.get("repositoryUrl") or "").strip():
+                errors.append(f"{label}: thesis requires repositoryUrl")
+            if publication.get("metadataSource") != "manual_verified":
+                errors.append(f"{label}: thesis metadataSource must be manual_verified")
+            if (publication.get("automationProtection") or {}).get("protected") is not True:
+                errors.append(f"{label}: thesis must be protected from automatic enrichment")
 
         if not isinstance(collaboration, dict):
             errors.append(f"{label}: internationalCollaboration must be an object")
@@ -100,9 +125,15 @@ def main() -> None:
         row.get("analytics", {}).get("coreJournalCount") is True
         for row in publications
     )
+    research_count = sum(
+        row.get("analytics", {}).get("excludeFromResearchAnalytics") is not True
+        for row in publications
+    )
+    thesis_count = sum(row.get("publicationType") == "thesis" for row in publications)
     print(
         f"Validated {len(publications)} scholarly outputs; "
-        f"{core_count} core journal publications; types={counts}."
+        f"{research_count} research publications; {core_count} core journal publications; "
+        f"{thesis_count} theses; types={counts}."
     )
 
 

@@ -88,3 +88,13 @@ Verified collection files in `data/` remain authoritative. Do not replace them w
 - The GA4 export stores up to 20 traffic sources ordered by sessions descending in the top-level `trafficSources` array of `assets/data/ga-summary.json`.
 - The table remains readable on desktop, tablet and mobile. Missing or empty `trafficSources` data displays `No data` without preventing the rest of Website Insights from loading.
 - A GA4 automatic update is complete only after the generated data is committed to the repository and GitHub Pages reports `built` for the exact commit containing the updated `assets/data/ga-summary.json`.
+
+## Theses and dissertations — 13 August 2026
+
+- The Publications page presents graduate theses in a separate `Theses & Dissertations` section while retaining `data/publications.json` as the single scholarly-output source.
+- Thesis records require a stable ID, `publicationType: "thesis"`, an explicit doctoral or master's `documentType`, degree, institution, department, advisor, pages, language, bilingual title, bilingual abstract, bilingual keywords, and a verified institutional repository URL when available.
+- Never create or infer a DOI, journal, ISSN, volume, issue, JCR quartile, impact factor, FWCI, OpenAlex work, Crossref record, Mendeley metric, or citation count for a thesis without a verified source.
+- Every thesis has all four bibliometric analytics flags set to `false` and `analytics.excludeFromResearchAnalytics: true`. Adding or removing thesis display records must not change homepage publication counts, the 40-record research-publication total, the 37-record core-journal total, or any citation, journal, authorship, collaboration, FWCI, JCR, IF, publisher, quartile, co-author, corresponding-author or first-author analytics.
+- Thesis detail pages are generator-owned, use Schema.org `CreativeWork`, and expose bilingual metadata plus the institutional repository link. They must not show empty or zero-valued journal/citation metric widgets.
+- Manually verified DOI-less thesis metadata is protected with `metadataSource: "manual_verified"` and `automationProtection.protected: true`; automated enrichment must preserve the record unchanged.
+- Academic Monitor must suppress duplicate thesis candidates using repository URL or normalized title/year/publication type when DOI identity is unavailable.

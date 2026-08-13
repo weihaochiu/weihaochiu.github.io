@@ -4,6 +4,7 @@ from __future__ import annotations
 import json
 import os
 import re
+from urllib.parse import urlsplit, urlunsplit
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -72,6 +73,64 @@ def normalize_identifier(value: Any) -> str:
 
 def normalize_title(value: Any) -> str:
     return re.sub(r"[^a-z0-9]+", "", str(value or "").lower())
+
+
+def normalize_repository_url(value: Any) -> str:
+    """Normalize a stable repository URL for duplicate comparison."""
+    text = str(value or "").strip()
+    if not text:
+        return ""
+    try:
+        parsed = urlsplit(text)
+    except ValueError:
+        return ""
+    if parsed.scheme.lower() not in {"http", "https"} or not parsed.netloc:
+        return ""
+    return urlunsplit(
+        ("https", parsed.netloc.lower(), parsed.path.rstrip("/"), "", "")
+    ).lower()
+
+
+def publication_matches_existing(
+    candidate: dict[str, Any], existing: list[dict[str, Any]]
+) -> bool:
+    """Match DOI-less outputs by repository URL or verified bibliographic identity."""
+    candidate_doi = normalize_doi(candidate.get("doi"))
+    candidate_urls = {
+        normalize_repository_url(candidate.get(field))
+        for field in ("repositoryUrl", "publicationUrl", "url")
+    }
+    candidate_urls.discard("")
+    candidate_title = normalize_title(candidate.get("title"))
+    candidate_year = str(candidate.get("year") or candidate.get("publicationDate") or "")[:4]
+    candidate_type = str(
+        candidate.get("publicationType") or candidate.get("suggestedPublicationType") or ""
+    ).strip().lower()
+
+    for publication in existing:
+        if candidate_doi and candidate_doi == normalize_doi(publication.get("doi")):
+            return True
+        existing_urls = {
+            normalize_repository_url(publication.get(field))
+            for field in ("repositoryUrl", "publicationUrl", "url")
+        }
+        existing_urls.discard("")
+        if candidate_urls & existing_urls:
+            return True
+        existing_title = normalize_title(publication.get("title"))
+        if candidate_title and candidate_title == existing_title:
+            existing_year = str(
+                publication.get("year") or publication.get("publicationDate") or ""
+            )[:4]
+            existing_type = str(
+                publication.get("publicationType")
+                or publication.get("suggestedPublicationType")
+                or ""
+            ).strip().lower()
+            if not candidate_year or not existing_year or candidate_year == existing_year:
+                if not candidate_type or not existing_type or candidate_type == existing_type:
+                    return True
+    return False
 
 def review_key(record_type: str, item: dict[str, Any]) -> str:
     """Return a stable key used by the review registry and browser UI."""

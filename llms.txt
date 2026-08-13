@@ -85,6 +85,11 @@
 
 - [Branched ZnO nanowires for enhancing energy conversion efficiency of dye-sensitized solar cells](https://weihaochiu.github.io/publications/10-1557-proc-1121-n14-01.html) — Next-Generation and Nano-Architectured Photovoltaics, 2008; DOI: 10.1557/proc-1121-n14-01
 
+### Theses & Dissertations
+
+- [Study on Electron Transport Mechanism in Metal Oxide Photoanode Electrode for Dye-Sensitized Solar Cells](https://weihaochiu.github.io/publications/phd-thesis-2011.html) — National Chiao Tung University, 2011
+- [Modified Spontaneous Emission in a Tightly Pumped Nd:YVO4 Laser with Degenerate Resonator](https://weihaochiu.github.io/publications/ms-thesis-2005.html) — National Chiao Tung University, 2005
+
 <!-- PATENT_LLMS_START -->
 ## Patents
 

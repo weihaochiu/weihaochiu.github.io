@@ -77,7 +77,8 @@
 
   async function init() {
     try {
-      const [publications,oaPayload,journalPayload]=await Promise.all(Object.values(DATA).map(url=>fetch(url,{cache:'no-store'}).then(response=>{if(!response.ok)throw new Error(`${url}: ${response.status}`);return response.json()})));
+      const [publicationRows,oaPayload,journalPayload]=await Promise.all(Object.values(DATA).map(url=>fetch(url,{cache:'no-store'}).then(response=>{if(!response.ok)throw new Error(`${url}: ${response.status}`);return response.json()})));
+      const publications=publicationRows.filter(row=>row?.analytics?.excludeFromResearchAnalytics!==true);
       const section=buildSection(publications),collaboration=document.getElementById('collaboration');if(!collaboration)return;collaboration.insertAdjacentElement('afterend',section);
       const jump=document.querySelector('.analytics-jump-links');if(jump&&!jump.querySelector('a[href="#international-collaboration"]')){const link=document.createElement('a');link.href='#international-collaboration';link.textContent='International';jump.insertBefore(link,jump.querySelector('a[href="#jcr"]')||null)}
       const oa=oaPayload.records||{},journalRows=Object.values(journalPayload.journals||{}),journalMap=new Map();journalRows.forEach(j=>[j.title,...(j.aliases||[])].forEach(name=>journalMap.set(norm(name),j)));

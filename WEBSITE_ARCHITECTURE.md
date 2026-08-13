@@ -3,7 +3,7 @@
 > Repository：<https://github.com/weihaochiu/weihaochiu.github.io>  
 > 正式網站：<https://weihaochiu.github.io/>  
 > 預設分支：`main`  
-> 本文件盤點日期：2026-08-03
+> 本文件盤點日期：2026-08-13
 > 本文件用途：作為網站的單一架構索引。每次修改網站、資料格式、自動化流程、外部連結或分析功能時，必須同步更新本文件，並完成第 12 節的回歸檢查，避免原有功能遺失。
 
 ## 1. 網站定位與技術架構
@@ -364,3 +364,14 @@ flowchart TD
 - 修改 publication、patent、project、award、GA 的數量或維護規則。
 
 更新完成後，將「本文件盤點日期」改成實際日期，並在 git diff 中確認本文件確實隨功能變更一起更新。
+
+## 16. Theses & Dissertations architecture — 13 August 2026
+
+- Graduate theses remain in the single authoritative `data/publications.json` collection. They use `publicationType: "thesis"` with `documentType: "doctoral-thesis"` or `"masters-thesis"`, stable non-DOI IDs, bilingual thesis metadata, and verified institutional repository URLs.
+- `data/publication_taxonomy.json` defines the public `Theses & Dissertations` section. Thesis records appear after research-publication sections and remain searchable by the existing year, type, and keyword controls.
+- `analytics.excludeFromResearchAnalytics: true` is the shared exclusion flag. The four existing bibliometric flags (`coreJournalCount`, `journalMetrics`, `fwci`, and `citationMetrics`) must also be `false`. Homepage counts, Publication Insights, citation analytics, authorship analytics, journal/JCR/IF/FWCI analytics, and international-collaboration analytics filter out these records; no arithmetic adjustment such as subtracting two is permitted.
+- `scripts/publication_scope.py` is the Python source of truth for analytics inclusion and automation protection. Browser analytics use the same `excludeFromResearchAnalytics !== true` predicate.
+- `scripts/build_seo.py` generates `publications/phd-thesis-2011.html` and `publications/ms-thesis-2005.html` from JSON. Thesis detail pages use Schema.org `CreativeWork`, include bilingual titles, abstracts and keywords plus degree metadata, and omit DOI, citation, OpenAlex, Crossref, Mendeley, journal metric and FWCI components.
+- The same SEO build adds thesis URLs to `sitemap.xml` and `llms.txt` while preserving patent URLs and the marked patent section maintained by `scripts/build_patent_pages.py`.
+- Thesis records use `metadataSource: "manual_verified"` and `automationProtection.protected: true`. Scholar, OpenAlex, Crossref, Mendeley, Unpaywall and publication-authorship updaters must skip them and must not add a DOI or replace manually verified fields.
+- Academic Monitor duplicate detection uses DOI when present, otherwise normalized repository URL and normalized title/year/publication type. A DOI-less thesis already in `data/publications.json` must not recur as a candidate.

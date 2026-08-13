@@ -50,6 +50,7 @@
 .publication-section-heading strong{display:inline-grid;place-items:center;min-width:42px;height:42px;border-radius:999px;background:var(--brand);color:#fff;font-size:1rem}
 .publication-type-label{border-color:#a9bfd1;background:#eaf1f6;color:#234a70}
 .publication-card.shared-target{background:#f3f7fa;box-shadow:inset 3px 0 0 var(--brand);padding-left:14px;padding-right:14px}
+.thesis-publication-card .thesis-title-zh{font-size:.84rem;line-height:1.65;margin-top:7px}.thesis-publication-card .thesis-meta{line-height:1.65}.thesis-detail-title-zh{font-family:"Noto Sans TC",sans-serif;color:#374957;font-size:clamp(1rem,2vw,1.25rem);font-weight:700;line-height:1.65;margin:0 0 22px}.thesis-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;border:1px solid var(--line);border-radius:8px;overflow:hidden}.thesis-fact{display:grid;grid-template-columns:minmax(105px,.55fr) minmax(0,1.45fr);gap:14px;padding:13px 15px;border-bottom:1px solid var(--line)}.thesis-fact:nth-child(odd){border-right:1px solid var(--line)}.thesis-fact:nth-last-child(-n+2){border-bottom:0}.thesis-fact dt{color:var(--muted);font-size:.7rem;font-weight:750;letter-spacing:.05em;text-transform:uppercase}.thesis-fact dd{margin:0;color:var(--ink);font-size:.82rem;line-height:1.55}.thesis-fact dd span{display:block;color:var(--muted);font-family:"Noto Sans TC",sans-serif;margin-top:2px}.thesis-detail .publication-detail-actions{border-top:0;margin-top:0;padding-top:0}
 @media(max-width:560px){.share-menu{right:auto;left:0}.share-menu:before{right:auto;left:18px}}
 
 /* Individual publication abstract, highlights and graphical abstract */
@@ -66,7 +67,7 @@
 .graphical-abstract figure{margin:0}
 .graphical-abstract img{display:block;max-width:100%;width:auto;height:auto;margin:0 auto;border:1px solid var(--line);border-radius:8px;background:#fff}
 .graphical-abstract figcaption{text-align:center;margin-top:8px;color:var(--muted);font-size:.72rem}
-@media(max-width:760px){.publication-detail{padding:22px 18px}.publication-detail-section{margin-top:27px;padding-top:22px}}
+@media(max-width:760px){.publication-detail{padding:22px 18px}.publication-detail-section{margin-top:27px;padding-top:22px}.thesis-facts{grid-template-columns:1fr}.thesis-fact:nth-child(odd){border-right:0}.thesis-fact:nth-last-child(2){border-bottom:1px solid var(--line)}}
 
 /* Click-only author information cards */
 .author-trigger{display:inline;padding:0;border:0;border-bottom:1px solid currentColor;background:transparent;color:inherit;font:inherit;line-height:inherit;cursor:pointer;text-align:inherit}

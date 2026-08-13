@@ -178,7 +178,8 @@ async function initOutputCounts(){
     if(names[index]==='publications'){
       const core=records.filter(record=>record.analytics?.coreJournalCount===true).length;
       $$('[data-output-count="publications"]').forEach(element=>{element.textContent=core.toLocaleString()});
-      $$('[data-output-count="scholarly-outputs"]').forEach(element=>{element.textContent=records.length.toLocaleString()});
+      const researchOutputs=records.filter(isResearchAnalyticsOutput).length;
+      $$('[data-output-count="scholarly-outputs"]').forEach(element=>{element.textContent=researchOutputs.toLocaleString()});
       return;
     }
     $$(`[data-output-count="${names[index]}"]`).forEach(element=>{
@@ -200,9 +201,11 @@ const FALLBACK_PUBLICATION_TYPES=[
   {value:'chinese-journal',label:'Chinese Journal Publications',shortLabel:'Chinese journal',order:2},
   {value:'conference',label:'Conference Publications',shortLabel:'Conference',order:3},
   {value:'other',label:'Other Scholarly Outputs',shortLabel:'Other',order:4},
-  {value:'unclassified',label:'Unclassified Outputs',shortLabel:'Unclassified',order:5}
+  {value:'unclassified',label:'Unclassified Outputs',shortLabel:'Unclassified',order:5},
+  {value:'thesis',label:'Theses & Dissertations',shortLabel:'Theses & Dissertations',order:6}
 ];
 
+function isResearchAnalyticsOutput(record){return record?.analytics?.excludeFromResearchAnalytics!==true}
 function publicationKey(p){return String(p.doi||p.id||'').trim().toLowerCase()}
 function publicationSlug(p){
   const source=String(p.id||p.doi||p.title||'publication').trim().toLowerCase();
@@ -320,7 +323,22 @@ function openAlexImpactMetrics(record={}){
   return items.join('');
 }
 
+function thesisPublicationCard(p){
+  const authors=(p.authors||[]).map(renderAuthor).join(', ');
+  const anchor=publicationAnchor(p);
+  const detailUrl=publicationShareUrl(anchor);
+  const degree=p.documentType==='doctoral-thesis'?'Ph.D. Dissertation':'M.S. Thesis';
+  const repositoryUrl=normalizeExternalUrl(p.repositoryUrl);
+  const repositoryAction=repositoryUrl?`<a class="action" href="${esc(repositoryUrl)}" target="_blank" rel="noopener noreferrer">Institutional Repository ↗</a>`:'';
+  const shareText=`${p.title}${p.titleZh?`\n${p.titleZh}`:''}\n${degree}, ${p.institution||''}, ${p.year||''}`;
+  const emailUrl=`mailto:?subject=${encodeURIComponent(p.title||degree)}&body=${encodeURIComponent(`${shareText}\n\n${detailUrl}`)}`;
+  const shareMenuId=`share-menu-${anchor}`;
+  const share=`<span class="share-wrap"><button class="action action-button share-trigger" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="${esc(shareMenuId)}" data-share-title="${esc(p.title)}" data-share-text="${esc(shareText)}" data-share-url="${esc(detailUrl)}">${SHARE_ICON}<span>Share</span></button><span class="share-menu" id="${esc(shareMenuId)}" role="menu" hidden><button type="button" role="menuitem" data-copy-share-url="${esc(detailUrl)}">Copy link</button><a role="menuitem" href="${esc(emailUrl)}">Email</a><a role="menuitem" href="https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(detailUrl)}" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></span></span>`;
+  return `<article class="collection-card publication-card thesis-publication-card" id="${esc(anchor)}"><div class="card-heading"><h4><a href="${esc(detailUrl)}">${esc(p.title)}</a></h4><span class="date-badge">${esc(p.year)}</span></div>${p.titleZh?`<p class="local-title thesis-title-zh" lang="zh-Hant">${esc(p.titleZh)}</p>`:''}<p class="authors">${authors}</p><p class="thesis-meta">${esc(p.institution)} · ${esc(p.department)}<br>Advisor: ${esc(p.advisor)}</p><div class="card-labels"><span class="card-label publication-type-label">${esc(degree)}</span></div><div class="card-actions"><a class="action publication-detail-link" href="${esc(detailUrl)}">Details →</a>${repositoryAction}${share}</div></article>`;
+}
+
 function publicationCard(p){
+  if(p.publicationType==='thesis')return thesisPublicationCard(p);
   const authors=(p.authors||[]).map(renderAuthor).join(', ');
   const n=Number(p.citationCount||0);
   const scholarUrl=normalizeScholarUrl(p.scholarCitedByUrl)||normalizeScholarUrl(p.citedByUrl);

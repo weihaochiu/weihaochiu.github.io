@@ -23,6 +23,8 @@ from urllib.error import HTTPError, URLError
 from urllib.parse import quote, urlencode, urlparse
 from urllib.request import Request, urlopen
 
+from publication_scope import is_research_publication
+
 ROOT = Path(__file__).resolve().parents[1]
 PUBLICATIONS_PATH = ROOT / "data" / "publications.json"
 OUTPUT_PATH = ROOT / "data" / "unpaywall.json"
@@ -248,6 +250,8 @@ def main() -> int:
     dois = []
     for publication in publications:
         if not isinstance(publication, dict):
+            continue
+        if not is_research_publication(publication):
             continue
         doi = normalize_doi(publication.get("doi"))
         if doi and doi not in dois:

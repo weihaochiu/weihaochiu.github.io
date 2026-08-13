@@ -10,6 +10,7 @@ from academic_monitor_common import (
     date_parts,
     first,
     normalize_doi,
+    publication_matches_existing,
     normalize_title,
     read_json,
     request_json,
@@ -132,6 +133,7 @@ def run() -> dict:
             nested_title = title_node.get("title") or {}
             orcid_title = nested_title.get("value") or ""
             journal_node = summary.get("journal-title") or {}
+            record_url = first((summary.get("url") or {}).get("value"))
             orcid_type = str(summary.get("type") or "").strip().lower()
             key = doi or normalize_title(orcid_title)
             if not key or key in seen:
@@ -164,6 +166,7 @@ def run() -> dict:
                 "pages": "",
                 "abstract": "",
                 "keywords": [],
+                "repositoryUrl": record_url,
                 "sourceDocumentType": orcid_type,
                 "language": "zh-TW" if contains_cjk(orcid_title) or contains_cjk(journal_node.get("value")) else "",
             }
@@ -205,6 +208,8 @@ def run() -> dict:
                 orcid_type=orcid_type,
                 language=str(item.get("language") or ""),
             ))
+            if publication_matches_existing(item, current):
+                continue
             candidates.append(item)
 
         sources.append(source_result("ORCID", orcid_url, "success", count=len(candidates)))

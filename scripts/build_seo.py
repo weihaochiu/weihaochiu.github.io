@@ -5,6 +5,8 @@ from datetime import date
 from pathlib import Path
 from urllib.parse import quote
 
+from publication_scope import is_research_publication
+
 ROOT = Path(__file__).resolve().parents[1]
 SITE_URL = 'https://weihaochiu.github.io'
 TODAY = date.today().isoformat()
@@ -20,6 +22,8 @@ GA_TAG = '''<!-- Google tag (gtag.js) -->
 PRIVATE_PATHS = ('bems-fe5049fb.html', 'website-insight-ea929558.html', 'publication-insights-4d8c7a.html')
 CITATION_META_START = '<!-- SEO_CITATION_META_START -->'
 CITATION_META_END = '<!-- SEO_CITATION_META_END -->'
+PATENT_LLMS_START = '<!-- PATENT_LLMS_START -->'
+PATENT_LLMS_END = '<!-- PATENT_LLMS_END -->'
 
 def robots_text():
   agents = ('*', 'Googlebot', 'Bingbot', 'OAI-SearchBot', 'GPTBot', 'ChatGPT-User',
@@ -48,6 +52,7 @@ def esc(v): return html.escape(str(v or ''), quote=True)
 def slugify(value): return re.sub(r'[^a-z0-9]+','-',str(value).lower()).strip('-') or 'publication'
 def publication_slug(p): return slugify(p.get('id') or p.get('doi') or p.get('title'))
 def publication_type(p): return str(p.get('publicationType') or 'international-journal')
+def is_thesis(p): return publication_type(p) == 'thesis'
 def publication_type_label(p):
   return {
     'international-journal':'International Journal Publication',
@@ -55,6 +60,7 @@ def publication_type_label(p):
     'conference':'Conference Publication',
     'other':'Other Scholarly Output',
     'unclassified':'Unclassified Scholarly Output',
+    'thesis':'Ph.D. Dissertation' if p.get('documentType') == 'doctoral-thesis' else 'M.S. Thesis',
   }.get(publication_type(p),'Scholarly Output')
 AUTHOR_MAP = {}
 def normalize_author_name(name): return re.sub(r'[^a-z0-9]+', '', str(name or '').lower())
@@ -159,7 +165,12 @@ def article_schema(p, url):
   identifiers=[]
   if p.get('doi'): identifiers.append({'@type':'PropertyValue','propertyID':'DOI','value':p.get('doi')})
   if p.get('id'): identifiers.append({'@type':'PropertyValue','propertyID':'Output ID','value':p.get('id')})
-  obj = {'@type':'ScholarlyArticle','@id':url+'#article','url':url,'mainEntityOfPage':url,'headline':p.get('title',''),'name':p.get('title',''),'datePublished':p.get('date') or str(p.get('year','')),'author':[authorship_schema_person(row,p) for row in publication_authorships(p)],'isPartOf':{'@type':'Periodical','name':p.get('journal','')},'publisher':{'@type':'Organization','name':p.get('publisher','')},'identifier':identifiers,'sameAs':p.get('doiUrl') or p.get('publicationUrl',''),'citation':p.get('citation',''),'keywords':p.get('keywords',[]),'about':p.get('topic',''),'pagination':p.get('pages',''),'volumeNumber':p.get('volume',''),'issueNumber':p.get('issue',''),'inLanguage':p.get('language') or 'en','genre':publication_type_label(p)}
+  if is_thesis(p):
+    if p.get('repositoryUrl'):
+      identifiers.append({'@type':'PropertyValue','propertyID':'Institutional repository','value':p.get('repositoryUrl')})
+    obj = {'@type':'CreativeWork','@id':url+'#thesis','url':url,'mainEntityOfPage':url,'headline':p.get('title',''),'name':p.get('title',''),'alternateName':p.get('titleZh',''),'datePublished':str(p.get('year','')),'author':[authorship_schema_person(row,p) for row in publication_authorships(p)],'provider':{'@type':'CollegeOrUniversity','name':p.get('institution','')},'identifier':identifiers,'sameAs':p.get('repositoryUrl') or p.get('publicationUrl',''),'keywords':p.get('keywords',[]),'about':p.get('topic',''),'pagination':p.get('pages',''),'inLanguage':p.get('language') or 'en','genre':publication_type_label(p),'learningResourceType':'Thesis','educationalLevel':p.get('degree','')}
+  else:
+    obj = {'@type':'ScholarlyArticle','@id':url+'#article','url':url,'mainEntityOfPage':url,'headline':p.get('title',''),'name':p.get('title',''),'datePublished':p.get('date') or str(p.get('year','')),'author':[authorship_schema_person(row,p) for row in publication_authorships(p)],'isPartOf':{'@type':'Periodical','name':p.get('journal','')},'publisher':{'@type':'Organization','name':p.get('publisher','')},'identifier':identifiers,'sameAs':p.get('doiUrl') or p.get('publicationUrl',''),'citation':p.get('citation',''),'keywords':p.get('keywords',[]),'about':p.get('topic',''),'pagination':p.get('pages',''),'volumeNumber':p.get('volume',''),'issueNumber':p.get('issue',''),'inLanguage':p.get('language') or 'en','genre':publication_type_label(p)}
   if p.get('abstract'): obj['abstract'] = p.get('abstract')
   ga_path = graphical_abstract_path(p)
   if ga_path: obj['image'] = SITE_URL + '/' + ga_path
@@ -169,6 +180,8 @@ def citation_meta(p):
   out=[]
   for a in p.get('authors',[]): out.append(f'<meta name="citation_author" content="{esc(a)}"/>')
   fields=[('citation_title',p.get('title')),('citation_publication_date',p.get('date') or p.get('year')),('citation_journal_title',p.get('journal')),('citation_volume',p.get('volume')),('citation_issue',p.get('issue')),('citation_firstpage',p.get('pages')),('citation_doi',p.get('doi')),('citation_abstract_html_url',p.get('doiUrl'))]
+  if is_thesis(p):
+    fields += [('citation_dissertation_institution',p.get('institution')),('citation_technical_report_institution',p.get('department'))]
   out += [f'<meta name="{n}" content="{esc(v)}"/>' for n,v in fields if v not in ('',None)]
   return '\n'.join(out)
 
@@ -197,6 +210,12 @@ def replace_emails(text):
 def static_card(p, openalex_record=None):
   doi=p.get('doi',''); slug=publication_slug(p); local='publications/'+slug+'.html'
   authors=publication_authors_html(p)
+  if is_thesis(p):
+    labels_html='<span class="card-label publication-type-label">'+esc(publication_type_label(p))+'</span>'
+    repository='<a class="action" href="'+esc(p.get('repositoryUrl'))+'" target="_blank" rel="noopener noreferrer">Institutional Repository ↗</a>' if p.get('repositoryUrl') else ''
+    local_title='<p class="local-title thesis-title-zh" lang="zh-Hant">'+esc(p.get('titleZh'))+'</p>' if p.get('titleZh') else ''
+    meta='<p class="thesis-meta">'+esc(p.get('institution'))+' · '+esc(p.get('department'))+'<br/>Advisor: '+esc(p.get('advisor'))+'</p>'
+    return '<article class="collection-card publication-card thesis-publication-card seo-static-card" id="pub-'+slug+'" itemscope itemtype="https://schema.org/CreativeWork"><meta itemprop="identifier" content="'+esc(p.get('id'))+'"/><div class="card-heading"><h4 itemprop="headline"><a href="'+esc(local)+'">'+esc(p.get('title'))+'</a></h4><span class="date-badge" itemprop="datePublished">'+esc(p.get('year'))+'</span></div>'+local_title+'<p class="authors" itemprop="author">'+authors+'</p>'+meta+'<div class="card-labels">'+labels_html+'</div><div class="card-actions"><a class="action publication-detail-link" href="'+esc(local)+'">Details →</a>'+repository+'</div></article>'
   journal='<em>'+esc(p.get('journal'))+'</em>'
   if p.get('volume'): journal += ', '+esc(p.get('volume'))
   if p.get('pages'): journal += ', '+esc(p.get('pages'))
@@ -217,6 +236,7 @@ def static_publication_sections(pubs,openalex_records):
     ('conference','Conference Publications'),
     ('other','Other Scholarly Outputs'),
     ('unclassified','Unclassified Outputs'),
+    ('thesis','Theses & Dissertations'),
   ]
   visible=[(key,label,[p for p in pubs if publication_type(p)==key]) for key,label in types]
   visible=[entry for entry in visible if entry[2]]
@@ -393,7 +413,48 @@ def citing_articles_html(openalex_record,history_record):
     +('<ol class="citing-article-list">'+''.join(items)+'</ol>' if items else empty)+'</section>'
   )
 
+def thesis_page(p):
+  slug=publication_slug(p); url=SITE_URL+'/publications/'+slug+'.html'
+  raw_title=str(p.get('title') or '')
+  title=esc(raw_title)
+  title_zh=esc(p.get('titleZh'))
+  degree_label=publication_type_label(p)
+  desc=esc(f"{degree_label} by Wei-Hao Chiu, {p.get('institution')}, {p.get('year')}: {raw_title}")
+  graph={'@context':'https://schema.org','@graph':[PERSON,article_schema(p,url)]}
+  rows=[
+    ('Author',str(p.get('authors',["Wei-Hao Chiu"])[0]),p.get('authorZh')),
+    ('Degree',degree_label,''),
+    ('Year',p.get('year'),''),
+    ('Institution',p.get('institution'),p.get('institutionZh')),
+    ('Department',p.get('department'),p.get('departmentZh')),
+    ('Advisor',p.get('advisor'),p.get('advisorZh')),
+    ('Pages',p.get('pages'),''),
+    ('Language',p.get('languageLabel') or p.get('language'),''),
+  ]
+  facts=''.join('<div class="thesis-fact"><dt>'+esc(label)+'</dt><dd>'+esc(value)+(('<span lang="zh-Hant">'+esc(zh)+'</span>') if zh else '')+'</dd></div>' for label,value,zh in rows if value not in ('',None))
+  abstract=str(p.get('abstract') or '').strip()
+  abstract_zh=str(p.get('abstractZh') or '').strip()
+  keywords=p.get('keywords') or []
+  keywords_zh=p.get('keywordsZh') or []
+  sections='<section class="publication-detail-section"><h2>Basic Information</h2><dl class="thesis-facts">'+facts+'</dl></section>'
+  if abstract:
+    sections+='<section class="publication-detail-section"><h2>Abstract</h2><p itemprop="abstract">'+esc(abstract)+'</p></section>'
+  if abstract_zh:
+    sections+='<section class="publication-detail-section" lang="zh-Hant"><h2>中文摘要</h2><p>'+esc(abstract_zh)+'</p></section>'
+  if keywords:
+    sections+='<section class="publication-detail-section"><h2>Keywords</h2><div class="publication-keywords">'+''.join('<span itemprop="keywords">'+esc(item)+'</span>' for item in keywords)+'</div></section>'
+  if keywords_zh:
+    sections+='<section class="publication-detail-section" lang="zh-Hant"><h2>中文關鍵詞</h2><div class="publication-keywords">'+''.join('<span>'+esc(item)+'</span>' for item in keywords_zh)+'</div></section>'
+  repository=''
+  if p.get('repositoryUrl'):
+    repository='<section class="publication-detail-section"><h2>Links</h2><div class="card-actions publication-detail-actions"><a class="action" href="'+esc(p.get('repositoryUrl'))+'" target="_blank" rel="noopener noreferrer">Institutional Repository ↗</a></div></section>'
+  email_url='mailto:?subject='+quote(raw_title)+'&body='+quote(url)
+  share='<span class="share-wrap"><button class="action action-button share-trigger" type="button" aria-haspopup="menu" aria-expanded="false" data-share-title="'+title+'" data-share-text="'+title+'" data-share-url="'+esc(url)+'">Share</button><span class="share-menu" role="menu" hidden><button type="button" role="menuitem" data-copy-share-url="'+esc(url)+'">Copy link</button><a role="menuitem" href="'+esc(email_url)+'">Email</a><a role="menuitem" href="https://www.linkedin.com/sharing/share-offsite/?url='+quote(url,safe='')+'" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></span></span>'
+  return '''<!DOCTYPE html><html lang="{language}"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>{title} | Wei-Hao Chiu</title><meta name="description" content="{desc}"/><link rel="canonical" href="{url}"/><meta property="og:type" content="article"/><meta property="og:title" content="{title}"/><meta property="og:description" content="{desc}"/><meta property="og:url" content="{url}"/><meta property="og:image" content="{site}/assets/images/og-profile.jpg"/><meta property="article:published_time" content="{year}"/><meta property="article:author" content="{site}/"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="{title}"/><meta name="twitter:description" content="{desc}"/><meta name="twitter:image" content="{site}/assets/images/og-profile.jpg"/>{ga}{citation}<script type="application/ld+json">{schema}</script><link href="../assets/css/styles.css" rel="stylesheet"/></head><body><header class="site-header"><div class="shell nav-shell"><a class="brand" href="../index.html"><span>Wei-Hao Chiu</span><small>Academic Profile</small></a><nav aria-label="Main navigation" class="site-nav"><a href="../about.html">About</a><a href="../research.html">Research</a><a href="../publications.html">Publications</a><a href="../patents.html">Patents</a><a href="../projects.html">Projects</a></nav></div></header><main class="content shell"><article class="collection-card publication-card publication-detail thesis-detail" itemscope itemtype="https://schema.org/CreativeWork"><p class="kicker">{degree}</p><h1 itemprop="headline">{title}</h1><p class="thesis-detail-title-zh" lang="zh-Hant">{title_zh}</p>{sections}{repository}<div class="card-actions publication-detail-actions">{share}</div><a class="action publication-return" href="../publications.html#pub-{slug}">← Return to publications</a></article></main><footer class="site-footer"><div class="shell footer-grid"><div><strong>Wei-Hao Chiu, Ph.D.</strong><p>Associate Researcher<br/>Center for Sustainability and Energy Technologies<br/>Chang Gung University</p></div><div class="footer-links">{emails}</div></div></footer><script src="../assets/js/app.js"></script></body></html>'''.format(language=esc(p.get('language') or 'en'),title=title,title_zh=title_zh,desc=desc,url=url,site=SITE_URL,year=esc(p.get('year')),degree=esc(degree_label),ga=GA_TAG,citation=citation_meta(p),schema=json.dumps(graph,ensure_ascii=False,separators=(',',':')),sections=sections,repository=repository,share=share,slug=slug,emails=EMAIL_LINKS)
+
 def publication_page(p, openalex_record=None, unpaywall_record=None, crossref_record=None, mendeley_record=None, history_record=None):
+  if is_thesis(p):
+    return thesis_page(p)
   doi=p.get('doi',''); slug=publication_slug(p); url=SITE_URL+'/publications/'+slug+'.html'
   title=esc(p.get('title')); desc=esc(p.get('citation')); authors=publication_authors_html(p)
   history_record=history_record or {}
@@ -459,7 +520,16 @@ def publication_page(p, openalex_record=None, unpaywall_record=None, crossref_re
 
 def main():
   global AUTHOR_MAP
+  sitemap_path=ROOT/'sitemap.xml'
+  existing_sitemap=sitemap_path.read_text(encoding='utf-8') if sitemap_path.exists() else ''
+  patent_urls=[url.removeprefix(SITE_URL+'/') for url in re.findall(r'<loc>(https://weihaochiu\.github\.io/patents/[^<]+)</loc>',existing_sitemap)]
+  llms_path=ROOT/'llms.txt'
+  existing_llms=llms_path.read_text(encoding='utf-8') if llms_path.exists() else ''
+  patent_match=re.search(re.escape(PATENT_LLMS_START)+r'.*?'+re.escape(PATENT_LLMS_END),existing_llms,flags=re.S)
+  patent_llms_block=patent_match.group(0) if patent_match else ''
   pubs=json.loads((ROOT/'data/publications.json').read_text(encoding='utf-8'))
+  before_files={path.name:path.read_text(encoding='utf-8') for path in (ROOT/'publications').glob('*.html')}
+  expected_files={publication_slug(p)+'.html' for p in pubs}
   authors_path=ROOT/'data/authors.json'
   author_rows=json.loads(authors_path.read_text(encoding='utf-8')) if authors_path.exists() else []
   AUTHOR_MAP={normalize_author_name(name):author for author in author_rows if author_has_information(author) for name in [author.get('name'),author.get('displayName'),author.get('nameZh'),*(author.get('aliases') or [])] if name}
@@ -478,6 +548,7 @@ def main():
     text=path.read_text(encoding='utf-8'); text=replace_person_schema(text); text=replace_emails(text); path.write_text(text,encoding='utf-8')
   pubpath=ROOT/'publications.html'; text=clean_publications_head(pubpath.read_text(encoding='utf-8'))
   text=text.replace('Peer-reviewed journal publications of Wei-Hao Chiu with research-theme filtering, legal open-access links and per-publication sharing.','International and Chinese journal publications, conference publications and other scholarly outputs of Wei-Hao Chiu, with clearly separated core bibliometric scope.')
+  text=text.replace('International and Chinese journal publications, conference publications and other scholarly outputs of Wei-Hao Chiu, with clearly separated core bibliometric scope.','Research publications plus separately presented theses and dissertations of Wei-Hao Chiu, with thesis records excluded from all publication research analytics.')
   if 'id="publicationTypeFilter"' not in text:
     text=text.replace('<div class="select-field"><span>Sort</span><select id="sortFilter">','<div class="select-field"><span>Type</span><select aria-label="Filter by publication type" id="publicationTypeFilter"></select></div><div class="select-field"><span>Sort</span><select id="sortFilter">',1)
   static_content='<!-- SEO_STATIC_PUBLICATIONS_START -->\n'+static_publication_sections(pubs,openalex_records)+'\n<!-- SEO_STATIC_PUBLICATIONS_END -->'
@@ -495,7 +566,9 @@ def main():
   text=text.replace('</head>',citation_block+'\n'+schema+'\n</head>',1)
   pubpath.write_text(text,encoding='utf-8')
   pdir=ROOT/'publications'; pdir.mkdir(exist_ok=True)
-  for f in pdir.glob('*.html'): f.unlink()
+  for name in before_files:
+    if name not in expected_files:
+      (pdir/name).unlink()
   for p in pubs:
     key=normalize_doi(p.get('doi'))
     record=openalex_records.get(key,{})
@@ -510,20 +583,27 @@ def main():
   js=re.sub(r'function publicationShareUrl\(anchor\)\{.*?\n\}', "function publicationShareUrl(anchor){\n  const slug=String(anchor||'').replace(/^pub-/,'');\n  return new URL(`publications/${slug}.html`,window.location.href).toString();\n}", js, count=1, flags=re.S)
   app.write_text(js,encoding='utf-8')
   (ROOT/'robots.txt').write_text(robots_text(),encoding='utf-8')
-  urls=['','about.html','research.html','publications.html','patents.html','projects.html','llms.txt']+['publications/'+publication_slug(p)+'.html' for p in pubs]
+  urls=['','about.html','research.html','publications.html','patents.html','projects.html','llms.txt']+['publications/'+publication_slug(p)+'.html' for p in pubs]+patent_urls
+  urls=list(dict.fromkeys(urls))
   rows='\n'.join('  <url><loc>'+SITE_URL+'/'+esc(u)+'</loc><lastmod>'+TODAY+'</lastmod></url>' for u in urls)
-  (ROOT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+rows+'\n</urlset>\n',encoding='utf-8')
+  sitemap_path.write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+rows+'\n</urlset>\n',encoding='utf-8')
   lines=['# Wei-Hao Chiu Academic Website','', '> Official academic website of Wei-Hao Chiu, Ph.D., Associate Researcher at Chang Gung University.','','## Main Pages','',f'- [Home]({SITE_URL}/)',f'- [About]({SITE_URL}/about.html)',f'- [Research]({SITE_URL}/research.html)',f'- [Publications]({SITE_URL}/publications.html)',f'- [Patents]({SITE_URL}/patents.html)',f'- [Projects]({SITE_URL}/projects.html)','','## Contact','','- Personal email: weihao.chiu@gmail.com','- Chang Gung University email: d000019005@cgu.edu.tw','','## Research Expertise','']
   lines += ['- '+x for x in PERSON['knowsAbout']]; lines += ['','## Scholarly Outputs','']
-  for key,label in [('international-journal','International Journal Publications'),('chinese-journal','Chinese Journal Publications'),('conference','Conference Publications'),('other','Other Scholarly Outputs'),('unclassified','Unclassified Outputs')]:
+  for key,label in [('international-journal','International Journal Publications'),('chinese-journal','Chinese Journal Publications'),('conference','Conference Publications'),('other','Other Scholarly Outputs'),('unclassified','Unclassified Outputs'),('thesis','Theses & Dissertations')]:
     rows=[p for p in pubs if publication_type(p)==key]
     if not rows: continue
     lines += ['',f'### {label}','']
     for p in rows:
       doi_note=f"; DOI: {p.get('doi')}" if p.get('doi') else ''
-      lines.append(f"- [{p.get('title')}]({SITE_URL}/publications/{publication_slug(p)}.html) — {p.get('journal')}, {p.get('year')}{doi_note}")
-  (ROOT/'llms.txt').write_text('\n'.join(lines)+'\n',encoding='utf-8')
+      source=p.get('institution') if is_thesis(p) else p.get('journal')
+      lines.append(f"- [{p.get('title')}]({SITE_URL}/publications/{publication_slug(p)}.html) — {source}, {p.get('year')}{doi_note}")
+  llms_text='\n'.join(lines)+'\n'
+  if patent_llms_block:
+    llms_text=llms_text.rstrip()+'\n\n'+patent_llms_block+'\n'
+  llms_path.write_text(llms_text,encoding='utf-8')
   core_count=sum(p.get('analytics',{}).get('coreJournalCount') is True for p in pubs)
-  mp=ROOT/'data/site_meta.json'; meta=json.loads(mp.read_text(encoding='utf-8')); meta.update({'version':'v25','lastUpdated':TODAY,'coreJournalPublications':core_count,'scholarlyOutputs':len(pubs),'notes':f'V25 separates {len(pubs)} scholarly outputs by publication type while retaining {core_count} core international journal publications as the scope for JCR, journal IF and FWCI analytics.'}); mp.write_text(json.dumps(meta,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+  research_count=sum(is_research_publication(p) for p in pubs)
+  thesis_count=sum(is_thesis(p) for p in pubs)
+  mp=ROOT/'data/site_meta.json'; meta=json.loads(mp.read_text(encoding='utf-8')); meta.update({'version':'v26','lastUpdated':TODAY,'coreJournalPublications':core_count,'scholarlyOutputs':research_count,'thesesAndDissertations':thesis_count,'notes':f'V26 displays {thesis_count} theses and dissertations separately while retaining {research_count} research publications and {core_count} core international journal publications for publication analytics.'}); mp.write_text(json.dumps(meta,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 
 if __name__=='__main__': main()

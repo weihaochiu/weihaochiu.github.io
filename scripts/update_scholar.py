@@ -13,6 +13,8 @@ from zoneinfo import ZoneInfo
 import requests
 from bs4 import BeautifulSoup
 
+from publication_scope import is_research_publication
+
 ROOT = Path(__file__).resolve().parents[1]
 METRICS = ROOT / 'data/scholar_metrics.json'
 PUBS = ROOT / 'data/publications.json'
@@ -73,6 +75,8 @@ def normalize_scholar_url(value):
 def repair_existing_links(publications):
     repaired = 0
     for publication in publications:
+        if not is_research_publication(publication):
+            continue
         for field in ('scholarCitedByUrl', 'citedByUrl'):
             previous = str(publication.get(field) or '')
             cleaned = normalize_scholar_url(previous)
@@ -117,7 +121,11 @@ def main():
             'status': 'success',
         }
 
-        indexed = {norm(publication.get('title', '')): publication for publication in publications}
+        indexed = {
+            norm(publication.get('title', '')): publication
+            for publication in publications
+            if is_research_publication(publication)
+        }
         updated = 0
         for row in soup.select('.gsc_a_tr'):
             title_el = row.select_one('.gsc_a_at')

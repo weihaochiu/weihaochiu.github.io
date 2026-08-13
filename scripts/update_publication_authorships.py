@@ -39,6 +39,8 @@ from datetime import date
 from pathlib import Path
 from typing import Any, Iterable
 
+from publication_scope import is_automation_protected
+
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_PUBLICATIONS = ROOT / "data" / "publications.json"
 ME_ORCID = "0000-0003-4484-3117"
@@ -1064,6 +1066,8 @@ def parse_args() -> argparse.Namespace:
 
 
 def should_update(publication: dict[str, Any], args: argparse.Namespace) -> bool:
+    if is_automation_protected(publication):
+        return False
     doi = normalize_doi(publication.get("doi"))
     if args.doi and doi != normalize_doi(args.doi):
         return False

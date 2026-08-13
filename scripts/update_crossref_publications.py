@@ -11,6 +11,8 @@ from urllib.parse import quote
 
 import requests
 
+from publication_scope import is_research_publication
+
 ROOT = Path(__file__).resolve().parents[1]
 PUBLICATIONS = ROOT / "data" / "publications.json"
 OUTPUT = ROOT / "data" / "crossref_publication_metrics.json"
@@ -28,6 +30,8 @@ def main() -> None:
     session.headers.update({"User-Agent": f"WeiHaoChiuAcademicWebsite/1.0 (mailto:{mailto})"})
 
     for publication in publications:
+        if not is_research_publication(publication):
+            continue
         doi = str(publication.get("doi") or "").strip().lower()
         if not doi:
             continue
