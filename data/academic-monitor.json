@@ -1,8 +1,8 @@
 {
   "schemaVersion": 3,
-  "generatedAt": "2026-08-13T11:28:28+08:00",
+  "generatedAt": "2026-08-13T11:31:40+08:00",
   "repository": "https://github.com/weihaochiu/weihaochiu.github.io",
-  "status": "partial",
+  "status": "completed",
   "summary": {
     "publications": 2,
     "patents": 17,
@@ -15,7 +15,7 @@
       "unclassified": 0
     },
     "totalCandidates": 19,
-    "sourceErrors": 1,
+    "sourceErrors": 0,
     "sourceWarnings": 0,
     "resolvedRecordsSuppressed": 0
   },
@@ -65,6 +65,7 @@
       "pages": "",
       "abstract": "<title>Abstract</title>\n                <p>\n                  Buried layer crystallization at an electron transport layer interface is seldom discussed but crucial for obtaining a high-quality perovskite layer. This study demonstrates a novel interfacial engineering concept by using 2-aminoethylphosphonic acid (APA) to bridge the mechanical and electronic disparities at the SnO\n                  <sub>2</sub>\n                  /perovskite interface. The bifunctional synergy of the APA molecule, which serves as both an electronic dipole and a mechanical geometrical tuner. The flexible backbone of APA renders it to alleviate the strain by over 20% through releasing residual compressive stress. The electron-withdrawing phosphonate and electron-donating amino headgroups anchor preferred-orientationally onto SnO\n                  <sub>2</sub>\n                  and perovskite terminal facets. The directional dipole and releasing stress help expand the quasi-Fermi level splitting and accelerate electron transfer from the perovskite layer to the electron transport layer of SnO\n                  <sub>2</sub>\n                  . The champion device can achieve power conversion efficiency of 22.92% with over 1,500 h stability in air without encapsulation. By harmonizing molecular orientation with mechanical stress relief, this study establishes a new paradigm for high-performance and durable perovskite photovoltaics.\n                </p>",
       "keywords": [],
+      "repositoryUrl": "http://dx.doi.org/10.21203/rs.3.rs-9068209/v1",
       "sourceDocumentType": "posted-content",
       "language": "",
       "suggestedPublicationType": "other",
@@ -96,6 +97,7 @@
       "pages": "",
       "abstract": "",
       "keywords": [],
+      "repositoryUrl": "https://pure.lib.cgu.edu.tw/en/publications/817ed756-1d9d-4eca-8be1-9cc8997becac",
       "sourceDocumentType": "journal-article",
       "language": "",
       "suggestedPublicationType": "international-journal",
@@ -1243,16 +1245,17 @@
     {
       "name": "ORCID",
       "url": "https://pub.orcid.org/v3.0/0000-0003-4484-3117/works",
-      "status": "error",
-      "message": "TimeoutError: The read operation timed out The previous candidate list was retained; these are cached candidates, not a successful new check.",
-      "checkedAt": "2026-08-13T11:28:19+08:00"
+      "status": "success",
+      "message": "",
+      "checkedAt": "2026-08-13T11:31:35+08:00",
+      "candidateCount": 2
     },
     {
       "name": "Google Patents",
       "url": "https://patents.google.com/?q=inventor%3D%22Wei-Hao+Chiu%22",
       "status": "success",
       "message": "",
-      "checkedAt": "2026-08-13T11:28:20+08:00",
+      "checkedAt": "2026-08-13T11:31:36+08:00",
       "candidateCount": 10
     },
     {
@@ -1260,7 +1263,7 @@
       "url": "https://patents.google.com/?q=inventor%3D%22%E9%82%B1%E5%81%89%E8%B1%AA%22",
       "status": "success",
       "message": "",
-      "checkedAt": "2026-08-13T11:28:25+08:00",
+      "checkedAt": "2026-08-13T11:31:39+08:00",
       "candidateCount": 10
     },
     {
@@ -1268,7 +1271,7 @@
       "url": "https://www.grb.gov.tw/advq?queryStr=%E9%82%B1%E5%81%89%E8%B1%AA&queryType=grb05",
       "status": "success",
       "message": "GRB Playwright discovery completed; 0 pending record(s) require review.",
-      "checkedAt": "2026-08-13T11:28:28+08:00",
+      "checkedAt": "2026-08-13T11:31:40+08:00",
       "candidateCount": 0
     }
   ],
