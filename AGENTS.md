@@ -18,7 +18,7 @@
 - 預設直接在 `main` 工作。
 - 不自動建立新的 branch。
 - 不建立 Pull Request。
-- 不使用 GitHub CLI（`gh`）。
+- 除了下方「GitHub Actions / Pages 驗證可以使用 `gh`」的明確例外，不使用 GitHub CLI（`gh`）。
 - GitHub 更新只使用標準 Git 指令。
 - 不修改與本次需求無關的檔案。
 - 不使用 `git push --force`。
@@ -218,7 +218,7 @@ git push origin main
 - force push
 - 自動建立 branch
 - 建立 PR
-- 使用 `gh`
+- 使用 `gh` 取代一般 Git 操作，或進行與本次實機驗證無關的 GitHub 操作
 
 如果 push 被拒絕、`origin/main` 已有新版本、需要 merge/rebase、出現 conflict 或任何遠端同步異常：
 - 停止
@@ -237,6 +237,68 @@ git log -1 --oneline
 ```
 
 `git ls-tree` 應無任何輸出。
+
+## GitHub Actions / Pages 驗證可以使用 `gh`
+
+一般 repository 更新仍使用 `git status`、`git fetch`、`git add`、`git commit`、`git push` 等標準 Git 指令；不得使用 `gh` 取代正常 Git 操作。
+
+Codex 只有在 GitHub Actions 實機驗證所必需時，才可使用 GitHub CLI `gh`：
+- 執行 `workflow_dispatch`
+- 查詢 workflow run、等待完成、查看 conclusion 與 logs
+- 查詢 GitHub Pages build / deployment
+- 其他與本次 GitHub Actions 實機驗證直接相關的 read / dispatch 操作
+
+即使在上述例外中，仍不得使用 `gh`：
+- 建立或 merge Pull Request
+- 建立、切換或修改 branch
+- 取代正常 `git push`
+- 執行與本次任務無關的 GitHub 操作
+
+## Push 後 GitHub Actions / 正式網站實機驗證
+
+### 判斷最終效果是否依賴 Action
+
+如果本次修改涉及 GitHub Actions workflow、只能在 Actions 執行的外部 API、GitHub Secrets、GA4、citation 自動更新、OpenAlex、Crossref、Mendeley、Scholar、自動生成 JSON / HTML、Action commit 回 repository 的資料或 GitHub Pages deployment，而且不實際執行 Action 就無法看到最終效果，則 push 後必須執行與本次修改直接相關的 Action。不能只做 local syntax test 就宣稱功能完成。
+
+純 CSS、靜態文字或不依賴 generator 的 HTML 等修改，不需要為了形式執行 Action。應依 data flow、generator、workflow、source JSON 與 generated HTML 判斷真正需要執行哪一個 workflow；不得任意執行 `run-all-workflows`。
+
+### 執行並等待 workflow
+
+若對應 workflow 支援 `workflow_dispatch`，push 後先執行：
+
+```powershell
+gh auth status
+```
+
+確認已登入後，執行與本次修改直接相關的 workflow，例如：
+
+```powershell
+gh workflow run update-ga4-summary.yml --ref main
+```
+
+取得這次新 run 的 ID，使用 `gh run watch <RUN_ID> --exit-status` 或同等方式等待完成。只有 `conclusion == success` 才能進入正式資料驗證；若為 `failure`、`cancelled`、`timed_out` 或 `action_required`，必須查看 logs、找出原因並修正，不得回報功能已完成。
+
+如果 `gh auth status` 失敗或 GitHub CLI 未安裝，不得把 Action 驗證說成通過；必須明確回報應執行的 workflow、無法執行的原因，以及尚未驗證的項目。
+
+### 驗證 Action 產物與 bot commit
+
+GitHub Action 顯示 Success 不代表網站功能已驗證完成。如果 Action 會產生 JSON、HTML、citation / analytics data 或 generated pages，必須確認產物存在且內容符合本次需求。
+
+若 workflow 產生新的 bot commit，必須執行 `git fetch origin main`，並記錄 workflow run ID、workflow conclusion、Action 產生的 commit SHA 與最新 `origin/main` SHA。不要把原本程式碼 commit SHA 誤認為最終 remote SHA。
+
+如果本機因此落後 `origin/main`，只有 working tree 乾淨且可安全 fast-forward 時才能同步；不得 force push、`reset --hard` 或覆蓋 Action 產生的 commit。
+
+### 驗證 GitHub Pages 與正式網站
+
+若最終結果應顯示在 `https://weihaochiu.github.io/`，必須確認 GitHub Pages 部署的 commit SHA 包含最新 Action 產物；不可接受 `Action data commit = NEW_SHA` 但 `Pages commit = OLD_SHA`。
+
+使用靜態 JSON 的功能還必須讀取正式網站 JSON，可加上 `?ts=<current timestamp>` 避免 CDN / browser cache 誤判，並確認：
+- HTTP request 成功
+- `generatedAt` 已更新
+- 必要 key 與資料存在
+- 不是舊版資料
+
+最後必須檢查使用者實際看到的正式頁面。若正式 JSON 正確但頁面仍異常，繼續檢查 Pages cache、HTML deployment、JavaScript、JSON fetch 與 browser console，在找到原因前不得宣稱完成。
 
 最後回報：
 - 修改摘要
@@ -292,6 +354,24 @@ git log -1 --oneline
 commit
 ↓
 push `origin main`
+↓
+判斷最終效果是否依賴 GitHub Actions
+↓
+若否，執行一般 Push 後確認
+↓
+若是，執行 `gh auth status`
+↓
+執行直接相關的 `workflow_dispatch`
+↓
+取得 run ID 並等待 workflow 結束
+↓
+確認 `conclusion == success`
+↓
+`git fetch origin main` 並確認 Action 產物與 bot commit SHA
+↓
+若結果需要 GitHub Pages，等待並驗證 Pages build commit
+↓
+檢查正式網站 / 正式 JSON 與使用者實際看到的結果
 ↓
 再次確認 GitHub 沒有 `backup/`
 ↓

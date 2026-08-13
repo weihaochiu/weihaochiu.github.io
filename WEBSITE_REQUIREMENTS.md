@@ -87,3 +87,4 @@ Verified collection files in `data/` remain authoritative. Do not replace them w
 - Source and medium values are preserved exactly as returned by GA4; they are not reclassified or converted to hyperlinks.
 - The GA4 export stores up to 20 traffic sources ordered by sessions descending in the top-level `trafficSources` array of `assets/data/ga-summary.json`.
 - The table remains readable on desktop, tablet and mobile. Missing or empty `trafficSources` data displays `No data` without preventing the rest of Website Insights from loading.
+- A GA4 automatic update is complete only after the generated data is committed to the repository and GitHub Pages reports `built` for the exact commit containing the updated `assets/data/ga-summary.json`.

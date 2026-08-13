@@ -166,11 +166,13 @@ flowchart TD
 | `update-mendeley.yml` | 每週一 04:20 UTC（台灣 12:20）＋手動 | 更新 Mendeley readers | Mendeley JSON |
 | `update-unpaywall.yml` | 每週日 18:00 UTC（週一台灣 02:00）＋手動 | 更新 OA links | Unpaywall JSON |
 | `update-citation-histories.yml` | 僅手動 | Scholar/OpenAlex citation-history 診斷與臨時重跑；固定週排程已整併至 `update-scholar.yml` | 兩個 history JSON |
-| `update-ga4-summary.yml` | 每日 01:20 UTC（台灣 09:20）＋手動 | 匯出 GA4 summary | `assets/data/ga-summary.json` |
+| `update-ga4-summary.yml` | 每日 01:20 UTC（台灣 09:20）＋手動 | 匯出 GA4 summary；若資料有變更，commit / push 後主動要求 GitHub Pages rebuild，並等待 Pages 部署的 commit 等於 GA4 data commit | `assets/data/ga-summary.json`、對應 GitHub Pages build |
 | `update-journals.yml` | 每月 1 日 03:17 UTC（台灣 11:17）＋手動 | 更新 journal/JCR metadata | `journals.json` |
 | `test-mendeley-api.yml` | 手動 | 只做 Mendeley API 診斷 | 不提交正式資料 |
 
 重要維護規則：只要某個 workflow 更新的 JSON 會影響靜態生成的 publication 頁，就必須在同一 workflow 執行 `build_seo.py` 並把所有生成檔加入 `git add`；否則 JSON 與 HTML 會不同步。
+
+`update-ga4-summary.yml` 的完成條件不只是在 repository 產生 bot commit。當 `assets/data/ga-summary.json` 有變更時，commit step 會輸出實際包含新 JSON 的 commit SHA；workflow 使用內建 `github.token` 與最小的 `contents: write`、`pages: write` 權限呼叫 `POST /repos/{owner}/{repo}/pages/builds`，再輪詢最新 Pages build。只有 Pages build 的 `commit` 等於該 data commit SHA 且 `status` 為 `built` 才成功，避免把舊 commit 的成功 build 誤認為本次 GA4 資料已部署。
 
 ## 9. SEO、搜尋引擎與 AI 可讀性
 

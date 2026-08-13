@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  pages: write
 
 concurrency:
   group: ga4-summary
@@ -40,6 +41,7 @@ jobs:
         run: python scripts/export_ga4_summary.py
 
       - name: Commit JSON when changed
+        id: commit_json
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
@@ -47,7 +49,91 @@ jobs:
           git add assets/data/ga-summary.json
           if git diff --cached --quiet; then
             echo "No analytics changes."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
           else
             git commit -m "Update aggregate GA4 dashboard data"
+            data_commit_sha="$(git rev-parse HEAD)"
             git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "sha=$data_commit_sha" >> "$GITHUB_OUTPUT"
           fi
+
+      - name: Request GitHub Pages rebuild
+        if: steps.commit_json.outputs.changed == 'true'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          response_file="$RUNNER_TEMP/pages-build-request.json"
+          http_status="$(curl --silent --show-error --location \
+            --output "$response_file" \
+            --write-out '%{http_code}' \
+            --request POST \
+            --header 'Accept: application/vnd.github+json' \
+            --header "Authorization: Bearer $GH_TOKEN" \
+            --header 'X-GitHub-Api-Version: 2026-03-10' \
+            "https://api.github.com/repos/$GITHUB_REPOSITORY/pages/builds")"
+
+          if [[ "$http_status" != "201" ]]; then
+            echo "Pages build request failed with HTTP $http_status." >&2
+            cat "$response_file" >&2
+            exit 1
+          fi
+
+          request_status="$(jq -r '.status // empty' "$response_file")"
+          if [[ "$request_status" != "queued" ]]; then
+            echo "Pages build request returned unexpected status: ${request_status:-missing}." >&2
+            cat "$response_file" >&2
+            exit 1
+          fi
+
+          echo "GitHub Pages rebuild queued for commit ${{ steps.commit_json.outputs.sha }}."
+
+      - name: Wait for GitHub Pages to deploy GA4 commit
+        if: steps.commit_json.outputs.changed == 'true'
+        timeout-minutes: 4
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          EXPECTED_SHA: ${{ steps.commit_json.outputs.sha }}
+        run: |
+          response_file="$RUNNER_TEMP/latest-pages-build.json"
+
+          for attempt in {1..36}; do
+            sleep 5
+            http_status="$(curl --silent --show-error --location \
+              --output "$response_file" \
+              --write-out '%{http_code}' \
+              --header 'Accept: application/vnd.github+json' \
+              --header "Authorization: Bearer $GH_TOKEN" \
+              --header 'X-GitHub-Api-Version: 2026-03-10' \
+              "https://api.github.com/repos/$GITHUB_REPOSITORY/pages/builds/latest")"
+
+            if [[ "$http_status" != "200" ]]; then
+              echo "Unable to read the latest Pages build (HTTP $http_status)." >&2
+              cat "$response_file" >&2
+              exit 1
+            fi
+
+            pages_sha="$(jq -r '.commit // empty' "$response_file")"
+            pages_status="$(jq -r '.status // empty' "$response_file")"
+            pages_error="$(jq -r '.error.message // empty' "$response_file")"
+            echo "Pages check $attempt/36: commit=${pages_sha:-missing} status=${pages_status:-missing}"
+
+            if [[ "$pages_sha" == "$EXPECTED_SHA" ]]; then
+              if [[ "$pages_status" == "built" ]]; then
+                echo "GitHub Pages deployed expected commit $EXPECTED_SHA."
+                exit 0
+              fi
+
+              if [[ -n "$pages_error" || "$pages_status" == "errored" ]]; then
+                echo "GitHub Pages failed for expected commit $EXPECTED_SHA: ${pages_error:-status is errored}." >&2
+                exit 1
+              fi
+            fi
+          done
+
+          echo "Timed out waiting for GitHub Pages to deploy expected commit $EXPECTED_SHA." >&2
+          cat "$response_file" >&2
+          exit 1
