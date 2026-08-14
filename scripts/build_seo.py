@@ -421,17 +421,18 @@ def thesis_page(p):
   degree_label=publication_type_label(p)
   desc=esc(f"{degree_label} by Wei-Hao Chiu, {p.get('institution')}, {p.get('year')}: {raw_title}")
   graph={'@context':'https://schema.org','@graph':[PERSON,article_schema(p,url)]}
+  authors=publication_authors_html(p)
   rows=[
-    ('Author',str(p.get('authors',["Wei-Hao Chiu"])[0]),p.get('authorZh')),
-    ('Degree',degree_label,''),
-    ('Year',p.get('year'),''),
-    ('Institution',p.get('institution'),p.get('institutionZh')),
-    ('Department',p.get('department'),p.get('departmentZh')),
-    ('Advisor',p.get('advisor'),p.get('advisorZh')),
-    ('Pages',p.get('pages'),''),
-    ('Language',p.get('languageLabel') or p.get('language'),''),
+    ('Author',authors,p.get('authorZh'),True),
+    ('Degree',degree_label,'',False),
+    ('Year',p.get('year'),'',False),
+    ('Institution',p.get('institution'),p.get('institutionZh'),False),
+    ('Department',p.get('department'),p.get('departmentZh'),False),
+    ('Advisor',p.get('advisor'),p.get('advisorZh'),False),
+    ('Pages',p.get('pages'),'',False),
+    ('Language',p.get('languageLabel') or p.get('language'),'',False),
   ]
-  facts=''.join('<div class="thesis-fact"><dt>'+esc(label)+'</dt><dd>'+esc(value)+(('<span lang="zh-Hant">'+esc(zh)+'</span>') if zh else '')+'</dd></div>' for label,value,zh in rows if value not in ('',None))
+  facts=''.join('<div class="thesis-fact"><dt>'+esc(label)+'</dt><dd>'+(value if value_is_html else esc(value))+(('<span lang="zh-Hant">'+esc(zh)+'</span>') if zh else '')+'</dd></div>' for label,value,zh,value_is_html in rows if value not in ('',None))
   abstract=str(p.get('abstract') or '').strip()
   abstract_zh=str(p.get('abstractZh') or '').strip()
   keywords=p.get('keywords') or []

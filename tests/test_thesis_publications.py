@@ -1,4 +1,5 @@
 import json
+import subprocess
 import sys
 import unittest
 from pathlib import Path
@@ -20,6 +21,30 @@ class ThesisPublicationTests(unittest.TestCase):
         cls.theses = [
             row for row in cls.publications if row.get("publicationType") == "thesis"
         ]
+
+    @staticmethod
+    def run_seo_build():
+        subprocess.run(
+            [sys.executable, str(ROOT / "scripts" / "build_seo.py")],
+            cwd=ROOT,
+            check=True,
+        )
+
+    @staticmethod
+    def seo_output_snapshot():
+        paths = [
+            *ROOT.glob("*.html"),
+            *(ROOT / "publications").glob("*.html"),
+            ROOT / "assets" / "js" / "app.js",
+            ROOT / "data" / "site_meta.json",
+            ROOT / "llms.txt",
+            ROOT / "robots.txt",
+            ROOT / "sitemap.xml",
+        ]
+        return {
+            path.relative_to(ROOT).as_posix(): path.read_bytes()
+            for path in sorted(paths)
+        }
 
     def test_research_kpis_remain_unchanged(self):
         research = [row for row in self.publications if is_research_publication(row)]
@@ -61,6 +86,7 @@ class ThesisPublicationTests(unittest.TestCase):
             self.assertTrue(all(value is False for key, value in thesis["analytics"].items() if key != "excludeFromResearchAnalytics"))
 
     def test_generated_thesis_pages_have_metadata_without_bibliometrics(self):
+        self.run_seo_build()
         for slug in ("phd-thesis-2011", "ms-thesis-2005"):
             page = (ROOT / "publications" / f"{slug}.html").read_text(encoding="utf-8")
             self.assertIn('<meta name="description"', page)
@@ -76,6 +102,33 @@ class ThesisPublicationTests(unittest.TestCase):
                 "FWCI ",
             ):
                 self.assertNotIn(forbidden, page)
+
+    def test_all_detail_pages_use_shared_author_cards(self):
+        self.run_seo_build()
+        detail_pages = sorted((ROOT / "publications").glob("*.html"))
+        self.assertEqual(len(self.publications), len(detail_pages))
+        for page_path in detail_pages:
+            page = page_path.read_text(encoding="utf-8")
+            self.assertIn('class="author-trigger', page, page_path.name)
+
+        for slug in ("phd-thesis-2011", "ms-thesis-2005"):
+            page = (ROOT / "publications" / f"{slug}.html").read_text(encoding="utf-8")
+            self.assertIn('class="author-trigger me"', page)
+            self.assertIn('data-author-name="Wei-Hao Chiu"', page)
+            self.assertIn('<script src="../assets/js/app.js"></script>', page)
+
+        app_js = (ROOT / "assets" / "js" / "app.js").read_text(encoding="utf-8")
+        self.assertIn("loadData('authors')", app_js)
+        self.assertIn("initAuthorPopover();", app_js)
+        self.assertIn(".author-popover-close", app_js)
+        self.assertIn("event.key==='Escape'", app_js)
+        self.assertIn("!event.target.closest('#authorPopover')", app_js)
+
+    def test_build_seo_is_idempotent(self):
+        self.run_seo_build()
+        first = self.seo_output_snapshot()
+        self.run_seo_build()
+        self.assertEqual(first, self.seo_output_snapshot())
 
     def test_publications_page_and_discovery_files_include_theses(self):
         publications_page = (ROOT / "publications.html").read_text(encoding="utf-8")
