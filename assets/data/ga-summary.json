@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-13T03:33:27Z",
+  "generatedAt": "2026-08-14T03:30:41Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 351,
-    "activeUsers": 49,
-    "sessions": 100,
-    "engagementRate": 0.56
+    "pageViews": 369,
+    "activeUsers": 54,
+    "sessions": 109,
+    "engagementRate": 0.5321100917431193
   },
   "monthlyTrend": [
     {
@@ -19,22 +19,22 @@
     },
     {
       "month": "2026-08",
-      "pageViews": 38,
-      "activeUsers": 19
+      "pageViews": 56,
+      "activeUsers": 24
     }
   ],
   "topPages": [
     {
-      "title": "Publications | Wei-Hao Chiu",
-      "path": "/publications.html",
-      "pageViews": 70,
-      "activeUsers": 14
-    },
-    {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 70,
-      "activeUsers": 40
+      "pageViews": 78,
+      "activeUsers": 44
+    },
+    {
+      "title": "Publications | Wei-Hao Chiu",
+      "path": "/publications.html",
+      "pageViews": 74,
+      "activeUsers": 15
     },
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
@@ -57,7 +57,7 @@
     {
       "title": "Patents | Wei-Hao Chiu",
       "path": "/patents.html",
-      "pageViews": 28,
+      "pageViews": 29,
       "activeUsers": 5
     },
     {
@@ -103,14 +103,14 @@
       "activeUsers": 2
     },
     {
-      "title": "Exploring the efficiency enhancement of perovskite solar cells by chemical bath depositing SnO2 on mesoporous TiO2 electrode | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-mtchem-2024-102329.html",
+      "title": "Branched ZnO nanowires for enhancing energy conversion efficiency of dye-sensitized solar cells | Wei-Hao Chiu",
+      "path": "/publications/10-1557-proc-1121-n14-01.html",
       "pageViews": 2,
       "activeUsers": 1
     },
     {
-      "title": "Fused Dithienoheterocycle‐Based Hole‐Transporting Materials for Efficient Perovskite Solar Cells | Wei-Hao Chiu",
-      "path": "/publications/10-1002-asia-70245.html",
+      "title": "Exploring the efficiency enhancement of perovskite solar cells by chemical bath depositing SnO2 on mesoporous TiO2 electrode | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-mtchem-2024-102329.html",
       "pageViews": 2,
       "activeUsers": 1
     }
@@ -118,21 +118,21 @@
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 56,
-      "activeUsers": 42
+      "sessions": 61,
+      "activeUsers": 47
     },
     {
       "channel": "Organic Search",
-      "sessions": 43,
+      "sessions": 47,
       "activeUsers": 7
     },
     {
-      "channel": "Referral",
-      "sessions": 1,
+      "channel": "Unassigned",
+      "sessions": 2,
       "activeUsers": 1
     },
     {
-      "channel": "Unassigned",
+      "channel": "Referral",
       "sessions": 1,
       "activeUsers": 1
     }
@@ -141,13 +141,13 @@
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 56,
-      "activeUsers": 42
+      "sessions": 61,
+      "activeUsers": 47
     },
     {
       "source": "google",
       "medium": "organic",
-      "sessions": 40,
+      "sessions": 44,
       "activeUsers": 4
     },
     {
@@ -159,7 +159,7 @@
     {
       "source": "(not set)",
       "medium": "(not set)",
-      "sessions": 1,
+      "sessions": 2,
       "activeUsers": 1
     },
     {
@@ -172,13 +172,13 @@
   "topCountries": [
     {
       "country": "United States",
-      "activeUsers": 21,
-      "pageViews": 24
+      "activeUsers": 24,
+      "pageViews": 27
     },
     {
       "country": "Taiwan",
-      "activeUsers": 14,
-      "pageViews": 302
+      "activeUsers": 16,
+      "pageViews": 317
     },
     {
       "country": "Germany",
@@ -219,21 +219,21 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 38
+      "activeUsers": 42
     },
     {
       "device": "mobile",
-      "activeUsers": 11
+      "activeUsers": 12
     }
   ],
   "academicEvents": [
     {
       "eventName": "patent_click",
-      "eventCount": 18
+      "eventCount": 19
     },
     {
       "eventName": "doi_click",
-      "eventCount": 16
+      "eventCount": 18
     },
     {
       "eventName": "orcid_click",
@@ -244,11 +244,11 @@
       "eventCount": 9
     },
     {
-      "eventName": "crossref_click",
-      "eventCount": 5
+      "eventName": "openalex_click",
+      "eventCount": 6
     },
     {
-      "eventName": "openalex_click",
+      "eventName": "crossref_click",
       "eventCount": 5
     },
     {
