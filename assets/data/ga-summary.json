@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-14T03:30:41Z",
+  "generatedAt": "2026-08-15T02:19:50Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 369,
-    "activeUsers": 54,
-    "sessions": 109,
-    "engagementRate": 0.5321100917431193
+    "pageViews": 375,
+    "activeUsers": 55,
+    "sessions": 111,
+    "engagementRate": 0.5585585585585585
   },
   "monthlyTrend": [
     {
@@ -19,21 +19,21 @@
     },
     {
       "month": "2026-08",
-      "pageViews": 56,
-      "activeUsers": 24
+      "pageViews": 62,
+      "activeUsers": 25
     }
   ],
   "topPages": [
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 78,
-      "activeUsers": 44
+      "pageViews": 79,
+      "activeUsers": 45
     },
     {
       "title": "Publications | Wei-Hao Chiu",
       "path": "/publications.html",
-      "pageViews": 74,
+      "pageViews": 75,
       "activeUsers": 15
     },
     {
@@ -73,14 +73,14 @@
       "activeUsers": 3
     },
     {
-      "title": "Heterogeneous graphite felt electrodes decorated with nanostructured graphitic carbon nitride for enhanced redox kinetics in vanadium redox flow batteries | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-jpowsour-2025-239216.html",
-      "pageViews": 6,
+      "title": "Research | Wei-Hao Chiu",
+      "path": "/research.html",
+      "pageViews": 7,
       "activeUsers": 3
     },
     {
-      "title": "Research | Wei-Hao Chiu",
-      "path": "/research.html",
+      "title": "Heterogeneous graphite felt electrodes decorated with nanostructured graphitic carbon nitride for enhanced redox kinetics in vanadium redox flow batteries | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-jpowsour-2025-239216.html",
       "pageViews": 6,
       "activeUsers": 3
     },
@@ -103,14 +103,14 @@
       "activeUsers": 2
     },
     {
-      "title": "Branched ZnO nanowires for enhancing energy conversion efficiency of dye-sensitized solar cells | Wei-Hao Chiu",
-      "path": "/publications/10-1557-proc-1121-n14-01.html",
-      "pageViews": 2,
+      "title": "Modified Spontaneous Emission in a Tightly Pumped Nd:YVO4 Laser with Degenerate Resonator | Wei-Hao Chiu",
+      "path": "/publications/ms-thesis-2005.html",
+      "pageViews": 3,
       "activeUsers": 1
     },
     {
-      "title": "Exploring the efficiency enhancement of perovskite solar cells by chemical bath depositing SnO2 on mesoporous TiO2 electrode | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-mtchem-2024-102329.html",
+      "title": "Branched ZnO nanowires for enhancing energy conversion efficiency of dye-sensitized solar cells | Wei-Hao Chiu",
+      "path": "/publications/10-1557-proc-1121-n14-01.html",
       "pageViews": 2,
       "activeUsers": 1
     }
@@ -118,18 +118,13 @@
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 61,
-      "activeUsers": 47
+      "sessions": 63,
+      "activeUsers": 48
     },
     {
       "channel": "Organic Search",
       "sessions": 47,
       "activeUsers": 7
-    },
-    {
-      "channel": "Unassigned",
-      "sessions": 2,
-      "activeUsers": 1
     },
     {
       "channel": "Referral",
@@ -141,8 +136,8 @@
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 61,
-      "activeUsers": 47
+      "sessions": 63,
+      "activeUsers": 48
     },
     {
       "source": "google",
@@ -155,12 +150,6 @@
       "medium": "organic",
       "sessions": 3,
       "activeUsers": 3
-    },
-    {
-      "source": "(not set)",
-      "medium": "(not set)",
-      "sessions": 2,
-      "activeUsers": 1
     },
     {
       "source": "cgu.edu.tw",
@@ -177,8 +166,8 @@
     },
     {
       "country": "Taiwan",
-      "activeUsers": 16,
-      "pageViews": 317
+      "activeUsers": 17,
+      "pageViews": 323
     },
     {
       "country": "Germany",
@@ -223,7 +212,7 @@
     },
     {
       "device": "mobile",
-      "activeUsers": 12
+      "activeUsers": 13
     }
   ],
   "academicEvents": [
@@ -254,6 +243,10 @@
     {
       "eventName": "email_click",
       "eventCount": 2
+    },
+    {
+      "eventName": "share_action",
+      "eventCount": 1
     }
   ]
 }
