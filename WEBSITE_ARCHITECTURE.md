@@ -3,7 +3,7 @@
 > Repository：<https://github.com/weihaochiu/weihaochiu.github.io>  
 > 正式網站：<https://weihaochiu.github.io/>  
 > 預設分支：`main`  
-> 本文件盤點日期：2026-08-13
+> 本文件盤點日期：2026-08-15
 > 本文件用途：作為網站的單一架構索引。每次修改網站、資料格式、自動化流程、外部連結或分析功能時，必須同步更新本文件，並完成第 12 節的回歸檢查，避免原有功能遺失。
 
 ## 1. 網站定位與技術架構
@@ -136,6 +136,7 @@ flowchart TD
 | 檔案 | 功能 | 重要輸入 → 輸出 |
 |---|---|---|
 | `scripts/build_seo.py` | 全站產生器：統一 GA4、canonical、Open Graph、Twitter、Person/ScholarlyArticle/ItemList JSON-LD、citation meta；產生／更新 publication 個別頁、OpenAlex 靜態逐年圖表與 DOI citing-article 清單、`sitemap.xml`、`robots.txt`、`llms.txt` 與部分 HTML。 | `publications.json` + metrics/OA/site meta → HTML 與 SEO 檔 |
+| `scripts/validate_publications.py` | 學術成果資料與 generated detail page 的單一 validator；依 `publicationType` 分流 research-publication 與 thesis HTML 規則，並對未支援類型明確失敗。 | `publications.json` + taxonomy + `publications/*.html` → validation report |
 | `scripts/update_scholar.py` | 更新 Scholar 作者 metrics，並可能更新 publication citation 欄位／連結。 | Scholar profile + publications → `scholar_metrics.json`、`publications.json` |
 | `scripts/update_google_scholar_citation_history.py` | 抓取／整理 Scholar 年度引用資料。 | Scholar profile → Scholar history JSON |
 | `scripts/update_openalex_stats.py` | 更新 OpenAlex 作者總 citations、h-index、i10-index。 | OpenAlex author API → `openalex_metrics.json` |
@@ -313,7 +314,7 @@ flowchart TD
 
 ### `.github/workflows/`
 
-`build-seo.yml`、`test-mendeley-api.yml`、`update-citation-histories.yml`、`update-crossref.yml`、`update-ga4-summary.yml`、`update-journals.yml`、`update-mendeley.yml`、`update-openalex-stats.yml`、`update-scholar.yml`、`update-unpaywall.yml`。
+`build-seo.yml`、`test-mendeley-api.yml`、`update-citation-histories.yml`、`update-crossref.yml`、`update-ga4-summary.yml`、`update-journals.yml`、`update-mendeley.yml`、`update-openalex-stats.yml`、`update-publication-authorships.yml`、`update-scholar.yml`、`update-unpaywall.yml`。
 
 ### `assets/`
 
@@ -329,6 +330,10 @@ flowchart TD
 ### `scripts/`
 
 `build_seo.py`、`validate_publications.py`、`export_ga4_summary.py`、`requirements.txt`、`test_mendeley_api.py`、`update_crossref_publications.py`、`update_google_scholar_citation_history.py`、`update_journals.py`、`update_mendeley.py`、`update_openalex_citation_history.py`、`update_openalex_publications.py`、`update_openalex_stats.py`、`update_scholar.py`、`update_unpaywall.py`，以及非必要 cache `__pycache__/update_openalex_publications.cpython-313.pyc`。
+
+### `tests/`
+
+`test_generated_publication_validation.py` 覆蓋 research-publication、thesis、affiliation、author-role 與未知 scholarly output type 的 generated-page regression cases。
 
 ### `publications/`
 
@@ -373,6 +378,7 @@ flowchart TD
 - `scripts/publication_scope.py` is the Python source of truth for analytics inclusion and automation protection. Browser analytics use the same `excludeFromResearchAnalytics !== true` predicate.
 - `scripts/build_seo.py` generates `publications/phd-thesis-2011.html` and `publications/ms-thesis-2005.html` from JSON. Thesis detail pages use Schema.org `CreativeWork`, include bilingual titles, abstracts and keywords plus degree metadata, and omit DOI, citation, OpenAlex, Crossref, Mendeley, journal metric and FWCI components.
 - Every generated scholarly-output detail page, including both thesis pages, renders known authors through the shared `author_html()` / `publication_authors_html()` path. The resulting `author-trigger` markup is activated by the existing `assets/js/app.js` `AuthorCards` implementation backed by `data/authors.json`; it is not type-specific.
+- `scripts/validate_publications.py` is also the generated-page validation source of truth used locally and by `update-publication-authorships.yml`. Research publications (`international-journal`, `chinese-journal`, and `conference`) require `publication-authors` plus applicable affiliation/equal-contributor/corresponding-author markup; theses instead require `thesis-detail`, static Basic Information facts, shared author-card markup, and `CreativeWork` JSON-LD. Unhandled types fail explicitly.
 - The same SEO build adds thesis URLs to `sitemap.xml` and `llms.txt` while preserving patent URLs and the marked patent section maintained by `scripts/build_patent_pages.py`.
 - Thesis records use `metadataSource: "manual_verified"` and `automationProtection.protected: true`. Scholar, OpenAlex, Crossref, Mendeley, Unpaywall and publication-authorship updaters must skip them and must not add a DOI or replace manually verified fields.
 - Academic Monitor duplicate detection uses DOI when present, otherwise normalized repository URL and normalized title/year/publication type. A DOI-less thesis already in `data/publications.json` must not recur as a candidate.

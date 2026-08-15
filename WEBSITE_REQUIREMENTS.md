@@ -57,6 +57,7 @@ Verified collection files in `data/` remain authoritative. Do not replace them w
 - `verified` means the structured fields are complete enough for automatic display and analytics; `partial` means one or more fields remain unknown; `manual` means a human-verified override is authoritative.
 - Records with conflicting or incomplete source data must use `requiresManualReview: true` and list the unresolved fields.
 - Generated HTML must be rebuilt from the authoritative JSON; individual files under `publications/` must not be edited manually.
+- Generated-page authorship validation is routed by `publicationType`: international journals, Chinese journals and conference papers require the research-publication author row and applicable affiliation/role legends, while theses require their static Basic Information author-card markup and `CreativeWork` structured data. Unsupported output types must fail validation explicitly rather than inherit another type's rules or be skipped.
 <!-- PUBLICATION_AUTHORSHIP_REQUIREMENTS_END -->
 
 ## Publication types and analytics scope — 3 August 2026
