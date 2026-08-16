@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-15T02:19:50Z",
+  "generatedAt": "2026-08-16T02:35:11Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 375,
-    "activeUsers": 55,
-    "sessions": 111,
-    "engagementRate": 0.5585585585585585
+    "pageViews": 391,
+    "activeUsers": 70,
+    "sessions": 126,
+    "engagementRate": 0.5079365079365079
   },
   "monthlyTrend": [
     {
@@ -19,22 +19,22 @@
     },
     {
       "month": "2026-08",
-      "pageViews": 62,
-      "activeUsers": 25
+      "pageViews": 78,
+      "activeUsers": 40
     }
   ],
   "topPages": [
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 79,
-      "activeUsers": 45
+      "pageViews": 80,
+      "activeUsers": 46
     },
     {
       "title": "Publications | Wei-Hao Chiu",
       "path": "/publications.html",
-      "pageViews": 75,
-      "activeUsers": 15
+      "pageViews": 76,
+      "activeUsers": 16
     },
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
@@ -57,14 +57,14 @@
     {
       "title": "Patents | Wei-Hao Chiu",
       "path": "/patents.html",
-      "pageViews": 29,
-      "activeUsers": 5
+      "pageViews": 30,
+      "activeUsers": 6
     },
     {
       "title": "About | Wei-Hao Chiu",
       "path": "/about.html",
-      "pageViews": 14,
-      "activeUsers": 5
+      "pageViews": 15,
+      "activeUsers": 6
     },
     {
       "title": "Reliability enhancement of PVDF-HFP modified perovskite solar cells under synergistic space-relevant stress conditions | Wei-Hao Chiu",
@@ -75,8 +75,8 @@
     {
       "title": "Research | Wei-Hao Chiu",
       "path": "/research.html",
-      "pageViews": 7,
-      "activeUsers": 3
+      "pageViews": 8,
+      "activeUsers": 4
     },
     {
       "title": "Heterogeneous graphite felt electrodes decorated with nanostructured graphitic carbon nitride for enhanced redox kinetics in vanadium redox flow batteries | Wei-Hao Chiu",
@@ -91,6 +91,12 @@
       "activeUsers": 2
     },
     {
+      "title": "Modified Spontaneous Emission in a Tightly Pumped Nd:YVO4 Laser with Degenerate Resonator | Wei-Hao Chiu",
+      "path": "/publications/ms-thesis-2005.html",
+      "pageViews": 5,
+      "activeUsers": 3
+    },
+    {
       "title": "Round-Robin Interlaboratory Comparison of Large-Area Organic Thin-Film and Perovskite Solar Cells | Wei-Hao Chiu",
       "path": "/publications/10-1002-solr-202500538.html",
       "pageViews": 4,
@@ -103,28 +109,27 @@
       "activeUsers": 2
     },
     {
-      "title": "Modified Spontaneous Emission in a Tightly Pumped Nd:YVO4 Laser with Degenerate Resonator | Wei-Hao Chiu",
-      "path": "/publications/ms-thesis-2005.html",
+      "title": "Study on Electron Transport Mechanism in Metal Oxide Photoanode Electrode for Dye-Sensitized Solar Cells | Wei-Hao Chiu",
+      "path": "/publications/phd-thesis-2011.html",
       "pageViews": 3,
-      "activeUsers": 1
-    },
-    {
-      "title": "Branched ZnO nanowires for enhancing energy conversion efficiency of dye-sensitized solar cells | Wei-Hao Chiu",
-      "path": "/publications/10-1557-proc-1121-n14-01.html",
-      "pageViews": 2,
-      "activeUsers": 1
+      "activeUsers": 3
     }
   ],
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 63,
-      "activeUsers": 48
+      "sessions": 78,
+      "activeUsers": 63
     },
     {
       "channel": "Organic Search",
       "sessions": 47,
       "activeUsers": 7
+    },
+    {
+      "channel": "Unassigned",
+      "sessions": 5,
+      "activeUsers": 5
     },
     {
       "channel": "Referral",
@@ -136,14 +141,20 @@
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 63,
-      "activeUsers": 48
+      "sessions": 78,
+      "activeUsers": 63
     },
     {
       "source": "google",
       "medium": "organic",
       "sessions": 44,
       "activeUsers": 4
+    },
+    {
+      "source": "(not set)",
+      "medium": "(not set)",
+      "sessions": 5,
+      "activeUsers": 5
     },
     {
       "source": "bing",
@@ -166,8 +177,13 @@
     },
     {
       "country": "Taiwan",
-      "activeUsers": 17,
-      "pageViews": 323
+      "activeUsers": 18,
+      "pageViews": 325
+    },
+    {
+      "country": "China",
+      "activeUsers": 16,
+      "pageViews": 16
     },
     {
       "country": "Germany",
@@ -176,11 +192,6 @@
     },
     {
       "country": "(not set)",
-      "activeUsers": 2,
-      "pageViews": 2
-    },
-    {
-      "country": "China",
       "activeUsers": 2,
       "pageViews": 2
     },
@@ -208,7 +219,7 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 42
+      "activeUsers": 57
     },
     {
       "device": "mobile",
