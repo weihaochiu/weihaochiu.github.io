@@ -5,7 +5,7 @@
   "publicationCount": 40,
   "verifiedCount": 38,
   "notFoundCount": 2,
-  "lastSuccessfulUpdate": "2026-08-15T03:07:06Z",
+  "lastSuccessfulUpdate": "2026-08-16T03:14:46Z",
   "records": {
     "10.1016/j.cej.2026.177494": {
       "status": "verified",
@@ -15,7 +15,7 @@
       "url": "https://openalex.org/W7161569160",
       "citationCount": 0,
       "fwci": 0.0,
-      "citationPercentile": 0.4307535,
+      "citationPercentile": 0.42699946,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-08-13T07:04:57.449891"
@@ -28,7 +28,7 @@
       "url": "https://openalex.org/W7168190148",
       "citationCount": 0,
       "fwci": 0.0,
-      "citationPercentile": 0.68310324,
+      "citationPercentile": 0.67789254,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-08-13T07:04:57.449891"
@@ -209,11 +209,11 @@
       "openAlexId": "W4385773304",
       "url": "https://openalex.org/W4385773304",
       "citationCount": 10,
-      "fwci": 0.813,
-      "citationPercentile": 0.6807611,
+      "fwci": 0.8122,
+      "citationPercentile": 0.68049212,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-08-12T07:12:00.856984"
+      "openAlexUpdatedDate": "2026-08-15T07:11:24.734988"
     },
     "10.1002/asia.202300681": {
       "status": "verified",
