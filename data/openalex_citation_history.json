@@ -2,12 +2,12 @@
   "schemaVersion": 3,
   "source": "OpenAlex Works API",
   "status": "success_with_exclusions",
-  "lastSuccessfulUpdate": "2026-08-10T05:22:44.661769Z",
+  "lastSuccessfulUpdate": "2026-08-17T04:36:39.796842Z",
   "workCount": 38,
   "missingPublicationYearCount": 0,
-  "totalCitationsFromPublicationMetrics": 990,
-  "rawTotalCitationsFromHistory": 990,
-  "totalCitationsIncludedInAnnualChart": 984,
+  "totalCitationsFromPublicationMetrics": 991,
+  "rawTotalCitationsFromHistory": 991,
+  "totalCitationsIncludedInAnnualChart": 985,
   "rawValidationDifference": 0,
   "unassignedCitationCount": 0,
   "excludedInvalidCitationCount": 6,
@@ -137,7 +137,7 @@
     },
     {
       "year": 2026,
-      "citations": 55
+      "citations": 56
     }
   ],
   "works": {
@@ -13797,7 +13797,7 @@
           "volume": "55",
           "issue": "11",
           "pages": "1013-1034",
-          "type": "book-chapter"
+          "type": "article"
         },
         {
           "openAlexId": "W2793044490",
@@ -15894,7 +15894,7 @@
             "Yen‐Yu Wang",
             "Rohan Paste",
             "Atul Dhage",
-            "Yu-Te Chen",
+            "Yu‐Te Chen",
             "Mario Hofmann",
             "Yu‐Jung Lu",
             "Chung Hsin Lu",
@@ -17298,7 +17298,7 @@
           "volume": "57",
           "issue": "1",
           "pages": "",
-          "type": "book-chapter"
+          "type": "article"
         },
         {
           "openAlexId": "W4402183735",
@@ -18337,7 +18337,7 @@
           "doiUrl": "https://doi.org/10.1016/j.jsamd.2026.101131",
           "title": "Strategies to improve the performance of perovskite solar cells with Spiro-OMeTAD as HTM: A comprehensive review",
           "authors": [
-            "Van-Quy Hoang",
+            "Van‐Quy Hoang",
             "Naveen Kumar",
             "Vo Pham Hoang Huy",
             "Khanh Le-Minh",
@@ -18397,7 +18397,7 @@
             "Shang‐Gen Yang",
             "Jian Chen",
             "Dian Wang",
-            "Jun‐Jie Zhang",
+            "J. Z. Zhang",
             "Zu‐Kun Zhou",
             "Jing Xiao",
             "Li Jiang",
@@ -19149,7 +19149,7 @@
             "Jen-Fu Hsu",
             "Gao Chen",
             "Ching‐Yuan Liu",
-            "Kun-Mu Lee"
+            "Kun‐Mu Lee"
           ],
           "journal": "Solar Energy",
           "publicationYear": 2026,
@@ -20599,7 +20599,7 @@
           "authors": [
             "BHIM RAJU TELUGU",
             "Motonori Watanabe",
-            "Zhanglin Guo",
+            "Guoying Wei",
             "Pangpang Wang",
             "Sunao Yamada",
             "Mengde Zhai",
@@ -20621,7 +20621,7 @@
           "authors": [
             "BHIM RAJU TELUGU",
             "Hanbo Jung",
-            "Zhanglin Guo",
+            "Guoying Wei",
             "Toshinori Matsushima"
           ],
           "journal": "Physical Chemistry Chemical Physics",
@@ -20941,7 +20941,7 @@
             "Shang‐Gen Yang",
             "Jian Chen",
             "Dian Wang",
-            "Jun‐Jie Zhang",
+            "J. Z. Zhang",
             "Zu‐Kun Zhou",
             "Jing Xiao",
             "Li Jiang",
@@ -20972,7 +20972,7 @@
           "authors": [
             "BHIM RAJU TELUGU",
             "Motonori Watanabe",
-            "Zhanglin Guo",
+            "Guoying Wei",
             "Pangpang Wang",
             "Sunao Yamada",
             "Mengde Zhai",
@@ -20994,7 +20994,7 @@
           "authors": [
             "BHIM RAJU TELUGU",
             "Hanbo Jung",
-            "Zhanglin Guo",
+            "Guoying Wei",
             "Toshinori Matsushima"
           ],
           "journal": "Physical Chemistry Chemical Physics",
@@ -21293,7 +21293,7 @@
           "doiUrl": "https://doi.org/10.1016/j.jsamd.2026.101131",
           "title": "Strategies to improve the performance of perovskite solar cells with Spiro-OMeTAD as HTM: A comprehensive review",
           "authors": [
-            "Van-Quy Hoang",
+            "Van‐Quy Hoang",
             "Naveen Kumar",
             "Vo Pham Hoang Huy",
             "Khanh Le-Minh",
@@ -21484,7 +21484,7 @@
       "doi": "10.1016/j.mtchem.2024.102329",
       "title": "Exploring the efficiency enhancement of perovskite solar cells by chemical bath depositing SnO2 on mesoporous TiO2 electrode",
       "publicationYear": 2024,
-      "currentCitationCount": 8,
+      "currentCitationCount": 9,
       "sourceUrl": "https://api.openalex.org/works?filter=cites:W4402883453",
       "citationsByYear": [
         {
@@ -21493,7 +21493,7 @@
         },
         {
           "year": 2026,
-          "citations": 2
+          "citations": 3
         }
       ],
       "rawCitationsByYear": [
@@ -21503,17 +21503,37 @@
         },
         {
           "year": 2026,
-          "citations": 2
+          "citations": 3
         }
       ],
-      "historyTotal": 8,
-      "rawHistoryTotal": 8,
+      "historyTotal": 9,
+      "rawHistoryTotal": 9,
       "excludedInvalidCitationCount": 0,
       "excludedInvalidCitations": [],
       "unassignedCitationCount": 0,
-      "citingWorkCount": 8,
-      "citingArticlesWithDoiCount": 8,
+      "citingWorkCount": 9,
+      "citingArticlesWithDoiCount": 9,
       "citingArticlesWithDoi": [
+        {
+          "openAlexId": "W7202202975",
+          "doi": "10.1021/acs.langmuir.6c03740",
+          "doiUrl": "https://doi.org/10.1021/acs.langmuir.6c03740",
+          "title": "Physical-ChemicalSynergistic Interface Engineeringvia Mesoporous SnO2/Thiophene-Graphdiyne Heterostructurein Perovskite Solar Cells",
+          "authors": [
+            "Yutongyang Fu",
+            "Le Liu",
+            "Zhibin Yu",
+            "Yilin Chang",
+            "Tonggang Jiu"
+          ],
+          "journal": "Langmuir",
+          "publicationYear": 2026,
+          "publicationDate": "2026-08-11",
+          "volume": "",
+          "issue": "",
+          "pages": "",
+          "type": "article"
+        },
         {
           "openAlexId": "W7156905916",
           "doi": "10.1007/s10854-026-17282-0",
@@ -21782,7 +21802,7 @@
             "Shang‐Gen Yang",
             "Jian Chen",
             "Dian Wang",
-            "Jun‐Jie Zhang",
+            "J. Z. Zhang",
             "Zu‐Kun Zhou",
             "Jing Xiao",
             "Li Jiang",
@@ -21813,7 +21833,7 @@
           "authors": [
             "BHIM RAJU TELUGU",
             "Motonori Watanabe",
-            "Zhanglin Guo",
+            "Guoying Wei",
             "Pangpang Wang",
             "Sunao Yamada",
             "Mengde Zhai",
