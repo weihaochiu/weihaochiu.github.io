@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-16T02:35:11Z",
+  "generatedAt": "2026-08-17T02:34:33Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 391,
-    "activeUsers": 70,
-    "sessions": 126,
-    "engagementRate": 0.5079365079365079
+    "pageViews": 381,
+    "activeUsers": 68,
+    "sessions": 122,
+    "engagementRate": 0.5245901639344263
   },
   "monthlyTrend": [
     {
@@ -19,28 +19,28 @@
     },
     {
       "month": "2026-08",
-      "pageViews": 78,
-      "activeUsers": 40
+      "pageViews": 79,
+      "activeUsers": 41
     }
   ],
   "topPages": [
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 80,
-      "activeUsers": 46
+      "pageViews": 77,
+      "activeUsers": 43
     },
     {
       "title": "Publications | Wei-Hao Chiu",
       "path": "/publications.html",
-      "pageViews": 76,
-      "activeUsers": 16
+      "pageViews": 71,
+      "activeUsers": 15
     },
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/index.html",
-      "pageViews": 50,
-      "activeUsers": 3
+      "pageViews": 51,
+      "activeUsers": 4
     },
     {
       "title": "2T Perovskite Tandem Solar Cells in Space: Failure Mechanisms and Design Strategies | Wei-Hao Chiu",
@@ -67,16 +67,16 @@
       "activeUsers": 6
     },
     {
-      "title": "Reliability enhancement of PVDF-HFP modified perovskite solar cells under synergistic space-relevant stress conditions | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-cej-2026-177494.html",
-      "pageViews": 9,
-      "activeUsers": 3
-    },
-    {
       "title": "Research | Wei-Hao Chiu",
       "path": "/research.html",
       "pageViews": 8,
       "activeUsers": 4
+    },
+    {
+      "title": "Reliability enhancement of PVDF-HFP modified perovskite solar cells under synergistic space-relevant stress conditions | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-cej-2026-177494.html",
+      "pageViews": 7,
+      "activeUsers": 2
     },
     {
       "title": "Heterogeneous graphite felt electrodes decorated with nanostructured graphitic carbon nitride for enhanced redox kinetics in vanadium redox flow batteries | Wei-Hao Chiu",
@@ -118,18 +118,13 @@
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 78,
-      "activeUsers": 63
+      "sessions": 74,
+      "activeUsers": 61
     },
     {
       "channel": "Organic Search",
       "sessions": 47,
       "activeUsers": 7
-    },
-    {
-      "channel": "Unassigned",
-      "sessions": 5,
-      "activeUsers": 5
     },
     {
       "channel": "Referral",
@@ -141,20 +136,14 @@
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 78,
-      "activeUsers": 63
+      "sessions": 74,
+      "activeUsers": 61
     },
     {
       "source": "google",
       "medium": "organic",
       "sessions": 44,
       "activeUsers": 4
-    },
-    {
-      "source": "(not set)",
-      "medium": "(not set)",
-      "sessions": 5,
-      "activeUsers": 5
     },
     {
       "source": "bing",
@@ -176,24 +165,19 @@
       "pageViews": 27
     },
     {
-      "country": "Taiwan",
-      "activeUsers": 18,
-      "pageViews": 325
+      "country": "China",
+      "activeUsers": 17,
+      "pageViews": 17
     },
     {
-      "country": "China",
-      "activeUsers": 16,
-      "pageViews": 16
+      "country": "Taiwan",
+      "activeUsers": 17,
+      "pageViews": 316
     },
     {
       "country": "Germany",
       "activeUsers": 3,
       "pageViews": 3
-    },
-    {
-      "country": "(not set)",
-      "activeUsers": 2,
-      "pageViews": 2
     },
     {
       "country": "India",
@@ -223,7 +207,7 @@
     },
     {
       "device": "mobile",
-      "activeUsers": 13
+      "activeUsers": 11
     }
   ],
   "academicEvents": [
@@ -233,7 +217,7 @@
     },
     {
       "eventName": "doi_click",
-      "eventCount": 18
+      "eventCount": 16
     },
     {
       "eventName": "orcid_click",
