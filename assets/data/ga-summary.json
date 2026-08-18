@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-17T02:34:33Z",
+  "generatedAt": "2026-08-18T02:29:36Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 381,
-    "activeUsers": 68,
-    "sessions": 122,
-    "engagementRate": 0.5245901639344263
+    "pageViews": 342,
+    "activeUsers": 69,
+    "sessions": 123,
+    "engagementRate": 0.5121951219512195
   },
   "monthlyTrend": [
     {
@@ -19,34 +19,28 @@
     },
     {
       "month": "2026-08",
-      "pageViews": 79,
-      "activeUsers": 41
+      "pageViews": 83,
+      "activeUsers": 42
     }
   ],
   "topPages": [
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 77,
+      "pageViews": 76,
       "activeUsers": 43
     },
     {
       "title": "Publications | Wei-Hao Chiu",
       "path": "/publications.html",
-      "pageViews": 71,
+      "pageViews": 69,
       "activeUsers": 15
     },
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/index.html",
-      "pageViews": 51,
+      "pageViews": 50,
       "activeUsers": 4
-    },
-    {
-      "title": "2T Perovskite Tandem Solar Cells in Space: Failure Mechanisms and Design Strategies | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-mtener-2026-102359.html",
-      "pageViews": 37,
-      "activeUsers": 3
     },
     {
       "title": "Research Projects | Wei-Hao Chiu",
@@ -69,14 +63,8 @@
     {
       "title": "Research | Wei-Hao Chiu",
       "path": "/research.html",
-      "pageViews": 8,
-      "activeUsers": 4
-    },
-    {
-      "title": "Reliability enhancement of PVDF-HFP modified perovskite solar cells under synergistic space-relevant stress conditions | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-cej-2026-177494.html",
-      "pageViews": 7,
-      "activeUsers": 2
+      "pageViews": 12,
+      "activeUsers": 5
     },
     {
       "title": "Heterogeneous graphite felt electrodes decorated with nanostructured graphitic carbon nitride for enhanced redox kinetics in vanadium redox flow batteries | Wei-Hao Chiu",
@@ -85,15 +73,21 @@
       "activeUsers": 3
     },
     {
-      "title": "MOF-& COF-integrated composite separators/membranes: innovations for sustainable and high-performance redox flow batteries | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-seppur-2025-134157.html",
+      "title": "Modified Spontaneous Emission in a Tightly Pumped Nd:YVO4 Laser with Degenerate Resonator | Wei-Hao Chiu",
+      "path": "/publications/ms-thesis-2005.html",
+      "pageViews": 5,
+      "activeUsers": 3
+    },
+    {
+      "title": "Reliability enhancement of PVDF-HFP modified perovskite solar cells under synergistic space-relevant stress conditions | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-cej-2026-177494.html",
       "pageViews": 5,
       "activeUsers": 2
     },
     {
-      "title": "Modified Spontaneous Emission in a Tightly Pumped Nd:YVO4 Laser with Degenerate Resonator | Wei-Hao Chiu",
-      "path": "/publications/ms-thesis-2005.html",
-      "pageViews": 5,
+      "title": "2T Perovskite Tandem Solar Cells in Space: Failure Mechanisms and Design Strategies | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-mtener-2026-102359.html",
+      "pageViews": 4,
       "activeUsers": 3
     },
     {
@@ -109,6 +103,12 @@
       "activeUsers": 2
     },
     {
+      "title": "MOF-& COF-integrated composite separators/membranes: innovations for sustainable and high-performance redox flow batteries | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-seppur-2025-134157.html",
+      "pageViews": 3,
+      "activeUsers": 2
+    },
+    {
       "title": "Study on Electron Transport Mechanism in Metal Oxide Photoanode Electrode for Dye-Sensitized Solar Cells | Wei-Hao Chiu",
       "path": "/publications/phd-thesis-2011.html",
       "pageViews": 3,
@@ -118,13 +118,18 @@
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 74,
+      "sessions": 73,
       "activeUsers": 61
     },
     {
       "channel": "Organic Search",
-      "sessions": 47,
-      "activeUsers": 7
+      "sessions": 49,
+      "activeUsers": 8
+    },
+    {
+      "channel": "Unassigned",
+      "sessions": 2,
+      "activeUsers": 1
     },
     {
       "channel": "Referral",
@@ -136,20 +141,26 @@
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 74,
+      "sessions": 73,
       "activeUsers": 61
     },
     {
       "source": "google",
       "medium": "organic",
-      "sessions": 44,
-      "activeUsers": 4
+      "sessions": 46,
+      "activeUsers": 5
     },
     {
       "source": "bing",
       "medium": "organic",
       "sessions": 3,
       "activeUsers": 3
+    },
+    {
+      "source": "(not set)",
+      "medium": "(not set)",
+      "sessions": 2,
+      "activeUsers": 1
     },
     {
       "source": "cgu.edu.tw",
@@ -172,7 +183,7 @@
     {
       "country": "Taiwan",
       "activeUsers": 17,
-      "pageViews": 316
+      "pageViews": 273
     },
     {
       "country": "Germany",
@@ -181,8 +192,8 @@
     },
     {
       "country": "India",
-      "activeUsers": 2,
-      "pageViews": 13
+      "activeUsers": 3,
+      "pageViews": 17
     },
     {
       "country": "Pakistan",
@@ -203,7 +214,7 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 57
+      "activeUsers": 58
     },
     {
       "device": "mobile",
