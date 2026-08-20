@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-19T02:32:21Z",
+  "generatedAt": "2026-08-20T02:31:02Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 299,
-    "activeUsers": 68,
-    "sessions": 127,
-    "engagementRate": 0.48031496062992124
+    "pageViews": 242,
+    "activeUsers": 56,
+    "sessions": 113,
+    "engagementRate": 0.49557522123893805
   },
   "monthlyTrend": [
     {
@@ -19,58 +19,52 @@
     },
     {
       "month": "2026-08",
-      "pageViews": 96,
-      "activeUsers": 42
+      "pageViews": 102,
+      "activeUsers": 44
     }
   ],
   "topPages": [
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 78,
-      "activeUsers": 43
+      "pageViews": 67,
+      "activeUsers": 34
     },
     {
       "title": "Publications | Wei-Hao Chiu",
       "path": "/publications.html",
-      "pageViews": 59,
-      "activeUsers": 13
+      "pageViews": 48,
+      "activeUsers": 9
     },
     {
       "title": "Research Projects | Wei-Hao Chiu",
       "path": "/projects.html",
-      "pageViews": 31,
-      "activeUsers": 7
+      "pageViews": 29,
+      "activeUsers": 6
     },
     {
       "title": "Patents | Wei-Hao Chiu",
       "path": "/patents.html",
-      "pageViews": 29,
-      "activeUsers": 5
+      "pageViews": 24,
+      "activeUsers": 4
     },
     {
       "title": "Research | Wei-Hao Chiu",
       "path": "/research.html",
-      "pageViews": 20,
-      "activeUsers": 5
-    },
-    {
-      "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
-      "path": "/index.html",
       "pageViews": 17,
       "activeUsers": 4
     },
     {
-      "title": "About | Wei-Hao Chiu",
-      "path": "/about.html",
-      "pageViews": 10,
-      "activeUsers": 6
+      "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
+      "path": "/index.html",
+      "pageViews": 8,
+      "activeUsers": 3
     },
     {
-      "title": "Heterogeneous graphite felt electrodes decorated with nanostructured graphitic carbon nitride for enhanced redox kinetics in vanadium redox flow batteries | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-jpowsour-2025-239216.html",
-      "pageViews": 6,
-      "activeUsers": 3
+      "title": "About | Wei-Hao Chiu",
+      "path": "/about.html",
+      "pageViews": 7,
+      "activeUsers": 5
     },
     {
       "title": "Modified Spontaneous Emission in a Tightly Pumped Nd:YVO4 Laser with Degenerate Resonator | Wei-Hao Chiu",
@@ -79,28 +73,16 @@
       "activeUsers": 3
     },
     {
+      "title": "Heterogeneous graphite felt electrodes decorated with nanostructured graphitic carbon nitride for enhanced redox kinetics in vanadium redox flow batteries | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-jpowsour-2025-239216.html",
+      "pageViews": 4,
+      "activeUsers": 2
+    },
+    {
       "title": "Reliability enhancement of PVDF-HFP modified perovskite solar cells under synergistic space-relevant stress conditions | Wei-Hao Chiu",
       "path": "/publications/10-1016-j-cej-2026-177494.html",
       "pageViews": 4,
-      "activeUsers": 2
-    },
-    {
-      "title": "Round-Robin Interlaboratory Comparison of Large-Area Organic Thin-Film and Perovskite Solar Cells | Wei-Hao Chiu",
-      "path": "/publications/10-1002-solr-202500538.html",
-      "pageViews": 4,
-      "activeUsers": 2
-    },
-    {
-      "title": "Impact of proton radiation on the performance of single-junction perovskite solar cells for space applications | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-solmat-2025-114015.html",
-      "pageViews": 3,
-      "activeUsers": 2
-    },
-    {
-      "title": "MOF-& COF-integrated composite separators/membranes: innovations for sustainable and high-performance redox flow batteries | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-seppur-2025-134157.html",
-      "pageViews": 3,
-      "activeUsers": 2
+      "activeUsers": 1
     },
     {
       "title": "Study on Electron Transport Mechanism in Metal Oxide Photoanode Electrode for Dye-Sensitized Solar Cells | Wei-Hao Chiu",
@@ -113,18 +95,36 @@
       "path": "/publications/10-1557-proc-1121-n14-01.html",
       "pageViews": 2,
       "activeUsers": 1
+    },
+    {
+      "title": "Exploring the efficiency enhancement of perovskite solar cells by chemical bath depositing SnO2 on mesoporous TiO2 electrode | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-mtchem-2024-102329.html",
+      "pageViews": 2,
+      "activeUsers": 1
+    },
+    {
+      "title": "Impact of proton radiation on the performance of single-junction perovskite solar cells for space applications | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-solmat-2025-114015.html",
+      "pageViews": 2,
+      "activeUsers": 1
+    },
+    {
+      "title": "Solar Cell Module Having Groove Structure and Manufacturing Method Thereof | Wei-Hao Chiu",
+      "path": "/patents/twi851990b.html",
+      "pageViews": 2,
+      "activeUsers": 2
     }
   ],
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 69,
-      "activeUsers": 60
+      "sessions": 57,
+      "activeUsers": 49
     },
     {
       "channel": "Organic Search",
-      "sessions": 57,
-      "activeUsers": 7
+      "sessions": 55,
+      "activeUsers": 6
     },
     {
       "channel": "Unassigned",
@@ -141,14 +141,14 @@
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 69,
-      "activeUsers": 60
+      "sessions": 57,
+      "activeUsers": 49
     },
     {
       "source": "google",
       "medium": "organic",
-      "sessions": 54,
-      "activeUsers": 4
+      "sessions": 52,
+      "activeUsers": 3
     },
     {
       "source": "bing",
@@ -172,8 +172,8 @@
   "topCountries": [
     {
       "country": "United States",
-      "activeUsers": 24,
-      "pageViews": 27
+      "activeUsers": 18,
+      "pageViews": 19
     },
     {
       "country": "China",
@@ -182,18 +182,13 @@
     },
     {
       "country": "Taiwan",
-      "activeUsers": 16,
-      "pageViews": 221
-    },
-    {
-      "country": "Germany",
-      "activeUsers": 3,
-      "pageViews": 3
+      "activeUsers": 13,
+      "pageViews": 175
     },
     {
       "country": "India",
-      "activeUsers": 3,
-      "pageViews": 26
+      "activeUsers": 2,
+      "pageViews": 25
     },
     {
       "country": "Pakistan",
@@ -206,6 +201,11 @@
       "pageViews": 2
     },
     {
+      "country": "Germany",
+      "activeUsers": 1,
+      "pageViews": 1
+    },
+    {
       "country": "Hong Kong",
       "activeUsers": 1,
       "pageViews": 1
@@ -214,21 +214,17 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 58
+      "activeUsers": 50
     },
     {
       "device": "mobile",
-      "activeUsers": 10
+      "activeUsers": 6
     }
   ],
   "academicEvents": [
     {
       "eventName": "patent_click",
-      "eventCount": 19
-    },
-    {
-      "eventName": "doi_click",
-      "eventCount": 16
+      "eventCount": 14
     },
     {
       "eventName": "orcid_click",
@@ -239,8 +235,12 @@
       "eventCount": 9
     },
     {
-      "eventName": "openalex_click",
+      "eventName": "doi_click",
       "eventCount": 7
+    },
+    {
+      "eventName": "openalex_click",
+      "eventCount": 6
     },
     {
       "eventName": "crossref_click",
