@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-20T02:31:02Z",
+  "generatedAt": "2026-08-21T02:37:13Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 242,
-    "activeUsers": 56,
-    "sessions": 113,
-    "engagementRate": 0.49557522123893805
+    "pageViews": 204,
+    "activeUsers": 55,
+    "sessions": 101,
+    "engagementRate": 0.46534653465346537
   },
   "monthlyTrend": [
     {
@@ -19,28 +19,28 @@
     },
     {
       "month": "2026-08",
-      "pageViews": 102,
-      "activeUsers": 44
+      "pageViews": 104,
+      "activeUsers": 45
     }
   ],
   "topPages": [
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 67,
-      "activeUsers": 34
-    },
-    {
-      "title": "Publications | Wei-Hao Chiu",
-      "path": "/publications.html",
-      "pageViews": 48,
-      "activeUsers": 9
+      "pageViews": 60,
+      "activeUsers": 32
     },
     {
       "title": "Research Projects | Wei-Hao Chiu",
       "path": "/projects.html",
-      "pageViews": 29,
-      "activeUsers": 6
+      "pageViews": 27,
+      "activeUsers": 5
+    },
+    {
+      "title": "Publications | Wei-Hao Chiu",
+      "path": "/publications.html",
+      "pageViews": 26,
+      "activeUsers": 8
     },
     {
       "title": "Patents | Wei-Hao Chiu",
@@ -55,16 +55,16 @@
       "activeUsers": 4
     },
     {
-      "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
-      "path": "/index.html",
-      "pageViews": 8,
-      "activeUsers": 3
-    },
-    {
       "title": "About | Wei-Hao Chiu",
       "path": "/about.html",
       "pageViews": 7,
-      "activeUsers": 5
+      "activeUsers": 4
+    },
+    {
+      "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
+      "path": "/index.html",
+      "pageViews": 6,
+      "activeUsers": 3
     },
     {
       "title": "Modified Spontaneous Emission in a Tightly Pumped Nd:YVO4 Laser with Degenerate Resonator | Wei-Hao Chiu",
@@ -73,15 +73,9 @@
       "activeUsers": 3
     },
     {
-      "title": "Heterogeneous graphite felt electrodes decorated with nanostructured graphitic carbon nitride for enhanced redox kinetics in vanadium redox flow batteries | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-jpowsour-2025-239216.html",
-      "pageViews": 4,
-      "activeUsers": 2
-    },
-    {
       "title": "Reliability enhancement of PVDF-HFP modified perovskite solar cells under synergistic space-relevant stress conditions | Wei-Hao Chiu",
       "path": "/publications/10-1016-j-cej-2026-177494.html",
-      "pageViews": 4,
+      "pageViews": 3,
       "activeUsers": 1
     },
     {
@@ -97,8 +91,14 @@
       "activeUsers": 1
     },
     {
-      "title": "Exploring the efficiency enhancement of perovskite solar cells by chemical bath depositing SnO2 on mesoporous TiO2 electrode | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-mtchem-2024-102329.html",
+      "title": "Dye-Sensitized Solar Cell | Wei-Hao Chiu",
+      "path": "/patents/twi449190b.html",
+      "pageViews": 2,
+      "activeUsers": 2
+    },
+    {
+      "title": "Heterogeneous graphite felt electrodes decorated with nanostructured graphitic carbon nitride for enhanced redox kinetics in vanadium redox flow batteries | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-jpowsour-2025-239216.html",
       "pageViews": 2,
       "activeUsers": 1
     },
@@ -118,18 +118,13 @@
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 57,
-      "activeUsers": 49
+      "sessions": 52,
+      "activeUsers": 48
     },
     {
       "channel": "Organic Search",
-      "sessions": 55,
+      "sessions": 48,
       "activeUsers": 6
-    },
-    {
-      "channel": "Unassigned",
-      "sessions": 2,
-      "activeUsers": 1
     },
     {
       "channel": "Referral",
@@ -141,13 +136,13 @@
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 57,
-      "activeUsers": 49
+      "sessions": 52,
+      "activeUsers": 48
     },
     {
       "source": "google",
       "medium": "organic",
-      "sessions": 52,
+      "sessions": 45,
       "activeUsers": 3
     },
     {
@@ -155,12 +150,6 @@
       "medium": "organic",
       "sessions": 3,
       "activeUsers": 3
-    },
-    {
-      "source": "(not set)",
-      "medium": "(not set)",
-      "sessions": 2,
-      "activeUsers": 1
     },
     {
       "source": "cgu.edu.tw",
@@ -171,19 +160,19 @@
   ],
   "topCountries": [
     {
+      "country": "China",
+      "activeUsers": 18,
+      "pageViews": 18
+    },
+    {
       "country": "United States",
       "activeUsers": 18,
       "pageViews": 19
     },
     {
-      "country": "China",
-      "activeUsers": 17,
-      "pageViews": 17
-    },
-    {
       "country": "Taiwan",
-      "activeUsers": 13,
-      "pageViews": 175
+      "activeUsers": 12,
+      "pageViews": 137
     },
     {
       "country": "India",
@@ -204,17 +193,12 @@
       "country": "Germany",
       "activeUsers": 1,
       "pageViews": 1
-    },
-    {
-      "country": "Hong Kong",
-      "activeUsers": 1,
-      "pageViews": 1
     }
   ],
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 50
+      "activeUsers": 49
     },
     {
       "device": "mobile",
@@ -227,27 +211,23 @@
       "eventCount": 14
     },
     {
-      "eventName": "orcid_click",
-      "eventCount": 12
-    },
-    {
-      "eventName": "scholar_click",
-      "eventCount": 9
-    },
-    {
       "eventName": "doi_click",
-      "eventCount": 7
-    },
-    {
-      "eventName": "openalex_click",
       "eventCount": 6
     },
     {
-      "eventName": "crossref_click",
-      "eventCount": 5
+      "eventName": "orcid_click",
+      "eventCount": 3
     },
     {
       "eventName": "email_click",
+      "eventCount": 2
+    },
+    {
+      "eventName": "openalex_click",
+      "eventCount": 2
+    },
+    {
+      "eventName": "scholar_click",
       "eventCount": 2
     },
     {
