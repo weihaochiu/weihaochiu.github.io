@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-21T02:37:13Z",
+  "generatedAt": "2026-08-22T02:29:13Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 204,
-    "activeUsers": 55,
-    "sessions": 101,
-    "engagementRate": 0.46534653465346537
+    "pageViews": 194,
+    "activeUsers": 53,
+    "sessions": 102,
+    "engagementRate": 0.45098039215686275
   },
   "monthlyTrend": [
     {
@@ -19,7 +19,7 @@
     },
     {
       "month": "2026-08",
-      "pageViews": 104,
+      "pageViews": 116,
       "activeUsers": 45
     }
   ],
@@ -27,14 +27,8 @@
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 60,
-      "activeUsers": 32
-    },
-    {
-      "title": "Research Projects | Wei-Hao Chiu",
-      "path": "/projects.html",
-      "pageViews": 27,
-      "activeUsers": 5
+      "pageViews": 58,
+      "activeUsers": 30
     },
     {
       "title": "Publications | Wei-Hao Chiu",
@@ -51,7 +45,13 @@
     {
       "title": "Research | Wei-Hao Chiu",
       "path": "/research.html",
-      "pageViews": 17,
+      "pageViews": 22,
+      "activeUsers": 5
+    },
+    {
+      "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
+      "path": "/index.html",
+      "pageViews": 11,
       "activeUsers": 4
     },
     {
@@ -61,9 +61,9 @@
       "activeUsers": 4
     },
     {
-      "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
-      "path": "/index.html",
-      "pageViews": 6,
+      "title": "Research Projects | Wei-Hao Chiu",
+      "path": "/projects.html",
+      "pageViews": 7,
       "activeUsers": 3
     },
     {
@@ -71,6 +71,12 @@
       "path": "/publications/ms-thesis-2005.html",
       "pageViews": 5,
       "activeUsers": 3
+    },
+    {
+      "title": "MOF-& COF-integrated composite separators/membranes: innovations for sustainable and high-performance redox flow batteries | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-seppur-2025-134157.html",
+      "pageViews": 3,
+      "activeUsers": 1
     },
     {
       "title": "Reliability enhancement of PVDF-HFP modified perovskite solar cells under synergistic space-relevant stress conditions | Wei-Hao Chiu",
@@ -107,24 +113,23 @@
       "path": "/publications/10-1016-j-solmat-2025-114015.html",
       "pageViews": 2,
       "activeUsers": 1
-    },
-    {
-      "title": "Solar Cell Module Having Groove Structure and Manufacturing Method Thereof | Wei-Hao Chiu",
-      "path": "/patents/twi851990b.html",
-      "pageViews": 2,
-      "activeUsers": 2
     }
   ],
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 52,
-      "activeUsers": 48
+      "sessions": 51,
+      "activeUsers": 46
     },
     {
       "channel": "Organic Search",
-      "sessions": 48,
+      "sessions": 50,
       "activeUsers": 6
+    },
+    {
+      "channel": "Unassigned",
+      "sessions": 2,
+      "activeUsers": 2
     },
     {
       "channel": "Referral",
@@ -136,13 +141,13 @@
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 52,
-      "activeUsers": 48
+      "sessions": 51,
+      "activeUsers": 46
     },
     {
       "source": "google",
       "medium": "organic",
-      "sessions": 45,
+      "sessions": 47,
       "activeUsers": 3
     },
     {
@@ -150,6 +155,12 @@
       "medium": "organic",
       "sessions": 3,
       "activeUsers": 3
+    },
+    {
+      "source": "(not set)",
+      "medium": "(not set)",
+      "sessions": 2,
+      "activeUsers": 2
     },
     {
       "source": "cgu.edu.tw",
@@ -171,8 +182,8 @@
     },
     {
       "country": "Taiwan",
-      "activeUsers": 12,
-      "pageViews": 137
+      "activeUsers": 10,
+      "pageViews": 127
     },
     {
       "country": "India",
@@ -198,7 +209,7 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 49
+      "activeUsers": 47
     },
     {
       "device": "mobile",
