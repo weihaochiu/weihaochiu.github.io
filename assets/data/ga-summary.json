@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-22T02:29:13Z",
+  "generatedAt": "2026-08-23T02:37:37Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
     "pageViews": 194,
-    "activeUsers": 53,
-    "sessions": 102,
-    "engagementRate": 0.45098039215686275
+    "activeUsers": 52,
+    "sessions": 100,
+    "engagementRate": 0.48
   },
   "monthlyTrend": [
     {
@@ -19,34 +19,34 @@
     },
     {
       "month": "2026-08",
-      "pageViews": 116,
-      "activeUsers": 45
+      "pageViews": 119,
+      "activeUsers": 46
     }
   ],
   "topPages": [
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 58,
-      "activeUsers": 30
+      "pageViews": 56,
+      "activeUsers": 29
     },
     {
       "title": "Publications | Wei-Hao Chiu",
       "path": "/publications.html",
-      "pageViews": 26,
-      "activeUsers": 8
+      "pageViews": 25,
+      "activeUsers": 7
+    },
+    {
+      "title": "Research | Wei-Hao Chiu",
+      "path": "/research.html",
+      "pageViews": 25,
+      "activeUsers": 6
     },
     {
       "title": "Patents | Wei-Hao Chiu",
       "path": "/patents.html",
       "pageViews": 24,
       "activeUsers": 4
-    },
-    {
-      "title": "Research | Wei-Hao Chiu",
-      "path": "/research.html",
-      "pageViews": 22,
-      "activeUsers": 5
     },
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
@@ -118,21 +118,21 @@
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 51,
-      "activeUsers": 46
+      "sessions": 50,
+      "activeUsers": 45
     },
     {
       "channel": "Organic Search",
-      "sessions": 50,
+      "sessions": 49,
       "activeUsers": 6
     },
     {
-      "channel": "Unassigned",
-      "sessions": 2,
-      "activeUsers": 2
+      "channel": "Referral",
+      "sessions": 1,
+      "activeUsers": 1
     },
     {
-      "channel": "Referral",
+      "channel": "Unassigned",
       "sessions": 1,
       "activeUsers": 1
     }
@@ -141,13 +141,13 @@
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 51,
-      "activeUsers": 46
+      "sessions": 50,
+      "activeUsers": 45
     },
     {
       "source": "google",
       "medium": "organic",
-      "sessions": 47,
+      "sessions": 46,
       "activeUsers": 3
     },
     {
@@ -159,8 +159,8 @@
     {
       "source": "(not set)",
       "medium": "(not set)",
-      "sessions": 2,
-      "activeUsers": 2
+      "sessions": 1,
+      "activeUsers": 1
     },
     {
       "source": "cgu.edu.tw",
@@ -171,19 +171,19 @@
   ],
   "topCountries": [
     {
-      "country": "China",
-      "activeUsers": 18,
-      "pageViews": 18
+      "country": "United States",
+      "activeUsers": 19,
+      "pageViews": 20
     },
     {
-      "country": "United States",
-      "activeUsers": 18,
-      "pageViews": 19
+      "country": "China",
+      "activeUsers": 17,
+      "pageViews": 17
     },
     {
       "country": "Taiwan",
       "activeUsers": 10,
-      "pageViews": 127
+      "pageViews": 128
     },
     {
       "country": "India",
@@ -196,12 +196,12 @@
       "pageViews": 2
     },
     {
-      "country": "Russia",
-      "activeUsers": 2,
-      "pageViews": 2
+      "country": "Germany",
+      "activeUsers": 1,
+      "pageViews": 1
     },
     {
-      "country": "Germany",
+      "country": "Russia",
       "activeUsers": 1,
       "pageViews": 1
     }
@@ -209,7 +209,7 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 47
+      "activeUsers": 46
     },
     {
       "device": "mobile",
