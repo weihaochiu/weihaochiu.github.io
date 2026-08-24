@@ -2,12 +2,12 @@
   "schemaVersion": 3,
   "source": "OpenAlex Works API",
   "status": "success_with_exclusions",
-  "lastSuccessfulUpdate": "2026-08-17T04:36:39.796842Z",
+  "lastSuccessfulUpdate": "2026-08-24T04:40:55.984940Z",
   "workCount": 38,
   "missingPublicationYearCount": 0,
-  "totalCitationsFromPublicationMetrics": 991,
-  "rawTotalCitationsFromHistory": 991,
-  "totalCitationsIncludedInAnnualChart": 985,
+  "totalCitationsFromPublicationMetrics": 992,
+  "rawTotalCitationsFromHistory": 992,
+  "totalCitationsIncludedInAnnualChart": 986,
   "rawValidationDifference": 0,
   "unassignedCitationCount": 0,
   "excludedInvalidCitationCount": 6,
@@ -137,7 +137,7 @@
     },
     {
       "year": 2026,
-      "citations": 56
+      "citations": 57
     }
   ],
   "works": {
@@ -668,7 +668,7 @@
           ],
           "journal": "Progress in Polymer Science",
           "publicationYear": 2015,
-          "publicationDate": "2015-11-10",
+          "publicationDate": "2015-11-09",
           "volume": "59",
           "issue": "",
           "pages": "1-40",
@@ -749,7 +749,7 @@
           "openAlexId": "W2155910557",
           "doi": "10.1111/php.12399",
           "doiUrl": "https://doi.org/10.1111/php.12399",
-          "title": "Improved Efficiency and Stability of Flexible Dye Sensitized Solar Cells on <scp>ITO</scp>/<scp>PEN</scp> Substrates Using an Ionic Liquid Electrolyte",
+          "title": "Improved Efficiency and Stability of Flexible Dye Sensitized Solar Cells on ITO / PEN Substrates Using an Ionic Liquid Electrolyte",
           "authors": [
             "Yu Han",
             "Jennifer M. Pringle",
@@ -878,7 +878,7 @@
           "openAlexId": "W2061625863",
           "doi": "10.1016/j.jpowsour.2013.06.142",
           "doiUrl": "https://doi.org/10.1016/j.jpowsour.2013.06.142",
-          "title": "Highly efficient plastic-based quasi-solid-state dye-sensitized solar cells with light-harvesting mesoporous silica nanoparticles gel-electrolyte",
+          "title": "Highly efficient plastic-based quasi-solid-state dye-sensitized solar cells with light-harvesting mesoporous silica nanoparticles gel-electrolyte",
           "authors": [
             "Hsin–Wei Chen",
             "Ya-Dong Chiang",
@@ -959,7 +959,7 @@
           "openAlexId": "W1999347541",
           "doi": "10.1021/jp301638p",
           "doiUrl": "https://doi.org/10.1021/jp301638p",
-          "title": "Preparation of Nanocrystalline TiO<sub>2</sub> Electrodes for Flexible Dye-Sensitized Solar Cells: Influence of Mechanical Compression",
+          "title": "Preparation of Nanocrystalline TiO2 Electrodes for Flexible Dye-Sensitized Solar Cells: Influence of Mechanical Compression",
           "authors": [
             "S. Senthilarasu",
             "T. A. Nirmal Peiris",
@@ -1687,7 +1687,7 @@
           "openAlexId": "W3127298791",
           "doi": "10.1109/ted.2021.3052154",
           "doiUrl": "https://doi.org/10.1109/ted.2021.3052154",
-          "title": "The Characterization of Dye-Sensitized Solar Cell Modified by Reduced Graphene Oxide- and ZrO<sub>2</sub>-Doped TiO<sub>2</sub> Nanofibers at Low Light Intensities",
+          "title": "The Characterization of Dye-Sensitized Solar Cell Modified by Reduced Graphene Oxide- and ZrO2-Doped TiO2 Nanofibers at Low Light Intensities",
           "authors": [
             "Yu–Hsun Nien",
             "Hui-Hsuan Hsu",
@@ -1733,7 +1733,7 @@
           "openAlexId": "W2914554714",
           "doi": "10.1021/acsami.8b21416",
           "doiUrl": "https://doi.org/10.1021/acsami.8b21416",
-          "title": "Percolation Effects in Electrolytically Gated WS<sub>2</sub>/Graphene Nano:Nano Composites",
+          "title": "Percolation Effects in Electrolytically Gated WS2/Graphene Nano:Nano Composites",
           "authors": [
             "Domhnall O’Suilleabhain",
             "Víctor Vega‐Mayoral",
@@ -1949,7 +1949,7 @@
           "openAlexId": "W2081328846",
           "doi": "10.1080/17458080.2014.933494",
           "doiUrl": "https://doi.org/10.1080/17458080.2014.933494",
-          "title": "Morphological, optical, structural and photoelectrochemical properties of TiO<sub>2</sub>nanoflower prepared via PVP surfactant assisted liquid phase deposition technique",
+          "title": "Morphological, optical, structural and photoelectrochemical properties of TiO2nanoflower prepared via PVP surfactant assisted liquid phase deposition technique",
           "authors": [
             "M. Y. A. Rahman",
             "Akrajas Ali Umar",
@@ -2132,7 +2132,7 @@
           "openAlexId": "W2109719846",
           "doi": "10.4028/www.scientific.net/amr.662.177",
           "doiUrl": "https://doi.org/10.4028/www.scientific.net/amr.662.177",
-          "title": "Large Pore Nanocrystalline TiO&lt;sub&gt;2&lt;/sub&gt; Films for Quasi-Solid State Dye-Sensitized Solar Cells",
+          "title": "Large Pore Nanocrystalline TiO2 Films for Quasi-Solid State Dye-Sensitized Solar Cells",
           "authors": [
             "Jian Gao",
             "Hao Ran Li",
@@ -2671,7 +2671,7 @@
           "openAlexId": "W4285087171",
           "doi": "10.1021/acsomega.2c01425",
           "doiUrl": "https://doi.org/10.1021/acsomega.2c01425",
-          "title": "Flexible Nano-TiO<sub>2</sub> Sheets Exhibiting Excellent Photocatalytic and Photovoltaic Properties by Controlled Silane Functionalization─Exploring the New Prospects of Wastewater Treatment and Flexible DSSCs",
+          "title": "Flexible Nano-TiO2 Sheets Exhibiting Excellent Photocatalytic and Photovoltaic Properties by Controlled Silane Functionalization─Exploring the New Prospects of Wastewater Treatment and Flexible DSSCs",
           "authors": [
             "Soorya Sasi",
             "Akash M. Chandran",
@@ -2846,7 +2846,7 @@
           "openAlexId": "W2913254889",
           "doi": "10.1088/2058-8585/ab02c4",
           "doiUrl": "https://doi.org/10.1088/2058-8585/ab02c4",
-          "title": "Optimizing room temperature binder free TiO <sub>2</sub> paste for high efficiency flexible polymer dye sensitized solar cells",
+          "title": "Optimizing room temperature binder free TiO 2 paste for high efficiency flexible polymer dye sensitized solar cells",
           "authors": [
             "D Kishore Kumar",
             "Min-Hung Hsu",
@@ -3139,7 +3139,7 @@
           "openAlexId": "W2242351404",
           "doi": "10.1039/c5ra23593f",
           "doiUrl": "https://doi.org/10.1039/c5ra23593f",
-          "title": "Surface co-modification of TiO <sub>2</sub> with N doping and Ag loading for enhanced visible-light photoactivity",
+          "title": "Surface co-modification of TiO 2 with N doping and Ag loading for enhanced visible-light photoactivity",
           "authors": [
             "Mingxuan Sun",
             "Yalin Fang",
@@ -3169,7 +3169,7 @@
           ],
           "journal": "Progress in Polymer Science",
           "publicationYear": 2015,
-          "publicationDate": "2015-11-10",
+          "publicationDate": "2015-11-09",
           "volume": "59",
           "issue": "",
           "pages": "1-40",
@@ -3300,7 +3300,7 @@
           "openAlexId": "W1762900798",
           "doi": "10.1039/c5ta00763a",
           "doiUrl": "https://doi.org/10.1039/c5ta00763a",
-          "title": "Hydrothermal synthesis of graphene/Fe <sup>3+</sup> -doped TiO <sub>2</sub> nanowire composites with highly enhanced photocatalytic activity under visible light irradiation",
+          "title": "Hydrothermal synthesis of graphene/Fe 3+ -doped TiO 2 nanowire composites with highly enhanced photocatalytic activity under visible light irradiation",
           "authors": [
             "Wenqiang Li",
             "Xiang Liu",
@@ -3512,7 +3512,7 @@
           "openAlexId": "W2111329502",
           "doi": "10.1002/cssc.201301139",
           "doiUrl": "https://doi.org/10.1002/cssc.201301139",
-          "title": "Green‐Engineered All‐Substrate Mesoporous TiO<sub>2</sub> Photoanodes with Superior Light‐Harvesting Structure and Performance",
+          "title": "Green‐Engineered All‐Substrate Mesoporous TiO2 Photoanodes with Superior Light‐Harvesting Structure and Performance",
           "authors": [
             "Nima Parsi Benehkohal",
             "George P. Demopoulos"
@@ -3529,7 +3529,7 @@
           "openAlexId": "W2081471958",
           "doi": "10.1002/cphc.201301043",
           "doiUrl": "https://doi.org/10.1002/cphc.201301043",
-          "title": "Evaluation of Limiting Factors Affecting Photovoltaic Performance of Low‐Temperature‐Processed TiO<sub>2</sub> Films in Dye‐Sensitized Solar Cells",
+          "title": "Evaluation of Limiting Factors Affecting Photovoltaic Performance of Low‐Temperature‐Processed TiO2 Films in Dye‐Sensitized Solar Cells",
           "authors": [
             "Taek‐Yong Lee",
             "Hui‐Seon Kim",
@@ -3567,7 +3567,7 @@
           "openAlexId": "W2037374697",
           "doi": "10.1039/c4ra07162j",
           "doiUrl": "https://doi.org/10.1039/c4ra07162j",
-          "title": "Fabrication of TiO <sub>2</sub> nanotube arrays and their application in flexible dye-sensitized solar cells",
+          "title": "Fabrication of TiO 2 nanotube arrays and their application in flexible dye-sensitized solar cells",
           "authors": [
             "Yueli Liu",
             "Yuqing Cheng",
@@ -3631,7 +3631,7 @@
           "openAlexId": "W2067309965",
           "doi": "10.1021/am402687j",
           "doiUrl": "https://doi.org/10.1021/am402687j",
-          "title": "High-Performance Large-Scale Flexible Dye-Sensitized Solar Cells Based on Anodic TiO<sub>2</sub> Nanotube Arrays",
+          "title": "High-Performance Large-Scale Flexible Dye-Sensitized Solar Cells Based on Anodic TiO2 Nanotube Arrays",
           "authors": [
             "Hsiu‐Ping Jen",
             "Meng-Hung Lin",
@@ -3696,7 +3696,7 @@
           "openAlexId": "W1966161058",
           "doi": "10.7567/jjap.52.05db15",
           "doiUrl": "https://doi.org/10.7567/jjap.52.05db15",
-          "title": "Low-Temperature Fabrication of Dye-Sensitized Solar Cells Using Pre-Sintered TiO<sub>2</sub> Aggregates",
+          "title": "Low-Temperature Fabrication of Dye-Sensitized Solar Cells Using Pre-Sintered TiO2 Aggregates",
           "authors": [
             "Takashi Yasuda",
             "Masafumi Yukita",
@@ -3856,7 +3856,7 @@
           "openAlexId": "W2084613695",
           "doi": "10.1021/cs200621c",
           "doiUrl": "https://doi.org/10.1021/cs200621c",
-          "title": "Hydrothermal Synthesis of Graphene-TiO<sub>2</sub> Nanotube Composites with Enhanced Photocatalytic Activity",
+          "title": "Hydrothermal Synthesis of Graphene-TiO 2 Nanotube Composites with Enhanced Photocatalytic Activity",
           "authors": [
             "Sanjaya D. Perera",
             "Ruperto G. Mariano",
@@ -5089,7 +5089,7 @@
           "openAlexId": "W2807343080",
           "doi": "10.1021/acsami.8b00588",
           "doiUrl": "https://doi.org/10.1021/acsami.8b00588",
-          "title": "Bimodally Porous WO<sub>3</sub> Microbelts Functionalized with Pt Catalysts for Selective H<sub>2</sub>S Sensors",
+          "title": "Bimodally Porous WO 3 Microbelts Functionalized with Pt Catalysts for Selective H 2 S Sensors",
           "authors": [
             "Min-Hyeok Kim",
             "Ji‐Soo Jang",
@@ -5184,7 +5184,7 @@
           "openAlexId": "W4234615025",
           "doi": "10.12693/aphyspola.133.15",
           "doiUrl": "https://doi.org/10.12693/aphyspola.133.15",
-          "title": "Investigations on the Properties of Nanostructured Mg-Doped Sn<sub>2</sub>S<sub>3</sub> Thin Films towards Photovoltaic Applications",
+          "title": "Investigations on the Properties of Nanostructured Mg-Doped Sn2S3 Thin Films towards Photovoltaic Applications",
           "authors": [
             "S. Joshua Gnanamuthu",
             "I. Kartharinal Punithavathy",
@@ -5495,7 +5495,7 @@
           "openAlexId": "W2523390464",
           "doi": "10.1002/advs.201600152",
           "doiUrl": "https://doi.org/10.1002/advs.201600152",
-          "title": "One‐dimensional TiO<sub>2</sub> Nanotube Photocatalysts for Solar Water Splitting",
+          "title": "One‐dimensional TiO2 Nanotube Photocatalysts for Solar Water Splitting",
           "authors": [
             "Mingzheng Ge",
             "Qingsong Li",
@@ -5581,7 +5581,7 @@
           "openAlexId": "W2520444745",
           "doi": "10.1002/9781119951438.eibc2455",
           "doiUrl": "https://doi.org/10.1002/9781119951438.eibc2455",
-          "title": "Anisotropic<scp>3D</scp>Colloidal Quantum Nanostructures",
+          "title": "Anisotropic 3D Colloidal Quantum Nanostructures",
           "authors": [
             "Joseph Govan",
             "Igor G. Spiridonov",
@@ -5687,7 +5687,7 @@
           "openAlexId": "W2252767713",
           "doi": "10.1088/0957-4484/27/11/115401",
           "doiUrl": "https://doi.org/10.1088/0957-4484/27/11/115401",
-          "title": "3D periodic multiscale TiO<sub>2</sub>architecture: a platform decorated with graphene quantum dots for enhanced photoelectrochemical water splitting",
+          "title": "3D periodic multiscale TiO2architecture: a platform decorated with graphene quantum dots for enhanced photoelectrochemical water splitting",
           "authors": [
             "Zhen Xu",
             "Min Yin",
@@ -5753,7 +5753,7 @@
           "openAlexId": "W2481251664",
           "doi": "10.1039/c6ra15481f",
           "doiUrl": "https://doi.org/10.1039/c6ra15481f",
-          "title": "CdS/CdSe co-sensitized hierarchical TiO <sub>2</sub> nanofiber/ZnO nanosheet heterojunction photoanode for quantum dot-sensitized solar cells",
+          "title": "CdS/CdSe co-sensitized hierarchical TiO 2 nanofiber/ZnO nanosheet heterojunction photoanode for quantum dot-sensitized solar cells",
           "authors": [
             "Yang Cao",
             "Yujie Dong",
@@ -5773,7 +5773,7 @@
           "openAlexId": "W2505669339",
           "doi": "10.1039/c6ta05618k",
           "doiUrl": "https://doi.org/10.1039/c6ta05618k",
-          "title": "In situ chemical etching of tunable 3D Ni <sub>3</sub> S <sub>2</sub> superstructures for bifunctional electrocatalysts for overall water splitting",
+          "title": "In situ chemical etching of tunable 3D Ni 3 S 2 superstructures for bifunctional electrocatalysts for overall water splitting",
           "authors": [
             "Ting Zhu",
             "Liangliang Zhu",
@@ -5792,7 +5792,7 @@
           "openAlexId": "W2554571661",
           "doi": "10.1039/c6ra21420g",
           "doiUrl": "https://doi.org/10.1039/c6ra21420g",
-          "title": "Ordered R <sub>TiO2</sub> @A <sub>TiO2</sub> architecture for dye-sensitized solar cell applications",
+          "title": "Ordered R TiO2 @A TiO2 architecture for dye-sensitized solar cell applications",
           "authors": [
             "Y. L. Liu",
             "D. D. Wang",
@@ -6051,7 +6051,7 @@
           "openAlexId": "W2164646037",
           "doi": "10.1088/2053-1591/2/3/035011",
           "doiUrl": "https://doi.org/10.1088/2053-1591/2/3/035011",
-          "title": "Green engineered ZnO nanopowders by<i>Banyan Tree</i>and<i>E. tirucalli</i>plant latex: auto ignition route, photoluminescent and photocatalytic properties",
+          "title": "Green engineered ZnO nanopowders by Banyan Tree and E. tirucalli plant latex: auto ignition route, photoluminescent and photocatalytic properties",
           "authors": [
             "M.R. Anilkumar",
             "H.P. Nagaswarupa",
@@ -6158,7 +6158,7 @@
           "openAlexId": "W1947973412",
           "doi": "10.1039/c5ra08863a",
           "doiUrl": "https://doi.org/10.1039/c5ra08863a",
-          "title": "N-type SnO <sub>2</sub> nanosheets standing on p-type carbon nanofibers: a novel hierarchical nanostructures based hydrogen sensor",
+          "title": "N-type SnO 2 nanosheets standing on p-type carbon nanofibers: a novel hierarchical nanostructures based hydrogen sensor",
           "authors": [
             "Zhaojie Wang",
             "Siyuan Liu",
@@ -6238,7 +6238,7 @@
           "openAlexId": "W2076798376",
           "doi": "10.1039/c4cp06068g",
           "doiUrl": "https://doi.org/10.1039/c4cp06068g",
-          "title": "ZnO@Ag <sub>2</sub> S core–shell nanowire arrays for environmentally friendly solid-state quantum dot-sensitized solar cells with panchromatic light capture and enhanced electron collection",
+          "title": "ZnO@Ag 2 S core–shell nanowire arrays for environmentally friendly solid-state quantum dot-sensitized solar cells with panchromatic light capture and enhanced electron collection",
           "authors": [
             "Xiaoliang Zhang",
             "Jianhua Liu",
@@ -6359,7 +6359,7 @@
           "openAlexId": "W2119063701",
           "doi": "10.1142/s1793604715500125",
           "doiUrl": "https://doi.org/10.1142/s1793604715500125",
-          "title": "Facile fabrication of <font>ZnO</font> nanorods/<font>ZnO</font> nanosheet–spheres hybrid photoanode for dye-sensitized solar cells",
+          "title": "Facile fabrication of ZnO nanorods/ ZnO nanosheet–spheres hybrid photoanode for dye-sensitized solar cells",
           "authors": [
             "Te Bai",
             "Yahong Xie",
@@ -6399,7 +6399,7 @@
           "openAlexId": "W2546848827",
           "doi": "10.1109/iced.2014.7015852",
           "doiUrl": "https://doi.org/10.1109/iced.2014.7015852",
-          "title": "Fabrication of dye-sensitized solar cell using nanocomposited aligned ZnO nanorod/TiO&lt;inf&gt;2&lt;/inf&gt;",
+          "title": "Fabrication of dye-sensitized solar cell using nanocomposited aligned ZnO nanorod/TiO2",
           "authors": [
             "I. Saurdi",
             "A. K. Shafura",
@@ -6781,7 +6781,7 @@
           "openAlexId": "W2116543091",
           "doi": "10.1039/c4ra05298f",
           "doiUrl": "https://doi.org/10.1039/c4ra05298f",
-          "title": "Synthesis of micrometer-sized hierarchical rutile TiO <sub>2</sub> flowers and their application in dye sensitized solar cells",
+          "title": "Synthesis of micrometer-sized hierarchical rutile TiO 2 flowers and their application in dye sensitized solar cells",
           "authors": [
             "Mohan Raj Subramaniam",
             "Sriram Devanathan",
@@ -6799,7 +6799,7 @@
           "openAlexId": "W2159605801",
           "doi": "10.1039/c4ta02761b",
           "doiUrl": "https://doi.org/10.1039/c4ta02761b",
-          "title": "Three-dimensional self-branching anatase TiO <sub>2</sub> nanorods: morphology control, growth mechanism and dye-sensitized solar cell application",
+          "title": "Three-dimensional self-branching anatase TiO 2 nanorods: morphology control, growth mechanism and dye-sensitized solar cell application",
           "authors": [
             "Weiguang Yang",
             "Yueyang Xu",
@@ -7717,7 +7717,7 @@
           "openAlexId": "W2329922245",
           "doi": "10.1557/jmr.2012.350",
           "doiUrl": "https://doi.org/10.1557/jmr.2012.350",
-          "title": "Dye-sensitized solar cells based on ZnO nanoneedle/TiO<sub>2</sub> nanoparticle composite photoelectrodes with controllable weight ratio",
+          "title": "Dye-sensitized solar cells based on ZnO nanoneedle/TiO2 nanoparticle composite photoelectrodes with controllable weight ratio",
           "authors": [
             "Lihong Qi",
             "Qingshan Wang",
@@ -7776,7 +7776,7 @@
           "openAlexId": "W1969077686",
           "doi": "10.1088/0022-3727/45/41/415301",
           "doiUrl": "https://doi.org/10.1088/0022-3727/45/41/415301",
-          "title": "Solution-growth and optoelectronic performance of ZnO : Cl/TiO<sub>2</sub> and ZnO : Cl/Zn<sub>x</sub>TiO<sub>y</sub>/TiO<sub>2</sub> core–shell nanowires with tunable shell thickness",
+          "title": "Solution-growth and optoelectronic performance of ZnO : Cl/TiO2 and ZnO : Cl/ZnxTiOy/TiO2 core–shell nanowires with tunable shell thickness",
           "authors": [
             "Jiandong Fan",
             "Reza R. Zamani",
@@ -7902,7 +7902,7 @@
           "openAlexId": "W2005976313",
           "doi": "10.1109/pvsc.2012.6318115",
           "doiUrl": "https://doi.org/10.1109/pvsc.2012.6318115",
-          "title": "Fabrication of hierarchical ZnO/TiO&lt;inf&gt;2&lt;/inf&gt; core-shell nanostructures for advanced photovoltaic devices",
+          "title": "Fabrication of hierarchical ZnO/TiO2 core-shell nanostructures for advanced photovoltaic devices",
           "authors": [
             "Keyue Wu",
             "Jingbiao Cui"
@@ -7919,7 +7919,7 @@
           "openAlexId": "W2021150164",
           "doi": "10.1016/j.jpowsour.2012.04.071",
           "doiUrl": "https://doi.org/10.1016/j.jpowsour.2012.04.071",
-          "title": "Electrochemical and structural analysis of Al-doped ZnO nanorod arrays in dye-sensitized solar cells",
+          "title": "Electrochemical and structural analysis of Al-doped ZnO nanorod arrays in dye-sensitized solar cells",
           "authors": [
             "Runbang Tao",
             "Takahiro Tomita",
@@ -7938,7 +7938,7 @@
           "openAlexId": "W2000458398",
           "doi": "10.1088/0022-3727/45/20/205301",
           "doiUrl": "https://doi.org/10.1088/0022-3727/45/20/205301",
-          "title": "Novel growth of CuO-functionalized, branched SnO<sub>2</sub> nanowires and their application to H<sub>2</sub>S sensors",
+          "title": "Novel growth of CuO-functionalized, branched SnO 2 nanowires and their application to H 2 S sensors",
           "authors": [
             "Sang Sub Kim",
             "Han Gil Na",
@@ -8021,7 +8021,7 @@
           "openAlexId": "W2129692711",
           "doi": "10.1179/1433075x11y.0000000038",
           "doiUrl": "https://doi.org/10.1179/1433075x11y.0000000038",
-          "title": "TiO<sub>2</sub> nanoparticle/nanotube multilayer composite film as photoanode applied in dye sensitised solar cells",
+          "title": "TiO2 nanoparticle/nanotube multilayer composite film as photoanode applied in dye sensitised solar cells",
           "authors": [
             "Cuiping Kang",
             "Erqing Xie"
@@ -8329,7 +8329,7 @@
           "openAlexId": "W2134343887",
           "doi": "10.1049/mnl.2011.0225",
           "doiUrl": "https://doi.org/10.1049/mnl.2011.0225",
-          "title": "Enhanced efficiency in dye-sensitised solar cells using a TiO <sub>2</sub> -based sandwiched film as photoanode",
+          "title": "Enhanced efficiency in dye-sensitised solar cells using a TiO 2 -based sandwiched film as photoanode",
           "authors": [
             "Cuiping Kang",
             "Zhenxing Zhang",
@@ -8386,7 +8386,7 @@
           "openAlexId": "W1972386634",
           "doi": "10.1088/0957-4484/22/36/365401",
           "doiUrl": "https://doi.org/10.1088/0957-4484/22/36/365401",
-          "title": "Fabrication of 3D interconnected porous TiO<sub>2</sub>nanotubes templated by poly(vinyl chloride-<i>g</i>-4-vinyl pyridine) for dye-sensitized solar cells",
+          "title": "Fabrication of 3D interconnected porous TiO2nanotubes templated by poly(vinyl chloride-g-4-vinyl pyridine) for dye-sensitized solar cells",
           "authors": [
             "Joo Hwan Koh",
             "Jong Kwan Koh",
@@ -8856,7 +8856,7 @@
           "openAlexId": "W1974031529",
           "doi": "10.1039/c0ce00244e",
           "doiUrl": "https://doi.org/10.1039/c0ce00244e",
-          "title": "Enhanced gas sensing properties of ZnO/SnO <sub>2</sub> hierarchical architectures by glucose-induced attachment",
+          "title": "Enhanced gas sensing properties of ZnO/SnO 2 hierarchical architectures by glucose-induced attachment",
           "authors": [
             "Cheng Chao Li",
             "Xiao Ming Yin",
@@ -9203,13 +9203,13 @@
           "authors": [
             "Benoit N. Illy"
           ],
-          "journal": "Spiral (Imperial College London)",
+          "journal": "Open MIND",
           "publicationYear": 2009,
           "publicationDate": "2009-11-01",
           "volume": "",
           "issue": "",
           "pages": "",
-          "type": "dissertation"
+          "type": "article"
         },
         {
           "openAlexId": "W2078062525",
@@ -9280,7 +9280,7 @@
           "openAlexId": "W2009333291",
           "doi": "10.1021/la902117c",
           "doiUrl": "https://doi.org/10.1021/la902117c",
-          "title": "Comparison of Dye Photodegradation and its Coupling with Light-to-Electricity Conversion over TiO<sub>2</sub> and ZnO",
+          "title": "Comparison of Dye Photodegradation and its Coupling with Light-to-Electricity Conversion over TiO2 and ZnO",
           "authors": [
             "Yuanzhi Li",
             "Wei Xie",
@@ -9345,7 +9345,7 @@
           "openAlexId": "W1970899935",
           "doi": "10.1088/0022-3727/42/15/155104",
           "doiUrl": "https://doi.org/10.1088/0022-3727/42/15/155104",
-          "title": "Dye-sensitized solar cells based on nanoparticle-decorated ZnO/TiO<sub>2</sub>core/shell nanorod arrays",
+          "title": "Dye-sensitized solar cells based on nanoparticle-decorated ZnO/TiO2core/shell nanorod arrays",
           "authors": [
             "Meili Wang",
             "Changgang Huang",
@@ -10069,7 +10069,7 @@
           "openAlexId": "W2891145330",
           "doi": "10.1002/9783527813636.ch8",
           "doiUrl": "https://doi.org/10.1002/9783527813636.ch8",
-          "title": "Conductive Polymer Based Electrocatalysts for I‐Mediated<scp>Dye‐Sensitized</scp>Solar Cells",
+          "title": "Conductive Polymer Based Electrocatalysts for I‐Mediated Dye‐Sensitized Solar Cells",
           "authors": [
             "Manuel Salado",
             "Samrana Kazim",
@@ -10326,7 +10326,7 @@
           "openAlexId": "W1903562870",
           "doi": "10.1002/app.42310",
           "doiUrl": "https://doi.org/10.1002/app.42310",
-          "title": "Preparation and characterization of poly(<i>o</i>‐anisidine) with the influence of surfactants on stainless steel by electrochemical polymerization as a counter electrode for dye‐sensitized solar cells",
+          "title": "Preparation and characterization of poly(o‐anisidine) with the influence of surfactants on stainless steel by electrochemical polymerization as a counter electrode for dye‐sensitized solar cells",
           "authors": [
             "Chandrasekaran Menaka",
             "P. Manisankar",
@@ -10344,7 +10344,7 @@
           "openAlexId": "W2080320852",
           "doi": "10.1002/app.42041",
           "doiUrl": "https://doi.org/10.1002/app.42041",
-          "title": "<i>In situ</i> electrochemical synthesis of a poly(<i>o</i>‐anisidine) counter electrode for a dye‐sensitized solar cell",
+          "title": "In situ electrochemical synthesis of a poly(o‐anisidine) counter electrode for a dye‐sensitized solar cell",
           "authors": [
             "Chandrasekaran Menaka",
             "P. Manisankar",
@@ -10422,7 +10422,7 @@
           "openAlexId": "W2165344303",
           "doi": "10.1039/c5ra15939c",
           "doiUrl": "https://doi.org/10.1039/c5ra15939c",
-          "title": "Layer-by-layer deposition of CNT <sup>−</sup> and CNT <sup>+</sup> hybrid films for platinum free counters electrodes of dye-sensitized-solar-cells",
+          "title": "Layer-by-layer deposition of CNT − and CNT + hybrid films for platinum free counters electrodes of dye-sensitized-solar-cells",
           "authors": [
             "Majid Raissan Al-bahrani",
             "Waqar Ahmad",
@@ -11247,7 +11247,7 @@
           "openAlexId": "W1872058333",
           "doi": "10.1155/2011/273683",
           "doiUrl": "https://doi.org/10.1155/2011/273683",
-          "title": "TiO<sub><b>2</b></sub>/Chitosan-<b>NH<sub><b>4</b></sub>I(+I<sub><b>2</b></sub>)</b>-BMII-Based Dye-Sensitized Solar Cells with Anthocyanin Dyes Extracted from Black Rice and Red Cabbage",
+          "title": "TiO2/Chitosan-NH4I(+I2)-BMII-Based Dye-Sensitized Solar Cells with Anthocyanin Dyes Extracted from Black Rice and Red Cabbage",
           "authors": [
             "M.H. Buraidah",
             "L. P. Teo",
@@ -11607,7 +11607,7 @@
           "openAlexId": "W2927622019",
           "doi": "10.1039/c9ta00241c",
           "doiUrl": "https://doi.org/10.1039/c9ta00241c",
-          "title": "Realization of ultra-long columnar single crystals in TiO <sub>2</sub> nanotube arrays as fast electron transport channels for high efficiency dye-sensitized solar cells",
+          "title": "Realization of ultra-long columnar single crystals in TiO 2 nanotube arrays as fast electron transport channels for high efficiency dye-sensitized solar cells",
           "authors": [
             "Nianqing Fu",
             "Yandong Duan",
@@ -11707,7 +11707,7 @@
           "openAlexId": "W2519930178",
           "doi": "10.1002/cnma.201600243",
           "doiUrl": "https://doi.org/10.1002/cnma.201600243",
-          "title": "Constructing Synergetic Trilayered TiO<sub>2</sub> Photoanodes Based on a Flexible Nanotube Array/Ti Substrate for Efficient Solar Cells",
+          "title": "Constructing Synergetic Trilayered TiO2 Photoanodes Based on a Flexible Nanotube Array/Ti Substrate for Efficient Solar Cells",
           "authors": [
             "Yang Wang",
             "Xueqin Liu",
@@ -11850,7 +11850,7 @@
           "openAlexId": "W2415829966",
           "doi": "10.1021/acsami.5b05672",
           "doiUrl": "https://doi.org/10.1021/acsami.5b05672",
-          "title": "Organic-free Anatase TiO<sub>2</sub> Paste for Efficient Plastic Dye-Sensitized Solar Cells and Low Temperature Processed Perovskite Solar Cells",
+          "title": "Organic-free Anatase TiO2 Paste for Efficient Plastic Dye-Sensitized Solar Cells and Low Temperature Processed Perovskite Solar Cells",
           "authors": [
             "Nianqing Fu",
             "Chün Huang",
@@ -11951,7 +11951,7 @@
           "openAlexId": "W1936503789",
           "doi": "10.1039/c5ta03918e",
           "doiUrl": "https://doi.org/10.1039/c5ta03918e",
-          "title": "A facile solution approach to W,N co-doped TiO <sub>2</sub> nanobelt thin films with high photocatalytic activity",
+          "title": "A facile solution approach to W,N co-doped TiO 2 nanobelt thin films with high photocatalytic activity",
           "authors": [
             "Lu–Lu Lai",
             "Jin‐Ming Wu"
@@ -11989,7 +11989,7 @@
           "openAlexId": "W2335395006",
           "doi": "10.1021/am5072018",
           "doiUrl": "https://doi.org/10.1021/am5072018",
-          "title": "Stoichiometry Gradient, Cation Interdiffusion, and Band Alignment between a Nanosized TiO<sub>2</sub> Blocking Layer and a Transparent Conductive Oxide in Dye-Sensitized Solar Cell Front Contacts",
+          "title": "Stoichiometry Gradient, Cation Interdiffusion, and Band Alignment between a Nanosized TiO2 Blocking Layer and a Transparent Conductive Oxide in Dye-Sensitized Solar Cell Front Contacts",
           "authors": [
             "G. Salvinelli",
             "Giovanni Drera",
@@ -12094,7 +12094,7 @@
           "openAlexId": "W2010151741",
           "doi": "10.1021/jp4116782",
           "doiUrl": "https://doi.org/10.1021/jp4116782",
-          "title": "Trilayered Photoanode of TiO<sub>2</sub> Nanoparticles on a 1D–3D Nanostructured TiO<sub>2</sub>-Grown Flexible Ti Substrate for High-Efficiency (9.1%) Dye-Sensitized Solar Cells with Unprecedentedly High Photocurrent Density",
+          "title": "Trilayered Photoanode of TiO2 Nanoparticles on a 1D–3D Nanostructured TiO2-Grown Flexible Ti Substrate for High-Efficiency (9.1%) Dye-Sensitized Solar Cells with Unprecedentedly High Photocurrent Density",
           "authors": [
             "Wu‐Qiang Wu",
             "Yangfan Xu",
@@ -12132,7 +12132,7 @@
           "openAlexId": "W2094110021",
           "doi": "10.1149/2.020404jes",
           "doiUrl": "https://doi.org/10.1149/2.020404jes",
-          "title": "Morphology Control of Pt Counter Electrodes Using a Pt Precursor Solution with H<sub>2</sub>PtCl<sub>6</sub>·xH<sub>2</sub>O for Highly Efficient Dye-Sensitized Solar Cells",
+          "title": "Morphology Control of Pt Counter Electrodes Using a Pt Precursor Solution with H2PtCl6·xH2O for Highly Efficient Dye-Sensitized Solar Cells",
           "authors": [
             "Than-Tung Duong",
             "Jin-Seok Choi",
@@ -12193,7 +12193,7 @@
           "openAlexId": "W2053515387",
           "doi": "10.1021/am403716j",
           "doiUrl": "https://doi.org/10.1021/am403716j",
-          "title": "Electron Transport Dynamics in TiO<sub>2</sub> Films Deposited on Ti Foils for Back-Illuminated Dye-Sensitized Solar Cells",
+          "title": "Electron Transport Dynamics in TiO2 Films Deposited on Ti Foils for Back-Illuminated Dye-Sensitized Solar Cells",
           "authors": [
             "Liang-Che Chen",
             "Chien‐Te Hsieh",
@@ -12231,7 +12231,7 @@
           "openAlexId": "W2067309965",
           "doi": "10.1021/am402687j",
           "doiUrl": "https://doi.org/10.1021/am402687j",
-          "title": "High-Performance Large-Scale Flexible Dye-Sensitized Solar Cells Based on Anodic TiO<sub>2</sub> Nanotube Arrays",
+          "title": "High-Performance Large-Scale Flexible Dye-Sensitized Solar Cells Based on Anodic TiO2 Nanotube Arrays",
           "authors": [
             "Hsiu‐Ping Jen",
             "Meng-Hung Lin",
@@ -12416,7 +12416,7 @@
           "openAlexId": "W2129224021",
           "doi": "10.1002/smll.201200802",
           "doiUrl": "https://doi.org/10.1002/smll.201200802",
-          "title": "Enhanced Photoconversion Efficiency of All‐Flexible Dye‐Sensitized Solar Cells Based on a Ti Substrate with TiO<sub>2</sub> Nanoforest Underlayer",
+          "title": "Enhanced Photoconversion Efficiency of All‐Flexible Dye‐Sensitized Solar Cells Based on a Ti Substrate with TiO2 Nanoforest Underlayer",
           "authors": [
             "Jiang An",
             "Wei Guo",
@@ -12738,7 +12738,7 @@
           "volume": "156",
           "issue": "4",
           "pages": "",
-          "type": "article"
+          "type": "book-chapter"
         },
         {
           "openAlexId": "W4411877798",
@@ -13052,7 +13052,7 @@
           "openAlexId": "W2554571661",
           "doi": "10.1039/c6ra21420g",
           "doiUrl": "https://doi.org/10.1039/c6ra21420g",
-          "title": "Ordered R <sub>TiO2</sub> @A <sub>TiO2</sub> architecture for dye-sensitized solar cell applications",
+          "title": "Ordered R TiO2 @A TiO2 architecture for dye-sensitized solar cell applications",
           "authors": [
             "Y. L. Liu",
             "D. D. Wang",
@@ -13768,7 +13768,7 @@
           "openAlexId": "W3017176029",
           "doi": "10.1007/978-981-15-3314-3_6",
           "doiUrl": "https://doi.org/10.1007/978-981-15-3314-3_6",
-          "title": "One-Dimensional ZnO Nanostructure: Growth &amp; Device Applications",
+          "title": "One-Dimensional ZnO Nanostructure: Growth & Device Applications",
           "authors": [
             "L. S. Vikas",
             "K.A. Vanaja",
@@ -14061,7 +14061,7 @@
           "openAlexId": "W1939633456",
           "doi": "10.1142/s1793292015501039",
           "doiUrl": "https://doi.org/10.1142/s1793292015501039",
-          "title": "Vertically Aligned <font>ZnO</font>/<font>In</font><sub>x</sub><font>S</font><sub>y</sub> Core–Shell Nanorods for High Efficient Dye-Sensitized Solar Cells",
+          "title": "Vertically Aligned ZnO / In x S y Core–Shell Nanorods for High Efficient Dye-Sensitized Solar Cells",
           "authors": [
             "Irene González‐Valls",
             "Belén Ballesteros",
@@ -15246,7 +15246,7 @@
           "openAlexId": "W4384395965",
           "doi": "10.1002/adma.202303936",
           "doiUrl": "https://doi.org/10.1002/adma.202303936",
-          "title": "Bifacial and Semitransparent Sb<sub>2</sub>(S,Se)<sub>3</sub> Solar Cells for Single‐Junction and Tandem Photovoltaic Applications",
+          "title": "Bifacial and Semitransparent Sb2(S,Se)3 Solar Cells for Single‐Junction and Tandem Photovoltaic Applications",
           "authors": [
             "Chen Qian",
             "Kaiwen Sun",
@@ -15294,7 +15294,7 @@
           "openAlexId": "W2782129772",
           "doi": "10.1149/2.0191802jes",
           "doiUrl": "https://doi.org/10.1149/2.0191802jes",
-          "title": "Template Controlled Synthesis of Mesoporous TiO<sub>2</sub>Particles for Efficient Photoanodes in Dye Sensitized Solar Cells",
+          "title": "Template Controlled Synthesis of Mesoporous TiO2Particles for Efficient Photoanodes in Dye Sensitized Solar Cells",
           "authors": [
             "Lin Liu",
             "Yi Zhang",
@@ -15457,7 +15457,7 @@
           "openAlexId": "W2057356436",
           "doi": "10.1039/c4cp01988a",
           "doiUrl": "https://doi.org/10.1039/c4cp01988a",
-          "title": "Non-conformal decoration of semiconductor nanowire surfaces with boron nitride (BN) molecules for stability enhancement: degradation-resistant Zn <sub>3</sub> P <sub>2</sub> , ZnO and Mg <sub>2</sub> Si nanowires",
+          "title": "Non-conformal decoration of semiconductor nanowire surfaces with boron nitride (BN) molecules for stability enhancement: degradation-resistant Zn 3 P 2 , ZnO and Mg 2 Si nanowires",
           "authors": [
             "Venkata Vasiraju",
             "Yongmin Kang",
@@ -15689,7 +15689,7 @@
           "openAlexId": "W4306884689",
           "doi": "10.1021/acsenergylett.2c02033",
           "doiUrl": "https://doi.org/10.1021/acsenergylett.2c02033",
-          "title": "How Low Can You Go? Defect Quantification at the 10<sup>15</sup> cm<sup>–3</sup> Level in Mixed-Cation Perovskites Using Differential Pulse Voltammetry",
+          "title": "How Low Can You Go? Defect Quantification at the 1015 cm–3 Level in Mixed-Cation Perovskites Using Differential Pulse Voltammetry",
           "authors": [
             "Michel De Keersmaecker",
             "Neal R. Armstrong",
@@ -16202,7 +16202,7 @@
           "openAlexId": "W4404830134",
           "doi": "10.1002/advs.202410666",
           "doiUrl": "https://doi.org/10.1002/advs.202410666",
-          "title": "Judicious Molecular Design of 5<i>H</i>‑Dithieno[3,2‑b:2′,3′‑d]Pyran‐based Hole‐Transporting Materials for Highly Efficient and Stable Perovskite Solar Cells",
+          "title": "Judicious Molecular Design of 5H‑Dithieno[3,2‑b:2′,3′‑d]Pyran‐based Hole‐Transporting Materials for Highly Efficient and Stable Perovskite Solar Cells",
           "authors": [
             "Kun‐Mu Lee",
             "Chia‐Hui Lin",
@@ -16324,7 +16324,7 @@
           "openAlexId": "W4392592989",
           "doi": "10.1002/smll.202310939",
           "doiUrl": "https://doi.org/10.1002/smll.202310939",
-          "title": "Interfacial Layer Materials with a Truxene Core for Dopant‐Free NiO<sub>x</sub>‐Based Inverted Perovskite Solar Cells",
+          "title": "Interfacial Layer Materials with a Truxene Core for Dopant‐Free NiOx‐Based Inverted Perovskite Solar Cells",
           "authors": [
             "Rajarathinam Ramanujam",
             "Hsiang‐Lin Hsu",
@@ -16494,7 +16494,7 @@
           "openAlexId": "W4380875590",
           "doi": "10.1002/cjoc.202300234",
           "doiUrl": "https://doi.org/10.1002/cjoc.202300234",
-          "title": "Recent Progresses on <scp>Dopant‐Free</scp> Organic Hole Transport Materials toward Efficient and Stable Perovskite Solar Cells<sup>†</sup>",
+          "title": "Recent Progresses on Dopant‐Free Organic Hole Transport Materials toward Efficient and Stable Perovskite Solar Cells†",
           "authors": [
             "Gang Xie",
             "Jintao Chen",
@@ -17051,7 +17051,7 @@
           "openAlexId": "W4283160736",
           "doi": "10.1021/acsaem.2c00197",
           "doiUrl": "https://doi.org/10.1021/acsaem.2c00197",
-          "title": "Impact of Alkyl Chain Length on the Properties of Fluorenyl-Based Linear Hole-Transport Materials in <i>p-i-n</i> Perovskites Solar Cells",
+          "title": "Impact of Alkyl Chain Length on the Properties of Fluorenyl-Based Linear Hole-Transport Materials in p-i-n Perovskites Solar Cells",
           "authors": [
             "Zhe Sun",
             "Zhengxu Liu",
@@ -17420,7 +17420,7 @@
           "openAlexId": "W4293162756",
           "doi": "10.1002/aoc.6873",
           "doiUrl": "https://doi.org/10.1002/aoc.6873",
-          "title": "Ruthenium (II) complexes bearing <i>N</i>‐heterocyclic carbene‐based C^N donor sets in dye‐sensitized solar cells",
+          "title": "Ruthenium (II) complexes bearing N‐heterocyclic carbene‐based C^N donor sets in dye‐sensitized solar cells",
           "authors": [
             "Angelina Mary",
             "Nimisha Jain",
@@ -18033,7 +18033,7 @@
           "openAlexId": "W4413444362",
           "doi": "10.1016/j.renene.2025.124243",
           "doiUrl": "https://doi.org/10.1016/j.renene.2025.124243",
-          "title": "Anchored CuO&amp;Cu2O nanoparticles on carbon-based planar as a hole transport layer in flexible perovskite solar cell",
+          "title": "Anchored CuO&Cu2O nanoparticles on carbon-based planar as a hole transport layer in flexible perovskite solar cell",
           "authors": [
             "Nazila Zarabinia",
             "Farid Nekouei",
@@ -18680,7 +18680,7 @@
           "openAlexId": "W4404830134",
           "doi": "10.1002/advs.202410666",
           "doiUrl": "https://doi.org/10.1002/advs.202410666",
-          "title": "Judicious Molecular Design of 5<i>H</i>‑Dithieno[3,2‑b:2′,3′‑d]Pyran‐based Hole‐Transporting Materials for Highly Efficient and Stable Perovskite Solar Cells",
+          "title": "Judicious Molecular Design of 5H‑Dithieno[3,2‑b:2′,3′‑d]Pyran‐based Hole‐Transporting Materials for Highly Efficient and Stable Perovskite Solar Cells",
           "authors": [
             "Kun‐Mu Lee",
             "Chia‐Hui Lin",
@@ -18754,7 +18754,7 @@
           "openAlexId": "W4402751830",
           "doi": "10.1007/s11224-024-02380-8",
           "doiUrl": "https://doi.org/10.1007/s11224-024-02380-8",
-          "title": "Computational insights into the structural, electronic, and optoelectronic properties of Sr2MgXO6 (X = S, Se) double perovskites: promising candidates for photovoltaic and optoelectronic applications",
+          "title": "Computational insights into the structural, electronic, and optoelectronic properties of Sr2MgXO6 (X = S, Se) double perovskites: promising candidates for photovoltaic and optoelectronic applications",
           "authors": [
             "Sana Ullah",
             "Muhammad Shafiullah",
@@ -18859,7 +18859,7 @@
           "openAlexId": "W4392592989",
           "doi": "10.1002/smll.202310939",
           "doiUrl": "https://doi.org/10.1002/smll.202310939",
-          "title": "Interfacial Layer Materials with a Truxene Core for Dopant‐Free NiO<sub>x</sub>‐Based Inverted Perovskite Solar Cells",
+          "title": "Interfacial Layer Materials with a Truxene Core for Dopant‐Free NiOx‐Based Inverted Perovskite Solar Cells",
           "authors": [
             "Rajarathinam Ramanujam",
             "Hsiang‐Lin Hsu",
@@ -19561,7 +19561,7 @@
           "openAlexId": "W4412487213",
           "doi": "10.1002/smll.202505961",
           "doiUrl": "https://doi.org/10.1002/smll.202505961",
-          "title": "Noncovalent Conformational Dopant‐Free Hole Transport Materials with Multisite Passivation for Stable <i>n‐i‐p</i> Perovskite Solar Cells",
+          "title": "Noncovalent Conformational Dopant‐Free Hole Transport Materials with Multisite Passivation for Stable n‐i‐p Perovskite Solar Cells",
           "authors": [
             "Mengde Zhai",
             "Naoyuki Shibayama",
@@ -19683,7 +19683,7 @@
           "openAlexId": "W4411244016",
           "doi": "10.1039/d5tc01565k",
           "doiUrl": "https://doi.org/10.1039/d5tc01565k",
-          "title": "Effect of <i>ortho</i> -fluorine substituted hole transport materials for perovskite solar cells: influence of rigid <i>vs.</i> flexible linkers",
+          "title": "Effect of ortho -fluorine substituted hole transport materials for perovskite solar cells: influence of rigid vs. flexible linkers",
           "authors": [
             "Telugu Bhim Raju",
             "Chathuranganie A. M. Senevirathne",
@@ -19820,7 +19820,7 @@
           "openAlexId": "W4404830134",
           "doi": "10.1002/advs.202410666",
           "doiUrl": "https://doi.org/10.1002/advs.202410666",
-          "title": "Judicious Molecular Design of 5<i>H</i>‑Dithieno[3,2‑b:2′,3′‑d]Pyran‐based Hole‐Transporting Materials for Highly Efficient and Stable Perovskite Solar Cells",
+          "title": "Judicious Molecular Design of 5H‑Dithieno[3,2‑b:2′,3′‑d]Pyran‐based Hole‐Transporting Materials for Highly Efficient and Stable Perovskite Solar Cells",
           "authors": [
             "Kun‐Mu Lee",
             "Chia‐Hui Lin",
@@ -20128,7 +20128,7 @@
           "openAlexId": "W4392592989",
           "doi": "10.1002/smll.202310939",
           "doiUrl": "https://doi.org/10.1002/smll.202310939",
-          "title": "Interfacial Layer Materials with a Truxene Core for Dopant‐Free NiO<sub>x</sub>‐Based Inverted Perovskite Solar Cells",
+          "title": "Interfacial Layer Materials with a Truxene Core for Dopant‐Free NiOx‐Based Inverted Perovskite Solar Cells",
           "authors": [
             "Rajarathinam Ramanujam",
             "Hsiang‐Lin Hsu",
@@ -20512,7 +20512,7 @@
           ],
           "journal": "Journal of Power Sources",
           "publicationYear": 2024,
-          "publicationDate": "2024-03-26",
+          "publicationDate": "2024-03-25",
           "volume": "602",
           "issue": "",
           "pages": "234383",
@@ -20522,7 +20522,7 @@
           "openAlexId": "W4390814429",
           "doi": "10.1021/acsaem.3c02932",
           "doiUrl": "https://doi.org/10.1021/acsaem.3c02932",
-          "title": "Enhancing Efficiency and Stability in Perovskite Solar Cells Through Blended Hole Transporting Materials Incorporating Benzo[<i>g</i>]quinoxaline-Conjugated Small Molecules",
+          "title": "Enhancing Efficiency and Stability in Perovskite Solar Cells Through Blended Hole Transporting Materials Incorporating Benzo[g]quinoxaline-Conjugated Small Molecules",
           "authors": [
             "Yuan Jay Chang",
             "Nai-Hwa Chen",
@@ -20544,18 +20544,45 @@
       "doi": "10.1002/asia.202300681",
       "title": "New Molecular Design, Step‐Saving Synthesis, and Applications of Indolocarbazole Core‐Based Oligo(hetero)arenes",
       "publicationYear": 2023,
-      "currentCitationCount": 0,
+      "currentCitationCount": 1,
       "sourceUrl": "https://api.openalex.org/works?filter=cites:W4386592311",
-      "citationsByYear": [],
-      "rawCitationsByYear": [],
-      "historyTotal": 0,
-      "rawHistoryTotal": 0,
+      "citationsByYear": [
+        {
+          "year": 2026,
+          "citations": 1
+        }
+      ],
+      "rawCitationsByYear": [
+        {
+          "year": 2026,
+          "citations": 1
+        }
+      ],
+      "historyTotal": 1,
+      "rawHistoryTotal": 1,
       "excludedInvalidCitationCount": 0,
       "excludedInvalidCitations": [],
       "unassignedCitationCount": 0,
-      "citingWorkCount": 0,
-      "citingArticlesWithDoiCount": 0,
-      "citingArticlesWithDoi": []
+      "citingWorkCount": 1,
+      "citingArticlesWithDoiCount": 1,
+      "citingArticlesWithDoi": [
+        {
+          "openAlexId": "W7203978501",
+          "doi": "10.1016/j.synthmet.2026.118280",
+          "doiUrl": "https://doi.org/10.1016/j.synthmet.2026.118280",
+          "title": "The evolutionary journey of indolocarbazoles in photovoltaic materials",
+          "authors": [
+            "Роман А. Иргашев"
+          ],
+          "journal": "Synthetic Metals",
+          "publicationYear": 2026,
+          "publicationDate": "2026-08-01",
+          "volume": "",
+          "issue": "",
+          "pages": "118280",
+          "type": "article"
+        }
+      ]
     },
     "W4388655704": {
       "doi": "10.1039/d3cc04699k",
@@ -20595,7 +20622,7 @@
           "openAlexId": "W7117245039",
           "doi": "10.1039/d5ta07841e",
           "doiUrl": "https://doi.org/10.1039/d5ta07841e",
-          "title": "Heteroatom engineering of <i>ortho</i> -fluorinated triarylamine based hole transport materials for enhanced performance in perovskite solar cells",
+          "title": "Heteroatom engineering of ortho -fluorinated triarylamine based hole transport materials for enhanced performance in perovskite solar cells",
           "authors": [
             "BHIM RAJU TELUGU",
             "Motonori Watanabe",
@@ -20684,7 +20711,7 @@
           "openAlexId": "W4412487213",
           "doi": "10.1002/smll.202505961",
           "doiUrl": "https://doi.org/10.1002/smll.202505961",
-          "title": "Noncovalent Conformational Dopant‐Free Hole Transport Materials with Multisite Passivation for Stable <i>n‐i‐p</i> Perovskite Solar Cells",
+          "title": "Noncovalent Conformational Dopant‐Free Hole Transport Materials with Multisite Passivation for Stable n‐i‐p Perovskite Solar Cells",
           "authors": [
             "Mengde Zhai",
             "Naoyuki Shibayama",
@@ -20763,7 +20790,7 @@
           "openAlexId": "W4411244016",
           "doi": "10.1039/d5tc01565k",
           "doiUrl": "https://doi.org/10.1039/d5tc01565k",
-          "title": "Effect of <i>ortho</i> -fluorine substituted hole transport materials for perovskite solar cells: influence of rigid <i>vs.</i> flexible linkers",
+          "title": "Effect of ortho -fluorine substituted hole transport materials for perovskite solar cells: influence of rigid vs. flexible linkers",
           "authors": [
             "Telugu Bhim Raju",
             "Chathuranganie A. M. Senevirathne",
@@ -20784,7 +20811,7 @@
           "openAlexId": "W4404830134",
           "doi": "10.1002/advs.202410666",
           "doiUrl": "https://doi.org/10.1002/advs.202410666",
-          "title": "Judicious Molecular Design of 5<i>H</i>‑Dithieno[3,2‑b:2′,3′‑d]Pyran‐based Hole‐Transporting Materials for Highly Efficient and Stable Perovskite Solar Cells",
+          "title": "Judicious Molecular Design of 5H‑Dithieno[3,2‑b:2′,3′‑d]Pyran‐based Hole‐Transporting Materials for Highly Efficient and Stable Perovskite Solar Cells",
           "authors": [
             "Kun‐Mu Lee",
             "Chia‐Hui Lin",
@@ -20818,7 +20845,7 @@
           "openAlexId": "W4392592989",
           "doi": "10.1002/smll.202310939",
           "doiUrl": "https://doi.org/10.1002/smll.202310939",
-          "title": "Interfacial Layer Materials with a Truxene Core for Dopant‐Free NiO<sub>x</sub>‐Based Inverted Perovskite Solar Cells",
+          "title": "Interfacial Layer Materials with a Truxene Core for Dopant‐Free NiOx‐Based Inverted Perovskite Solar Cells",
           "authors": [
             "Rajarathinam Ramanujam",
             "Hsiang‐Lin Hsu",
@@ -20968,7 +20995,7 @@
           "openAlexId": "W7117245039",
           "doi": "10.1039/d5ta07841e",
           "doiUrl": "https://doi.org/10.1039/d5ta07841e",
-          "title": "Heteroatom engineering of <i>ortho</i> -fluorinated triarylamine based hole transport materials for enhanced performance in perovskite solar cells",
+          "title": "Heteroatom engineering of ortho -fluorinated triarylamine based hole transport materials for enhanced performance in perovskite solar cells",
           "authors": [
             "BHIM RAJU TELUGU",
             "Motonori Watanabe",
@@ -21053,7 +21080,7 @@
           "openAlexId": "W4412487213",
           "doi": "10.1002/smll.202505961",
           "doiUrl": "https://doi.org/10.1002/smll.202505961",
-          "title": "Noncovalent Conformational Dopant‐Free Hole Transport Materials with Multisite Passivation for Stable <i>n‐i‐p</i> Perovskite Solar Cells",
+          "title": "Noncovalent Conformational Dopant‐Free Hole Transport Materials with Multisite Passivation for Stable n‐i‐p Perovskite Solar Cells",
           "authors": [
             "Mengde Zhai",
             "Naoyuki Shibayama",
@@ -21112,7 +21139,7 @@
           "openAlexId": "W4411244016",
           "doi": "10.1039/d5tc01565k",
           "doiUrl": "https://doi.org/10.1039/d5tc01565k",
-          "title": "Effect of <i>ortho</i> -fluorine substituted hole transport materials for perovskite solar cells: influence of rigid <i>vs.</i> flexible linkers",
+          "title": "Effect of ortho -fluorine substituted hole transport materials for perovskite solar cells: influence of rigid vs. flexible linkers",
           "authors": [
             "Telugu Bhim Raju",
             "Chathuranganie A. M. Senevirathne",
@@ -21133,7 +21160,7 @@
           "openAlexId": "W4404830134",
           "doi": "10.1002/advs.202410666",
           "doiUrl": "https://doi.org/10.1002/advs.202410666",
-          "title": "Judicious Molecular Design of 5<i>H</i>‑Dithieno[3,2‑b:2′,3′‑d]Pyran‐based Hole‐Transporting Materials for Highly Efficient and Stable Perovskite Solar Cells",
+          "title": "Judicious Molecular Design of 5H‑Dithieno[3,2‑b:2′,3′‑d]Pyran‐based Hole‐Transporting Materials for Highly Efficient and Stable Perovskite Solar Cells",
           "authors": [
             "Kun‐Mu Lee",
             "Chia‐Hui Lin",
@@ -21282,8 +21309,8 @@
           "journal": "Macromolecular Reaction Engineering",
           "publicationYear": 2026,
           "publicationDate": "2026-05-03",
-          "volume": "",
-          "issue": "",
+          "volume": "20",
+          "issue": "4",
           "pages": "",
           "type": "article"
         },
@@ -21518,7 +21545,7 @@
           "openAlexId": "W7202202975",
           "doi": "10.1021/acs.langmuir.6c03740",
           "doiUrl": "https://doi.org/10.1021/acs.langmuir.6c03740",
-          "title": "Physical-ChemicalSynergistic Interface Engineeringvia Mesoporous SnO2/Thiophene-Graphdiyne Heterostructurein Perovskite Solar Cells",
+          "title": "Physical-Chemical Synergistic Interface Engineering via Mesoporous SnO2/Thiophene-Graphdiyne Heterostructure in Perovskite Solar Cells",
           "authors": [
             "Yutongyang Fu",
             "Le Liu",
@@ -21707,7 +21734,7 @@
     },
     "W4404830134": {
       "doi": "10.1002/advs.202410666",
-      "title": "Judicious Molecular Design of 5<i>H</i>‑Dithieno[3,2‑b:2′,3′‑d]Pyran‐based Hole‐Transporting Materials for Highly Efficient and Stable Perovskite Solar Cells",
+      "title": "Judicious Molecular Design of 5H‑Dithieno[3,2‑b:2′,3′‑d]Pyran‐based Hole‐Transporting Materials for Highly Efficient and Stable Perovskite Solar Cells",
       "publicationYear": 2025,
       "currentCitationCount": 15,
       "sourceUrl": "https://api.openalex.org/works?filter=cites:W4404830134",
@@ -21829,7 +21856,7 @@
           "openAlexId": "W7117245039",
           "doi": "10.1039/d5ta07841e",
           "doiUrl": "https://doi.org/10.1039/d5ta07841e",
-          "title": "Heteroatom engineering of <i>ortho</i> -fluorinated triarylamine based hole transport materials for enhanced performance in perovskite solar cells",
+          "title": "Heteroatom engineering of ortho -fluorinated triarylamine based hole transport materials for enhanced performance in perovskite solar cells",
           "authors": [
             "BHIM RAJU TELUGU",
             "Motonori Watanabe",
@@ -21916,7 +21943,7 @@
           "openAlexId": "W4413486885",
           "doi": "10.1021/acsaem.5c02091",
           "doiUrl": "https://doi.org/10.1021/acsaem.5c02091",
-          "title": "Multifunctional Core-Substituted <i>N</i>-Phenylaniline for Linear Hole-Transport Materials Enabling Durable Perovskite Solar Cells",
+          "title": "Multifunctional Core-Substituted N-Phenylaniline for Linear Hole-Transport Materials Enabling Durable Perovskite Solar Cells",
           "authors": [
             "Zhihui Wang",
             "Zhaolong Ma",
@@ -21961,7 +21988,7 @@
           "openAlexId": "W4412487213",
           "doi": "10.1002/smll.202505961",
           "doiUrl": "https://doi.org/10.1002/smll.202505961",
-          "title": "Noncovalent Conformational Dopant‐Free Hole Transport Materials with Multisite Passivation for Stable <i>n‐i‐p</i> Perovskite Solar Cells",
+          "title": "Noncovalent Conformational Dopant‐Free Hole Transport Materials with Multisite Passivation for Stable n‐i‐p Perovskite Solar Cells",
           "authors": [
             "Mengde Zhai",
             "Naoyuki Shibayama",
@@ -22061,7 +22088,7 @@
           "openAlexId": "W4411244016",
           "doi": "10.1039/d5tc01565k",
           "doiUrl": "https://doi.org/10.1039/d5tc01565k",
-          "title": "Effect of <i>ortho</i> -fluorine substituted hole transport materials for perovskite solar cells: influence of rigid <i>vs.</i> flexible linkers",
+          "title": "Effect of ortho -fluorine substituted hole transport materials for perovskite solar cells: influence of rigid vs. flexible linkers",
           "authors": [
             "Telugu Bhim Raju",
             "Chathuranganie A. M. Senevirathne",
@@ -22082,7 +22109,7 @@
           "openAlexId": "W4413958177",
           "doi": "10.1039/d5cp01787d",
           "doiUrl": "https://doi.org/10.1039/d5cp01787d",
-          "title": "Effect of the donor unit heterocyclic substitution strategy on the performance of Zn <sup>II</sup> porphyrin-based hole transport materials",
+          "title": "Effect of the donor unit heterocyclic substitution strategy on the performance of Zn II porphyrin-based hole transport materials",
           "authors": [
             "Xueling Zhang",
             "Peng Song",
@@ -22118,7 +22145,7 @@
     },
     "W4411847970": {
       "doi": "10.1016/j.seppur.2025.134157",
-      "title": "MOF- &amp; COF-integrated composite separators/membranes: innovations for sustainable and high-performance redox flow batteries",
+      "title": "MOF- & COF-integrated composite separators/membranes: innovations for sustainable and high-performance redox flow batteries",
       "publicationYear": 2025,
       "currentCitationCount": 6,
       "sourceUrl": "https://api.openalex.org/works?filter=cites:W4411847970",
@@ -22557,7 +22584,7 @@
           "openAlexId": "W7120075466",
           "doi": "10.1002/solr.202500762",
           "doiUrl": "https://doi.org/10.1002/solr.202500762",
-          "title": "Solution‐Processed Magnesium Oxide Buffer Layer for Improved Stability of CsPbI <sub>2</sub> Br Perovskite Solar Cells",
+          "title": "Solution‐Processed Magnesium Oxide Buffer Layer for Improved Stability of CsPbI 2 Br Perovskite Solar Cells",
           "authors": [
             "Zhuldyz Yelzhanova",
             "Gaukhar Nigmetova",
