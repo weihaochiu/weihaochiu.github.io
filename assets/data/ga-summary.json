@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-24T02:37:54Z",
+  "generatedAt": "2026-08-25T02:31:26Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 189,
-    "activeUsers": 51,
-    "sessions": 97,
-    "engagementRate": 0.4742268041237113
+    "pageViews": 186,
+    "activeUsers": 50,
+    "sessions": 95,
+    "engagementRate": 0.47368421052631576
   },
   "monthlyTrend": [
     {
@@ -27,8 +27,8 @@
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 55,
-      "activeUsers": 29
+      "pageViews": 53,
+      "activeUsers": 28
     },
     {
       "title": "Research | Wei-Hao Chiu",
@@ -37,16 +37,16 @@
       "activeUsers": 6
     },
     {
-      "title": "Publications | Wei-Hao Chiu",
-      "path": "/publications.html",
-      "pageViews": 24,
-      "activeUsers": 7
-    },
-    {
       "title": "Patents | Wei-Hao Chiu",
       "path": "/patents.html",
       "pageViews": 23,
       "activeUsers": 4
+    },
+    {
+      "title": "Publications | Wei-Hao Chiu",
+      "path": "/publications.html",
+      "pageViews": 23,
+      "activeUsers": 6
     },
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
@@ -118,8 +118,8 @@
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 50,
-      "activeUsers": 45
+      "sessions": 48,
+      "activeUsers": 44
     },
     {
       "channel": "Organic Search",
@@ -136,8 +136,8 @@
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 50,
-      "activeUsers": 45
+      "sessions": 48,
+      "activeUsers": 44
     },
     {
       "source": "google",
@@ -171,8 +171,8 @@
     },
     {
       "country": "Taiwan",
-      "activeUsers": 10,
-      "pageViews": 124
+      "activeUsers": 9,
+      "pageViews": 121
     },
     {
       "country": "India",
@@ -202,7 +202,7 @@
     },
     {
       "device": "mobile",
-      "activeUsers": 6
+      "activeUsers": 5
     }
   ],
   "academicEvents": [
