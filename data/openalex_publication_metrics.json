@@ -5,7 +5,7 @@
   "publicationCount": 40,
   "verifiedCount": 38,
   "notFoundCount": 2,
-  "lastSuccessfulUpdate": "2026-08-25T03:14:30Z",
+  "lastSuccessfulUpdate": "2026-08-26T03:27:35Z",
   "records": {
     "10.1016/j.cej.2026.177494": {
       "status": "verified",
@@ -80,7 +80,7 @@
       "url": "https://openalex.org/W4413117344",
       "citationCount": 0,
       "fwci": 0.0,
-      "citationPercentile": 0.10645447,
+      "citationPercentile": 0.1076607,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-08-24T07:32:12.397491"
@@ -131,8 +131,8 @@
       "openAlexId": "W4404830134",
       "url": "https://openalex.org/W4404830134",
       "citationCount": 15,
-      "fwci": 1.8529,
-      "citationPercentile": 0.85671281,
+      "fwci": 1.8138,
+      "citationPercentile": 0.85355743,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-08-23T07:36:19.812096"
@@ -222,8 +222,8 @@
       "openAlexId": "W4386592311",
       "url": "https://openalex.org/W4386592311",
       "citationCount": 1,
-      "fwci": 0.0838,
-      "citationPercentile": 0.36976404,
+      "fwci": 0.0822,
+      "citationPercentile": 0.35877467,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-08-23T07:36:19.812096"
