@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-25T02:31:26Z",
+  "generatedAt": "2026-08-26T02:39:46Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 186,
-    "activeUsers": 50,
-    "sessions": 95,
-    "engagementRate": 0.47368421052631576
+    "pageViews": 139,
+    "activeUsers": 47,
+    "sessions": 85,
+    "engagementRate": 0.4117647058823529
   },
   "monthlyTrend": [
     {
@@ -27,43 +27,25 @@
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 53,
-      "activeUsers": 28
+      "pageViews": 47,
+      "activeUsers": 27
     },
     {
       "title": "Research | Wei-Hao Chiu",
       "path": "/research.html",
-      "pageViews": 26,
-      "activeUsers": 6
-    },
-    {
-      "title": "Patents | Wei-Hao Chiu",
-      "path": "/patents.html",
-      "pageViews": 23,
-      "activeUsers": 4
+      "pageViews": 25,
+      "activeUsers": 5
     },
     {
       "title": "Publications | Wei-Hao Chiu",
       "path": "/publications.html",
-      "pageViews": 23,
-      "activeUsers": 6
+      "pageViews": 21,
+      "activeUsers": 5
     },
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/index.html",
-      "pageViews": 11,
-      "activeUsers": 4
-    },
-    {
-      "title": "About | Wei-Hao Chiu",
-      "path": "/about.html",
-      "pageViews": 6,
-      "activeUsers": 3
-    },
-    {
-      "title": "Research Projects | Wei-Hao Chiu",
-      "path": "/projects.html",
-      "pageViews": 6,
+      "pageViews": 9,
       "activeUsers": 3
     },
     {
@@ -77,6 +59,12 @@
       "path": "/publications/10-1016-j-seppur-2025-134157.html",
       "pageViews": 3,
       "activeUsers": 1
+    },
+    {
+      "title": "Patents | Wei-Hao Chiu",
+      "path": "/patents.html",
+      "pageViews": 3,
+      "activeUsers": 2
     },
     {
       "title": "Reliability enhancement of PVDF-HFP modified perovskite solar cells under synergistic space-relevant stress conditions | Wei-Hao Chiu",
@@ -113,17 +101,29 @@
       "path": "/publications/10-1016-j-solmat-2025-114015.html",
       "pageViews": 2,
       "activeUsers": 1
+    },
+    {
+      "title": "About | Wei-Hao Chiu",
+      "path": "/about.html",
+      "pageViews": 1,
+      "activeUsers": 1
+    },
+    {
+      "title": "Efficient electron transport in tetrapod-like ZnO metal-free dye-sensitized solar cells | Wei-Hao Chiu",
+      "path": "/publications/10-1039-b902595m.html",
+      "pageViews": 1,
+      "activeUsers": 1
     }
   ],
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 48,
-      "activeUsers": 44
+      "sessions": 45,
+      "activeUsers": 41
     },
     {
       "channel": "Organic Search",
-      "sessions": 46,
+      "sessions": 39,
       "activeUsers": 5
     },
     {
@@ -136,13 +136,13 @@
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 48,
-      "activeUsers": 44
+      "sessions": 45,
+      "activeUsers": 41
     },
     {
       "source": "google",
       "medium": "organic",
-      "sessions": 43,
+      "sessions": 36,
       "activeUsers": 2
     },
     {
@@ -171,18 +171,18 @@
     },
     {
       "country": "Taiwan",
-      "activeUsers": 9,
-      "pageViews": 121
-    },
-    {
-      "country": "India",
-      "activeUsers": 2,
-      "pageViews": 25
+      "activeUsers": 7,
+      "pageViews": 86
     },
     {
       "country": "Germany",
       "activeUsers": 1,
       "pageViews": 1
+    },
+    {
+      "country": "India",
+      "activeUsers": 1,
+      "pageViews": 13
     },
     {
       "country": "Pakistan",
@@ -198,18 +198,14 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 45
+      "activeUsers": 43
     },
     {
       "device": "mobile",
-      "activeUsers": 5
+      "activeUsers": 4
     }
   ],
   "academicEvents": [
-    {
-      "eventName": "patent_click",
-      "eventCount": 13
-    },
     {
       "eventName": "doi_click",
       "eventCount": 5
@@ -220,6 +216,10 @@
     },
     {
       "eventName": "openalex_click",
+      "eventCount": 2
+    },
+    {
+      "eventName": "patent_click",
       "eventCount": 2
     },
     {
