@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-26T02:39:46Z",
+  "generatedAt": "2026-08-27T11:12:40Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 139,
-    "activeUsers": 47,
-    "sessions": 85,
-    "engagementRate": 0.4117647058823529
+    "pageViews": 135,
+    "activeUsers": 46,
+    "sessions": 82,
+    "engagementRate": 0.3902439024390244
   },
   "monthlyTrend": [
     {
@@ -27,8 +27,8 @@
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 47,
-      "activeUsers": 27
+      "pageViews": 44,
+      "activeUsers": 26
     },
     {
       "title": "Research | Wei-Hao Chiu",
@@ -39,7 +39,7 @@
     {
       "title": "Publications | Wei-Hao Chiu",
       "path": "/publications.html",
-      "pageViews": 21,
+      "pageViews": 20,
       "activeUsers": 5
     },
     {
@@ -118,12 +118,12 @@
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 45,
-      "activeUsers": 41
+      "sessions": 43,
+      "activeUsers": 40
     },
     {
       "channel": "Organic Search",
-      "sessions": 39,
+      "sessions": 38,
       "activeUsers": 5
     },
     {
@@ -136,13 +136,13 @@
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 45,
-      "activeUsers": 41
+      "sessions": 43,
+      "activeUsers": 40
     },
     {
       "source": "google",
       "medium": "organic",
-      "sessions": 36,
+      "sessions": 35,
       "activeUsers": 2
     },
     {
@@ -171,8 +171,8 @@
     },
     {
       "country": "Taiwan",
-      "activeUsers": 7,
-      "pageViews": 86
+      "activeUsers": 6,
+      "pageViews": 82
     },
     {
       "country": "Germany",
@@ -198,7 +198,7 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 43
+      "activeUsers": 42
     },
     {
       "device": "mobile",
@@ -208,11 +208,7 @@
   "academicEvents": [
     {
       "eventName": "doi_click",
-      "eventCount": 5
-    },
-    {
-      "eventName": "email_click",
-      "eventCount": 2
+      "eventCount": 4
     },
     {
       "eventName": "openalex_click",
@@ -223,11 +219,7 @@
       "eventCount": 2
     },
     {
-      "eventName": "scholar_click",
-      "eventCount": 2
-    },
-    {
-      "eventName": "orcid_click",
+      "eventName": "email_click",
       "eventCount": 1
     },
     {
