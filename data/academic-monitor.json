@@ -1,11 +1,11 @@
 {
   "schemaVersion": 3,
-  "generatedAt": "2026-08-24T10:36:05+08:00",
+  "generatedAt": "2026-08-27T19:09:06+08:00",
   "repository": "https://github.com/weihaochiu/weihaochiu.github.io",
   "status": "completed",
   "summary": {
     "publications": 2,
-    "patents": 17,
+    "patents": 16,
     "projects": 0,
     "publicationTypes": {
       "international-journal": 1,
@@ -14,7 +14,7 @@
       "other": 1,
       "unclassified": 0
     },
-    "totalCandidates": 19,
+    "totalCandidates": 18,
     "sourceErrors": 0,
     "sourceWarnings": 0,
     "resolvedRecordsSuppressed": 0
@@ -313,64 +313,6 @@
         }
       ],
       "reviewKey": "patent:number:TWI884762B"
-    },
-    {
-      "type": "patent",
-      "confidence": "possible",
-      "canonicalId": "TW202341510A",
-      "number": "TW202341510A",
-      "titleEn": "Solar cell module having groove structure and manufacturing method thereof",
-      "titleZh": "",
-      "inventorsEn": [
-        "李坤穆",
-        "邱偉豪",
-        "賴朝松",
-        "長庚大學"
-      ],
-      "inventorsZh": "",
-      "assigneeEn": "",
-      "assigneeZh": "",
-      "jurisdiction": "Taiwan",
-      "applicationNumber": "TW111113520A",
-      "priorityDate": "",
-      "filingDate": "2022-04-08",
-      "publicationDate": "",
-      "grantDate": "2024-08-11",
-      "documentStage": "Granted",
-      "legalStatus": "",
-      "status": "Granted",
-      "abstract": "The present invention discloses a solar cell module having groove structure and manufacturing method thereof. The groove structure of the solar cell module sinks into the substrate. The groove structure may be filled with the electrode which is regarded as the bottom wire embedded inside the substrate. Therefore, the solar cell layer and the top wire layer of the solar cell module having groove structure of the present invention may be directly manufactured on the entire surface of the transparent conductive layer, significantly increasing the energy conversion space and energy conversion efficiency.",
-      "classifications": [
-        "zh"
-      ],
-      "detectionNotes": [
-        "The publication number is not an alias of a verified record in patents.json.",
-        "The exact patent page lists Wei-Hao Chiu or 邱偉豪 as an inventor.",
-        "Name matching can still include a different person with the same name; verify assignee and technical field."
-      ],
-      "sources": [
-        {
-          "name": "Google Patents exact record",
-          "url": "https://patents.google.com/patent/TW202341510A/en"
-        },
-        {
-          "name": "Google Patents search",
-          "url": "https://patents.google.com/?q=inventor%3D%22%E9%82%B1%E5%81%89%E8%B1%AA%22"
-        },
-        {
-          "name": "TIPO search",
-          "url": "https://twpat1.tipo.gov.tw/twpatc/twpatkm"
-        },
-        {
-          "name": "Espacenet",
-          "url": "https://worldwide.espacenet.com/"
-        },
-        {
-          "name": "WIPO PATENTSCOPE",
-          "url": "https://patentscope.wipo.int/search/en/search.jsf"
-        }
-      ],
-      "reviewKey": "patent:number:TW202341510A"
     },
     {
       "type": "patent",
@@ -1247,7 +1189,7 @@
       "url": "https://pub.orcid.org/v3.0/0000-0003-4484-3117/works",
       "status": "success",
       "message": "",
-      "checkedAt": "2026-08-24T10:35:56+08:00",
+      "checkedAt": "2026-08-27T19:09:02+08:00",
       "candidateCount": 2
     },
     {
@@ -1255,7 +1197,7 @@
       "url": "https://patents.google.com/?q=inventor%3D%22Wei-Hao+Chiu%22",
       "status": "success",
       "message": "",
-      "checkedAt": "2026-08-24T10:35:56+08:00",
+      "checkedAt": "2026-08-27T19:09:02+08:00",
       "candidateCount": 10
     },
     {
@@ -1263,7 +1205,7 @@
       "url": "https://patents.google.com/?q=inventor%3D%22%E9%82%B1%E5%81%89%E8%B1%AA%22",
       "status": "success",
       "message": "",
-      "checkedAt": "2026-08-24T10:36:01+08:00",
+      "checkedAt": "2026-08-27T19:09:04+08:00",
       "candidateCount": 10
     },
     {
@@ -1271,7 +1213,7 @@
       "url": "https://www.grb.gov.tw/advq?queryStr=%E9%82%B1%E5%81%89%E8%B1%AA&queryType=grb05",
       "status": "success",
       "message": "GRB Playwright discovery completed; 0 pending record(s) require review.",
-      "checkedAt": "2026-08-24T10:36:05+08:00",
+      "checkedAt": "2026-08-27T19:09:06+08:00",
       "candidateCount": 0
     }
   ],
