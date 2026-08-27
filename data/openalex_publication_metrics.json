@@ -5,7 +5,7 @@
   "publicationCount": 40,
   "verifiedCount": 38,
   "notFoundCount": 2,
-  "lastSuccessfulUpdate": "2026-08-26T03:27:35Z",
+  "lastSuccessfulUpdate": "2026-08-27T12:51:13Z",
   "records": {
     "10.1016/j.cej.2026.177494": {
       "status": "verified",
@@ -80,7 +80,7 @@
       "url": "https://openalex.org/W4413117344",
       "citationCount": 0,
       "fwci": 0.0,
-      "citationPercentile": 0.1076607,
+      "citationPercentile": 0.10731476,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-08-24T07:32:12.397491"
