@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-27T11:12:40Z",
+  "generatedAt": "2026-08-28T12:47:50Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 135,
+    "pageViews": 126,
     "activeUsers": 46,
-    "sessions": 82,
-    "engagementRate": 0.3902439024390244
+    "sessions": 80,
+    "engagementRate": 0.3875
   },
   "monthlyTrend": [
     {
@@ -27,7 +27,7 @@
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 44,
+      "pageViews": 42,
       "activeUsers": 26
     },
     {
@@ -39,7 +39,7 @@
     {
       "title": "Publications | Wei-Hao Chiu",
       "path": "/publications.html",
-      "pageViews": 20,
+      "pageViews": 18,
       "activeUsers": 5
     },
     {
@@ -55,22 +55,10 @@
       "activeUsers": 3
     },
     {
-      "title": "MOF-& COF-integrated composite separators/membranes: innovations for sustainable and high-performance redox flow batteries | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-seppur-2025-134157.html",
-      "pageViews": 3,
-      "activeUsers": 1
-    },
-    {
       "title": "Patents | Wei-Hao Chiu",
       "path": "/patents.html",
       "pageViews": 3,
       "activeUsers": 2
-    },
-    {
-      "title": "Reliability enhancement of PVDF-HFP modified perovskite solar cells under synergistic space-relevant stress conditions | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-cej-2026-177494.html",
-      "pageViews": 3,
-      "activeUsers": 1
     },
     {
       "title": "Study on Electron Transport Mechanism in Metal Oxide Photoanode Electrode for Dye-Sensitized Solar Cells | Wei-Hao Chiu",
@@ -97,8 +85,14 @@
       "activeUsers": 1
     },
     {
-      "title": "Impact of proton radiation on the performance of single-junction perovskite solar cells for space applications | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-solmat-2025-114015.html",
+      "title": "MOF-& COF-integrated composite separators/membranes: innovations for sustainable and high-performance redox flow batteries | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-seppur-2025-134157.html",
+      "pageViews": 2,
+      "activeUsers": 1
+    },
+    {
+      "title": "Reliability enhancement of PVDF-HFP modified perovskite solar cells under synergistic space-relevant stress conditions | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-cej-2026-177494.html",
       "pageViews": 2,
       "activeUsers": 1
     },
@@ -109,8 +103,14 @@
       "activeUsers": 1
     },
     {
-      "title": "Efficient electron transport in tetrapod-like ZnO metal-free dye-sensitized solar cells | Wei-Hao Chiu",
-      "path": "/publications/10-1039-b902595m.html",
+      "title": "Fluorinated Pentafulvalene‐Fused Hole‐Transporting Material Enhances the Performance of Perovskite Solar Cells with Efficiency Exceeding 23% | Wei-Hao Chiu",
+      "path": "/publications/10-1002-adfm-202306367.html",
+      "pageViews": 1,
+      "activeUsers": 1
+    },
+    {
+      "title": "Improved performance of flexible dye-sensitized solar cells by introducing an interfacial layer on Ti substrates | Wei-Hao Chiu",
+      "path": "/publications/10-1039-c0jm04099a.html",
       "pageViews": 1,
       "activeUsers": 1
     }
@@ -123,7 +123,7 @@
     },
     {
       "channel": "Organic Search",
-      "sessions": 38,
+      "sessions": 36,
       "activeUsers": 5
     },
     {
@@ -142,7 +142,7 @@
     {
       "source": "google",
       "medium": "organic",
-      "sessions": 35,
+      "sessions": 33,
       "activeUsers": 2
     },
     {
@@ -172,7 +172,7 @@
     {
       "country": "Taiwan",
       "activeUsers": 6,
-      "pageViews": 82
+      "pageViews": 73
     },
     {
       "country": "Germany",
