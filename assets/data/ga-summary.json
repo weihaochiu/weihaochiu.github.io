@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-28T12:47:50Z",
+  "generatedAt": "2026-08-29T07:53:34Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 126,
-    "activeUsers": 46,
+    "pageViews": 127,
+    "activeUsers": 49,
     "sessions": 80,
-    "engagementRate": 0.3875
+    "engagementRate": 0.375
   },
   "monthlyTrend": [
     {
@@ -19,8 +19,8 @@
     },
     {
       "month": "2026-08",
-      "pageViews": 120,
-      "activeUsers": 46
+      "pageViews": 127,
+      "activeUsers": 49
     }
   ],
   "topPages": [
@@ -28,25 +28,25 @@
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
       "pageViews": 42,
-      "activeUsers": 26
+      "activeUsers": 28
     },
     {
       "title": "Research | Wei-Hao Chiu",
       "path": "/research.html",
-      "pageViews": 25,
-      "activeUsers": 5
+      "pageViews": 26,
+      "activeUsers": 6
     },
     {
       "title": "Publications | Wei-Hao Chiu",
       "path": "/publications.html",
-      "pageViews": 18,
-      "activeUsers": 5
+      "pageViews": 17,
+      "activeUsers": 6
     },
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/index.html",
-      "pageViews": 9,
-      "activeUsers": 3
+      "pageViews": 10,
+      "activeUsers": 4
     },
     {
       "title": "Modified Spontaneous Emission in a Tightly Pumped Nd:YVO4 Laser with Degenerate Resonator | Wei-Hao Chiu",
@@ -57,14 +57,20 @@
     {
       "title": "Patents | Wei-Hao Chiu",
       "path": "/patents.html",
-      "pageViews": 3,
-      "activeUsers": 2
+      "pageViews": 4,
+      "activeUsers": 3
     },
     {
       "title": "Study on Electron Transport Mechanism in Metal Oxide Photoanode Electrode for Dye-Sensitized Solar Cells | Wei-Hao Chiu",
       "path": "/publications/phd-thesis-2011.html",
       "pageViews": 3,
       "activeUsers": 3
+    },
+    {
+      "title": "About | Wei-Hao Chiu",
+      "path": "/about.html",
+      "pageViews": 2,
+      "activeUsers": 2
     },
     {
       "title": "Branched ZnO nanowires for enhancing energy conversion efficiency of dye-sensitized solar cells | Wei-Hao Chiu",
@@ -79,27 +85,9 @@
       "activeUsers": 2
     },
     {
-      "title": "Heterogeneous graphite felt electrodes decorated with nanostructured graphitic carbon nitride for enhanced redox kinetics in vanadium redox flow batteries | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-jpowsour-2025-239216.html",
-      "pageViews": 2,
-      "activeUsers": 1
-    },
-    {
       "title": "MOF-& COF-integrated composite separators/membranes: innovations for sustainable and high-performance redox flow batteries | Wei-Hao Chiu",
       "path": "/publications/10-1016-j-seppur-2025-134157.html",
       "pageViews": 2,
-      "activeUsers": 1
-    },
-    {
-      "title": "Reliability enhancement of PVDF-HFP modified perovskite solar cells under synergistic space-relevant stress conditions | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-cej-2026-177494.html",
-      "pageViews": 2,
-      "activeUsers": 1
-    },
-    {
-      "title": "About | Wei-Hao Chiu",
-      "path": "/about.html",
-      "pageViews": 1,
       "activeUsers": 1
     },
     {
@@ -109,8 +97,20 @@
       "activeUsers": 1
     },
     {
+      "title": "Heterogeneous graphite felt electrodes decorated with nanostructured graphitic carbon nitride for enhanced redox kinetics in vanadium redox flow batteries | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-jpowsour-2025-239216.html",
+      "pageViews": 1,
+      "activeUsers": 1
+    },
+    {
       "title": "Improved performance of flexible dye-sensitized solar cells by introducing an interfacial layer on Ti substrates | Wei-Hao Chiu",
       "path": "/publications/10-1039-c0jm04099a.html",
+      "pageViews": 1,
+      "activeUsers": 1
+    },
+    {
+      "title": "Microstructure and Biological Properties of Electrospun In Situ Polymerization of Polycaprolactone-Graft-Polyacrylic Acid Nanofibers and Its Composite Nanofiber Dressings | Wei-Hao Chiu",
+      "path": "/publications/10-3390-polym13234246.html",
       "pageViews": 1,
       "activeUsers": 1
     }
@@ -118,13 +118,18 @@
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 43,
-      "activeUsers": 40
+      "sessions": 44,
+      "activeUsers": 41
     },
     {
       "channel": "Organic Search",
-      "sessions": 36,
-      "activeUsers": 5
+      "sessions": 34,
+      "activeUsers": 6
+    },
+    {
+      "channel": "Unassigned",
+      "sessions": 2,
+      "activeUsers": 2
     },
     {
       "channel": "Referral",
@@ -136,20 +141,26 @@
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 43,
-      "activeUsers": 40
+      "sessions": 44,
+      "activeUsers": 41
     },
     {
       "source": "google",
       "medium": "organic",
-      "sessions": 33,
-      "activeUsers": 2
+      "sessions": 31,
+      "activeUsers": 3
     },
     {
       "source": "bing",
       "medium": "organic",
       "sessions": 3,
       "activeUsers": 3
+    },
+    {
+      "source": "(not set)",
+      "medium": "(not set)",
+      "sessions": 2,
+      "activeUsers": 2
     },
     {
       "source": "cgu.edu.tw",
@@ -161,8 +172,8 @@
   "topCountries": [
     {
       "country": "United States",
-      "activeUsers": 19,
-      "pageViews": 20
+      "activeUsers": 20,
+      "pageViews": 21
     },
     {
       "country": "China",
@@ -171,8 +182,13 @@
     },
     {
       "country": "Taiwan",
-      "activeUsers": 6,
-      "pageViews": 73
+      "activeUsers": 7,
+      "pageViews": 68
+    },
+    {
+      "country": "Belgium",
+      "activeUsers": 1,
+      "pageViews": 5
     },
     {
       "country": "Germany",
@@ -198,7 +214,7 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 42
+      "activeUsers": 45
     },
     {
       "device": "mobile",
@@ -211,11 +227,11 @@
       "eventCount": 4
     },
     {
-      "eventName": "openalex_click",
-      "eventCount": 2
+      "eventName": "patent_click",
+      "eventCount": 3
     },
     {
-      "eventName": "patent_click",
+      "eventName": "openalex_click",
       "eventCount": 2
     },
     {
