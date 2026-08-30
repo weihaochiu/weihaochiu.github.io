@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-29T07:53:34Z",
+  "generatedAt": "2026-08-30T06:41:30Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 127,
-    "activeUsers": 49,
-    "sessions": 80,
-    "engagementRate": 0.375
+    "pageViews": 129,
+    "activeUsers": 52,
+    "sessions": 82,
+    "engagementRate": 0.36585365853658536
   },
   "monthlyTrend": [
     {
@@ -19,33 +19,33 @@
     },
     {
       "month": "2026-08",
-      "pageViews": 127,
-      "activeUsers": 49
+      "pageViews": 131,
+      "activeUsers": 52
     }
   ],
   "topPages": [
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 42,
-      "activeUsers": 28
+      "pageViews": 44,
+      "activeUsers": 30
     },
     {
       "title": "Research | Wei-Hao Chiu",
       "path": "/research.html",
-      "pageViews": 26,
+      "pageViews": 27,
       "activeUsers": 6
     },
     {
       "title": "Publications | Wei-Hao Chiu",
       "path": "/publications.html",
-      "pageViews": 17,
-      "activeUsers": 6
+      "pageViews": 18,
+      "activeUsers": 7
     },
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/index.html",
-      "pageViews": 10,
+      "pageViews": 8,
       "activeUsers": 4
     },
     {
@@ -118,62 +118,51 @@
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 44,
-      "activeUsers": 41
+      "sessions": 45,
+      "activeUsers": 42
     },
     {
       "channel": "Organic Search",
-      "sessions": 34,
-      "activeUsers": 6
-    },
-    {
-      "channel": "Unassigned",
-      "sessions": 2,
-      "activeUsers": 2
+      "sessions": 35,
+      "activeUsers": 8
     },
     {
       "channel": "Referral",
-      "sessions": 1,
-      "activeUsers": 1
+      "sessions": 2,
+      "activeUsers": 2
     }
   ],
   "trafficSources": [
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 44,
-      "activeUsers": 41
+      "sessions": 45,
+      "activeUsers": 42
     },
     {
       "source": "google",
       "medium": "organic",
       "sessions": 31,
-      "activeUsers": 3
+      "activeUsers": 4
     },
     {
       "source": "bing",
       "medium": "organic",
-      "sessions": 3,
-      "activeUsers": 3
-    },
-    {
-      "source": "(not set)",
-      "medium": "(not set)",
-      "sessions": 2,
-      "activeUsers": 2
+      "sessions": 4,
+      "activeUsers": 4
     },
     {
       "source": "cgu.edu.tw",
       "medium": "referral",
-      "sessions": 1,
-      "activeUsers": 1
+      "sessions": 2,
+      "activeUsers": 2
     }
   ],
   "topCountries": [
     {
       "country": "United States",
-      "activeUsers": 20,
-      "pageViews": 21
+      "activeUsers": 22,
+      "pageViews": 23
     },
     {
       "country": "China",
@@ -183,7 +172,7 @@
     {
       "country": "Taiwan",
       "activeUsers": 7,
-      "pageViews": 68
+      "pageViews": 66
     },
     {
       "country": "Belgium",
@@ -198,10 +187,15 @@
     {
       "country": "India",
       "activeUsers": 1,
-      "pageViews": 13
+      "pageViews": 14
     },
     {
       "country": "Pakistan",
+      "activeUsers": 1,
+      "pageViews": 1
+    },
+    {
+      "country": "Philippines",
       "activeUsers": 1,
       "pageViews": 1
     },
@@ -214,11 +208,11 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 45
+      "activeUsers": 47
     },
     {
       "device": "mobile",
-      "activeUsers": 4
+      "activeUsers": 5
     }
   ],
   "academicEvents": [
