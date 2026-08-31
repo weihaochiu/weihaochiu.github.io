@@ -2,7 +2,7 @@
   "schemaVersion": 3,
   "source": "OpenAlex Works API",
   "status": "success_with_exclusions",
-  "lastSuccessfulUpdate": "2026-08-24T04:40:55.984940Z",
+  "lastSuccessfulUpdate": "2026-08-31T10:25:13.844948Z",
   "workCount": 38,
   "missingPublicationYearCount": 0,
   "totalCitationsFromPublicationMetrics": 992,
@@ -2109,7 +2109,7 @@
           "volume": "67",
           "issue": "3",
           "pages": "660-664",
-          "type": "article"
+          "type": "book-chapter"
         },
         {
           "openAlexId": "W2067785808",
@@ -12738,7 +12738,7 @@
           "volume": "156",
           "issue": "4",
           "pages": "",
-          "type": "book-chapter"
+          "type": "article"
         },
         {
           "openAlexId": "W4411877798",
@@ -18227,7 +18227,7 @@
           "volume": "34",
           "issue": "36",
           "pages": "",
-          "type": "article"
+          "type": "book-chapter"
         },
         {
           "openAlexId": "W4366828572",
@@ -19883,7 +19883,7 @@
           ],
           "journal": "Dyes and Pigments",
           "publicationYear": 2024,
-          "publicationDate": "2024-09-21",
+          "publicationDate": "2024-09-20",
           "volume": "232",
           "issue": "",
           "pages": "112464",
@@ -20576,8 +20576,8 @@
           ],
           "journal": "Synthetic Metals",
           "publicationYear": 2026,
-          "publicationDate": "2026-08-01",
-          "volume": "",
+          "publicationDate": "2026-08-22",
+          "volume": "321",
           "issue": "",
           "pages": "118280",
           "type": "article"
