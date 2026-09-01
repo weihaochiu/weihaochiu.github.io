@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-08-13T03:27:53.309622Z",
+  "lastUpdated": "2026-09-01T08:43:42.128911Z",
   "journalCount": 22,
   "activeJournalCount": 22,
   "sourcePolicy": {
@@ -546,11 +546,11 @@
       "openAlexId": "S135204980",
       "openAlexUrl": "https://openalex.org/S135204980",
       "openAlexStats": {
-        "worksCount": 43041,
-        "citedByCount": 2535140,
-        "twoYearMeanCitedness": 14.589329946014608,
-        "hIndex": 479,
-        "i10Index": 27206
+        "worksCount": 43668,
+        "citedByCount": 2568598,
+        "twoYearMeanCitedness": 15.043127179298954,
+        "hIndex": 480,
+        "i10Index": 27596
       },
       "foundedYear": 2001,
       "publicationCount": 1,
@@ -731,11 +731,11 @@
       "openAlexId": "S2737737698",
       "openAlexUrl": "https://openalex.org/S2737737698",
       "openAlexStats": {
-        "worksCount": 21004,
-        "citedByCount": 659276,
-        "twoYearMeanCitedness": 8.622959955417562,
-        "hIndex": 277,
-        "i10Index": 10196
+        "worksCount": 21575,
+        "citedByCount": 675271,
+        "twoYearMeanCitedness": 8.91536408692337,
+        "hIndex": 282,
+        "i10Index": 10456
       },
       "publicationCount": 1,
       "publicationYears": [
@@ -1299,11 +1299,11 @@
       "openAlexId": "S152760256",
       "openAlexUrl": "https://openalex.org/S152760256",
       "openAlexStats": {
-        "worksCount": 78276,
-        "citedByCount": 3210448,
-        "twoYearMeanCitedness": 4.024412819622816,
+        "worksCount": 78630,
+        "citedByCount": 3224006,
+        "twoYearMeanCitedness": 4.186629526462395,
         "hIndex": 402,
-        "i10Index": 54942
+        "i10Index": 55147
       },
       "foundedYear": 1996,
       "publicationCount": 1,
@@ -1869,7 +1869,7 @@
         }
       },
       "abbreviation": "Chemical Engineering Journal",
-      "publisher": "Elsevier",
+      "publisher": "Elsevier BV",
       "issn": "1385-8947",
       "eissn": "1873-3212",
       "issnL": "1385-8947",
@@ -1888,11 +1888,11 @@
       "openAlexId": "S149937609",
       "openAlexUrl": "https://openalex.org/S149937609",
       "openAlexStats": {
-        "worksCount": 77874,
-        "citedByCount": 3392809,
-        "twoYearMeanCitedness": 10.658828356795658,
-        "hIndex": 390,
-        "i10Index": 52729
+        "worksCount": 78992,
+        "citedByCount": 3441477,
+        "twoYearMeanCitedness": 10.979504071735748,
+        "hIndex": 391,
+        "i10Index": 53436
       },
       "publicationCount": 4,
       "publicationYears": [
@@ -2054,11 +2054,11 @@
       "openAlexId": "S188582317",
       "openAlexUrl": "https://openalex.org/S188582317",
       "openAlexStats": {
-        "worksCount": 10280,
-        "citedByCount": 217951,
-        "twoYearMeanCitedness": 3.167766258246937,
+        "worksCount": 10279,
+        "citedByCount": 219422,
+        "twoYearMeanCitedness": 3.3146118721461186,
         "hIndex": 145,
-        "i10Index": 5285
+        "i10Index": 5314
       },
       "publicationCount": 3,
       "publicationYears": [
@@ -2186,13 +2186,14 @@
         }
       },
       "abbreviation": "Electrochimica Acta",
-      "publisher": "Elsevier",
+      "publisher": "Elsevier BV",
       "issn": "0013-4686",
       "eissn": "1873-3859",
       "issnL": "0013-4686",
       "allIssns": [
         "0013-4686",
-        "1873-3859"
+        "1873-3859",
+        "0965-5441"
       ],
       "homepage": "http://www.elsevier.com/wps/find/journaldescription.cws_home/205/description#description",
       "countryCode": "GB",
@@ -2205,11 +2206,11 @@
       "openAlexId": "S198339081",
       "openAlexUrl": "https://openalex.org/S198339081",
       "openAlexStats": {
-        "worksCount": 53939,
-        "citedByCount": 2023278,
-        "twoYearMeanCitedness": 4.809055118110236,
-        "hIndex": 327,
-        "i10Index": 36959
+        "worksCount": 54164,
+        "citedByCount": 2033941,
+        "twoYearMeanCitedness": 4.953453169347209,
+        "hIndex": 328,
+        "i10Index": 37095
       },
       "publicationCount": 1,
       "publicationYears": [
@@ -2763,11 +2764,11 @@
       "openAlexId": "S117082959",
       "openAlexUrl": "https://openalex.org/S117082959",
       "openAlexStats": {
-        "worksCount": 8274,
-        "citedByCount": 1332488,
-        "twoYearMeanCitedness": 29.556570268899037,
-        "hIndex": 521,
-        "i10Index": 6403
+        "worksCount": 8367,
+        "citedByCount": 1345874,
+        "twoYearMeanCitedness": 30.5986328125,
+        "hIndex": 522,
+        "i10Index": 6445
       },
       "publicationCount": 1,
       "publicationYears": [
@@ -2889,7 +2890,7 @@
         }
       },
       "abbreviation": "Journal of Environmental Chemical Engineering",
-      "publisher": "Elsevier",
+      "publisher": "Elsevier BV",
       "issn": "2213-3437",
       "eissn": "2213-3437",
       "issnL": "2213-2929",
@@ -2908,11 +2909,11 @@
       "openAlexId": "S2764859491",
       "openAlexUrl": "https://openalex.org/S2764859491",
       "openAlexStats": {
-        "worksCount": 24414,
-        "citedByCount": 538472,
-        "twoYearMeanCitedness": 5.721046770601336,
-        "hIndex": 188,
-        "i10Index": 12519
+        "worksCount": 24860,
+        "citedByCount": 548507,
+        "twoYearMeanCitedness": 5.896382210615255,
+        "hIndex": 190,
+        "i10Index": 12737
       },
       "publicationCount": 1,
       "publicationYears": [
@@ -3068,11 +3069,11 @@
       "openAlexId": "S45305740",
       "openAlexUrl": "https://openalex.org/S45305740",
       "openAlexStats": {
-        "worksCount": 18793,
-        "citedByCount": 1193036,
+        "worksCount": 18808,
+        "citedByCount": 1195722,
         "twoYearMeanCitedness": 26.0,
         "hIndex": 362,
-        "i10Index": 14933
+        "i10Index": 14941
       },
       "publicationCount": 1,
       "publicationYears": [
@@ -3232,13 +3233,14 @@
         }
       },
       "abbreviation": "Journal of Power Sources",
-      "publisher": "Elsevier",
+      "publisher": "Elsevier BV",
       "issn": "0378-7753",
       "eissn": "1873-2755",
       "issnL": "0378-7753",
       "allIssns": [
         "0378-7753",
-        "1873-2755"
+        "1873-2755",
+        "0965-5441"
       ],
       "homepage": "http://www.elsevier.com/wps/find/journaldescription.cws_home/504093/description",
       "countryCode": "NL",
@@ -3251,11 +3253,11 @@
       "openAlexId": "S177147899",
       "openAlexUrl": "https://openalex.org/S177147899",
       "openAlexStats": {
-        "worksCount": 41369,
-        "citedByCount": 2246352,
-        "twoYearMeanCitedness": 7.571024067956583,
-        "hIndex": 413,
-        "i10Index": 30402
+        "worksCount": 41693,
+        "citedByCount": 2261866,
+        "twoYearMeanCitedness": 7.773999398134216,
+        "hIndex": 414,
+        "i10Index": 30540
       },
       "foundedYear": 1976,
       "publicationCount": 6,
@@ -3402,7 +3404,7 @@
         }
       },
       "abbreviation": "Materials Today Chemistry",
-      "publisher": "Elsevier",
+      "publisher": "Elsevier BV",
       "issn": "2468-5194",
       "eissn": "2468-5194",
       "issnL": "2468-5194",
@@ -3420,11 +3422,11 @@
       "openAlexId": "S2898120712",
       "openAlexUrl": "https://openalex.org/S2898120712",
       "openAlexStats": {
-        "worksCount": 3836,
-        "citedByCount": 65974,
-        "twoYearMeanCitedness": 4.8305,
+        "worksCount": 3928,
+        "citedByCount": 67007,
+        "twoYearMeanCitedness": 4.869440459110473,
         "hIndex": 95,
-        "i10Index": 1697
+        "i10Index": 1715
       },
       "publicationCount": 1,
       "publicationYears": [
@@ -3558,7 +3560,7 @@
         }
       },
       "abbreviation": "Materials Today Energy",
-      "publisher": "Elsevier",
+      "publisher": "Elsevier BV",
       "issn": "2468-6069",
       "eissn": "2468-6069",
       "issnL": "2468-6069",
@@ -3576,11 +3578,11 @@
       "openAlexId": "S2898308537",
       "openAlexUrl": "https://openalex.org/S2898308537",
       "openAlexStats": {
-        "worksCount": 2322,
-        "citedByCount": 59959,
-        "twoYearMeanCitedness": 5.516317016317016,
+        "worksCount": 2343,
+        "citedByCount": 60679,
+        "twoYearMeanCitedness": 5.686073059360731,
         "hIndex": 96,
-        "i10Index": 1388
+        "i10Index": 1402
       },
       "publicationCount": 1,
       "publicationYears": [
@@ -3718,7 +3720,7 @@
         }
       },
       "abbreviation": "Nanomaterials",
-      "publisher": "MDPI",
+      "publisher": "Multidisciplinary Digital Publishing Institute",
       "issn": "2079-4991",
       "eissn": "2079-4991",
       "issnL": "2079-4991",
@@ -3736,11 +3738,11 @@
       "openAlexId": "S2764646681",
       "openAlexUrl": "https://openalex.org/S2764646681",
       "openAlexStats": {
-        "worksCount": 22718,
-        "citedByCount": 536543,
-        "twoYearMeanCitedness": 6.0378693300041615,
-        "hIndex": 202,
-        "i10Index": 13171
+        "worksCount": 22879,
+        "citedByCount": 546934,
+        "twoYearMeanCitedness": 6.368580671249495,
+        "hIndex": 203,
+        "i10Index": 13386
       },
       "publicationCount": 3,
       "publicationYears": [
@@ -3867,13 +3869,14 @@
         }
       },
       "abbreviation": "Optics Communications",
-      "publisher": "Elsevier",
+      "publisher": "Elsevier BV",
       "issn": "0030-4018",
       "eissn": "1873-0310",
       "issnL": "0030-4018",
       "allIssns": [
         "0030-4018",
-        "1873-0310"
+        "1873-0310",
+        "0217-7323"
       ],
       "homepage": "http://www.elsevier.com/wps/find/journaldescription.cws_home/505711/description",
       "countryCode": "NL",
@@ -3886,11 +3889,11 @@
       "openAlexId": "S186881120",
       "openAlexUrl": "https://openalex.org/S186881120",
       "openAlexStats": {
-        "worksCount": 40369,
-        "citedByCount": 676516,
-        "twoYearMeanCitedness": 2.703476482617587,
-        "hIndex": 190,
-        "i10Index": 17785
+        "worksCount": 40443,
+        "citedByCount": 679441,
+        "twoYearMeanCitedness": 2.834664005322688,
+        "hIndex": 191,
+        "i10Index": 17858
       },
       "publicationCount": 1,
       "publicationYears": [
@@ -4020,7 +4023,7 @@
         }
       },
       "abbreviation": "Organic Electronics",
-      "publisher": "Elsevier",
+      "publisher": "Elsevier BV",
       "issn": "1566-1199",
       "eissn": "1878-5530",
       "issnL": "1566-1199",
@@ -4039,11 +4042,11 @@
       "openAlexId": "S99846442",
       "openAlexUrl": "https://openalex.org/S99846442",
       "openAlexStats": {
-        "worksCount": 7707,
-        "citedByCount": 189696,
-        "twoYearMeanCitedness": 3.405844155844156,
+        "worksCount": 7711,
+        "citedByCount": 190577,
+        "twoYearMeanCitedness": 3.551282051282051,
         "hIndex": 126,
-        "i10Index": 5011
+        "i10Index": 5030
       },
       "publicationCount": 1,
       "publicationYears": [
@@ -4169,7 +4172,7 @@
         }
       },
       "abbreviation": "Polymers",
-      "publisher": "MDPI",
+      "publisher": "Multidisciplinary Digital Publishing Institute",
       "issn": "2073-4360",
       "eissn": "2073-4360",
       "issnL": "2073-4360",
@@ -4187,11 +4190,11 @@
       "openAlexId": "S123288148",
       "openAlexUrl": "https://openalex.org/S123288148",
       "openAlexStats": {
-        "worksCount": 32363,
-        "citedByCount": 780197,
-        "twoYearMeanCitedness": 6.833314253005152,
-        "hIndex": 230,
-        "i10Index": 18934
+        "worksCount": 32415,
+        "citedByCount": 797543,
+        "twoYearMeanCitedness": 7.212652013834654,
+        "hIndex": 234,
+        "i10Index": 19249
       },
       "publicationCount": 2,
       "publicationYears": [
@@ -4318,7 +4321,7 @@
         }
       },
       "abbreviation": "Separation and Purification Technology",
-      "publisher": "Elsevier",
+      "publisher": "Elsevier BV",
       "issn": "1383-5866",
       "eissn": "1873-3794",
       "issnL": "1383-5866",
@@ -4337,11 +4340,11 @@
       "openAlexId": "S69753523",
       "openAlexUrl": "https://openalex.org/S69753523",
       "openAlexStats": {
-        "worksCount": 31193,
-        "citedByCount": 969172,
-        "twoYearMeanCitedness": 9.10356647351669,
-        "hIndex": 235,
-        "i10Index": 20143
+        "worksCount": 31530,
+        "citedByCount": 983191,
+        "twoYearMeanCitedness": 9.412540729555749,
+        "hIndex": 236,
+        "i10Index": 20443
       },
       "publicationCount": 1,
       "publicationYears": [
@@ -4467,7 +4470,7 @@
         }
       },
       "abbreviation": "Solar Energy",
-      "publisher": "Elsevier",
+      "publisher": "Elsevier BV",
       "issn": "0038-092X",
       "eissn": "1471-1257",
       "issnL": "0038-092X",
@@ -4486,11 +4489,11 @@
       "openAlexId": "S5745031",
       "openAlexUrl": "https://openalex.org/S5745031",
       "openAlexStats": {
-        "worksCount": 20333,
-        "citedByCount": 847681,
-        "twoYearMeanCitedness": 7.830155979202773,
-        "hIndex": 286,
-        "i10Index": 13121
+        "worksCount": 20453,
+        "citedByCount": 854149,
+        "twoYearMeanCitedness": 7.991297140489018,
+        "hIndex": 288,
+        "i10Index": 13175
       },
       "publicationCount": 1,
       "publicationYears": [
@@ -4624,13 +4627,14 @@
         }
       },
       "abbreviation": "Solar Energy Materials and Solar Cells",
-      "publisher": "Elsevier",
+      "publisher": "Elsevier BV",
       "issn": "0927-0248",
       "eissn": "1879-3398",
       "issnL": "0927-0248",
       "allIssns": [
         "0927-0248",
-        "1879-3398"
+        "1879-3398",
+        "1537-6494"
       ],
       "homepage": "https://www.sciencedirect.com/journal/solar-energy-materials-and-solar-cellsnals&journal=09270248",
       "countryCode": "NL",
@@ -4643,11 +4647,11 @@
       "openAlexId": "S166040772",
       "openAlexUrl": "https://openalex.org/S166040772",
       "openAlexStats": {
-        "worksCount": 14007,
-        "citedByCount": 601226,
-        "twoYearMeanCitedness": 7.083536585365854,
+        "worksCount": 14076,
+        "citedByCount": 604724,
+        "twoYearMeanCitedness": 7.310082063305979,
         "hIndex": 249,
-        "i10Index": 9879
+        "i10Index": 9913
       },
       "publicationCount": 2,
       "publicationYears": [
@@ -4796,11 +4800,11 @@
       "openAlexId": "S4210176222",
       "openAlexUrl": "https://openalex.org/S4210176222",
       "openAlexStats": {
-        "worksCount": 4023,
-        "citedByCount": 78395,
-        "twoYearMeanCitedness": 4.1878453038674035,
+        "worksCount": 4057,
+        "citedByCount": 79338,
+        "twoYearMeanCitedness": 4.33572710951526,
         "hIndex": 99,
-        "i10Index": 2058
+        "i10Index": 2084
       },
       "publicationCount": 2,
       "publicationYears": [
@@ -5333,11 +5337,11 @@
       "openAlexId": "S95739953",
       "openAlexUrl": "https://openalex.org/S95739953",
       "openAlexStats": {
-        "worksCount": 59370,
-        "citedByCount": 2343353,
-        "twoYearMeanCitedness": 3.6412444444444443,
-        "hIndex": 371,
-        "i10Index": 42571
+        "worksCount": 59807,
+        "citedByCount": 2356907,
+        "twoYearMeanCitedness": 3.7731585302742796,
+        "hIndex": 372,
+        "i10Index": 42758
       },
       "publicationCount": 1,
       "publicationYears": [
@@ -5847,13 +5851,14 @@
         }
       },
       "abbreviation": "Thin Solid Films",
-      "publisher": "Elsevier",
+      "publisher": "Elsevier BV",
       "issn": "0040-6090",
       "eissn": "1879-2731",
       "issnL": "0040-6090",
       "allIssns": [
         "0040-6090",
-        "1879-2731"
+        "1879-2731",
+        "0217-7323"
       ],
       "homepage": "http://www.journals.elsevier.com/thin-solid-films/",
       "countryCode": "NL",
@@ -5866,11 +5871,11 @@
       "openAlexId": "S84339699",
       "openAlexUrl": "https://openalex.org/S84339699",
       "openAlexStats": {
-        "worksCount": 47366,
-        "citedByCount": 1106124,
-        "twoYearMeanCitedness": 2.6473214285714284,
-        "hIndex": 253,
-        "i10Index": 26404
+        "worksCount": 47389,
+        "citedByCount": 1109481,
+        "twoYearMeanCitedness": 2.72133526850508,
+        "hIndex": 254,
+        "i10Index": 26444
       },
       "publicationCount": 1,
       "publicationYears": [
