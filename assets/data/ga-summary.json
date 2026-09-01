@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-31T07:02:56Z",
+  "generatedAt": "2026-09-01T06:14:58Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 130,
-    "activeUsers": 52,
-    "sessions": 82,
-    "engagementRate": 0.3780487804878049
+    "pageViews": 118,
+    "activeUsers": 49,
+    "sessions": 77,
+    "engagementRate": 0.36363636363636365
   },
   "monthlyTrend": [
     {
@@ -19,33 +19,33 @@
     },
     {
       "month": "2026-08",
-      "pageViews": 132,
-      "activeUsers": 52
+      "pageViews": 134,
+      "activeUsers": 53
     }
   ],
   "topPages": [
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 44,
-      "activeUsers": 30
+      "pageViews": 39,
+      "activeUsers": 28
     },
     {
       "title": "Research | Wei-Hao Chiu",
       "path": "/research.html",
-      "pageViews": 27,
+      "pageViews": 28,
       "activeUsers": 6
     },
     {
       "title": "Publications | Wei-Hao Chiu",
       "path": "/publications.html",
-      "pageViews": 19,
-      "activeUsers": 7
+      "pageViews": 14,
+      "activeUsers": 6
     },
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/index.html",
-      "pageViews": 8,
+      "pageViews": 7,
       "activeUsers": 4
     },
     {
@@ -57,7 +57,7 @@
     {
       "title": "Patents | Wei-Hao Chiu",
       "path": "/patents.html",
-      "pageViews": 4,
+      "pageViews": 3,
       "activeUsers": 3
     },
     {
@@ -118,61 +118,72 @@
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 45,
-      "activeUsers": 42
+      "sessions": 42,
+      "activeUsers": 39
     },
     {
       "channel": "Organic Search",
-      "sessions": 35,
-      "activeUsers": 8
+      "sessions": 32,
+      "activeUsers": 7
     },
     {
       "channel": "Referral",
+      "sessions": 3,
+      "activeUsers": 3
+    },
+    {
+      "channel": "Unassigned",
       "sessions": 2,
-      "activeUsers": 2
+      "activeUsers": 1
     }
   ],
   "trafficSources": [
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 45,
-      "activeUsers": 42
+      "sessions": 42,
+      "activeUsers": 39
     },
     {
       "source": "google",
       "medium": "organic",
-      "sessions": 31,
+      "sessions": 29,
       "activeUsers": 4
     },
     {
       "source": "bing",
       "medium": "organic",
-      "sessions": 4,
-      "activeUsers": 4
+      "sessions": 3,
+      "activeUsers": 3
     },
     {
       "source": "cgu.edu.tw",
       "medium": "referral",
+      "sessions": 3,
+      "activeUsers": 3
+    },
+    {
+      "source": "(not set)",
+      "medium": "(not set)",
       "sessions": 2,
-      "activeUsers": 2
+      "activeUsers": 1
     }
   ],
   "topCountries": [
     {
-      "country": "United States",
-      "activeUsers": 22,
-      "pageViews": 23
+      "country": "China",
+      "activeUsers": 18,
+      "pageViews": 18
     },
     {
-      "country": "China",
-      "activeUsers": 17,
-      "pageViews": 17
+      "country": "United States",
+      "activeUsers": 18,
+      "pageViews": 19
     },
     {
       "country": "Taiwan",
       "activeUsers": 7,
-      "pageViews": 66
+      "pageViews": 56
     },
     {
       "country": "Belgium",
@@ -187,7 +198,7 @@
     {
       "country": "India",
       "activeUsers": 1,
-      "pageViews": 14
+      "pageViews": 15
     },
     {
       "country": "Pakistan",
@@ -208,7 +219,7 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 47
+      "activeUsers": 44
     },
     {
       "device": "mobile",
@@ -218,14 +229,14 @@
   "academicEvents": [
     {
       "eventName": "doi_click",
-      "eventCount": 4
-    },
-    {
-      "eventName": "patent_click",
       "eventCount": 3
     },
     {
       "eventName": "openalex_click",
+      "eventCount": 2
+    },
+    {
+      "eventName": "patent_click",
       "eventCount": 2
     },
     {
