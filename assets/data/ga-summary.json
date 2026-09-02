@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-01T06:14:58Z",
+  "generatedAt": "2026-09-02T05:51:19Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 118,
-    "activeUsers": 49,
-    "sessions": 77,
-    "engagementRate": 0.36363636363636365
+    "pageViews": 107,
+    "activeUsers": 46,
+    "sessions": 71,
+    "engagementRate": 0.3380281690140845
   },
   "monthlyTrend": [
     {
@@ -21,26 +21,31 @@
       "month": "2026-08",
       "pageViews": 134,
       "activeUsers": 53
+    },
+    {
+      "month": "2026-09",
+      "pageViews": 1,
+      "activeUsers": 1
     }
   ],
   "topPages": [
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 39,
-      "activeUsers": 28
+      "pageViews": 33,
+      "activeUsers": 24
     },
     {
       "title": "Research | Wei-Hao Chiu",
       "path": "/research.html",
-      "pageViews": 28,
+      "pageViews": 27,
       "activeUsers": 6
     },
     {
       "title": "Publications | Wei-Hao Chiu",
       "path": "/publications.html",
-      "pageViews": 14,
-      "activeUsers": 6
+      "pageViews": 11,
+      "activeUsers": 5
     },
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
@@ -97,12 +102,6 @@
       "activeUsers": 1
     },
     {
-      "title": "Heterogeneous graphite felt electrodes decorated with nanostructured graphitic carbon nitride for enhanced redox kinetics in vanadium redox flow batteries | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-jpowsour-2025-239216.html",
-      "pageViews": 1,
-      "activeUsers": 1
-    },
-    {
       "title": "Improved performance of flexible dye-sensitized solar cells by introducing an interfacial layer on Ti substrates | Wei-Hao Chiu",
       "path": "/publications/10-1039-c0jm04099a.html",
       "pageViews": 1,
@@ -113,41 +112,42 @@
       "path": "/publications/10-3390-polym13234246.html",
       "pageViews": 1,
       "activeUsers": 1
+    },
+    {
+      "title": "Reliability enhancement of PVDF-HFP modified perovskite solar cells under synergistic space-relevant stress conditions | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-cej-2026-177494.html",
+      "pageViews": 1,
+      "activeUsers": 1
     }
   ],
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 42,
-      "activeUsers": 39
+      "sessions": 39,
+      "activeUsers": 36
     },
     {
       "channel": "Organic Search",
-      "sessions": 32,
+      "sessions": 29,
       "activeUsers": 7
     },
     {
       "channel": "Referral",
       "sessions": 3,
       "activeUsers": 3
-    },
-    {
-      "channel": "Unassigned",
-      "sessions": 2,
-      "activeUsers": 1
     }
   ],
   "trafficSources": [
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 42,
-      "activeUsers": 39
+      "sessions": 39,
+      "activeUsers": 36
     },
     {
       "source": "google",
       "medium": "organic",
-      "sessions": 29,
+      "sessions": 26,
       "activeUsers": 4
     },
     {
@@ -161,29 +161,23 @@
       "medium": "referral",
       "sessions": 3,
       "activeUsers": 3
-    },
-    {
-      "source": "(not set)",
-      "medium": "(not set)",
-      "sessions": 2,
-      "activeUsers": 1
     }
   ],
   "topCountries": [
     {
       "country": "China",
-      "activeUsers": 18,
-      "pageViews": 18
+      "activeUsers": 19,
+      "pageViews": 19
     },
     {
       "country": "United States",
-      "activeUsers": 18,
-      "pageViews": 19
+      "activeUsers": 15,
+      "pageViews": 15
     },
     {
       "country": "Taiwan",
       "activeUsers": 7,
-      "pageViews": 56
+      "pageViews": 49
     },
     {
       "country": "Belgium",
@@ -209,17 +203,12 @@
       "country": "Philippines",
       "activeUsers": 1,
       "pageViews": 2
-    },
-    {
-      "country": "Russia",
-      "activeUsers": 1,
-      "pageViews": 1
     }
   ],
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 44
+      "activeUsers": 41
     },
     {
       "device": "mobile",
@@ -229,7 +218,7 @@
   "academicEvents": [
     {
       "eventName": "doi_click",
-      "eventCount": 3
+      "eventCount": 2
     },
     {
       "eventName": "openalex_click",
