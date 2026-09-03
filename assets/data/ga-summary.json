@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-02T05:51:19Z",
+  "generatedAt": "2026-09-03T05:49:27Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 107,
-    "activeUsers": 46,
-    "sessions": 71,
-    "engagementRate": 0.3380281690140845
+    "pageViews": 104,
+    "activeUsers": 43,
+    "sessions": 68,
+    "engagementRate": 0.35294117647058826
   },
   "monthlyTrend": [
     {
@@ -32,8 +32,8 @@
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 33,
-      "activeUsers": 24
+      "pageViews": 30,
+      "activeUsers": 21
     },
     {
       "title": "Research | Wei-Hao Chiu",
@@ -123,8 +123,8 @@
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 39,
-      "activeUsers": 36
+      "sessions": 36,
+      "activeUsers": 33
     },
     {
       "channel": "Organic Search",
@@ -141,8 +141,8 @@
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 39,
-      "activeUsers": 36
+      "sessions": 36,
+      "activeUsers": 33
     },
     {
       "source": "google",
@@ -171,8 +171,8 @@
     },
     {
       "country": "United States",
-      "activeUsers": 15,
-      "pageViews": 15
+      "activeUsers": 13,
+      "pageViews": 13
     },
     {
       "country": "Taiwan",
@@ -183,11 +183,6 @@
       "country": "Belgium",
       "activeUsers": 1,
       "pageViews": 5
-    },
-    {
-      "country": "Germany",
-      "activeUsers": 1,
-      "pageViews": 1
     },
     {
       "country": "India",
@@ -208,7 +203,7 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 41
+      "activeUsers": 38
     },
     {
       "device": "mobile",
