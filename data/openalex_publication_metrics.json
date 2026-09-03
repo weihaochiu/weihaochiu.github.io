@@ -5,7 +5,7 @@
   "publicationCount": 40,
   "verifiedCount": 38,
   "notFoundCount": 2,
-  "lastSuccessfulUpdate": "2026-09-02T07:08:34Z",
+  "lastSuccessfulUpdate": "2026-09-03T07:13:16Z",
   "records": {
     "10.1016/j.cej.2026.177494": {
       "status": "verified",
@@ -247,12 +247,12 @@
       "title": "Fluorinated Pentafulvalene‐Fused Hole‐Transporting Material Enhances the Performance of Perovskite Solar Cells with Efficiency Exceeding 23%",
       "openAlexId": "W4385381207",
       "url": "https://openalex.org/W4385381207",
-      "citationCount": 36,
-      "fwci": 2.9843,
-      "citationPercentile": 0.92198079,
+      "citationCount": 37,
+      "fwci": 3.058,
+      "citationPercentile": 0.92468938,
       "isTop1Percent": false,
       "isTop10Percent": true,
-      "openAlexUpdatedDate": "2026-08-28T12:50:07.497085"
+      "openAlexUpdatedDate": "2026-09-02T07:38:04.252551"
     },
     "10.1016/j.cej.2022.139926": {
       "status": "verified",
@@ -299,12 +299,12 @@
       "title": "High-performance perovskite solar cells based on dopant-free hole-transporting material fabricated by a thermal-assisted blade-coating method with efficiency exceeding 21%",
       "openAlexId": "W3187467581",
       "url": "https://openalex.org/W3187467581",
-      "citationCount": 58,
-      "fwci": 3.6572,
-      "citationPercentile": 0.9393691,
+      "citationCount": 59,
+      "fwci": 3.6571,
+      "citationPercentile": 0.93937823,
       "isTop1Percent": false,
       "isTop10Percent": true,
-      "openAlexUpdatedDate": "2026-08-28T12:50:07.497085"
+      "openAlexUpdatedDate": "2026-09-02T07:38:04.252551"
     },
     "10.3390/polym13234246": {
       "status": "verified",
