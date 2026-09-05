@@ -5,7 +5,7 @@
   "publicationCount": 40,
   "verifiedCount": 38,
   "notFoundCount": 2,
-  "lastSuccessfulUpdate": "2026-09-04T07:16:24Z",
+  "lastSuccessfulUpdate": "2026-09-05T06:57:59Z",
   "records": {
     "10.1016/j.cej.2026.177494": {
       "status": "verified",
@@ -248,8 +248,8 @@
       "openAlexId": "W4385381207",
       "url": "https://openalex.org/W4385381207",
       "citationCount": 37,
-      "fwci": 3.0557,
-      "citationPercentile": 0.92463224,
+      "fwci": 3.0532,
+      "citationPercentile": 0.92449854,
       "isTop1Percent": false,
       "isTop10Percent": true,
       "openAlexUpdatedDate": "2026-09-02T07:38:04.252551"
@@ -300,8 +300,8 @@
       "openAlexId": "W3187467581",
       "url": "https://openalex.org/W3187467581",
       "citationCount": 59,
-      "fwci": 3.656,
-      "citationPercentile": 0.93935867,
+      "fwci": 3.6577,
+      "citationPercentile": 0.93938773,
       "isTop1Percent": false,
       "isTop10Percent": true,
       "openAlexUpdatedDate": "2026-09-02T07:38:04.252551"
