@@ -2,12 +2,12 @@
   "schemaVersion": 3,
   "source": "OpenAlex Works API",
   "status": "success_with_exclusions",
-  "lastSuccessfulUpdate": "2026-08-31T10:25:13.844948Z",
+  "lastSuccessfulUpdate": "2026-09-07T08:51:41.889051Z",
   "workCount": 38,
   "missingPublicationYearCount": 0,
-  "totalCitationsFromPublicationMetrics": 992,
-  "rawTotalCitationsFromHistory": 992,
-  "totalCitationsIncludedInAnnualChart": 986,
+  "totalCitationsFromPublicationMetrics": 994,
+  "rawTotalCitationsFromHistory": 994,
+  "totalCitationsIncludedInAnnualChart": 988,
   "rawValidationDifference": 0,
   "unassignedCitationCount": 0,
   "excludedInvalidCitationCount": 6,
@@ -137,7 +137,7 @@
     },
     {
       "year": 2026,
-      "citations": 57
+      "citations": 59
     }
   ],
   "works": {
@@ -1069,7 +1069,7 @@
           "volume": "31",
           "issue": "1",
           "pages": "015001",
-          "type": "article"
+          "type": "other"
         },
         {
           "openAlexId": "W2978960613",
@@ -2109,7 +2109,7 @@
           "volume": "67",
           "issue": "3",
           "pages": "660-664",
-          "type": "book-chapter"
+          "type": "article"
         },
         {
           "openAlexId": "W2067785808",
@@ -5687,7 +5687,7 @@
           "openAlexId": "W2252767713",
           "doi": "10.1088/0957-4484/27/11/115401",
           "doiUrl": "https://doi.org/10.1088/0957-4484/27/11/115401",
-          "title": "3D periodic multiscale TiO2architecture: a platform decorated with graphene quantum dots for enhanced photoelectrochemical water splitting",
+          "title": "3D periodic multiscale TiO 2 architecture: a platform decorated with graphene quantum dots for enhanced photoelectrochemical water splitting",
           "authors": [
             "Zhen Xu",
             "Min Yin",
@@ -9203,7 +9203,7 @@
           "authors": [
             "Benoit N. Illy"
           ],
-          "journal": "Open MIND",
+          "journal": "",
           "publicationYear": 2009,
           "publicationDate": "2009-11-01",
           "volume": "",
@@ -15773,7 +15773,7 @@
       "doi": "10.1016/j.cej.2021.131609",
       "title": "High-performance perovskite solar cells based on dopant-free hole-transporting material fabricated by a thermal-assisted blade-coating method with efficiency exceeding 21%",
       "publicationYear": 2022,
-      "currentCitationCount": 58,
+      "currentCitationCount": 59,
       "sourceUrl": "https://api.openalex.org/works?filter=cites:W3187467581",
       "citationsByYear": [
         {
@@ -15794,7 +15794,7 @@
         },
         {
           "year": 2026,
-          "citations": 3
+          "citations": 4
         }
       ],
       "rawCitationsByYear": [
@@ -15820,11 +15820,11 @@
         },
         {
           "year": 2026,
-          "citations": 3
+          "citations": 4
         }
       ],
-      "historyTotal": 56,
-      "rawHistoryTotal": 58,
+      "historyTotal": 57,
+      "rawHistoryTotal": 59,
       "excludedInvalidCitationCount": 2,
       "excludedInvalidCitations": [
         {
@@ -15835,8 +15835,8 @@
         }
       ],
       "unassignedCitationCount": 0,
-      "citingWorkCount": 58,
-      "citingArticlesWithDoiCount": 56,
+      "citingWorkCount": 59,
+      "citingArticlesWithDoiCount": 57,
       "citingArticlesWithDoi": [
         {
           "openAlexId": "W7151252555",
@@ -15908,6 +15908,26 @@
           "volume": "530",
           "issue": "",
           "pages": "173197",
+          "type": "article"
+        },
+        {
+          "openAlexId": "W7203907208",
+          "doi": "10.1039/d5ta08338a",
+          "doiUrl": "https://doi.org/10.1039/d5ta08338a",
+          "title": "Interface engineering with a malononitrile-anchored self-assembled molecule for high-performance carbon-perovskite solar cells",
+          "authors": [
+            "Saeedeh Bagheri",
+            "Hashem Shahroosvand",
+            "Sebastiano Bellani",
+            "Mirko Prato",
+            "Mohammad Khaja Nazeeruddin"
+          ],
+          "journal": "Journal of Materials Chemistry A",
+          "publicationYear": 2026,
+          "publicationDate": "2026-01-01",
+          "volume": "",
+          "issue": "",
+          "pages": "",
           "type": "article"
         },
         {
@@ -18227,7 +18247,7 @@
           "volume": "34",
           "issue": "36",
           "pages": "",
-          "type": "book-chapter"
+          "type": "article"
         },
         {
           "openAlexId": "W4366828572",
@@ -19392,7 +19412,7 @@
       "doi": "10.1002/adfm.202306367",
       "title": "Fluorinated Pentafulvalene‐Fused Hole‐Transporting Material Enhances the Performance of Perovskite Solar Cells with Efficiency Exceeding 23%",
       "publicationYear": 2023,
-      "currentCitationCount": 36,
+      "currentCitationCount": 37,
       "sourceUrl": "https://api.openalex.org/works?filter=cites:W4385381207",
       "citationsByYear": [
         {
@@ -19406,6 +19426,10 @@
         {
           "year": 2025,
           "citations": 13
+        },
+        {
+          "year": 2026,
+          "citations": 1
         }
       ],
       "rawCitationsByYear": [
@@ -19420,16 +19444,40 @@
         {
           "year": 2025,
           "citations": 13
+        },
+        {
+          "year": 2026,
+          "citations": 1
         }
       ],
-      "historyTotal": 36,
-      "rawHistoryTotal": 36,
+      "historyTotal": 37,
+      "rawHistoryTotal": 37,
       "excludedInvalidCitationCount": 0,
       "excludedInvalidCitations": [],
       "unassignedCitationCount": 0,
-      "citingWorkCount": 36,
-      "citingArticlesWithDoiCount": 36,
+      "citingWorkCount": 37,
+      "citingArticlesWithDoiCount": 37,
       "citingArticlesWithDoi": [
+        {
+          "openAlexId": "W7203907208",
+          "doi": "10.1039/d5ta08338a",
+          "doiUrl": "https://doi.org/10.1039/d5ta08338a",
+          "title": "Interface engineering with a malononitrile-anchored self-assembled molecule for high-performance carbon-perovskite solar cells",
+          "authors": [
+            "Saeedeh Bagheri",
+            "Hashem Shahroosvand",
+            "Sebastiano Bellani",
+            "Mirko Prato",
+            "Mohammad Khaja Nazeeruddin"
+          ],
+          "journal": "Journal of Materials Chemistry A",
+          "publicationYear": 2026,
+          "publicationDate": "2026-01-01",
+          "volume": "",
+          "issue": "",
+          "pages": "",
+          "type": "article"
+        },
         {
           "openAlexId": "W4416690388",
           "doi": "10.3389/fchem.2025.1694198",
@@ -21556,9 +21604,9 @@
           "journal": "Langmuir",
           "publicationYear": 2026,
           "publicationDate": "2026-08-11",
-          "volume": "",
-          "issue": "",
-          "pages": "",
+          "volume": "42",
+          "issue": "33",
+          "pages": "24572-24580",
           "type": "article"
         },
         {
@@ -22655,8 +22703,8 @@
           "journal": "Materials Reports Energy",
           "publicationYear": 2026,
           "publicationDate": "2026-08-01",
-          "volume": "",
-          "issue": "",
+          "volume": "6",
+          "issue": "3",
           "pages": "100450",
           "type": "article"
         },

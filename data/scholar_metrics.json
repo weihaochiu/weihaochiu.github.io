@@ -1,10 +1,10 @@
 {
-  "citations": 1206,
+  "citations": 1214,
   "hIndex": 15,
   "i10Index": 24,
-  "lastSuccessfulUpdate": "2026-08-17T12:36:01+08:00",
+  "lastSuccessfulUpdate": "2026-09-07T16:51:02+08:00",
   "source": "Google Scholar",
   "profileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en",
-  "status": "update skipped; previous valid values retained",
-  "lastAttempt": "2026-08-31T18:24:27+08:00"
+  "status": "success",
+  "lastAttempt": "2026-09-07T16:51:02+08:00"
 }
