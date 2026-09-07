@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-06T05:58:32Z",
+  "generatedAt": "2026-09-07T06:08:05Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 98,
-    "activeUsers": 37,
-    "sessions": 62,
-    "engagementRate": 0.3709677419354839
+    "pageViews": 99,
+    "activeUsers": 38,
+    "sessions": 63,
+    "engagementRate": 0.36507936507936506
   },
   "monthlyTrend": [
     {
@@ -24,8 +24,8 @@
     },
     {
       "month": "2026-09",
-      "pageViews": 1,
-      "activeUsers": 1
+      "pageViews": 2,
+      "activeUsers": 2
     }
   ],
   "topPages": [
@@ -123,8 +123,8 @@
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 31,
-      "activeUsers": 28
+      "sessions": 32,
+      "activeUsers": 29
     },
     {
       "channel": "Organic Search",
@@ -141,8 +141,8 @@
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 31,
-      "activeUsers": 28
+      "sessions": 32,
+      "activeUsers": 29
     },
     {
       "source": "google",
@@ -166,8 +166,8 @@
   "topCountries": [
     {
       "country": "China",
-      "activeUsers": 18,
-      "pageViews": 18
+      "activeUsers": 19,
+      "pageViews": 19
     },
     {
       "country": "United States",
@@ -203,7 +203,7 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 33
+      "activeUsers": 34
     },
     {
       "device": "mobile",
