@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-08T05:58:53Z",
+  "generatedAt": "2026-09-09T06:00:00Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 99,
-    "activeUsers": 38,
-    "sessions": 63,
-    "engagementRate": 0.36507936507936506
+    "pageViews": 103,
+    "activeUsers": 40,
+    "sessions": 66,
+    "engagementRate": 0.3484848484848485
   },
   "monthlyTrend": [
     {
@@ -24,8 +24,8 @@
     },
     {
       "month": "2026-09",
-      "pageViews": 2,
-      "activeUsers": 2
+      "pageViews": 6,
+      "activeUsers": 5
     }
   ],
   "topPages": [
@@ -38,19 +38,19 @@
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 24,
-      "activeUsers": 15
+      "pageViews": 26,
+      "activeUsers": 17
     },
     {
       "title": "Publications | Wei-Hao Chiu",
       "path": "/publications.html",
-      "pageViews": 11,
+      "pageViews": 12,
       "activeUsers": 5
     },
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/index.html",
-      "pageViews": 7,
+      "pageViews": 8,
       "activeUsers": 4
     },
     {
@@ -123,31 +123,36 @@
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 32,
-      "activeUsers": 29
+      "sessions": 34,
+      "activeUsers": 31
     },
     {
       "channel": "Organic Search",
-      "sessions": 28,
+      "sessions": 29,
       "activeUsers": 6
     },
     {
       "channel": "Referral",
       "sessions": 3,
       "activeUsers": 3
+    },
+    {
+      "channel": "Unassigned",
+      "sessions": 1,
+      "activeUsers": 1
     }
   ],
   "trafficSources": [
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 32,
-      "activeUsers": 29
+      "sessions": 34,
+      "activeUsers": 31
     },
     {
       "source": "google",
       "medium": "organic",
-      "sessions": 26,
+      "sessions": 27,
       "activeUsers": 4
     },
     {
@@ -161,6 +166,12 @@
       "medium": "organic",
       "sessions": 2,
       "activeUsers": 2
+    },
+    {
+      "source": "(not set)",
+      "medium": "(not set)",
+      "sessions": 1,
+      "activeUsers": 1
     }
   ],
   "topCountries": [
@@ -171,8 +182,8 @@
     },
     {
       "country": "United States",
-      "activeUsers": 9,
-      "pageViews": 9
+      "activeUsers": 11,
+      "pageViews": 11
     },
     {
       "country": "Taiwan",
@@ -182,7 +193,7 @@
     {
       "country": "Belgium",
       "activeUsers": 1,
-      "pageViews": 5
+      "pageViews": 7
     },
     {
       "country": "India",
@@ -203,7 +214,7 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 34
+      "activeUsers": 36
     },
     {
       "device": "mobile",
