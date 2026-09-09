@@ -5,7 +5,7 @@
   "publicationCount": 40,
   "verifiedCount": 38,
   "notFoundCount": 2,
-  "lastSuccessfulUpdate": "2026-09-08T07:16:50Z",
+  "lastSuccessfulUpdate": "2026-09-09T07:25:26Z",
   "records": {
     "10.1016/j.cej.2026.177494": {
       "status": "verified",
@@ -117,12 +117,12 @@
       "title": "Asymmetric Fluorinated Cyclopenta[2,1‐b:3,4‐b']Dithiophene‐Based Hole‐Transporting Materials for Perovskite Solar Cell",
       "openAlexId": "W4411365246",
       "url": "https://openalex.org/W4411365246",
-      "citationCount": 0,
-      "fwci": 0.0,
-      "citationPercentile": 0.07303738,
+      "citationCount": 1,
+      "fwci": 0.2626,
+      "citationPercentile": 0.47062988,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-08-21T09:56:20.448147"
+      "openAlexUpdatedDate": "2026-09-08T07:41:39.490200"
     },
     "10.1002/advs.202410666": {
       "status": "verified",
@@ -247,12 +247,12 @@
       "title": "Fluorinated Pentafulvalene‐Fused Hole‐Transporting Material Enhances the Performance of Perovskite Solar Cells with Efficiency Exceeding 23%",
       "openAlexId": "W4385381207",
       "url": "https://openalex.org/W4385381207",
-      "citationCount": 37,
-      "fwci": 3.0532,
-      "citationPercentile": 0.92449854,
+      "citationCount": 38,
+      "fwci": 3.1229,
+      "citationPercentile": 0.92716664,
       "isTop1Percent": false,
       "isTop10Percent": true,
-      "openAlexUpdatedDate": "2026-09-02T07:38:04.252551"
+      "openAlexUpdatedDate": "2026-09-08T07:41:39.490200"
     },
     "10.1016/j.cej.2022.139926": {
       "status": "verified",
@@ -313,8 +313,8 @@
       "openAlexId": "W4200568401",
       "url": "https://openalex.org/W4200568401",
       "citationCount": 18,
-      "fwci": 1.1175,
-      "citationPercentile": 0.74311114,
+      "fwci": 1.1173,
+      "citationPercentile": 0.74304963,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-09-07T09:17:50.787605"
@@ -326,11 +326,11 @@
       "openAlexId": "W3195032786",
       "url": "https://openalex.org/W3195032786",
       "citationCount": 11,
-      "fwci": 0.3224,
-      "citationPercentile": 0.46986067,
+      "fwci": 0.3227,
+      "citationPercentile": 0.47017507,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-08-28T12:50:07.497085"
+      "openAlexUpdatedDate": "2026-09-08T07:41:39.490200"
     },
     "10.3390/nano11061607": {
       "status": "verified",
