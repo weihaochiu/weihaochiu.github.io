@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-09T06:00:00Z",
+  "generatedAt": "2026-09-10T05:59:32Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 103,
+    "pageViews": 105,
     "activeUsers": 40,
-    "sessions": 66,
-    "engagementRate": 0.3484848484848485
+    "sessions": 68,
+    "engagementRate": 0.36764705882352944
   },
   "monthlyTrend": [
     {
@@ -24,22 +24,22 @@
     },
     {
       "month": "2026-09",
-      "pageViews": 6,
-      "activeUsers": 5
+      "pageViews": 9,
+      "activeUsers": 7
     }
   ],
   "topPages": [
     {
       "title": "Research | Wei-Hao Chiu",
       "path": "/research.html",
-      "pageViews": 27,
+      "pageViews": 29,
       "activeUsers": 6
     },
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 26,
-      "activeUsers": 17
+      "pageViews": 25,
+      "activeUsers": 16
     },
     {
       "title": "Publications | Wei-Hao Chiu",
@@ -108,14 +108,14 @@
       "activeUsers": 1
     },
     {
-      "title": "Microstructure and Biological Properties of Electrospun In Situ Polymerization of Polycaprolactone-Graft-Polyacrylic Acid Nanofibers and Its Composite Nanofiber Dressings | Wei-Hao Chiu",
-      "path": "/publications/10-3390-polym13234246.html",
+      "title": "Improvement on the long-term stability of flexible plastic dye-sensitized solar cells | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-jpowsour-2011-06-049.html",
       "pageViews": 1,
       "activeUsers": 1
     },
     {
-      "title": "Reliability enhancement of PVDF-HFP modified perovskite solar cells under synergistic space-relevant stress conditions | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-cej-2026-177494.html",
+      "title": "Microstructure and Biological Properties of Electrospun In Situ Polymerization of Polycaprolactone-Graft-Polyacrylic Acid Nanofibers and Its Composite Nanofiber Dressings | Wei-Hao Chiu",
+      "path": "/publications/10-3390-polym13234246.html",
       "pageViews": 1,
       "activeUsers": 1
     }
@@ -123,43 +123,32 @@
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 34,
-      "activeUsers": 31
+      "sessions": 35,
+      "activeUsers": 32
     },
     {
       "channel": "Organic Search",
-      "sessions": 29,
+      "sessions": 31,
       "activeUsers": 6
     },
     {
       "channel": "Referral",
-      "sessions": 3,
-      "activeUsers": 3
-    },
-    {
-      "channel": "Unassigned",
-      "sessions": 1,
-      "activeUsers": 1
+      "sessions": 2,
+      "activeUsers": 2
     }
   ],
   "trafficSources": [
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 34,
-      "activeUsers": 31
+      "sessions": 35,
+      "activeUsers": 32
     },
     {
       "source": "google",
       "medium": "organic",
-      "sessions": 27,
+      "sessions": 29,
       "activeUsers": 4
-    },
-    {
-      "source": "cgu.edu.tw",
-      "medium": "referral",
-      "sessions": 3,
-      "activeUsers": 3
     },
     {
       "source": "bing",
@@ -168,17 +157,17 @@
       "activeUsers": 2
     },
     {
-      "source": "(not set)",
-      "medium": "(not set)",
-      "sessions": 1,
-      "activeUsers": 1
+      "source": "cgu.edu.tw",
+      "medium": "referral",
+      "sessions": 2,
+      "activeUsers": 2
     }
   ],
   "topCountries": [
     {
       "country": "China",
-      "activeUsers": 19,
-      "pageViews": 19
+      "activeUsers": 20,
+      "pageViews": 20
     },
     {
       "country": "United States",
@@ -198,12 +187,7 @@
     {
       "country": "India",
       "activeUsers": 1,
-      "pageViews": 15
-    },
-    {
-      "country": "Pakistan",
-      "activeUsers": 1,
-      "pageViews": 1
+      "pageViews": 17
     },
     {
       "country": "Philippines",
@@ -214,11 +198,11 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 36
+      "activeUsers": 37
     },
     {
       "device": "mobile",
-      "activeUsers": 4
+      "activeUsers": 3
     }
   ],
   "academicEvents": [
@@ -233,10 +217,6 @@
     {
       "eventName": "patent_click",
       "eventCount": 2
-    },
-    {
-      "eventName": "email_click",
-      "eventCount": 1
     },
     {
       "eventName": "share_action",
