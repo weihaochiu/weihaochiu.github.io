@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-11T06:01:46Z",
+  "generatedAt": "2026-09-12T05:48:56Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 89,
+    "pageViews": 86,
     "activeUsers": 38,
-    "sessions": 61,
-    "engagementRate": 0.32786885245901637
+    "sessions": 60,
+    "engagementRate": 0.31666666666666665
   },
   "monthlyTrend": [
     {
@@ -24,8 +24,8 @@
     },
     {
       "month": "2026-09",
-      "pageViews": 13,
-      "activeUsers": 9
+      "pageViews": 14,
+      "activeUsers": 10
     }
   ],
   "topPages": [
@@ -38,8 +38,8 @@
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 20,
-      "activeUsers": 14
+      "pageViews": 19,
+      "activeUsers": 13
     },
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
@@ -52,18 +52,6 @@
       "path": "/publications.html",
       "pageViews": 7,
       "activeUsers": 4
-    },
-    {
-      "title": "Modified Spontaneous Emission in a Tightly Pumped Nd:YVO4 Laser with Degenerate Resonator | Wei-Hao Chiu",
-      "path": "/publications/ms-thesis-2005.html",
-      "pageViews": 3,
-      "activeUsers": 3
-    },
-    {
-      "title": "Study on Electron Transport Mechanism in Metal Oxide Photoanode Electrode for Dye-Sensitized Solar Cells | Wei-Hao Chiu",
-      "path": "/publications/phd-thesis-2011.html",
-      "pageViews": 3,
-      "activeUsers": 3
     },
     {
       "title": "About | Wei-Hao Chiu",
@@ -84,14 +72,26 @@
       "activeUsers": 1
     },
     {
+      "title": "Modified Spontaneous Emission in a Tightly Pumped Nd:YVO4 Laser with Degenerate Resonator | Wei-Hao Chiu",
+      "path": "/publications/ms-thesis-2005.html",
+      "pageViews": 2,
+      "activeUsers": 2
+    },
+    {
       "title": "Patents | Wei-Hao Chiu",
       "path": "/patents.html",
       "pageViews": 2,
       "activeUsers": 2
     },
     {
-      "title": "Fluorinated Pentafulvalene‐Fused Hole‐Transporting Material Enhances the Performance of Perovskite Solar Cells with Efficiency Exceeding 23% | Wei-Hao Chiu",
-      "path": "/publications/10-1002-adfm-202306367.html",
+      "title": "Study on Electron Transport Mechanism in Metal Oxide Photoanode Electrode for Dye-Sensitized Solar Cells | Wei-Hao Chiu",
+      "path": "/publications/phd-thesis-2011.html",
+      "pageViews": 2,
+      "activeUsers": 2
+    },
+    {
+      "title": "Formation of branched ZnO nanowires from solvothermal method and dye-sensitized solar cells applications | Wei-Hao Chiu",
+      "path": "/publications/10-1021-jp805239k.html",
       "pageViews": 1,
       "activeUsers": 1
     },
@@ -123,7 +123,7 @@
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 31,
+      "sessions": 30,
       "activeUsers": 29
     },
     {
@@ -133,25 +133,15 @@
     },
     {
       "channel": "Referral",
-      "sessions": 2,
-      "activeUsers": 2
-    },
-    {
-      "channel": "Cross-network",
-      "sessions": 1,
-      "activeUsers": 1
-    },
-    {
-      "channel": "Unassigned",
-      "sessions": 1,
-      "activeUsers": 1
+      "sessions": 3,
+      "activeUsers": 3
     }
   ],
   "trafficSources": [
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 31,
+      "sessions": 30,
       "activeUsers": 29
     },
     {
@@ -161,35 +151,23 @@
       "activeUsers": 4
     },
     {
+      "source": "cgu.edu.tw",
+      "medium": "referral",
+      "sessions": 3,
+      "activeUsers": 3
+    },
+    {
       "source": "bing",
       "medium": "organic",
       "sessions": 2,
       "activeUsers": 2
-    },
-    {
-      "source": "cgu.edu.tw",
-      "medium": "referral",
-      "sessions": 2,
-      "activeUsers": 2
-    },
-    {
-      "source": "(data not available)",
-      "medium": "(data not available)",
-      "sessions": 1,
-      "activeUsers": 1
-    },
-    {
-      "source": "(not set)",
-      "medium": "(not set)",
-      "sessions": 1,
-      "activeUsers": 1
     }
   ],
   "topCountries": [
     {
       "country": "China",
-      "activeUsers": 20,
-      "pageViews": 20
+      "activeUsers": 21,
+      "pageViews": 21
     },
     {
       "country": "United States",
@@ -198,8 +176,8 @@
     },
     {
       "country": "Taiwan",
-      "activeUsers": 5,
-      "pageViews": 31
+      "activeUsers": 4,
+      "pageViews": 27
     },
     {
       "country": "Belgium",
@@ -225,11 +203,11 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 36
+      "activeUsers": 37
     },
     {
       "device": "mobile",
-      "activeUsers": 2
+      "activeUsers": 1
     }
   ],
   "academicEvents": [
