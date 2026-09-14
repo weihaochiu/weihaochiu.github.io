@@ -2,12 +2,12 @@
   "schemaVersion": 3,
   "source": "OpenAlex Works API",
   "status": "success_with_exclusions",
-  "lastSuccessfulUpdate": "2026-09-07T08:51:41.889051Z",
+  "lastSuccessfulUpdate": "2026-09-14T09:30:22.908566Z",
   "workCount": 38,
   "missingPublicationYearCount": 0,
-  "totalCitationsFromPublicationMetrics": 994,
-  "rawTotalCitationsFromHistory": 994,
-  "totalCitationsIncludedInAnnualChart": 988,
+  "totalCitationsFromPublicationMetrics": 998,
+  "rawTotalCitationsFromHistory": 998,
+  "totalCitationsIncludedInAnnualChart": 992,
   "rawValidationDifference": 0,
   "unassignedCitationCount": 0,
   "excludedInvalidCitationCount": 6,
@@ -137,7 +137,7 @@
     },
     {
       "year": 2026,
-      "citations": 59
+      "citations": 63
     }
   ],
   "works": {
@@ -1069,7 +1069,7 @@
           "volume": "31",
           "issue": "1",
           "pages": "015001",
-          "type": "other"
+          "type": "article"
         },
         {
           "openAlexId": "W2978960613",
@@ -2840,7 +2840,7 @@
           "volume": "10",
           "issue": "1",
           "pages": "17-42",
-          "type": "article"
+          "type": "review"
         },
         {
           "openAlexId": "W2913254889",
@@ -4855,7 +4855,7 @@
           "volume": "119",
           "issue": "15",
           "pages": "9074-9135",
-          "type": "article"
+          "type": "review"
         },
         {
           "openAlexId": "W2948971528",
@@ -6194,7 +6194,7 @@
           "volume": "44",
           "issue": "15",
           "pages": "5053-5075",
-          "type": "article"
+          "type": "review"
         },
         {
           "openAlexId": "W1887543109",
@@ -10517,7 +10517,7 @@
           "volume": "44",
           "issue": "1",
           "pages": "161-192",
-          "type": "article"
+          "type": "review"
         },
         {
           "openAlexId": "W2034888034",
@@ -15020,7 +15020,7 @@
           "volume": "110",
           "issue": "11",
           "pages": "6595-6663",
-          "type": "article"
+          "type": "review"
         },
         {
           "openAlexId": "W2088552273",
@@ -18274,7 +18274,7 @@
       "doi": "10.1016/j.cej.2022.139926",
       "title": "Facile synthesis of spiro-core-based hole-transporting material for high-performance and stable perovskite solar cells",
       "publicationYear": 2023,
-      "currentCitationCount": 33,
+      "currentCitationCount": 34,
       "sourceUrl": "https://api.openalex.org/works?filter=cites:W4308038509",
       "citationsByYear": [
         {
@@ -18291,7 +18291,7 @@
         },
         {
           "year": 2026,
-          "citations": 5
+          "citations": 6
         }
       ],
       "rawCitationsByYear": [
@@ -18313,11 +18313,11 @@
         },
         {
           "year": 2026,
-          "citations": 5
+          "citations": 6
         }
       ],
-      "historyTotal": 32,
-      "rawHistoryTotal": 33,
+      "historyTotal": 33,
+      "rawHistoryTotal": 34,
       "excludedInvalidCitationCount": 1,
       "excludedInvalidCitations": [
         {
@@ -18328,9 +18328,38 @@
         }
       ],
       "unassignedCitationCount": 0,
-      "citingWorkCount": 33,
-      "citingArticlesWithDoiCount": 32,
+      "citingWorkCount": 34,
+      "citingArticlesWithDoiCount": 33,
       "citingArticlesWithDoi": [
+        {
+          "openAlexId": "W7212081566",
+          "doi": "10.1002/advs.77623",
+          "doiUrl": "https://doi.org/10.1002/advs.77623",
+          "title": "Asymmetric Fluorinated Spiro Hole‐Transport Materials Enabled by a Rapid Core‐Forming Strategy for Blade‐Coated Perovskite Solar Cells",
+          "authors": [
+            "Kun‐Mu Lee",
+            "Xiuping Lin",
+            "Ya‐Ho Chang",
+            "Cheng-Ting Tsai",
+            "Pei-Chen Chu",
+            "Yu‐Hsun Chen",
+            "Wei‐Hao Chiu",
+            "Yu‐Che Lin",
+            "Sie‐Rong Li",
+            "Hsiao-Chi Hsieh",
+            "Kang‐Ling Liau",
+            "Shih‐I Lu",
+            "Chih‐Min Wang",
+            "Yan‐Duo Lin"
+          ],
+          "journal": "Advanced Science",
+          "publicationYear": 2026,
+          "publicationDate": "2026-09-08",
+          "volume": "",
+          "issue": "",
+          "pages": "e77623",
+          "type": "article"
+        },
         {
           "openAlexId": "W7163214784",
           "doi": "10.1016/j.solener.2026.114750",
@@ -18787,7 +18816,7 @@
           "volume": "36",
           "issue": "2",
           "pages": "457-468",
-          "type": "article"
+          "type": "book-chapter"
         },
         {
           "openAlexId": "W4400940318",
@@ -19412,7 +19441,7 @@
       "doi": "10.1002/adfm.202306367",
       "title": "Fluorinated Pentafulvalene‐Fused Hole‐Transporting Material Enhances the Performance of Perovskite Solar Cells with Efficiency Exceeding 23%",
       "publicationYear": 2023,
-      "currentCitationCount": 37,
+      "currentCitationCount": 38,
       "sourceUrl": "https://api.openalex.org/works?filter=cites:W4385381207",
       "citationsByYear": [
         {
@@ -19429,7 +19458,7 @@
         },
         {
           "year": 2026,
-          "citations": 1
+          "citations": 2
         }
       ],
       "rawCitationsByYear": [
@@ -19447,17 +19476,38 @@
         },
         {
           "year": 2026,
-          "citations": 1
+          "citations": 2
         }
       ],
-      "historyTotal": 37,
-      "rawHistoryTotal": 37,
+      "historyTotal": 38,
+      "rawHistoryTotal": 38,
       "excludedInvalidCitationCount": 0,
       "excludedInvalidCitations": [],
       "unassignedCitationCount": 0,
-      "citingWorkCount": 37,
-      "citingArticlesWithDoiCount": 37,
+      "citingWorkCount": 38,
+      "citingArticlesWithDoiCount": 38,
       "citingArticlesWithDoi": [
+        {
+          "openAlexId": "W7211882143",
+          "doi": "10.1016/j.mseb.2026.119827",
+          "doiUrl": "https://doi.org/10.1016/j.mseb.2026.119827",
+          "title": "Novel spirobifluorene-based fluorinated hole-transporting materials: Investigating the effect of asymmetry and substituent atoms on materials properties",
+          "authors": [
+            "Shabaz Alam",
+            "Hanane Etabti",
+            "Meng Qiang Li",
+            "Se Jeong Park",
+            "Bong‐Jun Chang",
+            "Jaewon Lee"
+          ],
+          "journal": "Materials Science and Engineering B",
+          "publicationYear": 2026,
+          "publicationDate": "2026-09-07",
+          "volume": "334",
+          "issue": "",
+          "pages": "119827",
+          "type": "article"
+        },
         {
           "openAlexId": "W7203907208",
           "doi": "10.1039/d5ta08338a",
@@ -20636,7 +20686,7 @@
       "doi": "10.1039/d3cc04699k",
       "title": "Fluorination on cyclopentadithiophene-based hole-transport materials for high-performance perovskite solar cells",
       "publicationYear": 2023,
-      "currentCitationCount": 10,
+      "currentCitationCount": 11,
       "sourceUrl": "https://api.openalex.org/works?filter=cites:W4388655704",
       "citationsByYear": [
         {
@@ -20646,6 +20696,10 @@
         {
           "year": 2025,
           "citations": 8
+        },
+        {
+          "year": 2026,
+          "citations": 1
         }
       ],
       "rawCitationsByYear": [
@@ -20656,16 +20710,49 @@
         {
           "year": 2025,
           "citations": 8
+        },
+        {
+          "year": 2026,
+          "citations": 1
         }
       ],
-      "historyTotal": 10,
-      "rawHistoryTotal": 10,
+      "historyTotal": 11,
+      "rawHistoryTotal": 11,
       "excludedInvalidCitationCount": 0,
       "excludedInvalidCitations": [],
       "unassignedCitationCount": 0,
-      "citingWorkCount": 10,
-      "citingArticlesWithDoiCount": 10,
+      "citingWorkCount": 11,
+      "citingArticlesWithDoiCount": 11,
       "citingArticlesWithDoi": [
+        {
+          "openAlexId": "W7212081566",
+          "doi": "10.1002/advs.77623",
+          "doiUrl": "https://doi.org/10.1002/advs.77623",
+          "title": "Asymmetric Fluorinated Spiro Hole‐Transport Materials Enabled by a Rapid Core‐Forming Strategy for Blade‐Coated Perovskite Solar Cells",
+          "authors": [
+            "Kun‐Mu Lee",
+            "Xiuping Lin",
+            "Ya‐Ho Chang",
+            "Cheng-Ting Tsai",
+            "Pei-Chen Chu",
+            "Yu‐Hsun Chen",
+            "Wei‐Hao Chiu",
+            "Yu‐Che Lin",
+            "Sie‐Rong Li",
+            "Hsiao-Chi Hsieh",
+            "Kang‐Ling Liau",
+            "Shih‐I Lu",
+            "Chih‐Min Wang",
+            "Yan‐Duo Lin"
+          ],
+          "journal": "Advanced Science",
+          "publicationYear": 2026,
+          "publicationDate": "2026-09-08",
+          "volume": "",
+          "issue": "",
+          "pages": "e77623",
+          "type": "article"
+        },
         {
           "openAlexId": "W7117245039",
           "doi": "10.1039/d5ta07841e",
@@ -22178,18 +22265,50 @@
       "doi": "10.1002/asia.202500719",
       "title": "Asymmetric Fluorinated Cyclopenta[2,1‐b:3,4‐b']Dithiophene‐Based Hole‐Transporting Materials for Perovskite Solar Cell",
       "publicationYear": 2025,
-      "currentCitationCount": 0,
+      "currentCitationCount": 1,
       "sourceUrl": "https://api.openalex.org/works?filter=cites:W4411365246",
-      "citationsByYear": [],
-      "rawCitationsByYear": [],
-      "historyTotal": 0,
-      "rawHistoryTotal": 0,
+      "citationsByYear": [
+        {
+          "year": 2026,
+          "citations": 1
+        }
+      ],
+      "rawCitationsByYear": [
+        {
+          "year": 2026,
+          "citations": 1
+        }
+      ],
+      "historyTotal": 1,
+      "rawHistoryTotal": 1,
       "excludedInvalidCitationCount": 0,
       "excludedInvalidCitations": [],
       "unassignedCitationCount": 0,
-      "citingWorkCount": 0,
-      "citingArticlesWithDoiCount": 0,
-      "citingArticlesWithDoi": []
+      "citingWorkCount": 1,
+      "citingArticlesWithDoiCount": 1,
+      "citingArticlesWithDoi": [
+        {
+          "openAlexId": "W7211882143",
+          "doi": "10.1016/j.mseb.2026.119827",
+          "doiUrl": "https://doi.org/10.1016/j.mseb.2026.119827",
+          "title": "Novel spirobifluorene-based fluorinated hole-transporting materials: Investigating the effect of asymmetry and substituent atoms on materials properties",
+          "authors": [
+            "Shabaz Alam",
+            "Hanane Etabti",
+            "Meng Qiang Li",
+            "Se Jeong Park",
+            "Bong‐Jun Chang",
+            "Jaewon Lee"
+          ],
+          "journal": "Materials Science and Engineering B",
+          "publicationYear": 2026,
+          "publicationDate": "2026-09-07",
+          "volume": "334",
+          "issue": "",
+          "pages": "119827",
+          "type": "article"
+        }
+      ]
     },
     "W4411847970": {
       "doi": "10.1016/j.seppur.2025.134157",
