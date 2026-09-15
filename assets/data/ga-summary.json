@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-14T06:19:08Z",
+  "generatedAt": "2026-09-15T06:10:45Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 71,
+    "pageViews": 67,
     "activeUsers": 24,
-    "sessions": 46,
-    "engagementRate": 0.391304347826087
+    "sessions": 43,
+    "engagementRate": 0.3953488372093023
   },
   "monthlyTrend": [
     {
@@ -32,7 +32,7 @@
     {
       "title": "Research | Wei-Hao Chiu",
       "path": "/research.html",
-      "pageViews": 27,
+      "pageViews": 23,
       "activeUsers": 4
     },
     {
@@ -123,7 +123,7 @@
   "trafficChannels": [
     {
       "channel": "Organic Search",
-      "sessions": 27,
+      "sessions": 24,
       "activeUsers": 6
     },
     {
@@ -141,7 +141,7 @@
     {
       "source": "google",
       "medium": "organic",
-      "sessions": 25,
+      "sessions": 22,
       "activeUsers": 4
     },
     {
@@ -187,7 +187,7 @@
     {
       "country": "India",
       "activeUsers": 1,
-      "pageViews": 17
+      "pageViews": 13
     },
     {
       "country": "Morocco",
