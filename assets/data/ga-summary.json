@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-15T06:10:45Z",
+  "generatedAt": "2026-09-16T06:04:03Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 67,
-    "activeUsers": 24,
-    "sessions": 43,
-    "engagementRate": 0.3953488372093023
+    "pageViews": 62,
+    "activeUsers": 30,
+    "sessions": 40,
+    "engagementRate": 0.325
   },
   "monthlyTrend": [
     {
@@ -24,33 +24,33 @@
     },
     {
       "month": "2026-09",
-      "pageViews": 16,
-      "activeUsers": 12
+      "pageViews": 24,
+      "activeUsers": 18
     }
   ],
   "topPages": [
     {
+      "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
+      "path": "/",
+      "pageViews": 21,
+      "activeUsers": 18
+    },
+    {
       "title": "Research | Wei-Hao Chiu",
       "path": "/research.html",
-      "pageViews": 23,
+      "pageViews": 14,
       "activeUsers": 4
     },
     {
-      "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
-      "path": "/",
-      "pageViews": 19,
-      "activeUsers": 13
+      "title": "Publications | Wei-Hao Chiu",
+      "path": "/publications.html",
+      "pageViews": 7,
+      "activeUsers": 4
     },
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/index.html",
       "pageViews": 7,
-      "activeUsers": 3
-    },
-    {
-      "title": "Publications | Wei-Hao Chiu",
-      "path": "/publications.html",
-      "pageViews": 6,
       "activeUsers": 3
     },
     {
@@ -74,6 +74,12 @@
     {
       "title": "Formation of branched ZnO nanowires from solvothermal method and dye-sensitized solar cells applications | Wei-Hao Chiu",
       "path": "/publications/10-1021-jp805239k.html",
+      "pageViews": 1,
+      "activeUsers": 1
+    },
+    {
+      "title": "Impact of proton radiation on the performance of single-junction perovskite solar cells for space applications | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-solmat-2025-114015.html",
       "pageViews": 1,
       "activeUsers": 1
     },
@@ -112,43 +118,42 @@
       "path": "/patents/twm611184u.html",
       "pageViews": 1,
       "activeUsers": 1
-    },
-    {
-      "title": "Solar Cell Structure | Wei-Hao Chiu",
-      "path": "/patents/cn102456480a.html",
-      "pageViews": 1,
-      "activeUsers": 1
     }
   ],
   "trafficChannels": [
     {
-      "channel": "Organic Search",
-      "sessions": 24,
-      "activeUsers": 6
+      "channel": "Direct",
+      "sessions": 20,
+      "activeUsers": 19
     },
     {
-      "channel": "Direct",
+      "channel": "Organic Search",
       "sessions": 16,
-      "activeUsers": 15
+      "activeUsers": 7
     },
     {
       "channel": "Referral",
       "sessions": 3,
       "activeUsers": 3
+    },
+    {
+      "channel": "Cross-network",
+      "sessions": 1,
+      "activeUsers": 1
     }
   ],
   "trafficSources": [
     {
-      "source": "google",
-      "medium": "organic",
-      "sessions": 22,
-      "activeUsers": 4
-    },
-    {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 16,
-      "activeUsers": 15
+      "sessions": 20,
+      "activeUsers": 19
+    },
+    {
+      "source": "google",
+      "medium": "organic",
+      "sessions": 14,
+      "activeUsers": 5
     },
     {
       "source": "cgu.edu.tw",
@@ -161,23 +166,29 @@
       "medium": "organic",
       "sessions": 2,
       "activeUsers": 2
+    },
+    {
+      "source": "(data not available)",
+      "medium": "(data not available)",
+      "sessions": 1,
+      "activeUsers": 1
     }
   ],
   "topCountries": [
     {
       "country": "United States",
-      "activeUsers": 9,
-      "pageViews": 9
+      "activeUsers": 11,
+      "pageViews": 11
     },
     {
       "country": "China",
-      "activeUsers": 8,
-      "pageViews": 8
+      "activeUsers": 10,
+      "pageViews": 10
     },
     {
       "country": "Taiwan",
-      "activeUsers": 3,
-      "pageViews": 25
+      "activeUsers": 4,
+      "pageViews": 24
     },
     {
       "country": "Belgium",
@@ -187,7 +198,7 @@
     {
       "country": "India",
       "activeUsers": 1,
-      "pageViews": 13
+      "pageViews": 4
     },
     {
       "country": "Morocco",
@@ -198,12 +209,17 @@
       "country": "Philippines",
       "activeUsers": 1,
       "pageViews": 2
+    },
+    {
+      "country": "Singapore",
+      "activeUsers": 1,
+      "pageViews": 1
     }
   ],
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 23
+      "activeUsers": 29
     },
     {
       "device": "mobile",
@@ -211,10 +227,6 @@
     }
   ],
   "academicEvents": [
-    {
-      "eventName": "openalex_click",
-      "eventCount": 1
-    },
     {
       "eventName": "patent_click",
       "eventCount": 1
