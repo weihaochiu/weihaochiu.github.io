@@ -5,7 +5,7 @@
   "publicationCount": 40,
   "verifiedCount": 38,
   "notFoundCount": 2,
-  "lastSuccessfulUpdate": "2026-09-16T07:44:15Z",
+  "lastSuccessfulUpdate": "2026-09-17T07:45:00Z",
   "records": {
     "10.1016/j.cej.2026.177494": {
       "status": "verified",
@@ -468,12 +468,12 @@
       "title": "Formation of Branched ZnO Nanowires from Solvothermal Method and Dye-Sensitized Solar Cells Applications",
       "openAlexId": "W2055166593",
       "url": "https://openalex.org/W2055166593",
-      "citationCount": 266,
-      "fwci": 11.3503,
-      "citationPercentile": 0.98695628,
+      "citationCount": 267,
+      "fwci": 11.7351,
+      "citationPercentile": 0.98795523,
       "isTop1Percent": false,
       "isTop10Percent": true,
-      "openAlexUpdatedDate": "2026-08-21T09:56:20.448147"
+      "openAlexUpdatedDate": "2026-09-16T18:09:00.828671"
     },
     "10.1016/j.optcom.2004.10.003": {
       "status": "verified",
