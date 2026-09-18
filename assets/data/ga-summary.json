@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-17T06:09:48Z",
+  "generatedAt": "2026-09-18T05:56:30Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 56,
-    "activeUsers": 28,
-    "sessions": 37,
-    "engagementRate": 0.32432432432432434
+    "pageViews": 53,
+    "activeUsers": 27,
+    "sessions": 34,
+    "engagementRate": 0.3235294117647059
   },
   "monthlyTrend": [
     {
@@ -32,8 +32,8 @@
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 17,
-      "activeUsers": 16
+      "pageViews": 16,
+      "activeUsers": 15
     },
     {
       "title": "Research | Wei-Hao Chiu",
@@ -51,23 +51,11 @@
       "title": "Publications | Wei-Hao Chiu",
       "path": "/publications.html",
       "pageViews": 6,
-      "activeUsers": 4
-    },
-    {
-      "title": "MOF-& COF-integrated composite separators/membranes: innovations for sustainable and high-performance redox flow batteries | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-seppur-2025-134157.html",
-      "pageViews": 2,
-      "activeUsers": 1
+      "activeUsers": 3
     },
     {
       "title": "About | Wei-Hao Chiu",
       "path": "/about.html",
-      "pageViews": 1,
-      "activeUsers": 1
-    },
-    {
-      "title": "Dye-Sensitized Solar Cell | Wei-Hao Chiu",
-      "path": "/patents/twi449190b.html",
       "pageViews": 1,
       "activeUsers": 1
     },
@@ -92,6 +80,12 @@
     {
       "title": "Improvement on the long-term stability of flexible plastic dye-sensitized solar cells | Wei-Hao Chiu",
       "path": "/publications/10-1016-j-jpowsour-2011-06-049.html",
+      "pageViews": 1,
+      "activeUsers": 1
+    },
+    {
+      "title": "MOF-& COF-integrated composite separators/membranes: innovations for sustainable and high-performance redox flow batteries | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-seppur-2025-134157.html",
       "pageViews": 1,
       "activeUsers": 1
     },
@@ -123,12 +117,12 @@
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 19,
-      "activeUsers": 18
+      "sessions": 18,
+      "activeUsers": 17
     },
     {
       "channel": "Organic Search",
-      "sessions": 15,
+      "sessions": 13,
       "activeUsers": 7
     },
     {
@@ -141,13 +135,13 @@
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 19,
-      "activeUsers": 18
+      "sessions": 18,
+      "activeUsers": 17
     },
     {
       "source": "google",
       "medium": "organic",
-      "sessions": 13,
+      "sessions": 11,
       "activeUsers": 5
     },
     {
@@ -166,8 +160,8 @@
   "topCountries": [
     {
       "country": "China",
-      "activeUsers": 10,
-      "pageViews": 10
+      "activeUsers": 9,
+      "pageViews": 9
     },
     {
       "country": "United States",
@@ -177,7 +171,7 @@
     {
       "country": "Taiwan",
       "activeUsers": 4,
-      "pageViews": 20
+      "pageViews": 18
     },
     {
       "country": "Belgium",
@@ -208,7 +202,7 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 27
+      "activeUsers": 26
     },
     {
       "device": "mobile",
