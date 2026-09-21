@@ -2,12 +2,12 @@
   "schemaVersion": 3,
   "source": "OpenAlex Works API",
   "status": "success_with_exclusions",
-  "lastSuccessfulUpdate": "2026-09-14T09:30:22.908566Z",
+  "lastSuccessfulUpdate": "2026-09-21T09:32:43.900856Z",
   "workCount": 38,
   "missingPublicationYearCount": 0,
-  "totalCitationsFromPublicationMetrics": 998,
-  "rawTotalCitationsFromHistory": 998,
-  "totalCitationsIncludedInAnnualChart": 992,
+  "totalCitationsFromPublicationMetrics": 1000,
+  "rawTotalCitationsFromHistory": 1000,
+  "totalCitationsIncludedInAnnualChart": 994,
   "rawValidationDifference": 0,
   "unassignedCitationCount": 0,
   "excludedInvalidCitationCount": 6,
@@ -137,7 +137,7 @@
     },
     {
       "year": 2026,
-      "citations": 63
+      "citations": 65
     }
   ],
   "works": {
@@ -4004,7 +4004,7 @@
       "doi": "10.1021/jp805239k",
       "title": "Formation of Branched ZnO Nanowires from Solvothermal Method and Dye-Sensitized Solar Cells Applications",
       "publicationYear": 2008,
-      "currentCitationCount": 266,
+      "currentCitationCount": 267,
       "sourceUrl": "https://api.openalex.org/works?filter=cites:W2055166593",
       "citationsByYear": [
         {
@@ -4077,7 +4077,7 @@
         },
         {
           "year": 2026,
-          "citations": 1
+          "citations": 2
         }
       ],
       "rawCitationsByYear": [
@@ -4151,17 +4151,38 @@
         },
         {
           "year": 2026,
-          "citations": 1
+          "citations": 2
         }
       ],
-      "historyTotal": 266,
-      "rawHistoryTotal": 266,
+      "historyTotal": 267,
+      "rawHistoryTotal": 267,
       "excludedInvalidCitationCount": 0,
       "excludedInvalidCitations": [],
       "unassignedCitationCount": 0,
-      "citingWorkCount": 266,
-      "citingArticlesWithDoiCount": 265,
+      "citingWorkCount": 267,
+      "citingArticlesWithDoiCount": 266,
       "citingArticlesWithDoi": [
+        {
+          "openAlexId": "W7213267293",
+          "doi": "10.1021/acsmaterialslett.6c00334",
+          "doiUrl": "https://doi.org/10.1021/acsmaterialslett.6c00334",
+          "title": "Controlled Branching of Organic Microcrystals: Branching Rules, Effective Screening, and Advanced Photonic Functions",
+          "authors": [
+            "Yihui Zhu",
+            "Haina Feng",
+            "Qimiao Li",
+            "Zuofang Feng",
+            "Yanqiu Sun",
+            "Yilong Lei"
+          ],
+          "journal": "ACS Materials Letters",
+          "publicationYear": 2026,
+          "publicationDate": "2026-09-15",
+          "volume": "",
+          "issue": "",
+          "pages": "",
+          "type": "article"
+        },
         {
           "openAlexId": "W7160762799",
           "doi": "10.1007/978-3-032-18692-8_12",
@@ -22784,28 +22805,52 @@
       "doi": "10.1016/j.jpowsour.2025.239216",
       "title": "Heterogeneous graphite felt electrodes decorated with nanostructured graphitic carbon nitride for enhanced redox kinetics in vanadium redox flow batteries",
       "publicationYear": 2026,
-      "currentCitationCount": 2,
+      "currentCitationCount": 3,
       "sourceUrl": "https://api.openalex.org/works?filter=cites:W7118007754",
       "citationsByYear": [
         {
           "year": 2026,
-          "citations": 2
+          "citations": 3
         }
       ],
       "rawCitationsByYear": [
         {
           "year": 2026,
-          "citations": 2
+          "citations": 3
         }
       ],
-      "historyTotal": 2,
-      "rawHistoryTotal": 2,
+      "historyTotal": 3,
+      "rawHistoryTotal": 3,
       "excludedInvalidCitationCount": 0,
       "excludedInvalidCitations": [],
       "unassignedCitationCount": 0,
-      "citingWorkCount": 2,
-      "citingArticlesWithDoiCount": 2,
+      "citingWorkCount": 3,
+      "citingArticlesWithDoiCount": 3,
       "citingArticlesWithDoi": [
+        {
+          "openAlexId": "W7213458701",
+          "doi": "10.1016/j.est.2026.124630",
+          "doiUrl": "https://doi.org/10.1016/j.est.2026.124630",
+          "title": "Oxygen-vacancy-rich MnMo/GF electrodes via bimetallic synergy for high-efficiency and long-cycle vanadium redox flow batteries",
+          "authors": [
+            "Yunfeng Zhang",
+            "Youjing Liu",
+            "Hanrui Tan",
+            "Xingyue Li",
+            "Shenghan Li",
+            "Chen Li",
+            "Li Liu",
+            "Mingyin Wang",
+            "Yuan Dong"
+          ],
+          "journal": "Journal of Energy Storage",
+          "publicationYear": 2026,
+          "publicationDate": "2026-09-17",
+          "volume": "182",
+          "issue": "",
+          "pages": "124630",
+          "type": "article"
+        },
         {
           "openAlexId": "W7172421124",
           "doi": "10.1016/j.matre.2026.100450",
