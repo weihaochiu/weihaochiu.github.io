@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-21T06:23:09Z",
+  "generatedAt": "2026-09-22T06:16:16Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 46,
-    "activeUsers": 28,
-    "sessions": 34,
-    "engagementRate": 0.2647058823529412
+    "pageViews": 47,
+    "activeUsers": 29,
+    "sessions": 35,
+    "engagementRate": 0.2571428571428571
   },
   "monthlyTrend": [
     {
@@ -24,8 +24,8 @@
     },
     {
       "month": "2026-09",
-      "pageViews": 32,
-      "activeUsers": 22
+      "pageViews": 33,
+      "activeUsers": 23
     }
   ],
   "topPages": [
@@ -58,6 +58,12 @@
       "path": "/about.html",
       "pageViews": 2,
       "activeUsers": 2
+    },
+    {
+      "title": "Bifacial Solar Cell and Solar Cell Module — Patent Family | Wei-Hao Chiu",
+      "path": "/patents/families-bifacial-solar-cell-module.html",
+      "pageViews": 1,
+      "activeUsers": 1
     },
     {
       "title": "Formation of branched ZnO nanowires from solvothermal method and dye-sensitized solar cells applications | Wei-Hao Chiu",
@@ -117,8 +123,8 @@
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 18,
-      "activeUsers": 18
+      "sessions": 19,
+      "activeUsers": 19
     },
     {
       "channel": "Organic Search",
@@ -135,8 +141,8 @@
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 18,
-      "activeUsers": 18
+      "sessions": 19,
+      "activeUsers": 19
     },
     {
       "source": "google",
@@ -160,8 +166,8 @@
   "topCountries": [
     {
       "country": "China",
-      "activeUsers": 11,
-      "pageViews": 11
+      "activeUsers": 12,
+      "pageViews": 12
     },
     {
       "country": "United States",
@@ -202,7 +208,7 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 27
+      "activeUsers": 28
     },
     {
       "device": "mobile",
