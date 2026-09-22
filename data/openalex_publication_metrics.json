@@ -5,7 +5,7 @@
   "publicationCount": 40,
   "verifiedCount": 38,
   "notFoundCount": 2,
-  "lastSuccessfulUpdate": "2026-09-21T09:32:22Z",
+  "lastSuccessfulUpdate": "2026-09-22T07:45:24Z",
   "records": {
     "10.1016/j.cej.2026.177494": {
       "status": "verified",
@@ -53,11 +53,11 @@
       "openAlexId": "W7118007754",
       "url": "https://openalex.org/W7118007754",
       "citationCount": 3,
-      "fwci": 6.2054,
-      "citationPercentile": 0.94925223,
+      "fwci": 6.1699,
+      "citationPercentile": 0.94892385,
       "isTop1Percent": false,
       "isTop10Percent": true,
-      "openAlexUpdatedDate": "2026-09-17T22:18:28.273824"
+      "openAlexUpdatedDate": "2026-09-21T07:43:02.447757"
     },
     "10.1016/j.solmat.2025.114015": {
       "status": "verified",
@@ -105,11 +105,11 @@
       "openAlexId": "W4415028078",
       "url": "https://openalex.org/W4415028078",
       "citationCount": 1,
-      "fwci": 0.2866,
-      "citationPercentile": 0.54436441,
+      "fwci": 0.2456,
+      "citationPercentile": 0.48981069,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-08-21T09:56:20.448147"
+      "openAlexUpdatedDate": "2026-09-21T07:43:02.447757"
     },
     "10.1002/asia.202500719": {
       "status": "verified",
