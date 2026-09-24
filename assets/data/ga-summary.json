@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-23T05:59:58Z",
+  "generatedAt": "2026-09-24T06:11:17Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 48,
-    "activeUsers": 31,
-    "sessions": 37,
-    "engagementRate": 0.24324324324324326
+    "pageViews": 56,
+    "activeUsers": 34,
+    "sessions": 42,
+    "engagementRate": 0.21428571428571427
   },
   "monthlyTrend": [
     {
@@ -24,22 +24,22 @@
     },
     {
       "month": "2026-09",
-      "pageViews": 34,
-      "activeUsers": 25
+      "pageViews": 42,
+      "activeUsers": 28
     }
   ],
   "topPages": [
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 20,
-      "activeUsers": 20
+      "pageViews": 24,
+      "activeUsers": 22
     },
     {
       "title": "Publications | Wei-Hao Chiu",
       "path": "/publications.html",
-      "pageViews": 8,
-      "activeUsers": 4
+      "pageViews": 10,
+      "activeUsers": 5
     },
     {
       "title": "Research | Wei-Hao Chiu",
@@ -62,6 +62,12 @@
     {
       "title": "Bifacial Solar Cell and Solar Cell Module — Patent Family | Wei-Hao Chiu",
       "path": "/patents/families-bifacial-solar-cell-module.html",
+      "pageViews": 1,
+      "activeUsers": 1
+    },
+    {
+      "title": "Branched ZnO nanowires for enhancing energy conversion efficiency of dye-sensitized solar cells | Wei-Hao Chiu",
+      "path": "/publications/10-1557-proc-1121-n14-01.html",
       "pageViews": 1,
       "activeUsers": 1
     },
@@ -96,6 +102,12 @@
       "activeUsers": 1
     },
     {
+      "title": "Reliability enhancement of PVDF-HFP modified perovskite solar cells under synergistic space-relevant stress conditions | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-cej-2026-177494.html",
+      "pageViews": 1,
+      "activeUsers": 1
+    },
+    {
       "title": "Research Projects | Wei-Hao Chiu",
       "path": "/projects.html",
       "pageViews": 1,
@@ -106,72 +118,60 @@
       "path": "/patents/twm611184u.html",
       "pageViews": 1,
       "activeUsers": 1
-    },
-    {
-      "title": "Solar Cell Structure | Wei-Hao Chiu",
-      "path": "/patents/cn102456480a.html",
-      "pageViews": 1,
-      "activeUsers": 1
-    },
-    {
-      "title": "Synergistic preheating and moderate temperature liquid medium annealing for high performance perovskite solar cells | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-solener-2026-114430.html",
-      "pageViews": 1,
-      "activeUsers": 1
     }
   ],
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 20,
-      "activeUsers": 20
+      "sessions": 23,
+      "activeUsers": 23
     },
     {
       "channel": "Organic Search",
-      "sessions": 13,
+      "sessions": 15,
       "activeUsers": 7
     },
     {
       "channel": "Referral",
-      "sessions": 3,
-      "activeUsers": 3
+      "sessions": 4,
+      "activeUsers": 4
     },
     {
       "channel": "Unassigned",
-      "sessions": 1,
-      "activeUsers": 1
+      "sessions": 2,
+      "activeUsers": 2
     }
   ],
   "trafficSources": [
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 20,
-      "activeUsers": 20
+      "sessions": 23,
+      "activeUsers": 23
     },
     {
       "source": "google",
       "medium": "organic",
-      "sessions": 11,
+      "sessions": 13,
       "activeUsers": 5
     },
     {
       "source": "cgu.edu.tw",
       "medium": "referral",
-      "sessions": 3,
-      "activeUsers": 3
+      "sessions": 4,
+      "activeUsers": 4
+    },
+    {
+      "source": "(not set)",
+      "medium": "(not set)",
+      "sessions": 2,
+      "activeUsers": 2
     },
     {
       "source": "bing",
       "medium": "organic",
       "sessions": 2,
       "activeUsers": 2
-    },
-    {
-      "source": "(not set)",
-      "medium": "(not set)",
-      "sessions": 1,
-      "activeUsers": 1
     }
   ],
   "topCountries": [
@@ -182,13 +182,13 @@
     },
     {
       "country": "United States",
-      "activeUsers": 9,
-      "pageViews": 9
+      "activeUsers": 11,
+      "pageViews": 11
     },
     {
       "country": "Taiwan",
-      "activeUsers": 4,
-      "pageViews": 9
+      "activeUsers": 5,
+      "pageViews": 15
     },
     {
       "country": "Belgium",
@@ -219,7 +219,7 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 30
+      "activeUsers": 33
     },
     {
       "device": "mobile",
@@ -227,6 +227,14 @@
     }
   ],
   "academicEvents": [
+    {
+      "eventName": "doi_click",
+      "eventCount": 2
+    },
+    {
+      "eventName": "orcid_click",
+      "eventCount": 1
+    },
     {
       "eventName": "patent_click",
       "eventCount": 1
