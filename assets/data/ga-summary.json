@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-24T06:11:17Z",
+  "generatedAt": "2026-09-25T06:10:19Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
@@ -9,7 +9,7 @@
     "pageViews": 56,
     "activeUsers": 34,
     "sessions": 42,
-    "engagementRate": 0.21428571428571427
+    "engagementRate": 0.2619047619047619
   },
   "monthlyTrend": [
     {
@@ -135,11 +135,6 @@
       "channel": "Referral",
       "sessions": 4,
       "activeUsers": 4
-    },
-    {
-      "channel": "Unassigned",
-      "sessions": 2,
-      "activeUsers": 2
     }
   ],
   "trafficSources": [
@@ -160,12 +155,6 @@
       "medium": "referral",
       "sessions": 4,
       "activeUsers": 4
-    },
-    {
-      "source": "(not set)",
-      "medium": "(not set)",
-      "sessions": 2,
-      "activeUsers": 2
     },
     {
       "source": "bing",
