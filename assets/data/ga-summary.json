@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-25T06:10:19Z",
+  "generatedAt": "2026-09-26T06:10:25Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 56,
-    "activeUsers": 34,
-    "sessions": 42,
-    "engagementRate": 0.2619047619047619
+    "pageViews": 48,
+    "activeUsers": 31,
+    "sessions": 38,
+    "engagementRate": 0.23684210526315788
   },
   "monthlyTrend": [
     {
@@ -32,32 +32,32 @@
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 24,
-      "activeUsers": 22
+      "pageViews": 21,
+      "activeUsers": 19
     },
     {
       "title": "Publications | Wei-Hao Chiu",
       "path": "/publications.html",
-      "pageViews": 10,
+      "pageViews": 9,
       "activeUsers": 5
     },
     {
       "title": "Research | Wei-Hao Chiu",
       "path": "/research.html",
-      "pageViews": 5,
-      "activeUsers": 2
+      "pageViews": 4,
+      "activeUsers": 1
     },
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/index.html",
-      "pageViews": 3,
+      "pageViews": 2,
       "activeUsers": 2
     },
     {
       "title": "About | Wei-Hao Chiu",
       "path": "/about.html",
-      "pageViews": 2,
-      "activeUsers": 2
+      "pageViews": 1,
+      "activeUsers": 1
     },
     {
       "title": "Bifacial Solar Cell and Solar Cell Module — Patent Family | Wei-Hao Chiu",
@@ -96,12 +96,6 @@
       "activeUsers": 1
     },
     {
-      "title": "Patents | Wei-Hao Chiu",
-      "path": "/patents.html",
-      "pageViews": 1,
-      "activeUsers": 1
-    },
-    {
       "title": "Reliability enhancement of PVDF-HFP modified perovskite solar cells under synergistic space-relevant stress conditions | Wei-Hao Chiu",
       "path": "/publications/10-1016-j-cej-2026-177494.html",
       "pageViews": 1,
@@ -118,49 +112,55 @@
       "path": "/patents/twm611184u.html",
       "pageViews": 1,
       "activeUsers": 1
+    },
+    {
+      "title": "Solar Cell Structure | Wei-Hao Chiu",
+      "path": "/patents/cn102456480a.html",
+      "pageViews": 1,
+      "activeUsers": 1
     }
   ],
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 23,
-      "activeUsers": 23
+      "sessions": 22,
+      "activeUsers": 22
     },
     {
       "channel": "Organic Search",
-      "sessions": 15,
-      "activeUsers": 7
+      "sessions": 13,
+      "activeUsers": 6
     },
     {
       "channel": "Referral",
-      "sessions": 4,
-      "activeUsers": 4
+      "sessions": 3,
+      "activeUsers": 3
     }
   ],
   "trafficSources": [
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 23,
-      "activeUsers": 23
+      "sessions": 22,
+      "activeUsers": 22
     },
     {
       "source": "google",
       "medium": "organic",
-      "sessions": 13,
+      "sessions": 12,
       "activeUsers": 5
     },
     {
       "source": "cgu.edu.tw",
       "medium": "referral",
-      "sessions": 4,
-      "activeUsers": 4
+      "sessions": 3,
+      "activeUsers": 3
     },
     {
       "source": "bing",
       "medium": "organic",
-      "sessions": 2,
-      "activeUsers": 2
+      "sessions": 1,
+      "activeUsers": 1
     }
   ],
   "topCountries": [
@@ -171,18 +171,18 @@
     },
     {
       "country": "United States",
-      "activeUsers": 11,
-      "pageViews": 11
+      "activeUsers": 9,
+      "pageViews": 9
     },
     {
       "country": "Taiwan",
-      "activeUsers": 5,
-      "pageViews": 15
+      "activeUsers": 4,
+      "pageViews": 14
     },
     {
       "country": "Belgium",
       "activeUsers": 1,
-      "pageViews": 7
+      "pageViews": 2
     },
     {
       "country": "India",
@@ -208,7 +208,7 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 33
+      "activeUsers": 30
     },
     {
       "device": "mobile",
@@ -222,10 +222,6 @@
     },
     {
       "eventName": "orcid_click",
-      "eventCount": 1
-    },
-    {
-      "eventName": "patent_click",
       "eventCount": 1
     }
   ]
