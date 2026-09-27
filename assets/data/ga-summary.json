@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-26T06:10:25Z",
+  "generatedAt": "2026-09-27T06:37:37Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 48,
-    "activeUsers": 31,
-    "sessions": 38,
-    "engagementRate": 0.23684210526315788
+    "pageViews": 45,
+    "activeUsers": 30,
+    "sessions": 36,
+    "engagementRate": 0.2222222222222222
   },
   "monthlyTrend": [
     {
@@ -24,8 +24,8 @@
     },
     {
       "month": "2026-09",
-      "pageViews": 42,
-      "activeUsers": 28
+      "pageViews": 43,
+      "activeUsers": 29
     }
   ],
   "topPages": [
@@ -38,13 +38,13 @@
     {
       "title": "Publications | Wei-Hao Chiu",
       "path": "/publications.html",
-      "pageViews": 9,
-      "activeUsers": 5
+      "pageViews": 7,
+      "activeUsers": 4
     },
     {
       "title": "Research | Wei-Hao Chiu",
       "path": "/research.html",
-      "pageViews": 4,
+      "pageViews": 3,
       "activeUsers": 1
     },
     {
@@ -128,8 +128,8 @@
     },
     {
       "channel": "Organic Search",
-      "sessions": 13,
-      "activeUsers": 6
+      "sessions": 11,
+      "activeUsers": 5
     },
     {
       "channel": "Referral",
@@ -147,8 +147,8 @@
     {
       "source": "google",
       "medium": "organic",
-      "sessions": 12,
-      "activeUsers": 5
+      "sessions": 10,
+      "activeUsers": 4
     },
     {
       "source": "cgu.edu.tw",
@@ -166,13 +166,13 @@
   "topCountries": [
     {
       "country": "China",
-      "activeUsers": 13,
-      "pageViews": 13
+      "activeUsers": 14,
+      "pageViews": 14
     },
     {
       "country": "United States",
-      "activeUsers": 9,
-      "pageViews": 9
+      "activeUsers": 8,
+      "pageViews": 8
     },
     {
       "country": "Taiwan",
@@ -187,17 +187,12 @@
     {
       "country": "India",
       "activeUsers": 1,
-      "pageViews": 4
+      "pageViews": 3
     },
     {
       "country": "Morocco",
       "activeUsers": 1,
       "pageViews": 3
-    },
-    {
-      "country": "Philippines",
-      "activeUsers": 1,
-      "pageViews": 2
     },
     {
       "country": "Singapore",
@@ -209,10 +204,6 @@
     {
       "device": "desktop",
       "activeUsers": 30
-    },
-    {
-      "device": "mobile",
-      "activeUsers": 1
     }
   ],
   "academicEvents": [
