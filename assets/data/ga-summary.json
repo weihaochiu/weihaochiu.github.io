@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-27T06:37:37Z",
+  "generatedAt": "2026-09-28T06:56:07Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 45,
-    "activeUsers": 30,
-    "sessions": 36,
-    "engagementRate": 0.2222222222222222
+    "pageViews": 46,
+    "activeUsers": 31,
+    "sessions": 37,
+    "engagementRate": 0.21621621621621623
   },
   "monthlyTrend": [
     {
@@ -24,16 +24,16 @@
     },
     {
       "month": "2026-09",
-      "pageViews": 43,
-      "activeUsers": 29
+      "pageViews": 44,
+      "activeUsers": 30
     }
   ],
   "topPages": [
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 21,
-      "activeUsers": 19
+      "pageViews": 22,
+      "activeUsers": 20
     },
     {
       "title": "Publications | Wei-Hao Chiu",
@@ -123,8 +123,8 @@
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 22,
-      "activeUsers": 22
+      "sessions": 23,
+      "activeUsers": 23
     },
     {
       "channel": "Organic Search",
@@ -141,8 +141,8 @@
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 22,
-      "activeUsers": 22
+      "sessions": 23,
+      "activeUsers": 23
     },
     {
       "source": "google",
@@ -180,6 +180,11 @@
       "pageViews": 14
     },
     {
+      "country": "Singapore",
+      "activeUsers": 2,
+      "pageViews": 2
+    },
+    {
       "country": "Belgium",
       "activeUsers": 1,
       "pageViews": 2
@@ -193,17 +198,12 @@
       "country": "Morocco",
       "activeUsers": 1,
       "pageViews": 3
-    },
-    {
-      "country": "Singapore",
-      "activeUsers": 1,
-      "pageViews": 1
     }
   ],
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 30
+      "activeUsers": 31
     }
   ],
   "academicEvents": [
