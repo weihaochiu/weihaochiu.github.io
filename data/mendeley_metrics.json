@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "source": "Mendeley Catalog API",
   "status": "success",
-  "lastAttemptedUpdate": "2026-09-21T09:59:06Z",
-  "lastSuccessfulUpdate": "2026-09-21T09:59:06Z",
-  "totalReaders": 982,
+  "lastAttemptedUpdate": "2026-09-28T10:58:17Z",
+  "lastSuccessfulUpdate": "2026-09-28T10:58:17Z",
+  "totalReaders": 966,
   "publicationCount": 40,
   "matchedPublications": 38,
   "freshPublications": 38,
@@ -22,7 +22,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-09-21T09:59:06Z",
+      "updatedAt": "2026-09-28T10:58:17Z",
       "stale": false
     },
     "10.1002/advs.202410666": {
@@ -34,7 +34,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-09-21T09:59:06Z",
+      "updatedAt": "2026-09-28T10:58:17Z",
       "stale": false
     },
     "10.1002/asia.202300681": {
@@ -46,7 +46,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-09-21T09:59:06Z",
+      "updatedAt": "2026-09-28T10:58:17Z",
       "stale": false
     },
     "10.1002/asia.202500719": {
@@ -58,7 +58,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-09-21T09:59:06Z",
+      "updatedAt": "2026-09-28T10:58:17Z",
       "stale": false
     },
     "10.1002/asia.70245": {
@@ -70,7 +70,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-09-21T09:59:06Z",
+      "updatedAt": "2026-09-28T10:58:17Z",
       "stale": false
     },
     "10.1002/solr.202300988": {
@@ -82,31 +82,31 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-09-21T09:59:06Z",
+      "updatedAt": "2026-09-28T10:58:17Z",
       "stale": false
     },
     "10.1002/solr.202500538": {
       "status": "verified",
       "title": "Round-Robin Interlaboratory Comparison of Large-Area Organic Thin-Film and Perovskite Solar Cells",
-      "readerCount": 4,
+      "readerCount": 6,
       "documentId": "bf4e9baa-5251-362b-992d-3e7b2ad25993",
       "url": "https://www.mendeley.com/catalogue/bf4e9baa-5251-362b-992d-3e7b2ad25993/",
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-09-21T09:59:06Z",
+      "updatedAt": "2026-09-28T10:58:17Z",
       "stale": false
     },
     "10.1016/j.cej.2021.131609": {
       "status": "verified",
       "title": "High-performance perovskite solar cells based on dopant-free hole-transporting material fabricated by a thermal-assisted blade-coating method with efficiency exceeding 21%",
-      "readerCount": 48,
+      "readerCount": 43,
       "documentId": "dbd15a5f-2928-38d1-a64f-4d61878156aa",
       "url": "https://www.mendeley.com/catalogue/dbd15a5f-2928-38d1-a64f-4d61878156aa/",
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-09-21T09:59:06Z",
+      "updatedAt": "2026-09-28T10:58:17Z",
       "stale": false
     },
     "10.1016/j.cej.2022.139926": {
@@ -118,7 +118,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-09-21T09:59:06Z",
+      "updatedAt": "2026-09-28T10:58:17Z",
       "stale": false
     },
     "10.1016/j.cej.2024.153974": {
@@ -130,19 +130,19 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-09-21T09:59:06Z",
+      "updatedAt": "2026-09-28T10:58:17Z",
       "stale": false
     },
     "10.1016/j.cej.2026.177494": {
       "status": "verified",
       "title": "Reliability enhancement of PVDF-HFP modified perovskite solar cells under synergistic space-relevant stress conditions",
-      "readerCount": 3,
+      "readerCount": 2,
       "documentId": "2cf94f88-9d18-390b-aea4-2514edf6f5ef",
       "url": "https://www.mendeley.com/catalogue/2cf94f88-9d18-390b-aea4-2514edf6f5ef/",
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-09-21T09:59:06Z",
+      "updatedAt": "2026-09-28T10:58:17Z",
       "stale": false
     },
     "10.1016/j.electacta.2010.07.061": {
@@ -154,7 +154,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-09-21T09:59:06Z",
+      "updatedAt": "2026-09-28T10:58:17Z",
       "stale": false
     },
     "10.1016/j.jece.2023.111741": {
@@ -166,7 +166,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-09-21T09:59:06Z",
+      "updatedAt": "2026-09-28T10:58:17Z",
       "stale": false
     },
     "10.1016/j.jpowsour.2010.12.063": {
@@ -178,7 +178,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-09-21T09:59:06Z",
+      "updatedAt": "2026-09-28T10:58:17Z",
       "stale": false
     },
     "10.1016/j.jpowsour.2011.06.049": {
@@ -190,7 +190,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-09-21T09:59:06Z",
+      "updatedAt": "2026-09-28T10:58:17Z",
       "stale": false
     },
     "10.1016/j.jpowsour.2012.05.079": {
@@ -202,7 +202,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-09-21T09:59:06Z",
+      "updatedAt": "2026-09-28T10:58:17Z",
       "stale": false
     },
     "10.1016/j.jpowsour.2012.12.094": {
@@ -214,7 +214,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-09-21T09:59:06Z",
+      "updatedAt": "2026-09-28T10:58:17Z",
       "stale": false
     },
     "10.1016/j.jpowsour.2023.233496": {
@@ -226,7 +226,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-09-21T09:59:06Z",
+      "updatedAt": "2026-09-28T10:58:17Z",
       "stale": false
     },
     "10.1016/j.jpowsour.2025.239216": {
@@ -238,7 +238,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-09-21T09:59:06Z",
+      "updatedAt": "2026-09-28T10:58:17Z",
       "stale": false
     },
     "10.1016/j.mtchem.2024.102329": {
@@ -250,19 +250,19 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-09-21T09:59:06Z",
+      "updatedAt": "2026-09-28T10:58:17Z",
       "stale": false
     },
     "10.1016/j.mtener.2026.102359": {
       "status": "verified",
       "title": "2T perovskite tandem solar cells in space: Failure mechanisms and design strategies",
-      "readerCount": 3,
+      "readerCount": 4,
       "documentId": "2a700488-5383-398c-a976-cfb3f31992dd",
       "url": "https://www.mendeley.com/catalogue/2a700488-5383-398c-a976-cfb3f31992dd/",
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-09-21T09:59:06Z",
+      "updatedAt": "2026-09-28T10:58:17Z",
       "stale": false
     },
     "10.1016/j.optcom.2004.10.003": {
@@ -274,31 +274,31 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-09-21T09:59:06Z",
+      "updatedAt": "2026-09-28T10:58:17Z",
       "stale": false
     },
     "10.1016/j.orgel.2023.106847": {
       "status": "verified",
       "title": "Enhancing efficiency and stability of perovskite solar cells through two-step deposition method with the addition of cesium halides to PbI2 precursor",
-      "readerCount": 25,
+      "readerCount": 21,
       "documentId": "20857221-7f52-3efa-942f-707890239b82",
       "url": "https://www.mendeley.com/catalogue/20857221-7f52-3efa-942f-707890239b82/",
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-09-21T09:59:06Z",
+      "updatedAt": "2026-09-28T10:58:17Z",
       "stale": false
     },
     "10.1016/j.seppur.2025.134157": {
       "status": "verified",
       "title": "MOF- & COF-integrated composite separators/membranes: innovations for sustainable and high-performance redox flow batteries",
-      "readerCount": 16,
+      "readerCount": 15,
       "documentId": "2155aaa5-d028-373f-a64e-f71981a6d8e3",
       "url": "https://www.mendeley.com/catalogue/2155aaa5-d028-373f-a64e-f71981a6d8e3/",
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-09-21T09:59:06Z",
+      "updatedAt": "2026-09-28T10:58:17Z",
       "stale": false
     },
     "10.1016/j.solener.2026.114430": {
@@ -310,31 +310,31 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-09-21T09:59:06Z",
+      "updatedAt": "2026-09-28T10:58:17Z",
       "stale": false
     },
     "10.1016/j.solmat.2009.07.017": {
       "status": "verified",
       "title": "Dye-sensitized solar cells with a micro-porous TiO2 electrode and gel polymer electrolytes prepared by in situ cross-link reaction",
-      "readerCount": 87,
+      "readerCount": 86,
       "documentId": "76256bd6-fd54-3e1c-9b77-cdaad4d7706d",
       "url": "https://www.mendeley.com/catalogue/76256bd6-fd54-3e1c-9b77-cdaad4d7706d/",
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-09-21T09:59:06Z",
+      "updatedAt": "2026-09-28T10:58:17Z",
       "stale": false
     },
     "10.1016/j.solmat.2025.114015": {
       "status": "verified",
       "title": "Impact of proton radiation on the performance of single-junction perovskite solar cells for space applications",
-      "readerCount": 27,
+      "readerCount": 20,
       "documentId": "4336dab2-9717-32e1-9f3a-5a890170e58a",
       "url": "https://www.mendeley.com/catalogue/4336dab2-9717-32e1-9f3a-5a890170e58a/",
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-09-21T09:59:06Z",
+      "updatedAt": "2026-09-28T10:58:17Z",
       "stale": false
     },
     "10.1016/j.tsf.2009.11.058": {
@@ -346,7 +346,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-09-21T09:59:06Z",
+      "updatedAt": "2026-09-28T10:58:17Z",
       "stale": false
     },
     "10.1021/jp805239k": {
@@ -358,7 +358,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-09-21T09:59:06Z",
+      "updatedAt": "2026-09-28T10:58:17Z",
       "stale": false
     },
     "10.1039/b902595m": {
@@ -370,7 +370,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-09-21T09:59:06Z",
+      "updatedAt": "2026-09-28T10:58:17Z",
       "stale": false
     },
     "10.1039/c0jm04099a": {
@@ -382,7 +382,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-09-21T09:59:06Z",
+      "updatedAt": "2026-09-28T10:58:17Z",
       "stale": false
     },
     "10.1039/d3cc04699k": {
@@ -394,7 +394,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-09-21T09:59:06Z",
+      "updatedAt": "2026-09-28T10:58:17Z",
       "stale": false
     },
     "10.1557/proc-1121-n14-01": {
@@ -406,18 +406,18 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-09-21T09:59:06Z",
+      "updatedAt": "2026-09-28T10:58:17Z",
       "stale": false
     },
     "10.29803/ce.202108_68(4).0006": {
       "status": "not_found",
       "title": "鈣鈦礦太陽能模組技術現況與展望",
-      "lastAttemptedUpdate": "2026-09-21T09:59:06Z"
+      "lastAttemptedUpdate": "2026-09-28T10:58:17Z"
     },
     "10.29803/ce.202402_71(1).0002": {
       "status": "not_found",
       "title": "鈣鈦礦太陽能電池於太空應用的研究與展望",
-      "lastAttemptedUpdate": "2026-09-21T09:59:06Z"
+      "lastAttemptedUpdate": "2026-09-28T10:58:17Z"
     },
     "10.3390/nano11061607": {
       "status": "verified",
@@ -428,7 +428,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-09-21T09:59:06Z",
+      "updatedAt": "2026-09-28T10:58:17Z",
       "stale": false
     },
     "10.3390/nano11082125": {
@@ -440,7 +440,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-09-21T09:59:06Z",
+      "updatedAt": "2026-09-28T10:58:17Z",
       "stale": false
     },
     "10.3390/nano12152651": {
@@ -452,7 +452,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-09-21T09:59:06Z",
+      "updatedAt": "2026-09-28T10:58:17Z",
       "stale": false
     },
     "10.3390/polym13234246": {
@@ -464,7 +464,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-09-21T09:59:06Z",
+      "updatedAt": "2026-09-28T10:58:17Z",
       "stale": false
     },
     "10.3390/polym14081580": {
@@ -476,7 +476,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-09-21T09:59:06Z",
+      "updatedAt": "2026-09-28T10:58:17Z",
       "stale": false
     }
   }
