@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-28T06:56:07Z",
+  "generatedAt": "2026-09-29T06:56:27Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
     "pageViews": 46,
-    "activeUsers": 31,
+    "activeUsers": 32,
     "sessions": 37,
     "engagementRate": 0.21621621621621623
   },
@@ -24,16 +24,16 @@
     },
     {
       "month": "2026-09",
-      "pageViews": 44,
-      "activeUsers": 30
+      "pageViews": 46,
+      "activeUsers": 32
     }
   ],
   "topPages": [
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 22,
-      "activeUsers": 20
+      "pageViews": 21,
+      "activeUsers": 19
     },
     {
       "title": "Publications | Wei-Hao Chiu",
@@ -44,7 +44,7 @@
     {
       "title": "Research | Wei-Hao Chiu",
       "path": "/research.html",
-      "pageViews": 3,
+      "pageViews": 2,
       "activeUsers": 1
     },
     {
@@ -68,6 +68,12 @@
     {
       "title": "Branched ZnO nanowires for enhancing energy conversion efficiency of dye-sensitized solar cells | Wei-Hao Chiu",
       "path": "/publications/10-1557-proc-1121-n14-01.html",
+      "pageViews": 1,
+      "activeUsers": 1
+    },
+    {
+      "title": "Fluorination on cyclopentadithiophene-based hole-transport material for high-performance perovskite solar cells | Wei-Hao Chiu",
+      "path": "/publications/10-1039-d3cc04699k.html",
       "pageViews": 1,
       "activeUsers": 1
     },
@@ -112,49 +118,43 @@
       "path": "/patents/twm611184u.html",
       "pageViews": 1,
       "activeUsers": 1
-    },
-    {
-      "title": "Solar Cell Structure | Wei-Hao Chiu",
-      "path": "/patents/cn102456480a.html",
-      "pageViews": 1,
-      "activeUsers": 1
     }
   ],
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 23,
-      "activeUsers": 23
+      "sessions": 25,
+      "activeUsers": 25
     },
     {
       "channel": "Organic Search",
-      "sessions": 11,
+      "sessions": 10,
       "activeUsers": 5
     },
     {
       "channel": "Referral",
-      "sessions": 3,
-      "activeUsers": 3
+      "sessions": 2,
+      "activeUsers": 2
     }
   ],
   "trafficSources": [
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 23,
-      "activeUsers": 23
+      "sessions": 25,
+      "activeUsers": 25
     },
     {
       "source": "google",
       "medium": "organic",
-      "sessions": 10,
+      "sessions": 9,
       "activeUsers": 4
     },
     {
       "source": "cgu.edu.tw",
       "medium": "referral",
-      "sessions": 3,
-      "activeUsers": 3
+      "sessions": 2,
+      "activeUsers": 2
     },
     {
       "source": "bing",
@@ -166,8 +166,8 @@
   "topCountries": [
     {
       "country": "China",
-      "activeUsers": 14,
-      "pageViews": 14
+      "activeUsers": 15,
+      "pageViews": 15
     },
     {
       "country": "United States",
@@ -192,7 +192,7 @@
     {
       "country": "India",
       "activeUsers": 1,
-      "pageViews": 3
+      "pageViews": 2
     },
     {
       "country": "Morocco",
@@ -203,7 +203,7 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 31
+      "activeUsers": 32
     }
   ],
   "academicEvents": [
