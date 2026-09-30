@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-29T06:56:27Z",
+  "generatedAt": "2026-09-30T06:44:55Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 46,
-    "activeUsers": 32,
-    "sessions": 37,
-    "engagementRate": 0.21621621621621623
+    "pageViews": 51,
+    "activeUsers": 37,
+    "sessions": 42,
+    "engagementRate": 0.19047619047619047
   },
   "monthlyTrend": [
     {
@@ -24,16 +24,16 @@
     },
     {
       "month": "2026-09",
-      "pageViews": 46,
-      "activeUsers": 32
+      "pageViews": 52,
+      "activeUsers": 38
     }
   ],
   "topPages": [
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 21,
-      "activeUsers": 19
+      "pageViews": 22,
+      "activeUsers": 20
     },
     {
       "title": "Publications | Wei-Hao Chiu",
@@ -44,12 +44,18 @@
     {
       "title": "Research | Wei-Hao Chiu",
       "path": "/research.html",
-      "pageViews": 2,
-      "activeUsers": 1
+      "pageViews": 3,
+      "activeUsers": 2
     },
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/index.html",
+      "pageViews": 3,
+      "activeUsers": 3
+    },
+    {
+      "title": "Research Projects | Wei-Hao Chiu",
+      "path": "/projects.html",
       "pageViews": 2,
       "activeUsers": 2
     },
@@ -102,20 +108,14 @@
       "activeUsers": 1
     },
     {
-      "title": "Reliability enhancement of PVDF-HFP modified perovskite solar cells under synergistic space-relevant stress conditions | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-cej-2026-177494.html",
+      "title": "Microstructure and Biological Properties of Electrospun In Situ Polymerization of Polycaprolactone-Graft-Polyacrylic Acid Nanofibers and Its Composite Nanofiber Dressings | Wei-Hao Chiu",
+      "path": "/publications/10-3390-polym13234246.html",
       "pageViews": 1,
       "activeUsers": 1
     },
     {
-      "title": "Research Projects | Wei-Hao Chiu",
-      "path": "/projects.html",
-      "pageViews": 1,
-      "activeUsers": 1
-    },
-    {
-      "title": "Solar Cell Module | Wei-Hao Chiu",
-      "path": "/patents/twm611184u.html",
+      "title": "Patents | Wei-Hao Chiu",
+      "path": "/patents.html",
       "pageViews": 1,
       "activeUsers": 1
     }
@@ -123,8 +123,8 @@
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 25,
-      "activeUsers": 25
+      "sessions": 29,
+      "activeUsers": 29
     },
     {
       "channel": "Organic Search",
@@ -135,14 +135,24 @@
       "channel": "Referral",
       "sessions": 2,
       "activeUsers": 2
+    },
+    {
+      "channel": "Cross-network",
+      "sessions": 1,
+      "activeUsers": 1
+    },
+    {
+      "channel": "Unassigned",
+      "sessions": 1,
+      "activeUsers": 0
     }
   ],
   "trafficSources": [
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 25,
-      "activeUsers": 25
+      "sessions": 29,
+      "activeUsers": 29
     },
     {
       "source": "google",
@@ -157,6 +167,18 @@
       "activeUsers": 2
     },
     {
+      "source": "(data not available)",
+      "medium": "(data not available)",
+      "sessions": 1,
+      "activeUsers": 1
+    },
+    {
+      "source": "(not set)",
+      "medium": "(not set)",
+      "sessions": 1,
+      "activeUsers": 0
+    },
+    {
       "source": "bing",
       "medium": "organic",
       "sessions": 1,
@@ -166,8 +188,8 @@
   "topCountries": [
     {
       "country": "China",
-      "activeUsers": 15,
-      "pageViews": 15
+      "activeUsers": 16,
+      "pageViews": 16
     },
     {
       "country": "United States",
@@ -175,14 +197,14 @@
       "pageViews": 8
     },
     {
+      "country": "Singapore",
+      "activeUsers": 6,
+      "pageViews": 6
+    },
+    {
       "country": "Taiwan",
       "activeUsers": 4,
       "pageViews": 14
-    },
-    {
-      "country": "Singapore",
-      "activeUsers": 2,
-      "pageViews": 2
     },
     {
       "country": "Belgium",
@@ -203,7 +225,7 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 32
+      "activeUsers": 37
     }
   ],
   "academicEvents": [
