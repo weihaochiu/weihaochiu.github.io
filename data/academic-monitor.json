@@ -1,25 +1,84 @@
 {
   "schemaVersion": 3,
-  "generatedAt": "2026-09-28T14:44:42+08:00",
+  "generatedAt": "2026-10-01T15:09:02+08:00",
   "repository": "https://github.com/weihaochiu/weihaochiu.github.io",
   "status": "completed",
   "summary": {
-    "publications": 2,
+    "publications": 3,
     "patents": 17,
     "projects": 0,
     "publicationTypes": {
-      "international-journal": 1,
+      "international-journal": 2,
       "chinese-journal": 0,
       "conference": 0,
       "other": 1,
       "unclassified": 0
     },
-    "totalCandidates": 19,
+    "totalCandidates": 20,
     "sourceErrors": 0,
     "sourceWarnings": 0,
     "resolvedRecordsSuppressed": 0
   },
   "publications": [
+    {
+      "type": "publication",
+      "confidence": "high",
+      "detectionNotes": [
+        "ORCID work is not present in the current publications JSON.",
+        "Please verify authorship and publication status before adding."
+      ],
+      "sources": [
+        {
+          "name": "ORCID",
+          "url": "https://orcid.org/0000-0003-4484-3117"
+        },
+        {
+          "name": "DOI",
+          "url": "https://doi.org/10.1002/advs.77623"
+        },
+        {
+          "name": "Crossref",
+          "url": "https://api.crossref.org/works/10.1002%2Fadvs.77623"
+        },
+        {
+          "name": "OpenAlex search",
+          "url": "https://openalex.org/works?filter=doi%3Ahttps%3A%2F%2Fdoi.org%2F10.1002%2Fadvs.77623"
+        }
+      ],
+      "doi": "10.1002/advs.77623",
+      "title": "Asymmetric Fluorinated Spiro Hole‐Transport Materials Enabled by a Rapid Core‐Forming Strategy for Blade‐Coated Perovskite Solar Cells",
+      "journal": "Advanced Science",
+      "publicationDate": "2026-09-08",
+      "authors": [
+        "Lee, Kun‐Mu",
+        "Lin, Xiu‐Ping",
+        "Chang, Ya‐Ho",
+        "Tsai, Cheng‐Ting",
+        "Chu, Pei‐Chen",
+        "Chen, Yu‐Hsun",
+        "Chiu, Wei‐Hao",
+        "Lin, Yu‐Che",
+        "Li, Sie‐Rong",
+        "Hsieh, Hsiao‐Chi",
+        "Liau, Kang‐Ling",
+        "Lu, Shih‐I.",
+        "Wang, Chih‐Min",
+        "Lin, Yan‐Duo"
+      ],
+      "publisher": "Wiley",
+      "volume": "",
+      "issue": "",
+      "pages": "e77623",
+      "abstract": "<jats:title>ABSTRACT</jats:title>\n                  <jats:p>\n                    Developing hole‐transporting materials (HTMs) that simultaneously enable high efficiency, stability, and scalable processing remains a key challenge for perovskite solar cells (PSCs). Here, we report the facile synthesis of asymmetric fluorinated spiro‐type HTMs that integrate molecular design with scalable fabrication. The controlled incorporation and positioning of fluorine within a common asymmetric molecular framework tune the energy levels, solid‐state organization, and interfacial interactions of the HTMs. Coupling these materials with a fully blade‐coating–based fabrication process and vacuum‐assisted crystallization enables controlled film formation, yielding uniform, compact films with reduced defect density. As a result, PSCs based on the optimized HTM achieve a PCE of 24.49%, maintaining 23.28% for large‐area (1.00 cm\n                    <jats:sup>2</jats:sup>\n                    ) devices with excellent operational stability. This work establishes a synergistic molecular–processing engineering strategy toward high‐performance and manufacturable PSCs.\n                  </jats:p>",
+      "keywords": [],
+      "repositoryUrl": "https://pure.lib.cgu.edu.tw/en/publications/9b5fb949-9dcf-4063-b21e-e953e34c45fc",
+      "sourceDocumentType": "journal-article",
+      "language": "en",
+      "suggestedPublicationType": "international-journal",
+      "publicationTypeConfidence": "high",
+      "publicationTypeReason": "Journal article with non-Chinese title and source metadata.",
+      "reviewKey": "publication:doi:10.1002/advs.77623"
+    },
     {
       "type": "publication",
       "confidence": "high",
@@ -1247,15 +1306,15 @@
       "url": "https://pub.orcid.org/v3.0/0000-0003-4484-3117/works",
       "status": "success",
       "message": "",
-      "checkedAt": "2026-09-28T14:44:34+08:00",
-      "candidateCount": 2
+      "checkedAt": "2026-10-01T15:08:54+08:00",
+      "candidateCount": 3
     },
     {
       "name": "Google Patents",
       "url": "https://patents.google.com/?q=inventor%3D%22Wei-Hao+Chiu%22",
       "status": "success",
       "message": "",
-      "checkedAt": "2026-09-28T14:44:34+08:00",
+      "checkedAt": "2026-10-01T15:08:54+08:00",
       "candidateCount": 10
     },
     {
@@ -1263,7 +1322,7 @@
       "url": "https://patents.google.com/?q=inventor%3D%22%E9%82%B1%E5%81%89%E8%B1%AA%22",
       "status": "success",
       "message": "",
-      "checkedAt": "2026-09-28T14:44:39+08:00",
+      "checkedAt": "2026-10-01T15:08:59+08:00",
       "candidateCount": 10
     },
     {
@@ -1271,7 +1330,7 @@
       "url": "https://www.grb.gov.tw/advq?queryStr=%E9%82%B1%E5%81%89%E8%B1%AA&queryType=grb05",
       "status": "success",
       "message": "GRB Playwright discovery completed; 0 pending record(s) require review.",
-      "checkedAt": "2026-09-28T14:44:42+08:00",
+      "checkedAt": "2026-10-01T15:09:02+08:00",
       "candidateCount": 0
     }
   ],
