@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-01T07:11:40Z",
+  "generatedAt": "2026-10-02T07:01:25Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 51,
-    "activeUsers": 37,
-    "sessions": 42,
-    "engagementRate": 0.21428571428571427
+    "pageViews": 87,
+    "activeUsers": 72,
+    "sessions": 78,
+    "engagementRate": 0.11538461538461539
   },
   "monthlyTrend": [
     {
@@ -26,6 +26,11 @@
       "month": "2026-09",
       "pageViews": 52,
       "activeUsers": 38
+    },
+    {
+      "month": "2026-10",
+      "pageViews": 36,
+      "activeUsers": 35
     }
   ],
   "topPages": [
@@ -48,10 +53,52 @@
       "activeUsers": 2
     },
     {
+      "title": "Surfactant Tween 20 Controlled Perovskite Film Fabricated by Thermal Blade Coating for Efficient Perovskite Solar Cells | Wei-Hao Chiu",
+      "path": "/publications/10-3390-nano12152651.html",
+      "pageViews": 3,
+      "activeUsers": 2
+    },
+    {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/index.html",
       "pageViews": 3,
       "activeUsers": 3
+    },
+    {
+      "title": "Bifacial Solar Cell and Solar Cell Module — Patent Family | Wei-Hao Chiu",
+      "path": "/patents/families-bifacial-solar-cell-module.html",
+      "pageViews": 2,
+      "activeUsers": 2
+    },
+    {
+      "title": "Branched ZnO nanowires for enhancing energy conversion efficiency of dye-sensitized solar cells | Wei-Hao Chiu",
+      "path": "/publications/10-1557-proc-1121-n14-01.html",
+      "pageViews": 2,
+      "activeUsers": 2
+    },
+    {
+      "title": "Improved performance of flexible dye-sensitized solar cells by introducing an interfacial layer on Ti substrates | Wei-Hao Chiu",
+      "path": "/publications/10-1039-c0jm04099a.html",
+      "pageViews": 2,
+      "activeUsers": 2
+    },
+    {
+      "title": "Improvement on the long-term stability of flexible plastic dye-sensitized solar cells | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-jpowsour-2011-06-049.html",
+      "pageViews": 2,
+      "activeUsers": 2
+    },
+    {
+      "title": "Microstructure and Biological Properties of Electrospun In Situ Polymerization of Polycaprolactone-Graft-Polyacrylic Acid Nanofibers and Its Composite Nanofiber Dressings | Wei-Hao Chiu",
+      "path": "/publications/10-3390-polym13234246.html",
+      "pageViews": 2,
+      "activeUsers": 2
+    },
+    {
+      "title": "Reliability enhancement of PVDF-HFP modified perovskite solar cells under synergistic space-relevant stress conditions | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-cej-2026-177494.html",
+      "pageViews": 2,
+      "activeUsers": 2
     },
     {
       "title": "Research Projects | Wei-Hao Chiu",
@@ -60,62 +107,20 @@
       "activeUsers": 2
     },
     {
-      "title": "About | Wei-Hao Chiu",
-      "path": "/about.html",
-      "pageViews": 1,
-      "activeUsers": 1
+      "title": "Solar Cell Module | Wei-Hao Chiu",
+      "path": "/patents/twm611184u.html",
+      "pageViews": 2,
+      "activeUsers": 2
     },
     {
-      "title": "Bifacial Solar Cell and Solar Cell Module — Patent Family | Wei-Hao Chiu",
-      "path": "/patents/families-bifacial-solar-cell-module.html",
-      "pageViews": 1,
-      "activeUsers": 1
+      "title": "Synergistic preheating and moderate temperature liquid medium annealing for high performance perovskite solar cells | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-solener-2026-114430.html",
+      "pageViews": 2,
+      "activeUsers": 2
     },
     {
-      "title": "Branched ZnO nanowires for enhancing energy conversion efficiency of dye-sensitized solar cells | Wei-Hao Chiu",
-      "path": "/publications/10-1557-proc-1121-n14-01.html",
-      "pageViews": 1,
-      "activeUsers": 1
-    },
-    {
-      "title": "Fluorination on cyclopentadithiophene-based hole-transport material for high-performance perovskite solar cells | Wei-Hao Chiu",
-      "path": "/publications/10-1039-d3cc04699k.html",
-      "pageViews": 1,
-      "activeUsers": 1
-    },
-    {
-      "title": "Formation of branched ZnO nanowires from solvothermal method and dye-sensitized solar cells applications | Wei-Hao Chiu",
-      "path": "/publications/10-1021-jp805239k.html",
-      "pageViews": 1,
-      "activeUsers": 1
-    },
-    {
-      "title": "Impact of proton radiation on the performance of single-junction perovskite solar cells for space applications | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-solmat-2025-114015.html",
-      "pageViews": 1,
-      "activeUsers": 1
-    },
-    {
-      "title": "Improved performance of flexible dye-sensitized solar cells by introducing an interfacial layer on Ti substrates | Wei-Hao Chiu",
-      "path": "/publications/10-1039-c0jm04099a.html",
-      "pageViews": 1,
-      "activeUsers": 1
-    },
-    {
-      "title": "Improvement on the long-term stability of flexible plastic dye-sensitized solar cells | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-jpowsour-2011-06-049.html",
-      "pageViews": 1,
-      "activeUsers": 1
-    },
-    {
-      "title": "Microstructure and Biological Properties of Electrospun In Situ Polymerization of Polycaprolactone-Graft-Polyacrylic Acid Nanofibers and Its Composite Nanofiber Dressings | Wei-Hao Chiu",
-      "path": "/publications/10-3390-polym13234246.html",
-      "pageViews": 1,
-      "activeUsers": 1
-    },
-    {
-      "title": "Patents | Wei-Hao Chiu",
-      "path": "/patents.html",
+      "title": "2T Perovskite Tandem Solar Cells in Space: Failure Mechanisms and Design Strategies | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-mtener-2026-102359.html",
       "pageViews": 1,
       "activeUsers": 1
     }
@@ -123,8 +128,8 @@
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 29,
-      "activeUsers": 29
+      "sessions": 64,
+      "activeUsers": 64
     },
     {
       "channel": "Organic Search",
@@ -140,14 +145,19 @@
       "channel": "AI Assistant",
       "sessions": 1,
       "activeUsers": 1
+    },
+    {
+      "channel": "Unassigned",
+      "sessions": 1,
+      "activeUsers": 0
     }
   ],
   "trafficSources": [
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 29,
-      "activeUsers": 29
+      "sessions": 64,
+      "activeUsers": 64
     },
     {
       "source": "google",
@@ -160,6 +170,12 @@
       "medium": "referral",
       "sessions": 2,
       "activeUsers": 2
+    },
+    {
+      "source": "(not set)",
+      "medium": "(not set)",
+      "sessions": 1,
+      "activeUsers": 0
     },
     {
       "source": "bing",
@@ -176,19 +192,19 @@
   ],
   "topCountries": [
     {
+      "country": "Singapore",
+      "activeUsers": 40,
+      "pageViews": 41
+    },
+    {
       "country": "China",
-      "activeUsers": 16,
-      "pageViews": 16
+      "activeUsers": 17,
+      "pageViews": 17
     },
     {
       "country": "United States",
       "activeUsers": 8,
       "pageViews": 8
-    },
-    {
-      "country": "Singapore",
-      "activeUsers": 6,
-      "pageViews": 6
     },
     {
       "country": "Taiwan",
@@ -214,7 +230,7 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 37
+      "activeUsers": 72
     }
   ],
   "academicEvents": [
