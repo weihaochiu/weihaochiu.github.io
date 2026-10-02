@@ -5,7 +5,7 @@
   "publicationCount": 40,
   "verifiedCount": 38,
   "notFoundCount": 2,
-  "lastSuccessfulUpdate": "2026-10-01T09:01:19Z",
+  "lastSuccessfulUpdate": "2026-10-02T08:36:46Z",
   "records": {
     "10.1016/j.cej.2026.177494": {
       "status": "verified",
@@ -53,8 +53,8 @@
       "openAlexId": "W7118007754",
       "url": "https://openalex.org/W7118007754",
       "citationCount": 3,
-      "fwci": 5.6274,
-      "citationPercentile": 0.94357787,
+      "fwci": 5.5949,
+      "citationPercentile": 0.94320043,
       "isTop1Percent": false,
       "isTop10Percent": true,
       "openAlexUpdatedDate": "2026-09-29T14:09:16.559479"
@@ -80,7 +80,7 @@
       "url": "https://openalex.org/W4413117344",
       "citationCount": 0,
       "fwci": 0.0,
-      "citationPercentile": 0.10636163,
+      "citationPercentile": 0.10604175,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-09-30T09:27:27.532063"
@@ -92,8 +92,8 @@
       "openAlexId": "W4411847970",
       "url": "https://openalex.org/W4411847970",
       "citationCount": 6,
-      "fwci": 1.4101,
-      "citationPercentile": 0.80431754,
+      "fwci": 1.4047,
+      "citationPercentile": 0.80347815,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-09-29T14:09:16.559479"
@@ -105,8 +105,8 @@
       "openAlexId": "W4415028078",
       "url": "https://openalex.org/W4415028078",
       "citationCount": 1,
-      "fwci": 0.235,
-      "citationPercentile": 0.47773286,
+      "fwci": 0.2341,
+      "citationPercentile": 0.47676359,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-09-29T14:09:16.559479"
@@ -144,11 +144,11 @@
       "openAlexId": "W4402883453",
       "url": "https://openalex.org/W4402883453",
       "citationCount": 9,
-      "fwci": 0.9778,
-      "citationPercentile": 0.724338,
+      "fwci": 0.9757,
+      "citationPercentile": 0.72388256,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-08-28T12:50:07.497085"
+      "openAlexUpdatedDate": "2026-10-01T08:54:57.152042"
     },
     "10.1016/j.cej.2024.153974": {
       "status": "verified",
@@ -171,7 +171,7 @@
       "url": "https://openalex.org/W4389856655",
       "citationCount": 0,
       "fwci": 0.0,
-      "citationPercentile": 0.11479217,
+      "citationPercentile": 0.1146986,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-09-29T14:09:16.559479"
@@ -248,8 +248,8 @@
       "openAlexId": "W4385381207",
       "url": "https://openalex.org/W4385381207",
       "citationCount": 40,
-      "fwci": 3.1518,
-      "citationPercentile": 0.92874566,
+      "fwci": 3.1474,
+      "citationPercentile": 0.92862365,
       "isTop1Percent": false,
       "isTop10Percent": true,
       "openAlexUpdatedDate": "2026-09-30T09:27:27.532063"
@@ -274,8 +274,8 @@
       "openAlexId": "W4289524742",
       "url": "https://openalex.org/W4289524742",
       "citationCount": 10,
-      "fwci": 0.7285,
-      "citationPercentile": 0.65256441,
+      "fwci": 0.7284,
+      "citationPercentile": 0.65248204,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-09-30T09:27:27.532063"
@@ -299,12 +299,12 @@
       "title": "High-performance perovskite solar cells based on dopant-free hole-transporting material fabricated by a thermal-assisted blade-coating method with efficiency exceeding 21%",
       "openAlexId": "W3187467581",
       "url": "https://openalex.org/W3187467581",
-      "citationCount": 61,
-      "fwci": 3.5979,
-      "citationPercentile": 0.93903017,
+      "citationCount": 62,
+      "fwci": 3.5962,
+      "citationPercentile": 0.93899921,
       "isTop1Percent": false,
       "isTop10Percent": true,
-      "openAlexUpdatedDate": "2026-09-29T14:09:16.559479"
+      "openAlexUpdatedDate": "2026-10-01T08:54:57.152042"
     },
     "10.3390/polym13234246": {
       "status": "verified",
@@ -313,8 +313,8 @@
       "openAlexId": "W4200568401",
       "url": "https://openalex.org/W4200568401",
       "citationCount": 18,
-      "fwci": 1.0339,
-      "citationPercentile": 0.71917142,
+      "fwci": 1.0333,
+      "citationPercentile": 0.71905506,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-09-29T14:09:16.559479"
@@ -430,8 +430,8 @@
       "openAlexId": "W2055510369",
       "url": "https://openalex.org/W2055510369",
       "citationCount": 88,
-      "fwci": 3.3458,
-      "citationPercentile": 0.92165397,
+      "fwci": 3.3472,
+      "citationPercentile": 0.92170579,
       "isTop1Percent": false,
       "isTop10Percent": true,
       "openAlexUpdatedDate": "2026-09-29T14:09:16.559479"
