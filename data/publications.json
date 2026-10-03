@@ -175,7 +175,8 @@
         "affiliationIds": [
           "aff-3",
           "aff-1",
-          "aff-4"
+          "aff-4",
+          "aff-5"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -239,11 +240,23 @@
         "raw": "Ming Chi University of Technology",
         "source": "openalex",
         "sourceId": "https://openalex.org/I12213908"
+      },
+      {
+        "id": "aff-5",
+        "label": "e",
+        "department": "",
+        "institution": "Linkou Chang Gung Memorial Hospital",
+        "address": "Linkou Chang Gung Memorial Hospital",
+        "city": "",
+        "countryCode": "TW",
+        "raw": "Linkou Chang Gung Memorial Hospital",
+        "source": "openalex",
+        "sourceId": "https://openalex.org/I4210116208"
       }
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-09-26",
+      "lastChecked": "2026-10-03",
       "sources": [
         "crossref",
         "openalex"
@@ -293,7 +306,8 @@
       "taiwanAffiliationIds": [
         "aff-1",
         "aff-3",
-        "aff-4"
+        "aff-4",
+        "aff-5"
       ],
       "foreignAffiliationIds": [
         "aff-2"
@@ -312,8 +326,8 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-09-26",
-      "inputSignature": "a9df6e1577a9b272b067"
+      "lastEvaluated": "2026-10-03",
+      "inputSignature": "646ca79f7ebf968f83b2"
     }
   },
   {
@@ -451,7 +465,8 @@
         "affiliationIds": [
           "aff-3",
           "aff-1",
-          "aff-2"
+          "aff-2",
+          "aff-4"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -502,11 +517,23 @@
         "raw": "Chang Gung Memorial Hospital",
         "source": "openalex",
         "sourceId": "https://openalex.org/I3020100970"
+      },
+      {
+        "id": "aff-4",
+        "label": "d",
+        "department": "",
+        "institution": "Linkou Chang Gung Memorial Hospital",
+        "address": "Linkou Chang Gung Memorial Hospital",
+        "city": "",
+        "countryCode": "TW",
+        "raw": "Linkou Chang Gung Memorial Hospital",
+        "source": "openalex",
+        "sourceId": "https://openalex.org/I4210116208"
       }
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-09-26",
+      "lastChecked": "2026-10-03",
       "sources": [
         "crossref",
         "openalex"
@@ -548,7 +575,8 @@
       "taiwanAffiliationIds": [
         "aff-1",
         "aff-2",
-        "aff-3"
+        "aff-3",
+        "aff-4"
       ],
       "foreignAffiliationIds": [],
       "hasDualAffiliation": false,
@@ -565,8 +593,8 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-09-26",
-      "inputSignature": "0b8e463cfe1fafa81577"
+      "lastEvaluated": "2026-10-03",
+      "inputSignature": "52f4ffd9b0292de7aa1b"
     }
   },
   {
@@ -672,7 +700,9 @@
         "authorPosition": "middle",
         "affiliationIds": [
           "aff-3",
-          "aff-1"
+          "aff-1",
+          "aff-6",
+          "aff-7"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -691,7 +721,9 @@
         "authorPosition": "middle",
         "affiliationIds": [
           "aff-3",
-          "aff-1"
+          "aff-1",
+          "aff-6",
+          "aff-7"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -747,7 +779,9 @@
         "affiliationIds": [
           "aff-3",
           "aff-1",
-          "aff-5"
+          "aff-5",
+          "aff-6",
+          "aff-7"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -824,11 +858,35 @@
         "raw": "Ming Chi University of Technology",
         "source": "openalex",
         "sourceId": "https://openalex.org/I12213908"
+      },
+      {
+        "id": "aff-6",
+        "label": "f",
+        "department": "",
+        "institution": "Linkou Chang Gung Memorial Hospital",
+        "address": "Linkou Chang Gung Memorial Hospital",
+        "city": "",
+        "countryCode": "TW",
+        "raw": "Linkou Chang Gung Memorial Hospital",
+        "source": "openalex",
+        "sourceId": "https://openalex.org/I4210116208"
+      },
+      {
+        "id": "aff-7",
+        "label": "g",
+        "department": "",
+        "institution": "Taoyuan Chang Gung Memorial Hospital",
+        "address": "Taoyuan Chang Gung Memorial Hospital",
+        "city": "",
+        "countryCode": "TW",
+        "raw": "Taoyuan Chang Gung Memorial Hospital",
+        "source": "openalex",
+        "sourceId": "https://openalex.org/I4210093734"
       }
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-09-26",
+      "lastChecked": "2026-10-03",
       "sources": [
         "crossref",
         "openalex"
@@ -880,6 +938,8 @@
         "aff-1",
         "aff-2",
         "aff-3",
+        "aff-6",
+        "aff-7",
         "aff-5"
       ],
       "foreignAffiliationIds": [
@@ -899,8 +959,8 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-09-26",
-      "inputSignature": "1c132b074bcac6477ba2"
+      "lastEvaluated": "2026-10-03",
+      "inputSignature": "c5afb4c81365ab7107d1"
     }
   },
   {
@@ -1011,7 +1071,8 @@
         "affiliationIds": [
           "aff-2",
           "aff-1",
-          "aff-3"
+          "aff-3",
+          "aff-4"
         ],
         "isEqualContributor": true,
         "equalContributionGroup": "co-first-1",
@@ -1048,7 +1109,8 @@
         "authorOrder": 5,
         "authorPosition": "middle",
         "affiliationIds": [
-          "aff-2"
+          "aff-2",
+          "aff-4"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -1068,7 +1130,8 @@
         "affiliationIds": [
           "aff-2",
           "aff-1",
-          "aff-3"
+          "aff-3",
+          "aff-4"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -1119,11 +1182,23 @@
         "raw": "Ming Chi University of Technology",
         "source": "openalex",
         "sourceId": "https://openalex.org/I12213908"
+      },
+      {
+        "id": "aff-4",
+        "label": "d",
+        "department": "",
+        "institution": "Linkou Chang Gung Memorial Hospital",
+        "address": "Linkou Chang Gung Memorial Hospital",
+        "city": "",
+        "countryCode": "TW",
+        "raw": "Linkou Chang Gung Memorial Hospital",
+        "source": "openalex",
+        "sourceId": "https://openalex.org/I4210116208"
       }
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-09-26",
+      "lastChecked": "2026-10-03",
       "sources": [
         "crossref",
         "openalex",
@@ -1166,7 +1241,8 @@
       "taiwanAffiliationIds": [
         "aff-1",
         "aff-2",
-        "aff-3"
+        "aff-3",
+        "aff-4"
       ],
       "foreignAffiliationIds": [],
       "hasDualAffiliation": false,
@@ -1184,8 +1260,8 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-09-26",
-      "inputSignature": "c852093d4e34311602e9"
+      "lastEvaluated": "2026-10-03",
+      "inputSignature": "60961575a5969faaef99"
     }
   },
   {
@@ -1306,7 +1382,8 @@
         "affiliationIds": [
           "aff-2",
           "aff-1",
-          "aff-3"
+          "aff-3",
+          "aff-4"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -1326,7 +1403,8 @@
         "affiliationIds": [
           "aff-2",
           "aff-1",
-          "aff-3"
+          "aff-3",
+          "aff-4"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -1377,11 +1455,23 @@
         "raw": "Ming Chi University of Technology",
         "source": "openalex",
         "sourceId": "https://openalex.org/I12213908"
+      },
+      {
+        "id": "aff-4",
+        "label": "d",
+        "department": "",
+        "institution": "Linkou Chang Gung Memorial Hospital",
+        "address": "Linkou Chang Gung Memorial Hospital",
+        "city": "",
+        "countryCode": "TW",
+        "raw": "Linkou Chang Gung Memorial Hospital",
+        "source": "openalex",
+        "sourceId": "https://openalex.org/I4210116208"
       }
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-09-26",
+      "lastChecked": "2026-10-03",
       "sources": [
         "crossref",
         "openalex"
@@ -1423,7 +1513,8 @@
       "taiwanAffiliationIds": [
         "aff-1",
         "aff-2",
-        "aff-3"
+        "aff-3",
+        "aff-4"
       ],
       "foreignAffiliationIds": [],
       "hasDualAffiliation": false,
@@ -1440,8 +1531,8 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-09-26",
-      "inputSignature": "4fd783570c853dddda2a"
+      "lastEvaluated": "2026-10-03",
+      "inputSignature": "130000780973f627940b"
     }
   },
   {
@@ -1809,8 +1900,8 @@
     "authorships": [
       {
         "name": "Shaheen, Iqra",
-        "orcid": "",
-        "openAlexId": "",
+        "orcid": "0009-0000-7193-2962",
+        "openAlexId": "A5121757482",
         "authorOrder": 1,
         "authorPosition": "first",
         "affiliationIds": [
@@ -1870,7 +1961,8 @@
         "affiliationIds": [
           "aff-2",
           "aff-1",
-          "aff-3"
+          "aff-3",
+          "aff-4"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -1921,11 +2013,23 @@
         "raw": "Ming Chi University of Technology",
         "source": "openalex",
         "sourceId": "https://openalex.org/I12213908"
+      },
+      {
+        "id": "aff-4",
+        "label": "d",
+        "department": "",
+        "institution": "Linkou Chang Gung Memorial Hospital",
+        "address": "Linkou Chang Gung Memorial Hospital",
+        "city": "",
+        "countryCode": "TW",
+        "raw": "Linkou Chang Gung Memorial Hospital",
+        "source": "openalex",
+        "sourceId": "https://openalex.org/I4210116208"
       }
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-09-26",
+      "lastChecked": "2026-10-03",
       "sources": [
         "crossref",
         "openalex"
@@ -1966,7 +2070,8 @@
       "taiwanAffiliationIds": [
         "aff-1",
         "aff-2",
-        "aff-3"
+        "aff-3",
+        "aff-4"
       ],
       "foreignAffiliationIds": [],
       "hasDualAffiliation": false,
@@ -1983,8 +2088,8 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-09-26",
-      "inputSignature": "22173ef86142290a3bae"
+      "lastEvaluated": "2026-10-03",
+      "inputSignature": "78392786f08da6c7f58d"
     }
   },
   {
@@ -3576,7 +3681,8 @@
           "aff-1",
           "aff-2",
           "aff-3",
-          "aff-4"
+          "aff-4",
+          "aff-12"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -3721,7 +3827,8 @@
         "authorOrder": 9,
         "authorPosition": "middle",
         "affiliationIds": [
-          "aff-4"
+          "aff-4",
+          "aff-12"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -4074,11 +4181,23 @@
         "raw": "Department of Applied Physics The Hong Kong Polytechnic University Hung Hom Kowloon Hong Kong 999077 P. R. China",
         "source": "crossref",
         "sourceId": "https://openalex.org/I14243506"
+      },
+      {
+        "id": "aff-12",
+        "label": "l",
+        "department": "",
+        "institution": "Linkou Chang Gung Memorial Hospital",
+        "address": "Linkou Chang Gung Memorial Hospital",
+        "city": "",
+        "countryCode": "TW",
+        "raw": "Linkou Chang Gung Memorial Hospital",
+        "source": "openalex",
+        "sourceId": "https://openalex.org/I4210116208"
       }
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-09-26",
+      "lastChecked": "2026-10-03",
       "sources": [
         "crossref",
         "openalex"
@@ -4130,6 +4249,7 @@
         "aff-2",
         "aff-3",
         "aff-4",
+        "aff-12",
         "aff-5",
         "aff-6",
         "aff-7",
@@ -4154,8 +4274,8 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-09-26",
-      "inputSignature": "1ea6740465eff16b3c12"
+      "lastEvaluated": "2026-10-03",
+      "inputSignature": "ac01121f0be4cc735bc0"
     }
   },
   {
@@ -4232,7 +4352,8 @@
           "aff-1",
           "aff-2",
           "aff-3",
-          "aff-4"
+          "aff-4",
+          "aff-10"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -4706,11 +4827,23 @@
         "raw": "9 Department of Materials Science and Engineering National Taiwan University of Science and Technology Taipei 106335 Taiwan",
         "source": "europe-pmc",
         "sourceId": "advs10337-aff-0009"
+      },
+      {
+        "id": "aff-10",
+        "label": "j",
+        "department": "",
+        "institution": "Linkou Chang Gung Memorial Hospital",
+        "address": "Linkou Chang Gung Memorial Hospital",
+        "city": "",
+        "countryCode": "TW",
+        "raw": "Linkou Chang Gung Memorial Hospital",
+        "source": "openalex",
+        "sourceId": "https://openalex.org/I4210116208"
       }
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-09-26",
+      "lastChecked": "2026-10-03",
       "sources": [
         "europe-pmc",
         "crossref",
@@ -4753,6 +4886,7 @@
         "aff-2",
         "aff-3",
         "aff-4",
+        "aff-10",
         "aff-5",
         "aff-6",
         "aff-7",
@@ -4776,8 +4910,8 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-09-26",
-      "inputSignature": "ccdbdcf351f04079cb9f"
+      "lastEvaluated": "2026-10-03",
+      "inputSignature": "0de4c62d16a6122ef70d"
     }
   },
   {
@@ -4902,7 +5036,8 @@
         "authorPosition": "middle",
         "affiliationIds": [
           "aff-3",
-          "aff-1"
+          "aff-1",
+          "aff-5"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -4940,7 +5075,8 @@
         "affiliationIds": [
           "aff-3",
           "aff-1",
-          "aff-4"
+          "aff-4",
+          "aff-5"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -5004,11 +5140,23 @@
         "raw": "Ming Chi University of Technology",
         "source": "openalex",
         "sourceId": "https://openalex.org/I12213908"
+      },
+      {
+        "id": "aff-5",
+        "label": "e",
+        "department": "",
+        "institution": "Linkou Chang Gung Memorial Hospital",
+        "address": "Linkou Chang Gung Memorial Hospital",
+        "city": "",
+        "countryCode": "TW",
+        "raw": "Linkou Chang Gung Memorial Hospital",
+        "source": "openalex",
+        "sourceId": "https://openalex.org/I4210116208"
       }
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-09-26",
+      "lastChecked": "2026-10-03",
       "sources": [
         "crossref",
         "openalex"
@@ -5058,6 +5206,7 @@
       "taiwanAffiliationIds": [
         "aff-1",
         "aff-3",
+        "aff-5",
         "aff-4"
       ],
       "foreignAffiliationIds": [
@@ -5077,8 +5226,8 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-09-26",
-      "inputSignature": "595d62940a5cafe590c7"
+      "lastEvaluated": "2026-10-03",
+      "inputSignature": "bb699c1ef6c43cc852c1"
     }
   },
   {
@@ -5232,7 +5381,8 @@
         "affiliationIds": [
           "aff-2",
           "aff-1",
-          "aff-3"
+          "aff-3",
+          "aff-4"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -5283,11 +5433,23 @@
         "raw": "Ming Chi University of Technology",
         "source": "openalex",
         "sourceId": "https://openalex.org/I12213908"
+      },
+      {
+        "id": "aff-4",
+        "label": "d",
+        "department": "",
+        "institution": "Linkou Chang Gung Memorial Hospital",
+        "address": "Linkou Chang Gung Memorial Hospital",
+        "city": "",
+        "countryCode": "TW",
+        "raw": "Linkou Chang Gung Memorial Hospital",
+        "source": "openalex",
+        "sourceId": "https://openalex.org/I4210116208"
       }
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-09-26",
+      "lastChecked": "2026-10-03",
       "sources": [
         "crossref",
         "openalex"
@@ -5328,7 +5490,8 @@
       "taiwanAffiliationIds": [
         "aff-1",
         "aff-2",
-        "aff-3"
+        "aff-3",
+        "aff-4"
       ],
       "foreignAffiliationIds": [],
       "hasDualAffiliation": false,
@@ -5345,8 +5508,8 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-09-26",
-      "inputSignature": "79c1857d0278fd87bc24"
+      "lastEvaluated": "2026-10-03",
+      "inputSignature": "27b5c18232cd0f089fd1"
     }
   },
   {
@@ -5406,7 +5569,8 @@
         "authorPosition": "first",
         "affiliationIds": [
           "aff-1",
-          "aff-2"
+          "aff-2",
+          "aff-4"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -5442,7 +5606,8 @@
         "authorOrder": 3,
         "authorPosition": "middle",
         "affiliationIds": [
-          "aff-1"
+          "aff-1",
+          "aff-4"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -5462,7 +5627,9 @@
         "affiliationIds": [
           "aff-1",
           "aff-2",
-          "aff-3"
+          "aff-3",
+          "aff-4",
+          "aff-5"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -5567,11 +5734,35 @@
         "raw": "Ming Chi University of Technology",
         "source": "openalex",
         "sourceId": "https://openalex.org/I12213908"
+      },
+      {
+        "id": "aff-4",
+        "label": "d",
+        "department": "",
+        "institution": "Linkou Chang Gung Memorial Hospital",
+        "address": "Linkou Chang Gung Memorial Hospital",
+        "city": "",
+        "countryCode": "TW",
+        "raw": "Linkou Chang Gung Memorial Hospital",
+        "source": "openalex",
+        "sourceId": "https://openalex.org/I4210116208"
+      },
+      {
+        "id": "aff-5",
+        "label": "e",
+        "department": "",
+        "institution": "Taoyuan Chang Gung Memorial Hospital",
+        "address": "Taoyuan Chang Gung Memorial Hospital",
+        "city": "",
+        "countryCode": "TW",
+        "raw": "Taoyuan Chang Gung Memorial Hospital",
+        "source": "openalex",
+        "sourceId": "https://openalex.org/I4210093734"
       }
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-09-26",
+      "lastChecked": "2026-10-03",
       "sources": [
         "crossref",
         "openalex"
@@ -5612,7 +5803,9 @@
       "taiwanAffiliationIds": [
         "aff-1",
         "aff-2",
-        "aff-3"
+        "aff-4",
+        "aff-3",
+        "aff-5"
       ],
       "foreignAffiliationIds": [],
       "hasDualAffiliation": false,
@@ -5629,8 +5822,8 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-09-26",
-      "inputSignature": "ed8222cb4d9f298fb4eb"
+      "lastEvaluated": "2026-10-03",
+      "inputSignature": "15ed5f505925a5c4e786"
     }
   },
   {
@@ -5722,7 +5915,8 @@
           "aff-3",
           "aff-4",
           "aff-5",
-          "aff-6"
+          "aff-6",
+          "aff-11"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -6099,11 +6293,23 @@
         "raw": "Department of Chemistry National Central University Taoyuan 32001 Taiwan",
         "source": "crossref",
         "sourceId": "https://openalex.org/I22265921"
+      },
+      {
+        "id": "aff-11",
+        "label": "k",
+        "department": "",
+        "institution": "Linkou Chang Gung Memorial Hospital",
+        "address": "Linkou Chang Gung Memorial Hospital",
+        "city": "",
+        "countryCode": "TW",
+        "raw": "Linkou Chang Gung Memorial Hospital",
+        "source": "openalex",
+        "sourceId": "https://openalex.org/I4210116208"
       }
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-09-26",
+      "lastChecked": "2026-10-03",
       "sources": [
         "crossref",
         "openalex"
@@ -6148,6 +6354,7 @@
         "aff-4",
         "aff-5",
         "aff-6",
+        "aff-11",
         "aff-7",
         "aff-8",
         "aff-9",
@@ -6168,8 +6375,8 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-09-26",
-      "inputSignature": "6f04b5cec05ac54acf48"
+      "lastEvaluated": "2026-10-03",
+      "inputSignature": "a9841c5bb06133633d00"
     }
   },
   {
@@ -6252,7 +6459,8 @@
           "aff-3",
           "aff-4",
           "aff-5",
-          "aff-6"
+          "aff-6",
+          "aff-9"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -6495,11 +6703,23 @@
         "raw": "Department of Chemistry, National Central University, Taoyuan 32001, Taiwan",
         "source": "crossref",
         "sourceId": "https://openalex.org/I22265921"
+      },
+      {
+        "id": "aff-9",
+        "label": "i",
+        "department": "",
+        "institution": "Linkou Chang Gung Memorial Hospital",
+        "address": "Linkou Chang Gung Memorial Hospital",
+        "city": "",
+        "countryCode": "TW",
+        "raw": "Linkou Chang Gung Memorial Hospital",
+        "source": "openalex",
+        "sourceId": "https://openalex.org/I4210116208"
       }
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-09-26",
+      "lastChecked": "2026-10-03",
       "sources": [
         "crossref",
         "openalex"
@@ -6544,6 +6764,7 @@
         "aff-4",
         "aff-5",
         "aff-6",
+        "aff-9",
         "aff-7",
         "aff-8"
       ],
@@ -6562,8 +6783,8 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-09-26",
-      "inputSignature": "0592a38ec9f5c6f74306"
+      "lastEvaluated": "2026-10-03",
+      "inputSignature": "d6f9f4a79e1143bf8c99"
     }
   },
   {
@@ -6679,7 +6900,9 @@
         "affiliationIds": [
           "aff-4",
           "aff-3",
-          "aff-5"
+          "aff-5",
+          "aff-7",
+          "aff-8"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -6699,7 +6922,9 @@
         "affiliationIds": [
           "aff-4",
           "aff-3",
-          "aff-5"
+          "aff-5",
+          "aff-7",
+          "aff-8"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -6863,11 +7088,35 @@
         "raw": "Providence University",
         "source": "openalex",
         "sourceId": "https://openalex.org/I177918364"
+      },
+      {
+        "id": "aff-7",
+        "label": "g",
+        "department": "",
+        "institution": "Linkou Chang Gung Memorial Hospital",
+        "address": "Linkou Chang Gung Memorial Hospital",
+        "city": "",
+        "countryCode": "TW",
+        "raw": "Linkou Chang Gung Memorial Hospital",
+        "source": "openalex",
+        "sourceId": "https://openalex.org/I4210116208"
+      },
+      {
+        "id": "aff-8",
+        "label": "h",
+        "department": "",
+        "institution": "Taoyuan Chang Gung Memorial Hospital",
+        "address": "Taoyuan Chang Gung Memorial Hospital",
+        "city": "",
+        "countryCode": "TW",
+        "raw": "Taoyuan Chang Gung Memorial Hospital",
+        "source": "openalex",
+        "sourceId": "https://openalex.org/I4210093734"
       }
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-09-26",
+      "lastChecked": "2026-10-03",
       "sources": [
         "crossref",
         "openalex"
@@ -6911,6 +7160,8 @@
         "aff-3",
         "aff-4",
         "aff-5",
+        "aff-7",
+        "aff-8",
         "aff-6"
       ],
       "foreignAffiliationIds": [],
@@ -6928,8 +7179,8 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-09-26",
-      "inputSignature": "f760ab4ff05561de4789"
+      "lastEvaluated": "2026-10-03",
+      "inputSignature": "af2cbcf67e50692be8e8"
     }
   },
   {
@@ -7149,7 +7400,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-09-26",
+      "lastChecked": "2026-10-03",
       "sources": [
         "crossref",
         "openalex"
@@ -7208,7 +7459,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-09-26",
+      "lastEvaluated": "2026-10-03",
       "inputSignature": "b3bd572def205f68c298"
     }
   },
@@ -7324,7 +7575,8 @@
         "authorOrder": 4,
         "authorPosition": "middle",
         "affiliationIds": [
-          "aff-3"
+          "aff-3",
+          "aff-7"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -7380,7 +7632,8 @@
         "affiliationIds": [
           "aff-5",
           "aff-1",
-          "aff-6"
+          "aff-6",
+          "aff-8"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -7400,7 +7653,8 @@
         "affiliationIds": [
           "aff-5",
           "aff-1",
-          "aff-6"
+          "aff-6",
+          "aff-8"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -7490,11 +7744,35 @@
         "raw": "Chang Gung University of Science and Technology",
         "source": "openalex",
         "sourceId": "https://openalex.org/I141243467"
+      },
+      {
+        "id": "aff-7",
+        "label": "g",
+        "department": "",
+        "institution": "Council of Scientific and Industrial Research",
+        "address": "Council of Scientific and Industrial Research",
+        "city": "",
+        "countryCode": "IN",
+        "raw": "Council of Scientific and Industrial Research",
+        "source": "openalex",
+        "sourceId": "https://openalex.org/I66760702"
+      },
+      {
+        "id": "aff-8",
+        "label": "h",
+        "department": "",
+        "institution": "Linkou Chang Gung Memorial Hospital",
+        "address": "Linkou Chang Gung Memorial Hospital",
+        "city": "",
+        "countryCode": "TW",
+        "raw": "Linkou Chang Gung Memorial Hospital",
+        "source": "openalex",
+        "sourceId": "https://openalex.org/I4210116208"
       }
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-09-26",
+      "lastChecked": "2026-10-03",
       "sources": [
         "crossref",
         "openalex"
@@ -7543,6 +7821,11 @@
           "ror": "https://ror.org/01qek3q18"
         },
         {
+          "name": "Council of Scientific and Industrial Research",
+          "countryCode": "IN",
+          "ror": ""
+        },
+        {
           "name": "Hong Kong Polytechnic University",
           "countryCode": "HK",
           "ror": "https://ror.org/0030zas98"
@@ -7552,10 +7835,12 @@
         "aff-1",
         "aff-2",
         "aff-5",
-        "aff-6"
+        "aff-6",
+        "aff-8"
       ],
       "foreignAffiliationIds": [
         "aff-3",
+        "aff-7",
         "aff-4"
       ],
       "hasDualAffiliation": false,
@@ -7572,8 +7857,8 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-09-26",
-      "inputSignature": "456af595fa939258495f"
+      "lastEvaluated": "2026-10-03",
+      "inputSignature": "1780d94c5a2cf0b6c734"
     }
   },
   {
@@ -7644,7 +7929,8 @@
           "aff-1",
           "aff-2",
           "aff-3",
-          "aff-4"
+          "aff-4",
+          "aff-9"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -7928,11 +8214,23 @@
         "raw": "Department of Applied Materials Science and Technology Minghsin University of Science and Technology Hsinchu 30401 Taiwan",
         "source": "crossref",
         "sourceId": "https://openalex.org/I143003336"
+      },
+      {
+        "id": "aff-9",
+        "label": "i",
+        "department": "",
+        "institution": "Linkou Chang Gung Memorial Hospital",
+        "address": "Linkou Chang Gung Memorial Hospital",
+        "city": "",
+        "countryCode": "TW",
+        "raw": "Linkou Chang Gung Memorial Hospital",
+        "source": "openalex",
+        "sourceId": "https://openalex.org/I4210116208"
       }
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-09-26",
+      "lastChecked": "2026-10-03",
       "sources": [
         "crossref",
         "openalex"
@@ -7984,6 +8282,7 @@
         "aff-2",
         "aff-3",
         "aff-4",
+        "aff-9",
         "aff-5",
         "aff-7",
         "aff-8"
@@ -8005,8 +8304,8 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-09-26",
-      "inputSignature": "287a0d951068e32d0268"
+      "lastEvaluated": "2026-10-03",
+      "inputSignature": "42b492786e4167b4b5e5"
     }
   },
   {
@@ -8072,7 +8371,8 @@
         "affiliationIds": [
           "aff-1",
           "aff-2",
-          "aff-3"
+          "aff-3",
+          "aff-7"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -8306,11 +8606,23 @@
         "raw": "National Central University",
         "source": "openalex",
         "sourceId": "https://openalex.org/I22265921"
+      },
+      {
+        "id": "aff-7",
+        "label": "g",
+        "department": "",
+        "institution": "Linkou Chang Gung Memorial Hospital",
+        "address": "Linkou Chang Gung Memorial Hospital",
+        "city": "",
+        "countryCode": "TW",
+        "raw": "Linkou Chang Gung Memorial Hospital",
+        "source": "openalex",
+        "sourceId": "https://openalex.org/I4210116208"
       }
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-09-26",
+      "lastChecked": "2026-10-03",
       "sources": [
         "crossref",
         "openalex"
@@ -8352,6 +8664,7 @@
         "aff-1",
         "aff-2",
         "aff-3",
+        "aff-7",
         "aff-4",
         "aff-5",
         "aff-6"
@@ -8371,8 +8684,8 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-09-26",
-      "inputSignature": "5df207a978ca0afbe279"
+      "lastEvaluated": "2026-10-03",
+      "inputSignature": "aa10e25f73eacc12448e"
     }
   },
   {
@@ -8439,7 +8752,8 @@
           "aff-2",
           "aff-3",
           "aff-4",
-          "aff-5"
+          "aff-5",
+          "aff-8"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -8556,7 +8870,8 @@
         "authorOrder": 7,
         "authorPosition": "middle",
         "affiliationIds": [
-          "aff-3"
+          "aff-3",
+          "aff-8"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -8597,7 +8912,8 @@
           "aff-1",
           "aff-2",
           "aff-3",
-          "aff-5"
+          "aff-5",
+          "aff-8"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -8701,11 +9017,23 @@
         "raw": "6 Electroorganic and Materials Electrochemistry Division, CSIR-Central Electrochemical Research Institute, Karaikudi 630003, India; vidhyasur@yahoo.co.in",
         "source": "europe-pmc",
         "sourceId": "af6-nanomaterials-12-02651"
+      },
+      {
+        "id": "aff-8",
+        "label": "h",
+        "department": "",
+        "institution": "Linkou Chang Gung Memorial Hospital",
+        "address": "Linkou Chang Gung Memorial Hospital",
+        "city": "",
+        "countryCode": "TW",
+        "raw": "Linkou Chang Gung Memorial Hospital",
+        "source": "openalex",
+        "sourceId": "https://openalex.org/I4210116208"
       }
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-09-26",
+      "lastChecked": "2026-10-03",
       "sources": [
         "europe-pmc",
         "crossref",
@@ -8758,6 +9086,7 @@
         "aff-3",
         "aff-4",
         "aff-5",
+        "aff-8",
         "aff-6"
       ],
       "foreignAffiliationIds": [
@@ -8779,8 +9108,8 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-09-26",
-      "inputSignature": "31222619993b94a45835"
+      "lastEvaluated": "2026-10-03",
+      "inputSignature": "ff4e4808014a5d4d1218"
     }
   },
   {
@@ -8882,7 +9211,8 @@
           "aff-3",
           "aff-4",
           "aff-5",
-          "aff-6"
+          "aff-6",
+          "aff-8"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -9043,11 +9373,23 @@
         "raw": "6 Department of Applied Chemistry, Providence University, Taichung 433, Taiwan; jl387555@gmail.com",
         "source": "europe-pmc",
         "sourceId": "af6-polymers-14-01580"
+      },
+      {
+        "id": "aff-8",
+        "label": "h",
+        "department": "",
+        "institution": "Linkou Chang Gung Memorial Hospital",
+        "address": "Linkou Chang Gung Memorial Hospital",
+        "city": "",
+        "countryCode": "TW",
+        "raw": "Linkou Chang Gung Memorial Hospital",
+        "source": "openalex",
+        "sourceId": "https://openalex.org/I4210116208"
       }
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-09-26",
+      "lastChecked": "2026-10-03",
       "sources": [
         "europe-pmc",
         "crossref",
@@ -9092,6 +9434,7 @@
         "aff-4",
         "aff-5",
         "aff-6",
+        "aff-8",
         "aff-7"
       ],
       "foreignAffiliationIds": [],
@@ -9111,8 +9454,8 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-09-26",
-      "inputSignature": "c8a7b8f07b3dfd6f79df"
+      "lastEvaluated": "2026-10-03",
+      "inputSignature": "1eb8f7abb7ce03c819ce"
     }
   },
   {
@@ -9180,7 +9523,8 @@
         "affiliationIds": [
           "aff-1",
           "aff-2",
-          "aff-3"
+          "aff-3",
+          "aff-7"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -9198,7 +9542,8 @@
         "authorOrder": 2,
         "authorPosition": "middle",
         "affiliationIds": [
-          "aff-3"
+          "aff-3",
+          "aff-2"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -9360,11 +9705,23 @@
         "raw": "Institute of Chemistry, Academia Sinica",
         "source": "openalex",
         "sourceId": "https://openalex.org/I4210157360"
+      },
+      {
+        "id": "aff-7",
+        "label": "g",
+        "department": "",
+        "institution": "Linkou Chang Gung Memorial Hospital",
+        "address": "Linkou Chang Gung Memorial Hospital",
+        "city": "",
+        "countryCode": "TW",
+        "raw": "Linkou Chang Gung Memorial Hospital",
+        "source": "openalex",
+        "sourceId": "https://openalex.org/I4210116208"
       }
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-09-26",
+      "lastChecked": "2026-10-03",
       "sources": [
         "crossref",
         "openalex"
@@ -9406,6 +9763,7 @@
         "aff-1",
         "aff-2",
         "aff-3",
+        "aff-7",
         "aff-4",
         "aff-5",
         "aff-6"
@@ -9425,8 +9783,8 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-09-26",
-      "inputSignature": "fa86ca80d91d75d79cfa"
+      "lastEvaluated": "2026-10-03",
+      "inputSignature": "baa72db8a2261f36f9dc"
     }
   },
   {
@@ -9592,7 +9950,8 @@
           "aff-2",
           "aff-4",
           "aff-5",
-          "aff-3"
+          "aff-3",
+          "aff-6"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -9670,11 +10029,23 @@
         "raw": "4 Department of Pediatrics, Chang Gung Memorial Hospital, Linkou, Taoyuan 33305, Taiwan",
         "source": "europe-pmc",
         "sourceId": "af4-polymers-13-04246"
+      },
+      {
+        "id": "aff-6",
+        "label": "f",
+        "department": "",
+        "institution": "Linkou Chang Gung Memorial Hospital",
+        "address": "Linkou Chang Gung Memorial Hospital",
+        "city": "",
+        "countryCode": "TW",
+        "raw": "Linkou Chang Gung Memorial Hospital",
+        "source": "openalex",
+        "sourceId": "https://openalex.org/I4210116208"
       }
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-09-26",
+      "lastChecked": "2026-10-03",
       "sources": [
         "europe-pmc",
         "crossref",
@@ -9719,7 +10090,8 @@
         "aff-2",
         "aff-3",
         "aff-4",
-        "aff-5"
+        "aff-5",
+        "aff-6"
       ],
       "foreignAffiliationIds": [],
       "hasDualAffiliation": false,
@@ -9738,8 +10110,8 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-09-26",
-      "inputSignature": "72269bb3b7bfb46dd1a7"
+      "lastEvaluated": "2026-10-03",
+      "inputSignature": "9a08c1d2203e0e0e3444"
     }
   },
   {
@@ -9823,7 +10195,8 @@
           "aff-1",
           "aff-3",
           "aff-4",
-          "aff-2"
+          "aff-2",
+          "aff-7"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -9863,7 +10236,8 @@
         "affiliationIds": [
           "aff-4",
           "aff-6",
-          "aff-1"
+          "aff-1",
+          "aff-7"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -9885,7 +10259,8 @@
           "aff-1",
           "aff-3",
           "aff-4",
-          "aff-2"
+          "aff-2",
+          "aff-7"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -9976,11 +10351,23 @@
         "raw": "5 School of Medicine, College of Medicine, Chang Gung University, Taoyuan 33302, Taiwan",
         "source": "europe-pmc",
         "sourceId": "af5-nanomaterials-11-02125"
+      },
+      {
+        "id": "aff-7",
+        "label": "g",
+        "department": "",
+        "institution": "Linkou Chang Gung Memorial Hospital",
+        "address": "Linkou Chang Gung Memorial Hospital",
+        "city": "",
+        "countryCode": "TW",
+        "raw": "Linkou Chang Gung Memorial Hospital",
+        "source": "openalex",
+        "sourceId": "https://openalex.org/I4210116208"
       }
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-09-26",
+      "lastChecked": "2026-10-03",
       "sources": [
         "europe-pmc",
         "crossref",
@@ -10034,6 +10421,7 @@
         "aff-2",
         "aff-3",
         "aff-4",
+        "aff-7",
         "aff-6"
       ],
       "foreignAffiliationIds": [
@@ -10055,8 +10443,8 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-09-26",
-      "inputSignature": "a936294a2e78ca55a0d6"
+      "lastEvaluated": "2026-10-03",
+      "inputSignature": "62652eea6294099833c3"
     }
   },
   {
@@ -10122,7 +10510,8 @@
           "aff-2",
           "aff-3",
           "aff-4",
-          "aff-5"
+          "aff-5",
+          "aff-8"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -10163,7 +10552,8 @@
         "authorPosition": "middle",
         "affiliationIds": [
           "aff-3",
-          "aff-5"
+          "aff-5",
+          "aff-1"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -10261,7 +10651,8 @@
           "aff-1",
           "aff-2",
           "aff-3",
-          "aff-5"
+          "aff-5",
+          "aff-8"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -10384,11 +10775,23 @@
         "raw": "6 Department of Chemical and Materials Engineering, National Central University, Jhongli District, Taoyuan 32001, Taiwan",
         "source": "europe-pmc",
         "sourceId": "af6-nanomaterials-11-01607"
+      },
+      {
+        "id": "aff-8",
+        "label": "h",
+        "department": "",
+        "institution": "Linkou Chang Gung Memorial Hospital",
+        "address": "Linkou Chang Gung Memorial Hospital",
+        "city": "",
+        "countryCode": "TW",
+        "raw": "Linkou Chang Gung Memorial Hospital",
+        "source": "openalex",
+        "sourceId": "https://openalex.org/I4210116208"
       }
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-09-26",
+      "lastChecked": "2026-10-03",
       "sources": [
         "europe-pmc",
         "crossref",
@@ -10441,6 +10844,7 @@
         "aff-3",
         "aff-4",
         "aff-5",
+        "aff-8",
         "aff-7"
       ],
       "foreignAffiliationIds": [
@@ -10462,8 +10866,8 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-09-26",
-      "inputSignature": "89da534aa25a2f954072"
+      "lastEvaluated": "2026-10-03",
+      "inputSignature": "9e77cdddc63f2eb96c79"
     }
   },
   {
@@ -10616,7 +11020,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-09-26",
+      "lastChecked": "2026-10-03",
       "sources": [
         "crossref",
         "openalex"
@@ -10683,7 +11087,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-09-26",
+      "lastEvaluated": "2026-10-03",
       "inputSignature": "cb9b786771da7e1909e8"
     }
   },
@@ -10796,7 +11200,8 @@
         "authorOrder": 4,
         "authorPosition": "middle",
         "affiliationIds": [
-          "aff-3"
+          "aff-3",
+          "aff-2"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -10900,7 +11305,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-09-26",
+      "lastChecked": "2026-10-03",
       "sources": [
         "crossref",
         "openalex"
@@ -10959,8 +11364,8 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-09-26",
-      "inputSignature": "4a5fc1ba8d3849cec8b8"
+      "lastEvaluated": "2026-10-03",
+      "inputSignature": "4d4599af6b4adf921fda"
     }
   },
   {
@@ -11127,7 +11532,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-09-26",
+      "lastChecked": "2026-10-03",
       "sources": [
         "crossref",
         "openalex"
@@ -11185,7 +11590,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-09-26",
+      "lastEvaluated": "2026-10-03",
       "inputSignature": "b8839a489b614cca19c1"
     }
   },
@@ -11334,7 +11739,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-09-26",
+      "lastChecked": "2026-10-03",
       "sources": [
         "crossref",
         "openalex"
@@ -11392,7 +11797,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-09-26",
+      "lastEvaluated": "2026-10-03",
       "inputSignature": "b04f3d7f64ab5607593b"
     }
   },
@@ -11874,7 +12279,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-09-26",
+      "lastChecked": "2026-10-03",
       "sources": [
         "crossref",
         "openalex"
@@ -11933,7 +12338,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-09-26",
+      "lastEvaluated": "2026-10-03",
       "inputSignature": "7a8110569239686bcb7b"
     }
   },
@@ -12169,7 +12574,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-09-26",
+      "lastChecked": "2026-10-03",
       "sources": [
         "crossref",
         "openalex"
@@ -12238,7 +12643,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-09-26",
+      "lastEvaluated": "2026-10-03",
       "inputSignature": "0c9eb1fab311e5c1a508"
     }
   },
@@ -12461,7 +12866,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-09-26",
+      "lastChecked": "2026-10-03",
       "sources": [
         "crossref",
         "openalex"
@@ -12519,7 +12924,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-09-26",
+      "lastEvaluated": "2026-10-03",
       "inputSignature": "f5018d2affca6a20b0fb"
     }
   },
@@ -13172,7 +13577,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-09-26",
+      "lastChecked": "2026-10-03",
       "sources": [
         "crossref",
         "openalex"
@@ -13229,7 +13634,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-09-26",
+      "lastEvaluated": "2026-10-03",
       "inputSignature": "513bac3036da26f159e9"
     }
   },
@@ -13648,7 +14053,7 @@
     "affiliations": [],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-09-26",
+      "lastChecked": "2026-10-03",
       "sources": [
         "Crossref",
         "OpenAlex",
@@ -13712,7 +14117,7 @@
         "No usable author-address country data"
       ],
       "manualOverride": false,
-      "lastEvaluated": "2026-09-26",
+      "lastEvaluated": "2026-10-03",
       "inputSignature": "de4bab5ed0b91be06006"
     }
   },
