@@ -5,7 +5,7 @@
   "publicationCount": 40,
   "verifiedCount": 38,
   "notFoundCount": 2,
-  "lastSuccessfulUpdate": "2026-10-02T08:36:46Z",
+  "lastSuccessfulUpdate": "2026-10-03T08:12:56Z",
   "records": {
     "10.1016/j.cej.2026.177494": {
       "status": "verified",
@@ -52,12 +52,12 @@
       "title": "Heterogeneous graphite felt electrodes decorated with nanostructured graphitic carbon nitride for enhanced redox kinetics in vanadium redox flow batteries",
       "openAlexId": "W7118007754",
       "url": "https://openalex.org/W7118007754",
-      "citationCount": 3,
-      "fwci": 5.5949,
-      "citationPercentile": 0.94320043,
+      "citationCount": 4,
+      "fwci": 7.4189,
+      "citationPercentile": 0.96354904,
       "isTop1Percent": false,
       "isTop10Percent": true,
-      "openAlexUpdatedDate": "2026-09-29T14:09:16.559479"
+      "openAlexUpdatedDate": "2026-10-02T10:15:12.560889"
     },
     "10.1016/j.solmat.2025.114015": {
       "status": "verified",
@@ -80,7 +80,7 @@
       "url": "https://openalex.org/W4413117344",
       "citationCount": 0,
       "fwci": 0.0,
-      "citationPercentile": 0.10604175,
+      "citationPercentile": 0.105673,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-09-30T09:27:27.532063"
@@ -144,8 +144,8 @@
       "openAlexId": "W4402883453",
       "url": "https://openalex.org/W4402883453",
       "citationCount": 9,
-      "fwci": 0.9757,
-      "citationPercentile": 0.72388256,
+      "fwci": 0.9755,
+      "citationPercentile": 0.72381385,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-10-01T08:54:57.152042"
@@ -248,8 +248,8 @@
       "openAlexId": "W4385381207",
       "url": "https://openalex.org/W4385381207",
       "citationCount": 40,
-      "fwci": 3.1474,
-      "citationPercentile": 0.92862365,
+      "fwci": 3.1479,
+      "citationPercentile": 0.92863278,
       "isTop1Percent": false,
       "isTop10Percent": true,
       "openAlexUpdatedDate": "2026-09-30T09:27:27.532063"
@@ -274,8 +274,8 @@
       "openAlexId": "W4289524742",
       "url": "https://openalex.org/W4289524742",
       "citationCount": 10,
-      "fwci": 0.7284,
-      "citationPercentile": 0.65248204,
+      "fwci": 0.7288,
+      "citationPercentile": 0.65269807,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-09-30T09:27:27.532063"
@@ -300,8 +300,8 @@
       "openAlexId": "W3187467581",
       "url": "https://openalex.org/W3187467581",
       "citationCount": 62,
-      "fwci": 3.5962,
-      "citationPercentile": 0.93899921,
+      "fwci": 3.597,
+      "citationPercentile": 0.93898417,
       "isTop1Percent": false,
       "isTop10Percent": true,
       "openAlexUpdatedDate": "2026-10-01T08:54:57.152042"
