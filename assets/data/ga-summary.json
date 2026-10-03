@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-02T07:01:25Z",
+  "generatedAt": "2026-10-03T06:34:29Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 87,
-    "activeUsers": 72,
-    "sessions": 78,
-    "engagementRate": 0.11538461538461539
+    "pageViews": 94,
+    "activeUsers": 80,
+    "sessions": 85,
+    "engagementRate": 0.10588235294117647
   },
   "monthlyTrend": [
     {
@@ -29,8 +29,8 @@
     },
     {
       "month": "2026-10",
-      "pageViews": 36,
-      "activeUsers": 35
+      "pageViews": 43,
+      "activeUsers": 43
     }
   ],
   "topPages": [
@@ -53,12 +53,6 @@
       "activeUsers": 2
     },
     {
-      "title": "Surfactant Tween 20 Controlled Perovskite Film Fabricated by Thermal Blade Coating for Efficient Perovskite Solar Cells | Wei-Hao Chiu",
-      "path": "/publications/10-3390-nano12152651.html",
-      "pageViews": 3,
-      "activeUsers": 2
-    },
-    {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/index.html",
       "pageViews": 3,
@@ -73,6 +67,12 @@
     {
       "title": "Branched ZnO nanowires for enhancing energy conversion efficiency of dye-sensitized solar cells | Wei-Hao Chiu",
       "path": "/publications/10-1557-proc-1121-n14-01.html",
+      "pageViews": 2,
+      "activeUsers": 2
+    },
+    {
+      "title": "Impact of proton radiation on the performance of single-junction perovskite solar cells for space applications | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-solmat-2025-114015.html",
       "pageViews": 2,
       "activeUsers": 2
     },
@@ -113,23 +113,23 @@
       "activeUsers": 2
     },
     {
-      "title": "Synergistic preheating and moderate temperature liquid medium annealing for high performance perovskite solar cells | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-solener-2026-114430.html",
+      "title": "Surfactant Tween 20 Controlled Perovskite Film Fabricated by Thermal Blade Coating for Efficient Perovskite Solar Cells | Wei-Hao Chiu",
+      "path": "/publications/10-3390-nano12152651.html",
       "pageViews": 2,
       "activeUsers": 2
     },
     {
-      "title": "2T Perovskite Tandem Solar Cells in Space: Failure Mechanisms and Design Strategies | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-mtener-2026-102359.html",
-      "pageViews": 1,
-      "activeUsers": 1
+      "title": "Synergistic preheating and moderate temperature liquid medium annealing for high performance perovskite solar cells | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-solener-2026-114430.html",
+      "pageViews": 2,
+      "activeUsers": 2
     }
   ],
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 64,
-      "activeUsers": 64
+      "sessions": 72,
+      "activeUsers": 72
     },
     {
       "channel": "Organic Search",
@@ -145,19 +145,14 @@
       "channel": "AI Assistant",
       "sessions": 1,
       "activeUsers": 1
-    },
-    {
-      "channel": "Unassigned",
-      "sessions": 1,
-      "activeUsers": 0
     }
   ],
   "trafficSources": [
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 64,
-      "activeUsers": 64
+      "sessions": 72,
+      "activeUsers": 72
     },
     {
       "source": "google",
@@ -170,12 +165,6 @@
       "medium": "referral",
       "sessions": 2,
       "activeUsers": 2
-    },
-    {
-      "source": "(not set)",
-      "medium": "(not set)",
-      "sessions": 1,
-      "activeUsers": 0
     },
     {
       "source": "bing",
@@ -193,8 +182,8 @@
   "topCountries": [
     {
       "country": "Singapore",
-      "activeUsers": 40,
-      "pageViews": 41
+      "activeUsers": 48,
+      "pageViews": 48
     },
     {
       "country": "China",
@@ -230,7 +219,7 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 72
+      "activeUsers": 80
     }
   ],
   "academicEvents": [
