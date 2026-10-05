@@ -1,15 +1,15 @@
 {
   "schemaVersion": 3,
   "source": "OpenAlex Works API",
-  "status": "partial",
-  "lastSuccessfulUpdate": "2026-09-28T10:29:05.147440Z",
+  "status": "success_with_exclusions",
+  "lastSuccessfulUpdate": "2026-10-05T11:07:26.243381Z",
   "workCount": 38,
   "missingPublicationYearCount": 0,
-  "totalCitationsFromPublicationMetrics": 1004,
-  "rawTotalCitationsFromHistory": 999,
-  "totalCitationsIncludedInAnnualChart": 993,
-  "rawValidationDifference": -5,
-  "unassignedCitationCount": 5,
+  "totalCitationsFromPublicationMetrics": 1008,
+  "rawTotalCitationsFromHistory": 1008,
+  "totalCitationsIncludedInAnnualChart": 1002,
+  "rawValidationDifference": 0,
+  "unassignedCitationCount": 0,
   "excludedInvalidCitationCount": 6,
   "excludedInvalidCitations": [
     {
@@ -81,7 +81,7 @@
     },
     {
       "year": 2012,
-      "citations": 82
+      "citations": 84
     },
     {
       "year": 2013,
@@ -93,11 +93,11 @@
     },
     {
       "year": 2015,
-      "citations": 69
+      "citations": 70
     },
     {
       "year": 2016,
-      "citations": 47
+      "citations": 48
     },
     {
       "year": 2017,
@@ -105,7 +105,7 @@
     },
     {
       "year": 2018,
-      "citations": 31
+      "citations": 32
     },
     {
       "year": 2019,
@@ -137,7 +137,7 @@
     },
     {
       "year": 2026,
-      "citations": 68
+      "citations": 72
     }
   ],
   "works": {
@@ -379,7 +379,7 @@
             "Akash S. Rasal",
             "Sudesh Yadav",
             "Anil Ashok Kashale",
-            "Ali F. Alta'ee",
+            "Ali Altaee",
             "Jia‐Yaw Chang"
           ],
           "journal": "Nano Energy",
@@ -620,7 +620,7 @@
             "John Fahlteich",
             "Sabine Amberg‐Schwab",
             "Klaus Noller",
-            "Thomas M. Brown"
+            "Thomas Meredith Brown"
           ],
           "journal": "Energy Technology",
           "publicationYear": 2016,
@@ -787,7 +787,7 @@
           "title": "Large-Area Electrodeposition of Counterelectrodes Utilizing the Same Integrated Conductive Grid for Fabrication of Parallel Flexible Dye Solar Cell Modules",
           "authors": [
             "Francesca De Rossi",
-            "Thomas M. Brown",
+            "Thomas Meredith Brown",
             "Andrea Reale",
             "Aldo Di Carlo"
           ],
@@ -822,7 +822,7 @@
           "doiUrl": "https://doi.org/10.1039/c4ta00902a",
           "title": "Progress in flexible dye solar cell materials, processes and devices",
           "authors": [
-            "Thomas M. Brown",
+            "Thomas Meredith Brown",
             "Francesca De Rossi",
             "Francesco Di Giacomo",
             "Girolamo Mincuzzi",
@@ -1059,7 +1059,7 @@
           "doiUrl": "https://doi.org/10.1088/1555-6611/abcd3f",
           "title": "Generation of an optical beam with two-dimensional dark focus in a fractionally-degenerate cavity",
           "authors": [
-            "Mikhail V Gorbunkov",
+            "Михаил Валерьевич Горбунков",
             "Pavel V. Kostryukov",
             "Vladimir G. Tunkin"
           ],
@@ -1077,7 +1077,7 @@
           "doiUrl": "https://doi.org/10.1088/1555-6611/ab4649",
           "title": "Sharp focusing of superpositions of Hermite–Gaussian modes locked in fractionally degenerate cavity",
           "authors": [
-            "Mikhail V Gorbunkov",
+            "Михаил Валерьевич Горбунков",
             "Pavel V. Kostryukov",
             "Vladimir G. Tunkin"
           ],
@@ -1120,7 +1120,7 @@
           "authors": [
             "V V Bezotosnyĭ",
             "Evgeniy A. Cheshev",
-            "Mikhail V Gorbunkov",
+            "Михаил Валерьевич Горбунков",
             "Pavel V. Kostryukov",
             "Vladimir G. Tunkin"
           ],
@@ -1258,7 +1258,7 @@
             "S.J. Zeng",
             "Hongzhi Yang",
             "Y.F. Tong",
-            "Guojun Dong",
+            "G.Y. Dong",
             "Dongxu Liu",
             "C. Wen",
             "Yingke Ren",
@@ -1814,7 +1814,7 @@
           "title": "Effect of solvents in the extraction and stability of anthocyanin from the petals of Caesalpinia pulcherrima for natural dye sensitized solar cell applications",
           "authors": [
             "N. Prabavathy",
-            "Sakshee Shalini",
+            "S. Shalini",
             "Rangasamy Balasundaraprabhu",
             "Dhayalan Velauthapillai",
             "S. Prasanna",
@@ -1854,7 +1854,7 @@
           "title": "Enhancement in the photostability of natural dyes for dye-sensitized solar cell (DSSC) applications: a review",
           "authors": [
             "N. Prabavathy",
-            "Sakshee Shalini",
+            "S. Shalini",
             "Rangasamy Balasundaraprabhu",
             "Dhayalan Velauthapillai",
             "S. Prasanna",
@@ -2049,7 +2049,7 @@
             "Maria Zaharescu",
             "Mihai Anastasescu",
             "Madalina Nicolescu",
-            "Mihai Stoica",
+            "M. Stoica",
             "Hermine Stroescu",
             "M. Gärtner",
             "Octavian Buiu",
@@ -2075,7 +2075,7 @@
             "Chia‐Yuan Chen",
             "Min‐Hsin Yeh",
             "Lu-Yin Lin",
-            "Ramaraja Varma Vittal",
+            "R. Vittal",
             "Chun‐Guey Wu",
             "Kuo–Chuan Ho"
           ],
@@ -2136,7 +2136,7 @@
           "authors": [
             "Jian Ping Gao",
             "Hao Ran Li",
-            "Rong Hua",
+            "Hua Rong",
             "Yu Hua Dai"
           ],
           "journal": "Advanced materials research",
@@ -2301,7 +2301,7 @@
           "title": "Expanded graphite/pencil-lead as counter electrode for dye-sensitized solar cells",
           "authors": [
             "Yan-Shuang Wei",
-            "Qianqian Jin",
+            "Qian-Qian Jin",
             "Tie‐Zhen Ren"
           ],
           "journal": "Solid-State Electronics",
@@ -2320,7 +2320,7 @@
           "authors": [
             "Chen-Yu Chou",
             "Chuan‐Pei Lee",
-            "Ramaraja Varma Vittal",
+            "R. Vittal",
             "Kuo–Chuan Ho"
           ],
           "journal": "Journal of Power Sources",
@@ -2674,7 +2674,7 @@
           "title": "Flexible Nano-TiO2 Sheets Exhibiting Excellent Photocatalytic and Photovoltaic Properties by Controlled Silane Functionalization─Exploring the New Prospects of Wastewater Treatment and Flexible DSSCs",
           "authors": [
             "Soorya Sasi",
-            "Akash M. Chandran",
+            "Akash Chandran",
             "Sunish K. Sugunan",
             "Ardra C Krishna",
             "Pankajakshan Radhakrishnan Nair",
@@ -2740,7 +2740,7 @@
             "Syeda Ammara Batool",
             "Abdul Wadood",
             "Syed Wilayat Hussain",
-            "Muhammad Raihan Atallah Yasir",
+            "Muhammad Yasir",
             "Muhammad Atiq Ur Rehman"
           ],
           "journal": "Surfaces",
@@ -2973,7 +2973,7 @@
           "authors": [
             "Sohrab Manouchehri",
             "Javad Zahmatkesh",
-            "Mohammad Yousefi"
+            "Mohammad Hassan Yousefi"
           ],
           "journal": "Journal of Computational Electronics",
           "publicationYear": 2017,
@@ -3207,7 +3207,7 @@
             "Lobat Tayebi",
             "Daryoosh Vashaee"
           ],
-          "journal": "",
+          "journal": "Springer eBooks",
           "publicationYear": 2015,
           "publicationDate": "2015-09-14",
           "volume": "",
@@ -3288,7 +3288,7 @@
             "Lobat Tayebi",
             "Daryoosh Vashaee"
           ],
-          "journal": "",
+          "journal": "Springer eBooks",
           "publicationYear": 2015,
           "publicationDate": "2015-01-01",
           "volume": "",
@@ -3591,7 +3591,7 @@
           "doiUrl": "https://doi.org/10.1039/c4ta00902a",
           "title": "Progress in flexible dye solar cell materials, processes and devices",
           "authors": [
-            "Thomas M. Brown",
+            "Thomas Meredith Brown",
             "Francesca De Rossi",
             "Francesco Di Giacomo",
             "Girolamo Mincuzzi",
@@ -3926,7 +3926,7 @@
             "Pragyensh Kumar",
             "Johns Naduvath",
             "Vivekanand Gondane",
-            "P. Chithra Lekha",
+            "P. Lekha",
             "Jaykrushna Das",
             "Harsh Kumar Narula",
             "Sudhanshu Mallick",
@@ -4004,7 +4004,7 @@
       "doi": "10.1021/jp805239k",
       "title": "Formation of Branched ZnO Nanowires from Solvothermal Method and Dye-Sensitized Solar Cells Applications",
       "publicationYear": 2008,
-      "currentCitationCount": 267,
+      "currentCitationCount": 268,
       "sourceUrl": "https://api.openalex.org/works?filter=cites:W2055166593",
       "citationsByYear": [
         {
@@ -4021,7 +4021,7 @@
         },
         {
           "year": 2012,
-          "citations": 31
+          "citations": 32
         },
         {
           "year": 2013,
@@ -4095,7 +4095,7 @@
         },
         {
           "year": 2012,
-          "citations": 31
+          "citations": 32
         },
         {
           "year": 2013,
@@ -4154,13 +4154,13 @@
           "citations": 2
         }
       ],
-      "historyTotal": 267,
-      "rawHistoryTotal": 267,
+      "historyTotal": 268,
+      "rawHistoryTotal": 268,
       "excludedInvalidCitationCount": 0,
       "excludedInvalidCitations": [],
       "unassignedCitationCount": 0,
-      "citingWorkCount": 267,
-      "citingArticlesWithDoiCount": 266,
+      "citingWorkCount": 268,
+      "citingArticlesWithDoiCount": 267,
       "citingArticlesWithDoi": [
         {
           "openAlexId": "W7213267293",
@@ -4191,7 +4191,7 @@
           "authors": [
             "Piyali Maity"
           ],
-          "journal": "",
+          "journal": "Springer eBooks",
           "publicationYear": 2026,
           "publicationDate": "2026-01-01",
           "volume": "",
@@ -4444,7 +4444,7 @@
             "Korina",
             "Morozov",
             "Avdin",
-            "Bolshakov"
+            "Bol'shakov"
           ],
           "journal": "Bulletin of the South Ural State University series Chemistry",
           "publicationYear": 2023,
@@ -4595,7 +4595,7 @@
             "Premshila Kumari",
             "Avritti Srivastava",
             "Ruchi K. Sharma",
-            "Deepak Ganesh Sharma",
+            "Deepak Sharma",
             "Sanjay Kumar Srivastava"
           ],
           "journal": "Materials horizons",
@@ -4746,7 +4746,7 @@
           "title": "Access to nanocrystalline, uniform, and fine-grained Ni-P coating with improved anticorrosive action through the growth of ZnO nanostructures before the plating process",
           "authors": [
             "Zahra Sharifalhoseini",
-            "Mohammad Hassan Entezari",
+            "Mohammad H. Entezari",
             "Ali Davoodi",
             "Mohsen Shahidi"
           ],
@@ -4787,7 +4787,7 @@
             "Majid Niaz Akhtar",
             "Saif Ur Rehman",
             "Naseeb Ahmad",
-            "Muhammad Abdullah Khalid",
+            "Muhammad Khalid",
             "Muhammad Mudasir Atif",
             "Mona A. Almutairi",
             "Muhammad Irfan"
@@ -4827,7 +4827,7 @@
           "authors": [
             "Samson O. Aisida",
             "Raphael Mmaduka Obodo",
-            "Muhammad Salman Arshad",
+            "Muhammad Arshad",
             "Iram Mahmood",
             "Ishaq Ahmad",
             "Fabian Ifeanyichukwu Ezema",
@@ -5412,7 +5412,7 @@
           "doiUrl": "https://doi.org/10.1039/c6ta11012f",
           "title": "Choosing the right nanoparticle size – designing novel ZnO electrode architectures for efficient dye-sensitized solar cells",
           "authors": [
-            "M. Pfau",
+            "Markus W. Pfau",
             "Andreas Kunzmann",
             "Doris Segets",
             "Wolfgang Peukert",
@@ -5755,7 +5755,7 @@
           "doiUrl": "https://doi.org/10.1016/j.apsusc.2015.12.240",
           "title": "Preparation of ZnO nanorods on conductive PET-ITO-Ag fibers",
           "authors": [
-            "Yiwen Helen Li",
+            "Yiwen Li",
             "Shuai Ji",
             "Yuanyu Chen",
             "Hong Zhang",
@@ -5796,7 +5796,7 @@
           "doiUrl": "https://doi.org/10.1039/c6ta05618k",
           "title": "In situ chemical etching of tunable 3D Ni 3 S 2 superstructures for bifunctional electrocatalysts for overall water splitting",
           "authors": [
-            "Ting Gang Zhu",
+            "Ting Zhu",
             "Liangliang Zhu",
             "Jing Wang",
             "Ghim Wei Ho"
@@ -5817,10 +5817,10 @@
           "authors": [
             "Y. L. Liu",
             "D. D. Wang",
-            "Jian Ni",
+            "J. Ni",
             "Shanteng Zhang",
             "X. J. Jin",
-            "Shi-Wen Lv",
+            "S. J. Lv",
             "Zhaowu Wang",
             "Jianfei Lei"
           ],
@@ -6408,7 +6408,7 @@
             "Mohamad Hafiz Mamat",
             "MOHAMAD RUSOP"
           ],
-          "journal": "",
+          "journal": "IEEE International Conference on Semiconductor Electronics",
           "publicationYear": 2014,
           "publicationDate": "2014-08-01",
           "volume": "8",
@@ -6427,7 +6427,7 @@
             "Mohamad Hafiz Mamat",
             "MOHAMAD RUSOP"
           ],
-          "journal": "",
+          "journal": "International Conference on Electronic Design",
           "publicationYear": 2014,
           "publicationDate": "2014-08-01",
           "volume": "6",
@@ -6602,7 +6602,7 @@
             "Tomasz Wojciechowski",
             "Elzbieta Dynowska",
             "Eliana Anetka Kaminska",
-            "A. Piotrowska"
+            "Ania Piotrowska"
           ],
           "journal": "Acta Physica Polonica A",
           "publicationYear": 2014,
@@ -6978,8 +6978,8 @@
           "doiUrl": "https://doi.org/10.1021/nn404170y",
           "title": "3D Branched Nanowire Photoelectrochemical Electrodes for Efficient Solar Water Splitting",
           "authors": [
-            "Alireza Ansary Kargar",
-            "Ke Ning Sun",
+            "Alireza Kargar",
+            "Ke Sun",
             "Yi Jing",
             "Chulmin Choi",
             "Huisu Jeong",
@@ -7472,7 +7472,7 @@
           "authors": [
             "Kun‐Mu Lee",
             "Chia‐Yuan Chen",
-            "Yi‐Ting Tsai",
+            "Yi-Ting Tsai",
             "Ling-Chuan Lin",
             "Chun‐Guey Wu"
           ],
@@ -7534,7 +7534,7 @@
             "Seung Hwan Ko",
             "Costas P. Grigoropoulos"
           ],
-          "journal": "",
+          "journal": "Springer eBooks",
           "publicationYear": 2013,
           "publicationDate": "2013-01-01",
           "volume": "",
@@ -7722,9 +7722,9 @@
           "authors": [
             "Kuppusamy Pushpanathan",
             "Sethuraman Sathya",
-            "M. Chithra",
+            "M. Jay Chithra",
             "S. Gowthami",
-            "R. Jaya Santhi"
+            "R. Santhi"
           ],
           "journal": "Materials and Manufacturing Processes",
           "publicationYear": 2012,
@@ -7806,7 +7806,7 @@
             "Cristina Flox",
             "María Ibáñez",
             "Teresa Andreu",
-            "Antonio M. López",
+            "Antonio M López",
             "Jordi Arbiol",
             "Joan Ramon Morante",
             "Andreu Cabot"
@@ -7826,7 +7826,7 @@
           "title": "One-Step Hydrothermal Synthesis of Comb-Like ZnO Nanostructures",
           "authors": [
             "Xiaobin Xu",
-            "Min Wu",
+            "Min Sheng Wu",
             "Michael A. Asoro",
             "Paulo Jorge Ferreira",
             "Donglei Fan"
@@ -7935,6 +7935,22 @@
           "issue": "",
           "pages": "002553-002556",
           "type": "conference-paper"
+        },
+        {
+          "openAlexId": "W7143530433",
+          "doi": "10.70675/0bda5a3fz6772z4f0dzb82bz69c3be6b5239",
+          "doiUrl": "https://doi.org/10.70675/0bda5a3fz6772z4f0dzb82bz69c3be6b5239",
+          "title": "Etude d'oxydes métalliques nanostructurés (ZnO,SnO2) pour applications photovoltaïques, notamment oxydes transparents conducteurs et cellules solaires à colorant",
+          "authors": [
+            "Germain Rey"
+          ],
+          "journal": "",
+          "publicationYear": 2012,
+          "publicationDate": "2012-05-23",
+          "volume": "",
+          "issue": "",
+          "pages": "",
+          "type": "dissertation"
         },
         {
           "openAlexId": "W2021150164",
@@ -8375,7 +8391,7 @@
           "authors": [
             "Jitendra N. Tiwari",
             "Rajanish N. Tiwari",
-            "KWANG SOO KIM"
+            "Kwang S. Kim"
           ],
           "journal": "Progress in Materials Science",
           "publicationYear": 2011,
@@ -8508,7 +8524,7 @@
           "doiUrl": "https://doi.org/10.1016/j.materresbull.2011.04.027",
           "title": "Facile synthesis of highly branched jacks-like ZnO nanorods and their applications in dye-sensitized solar cells",
           "authors": [
-            "P. Sudhagar",
+            "Sudhagar Pitchaimuthu",
             "Rajesh Kumar",
             "June Hyuk Jung",
             "Woohyung Cho",
@@ -8569,8 +8585,8 @@
             "Jae‐Joon Lee",
             "Md. Mahbubur",
             "Subrata Sarker",
-            "N. Deb",
-            "Alfian Saleh",
+            "N.C. Deb",
+            "A.J. Saleh",
             "Jae Kwan"
           ],
           "journal": "InTech eBooks",
@@ -8863,7 +8879,7 @@
             "Huda Binti Abdullah",
             "Junaidi Syarif",
             "Brian Yuliarto",
-            "Sahbudin Shaari"
+            "Sahbudin B. Shaari"
           ],
           "journal": "Functional Materials Letters",
           "publicationYear": 2010,
@@ -9260,7 +9276,7 @@
           "authors": [
             "C Y Lee",
             "J Y Wang",
-            "Yi‐Ju Chou",
+            "Y Chou",
             "C. L. Cheng",
             "Cha-Hsin Chao",
             "S. C. Shiu",
@@ -9451,7 +9467,7 @@
       "doi": "10.1016/j.tsf.2009.11.058",
       "title": "Effects of mesoscopic poly(3,4-ethylenedioxythiophene) films as counter electrodes for dye-sensitized solar cells",
       "publicationYear": 2010,
-      "currentCitationCount": 89,
+      "currentCitationCount": 88,
       "sourceUrl": "https://api.openalex.org/works?filter=cites:W2055510369",
       "citationsByYear": [
         {
@@ -9589,7 +9605,7 @@
       "rawHistoryTotal": 88,
       "excludedInvalidCitationCount": 0,
       "excludedInvalidCitations": [],
-      "unassignedCitationCount": 1,
+      "unassignedCitationCount": 0,
       "citingWorkCount": 88,
       "citingArticlesWithDoiCount": 88,
       "citingArticlesWithDoi": [
@@ -9684,7 +9700,7 @@
           "authors": [
             "Manoharan Manikandan",
             "V. Anto Feradrick Samson",
-            "Eswaramoorthy Manikandan",
+            "E. Manikandan",
             "K.A. Karthigeyan",
             "E. Papanasam"
           ],
@@ -10057,7 +10073,7 @@
             "Usman Ahmed",
             "Mahdi Alizadeh",
             "Nasrudin Abd Rahim",
-            "Syed Khurram Shahabuddin",
+            "Syed Shahabuddin",
             "Muhammad Shakeel Ahmad",
             "A.K. Pandey"
           ],
@@ -10232,7 +10248,7 @@
             "Kuoyuan D. Chiu",
             "Yuhlong Oliver Su"
           ],
-          "journal": "",
+          "journal": "International Workshop on Active-Matrix Flatpanel Displays and Devices",
           "publicationYear": 2016,
           "publicationDate": "2016-07-01",
           "volume": "570",
@@ -10406,7 +10422,7 @@
             "Pei‐Yu Chen",
             "Chun‐Ting Li",
             "Chuan‐Pei Lee",
-            "Ramaraja Varma Vittal",
+            "R. Vittal",
             "Kuo–Chuan Ho"
           ],
           "journal": "Nano Energy",
@@ -10469,7 +10485,7 @@
             "Lina Ma",
             "Haijun Niu"
           ],
-          "journal": "",
+          "journal": "Springer eBooks",
           "publicationYear": 2014,
           "publicationDate": "2014-12-01",
           "volume": "",
@@ -10770,7 +10786,7 @@
             "Hsueh-Tao Chou",
             "Ho-Chun Hsu"
           ],
-          "journal": "",
+          "journal": "IEEE International Conference on Nanotechnology (IEEE-NANO)",
           "publicationYear": 2013,
           "publicationDate": "2013-08-01",
           "volume": "",
@@ -10881,7 +10897,7 @@
           "authors": [
             "Fengjuan Miao",
             "Bairui Tao",
-            "Paul K. Chu"
+            "Paul Kim-Ho Chu"
           ],
           "journal": "Electrochimica Acta",
           "publicationYear": 2013,
@@ -10897,7 +10913,7 @@
           "doiUrl": "https://doi.org/10.1039/c3nr01294h",
           "title": "Nanopatterned conductive polymer films as a Pt, TCO-free counter electrode for low-cost dye-sensitized solar cells",
           "authors": [
-            "Jeong Yi Kwon",
+            "Jeong Kwon",
             "Ganapathy Veerappan",
             "Young Hun Kim",
             "Kyung-Deok Song",
@@ -10964,7 +10980,7 @@
             "Chuen‐Shii Chou",
             "Chuen-Shii Chou",
             "Chuen-Shyong Chou",
-            "Yi‐Ting Kuo",
+            "Yi-Ting Kuo",
             "Chun-Po Wang"
           ],
           "journal": "Advanced Powder Technology",
@@ -11994,7 +12010,7 @@
             "Julia Linnemann",
             "Joseph De Giorgio",
             "Klaudia K. Wagner",
-            "Graham Mathieson",
+            "G. Mathieson",
             "Gordon G. Wallace",
             "David L. Officer"
           ],
@@ -12174,7 +12190,7 @@
           "doiUrl": "https://doi.org/10.1039/c4ta00902a",
           "title": "Progress in flexible dye solar cell materials, processes and devices",
           "authors": [
-            "Thomas M. Brown",
+            "Thomas Meredith Brown",
             "Francesca De Rossi",
             "Francesco Di Giacomo",
             "Girolamo Mincuzzi",
@@ -12324,7 +12340,7 @@
             "Shaocong Hou",
             "Hongwei Wu",
             "Xiao Hua Yu",
-            "Hanny Kafafy",
+            "Hany Kafafy",
             "Dechun Zou"
           ],
           "journal": "Nano Energy",
@@ -12575,7 +12591,7 @@
             "Hung-Yu Wei",
             "Chia‐Yuan Chen",
             "Chun‐Guey Wu",
-            "Ramaraja Varma Vittal",
+            "R. Vittal",
             "Kuo–Chuan Ho"
           ],
           "journal": "Journal of Materials Chemistry",
@@ -12623,7 +12639,7 @@
         },
         {
           "year": 2012,
-          "citations": 6
+          "citations": 7
         },
         {
           "year": 2013,
@@ -12635,11 +12651,11 @@
         },
         {
           "year": 2015,
-          "citations": 5
+          "citations": 6
         },
         {
           "year": 2016,
-          "citations": 3
+          "citations": 4
         },
         {
           "year": 2017,
@@ -12647,7 +12663,7 @@
         },
         {
           "year": 2018,
-          "citations": 1
+          "citations": 2
         },
         {
           "year": 2019,
@@ -12668,6 +12684,10 @@
         {
           "year": 2025,
           "citations": 2
+        },
+        {
+          "year": 2026,
+          "citations": 1
         }
       ],
       "rawCitationsByYear": [
@@ -12677,7 +12697,7 @@
         },
         {
           "year": 2012,
-          "citations": 6
+          "citations": 7
         },
         {
           "year": 2013,
@@ -12689,11 +12709,11 @@
         },
         {
           "year": 2015,
-          "citations": 5
+          "citations": 6
         },
         {
           "year": 2016,
-          "citations": 3
+          "citations": 4
         },
         {
           "year": 2017,
@@ -12701,7 +12721,7 @@
         },
         {
           "year": 2018,
-          "citations": 1
+          "citations": 2
         },
         {
           "year": 2019,
@@ -12722,16 +12742,41 @@
         {
           "year": 2025,
           "citations": 2
+        },
+        {
+          "year": 2026,
+          "citations": 1
         }
       ],
-      "historyTotal": 34,
-      "rawHistoryTotal": 34,
+      "historyTotal": 39,
+      "rawHistoryTotal": 39,
       "excludedInvalidCitationCount": 0,
       "excludedInvalidCitations": [],
-      "unassignedCitationCount": 5,
-      "citingWorkCount": 34,
-      "citingArticlesWithDoiCount": 34,
+      "unassignedCitationCount": 0,
+      "citingWorkCount": 39,
+      "citingArticlesWithDoiCount": 39,
       "citingArticlesWithDoi": [
+        {
+          "openAlexId": "W7133130770",
+          "doi": "10.1007/s10562-026-05332-5",
+          "doiUrl": "https://doi.org/10.1007/s10562-026-05332-5",
+          "title": "Tailoring the Optoelectronics Properties of ZnO Nanostructures Through Metal Doping for Efficient Photocatalysis and Photovoltaic Application",
+          "authors": [
+            "Zain Ul Abideen",
+            "Salma Shad",
+            "Muhammad Usman Farooq",
+            "Uswa Hassan",
+            "Aliya Ibrar",
+            "Muzaffar Iqbal"
+          ],
+          "journal": "Catalysis Letters",
+          "publicationYear": 2026,
+          "publicationDate": "2026-03-01",
+          "volume": "156",
+          "issue": "4",
+          "pages": "",
+          "type": "article"
+        },
         {
           "openAlexId": "W4411877798",
           "doi": "10.3390/coatings15070754",
@@ -12822,7 +12867,7 @@
             "Falak Babar",
             "Umer Mehmood",
             "Hafza Asghar",
-            "Murtuza Mehdi",
+            "M. Hassan Mehdi",
             "Anwar Ul Haq Khan",
             "Hamza Khalid",
             "Noor ul Huda",
@@ -12887,6 +12932,25 @@
           "issue": "",
           "pages": "145-204",
           "type": "book-chapter"
+        },
+        {
+          "openAlexId": "W2902937612",
+          "doi": "10.1039/c8ce01773e",
+          "doiUrl": "https://doi.org/10.1039/c8ce01773e",
+          "title": "A review on the laser-assisted flow deposition method: growth of ZnO micro and nanostructures",
+          "authors": [
+            "Joana Rodrigues",
+            "António J.S. Fernandes",
+            "T. Monteiro",
+            "F.M. Costa"
+          ],
+          "journal": "CrystEngComm",
+          "publicationYear": 2018,
+          "publicationDate": "2018-11-27",
+          "volume": "21",
+          "issue": "7",
+          "pages": "1071-1090",
+          "type": "article"
         },
         {
           "openAlexId": "W2892211468",
@@ -12963,6 +13027,22 @@
           "type": "article"
         },
         {
+          "openAlexId": "W2416800257",
+          "doi": "10.1016/j.ceramint.2016.06.047",
+          "doiUrl": "https://doi.org/10.1016/j.ceramint.2016.06.047",
+          "title": "Effect of annealing temperature on the morphology and optical properties of ZnO tetrapods grown by a thermal evaporation technique",
+          "authors": [
+            "Geun-Hyoung Lee"
+          ],
+          "journal": "Ceramics International",
+          "publicationYear": 2016,
+          "publicationDate": "2016-06-17",
+          "volume": "42",
+          "issue": "13",
+          "pages": "14452-14455",
+          "type": "article"
+        },
+        {
           "openAlexId": "W2487063620",
           "doi": "10.1007/s11581-016-1724-z",
           "doiUrl": "https://doi.org/10.1007/s11581-016-1724-z",
@@ -12970,7 +13050,7 @@
           "authors": [
             "Savisha Mahalingam",
             "Huda Abdullah",
-            "Sahbudin Shaari",
+            "Sahbudin B. Shaari",
             "Andanastuti Muchtar"
           ],
           "journal": "Ionics",
@@ -13013,10 +13093,10 @@
           "authors": [
             "Y. L. Liu",
             "D. D. Wang",
-            "Jian Ni",
+            "J. Ni",
             "Shanteng Zhang",
             "X. J. Jin",
-            "Shi-Wen Lv",
+            "S. J. Lv",
             "Zhaowu Wang",
             "Jianfei Lei"
           ],
@@ -13127,6 +13207,24 @@
           "volume": "136",
           "issue": "",
           "pages": "38-43",
+          "type": "article"
+        },
+        {
+          "openAlexId": "W2111905465",
+          "doi": "10.5772/60939",
+          "doiUrl": "https://doi.org/10.5772/60939",
+          "title": "ZnO Tetrapods: Synthesis and Applications in Solar Cells",
+          "authors": [
+            "Luting Yan",
+            "Ashraf Uddin",
+            "Haiwei Wang"
+          ],
+          "journal": "Nanomaterials and Nanotechnology",
+          "publicationYear": 2015,
+          "publicationDate": "2015-01-01",
+          "volume": "5",
+          "issue": "",
+          "pages": "19",
           "type": "article"
         },
         {
@@ -13287,7 +13385,7 @@
             "Hsin–Wei Chen",
             "Chia‐Yu Lin",
             "Yi‐Hsuan Lai",
-            "Ramaraja Varma Vittal",
+            "R. Vittal",
             "Kuo–Chuan Ho"
           ],
           "journal": "Progress in Photovoltaics Research and Applications",
@@ -13337,6 +13435,27 @@
           "volume": "7",
           "issue": "9",
           "pages": "8384-8393",
+          "type": "article"
+        },
+        {
+          "openAlexId": "W2026340393",
+          "doi": "10.1016/j.jpowsour.2012.05.079",
+          "doiUrl": "https://doi.org/10.1016/j.jpowsour.2012.05.079",
+          "title": "Ionic liquid diffusion properties in tetrapod-like ZnO photoanode for dye-sensitized solar cells",
+          "authors": [
+            "Kun‐Mu Lee",
+            "Wei‐Hao Chiu",
+            "Chih-Yu Hsu",
+            "Hsin-Ming Cheng",
+            "Chia-Hua Lee",
+            "Chun‐Guey Wu"
+          ],
+          "journal": "Journal of Power Sources",
+          "publicationYear": 2012,
+          "publicationDate": "2012-06-06",
+          "volume": "216",
+          "issue": "",
+          "pages": "330-336",
           "type": "article"
         },
         {
@@ -13668,7 +13787,7 @@
             "Falak Babar",
             "Umer Mehmood",
             "Hafza Asghar",
-            "Murtuza Mehdi",
+            "M. Hassan Mehdi",
             "Anwar Ul Haq Khan",
             "Hamza Khalid",
             "Noor ul Huda",
@@ -13923,7 +14042,7 @@
           "authors": [
             "Savisha Mahalingam",
             "Huda Binti Abdullah",
-            "Sahbudin Shaari",
+            "Sahbudin B. Shaari",
             "Andanastuti Muchtar"
           ],
           "journal": "Ionics",
@@ -14039,7 +14158,7 @@
           "authors": [
             "Jesús Idígoras",
             "Maxime Godfroy",
-            "Damien O. Joly",
+            "D. Joly",
             "Anna Todinova",
             "Pascale Maldivi",
             "Gerko Oskam",
@@ -14083,7 +14202,7 @@
             "Izamarlina Asshaari",
             "Mohd Ambar Yarmo",
             "Mohd Zikri Razali",
-            "Sahbudin Shaari",
+            "Sahbudin B. Shaari",
             "Savisha Mahalingam",
             "Aisyah Bolhan"
           ],
@@ -14191,7 +14310,7 @@
           "doiUrl": "https://doi.org/10.1002/cphc.201301215",
           "title": "Perovskite Solar Cells Based on Nanocolumnar Plasma‐Deposited ZnO Thin Films",
           "authors": [
-            "Francisco Javier Ramos",
+            "F. Javier Ramos",
             "Carmen López‐Santos",
             "Elena Guillén",
             "Mohammad Khaja Nazeeruddin",
@@ -14331,7 +14450,7 @@
             "N.M. Gómez-Ortíz",
             "Jesús Idígoras",
             "Elena Guillén",
-            "Aracely Hernández‐Ramírez",
+            "A. Hernández",
             "Ángela Sastre‐Santos",
             "Fernando Fernández‐Lázaro",
             "Juan A. Anta",
@@ -14375,7 +14494,7 @@
             "Azimah Omar",
             "Huda Abdullah",
             "Mohd Ambar Yarmo",
-            "Sahbudin Shaari",
+            "Sahbudin B. Shaari",
             "Mohd Raihan Taha"
           ],
           "journal": "Journal of Physics D Applied Physics",
@@ -14411,9 +14530,9 @@
           "authors": [
             "Luı́s G. Arnaut",
             "Mónica Barroso",
-            "Carlos Moacir Costa Serpa"
+            "Carlos Serpa"
           ],
-          "journal": "",
+          "journal": "Springer eBooks",
           "publicationYear": 2013,
           "publicationDate": "2013-01-01",
           "volume": "",
@@ -14681,7 +14800,7 @@
           "doiUrl": "https://doi.org/10.1016/j.materresbull.2011.04.027",
           "title": "Facile synthesis of highly branched jacks-like ZnO nanorods and their applications in dye-sensitized solar cells",
           "authors": [
-            "P. Sudhagar",
+            "Sudhagar Pitchaimuthu",
             "Rajesh Kumar",
             "June Hyuk Jung",
             "Woohyung Cho",
@@ -14789,7 +14908,7 @@
             "Hsin-Wei Chen",
             "Jian-Ging Chen",
             "Chung‐Wei Kung",
-            "Ramaraja Varma Vittal",
+            "R. Vittal",
             "Kuo–Chuan Ho"
           ],
           "journal": "Energy & Environmental Science",
@@ -14871,7 +14990,7 @@
             "Huda Binti Abdullah",
             "Junaidi Syarif",
             "Brian Yuliarto",
-            "Sahbudin Shaari"
+            "Sahbudin B. Shaari"
           ],
           "journal": "Functional Materials Letters",
           "publicationYear": 2010,
@@ -15015,7 +15134,7 @@
             "Hsin–Wei Chen",
             "Jian-Ging Chen",
             "Chung‐Wei Kung",
-            "Ramaraja Varma Vittal",
+            "R. Vittal",
             "Kuo–Chuan Ho"
           ],
           "journal": "Journal of Materials Chemistry",
@@ -15691,7 +15810,7 @@
       "doi": "10.1016/j.cej.2021.131609",
       "title": "High-performance perovskite solar cells based on dopant-free hole-transporting material fabricated by a thermal-assisted blade-coating method with efficiency exceeding 21%",
       "publicationYear": 2022,
-      "currentCitationCount": 60,
+      "currentCitationCount": 62,
       "sourceUrl": "https://api.openalex.org/works?filter=cites:W3187467581",
       "citationsByYear": [
         {
@@ -15712,7 +15831,7 @@
         },
         {
           "year": 2026,
-          "citations": 5
+          "citations": 6
         }
       ],
       "rawCitationsByYear": [
@@ -15738,11 +15857,11 @@
         },
         {
           "year": 2026,
-          "citations": 5
+          "citations": 6
         }
       ],
-      "historyTotal": 59,
-      "rawHistoryTotal": 61,
+      "historyTotal": 60,
+      "rawHistoryTotal": 62,
       "excludedInvalidCitationCount": 2,
       "excludedInvalidCitations": [
         {
@@ -15753,9 +15872,34 @@
         }
       ],
       "unassignedCitationCount": 0,
-      "citingWorkCount": 61,
-      "citingArticlesWithDoiCount": 59,
+      "citingWorkCount": 62,
+      "citingArticlesWithDoiCount": 60,
       "citingArticlesWithDoi": [
+        {
+          "openAlexId": "W7214965081",
+          "doi": "10.1002/smll.75949",
+          "doiUrl": "https://doi.org/10.1002/smll.75949",
+          "title": "Chronological Development in Power Conversion Efficiency of Hybrid Halide Perovskite‐Based Energy Harvesters",
+          "authors": [
+            "Shweta Dhakla",
+            "Parvesh K. Deendyal",
+            "Ankur Taya",
+            "Harpreet Singh",
+            "Krrish Kashyap",
+            "Deepali Dhakla",
+            "Sarvesh Kumar",
+            "Dania Ali",
+            "A.H. Reshak",
+            "Manish K. Kashyap"
+          ],
+          "journal": "Small",
+          "publicationYear": 2026,
+          "publicationDate": "2026-09-30",
+          "volume": "",
+          "issue": "",
+          "pages": "e75949",
+          "type": "article"
+        },
         {
           "openAlexId": "W7212081566",
           "doi": "10.1002/advs.77623",
@@ -15872,9 +16016,9 @@
           "journal": "Journal of Materials Chemistry A",
           "publicationYear": 2026,
           "publicationDate": "2026-01-01",
-          "volume": "",
-          "issue": "",
-          "pages": "",
+          "volume": "14",
+          "issue": "58",
+          "pages": "40319-40334",
           "type": "article"
         },
         {
@@ -15934,7 +16078,7 @@
             "Ashwani Kumar",
             "Manisha Kumari",
             "Sandeep Kumar Arya",
-            "Khaled A. Aljaloud",
+            "K. Aljaloud",
             "Mohd. Shkir",
             "Salem A. AlFaify"
           ],
@@ -15975,14 +16119,14 @@
           "title": "233Chapter 11 Wearable and flexible perovskite solar cells",
           "authors": [
             "Neha Kumari",
-            "Vishal Santosh Sharma",
+            "Vishal Sharma",
             "Kamna",
             "Sahil Kumar",
             "Sapna Thakur",
             "Gun Anit Kaur",
             "Mamta Shandilya"
           ],
-          "journal": "",
+          "journal": "De Gruyter eBooks",
           "publicationYear": 2025,
           "publicationDate": "2025-07-13",
           "volume": "",
@@ -16134,7 +16278,7 @@
           "title": "Fabrication of Perovskite Solar Cells: A Focused Review on Manual Deposition Methods",
           "authors": [
             "Nazila Zarabinia",
-            "Thomas M. Brown"
+            "Thomas Meredith Brown"
           ],
           "journal": "Advanced Materials Technologies",
           "publicationYear": 2024,
@@ -17304,7 +17448,7 @@
           "openAlexId": "W4401959222",
           "doi": "10.1021/acsomega.4c05150",
           "doiUrl": "https://doi.org/10.1021/acsomega.4c05150",
-          "title": "Synthesis, Crystal Structure, and Theoretical Screening of Solvatochromism and Light-Harvesting Performance of Hexamine V-Substituted Lindqvist-Based Photosensitizer for Photovoltaic Solar Cells",
+          "title": "RETRACTED: Synthesis, Crystal Structure, and Theoretical Screening of Solvatochromism and Light-Harvesting Performance of Hexamine V-Substituted Lindqvist-Based Photosensitizer for Photovoltaic Solar Cells",
           "authors": [
             "Ahlem Maalaoui",
             "Baya Toumi",
@@ -17502,7 +17646,7 @@
           "title": "Mechanically reinforced hydrogel with nanofibers through plasma-driven PCL fibers surface treatment",
           "authors": [
             "Birui Yang",
-            "Guanghong Li",
+            "G. Li",
             "Zifeng Deng",
             "Fangnan He",
             "Yuxiang Wang",
@@ -17596,7 +17740,7 @@
             "Shivani Chopra",
             "Hitesh Chopra"
           ],
-          "journal": "PubMed",
+          "journal": "EXCLI journal",
           "publicationYear": 2024,
           "publicationDate": "2024-08-28",
           "volume": "23",
@@ -17658,7 +17802,7 @@
             "Mojtaba Ansari",
             "Ahmad Darvishi",
             "Hossein Rayat Pisheh",
-            "M. Yasin Shami",
+            "Mahdieh Shami",
             "Faezeh Kazemi"
           ],
           "journal": "Polymer Science Series A",
@@ -18199,7 +18343,7 @@
             "Melvia Carinne Mejía-Vázquez",
             "Carlos Fabián Arias‐Ramos",
             "Asiel Neftali Corpus-Mendoza",
-            "Mario Rodríguez",
+            "Mario Alejandro Rodriguez",
             "María Elena Nicho",
             "Mérida Sotelo-Lerma",
             "Hailin Zhao Hu"
@@ -18563,7 +18707,7 @@
             "Mengde Zhai",
             "Ziyang Xia",
             "Yi Tian",
-            "Ming C. Cheng",
+            "Ming Cheng",
             "Hongping Li"
           ],
           "journal": "Dyes and Pigments",
@@ -18807,7 +18951,7 @@
           "authors": [
             "Ershad Parvazian",
             "David Beynon",
-            "O.D. Jenkins",
+            "Olivia Jenkins",
             "Rahul Patidar",
             "James  D. McGettrick",
             "Samual Ngombe",
@@ -19088,7 +19232,7 @@
             "Licheng Liu",
             "Yi Tian",
             "Cheng Chen",
-            "Ming C. Cheng"
+            "Ming Cheng"
           ],
           "journal": "New Journal of Chemistry",
           "publicationYear": 2023,
@@ -19226,7 +19370,7 @@
             "Renwei Xiao",
             "Qiankun Wang",
             "Hong-Zhen Xie",
-            "Xiang Hong Xue",
+            "Xiang Xue",
             "Chen Chen"
           ],
           "journal": "JOM",
@@ -19405,7 +19549,7 @@
       "doi": "10.1002/adfm.202306367",
       "title": "Fluorinated Pentafulvalene‐Fused Hole‐Transporting Material Enhances the Performance of Perovskite Solar Cells with Efficiency Exceeding 23%",
       "publicationYear": 2023,
-      "currentCitationCount": 39,
+      "currentCitationCount": 40,
       "sourceUrl": "https://api.openalex.org/works?filter=cites:W4385381207",
       "citationsByYear": [
         {
@@ -19422,7 +19566,7 @@
         },
         {
           "year": 2026,
-          "citations": 3
+          "citations": 4
         }
       ],
       "rawCitationsByYear": [
@@ -19440,16 +19584,16 @@
         },
         {
           "year": 2026,
-          "citations": 3
+          "citations": 4
         }
       ],
-      "historyTotal": 39,
-      "rawHistoryTotal": 39,
+      "historyTotal": 40,
+      "rawHistoryTotal": 40,
       "excludedInvalidCitationCount": 0,
       "excludedInvalidCitations": [],
       "unassignedCitationCount": 0,
-      "citingWorkCount": 39,
-      "citingArticlesWithDoiCount": 39,
+      "citingWorkCount": 40,
+      "citingArticlesWithDoiCount": 40,
       "citingArticlesWithDoi": [
         {
           "openAlexId": "W7212081566",
@@ -19502,6 +19646,31 @@
           "type": "article"
         },
         {
+          "openAlexId": "W7214737703",
+          "doi": "10.1016/j.tramat.2026.100430",
+          "doiUrl": "https://doi.org/10.1016/j.tramat.2026.100430",
+          "title": "Synergistic Crystallization Modulation and Defect Passivation via Dual-Additive Antisolvent Strategy for Efficient Wide-Bandgap Perovskite Solar Cells",
+          "authors": [
+            "Jin Xian Lee",
+            "Yuxiang Zhu",
+            "Jianfei Yang",
+            "Han Zhong",
+            "Xuanyu Wang",
+            "Ziling Zhang",
+            "Jiazheng Su",
+            "Han Wang",
+            "Yizhou Wu",
+            "Hong Lin"
+          ],
+          "journal": "Transactions of Materials Research",
+          "publicationYear": 2026,
+          "publicationDate": "2026-09-01",
+          "volume": "",
+          "issue": "",
+          "pages": "100430",
+          "type": "article"
+        },
+        {
           "openAlexId": "W7203907208",
           "doi": "10.1039/d5ta08338a",
           "doiUrl": "https://doi.org/10.1039/d5ta08338a",
@@ -19516,9 +19685,9 @@
           "journal": "Journal of Materials Chemistry A",
           "publicationYear": 2026,
           "publicationDate": "2026-01-01",
-          "volume": "",
-          "issue": "",
-          "pages": "",
+          "volume": "14",
+          "issue": "58",
+          "pages": "40319-40334",
           "type": "article"
         },
         {
@@ -19614,7 +19783,7 @@
           "authors": [
             "Yun Seop Shin",
             "Jaehwi Lee",
-            "Min Gyu Sung",
+            "Min Jung Sung",
             "Il Jeon",
             "Nam Joong Jeon",
             "Dong Suk Kim"
@@ -19662,7 +19831,7 @@
             "Zhanglin Guo",
             "Toshinori Matsushima",
             "Tsutomu Miyasaka",
-            "Ming C. Cheng"
+            "Ming Cheng"
           ],
           "journal": "Small",
           "publicationYear": 2025,
@@ -19947,7 +20116,7 @@
           "doiUrl": "https://doi.org/10.1039/d4tc03432e",
           "title": "Theoretical study on the optoelectronic properties of fluorinated phenylpyrrole-based hole transport materials for perovskite solar cells",
           "authors": [
-            "W. You",
+            "Wenhui You",
             "Jie Yang",
             "Quan‐Song Li"
           ],
@@ -20431,7 +20600,7 @@
           "authors": [
             "J. Aravind Kumar",
             "A. Anderson",
-            "V. C. Deivayanai",
+            "V.C. Deivayanai",
             "M. Kamatchi Hariharan",
             "K.A. Vinodhini",
             "G. Antony Casmir Jayaseelan",
@@ -20754,7 +20923,7 @@
           "authors": [
             "BHIM RAJU TELUGU",
             "Motonori Watanabe",
-            "Tingli Ma",
+            "Zhanglin Guo",
             "Pangpang Wang",
             "Sunao Yamada",
             "Mengde Zhai",
@@ -20776,7 +20945,7 @@
           "authors": [
             "BHIM RAJU TELUGU",
             "Hanbo Jung",
-            "Tingli Ma",
+            "Zhanglin Guo",
             "Toshinori Matsushima"
           ],
           "journal": "Physical Chemistry Chemical Physics",
@@ -20849,7 +21018,7 @@
             "Zhanglin Guo",
             "Toshinori Matsushima",
             "Tsutomu Miyasaka",
-            "Ming C. Cheng"
+            "Ming Cheng"
           ],
           "journal": "Small",
           "publicationYear": 2025,
@@ -21156,7 +21325,7 @@
           "authors": [
             "BHIM RAJU TELUGU",
             "Motonori Watanabe",
-            "Tingli Ma",
+            "Zhanglin Guo",
             "Pangpang Wang",
             "Sunao Yamada",
             "Mengde Zhai",
@@ -21178,7 +21347,7 @@
           "authors": [
             "BHIM RAJU TELUGU",
             "Hanbo Jung",
-            "Tingli Ma",
+            "Zhanglin Guo",
             "Toshinori Matsushima"
           ],
           "journal": "Physical Chemistry Chemical Physics",
@@ -21247,7 +21416,7 @@
             "Zhanglin Guo",
             "Toshinori Matsushima",
             "Tsutomu Miyasaka",
-            "Ming C. Cheng"
+            "Ming Cheng"
           ],
           "journal": "Small",
           "publicationYear": 2025,
@@ -21502,7 +21671,7 @@
           "authors": [
             "Poonam Subudhi",
             "Praveena Balasubramaniyan",
-            "A. Rahul Narasimhan",
+            "Rahul Narasimhan Arunagirinathan",
             "Maimur Hossain"
           ],
           "journal": "Engineering materials",
@@ -22017,7 +22186,7 @@
           "authors": [
             "BHIM RAJU TELUGU",
             "Motonori Watanabe",
-            "Tingli Ma",
+            "Zhanglin Guo",
             "Pangpang Wang",
             "Sunao Yamada",
             "Mengde Zhai",
@@ -22155,7 +22324,7 @@
             "Zhanglin Guo",
             "Toshinori Matsushima",
             "Tsutomu Miyasaka",
-            "Ming C. Cheng"
+            "Ming Cheng"
           ],
           "journal": "Small",
           "publicationYear": 2025,
@@ -22420,7 +22589,7 @@
           "doiUrl": "https://doi.org/10.1016/j.cej.2026.175821",
           "title": "Advances in covalent organic frameworks and membranes composed of polymers of intrinsic microporosity for a next-generation redox flow battery",
           "authors": [
-            "Hardikkumar M. Patel",
+            "Hardikkumar Patel",
             "Manas Pal",
             "Sharath Kandambeth",
             "Nagamalai Vasimalai",
@@ -22696,7 +22865,7 @@
             "Erika Vega-Fleitas",
             "Santiago Moll-López",
             "J.-A. Moraño",
-            "Alicia Herrero"
+            "Alicia Herrero-Debón"
           ],
           "journal": "Solar Energy Materials and Solar Cells",
           "publicationYear": 2026,
@@ -22733,7 +22902,7 @@
           "authors": [
             "Minna Hou",
             "Wenfang Zheng",
-            "翠云 鲁",
+            "Yunlu Cui",
             "Na Liu",
             "X R Liu",
             "Mengqi Guo",
@@ -22835,28 +23004,49 @@
       "doi": "10.1016/j.jpowsour.2025.239216",
       "title": "Heterogeneous graphite felt electrodes decorated with nanostructured graphitic carbon nitride for enhanced redox kinetics in vanadium redox flow batteries",
       "publicationYear": 2026,
-      "currentCitationCount": 3,
+      "currentCitationCount": 4,
       "sourceUrl": "https://api.openalex.org/works?filter=cites:W7118007754",
       "citationsByYear": [
         {
           "year": 2026,
-          "citations": 3
+          "citations": 4
         }
       ],
       "rawCitationsByYear": [
         {
           "year": 2026,
-          "citations": 3
+          "citations": 4
         }
       ],
-      "historyTotal": 3,
-      "rawHistoryTotal": 3,
+      "historyTotal": 4,
+      "rawHistoryTotal": 4,
       "excludedInvalidCitationCount": 0,
       "excludedInvalidCitations": [],
       "unassignedCitationCount": 0,
-      "citingWorkCount": 3,
-      "citingArticlesWithDoiCount": 3,
+      "citingWorkCount": 4,
+      "citingArticlesWithDoiCount": 4,
       "citingArticlesWithDoi": [
+        {
+          "openAlexId": "W7215045031",
+          "doi": "10.1016/j.jallcom.2026.191471",
+          "doiUrl": "https://doi.org/10.1016/j.jallcom.2026.191471",
+          "title": "Synergism between oxygen vacancies and Fe-Nx in N-doped Fe3O4@CNTs for enhanced oxygen reduction reaction",
+          "authors": [
+            "Xiaojun Zhou",
+            "Wenwen Yang",
+            "Chunmei Zeng",
+            "Hejun Gao",
+            "Liao Yunwen",
+            "Kunpeng Song"
+          ],
+          "journal": "Journal of Alloys and Compounds",
+          "publicationYear": 2026,
+          "publicationDate": "2026-10-01",
+          "volume": "",
+          "issue": "",
+          "pages": "191471",
+          "type": "article"
+        },
         {
           "openAlexId": "W7213458701",
           "doi": "10.1016/j.est.2026.124630",
