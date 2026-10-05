@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-04T06:51:44Z",
+  "generatedAt": "2026-10-05T07:04:26Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
@@ -29,16 +29,16 @@
     },
     {
       "month": "2026-10",
-      "pageViews": 43,
-      "activeUsers": 43
+      "pageViews": 44,
+      "activeUsers": 44
     }
   ],
   "topPages": [
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 22,
-      "activeUsers": 20
+      "pageViews": 23,
+      "activeUsers": 21
     },
     {
       "title": "Publications | Wei-Hao Chiu",
@@ -107,12 +107,6 @@
       "activeUsers": 2
     },
     {
-      "title": "Solar Cell Module | Wei-Hao Chiu",
-      "path": "/patents/twm611184u.html",
-      "pageViews": 2,
-      "activeUsers": 2
-    },
-    {
       "title": "Surfactant Tween 20 Controlled Perovskite Film Fabricated by Thermal Blade Coating for Efficient Perovskite Solar Cells | Wei-Hao Chiu",
       "path": "/publications/10-3390-nano12152651.html",
       "pageViews": 2,
@@ -123,6 +117,12 @@
       "path": "/publications/10-1016-j-solener-2026-114430.html",
       "pageViews": 2,
       "activeUsers": 2
+    },
+    {
+      "title": "2T Perovskite Tandem Solar Cells in Space: Failure Mechanisms and Design Strategies | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-mtener-2026-102359.html",
+      "pageViews": 1,
+      "activeUsers": 1
     }
   ],
   "trafficChannels": [
@@ -187,13 +187,13 @@
     },
     {
       "country": "China",
-      "activeUsers": 17,
-      "pageViews": 17
+      "activeUsers": 16,
+      "pageViews": 16
     },
     {
       "country": "United States",
-      "activeUsers": 8,
-      "pageViews": 8
+      "activeUsers": 9,
+      "pageViews": 9
     },
     {
       "country": "Taiwan",
