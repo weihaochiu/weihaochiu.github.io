@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-06T07:35:52Z",
+  "generatedAt": "2026-10-07T07:15:36Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 95,
-    "activeUsers": 81,
-    "sessions": 86,
-    "engagementRate": 0.10465116279069768
+    "pageViews": 93,
+    "activeUsers": 80,
+    "sessions": 85,
+    "engagementRate": 0.08235294117647059
   },
   "monthlyTrend": [
     {
@@ -29,8 +29,8 @@
     },
     {
       "month": "2026-10",
-      "pageViews": 45,
-      "activeUsers": 45
+      "pageViews": 47,
+      "activeUsers": 47
     }
   ],
   "topPages": [
@@ -43,20 +43,14 @@
     {
       "title": "Publications | Wei-Hao Chiu",
       "path": "/publications.html",
-      "pageViews": 7,
-      "activeUsers": 4
+      "pageViews": 6,
+      "activeUsers": 3
     },
     {
       "title": "Research | Wei-Hao Chiu",
       "path": "/research.html",
       "pageViews": 3,
       "activeUsers": 2
-    },
-    {
-      "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
-      "path": "/index.html",
-      "pageViews": 3,
-      "activeUsers": 3
     },
     {
       "title": "Additive-free electroless deposition on graphene/copper foil: Photo-induced and defect-assisted approach for environmentally friendly plating | Wei-Hao Chiu",
@@ -123,6 +117,12 @@
       "path": "/publications/10-1016-j-solener-2026-114430.html",
       "pageViews": 2,
       "activeUsers": 2
+    },
+    {
+      "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
+      "path": "/index.html",
+      "pageViews": 2,
+      "activeUsers": 2
     }
   ],
   "trafficChannels": [
@@ -133,8 +133,8 @@
     },
     {
       "channel": "Organic Search",
-      "sessions": 10,
-      "activeUsers": 5
+      "sessions": 9,
+      "activeUsers": 4
     },
     {
       "channel": "Referral",
@@ -157,8 +157,8 @@
     {
       "source": "google",
       "medium": "organic",
-      "sessions": 9,
-      "activeUsers": 4
+      "sessions": 8,
+      "activeUsers": 3
     },
     {
       "source": "cgu.edu.tw",
@@ -187,23 +187,18 @@
     },
     {
       "country": "China",
-      "activeUsers": 17,
-      "pageViews": 17
+      "activeUsers": 18,
+      "pageViews": 18
     },
     {
       "country": "United States",
-      "activeUsers": 9,
-      "pageViews": 9
+      "activeUsers": 8,
+      "pageViews": 8
     },
     {
       "country": "Taiwan",
       "activeUsers": 4,
       "pageViews": 14
-    },
-    {
-      "country": "Belgium",
-      "activeUsers": 1,
-      "pageViews": 2
     },
     {
       "country": "India",
@@ -219,7 +214,7 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 81
+      "activeUsers": 80
     }
   ],
   "academicEvents": [
