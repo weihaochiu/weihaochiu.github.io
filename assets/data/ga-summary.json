@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-07T07:15:36Z",
+  "generatedAt": "2026-10-08T07:26:29Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 93,
-    "activeUsers": 80,
-    "sessions": 85,
-    "engagementRate": 0.08235294117647059
+    "pageViews": 98,
+    "activeUsers": 86,
+    "sessions": 90,
+    "engagementRate": 0.06666666666666667
   },
   "monthlyTrend": [
     {
@@ -29,28 +29,22 @@
     },
     {
       "month": "2026-10",
-      "pageViews": 47,
-      "activeUsers": 47
+      "pageViews": 55,
+      "activeUsers": 55
     }
   ],
   "topPages": [
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 23,
-      "activeUsers": 21
+      "pageViews": 30,
+      "activeUsers": 29
     },
     {
       "title": "Publications | Wei-Hao Chiu",
       "path": "/publications.html",
-      "pageViews": 6,
-      "activeUsers": 3
-    },
-    {
-      "title": "Research | Wei-Hao Chiu",
-      "path": "/research.html",
-      "pageViews": 3,
-      "activeUsers": 2
+      "pageViews": 7,
+      "activeUsers": 4
     },
     {
       "title": "Additive-free electroless deposition on graphene/copper foil: Photo-induced and defect-assisted approach for environmentally friendly plating | Wei-Hao Chiu",
@@ -79,12 +73,6 @@
     {
       "title": "Improved performance of flexible dye-sensitized solar cells by introducing an interfacial layer on Ti substrates | Wei-Hao Chiu",
       "path": "/publications/10-1039-c0jm04099a.html",
-      "pageViews": 2,
-      "activeUsers": 2
-    },
-    {
-      "title": "Improvement on the long-term stability of flexible plastic dye-sensitized solar cells | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-jpowsour-2011-06-049.html",
       "pageViews": 2,
       "activeUsers": 2
     },
@@ -123,18 +111,35 @@
       "path": "/index.html",
       "pageViews": 2,
       "activeUsers": 2
+    },
+    {
+      "title": "2T Perovskite Tandem Solar Cells in Space: Failure Mechanisms and Design Strategies | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-mtener-2026-102359.html",
+      "pageViews": 1,
+      "activeUsers": 1
+    },
+    {
+      "title": "A systematic investigation of PVDF-HFP in perovskite solar cells for improved space mission reliability | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-cej-2024-153974.html",
+      "pageViews": 1,
+      "activeUsers": 1
     }
   ],
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 73,
-      "activeUsers": 73
+      "sessions": 78,
+      "activeUsers": 78
     },
     {
       "channel": "Organic Search",
-      "sessions": 9,
+      "sessions": 8,
       "activeUsers": 4
+    },
+    {
+      "channel": "Unassigned",
+      "sessions": 3,
+      "activeUsers": 3
     },
     {
       "channel": "Referral",
@@ -151,26 +156,32 @@
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 73,
-      "activeUsers": 73
+      "sessions": 78,
+      "activeUsers": 78
     },
     {
       "source": "google",
       "medium": "organic",
-      "sessions": 8,
+      "sessions": 6,
+      "activeUsers": 2
+    },
+    {
+      "source": "(not set)",
+      "medium": "(not set)",
+      "sessions": 3,
       "activeUsers": 3
+    },
+    {
+      "source": "bing",
+      "medium": "organic",
+      "sessions": 2,
+      "activeUsers": 2
     },
     {
       "source": "cgu.edu.tw",
       "medium": "referral",
       "sessions": 2,
       "activeUsers": 2
-    },
-    {
-      "source": "bing",
-      "medium": "organic",
-      "sessions": 1,
-      "activeUsers": 1
     },
     {
       "source": "chatgpt.com",
@@ -187,23 +198,18 @@
     },
     {
       "country": "China",
-      "activeUsers": 18,
-      "pageViews": 18
+      "activeUsers": 17,
+      "pageViews": 17
     },
     {
       "country": "United States",
-      "activeUsers": 8,
-      "pageViews": 8
+      "activeUsers": 16,
+      "pageViews": 16
     },
     {
       "country": "Taiwan",
       "activeUsers": 4,
       "pageViews": 14
-    },
-    {
-      "country": "India",
-      "activeUsers": 1,
-      "pageViews": 2
     },
     {
       "country": "Morocco",
@@ -214,12 +220,20 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 80
+      "activeUsers": 84
+    },
+    {
+      "device": "mobile",
+      "activeUsers": 2
     }
   ],
   "academicEvents": [
     {
       "eventName": "doi_click",
+      "eventCount": 2
+    },
+    {
+      "eventName": "openalex_click",
       "eventCount": 2
     },
     {
