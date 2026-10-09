@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-08T07:26:29Z",
+  "generatedAt": "2026-10-09T07:24:38Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 98,
-    "activeUsers": 86,
-    "sessions": 90,
-    "engagementRate": 0.06666666666666667
+    "pageViews": 95,
+    "activeUsers": 84,
+    "sessions": 88,
+    "engagementRate": 0.11363636363636363
   },
   "monthlyTrend": [
     {
@@ -29,7 +29,7 @@
     },
     {
       "month": "2026-10",
-      "pageViews": 55,
+      "pageViews": 56,
       "activeUsers": 55
     }
   ],
@@ -37,8 +37,8 @@
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 30,
-      "activeUsers": 29
+      "pageViews": 28,
+      "activeUsers": 27
     },
     {
       "title": "Publications | Wei-Hao Chiu",
@@ -89,12 +89,6 @@
       "activeUsers": 2
     },
     {
-      "title": "Research Projects | Wei-Hao Chiu",
-      "path": "/projects.html",
-      "pageViews": 2,
-      "activeUsers": 2
-    },
-    {
       "title": "Surfactant Tween 20 Controlled Perovskite Film Fabricated by Thermal Blade Coating for Efficient Perovskite Solar Cells | Wei-Hao Chiu",
       "path": "/publications/10-3390-nano12152651.html",
       "pageViews": 2,
@@ -123,31 +117,32 @@
       "path": "/publications/10-1016-j-cej-2024-153974.html",
       "pageViews": 1,
       "activeUsers": 1
+    },
+    {
+      "title": "About | Wei-Hao Chiu",
+      "path": "/about.html",
+      "pageViews": 1,
+      "activeUsers": 1
     }
   ],
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 78,
-      "activeUsers": 78
+      "sessions": 77,
+      "activeUsers": 77
     },
     {
       "channel": "Organic Search",
-      "sessions": 8,
-      "activeUsers": 4
-    },
-    {
-      "channel": "Unassigned",
-      "sessions": 3,
-      "activeUsers": 3
-    },
-    {
-      "channel": "Referral",
-      "sessions": 2,
-      "activeUsers": 2
+      "sessions": 9,
+      "activeUsers": 5
     },
     {
       "channel": "AI Assistant",
+      "sessions": 1,
+      "activeUsers": 1
+    },
+    {
+      "channel": "Referral",
       "sessions": 1,
       "activeUsers": 1
     }
@@ -156,19 +151,13 @@
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 78,
-      "activeUsers": 78
+      "sessions": 77,
+      "activeUsers": 77
     },
     {
       "source": "google",
       "medium": "organic",
-      "sessions": 6,
-      "activeUsers": 2
-    },
-    {
-      "source": "(not set)",
-      "medium": "(not set)",
-      "sessions": 3,
+      "sessions": 7,
       "activeUsers": 3
     },
     {
@@ -180,8 +169,8 @@
     {
       "source": "cgu.edu.tw",
       "medium": "referral",
-      "sessions": 2,
-      "activeUsers": 2
+      "sessions": 1,
+      "activeUsers": 1
     },
     {
       "source": "chatgpt.com",
@@ -203,24 +192,19 @@
     },
     {
       "country": "United States",
-      "activeUsers": 16,
+      "activeUsers": 15,
       "pageViews": 16
     },
     {
       "country": "Taiwan",
       "activeUsers": 4,
       "pageViews": 14
-    },
-    {
-      "country": "Morocco",
-      "activeUsers": 1,
-      "pageViews": 3
     }
   ],
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 84
+      "activeUsers": 82
     },
     {
       "device": "mobile",
