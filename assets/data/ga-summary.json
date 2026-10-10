@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-09T07:24:38Z",
+  "generatedAt": "2026-10-10T07:10:19Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 95,
-    "activeUsers": 84,
-    "sessions": 88,
-    "engagementRate": 0.11363636363636363
+    "pageViews": 98,
+    "activeUsers": 87,
+    "sessions": 91,
+    "engagementRate": 0.13186813186813187
   },
   "monthlyTrend": [
     {
@@ -29,16 +29,16 @@
     },
     {
       "month": "2026-10",
-      "pageViews": 56,
-      "activeUsers": 55
+      "pageViews": 60,
+      "activeUsers": 59
     }
   ],
   "topPages": [
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 28,
-      "activeUsers": 27
+      "pageViews": 32,
+      "activeUsers": 31
     },
     {
       "title": "Publications | Wei-Hao Chiu",
@@ -128,13 +128,13 @@
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 77,
-      "activeUsers": 77
+      "sessions": 79,
+      "activeUsers": 79
     },
     {
       "channel": "Organic Search",
-      "sessions": 9,
-      "activeUsers": 5
+      "sessions": 10,
+      "activeUsers": 6
     },
     {
       "channel": "AI Assistant",
@@ -151,8 +151,8 @@
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 77,
-      "activeUsers": 77
+      "sessions": 79,
+      "activeUsers": 79
     },
     {
       "source": "google",
@@ -163,8 +163,8 @@
     {
       "source": "bing",
       "medium": "organic",
-      "sessions": 2,
-      "activeUsers": 2
+      "sessions": 3,
+      "activeUsers": 3
     },
     {
       "source": "cgu.edu.tw",
@@ -186,13 +186,13 @@
       "pageViews": 48
     },
     {
-      "country": "China",
-      "activeUsers": 17,
-      "pageViews": 17
+      "country": "United States",
+      "activeUsers": 19,
+      "pageViews": 20
     },
     {
-      "country": "United States",
-      "activeUsers": 15,
+      "country": "China",
+      "activeUsers": 16,
       "pageViews": 16
     },
     {
@@ -204,7 +204,7 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 82
+      "activeUsers": 85
     },
     {
       "device": "mobile",
@@ -213,11 +213,11 @@
   ],
   "academicEvents": [
     {
-      "eventName": "doi_click",
-      "eventCount": 2
+      "eventName": "openalex_click",
+      "eventCount": 4
     },
     {
-      "eventName": "openalex_click",
+      "eventName": "doi_click",
       "eventCount": 2
     },
     {
