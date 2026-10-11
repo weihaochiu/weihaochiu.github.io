@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-10T07:10:19Z",
+  "generatedAt": "2026-10-11T07:13:46Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 98,
-    "activeUsers": 87,
-    "sessions": 91,
-    "engagementRate": 0.13186813186813187
+    "pageViews": 97,
+    "activeUsers": 86,
+    "sessions": 90,
+    "engagementRate": 0.13333333333333333
   },
   "monthlyTrend": [
     {
@@ -29,16 +29,16 @@
     },
     {
       "month": "2026-10",
-      "pageViews": 60,
-      "activeUsers": 59
+      "pageViews": 61,
+      "activeUsers": 60
     }
   ],
   "topPages": [
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 32,
-      "activeUsers": 31
+      "pageViews": 31,
+      "activeUsers": 30
     },
     {
       "title": "Publications | Wei-Hao Chiu",
@@ -71,8 +71,8 @@
       "activeUsers": 2
     },
     {
-      "title": "Improved performance of flexible dye-sensitized solar cells by introducing an interfacial layer on Ti substrates | Wei-Hao Chiu",
-      "path": "/publications/10-1039-c0jm04099a.html",
+      "title": "Ionic liquid diffusion properties in tetrapod-like ZnO photoanode for dye-sensitized solar cells | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-jpowsour-2012-05-079.html",
       "pageViews": 2,
       "activeUsers": 2
     },
@@ -128,8 +128,8 @@
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 79,
-      "activeUsers": 79
+      "sessions": 78,
+      "activeUsers": 78
     },
     {
       "channel": "Organic Search",
@@ -151,8 +151,8 @@
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 79,
-      "activeUsers": 79
+      "sessions": 78,
+      "activeUsers": 78
     },
     {
       "source": "google",
@@ -192,8 +192,8 @@
     },
     {
       "country": "China",
-      "activeUsers": 16,
-      "pageViews": 16
+      "activeUsers": 15,
+      "pageViews": 15
     },
     {
       "country": "Taiwan",
@@ -204,7 +204,7 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 85
+      "activeUsers": 84
     },
     {
       "device": "mobile",
