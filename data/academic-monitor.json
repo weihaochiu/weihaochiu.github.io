@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "generatedAt": "2026-10-08T15:16:41+08:00",
+  "generatedAt": "2026-10-12T15:17:21+08:00",
   "repository": "https://github.com/weihaochiu/weihaochiu.github.io",
   "status": "completed",
   "summary": {
@@ -514,9 +514,9 @@
     {
       "type": "patent",
       "confidence": "possible",
-      "canonicalId": "US20170111009A1",
-      "number": "US20170111009A1",
-      "titleEn": "Lc-tank oscillator having intrinsic low-pass filter",
+      "canonicalId": "US10425038B2",
+      "number": "US10425038B2",
+      "titleEn": "LC-tank oscillator having intrinsic low-pass filter",
       "titleZh": "",
       "inventorsEn": [
         "Wei-Hao Chiu",
@@ -534,7 +534,7 @@
       "publicationDate": "",
       "grantDate": "2019-09-24",
       "documentStage": "Granted",
-      "legalStatus": "Granted",
+      "legalStatus": "Active",
       "status": "Granted",
       "abstract": "An oscillator for generating oscillation signals at two output terminals includes an inductor coupled between the two output terminals, a capacitor coupled between the two output terminals, two P-type transistors and two N-type transistors. Source electrodes of the two P-type transistors are coupled to a supply voltage, and gate electrodes of the two P-type transistors are coupled to the two output terminals, respectively. Source electrodes of the two N-type transistors are coupled to a supply voltage, gate electrodes of the two N-type transistors are coupled to the two output terminals, respectively, and drain electrodes of the two N-type transistors are coupled to drain electrodes of the two P-type transistors, respectively. In addition, the drain electrodes of the two N-type transistors are coupled to two internal nodes of the inductor.",
       "classifications": [
@@ -562,7 +562,7 @@
       "sources": [
         {
           "name": "Google Patents exact record",
-          "url": "https://patents.google.com/patent/US20170111009A1/en"
+          "url": "https://patents.google.com/patent/US10425038B2/en"
         },
         {
           "name": "Google Patents search",
@@ -581,7 +581,7 @@
           "url": "https://patentscope.wipo.int/search/en/search.jsf"
         }
       ],
-      "reviewKey": "patent:number:US20170111009A1"
+      "reviewKey": "patent:number:US10425038B2"
     },
     {
       "type": "patent",
@@ -865,7 +865,7 @@
         "Tsung-Hsien Lin",
         "Wei-Hao Chiu",
         "Yu-Hsiang Huang",
-        "National Taiwan University NTU"
+        "National Taiwan University"
       ],
       "inventorsZh": "",
       "assigneeEn": "",
@@ -938,7 +938,7 @@
         "Tsung-Hsien Lin",
         "Chung-Hsing Yang",
         "Wei-Hao Chiu",
-        "National Taiwan University NTU"
+        "National Taiwan University"
       ],
       "inventorsZh": "",
       "assigneeEn": "",
@@ -1306,7 +1306,7 @@
       "url": "https://pub.orcid.org/v3.0/0000-0003-4484-3117/works",
       "status": "success",
       "message": "",
-      "checkedAt": "2026-10-08T15:16:33+08:00",
+      "checkedAt": "2026-10-12T15:17:15+08:00",
       "candidateCount": 3
     },
     {
@@ -1314,7 +1314,7 @@
       "url": "https://patents.google.com/?q=inventor%3D%22Wei-Hao+Chiu%22",
       "status": "success",
       "message": "",
-      "checkedAt": "2026-10-08T15:16:34+08:00",
+      "checkedAt": "2026-10-12T15:17:16+08:00",
       "candidateCount": 10
     },
     {
@@ -1322,7 +1322,7 @@
       "url": "https://patents.google.com/?q=inventor%3D%22%E9%82%B1%E5%81%89%E8%B1%AA%22",
       "status": "success",
       "message": "",
-      "checkedAt": "2026-10-08T15:16:38+08:00",
+      "checkedAt": "2026-10-12T15:17:19+08:00",
       "candidateCount": 10
     },
     {
@@ -1330,7 +1330,7 @@
       "url": "https://www.grb.gov.tw/advq?queryStr=%E9%82%B1%E5%81%89%E8%B1%AA&queryType=grb05",
       "status": "success",
       "message": "GRB Playwright discovery completed; 0 pending record(s) require review.",
-      "checkedAt": "2026-10-08T15:16:41+08:00",
+      "checkedAt": "2026-10-12T15:17:21+08:00",
       "candidateCount": 0
     }
   ],
