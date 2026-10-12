@@ -1,14 +1,14 @@
 {
   "schemaVersion": 3,
   "source": "OpenAlex Works API",
-  "status": "success_with_exclusions",
-  "lastSuccessfulUpdate": "2026-10-05T11:07:26.243381Z",
+  "status": "partial",
+  "lastSuccessfulUpdate": "2026-10-12T11:37:13.983975Z",
   "workCount": 38,
   "missingPublicationYearCount": 0,
-  "totalCitationsFromPublicationMetrics": 1008,
-  "rawTotalCitationsFromHistory": 1008,
-  "totalCitationsIncludedInAnnualChart": 1002,
-  "rawValidationDifference": 0,
+  "totalCitationsFromPublicationMetrics": 1006,
+  "rawTotalCitationsFromHistory": 1007,
+  "totalCitationsIncludedInAnnualChart": 1001,
+  "rawValidationDifference": 1,
   "unassignedCitationCount": 0,
   "excludedInvalidCitationCount": 6,
   "excludedInvalidCitations": [
@@ -125,11 +125,11 @@
     },
     {
       "year": 2023,
-      "citations": 65
+      "citations": 64
     },
     {
       "year": 2024,
-      "citations": 78
+      "citations": 79
     },
     {
       "year": 2025,
@@ -137,7 +137,7 @@
     },
     {
       "year": 2026,
-      "citations": 72
+      "citations": 71
     }
   ],
   "works": {
@@ -1672,7 +1672,7 @@
             "Mahesh Dhonde",
             "Kirti Sahu",
             "Prateek Bhojane",
-            "VVS Murty",
+            "V. V. S. Murty",
             "Parasharam Maruti Shirage"
           ],
           "journal": "Journal of Photochemistry and Photobiology C Photochemistry Reviews",
@@ -4178,9 +4178,9 @@
           "journal": "ACS Materials Letters",
           "publicationYear": 2026,
           "publicationDate": "2026-09-15",
-          "volume": "",
-          "issue": "",
-          "pages": "",
+          "volume": "8",
+          "issue": "10",
+          "pages": "2880-2888",
           "type": "article"
         },
         {
@@ -4512,24 +4512,6 @@
           "type": "article"
         },
         {
-          "openAlexId": "W4284993053",
-          "doi": "10.1016/j.optmat.2022.112691",
-          "doiUrl": "https://doi.org/10.1016/j.optmat.2022.112691",
-          "title": "Fabrication and photoanode performance of ZnO nanoflowers in ZnO-based dye-sensitized solar cells",
-          "authors": [
-            "Mustafa Biçer",
-            "Muharrem Gökçen",
-            "Ersin Orhan"
-          ],
-          "journal": "Optical Materials",
-          "publicationYear": 2022,
-          "publicationDate": "2022-07-09",
-          "volume": "131",
-          "issue": "",
-          "pages": "112691",
-          "type": "article"
-        },
-        {
           "openAlexId": "W4223952349",
           "doi": "10.1088/2053-1591/ac6794",
           "doiUrl": "https://doi.org/10.1088/2053-1591/ac6794",
@@ -4566,6 +4548,24 @@
           "volume": "1",
           "issue": "1",
           "pages": "",
+          "type": "article"
+        },
+        {
+          "openAlexId": "W4284993053",
+          "doi": "10.1016/j.optmat.2022.112691",
+          "doiUrl": "https://doi.org/10.1016/j.optmat.2022.112691",
+          "title": "Fabrication and Photoanode Performance of Zno Nanoflowers in Zno-Based Dye-Sensitized Solar Cells",
+          "authors": [
+            "Mustafa Biçer",
+            "Muharrem Gökçen",
+            "Ersin Orhan"
+          ],
+          "journal": "Optical Materials",
+          "publicationYear": 2022,
+          "publicationDate": "2022-01-01",
+          "volume": "131",
+          "issue": "",
+          "pages": "112691",
           "type": "article"
         },
         {
@@ -6075,7 +6075,7 @@
           "title": "Green engineered ZnO nanopowders by Banyan Tree and E. tirucalli plant latex: auto ignition route, photoluminescent and photocatalytic properties",
           "authors": [
             "M.R. Anilkumar",
-            "H.P. Nagaswarupa",
+            "Hechanur Puttappa Nagaswarupa",
             "K.S. Anantharaju",
             "K. Gurushantha",
             "C. Pratapkumar",
@@ -6287,7 +6287,7 @@
             "J. X. Lei",
             "H. Q. Zhang",
             "Zhao Zhang",
-            "H. Chen",
+            "Hao-Yuna Chen",
             "Yucen Li",
             "Jiming Bian",
             "Y. H. Liu",
@@ -7928,7 +7928,7 @@
             "Keyue Wu",
             "Jingbiao Cui"
           ],
-          "journal": "",
+          "journal": "Conference record of the IEEE Photovoltaic Specialists Conference",
           "publicationYear": 2012,
           "publicationDate": "2012-06-01",
           "volume": "",
@@ -8622,7 +8622,7 @@
           "authors": [
             "Anzheng Hu",
             "Cuixia Cheng",
-            "Xin Yuan Li",
+            "Xin Li",
             "Jian Jiang",
             "Ruimin Ding",
             "Jianhui Zhu",
@@ -10804,7 +10804,7 @@
             "Nick Vlachopoulos",
             "Leif Häggman",
             "Christian Perruchot",
-            "Mohamed Jouini",
+            "M. Jouini",
             "Gerrit K. Boschloo",
             "Anders Hagfeldt"
           ],
@@ -15316,7 +15316,7 @@
             "Bruno Schmaltz",
             "Nadia Bouaziz",
             "Nicolas Berton",
-            "François Tran Van",
+            "François Tran‐Van",
             "Abdelmottaleb Ben Lamine"
           ],
           "journal": "Journal of Alloys and Compounds",
@@ -16998,7 +16998,7 @@
             "David Kréher",
             "Jérôme Faure‐Vincent",
             "Ceren Yildirim",
-            "Ahmed Elhakmaoui",
+            "Ahmed El Hakmaoui",
             "Johann Bouclé",
             "Mohamed Akssira",
             "François Tran‐Van",
@@ -17010,30 +17010,6 @@
           "volume": "15",
           "issue": "22",
           "pages": "7992",
-          "type": "article"
-        },
-        {
-          "openAlexId": "W4308038509",
-          "doi": "10.1016/j.cej.2022.139926",
-          "doiUrl": "https://doi.org/10.1016/j.cej.2022.139926",
-          "title": "Facile synthesis of spiro-core-based hole-transporting material for high-performance and stable perovskite solar cells",
-          "authors": [
-            "Kun‐Mu Lee",
-            "Seid Yimer Abate",
-            "June Hung Yang",
-            "Wei‐Hao Chiu",
-            "Seoungjun Ahn",
-            "Sie‐Rong Li",
-            "Kang‐Ling Liau",
-            "Yu‐Tai Tao",
-            "Yan‐Duo Lin"
-          ],
-          "journal": "Chemical Engineering Journal",
-          "publicationYear": 2022,
-          "publicationDate": "2022-11-01",
-          "volume": "454",
-          "issue": "",
-          "pages": "139926",
           "type": "article"
         },
         {
@@ -17280,6 +17256,30 @@
           "issue": "",
           "pages": "110162",
           "type": "article"
+        },
+        {
+          "openAlexId": "W4308038509",
+          "doi": "10.1016/j.cej.2022.139926",
+          "doiUrl": "https://doi.org/10.1016/j.cej.2022.139926",
+          "title": "Facile Synthesis of Spiro-Core-Based Hole-Transporting Material for High-Performance and Stable Perovskite Solar Cells",
+          "authors": [
+            "Kun‐Mu Lee",
+            "Seid Yimer Abate",
+            "June Hung Yang",
+            "Wei‐Hao Chiu",
+            "Seoungjun Ahn",
+            "Sie‐Rong Li",
+            "Kang‐Ling Liau",
+            "Yu‐Tai Tao",
+            "Yan‐Duo Lin"
+          ],
+          "journal": "Chemical Engineering Journal",
+          "publicationYear": 2022,
+          "publicationDate": "2022-01-01",
+          "volume": "454",
+          "issue": "",
+          "pages": "139926",
+          "type": "article"
         }
       ]
     },
@@ -17350,7 +17350,7 @@
             "Abdelhakim Mesloub",
             "Mohammad Alshenaifi",
             "Ali Abdulmohsen Aldersoni",
-            "Mohamed Alghaseb",
+            "Mohammed A. Alghaseb",
             "Rim Hafnaoui",
             "Aritra Ghosh"
           ],
@@ -17570,7 +17570,7 @@
       "doi": "10.3390/polym13234246",
       "title": "Microstructure and Biological Properties of Electrospun In Situ Polymerization of Polycaprolactone-Graft-Polyacrylic Acid Nanofibers and Its Composite Nanofiber Dressings",
       "publicationYear": 2021,
-      "currentCitationCount": 18,
+      "currentCitationCount": 17,
       "sourceUrl": "https://api.openalex.org/works?filter=cites:W4200568401",
       "citationsByYear": [
         {
@@ -17579,7 +17579,7 @@
         },
         {
           "year": 2023,
-          "citations": 6
+          "citations": 5
         },
         {
           "year": 2024,
@@ -17597,7 +17597,7 @@
         },
         {
           "year": 2023,
-          "citations": 6
+          "citations": 5
         },
         {
           "year": 2024,
@@ -17608,13 +17608,13 @@
           "citations": 3
         }
       ],
-      "historyTotal": 18,
-      "rawHistoryTotal": 18,
+      "historyTotal": 17,
+      "rawHistoryTotal": 17,
       "excludedInvalidCitationCount": 0,
       "excludedInvalidCitations": [],
       "unassignedCitationCount": 0,
-      "citingWorkCount": 18,
-      "citingArticlesWithDoiCount": 18,
+      "citingWorkCount": 17,
+      "citingArticlesWithDoiCount": 17,
       "citingArticlesWithDoi": [
         {
           "openAlexId": "W4416031866",
@@ -17732,7 +17732,7 @@
           "title": "Enhancing cancer care with improved checkpoint inhibitors: a focus on PD-1/PD-L1",
           "authors": [
             "A S, Vickram",
-            "Saghya Infant Shofia",
+            "Shofia Saghya Infant",
             "Arivudainambi Saravanan",
             "Vidhya Lakshmi Sivakumar",
             "P. Thamarai",
@@ -17854,27 +17854,6 @@
           "issue": "3",
           "pages": "569-613",
           "type": "article"
-        },
-        {
-          "openAlexId": "W4380421084",
-          "doi": "10.20944/preprints202306.0916.v1",
-          "doiUrl": "https://doi.org/10.20944/preprints202306.0916.v1",
-          "title": "Recent Advances on Electrospun Fibers for Biological Applications",
-          "authors": [
-            "Bénédicte Fromager",
-            "Emilie Marhuenda",
-            "Benjamin Louis",
-            "Norbert Bakalara",
-            "Julien Cambedouzou",
-            "David Cornu"
-          ],
-          "journal": "Preprints.org",
-          "publicationYear": 2023,
-          "publicationDate": "2023-06-13",
-          "volume": "",
-          "issue": "",
-          "pages": "",
-          "type": "preprint"
         },
         {
           "openAlexId": "W4376877457",
@@ -18050,7 +18029,7 @@
           "title": "Improved thermal stability of perovskite solar cells via hole transporting materials design",
           "authors": [
             "Yuna Lee",
-            "Thanh-Tung Dang",
+            "Tung T. Dang",
             "Thanh‐Tuân Bui",
             "Hui-Seon Kim"
           ],
@@ -18344,7 +18323,7 @@
             "Carlos Fabián Arias‐Ramos",
             "Asiel Neftali Corpus-Mendoza",
             "Mario Alejandro Rodriguez",
-            "María Elena Nicho",
+            "M.E. Nicho",
             "Mérida Sotelo-Lerma",
             "Hailin Zhao Hu"
           ],
@@ -19596,6 +19575,31 @@
       "citingArticlesWithDoiCount": 40,
       "citingArticlesWithDoi": [
         {
+          "openAlexId": "W7214737703",
+          "doi": "10.1016/j.tramat.2026.100430",
+          "doiUrl": "https://doi.org/10.1016/j.tramat.2026.100430",
+          "title": "Synergistic crystallization modulation and defect passivation via dual-additive antisolvent strategy for efficient wide-bandgap perovskite solar cells",
+          "authors": [
+            "Jin Xian Lee",
+            "Yuxiang Zhu",
+            "Jianfei Yang",
+            "Han Zhong",
+            "Xuanyu Wang",
+            "Ziling Zhang",
+            "Jiazheng Su",
+            "Han Wang",
+            "Yizhou Wu",
+            "Hong Lin"
+          ],
+          "journal": "Transactions of Materials Research",
+          "publicationYear": 2026,
+          "publicationDate": "2026-09-29",
+          "volume": "2",
+          "issue": "11",
+          "pages": "100430",
+          "type": "article"
+        },
+        {
           "openAlexId": "W7212081566",
           "doi": "10.1002/advs.77623",
           "doiUrl": "https://doi.org/10.1002/advs.77623",
@@ -19643,31 +19647,6 @@
           "volume": "334",
           "issue": "",
           "pages": "119827",
-          "type": "article"
-        },
-        {
-          "openAlexId": "W7214737703",
-          "doi": "10.1016/j.tramat.2026.100430",
-          "doiUrl": "https://doi.org/10.1016/j.tramat.2026.100430",
-          "title": "Synergistic Crystallization Modulation and Defect Passivation via Dual-Additive Antisolvent Strategy for Efficient Wide-Bandgap Perovskite Solar Cells",
-          "authors": [
-            "Jin Xian Lee",
-            "Yuxiang Zhu",
-            "Jianfei Yang",
-            "Han Zhong",
-            "Xuanyu Wang",
-            "Ziling Zhang",
-            "Jiazheng Su",
-            "Han Wang",
-            "Yizhou Wu",
-            "Hong Lin"
-          ],
-          "journal": "Transactions of Materials Research",
-          "publicationYear": 2026,
-          "publicationDate": "2026-09-01",
-          "volume": "",
-          "issue": "",
-          "pages": "100430",
           "type": "article"
         },
         {
@@ -20158,7 +20137,7 @@
             "Hossein G. Askari",
             "Zahra Shariatinia‬",
             "Saeedeh Sarabadani Tafreshi",
-            "Nora H. de Leeuw"
+            "Nora Henriette de Leeuw"
           ],
           "journal": "Inorganic Chemistry Communications",
           "publicationYear": 2024,
@@ -20554,7 +20533,7 @@
       "doi": "10.1016/j.jpowsour.2023.233496",
       "title": "Ladder-type dihydronaphtho[1,2,3,4-rst]pentaphene as building block to construct hole-transporting materials for perovskite solar cells",
       "publicationYear": 2023,
-      "currentCitationCount": 10,
+      "currentCitationCount": 9,
       "sourceUrl": "https://api.openalex.org/works?filter=cites:W4385773304",
       "citationsByYear": [
         {
@@ -20567,7 +20546,7 @@
         },
         {
           "year": 2026,
-          "citations": 5
+          "citations": 4
         }
       ],
       "rawCitationsByYear": [
@@ -20581,16 +20560,16 @@
         },
         {
           "year": 2026,
-          "citations": 5
+          "citations": 4
         }
       ],
-      "historyTotal": 10,
-      "rawHistoryTotal": 10,
+      "historyTotal": 9,
+      "rawHistoryTotal": 9,
       "excludedInvalidCitationCount": 0,
       "excludedInvalidCitations": [],
       "unassignedCitationCount": 0,
-      "citingWorkCount": 10,
-      "citingArticlesWithDoiCount": 10,
+      "citingWorkCount": 9,
+      "citingArticlesWithDoiCount": 9,
       "citingArticlesWithDoi": [
         {
           "openAlexId": "W7154220892",
@@ -20652,23 +20631,6 @@
           "issue": "",
           "pages": "113626",
           "type": "article"
-        },
-        {
-          "openAlexId": "W7126190258",
-          "doi": "10.21203/rs.3.rs-8576209/v1",
-          "doiUrl": "https://doi.org/10.21203/rs.3.rs-8576209/v1",
-          "title": "Theoretical and Experimental Investigation of Triphenylamine-Containing Hole Transport Materials with Side-Chain Isomerization",
-          "authors": [
-            "Yan Zhang",
-            "Xiaorui Liu"
-          ],
-          "journal": "Research Square",
-          "publicationYear": 2026,
-          "publicationDate": "2026-01-30",
-          "volume": "",
-          "issue": "",
-          "pages": "",
-          "type": "preprint"
         },
         {
           "openAlexId": "W7118070882",
@@ -21169,16 +21131,46 @@
       "publicationYear": 2024,
       "currentCitationCount": 0,
       "sourceUrl": "https://api.openalex.org/works?filter=cites:W4389856655",
-      "citationsByYear": [],
-      "rawCitationsByYear": [],
-      "historyTotal": 0,
-      "rawHistoryTotal": 0,
+      "citationsByYear": [
+        {
+          "year": 2024,
+          "citations": 1
+        }
+      ],
+      "rawCitationsByYear": [
+        {
+          "year": 2024,
+          "citations": 1
+        }
+      ],
+      "historyTotal": 1,
+      "rawHistoryTotal": 1,
       "excludedInvalidCitationCount": 0,
       "excludedInvalidCitations": [],
       "unassignedCitationCount": 0,
-      "citingWorkCount": 0,
-      "citingArticlesWithDoiCount": 0,
-      "citingArticlesWithDoi": []
+      "citingWorkCount": 1,
+      "citingArticlesWithDoiCount": 1,
+      "citingArticlesWithDoi": [
+        {
+          "openAlexId": "W4402327366",
+          "doi": "10.1016/j.surfcoat.2024.131339",
+          "doiUrl": "https://doi.org/10.1016/j.surfcoat.2024.131339",
+          "title": "A review of recent advances and applications of inorganic coating for oil and gas pipe systems",
+          "authors": [
+            "Mehdi Zarei",
+            "Mehdi Eskandarzade",
+            "Aziz Babapoor",
+            "Adrian Seyfaee"
+          ],
+          "journal": "Surface and Coatings Technology",
+          "publicationYear": 2024,
+          "publicationDate": "2024-09-07",
+          "volume": "494",
+          "issue": "",
+          "pages": "131339",
+          "type": "article"
+        }
+      ]
     },
     "W4391230843": {
       "doi": "10.1002/solr.202300988",
@@ -21706,14 +21698,17 @@
           "title": "Dual-functional PVDF-HFP additive inverted perovskite solar cells via defect passivation and hydrophobic protection",
           "authors": [
             "Y ZHANG",
-            "Meng qi Jin",
+            "Mengqi Jin",
+            "Shuzhan Xiao",
+            "YiGe Zhao",
+            "DieFeng Bao",
+            "Kunyang Huang",
             "Zhan Zhou",
-            "Kun Yang Huang",
-            "Jia Yuan",
-            "Zhi Tao Shen",
-            "Hui Lin Li",
-            "Rong Liu",
+            "JiaGeng Yuan",
+            "Zhitao Shen",
             "Fu Li",
+            "Rong Liu",
+            "Fumin Li",
             "Chong Chen"
           ],
           "journal": "Materials Today Chemistry",
@@ -21960,7 +21955,7 @@
             "Saida Laalioui",
             "Kawtar Belrhiti Alaoui",
             "El Mehdi Salmani",
-            "Hamid Ez-Zahraouy"
+            "Hamid Ez-zahraouy A"
           ],
           "journal": "Materials Today Chemistry",
           "publicationYear": 2025,
@@ -23042,7 +23037,7 @@
           "journal": "Journal of Alloys and Compounds",
           "publicationYear": 2026,
           "publicationDate": "2026-10-01",
-          "volume": "",
+          "volume": "1082",
           "issue": "",
           "pages": "191471",
           "type": "article"
