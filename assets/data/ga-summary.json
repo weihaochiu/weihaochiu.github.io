@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-13T07:44:01Z",
+  "generatedAt": "2026-10-14T06:10:02Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 98,
-    "activeUsers": 87,
-    "sessions": 91,
-    "engagementRate": 0.14285714285714285
+    "pageViews": 91,
+    "activeUsers": 82,
+    "sessions": 86,
+    "engagementRate": 0.13953488372093023
   },
   "monthlyTrend": [
     {
@@ -29,22 +29,22 @@
     },
     {
       "month": "2026-10",
-      "pageViews": 62,
-      "activeUsers": 61
+      "pageViews": 63,
+      "activeUsers": 62
     }
   ],
   "topPages": [
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 31,
-      "activeUsers": 30
+      "pageViews": 26,
+      "activeUsers": 25
     },
     {
       "title": "Publications | Wei-Hao Chiu",
       "path": "/publications.html",
-      "pageViews": 7,
-      "activeUsers": 4
+      "pageViews": 5,
+      "activeUsers": 3
     },
     {
       "title": "Additive-free electroless deposition on graphene/copper foil: Photo-induced and defect-assisted approach for environmentally friendly plating | Wei-Hao Chiu",
@@ -65,12 +65,6 @@
       "activeUsers": 2
     },
     {
-      "title": "Impact of proton radiation on the performance of single-junction perovskite solar cells for space applications | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-solmat-2025-114015.html",
-      "pageViews": 2,
-      "activeUsers": 2
-    },
-    {
       "title": "Ionic liquid diffusion properties in tetrapod-like ZnO photoanode for dye-sensitized solar cells | Wei-Hao Chiu",
       "path": "/publications/10-1016-j-jpowsour-2012-05-079.html",
       "pageViews": 2,
@@ -85,6 +79,12 @@
     {
       "title": "Reliability enhancement of PVDF-HFP modified perovskite solar cells under synergistic space-relevant stress conditions | Wei-Hao Chiu",
       "path": "/publications/10-1016-j-cej-2026-177494.html",
+      "pageViews": 2,
+      "activeUsers": 2
+    },
+    {
+      "title": "Round-Robin Interlaboratory Comparison of Large-Area Organic Thin-Film and Perovskite Solar Cells | Wei-Hao Chiu",
+      "path": "/publications/10-1002-solr-202500538.html",
       "pageViews": 2,
       "activeUsers": 2
     },
@@ -128,13 +128,13 @@
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 79,
-      "activeUsers": 79
+      "sessions": 76,
+      "activeUsers": 76
     },
     {
       "channel": "Organic Search",
-      "sessions": 10,
-      "activeUsers": 6
+      "sessions": 8,
+      "activeUsers": 4
     },
     {
       "channel": "AI Assistant",
@@ -151,20 +151,20 @@
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 79,
-      "activeUsers": 79
+      "sessions": 76,
+      "activeUsers": 76
     },
     {
       "source": "google",
       "medium": "organic",
-      "sessions": 7,
-      "activeUsers": 3
+      "sessions": 6,
+      "activeUsers": 2
     },
     {
       "source": "bing",
       "medium": "organic",
-      "sessions": 3,
-      "activeUsers": 3
+      "sessions": 2,
+      "activeUsers": 2
     },
     {
       "source": "cgu.edu.tw",
@@ -182,29 +182,29 @@
   "topCountries": [
     {
       "country": "Singapore",
-      "activeUsers": 48,
-      "pageViews": 48
+      "activeUsers": 47,
+      "pageViews": 47
     },
     {
       "country": "United States",
-      "activeUsers": 19,
-      "pageViews": 20
+      "activeUsers": 17,
+      "pageViews": 18
     },
     {
       "country": "China",
-      "activeUsers": 16,
-      "pageViews": 16
+      "activeUsers": 15,
+      "pageViews": 15
     },
     {
       "country": "Taiwan",
-      "activeUsers": 4,
-      "pageViews": 14
+      "activeUsers": 3,
+      "pageViews": 11
     }
   ],
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 85
+      "activeUsers": 80
     },
     {
       "device": "mobile",
