@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-15T05:55:14Z",
+  "generatedAt": "2026-10-16T05:52:45Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
     "pageViews": 96,
-    "activeUsers": 86,
-    "sessions": 89,
-    "engagementRate": 0.1348314606741573
+    "activeUsers": 85,
+    "sessions": 88,
+    "engagementRate": 0.17045454545454544
   },
   "monthlyTrend": [
     {
@@ -29,7 +29,7 @@
     },
     {
       "month": "2026-10",
-      "pageViews": 68,
+      "pageViews": 69,
       "activeUsers": 66
     }
   ],
@@ -38,7 +38,7 @@
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
       "pageViews": 31,
-      "activeUsers": 29
+      "activeUsers": 28
     },
     {
       "title": "Publications | Wei-Hao Chiu",
@@ -128,8 +128,8 @@
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 79,
-      "activeUsers": 79
+      "sessions": 78,
+      "activeUsers": 78
     },
     {
       "channel": "Organic Search",
@@ -137,17 +137,12 @@
       "activeUsers": 4
     },
     {
-      "channel": "AI Assistant",
-      "sessions": 1,
-      "activeUsers": 1
-    },
-    {
       "channel": "Referral",
-      "sessions": 1,
-      "activeUsers": 1
+      "sessions": 2,
+      "activeUsers": 2
     },
     {
-      "channel": "Unassigned",
+      "channel": "AI Assistant",
       "sessions": 1,
       "activeUsers": 1
     }
@@ -156,8 +151,8 @@
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 79,
-      "activeUsers": 79
+      "sessions": 78,
+      "activeUsers": 78
     },
     {
       "source": "google",
@@ -172,16 +167,10 @@
       "activeUsers": 2
     },
     {
-      "source": "(not set)",
-      "medium": "(not set)",
-      "sessions": 1,
-      "activeUsers": 1
-    },
-    {
       "source": "cgu.edu.tw",
       "medium": "referral",
-      "sessions": 1,
-      "activeUsers": 1
+      "sessions": 2,
+      "activeUsers": 2
     },
     {
       "source": "chatgpt.com",
@@ -198,8 +187,8 @@
     },
     {
       "country": "United States",
-      "activeUsers": 19,
-      "pageViews": 22
+      "activeUsers": 18,
+      "pageViews": 21
     },
     {
       "country": "China",
@@ -209,13 +198,13 @@
     {
       "country": "Taiwan",
       "activeUsers": 4,
-      "pageViews": 11
+      "pageViews": 12
     }
   ],
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 81
+      "activeUsers": 80
     },
     {
       "device": "mobile",
