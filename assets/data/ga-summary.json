@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-16T05:52:45Z",
+  "generatedAt": "2026-10-17T05:37:00Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 96,
-    "activeUsers": 85,
-    "sessions": 88,
-    "engagementRate": 0.17045454545454544
+    "pageViews": 94,
+    "activeUsers": 86,
+    "sessions": 87,
+    "engagementRate": 0.1724137931034483
   },
   "monthlyTrend": [
     {
@@ -29,8 +29,8 @@
     },
     {
       "month": "2026-10",
-      "pageViews": 69,
-      "activeUsers": 66
+      "pageViews": 72,
+      "activeUsers": 67
     }
   ],
   "topPages": [
@@ -38,12 +38,12 @@
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
       "pageViews": 31,
-      "activeUsers": 28
+      "activeUsers": 29
     },
     {
       "title": "Publications | Wei-Hao Chiu",
       "path": "/publications.html",
-      "pageViews": 5,
+      "pageViews": 3,
       "activeUsers": 3
     },
     {
@@ -77,6 +77,12 @@
       "activeUsers": 2
     },
     {
+      "title": "Patents | Wei-Hao Chiu",
+      "path": "/patents.html",
+      "pageViews": 2,
+      "activeUsers": 2
+    },
+    {
       "title": "Reliability enhancement of PVDF-HFP modified perovskite solar cells under synergistic space-relevant stress conditions | Wei-Hao Chiu",
       "path": "/publications/10-1016-j-cej-2026-177494.html",
       "pageViews": 2,
@@ -97,12 +103,6 @@
     {
       "title": "Synergistic preheating and moderate temperature liquid medium annealing for high performance perovskite solar cells | Wei-Hao Chiu",
       "path": "/publications/10-1016-j-solener-2026-114430.html",
-      "pageViews": 2,
-      "activeUsers": 2
-    },
-    {
-      "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
-      "path": "/index.html",
       "pageViews": 2,
       "activeUsers": 2
     },
@@ -128,12 +128,12 @@
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 78,
-      "activeUsers": 78
+      "sessions": 79,
+      "activeUsers": 79
     },
     {
       "channel": "Organic Search",
-      "sessions": 7,
+      "sessions": 5,
       "activeUsers": 4
     },
     {
@@ -151,13 +151,13 @@
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 78,
-      "activeUsers": 78
+      "sessions": 79,
+      "activeUsers": 79
     },
     {
       "source": "google",
       "medium": "organic",
-      "sessions": 5,
+      "sessions": 3,
       "activeUsers": 2
     },
     {
@@ -197,14 +197,14 @@
     },
     {
       "country": "Taiwan",
-      "activeUsers": 4,
-      "pageViews": 12
+      "activeUsers": 5,
+      "pageViews": 10
     }
   ],
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 80
+      "activeUsers": 81
     },
     {
       "device": "mobile",
@@ -222,6 +222,10 @@
     },
     {
       "eventName": "orcid_click",
+      "eventCount": 1
+    },
+    {
+      "eventName": "patent_click",
       "eventCount": 1
     }
   ]
