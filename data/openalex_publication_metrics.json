@@ -5,7 +5,7 @@
   "publicationCount": 40,
   "verifiedCount": 38,
   "notFoundCount": 2,
-  "lastSuccessfulUpdate": "2026-10-17T07:00:20Z",
+  "lastSuccessfulUpdate": "2026-10-18T07:16:24Z",
   "records": {
     "10.1016/j.cej.2026.177494": {
       "status": "verified",
@@ -52,12 +52,12 @@
       "title": "Heterogeneous graphite felt electrodes decorated with nanostructured graphitic carbon nitride for enhanced redox kinetics in vanadium redox flow batteries",
       "openAlexId": "W7118007754",
       "url": "https://openalex.org/W7118007754",
-      "citationCount": 4,
-      "fwci": 7.0627,
-      "citationPercentile": 0.96093056,
+      "citationCount": 5,
+      "fwci": 8.426,
+      "citationPercentile": 0.97115482,
       "isTop1Percent": false,
       "isTop10Percent": true,
-      "openAlexUpdatedDate": "2026-10-02T10:15:12.560889"
+      "openAlexUpdatedDate": "2026-10-17T09:40:24.721904"
     },
     "10.1016/j.solmat.2025.114015": {
       "status": "verified",
@@ -91,12 +91,12 @@
       "title": "MOF- & COF-integrated composite separators/membranes: innovations for sustainable and high-performance redox flow batteries",
       "openAlexId": "W4411847970",
       "url": "https://openalex.org/W4411847970",
-      "citationCount": 6,
-      "fwci": 1.3598,
-      "citationPercentile": 0.79587157,
+      "citationCount": 7,
+      "fwci": 1.582,
+      "citationPercentile": 0.82488572,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-10-16T09:59:22.235173"
+      "openAlexUpdatedDate": "2026-10-17T09:40:24.721904"
     },
     "10.1002/solr.202500538": {
       "status": "verified",
@@ -144,8 +144,8 @@
       "openAlexId": "W4402883453",
       "url": "https://openalex.org/W4402883453",
       "citationCount": 9,
-      "fwci": 0.9251,
-      "citationPercentile": 0.70740503,
+      "fwci": 0.9239,
+      "citationPercentile": 0.70697052,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-10-16T09:59:22.235173"
@@ -157,8 +157,8 @@
       "openAlexId": "W4400613411",
       "url": "https://openalex.org/W4400613411",
       "citationCount": 13,
-      "fwci": 1.3362,
-      "citationPercentile": 0.78839072,
+      "fwci": 1.3345,
+      "citationPercentile": 0.78804969,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-10-16T09:59:22.235173"
@@ -300,8 +300,8 @@
       "openAlexId": "W3187467581",
       "url": "https://openalex.org/W3187467581",
       "citationCount": 62,
-      "fwci": 3.3132,
-      "citationPercentile": 0.93402343,
+      "fwci": 3.3113,
+      "citationPercentile": 0.93399895,
       "isTop1Percent": false,
       "isTop10Percent": true,
       "openAlexUpdatedDate": "2026-10-16T09:59:22.235173"
@@ -339,8 +339,8 @@
       "openAlexId": "W3174093177",
       "url": "https://openalex.org/W3174093177",
       "citationCount": 8,
-      "fwci": 0.5042,
-      "citationPercentile": 0.56775899,
+      "fwci": 0.5039,
+      "citationPercentile": 0.56761575,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-10-16T09:59:22.235173"
