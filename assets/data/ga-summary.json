@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-17T05:37:00Z",
+  "generatedAt": "2026-10-18T05:55:50Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 94,
-    "activeUsers": 86,
-    "sessions": 87,
-    "engagementRate": 0.1724137931034483
+    "pageViews": 93,
+    "activeUsers": 85,
+    "sessions": 86,
+    "engagementRate": 0.1744186046511628
   },
   "monthlyTrend": [
     {
@@ -101,12 +101,6 @@
       "activeUsers": 2
     },
     {
-      "title": "Synergistic preheating and moderate temperature liquid medium annealing for high performance perovskite solar cells | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-solener-2026-114430.html",
-      "pageViews": 2,
-      "activeUsers": 2
-    },
-    {
       "title": "2T Perovskite Tandem Solar Cells in Space: Failure Mechanisms and Design Strategies | Wei-Hao Chiu",
       "path": "/publications/10-1016-j-mtener-2026-102359.html",
       "pageViews": 1,
@@ -123,13 +117,19 @@
       "path": "/about.html",
       "pageViews": 1,
       "activeUsers": 1
+    },
+    {
+      "title": "Asymmetric Fluorinated Cyclopenta [2, 1‐b: 3, 4‐b'] Dithiophene‐Based Hole‐Transporting Materials for Perovskite Solar Cell | Wei-Hao Chiu",
+      "path": "/publications/10-1002-asia-202500719.html",
+      "pageViews": 1,
+      "activeUsers": 1
     }
   ],
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 79,
-      "activeUsers": 79
+      "sessions": 78,
+      "activeUsers": 78
     },
     {
       "channel": "Organic Search",
@@ -151,8 +151,8 @@
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 79,
-      "activeUsers": 79
+      "sessions": 78,
+      "activeUsers": 78
     },
     {
       "source": "google",
@@ -192,8 +192,8 @@
     },
     {
       "country": "China",
-      "activeUsers": 16,
-      "pageViews": 16
+      "activeUsers": 15,
+      "pageViews": 15
     },
     {
       "country": "Taiwan",
@@ -204,7 +204,7 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 81
+      "activeUsers": 80
     },
     {
       "device": "mobile",
