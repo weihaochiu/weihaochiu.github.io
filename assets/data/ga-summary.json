@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-19T06:14:08Z",
+  "generatedAt": "2026-10-20T06:02:51Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 92,
-    "activeUsers": 84,
-    "sessions": 85,
-    "engagementRate": 0.17647058823529413
+    "pageViews": 91,
+    "activeUsers": 83,
+    "sessions": 84,
+    "engagementRate": 0.17857142857142858
   },
   "monthlyTrend": [
     {
@@ -49,12 +49,6 @@
     {
       "title": "Additive-free electroless deposition on graphene/copper foil: Photo-induced and defect-assisted approach for environmentally friendly plating | Wei-Hao Chiu",
       "path": "/publications/10-1016-j-jece-2023-111741.html",
-      "pageViews": 2,
-      "activeUsers": 2
-    },
-    {
-      "title": "Bifacial Solar Cell and Solar Cell Module — Patent Family | Wei-Hao Chiu",
-      "path": "/patents/families-bifacial-solar-cell-module.html",
       "pageViews": 2,
       "activeUsers": 2
     },
@@ -123,13 +117,19 @@
       "path": "/publications/10-1002-asia-202500719.html",
       "pageViews": 1,
       "activeUsers": 1
+    },
+    {
+      "title": "Bifacial Solar Cell and Solar Cell Module — Patent Family | Wei-Hao Chiu",
+      "path": "/patents/families-bifacial-solar-cell-module.html",
+      "pageViews": 1,
+      "activeUsers": 1
     }
   ],
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 77,
-      "activeUsers": 77
+      "sessions": 76,
+      "activeUsers": 76
     },
     {
       "channel": "Organic Search",
@@ -151,8 +151,8 @@
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 77,
-      "activeUsers": 77
+      "sessions": 76,
+      "activeUsers": 76
     },
     {
       "source": "google",
@@ -192,8 +192,8 @@
     },
     {
       "country": "China",
-      "activeUsers": 14,
-      "pageViews": 14
+      "activeUsers": 13,
+      "pageViews": 13
     },
     {
       "country": "Taiwan",
@@ -204,7 +204,7 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 79
+      "activeUsers": 78
     },
     {
       "device": "mobile",
