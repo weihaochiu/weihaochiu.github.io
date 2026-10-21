@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-20T06:02:51Z",
+  "generatedAt": "2026-10-21T06:02:32Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 91,
-    "activeUsers": 83,
-    "sessions": 84,
-    "engagementRate": 0.17857142857142858
+    "pageViews": 90,
+    "activeUsers": 81,
+    "sessions": 83,
+    "engagementRate": 0.1927710843373494
   },
   "monthlyTrend": [
     {
@@ -29,7 +29,7 @@
     },
     {
       "month": "2026-10",
-      "pageViews": 72,
+      "pageViews": 73,
       "activeUsers": 67
     }
   ],
@@ -37,8 +37,8 @@
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 30,
-      "activeUsers": 28
+      "pageViews": 29,
+      "activeUsers": 26
     },
     {
       "title": "Publications | Wei-Hao Chiu",
@@ -128,8 +128,8 @@
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 76,
-      "activeUsers": 76
+      "sessions": 75,
+      "activeUsers": 75
     },
     {
       "channel": "Organic Search",
@@ -139,7 +139,7 @@
     {
       "channel": "Referral",
       "sessions": 2,
-      "activeUsers": 2
+      "activeUsers": 1
     },
     {
       "channel": "AI Assistant",
@@ -151,8 +151,8 @@
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 76,
-      "activeUsers": 76
+      "sessions": 75,
+      "activeUsers": 75
     },
     {
       "source": "google",
@@ -170,7 +170,7 @@
       "source": "cgu.edu.tw",
       "medium": "referral",
       "sessions": 2,
-      "activeUsers": 2
+      "activeUsers": 1
     },
     {
       "source": "chatgpt.com",
@@ -192,19 +192,19 @@
     },
     {
       "country": "China",
-      "activeUsers": 13,
-      "pageViews": 13
+      "activeUsers": 12,
+      "pageViews": 12
     },
     {
       "country": "Taiwan",
-      "activeUsers": 5,
+      "activeUsers": 4,
       "pageViews": 10
     }
   ],
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 78
+      "activeUsers": 76
     },
     {
       "device": "mobile",
@@ -219,6 +219,10 @@
     {
       "eventName": "doi_click",
       "eventCount": 2
+    },
+    {
+      "eventName": "email_click",
+      "eventCount": 1
     },
     {
       "eventName": "orcid_click",
