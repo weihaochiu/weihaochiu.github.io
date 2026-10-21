@@ -5,7 +5,7 @@
   "publicationCount": 40,
   "verifiedCount": 38,
   "notFoundCount": 2,
-  "lastSuccessfulUpdate": "2026-10-20T07:39:51Z",
+  "lastSuccessfulUpdate": "2026-10-21T07:43:58Z",
   "records": {
     "10.1016/j.cej.2026.177494": {
       "status": "verified",
@@ -260,12 +260,12 @@
       "title": "Facile Synthesis of Spiro-Core-Based Hole-Transporting Material for High-Performance and Stable Perovskite Solar Cells",
       "openAlexId": "W4308038509",
       "url": "https://openalex.org/W4308038509",
-      "citationCount": 34,
-      "fwci": 1.8737,
-      "citationPercentile": 0.8585459,
+      "citationCount": 35,
+      "fwci": 1.8733,
+      "citationPercentile": 0.85861239,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-10-12T09:40:04.860316"
+      "openAlexUpdatedDate": "2026-10-20T09:52:01.089006"
     },
     "10.3390/nano12152651": {
       "status": "verified",
@@ -273,12 +273,12 @@
       "title": "Surfactant Tween 20 Controlled Perovskite Film Fabricated by Thermal Blade Coating for Efficient Perovskite Solar Cells",
       "openAlexId": "W4289524742",
       "url": "https://openalex.org/W4289524742",
-      "citationCount": 10,
-      "fwci": 0.6697,
-      "citationPercentile": 0.61997253,
+      "citationCount": 11,
+      "fwci": 0.669,
+      "citationPercentile": 0.61802525,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-09-30T09:27:27.532063"
+      "openAlexUpdatedDate": "2026-10-20T09:52:01.089006"
     },
     "10.3390/polym14081580": {
       "status": "verified",
