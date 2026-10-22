@@ -389,3 +389,10 @@ flowchart TD
 - `data/publication_taxonomy.json` assigns the article to RFB / VRFB: Electrodes. The existing Research, homepage and analytics consumers derive their counts from these authoritative files.
 - User-provided Abstract, four Highlights and the original graphical abstract are stored in the publication record and `GA/10.1016_j.cej.2026.183177.png`. Unverified publisher keywords remain empty.
 - `scripts/build_seo.py` generates `publications/10-1016-j-cej-2026-183177.html`, the publications listing and discovery files. The collection now contains 43 records: 41 research outputs (38 core journal publications) and two protected theses excluded from research analytics.
+
+## Shared Actions write queue — 23 October 2026
+
+- All nine workflows in the `website-content-write` concurrency group use `queue: max` and `cancel-in-progress: false`: SEO, Crossref, journals, GRB projects, OpenAlex, patent metadata, publication authorships, Scholar and Unpaywall.
+- The shared group continues to serialize repository content writers. Every participant opts into the same queue policy so a workflow using the default single pending slot cannot replace other waiting updates. GitHub supports up to 100 queued runs; queue order follows when each run starts waiting, not a guaranteed workflow dependency order.
+- `tests/test_workflow_concurrency.py` guards the complete participant set and requires the shared queue policy at workflow scope. Other concurrency groups and their cancellation policies are unchanged.
+- Reference: https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#example-queueing-multiple-pending-runs

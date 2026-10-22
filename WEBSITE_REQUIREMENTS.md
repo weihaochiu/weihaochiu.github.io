@@ -105,3 +105,9 @@ Verified collection files in `data/` remain authoritative. Do not replace them w
 
 - Include DOI `10.1016/j.cej.2026.183177` as an international journal publication with all four standard bibliometric analytics flags enabled. The research-output/core-journal totals are now 41/38; the two theses remain excluded.
 - Preserve the user-provided Abstract, four Highlights and original graphical abstract. Do not fabricate publisher keywords, equal-contribution statements, citation counts or missing bibliographic fields.
+
+## Actions queue retention — 23 October 2026
+
+- Every workflow using `website-content-write` must set `queue: max` and `cancel-in-progress: false` in its workflow-level concurrency block. Preserve serialized writes and retain pending updates within GitHub's 100-run queue limit.
+- A new participant must adopt the same policy and update the concurrency regression test. Do not split this group into per-workflow groups to avoid cancellations, because these jobs write overlapping data and generated files.
+- Verify the policy with multiple overlapping workflow runs, including Crossref and journal updates; inspect successful runs, resulting data commits and the deployed data rather than treating a cancelled run as an update.
