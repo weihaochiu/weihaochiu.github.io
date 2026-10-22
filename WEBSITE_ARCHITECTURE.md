@@ -428,3 +428,8 @@ flowchart TD
 - Optional `additionalImages` contains further photo metadata using the same display/full path, dimensions, alt text and caption fields as the primary image. Only story pages render these lazy-loaded figures; homepage/list thumbnails still use the primary image only.
 - Five `assets/images/news/twiche-2025-*` assets provide two metadata-free display/full photo pairs and one group thumbnail. User-supplied Chinese given names without verified English forms remain in Chinese.
 - Shared `app.js` navigation recognizes nested `/news/` pages alongside publication/patent pages, preserving root-relative destinations after JavaScript rebuilds the menu. Generated news pages version their app script reference to refresh cached navigation code.
+
+## Laboratory naming audit — 23 October 2026
+
+- Use the user-confirmed official name `Frontier Materials Research Group (FMRG)` in About, news summaries, story text and generated metadata. `data/news.json` remains authoritative for news copies; `about.html` owns the group service-card heading.
+- Repository-wide text audit distinguishes the lab name from its valid `frontiergroup.tw` domain and unrelated scientific terms or journal titles containing Frontier/Frontiers.

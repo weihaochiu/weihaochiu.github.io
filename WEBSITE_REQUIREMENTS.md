@@ -128,5 +128,5 @@ Verified collection files in `data/` remain authoritative. Do not replace them w
 
 ## TwIChE 2025 news — 23 October 2026
 
-- Publish the user-confirmed 29–30 November 2025 Frontier Group visit to the 72nd TwIChE annual meeting at NCKU in Tainan and congratulate Kun-Mu Lee and Wei-Hao Chiu on their Chemical Engineering Masterpiece Award. Preserve supplied attendee names without inventing English spellings.
+- Publish the user-confirmed 29–30 November 2025 Frontier Materials Research Group (FMRG) visit to the 72nd TwIChE annual meeting at NCKU in Tainan and congratulate Kun-Mu Lee and Wei-Hao Chiu on their Chemical Engineering Masterpiece Award. Preserve supplied attendee names without inventing English spellings.
 - Use the conference group photo as the primary thumbnail, with both group and award-presentation photos on the full story. Optional additional photographs must not increase list-page image payloads. Reuse the existing award record without incrementing the award total.
