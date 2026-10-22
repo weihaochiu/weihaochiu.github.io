@@ -215,3 +215,7 @@
 .project-detail-source a:hover,.project-detail-source a:focus-visible{text-decoration:underline}
 @media(max-width:760px){.project-research-details{font-size:.73rem}.project-detail-body{padding-left:11px;padding-right:11px}.project-detail-section p{font-size:.76rem;line-height:1.75}}
 /* GRB_PROJECT_CONTENT_STYLES_END */
+
+/* Curated academic news */
+.news-preview{display:grid;gap:20px}.news-entry{padding:26px 0;border-top:1px solid var(--line);scroll-margin-top:90px;overflow-wrap:anywhere}.news-entry:target{border-top-color:var(--brand)}.news-date{font-size:.75rem;color:var(--muted);margin:0 0 10px}.news-entry h2,.news-entry h3{font-family:"Source Serif 4",serif;line-height:1.4;margin:0 0 14px}.news-entry h3 a{color:var(--ink);text-decoration:none}.news-entry h3 a:hover{color:var(--brand)}.news-entry p{max-width:76ch}.news-archive{max-width:900px}.news-archive>.action{display:inline-block;margin-bottom:26px}.news-photo{margin:24px 0;max-width:480px}.news-photo img{display:block;width:100%;height:auto;border-radius:8px}.news-photo figcaption{font-size:.75rem;color:var(--muted);margin-top:10px;line-height:1.6}.news-photo a{display:block}.news-preview .news-entry{padding:22px;background:#fff;border:1px solid var(--line);border-radius:8px}
+@media(max-width:760px){.news-preview .news-entry{padding:18px}.news-archive .news-entry h2{font-size:1.5rem}.news-photo{max-width:100%}}

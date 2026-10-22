@@ -111,3 +111,10 @@ Verified collection files in `data/` remain authoritative. Do not replace them w
 - Every workflow using `website-content-write` must set `queue: max` and `cancel-in-progress: false` in its workflow-level concurrency block. Preserve serialized writes and retain pending updates within GitHub's 100-run queue limit.
 - A new participant must adopt the same policy and update the concurrency regression test. Do not split this group into per-workflow groups to avoid cancellations, because these jobs write overlapping data and generated files.
 - Verify the policy with multiple overlapping workflow runs, including Crossref and journal updates; inspect successful runs, resulting data commits and the deployed data rather than treating a cancelled run as an update.
+
+## Curated academic news — 23 October 2026
+
+- Homepage Latest News shows up to three manually curated updates, newest first, after metrics. View all news opens `news.html`; each complete entry has a stable anchor. Preserve the existing primary navigation.
+- News source is `data/news.json`; rebuild through the SEO generator rather than editing generated news HTML. News does not add scholarly outputs or awards to analytics.
+- The SDSE 2026 Honorable Mention poster award is recorded in Awards (11 total), with a separate News entry and the user-provided poster-side group photograph. Publish neither certificate nor award-announcement slide. Preserve the full photograph composition and provide a compressed lazy-loaded preview, accessible caption and full-size link.
+- Display 14–16 October 2026 explicitly as conference dates. Preserve certificate author order; do not infer photo identities, a ceremony date, unverified translations or a DOI.

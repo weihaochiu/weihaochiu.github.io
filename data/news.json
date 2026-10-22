@@ -1,0 +1,21 @@
+[
+  {
+    "id": "sdse-2026-poster-award",
+    "sortDate": "2026-10-16",
+    "dateLabel": "14–16 October 2026 · Conference dates",
+    "title": "Honorable Mention Poster Award at SDSE 2026",
+    "summary": "Our work on graphite felt electrodes for vanadium redox flow batteries received an Honorable Mention poster award at SDSE 2026.",
+    "paragraphs": [
+      "The poster “Nanostructured g-C3N4-Decorated Graphite Felt Electrodes for Enhanced Redox Kinetics in Vanadium Redox Flow Batteries” received an Honorable Mention award at the 4th International Conference on Smart Devices and Sustainable Energy (SDSE 2026), held in New Taipei City, Taiwan, on 14–16 October 2026.",
+      "The certificate names Iqra Shaheen, Yu-Xian Lee, Wei-Hao Chiu, Shih-Hsuan Chen, and Kun-Mu Lee as recipients."
+    ],
+    "image": {
+      "src": "assets/images/news/sdse-2026-poster.webp",
+      "full": "assets/images/news/sdse-2026-poster-full.jpg",
+      "width": 720,
+      "height": 960,
+      "alt": "Three participants standing beside poster B020 at SDSE 2026.",
+      "caption": "Poster presentation at SDSE 2026 · Poster B020. Click the photograph to view it full size."
+    }
+  }
+]

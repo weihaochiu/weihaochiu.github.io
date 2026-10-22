@@ -5,6 +5,9 @@ on:
   push:
     branches: [main]
     paths:
+      - "data/news.json"
+      - "data/awards.json"
+      - "scripts/build_news.py"
       - "data/publications.json"
       - "data/authors.json"
       - "data/patents.json"

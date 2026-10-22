@@ -110,7 +110,7 @@ flowchart TD
 | `data/publication_taxonomy.json` | category labels、theme options 與每篇 publication 分類 mapping。 | Publications filter、分類一致性 |
 | `data/patents.json` | 14 筆專利；含中英文名稱、發明人、assignee、jurisdiction、number、status、date、URL。 | Patents、首頁統計 |
 | `data/projects.json` | 4 筆計畫；含中英文標題、機構、計畫編號、期間、角色、scope、URL。 | Projects、首頁統計 |
-| `data/awards.json` | 10 筆獎項；含中英文標題、機構、獲獎人、作品、日期、type、URL。 | About/Awards、首頁統計 |
+| `data/awards.json` | 11 筆獎項；含中英文標題、機構、獲獎人、作品、日期、type、URL。 | About/Awards、首頁統計 |
 | `data/research_areas.json` | Research 頁的研究領域、內容與代表論文設定。 | `research.js` |
 | `data/site_meta.json` | 網站 version、lastUpdated 與 notes。 | footer、SEO build |
 
@@ -396,3 +396,18 @@ flowchart TD
 - The shared group continues to serialize repository content writers. Every participant opts into the same queue policy so a workflow using the default single pending slot cannot replace other waiting updates. GitHub supports up to 100 queued runs; queue order follows when each run starts waiting, not a guaranteed workflow dependency order.
 - `tests/test_workflow_concurrency.py` guards the complete participant set and requires the shared queue policy at workflow scope. Other concurrency groups and their cancellation policies are unchanged.
 - Reference: https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#example-queueing-multiple-pending-runs
+
+## Award addition — 23 October 2026
+
+- Added the user-certificate-verified SDSE 2026 Honorable Mention poster award to `data/awards.json`; the collection now contains 11 awards. About cards, homepage totals and annual award counts use this collection; homepage fallback totals are also updated.
+- The displayed 14–16 October 2026 range is the conference period printed on the certificate, not a separately verified award date; `sortDate` uses the period end for ordering. Unverified Chinese metadata and external URL remain empty.
+- This award is text-only. No certificate or announcement slide is published; the event photograph belongs to News, and no award-record button appears without a verified URL.
+
+## Curated News — 23 October 2026
+
+- `data/news.json` is the manually curated source for academic updates. Stable IDs become `news.html#<id>` anchors; `sortDate` determines newest-first order, while `dateLabel` explicitly distinguishes conference periods from award dates.
+- `scripts/build_news.py`, called by `scripts/build_seo.py`, generates the marked Latest News block (up to three entries) in `index.html` and the complete `news.html` archive. It also derives homepage award fallback counts from `data/awards.json`. News uses the existing About head, header and footer for consistent SEO, GA4 and mobile navigation. The SEO generator preserves News in sitemap and llms listings.
+- Homepage Latest News appears after metrics and before the About preview. The archive is reached through View all news; primary navigation stays unchanged.
+- Optional image metadata stores display/full paths, dimensions, alt text and caption. `assets/images/news/sdse-2026-poster.webp` is the lazy-loaded, uncropped display image; `sdse-2026-poster-full.jpg` opens at full size. Neither includes embedded EXIF metadata. No certificate or announcement image is published.
+- News is separate from scholarly outputs and awards and never feeds research analytics or output counts. Awards remain text-only records.
+- `build-seo.yml` watches news source, award source and news generator changes; its existing generated-HTML commit step includes the archive and homepage.

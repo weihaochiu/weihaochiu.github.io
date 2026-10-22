@@ -10,6 +10,7 @@
 - [Publications](https://weihaochiu.github.io/publications.html)
 - [Patents](https://weihaochiu.github.io/patents.html)
 - [Projects](https://weihaochiu.github.io/projects.html)
+- [News](https://weihaochiu.github.io/news.html)
 
 ## Contact
 

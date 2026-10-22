@@ -6,6 +6,7 @@ from pathlib import Path
 from urllib.parse import quote
 
 from publication_scope import is_research_publication
+from build_news import main as build_news
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE_URL = 'https://weihaochiu.github.io'
@@ -521,6 +522,7 @@ def publication_page(p, openalex_record=None, unpaywall_record=None, crossref_re
 
 def main():
   global AUTHOR_MAP
+  build_news()
   sitemap_path=ROOT/'sitemap.xml'
   existing_sitemap=sitemap_path.read_text(encoding='utf-8') if sitemap_path.exists() else ''
   patent_urls=[url.removeprefix(SITE_URL+'/') for url in re.findall(r'<loc>(https://weihaochiu\.github\.io/patents/[^<]+)</loc>',existing_sitemap)]
@@ -584,11 +586,11 @@ def main():
   js=re.sub(r'function publicationShareUrl\(anchor\)\{.*?\n\}', "function publicationShareUrl(anchor){\n  const slug=String(anchor||'').replace(/^pub-/,'');\n  return new URL(`publications/${slug}.html`,window.location.href).toString();\n}", js, count=1, flags=re.S)
   app.write_text(js,encoding='utf-8')
   (ROOT/'robots.txt').write_text(robots_text(),encoding='utf-8')
-  urls=['','about.html','research.html','publications.html','patents.html','projects.html','llms.txt']+['publications/'+publication_slug(p)+'.html' for p in pubs]+patent_urls
+  urls=['','about.html','research.html','publications.html','patents.html','projects.html','news.html','llms.txt']+['publications/'+publication_slug(p)+'.html' for p in pubs]+patent_urls
   urls=list(dict.fromkeys(urls))
   rows='\n'.join('  <url><loc>'+SITE_URL+'/'+esc(u)+'</loc><lastmod>'+TODAY+'</lastmod></url>' for u in urls)
   sitemap_path.write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+rows+'\n</urlset>\n',encoding='utf-8')
-  lines=['# Wei-Hao Chiu Academic Website','', '> Official academic website of Wei-Hao Chiu, Ph.D., Associate Researcher at Chang Gung University.','','## Main Pages','',f'- [Home]({SITE_URL}/)',f'- [About]({SITE_URL}/about.html)',f'- [Research]({SITE_URL}/research.html)',f'- [Publications]({SITE_URL}/publications.html)',f'- [Patents]({SITE_URL}/patents.html)',f'- [Projects]({SITE_URL}/projects.html)','','## Contact','','- Personal email: weihao.chiu@gmail.com','- Chang Gung University email: d000019005@cgu.edu.tw','','## Research Expertise','']
+  lines=['# Wei-Hao Chiu Academic Website','', '> Official academic website of Wei-Hao Chiu, Ph.D., Associate Researcher at Chang Gung University.','','## Main Pages','',f'- [Home]({SITE_URL}/)',f'- [About]({SITE_URL}/about.html)',f'- [Research]({SITE_URL}/research.html)',f'- [Publications]({SITE_URL}/publications.html)',f'- [Patents]({SITE_URL}/patents.html)',f'- [Projects]({SITE_URL}/projects.html)',f'- [News]({SITE_URL}/news.html)','','## Contact','','- Personal email: weihao.chiu@gmail.com','- Chang Gung University email: d000019005@cgu.edu.tw','','## Research Expertise','']
   lines += ['- '+x for x in PERSON['knowsAbout']]; lines += ['','## Scholarly Outputs','']
   for key,label in [('international-journal','International Journal Publications'),('chinese-journal','Chinese Journal Publications'),('conference','Conference Publications'),('other','Other Scholarly Outputs'),('unclassified','Unclassified Outputs'),('thesis','Theses & Dissertations')]:
     rows=[p for p in pubs if publication_type(p)==key]
