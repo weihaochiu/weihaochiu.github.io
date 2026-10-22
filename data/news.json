@@ -31,6 +31,7 @@
     "summary": "Congratulations to Prof. Kun-Mu Lee and Dr. Wei-Hao Chiu on receiving the Chemical Engineering Masterpiece Award! Our Frontier Materials Research Group (FMRG) team also shared recent research at the 2025 TwIChE annual meeting in Tainan.",
     "paragraphs": [
       "Congratulations to Prof. Kun-Mu Lee and Dr. Wei-Hao Chiu on receiving the Chemical Engineering Masterpiece Award (化工傑作獎)!",
+      "The award-winning work is “鈣鈦礦太陽能電池於太空應用的研究與展望” (Research and Prospects of Perovskite Solar Cells for Space Applications). The Center for Sustainability and Energy Technologies (CSET), Chang Gung University, officially announced the award on 18 September 2025, ahead of the November annual meeting.",
       "On 29–30 November 2025, Prof. Kun-Mu Lee and Dr. Wei-Hao Chiu led a Frontier Materials Research Group (FMRG) delegation to the 72nd Annual Meeting of the Taiwan Institute of Chemical Engineers at National Cheng Kung University in Tainan to share the lab’s recent research.",
       "The delegation included Dr. Shih-Hsuan Chen (陳世軒), 彥璋, 翊銘, and 煥瑜. Congratulations to the award recipients, and thank you to everyone who represented the lab!"
     ],
@@ -55,6 +56,31 @@
         "caption": "Chemical Engineering Masterpiece Award presentation at the 2025 TwIChE annual meeting."
       }
     ],
-    "relatedUrl": "about.html#awards"
+    "relatedUrl": "about.html#awards",
+    "sources": [
+      {
+        "label": "CSET official award announcement · 18 September 2025",
+        "url": "https://www.cgu.edu.tw/cset/Subject/Detail/70836?nodeId=13671"
+      }
+    ]
+  },
+  {
+    "id": "taiwan-innotech-2023-bronze-award",
+    "sortDate": "2023-12-28",
+    "dateLabel": "28 December 2023 · CSET news publication date",
+    "title": "Congratulations on the Bronze Medal at the 2023 Taiwan Innotech Expo!",
+    "summary": "Congratulations to Prof. Kun-Mu Lee and Dr. Wei-Hao Chiu on receiving a Bronze Medal at the 2023 Taiwan Innotech Expo for their perovskite solar cell module technology!",
+    "paragraphs": [
+      "Congratulations to Prof. Kun-Mu Lee and Dr. Wei-Hao Chiu on receiving a Bronze Medal at the 2023 Taiwan Innotech Expo!",
+      "In its report dated 28 December 2023, the Center for Sustainability and Energy Technologies (CSET), Chang Gung University, highlighted the team’s work on high-efficiency, high-stability perovskite solar cell modules and their potential for scalable, cost-effective energy applications.",
+      "The date shown for this news entry is the CSET report publication date, rather than the award ceremony date."
+    ],
+    "relatedUrl": "about.html#awards",
+    "sources": [
+      {
+        "label": "CSET official report · 28 December 2023",
+        "url": "https://www.cgu.edu.tw/cset/Subject/Detail/4726?nodeId=3489"
+      }
+    ]
   }
 ]

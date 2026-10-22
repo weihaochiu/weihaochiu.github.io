@@ -35,6 +35,8 @@ def render(items, full=False, limit=3, prefix=''):
             thumbnail = (f'<a class="news-thumbnail" href="{esc(url)}" aria-label="Read: {title}">'
                          f'<img src="{esc(prefix + image["thumbnail"])}" width="{image["thumbnailWidth"]}" height="{image["thumbnailHeight"]}" loading="lazy" decoding="async" alt="{esc(image["alt"])}"/></a>')
         related = item.get('relatedUrl')
+        if full:
+            body += ''.join(f'<p class="news-source">Source: <a href="{esc(source["url"])}" target="_blank" rel="noopener">{esc(source["label"])}</a></p>' for source in item.get('sources', []))
         link = (f'<a class="action" href="{esc(prefix + related)}">View award record →</a>' if related else '') if full else f'<a class="action" href="{esc(url)}">Read news →</a>'
         level = 2 if full else 3
         heading = title if full else f'<a href="{esc(url)}">{title}</a>'
@@ -65,6 +67,10 @@ def main():
         raise ValueError('News IDs must be unique URL-safe anchors starting with a letter')
     for item in items:
         date.fromisoformat(item['sortDate'])
+        for source in item.get('sources', []):
+            parsed = urlsplit(source['url'])
+            if parsed.scheme != 'https' or not parsed.netloc:
+                raise ValueError('News sources must use absolute HTTPS URLs')
         related = item.get('relatedUrl', '')
         if urlsplit(related).scheme or related.startswith(('/', '.')):
             raise ValueError('Related links must be site-relative paths')
@@ -92,7 +98,7 @@ def main():
         head = base_head.replace('About | Wei-Hao Chiu', esc(title) + ' | Wei-Hao Chiu').replace(SITE + 'about.html', SITE + path).replace('Professional experience, education, theses and awards of Wei-Hao Chiu.', esc(description))
         # Old news.html#<id> URLs continue to reach stories beyond list page one.
         redirect = '''<script>const newsId=location.hash.slice(1);if(/^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$/.test(newsId)){location.replace('news/'+newsId+'.html');}</script>''' if legacy else ''
-        shell = head + '</head><body>' + header + '<section class="page-header"><div class="shell"><h1>' + esc('News' if story else title) + '</h1><p>' + esc('Research updates, conference activities and recognitions.' if story else description) + '</p></div></section><main class="content shell news-archive">NEWS_BODY</main>' + footer + '<script src="assets/js/app.js?v=news-20261023-3"></script>' + redirect + '</body></html>\n'
+        shell = head + '</head><body>' + header + '<section class="page-header"><div class="shell"><h1>' + esc('News' if story else title) + '</h1></div></section><main class="content shell news-archive">NEWS_BODY</main>' + footer + '<script src="assets/js/app.js?v=news-20261023-3"></script>' + redirect + '</body></html>\n'
         generated[path] = GENERATED + '\n' + relative_assets(shell, prefix).replace('NEWS_BODY', body)
 
     years = sorted({item['sortDate'][:4] for item in items}, reverse=True)

@@ -130,3 +130,9 @@ Verified collection files in `data/` remain authoritative. Do not replace them w
 
 - Publish the user-confirmed 29–30 November 2025 Frontier Materials Research Group (FMRG) visit to the 72nd TwIChE annual meeting at NCKU in Tainan and congratulate Kun-Mu Lee and Wei-Hao Chiu on their Chemical Engineering Masterpiece Award. Preserve supplied attendee names without inventing English spellings.
 - Use the conference group photo as the primary thumbnail, with both group and award-presentation photos on the full story. Optional additional photographs must not increase list-page image payloads. Reuse the existing award record without incrementing the award total.
+
+## CSET award reporting — 23 October 2026
+
+- Include the official CSET 2023 Taiwan Innotech Bronze Medal report as news; label 28 December 2023 as the report publication date. Reuse the existing award without increasing counts.
+- The existing TwIChE 2025 story includes the work title 《鈣鈦礦太陽能電池於太空應用的研究與展望》 and links the CSET announcement dated 18 September 2025; preserve the separately confirmed November conference dates and photographs.
+- News page headers show the title without the generic research-updates subtitle; retain descriptive SEO metadata.

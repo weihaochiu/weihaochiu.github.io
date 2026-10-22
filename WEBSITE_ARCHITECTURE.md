@@ -433,3 +433,7 @@ flowchart TD
 
 - Use the user-confirmed official name `Frontier Materials Research Group (FMRG)` in About, news summaries, story text and generated metadata. `data/news.json` remains authoritative for news copies; `about.html` owns the group service-card heading.
 - Repository-wide text audit distinguishes the lab name from its valid `frontiergroup.tw` domain and unrelated scientific terms or journal titles containing Frontier/Frontiers.
+
+## CSET news sources — 23 October 2026
+
+- News entries optionally store `sources` (HTTPS `url` and `label`); `build_news.py` renders clickable citations on full stories only. The 2023 Innotech story adds a 2023 annual archive through the existing SEO build.
