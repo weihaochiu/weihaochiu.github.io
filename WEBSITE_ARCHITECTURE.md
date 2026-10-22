@@ -3,7 +3,7 @@
 > Repository：<https://github.com/weihaochiu/weihaochiu.github.io>  
 > 正式網站：<https://weihaochiu.github.io/>  
 > 預設分支：`main`  
-> 本文件盤點日期：2026-08-15
+> 本文件盤點日期：2026-10-23
 > 本文件用途：作為網站的單一架構索引。每次修改網站、資料格式、自動化流程、外部連結或分析功能時，必須同步更新本文件，並完成第 12 節的回歸檢查，避免原有功能遺失。
 
 ## 1. 網站定位與技術架構
@@ -382,3 +382,10 @@ flowchart TD
 - The same SEO build adds thesis URLs to `sitemap.xml` and `llms.txt` while preserving patent URLs and the marked patent section maintained by `scripts/build_patent_pages.py`.
 - Thesis records use `metadataSource: "manual_verified"` and `automationProtection.protected: true`. Scholar, OpenAlex, Crossref, Mendeley, Unpaywall and publication-authorship updaters must skip them and must not add a DOI or replace manually verified fields.
 - Academic Monitor duplicate detection uses DOI when present, otherwise normalized repository URL and normalized title/year/publication type. A DOI-less thesis already in `data/publications.json` must not recur as a candidate.
+
+## Publication addition — 23 October 2026
+
+- Added `10.1016/j.cej.2026.183177` to `data/publications.json` as an international journal article in Chemical Engineering Journal, volume 549, article 183177. Elsevier supplies the issue date 1 December 2026; Crossref verifies the DOI and ordered list of ten authors. OpenAlex supplies the linked author affiliations and corresponding-author metadata; incomplete equal-contribution and address details remain flagged for review.
+- `data/publication_taxonomy.json` assigns the article to RFB / VRFB: Electrodes. The existing Research, homepage and analytics consumers derive their counts from these authoritative files.
+- User-provided Abstract, four Highlights and the original graphical abstract are stored in the publication record and `GA/10.1016_j.cej.2026.183177.png`. Unverified publisher keywords remain empty.
+- `scripts/build_seo.py` generates `publications/10-1016-j-cej-2026-183177.html`, the publications listing and discovery files. The collection now contains 43 records: 41 research outputs (38 core journal publications) and two protected theses excluded from research analytics.

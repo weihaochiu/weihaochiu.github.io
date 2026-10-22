@@ -1,5 +1,383 @@
 [
   {
+    "id": "10.1016/j.cej.2026.183177",
+    "doi": "10.1016/j.cej.2026.183177",
+    "doiUrl": "https://doi.org/10.1016/j.cej.2026.183177",
+    "url": "https://www.sciencedirect.com/science/article/pii/S1385894726106408",
+    "date": "2026-12-01",
+    "year": 2026,
+    "month": 12,
+    "authors": [
+      "Shaheen, Iqra",
+      "Chen, Shih-Hsuan",
+      "Lee, Yu-Xian",
+      "Chiu, Wei-Hao",
+      "Lin, Ting-Han",
+      "GokulKumar, Kumar",
+      "Varatharajan, P.",
+      "Hsu, Jen-Fu",
+      "Chen, Gao",
+      "Lee, Kun-Mu"
+    ],
+    "title": "Coupled morphology and phase regulation of in-situ grown TiO2 nanostructures on graphite felt for enhanced redox kinetics in vanadium redox flow batteries",
+    "journal": "Chemical Engineering Journal",
+    "volume": "549",
+    "issue": "",
+    "pages": "183177",
+    "publisher": "Elsevier",
+    "publicationType": "international-journal",
+    "documentType": "journal-article",
+    "language": "en",
+    "peerReviewStatus": "peer-reviewed",
+    "analytics": {
+      "coreJournalCount": true,
+      "journalMetrics": true,
+      "fwci": true,
+      "citationMetrics": true
+    },
+    "abstract": "The sluggish electrochemical kinetics of vanadium redox reactions on graphite felt (GF) electrodes remain a critical bottleneck for vanadium redox flow batteries (VRFBs). Herein, phase- and morphology-engineered TiO2 nanostructures were directly grown on GF via an in-situ hydrothermal method followed by temperature-controlled calcination. By systematically tuning the precursor concentration, vertically aligned one-dimensional TiO2 nanorods (NR-TiO2/GF) were identified as the optimal morphology, providing continuous charge-transport pathways, accelerated electrolyte penetration, and abundant accessible active sites. Subsequent thermal modulation (300–600 °C) revealed that annealing at 400 °C (NR400-TiO2/GF) yielded fine nanorods with an average diameter of ~128 nm while achieving an optimal balance between high crystallinity and a synergistic anatase/rutile heterojunction. The refined nanorod architecture, coupled with surface hydroxyl functionalities and Ti3+-associated oxygen vacancies, significantly expedited interfacial charge redistribution and lowered charge-transfer resistance to Rct = 1.89 Ω. Furthermore, NR400-TiO2/GF exhibited superior redox reversibility across both half-cells, accelerated mass transport, and effective suppression of parasitic hydrogen evolution. In full-cell VRFB tests, the NR400-TiO2/GF electrode delivered remarkable energy efficiencies of 85.8% at 80 mA cm−2 and 83.7% at 100 mA cm−2, outperforming pristine GF and benchmark metal-oxide modifications while shielding the carbon fibers against oxidative corrosion. This work establishes a clear morphology, phase, and performance relationship, providing a potentially scalable strategy for engineering low-dimensional mixed-phase metal oxides toward high-performance energy storage systems.",
+    "highlights": [
+      "Phase-engineered TiO2 nanorods were directly grown on graphite felt electrodes.",
+      "Mixed anatase–rutile phases enhanced interfacial charge-transfer kinetics.",
+      "Hydrogen-free TiO2 modification achieved stable superhydrophilicity.",
+      "NR400-TiO2/GF delivered 85.8% energy efficiency at 80 mA cm−2."
+    ],
+    "keywords": [],
+    "graphicalAbstract": "GA/10.1016_j.cej.2026.183177.png",
+    "graphicalAbstractAlt": "Phase-engineered TiO2 nanorods grown on graphite felt by an H2-free hydrothermal process, showing synergistic anatase–rutile phases and improved vanadium redox flow battery performance.",
+    "contentStatus": {
+      "abstract": "available",
+      "highlights": "available",
+      "keywords": "pending",
+      "graphicalAbstract": "available",
+      "verifiedDate": "2026-10-23",
+      "verifiedSource": "User-provided abstract, highlights and graphical abstract; Crossref and Elsevier API publication metadata"
+    },
+    "topic": "Redox Flow Batteries",
+    "tags": [
+      "VRFB: Electrodes"
+    ],
+    "authorOrder": 4,
+    "role": "Co-author",
+    "scholarCitedByUrl": "",
+    "scholarLinkVerified": false,
+    "scholarProfileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en",
+    "citation": "Shaheen, Iqra; Chen, Shih-Hsuan; Lee, Yu-Xian; Chiu, Wei-Hao; Lin, Ting-Han; GokulKumar, Kumar; Varatharajan, P.; Hsu, Jen-Fu; Chen, Gao; Lee, Kun-Mu. Coupled morphology and phase regulation of in-situ grown TiO2 nanostructures on graphite felt for enhanced redox kinetics in vanadium redox flow batteries. Chemical Engineering Journal, 549, 183177 (2026). https://doi.org/10.1016/j.cej.2026.183177",
+    "authorships": [
+      {
+        "name": "Shaheen, Iqra",
+        "orcid": "0009-0000-7193-2962",
+        "openAlexId": "A5121757482",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [
+          "aff-1"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": false,
+        "correspondingEmail": "",
+        "sources": [
+          "crossref",
+          "openalex"
+        ]
+      },
+      {
+        "name": "Chen, Shih-Hsuan",
+        "orcid": "0009-0009-7913-4397",
+        "openAlexId": "A5102853858",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff-2"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": false,
+        "correspondingEmail": "",
+        "sources": [
+          "crossref",
+          "openalex"
+        ]
+      },
+      {
+        "name": "Lee, Yu-Xian",
+        "orcid": "",
+        "openAlexId": "A5136669543",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff-3",
+          "aff-1",
+          "aff-4",
+          "aff-5"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": false,
+        "correspondingEmail": "",
+        "sources": [
+          "crossref",
+          "openalex"
+        ]
+      },
+      {
+        "name": "Chiu, Wei-Hao",
+        "orcid": "0000-0003-4484-3117",
+        "openAlexId": "A5007707999",
+        "authorOrder": 4,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff-1"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": false,
+        "correspondingEmail": "",
+        "sources": [
+          "crossref",
+          "openalex"
+        ]
+      },
+      {
+        "name": "Lin, Ting-Han",
+        "orcid": "",
+        "openAlexId": "A5100968769",
+        "authorOrder": 5,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff-1"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": false,
+        "correspondingEmail": "",
+        "sources": [
+          "crossref",
+          "openalex"
+        ]
+      },
+      {
+        "name": "GokulKumar, Kumar",
+        "orcid": "0009-0008-1944-7116",
+        "openAlexId": "A5011305749",
+        "authorOrder": 6,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff-1"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": false,
+        "correspondingEmail": "",
+        "sources": [
+          "crossref",
+          "openalex"
+        ]
+      },
+      {
+        "name": "Varatharajan, P.",
+        "orcid": "",
+        "openAlexId": "A5034281992",
+        "authorOrder": 7,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff-1"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": false,
+        "correspondingEmail": "",
+        "sources": [
+          "crossref",
+          "openalex"
+        ]
+      },
+      {
+        "name": "Hsu, Jen-Fu",
+        "orcid": "",
+        "openAlexId": "A5121795075",
+        "authorOrder": 8,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff-3",
+          "aff-4"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": false,
+        "correspondingEmail": "",
+        "sources": [
+          "crossref",
+          "openalex"
+        ]
+      },
+      {
+        "name": "Chen, Gao",
+        "orcid": "",
+        "openAlexId": "A5126744430",
+        "authorOrder": 9,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff-2"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": false,
+        "correspondingEmail": "",
+        "sources": [
+          "crossref",
+          "openalex"
+        ]
+      },
+      {
+        "name": "Lee, Kun-Mu",
+        "orcid": "",
+        "openAlexId": "A5158908962",
+        "authorOrder": 10,
+        "authorPosition": "last",
+        "affiliationIds": [
+          "aff-3",
+          "aff-1",
+          "aff-4",
+          "aff-5"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": true,
+        "correspondingEmail": "",
+        "sources": [
+          "crossref",
+          "openalex"
+        ]
+      }
+    ],
+    "affiliations": [
+      {
+        "id": "aff-1",
+        "label": "a",
+        "department": "",
+        "institution": "Chang Gung University",
+        "address": "Chang Gung University",
+        "city": "",
+        "countryCode": "TW",
+        "raw": "Chang Gung University",
+        "source": "openalex",
+        "sourceId": "https://openalex.org/I173093425"
+      },
+      {
+        "id": "aff-2",
+        "label": "b",
+        "department": "",
+        "institution": "Hong Kong Polytechnic University",
+        "address": "Hong Kong Polytechnic University",
+        "city": "",
+        "countryCode": "HK",
+        "raw": "Hong Kong Polytechnic University",
+        "source": "openalex",
+        "sourceId": "https://openalex.org/I14243506"
+      },
+      {
+        "id": "aff-3",
+        "label": "c",
+        "department": "",
+        "institution": "Chang Gung Memorial Hospital",
+        "address": "Chang Gung Memorial Hospital",
+        "city": "",
+        "countryCode": "TW",
+        "raw": "Chang Gung Memorial Hospital",
+        "source": "openalex",
+        "sourceId": "https://openalex.org/I3020100970"
+      },
+      {
+        "id": "aff-4",
+        "label": "d",
+        "department": "",
+        "institution": "Linkou Chang Gung Memorial Hospital",
+        "address": "Linkou Chang Gung Memorial Hospital",
+        "city": "",
+        "countryCode": "TW",
+        "raw": "Linkou Chang Gung Memorial Hospital",
+        "source": "openalex",
+        "sourceId": "https://openalex.org/I4210116208"
+      },
+      {
+        "id": "aff-5",
+        "label": "e",
+        "department": "",
+        "institution": "Ming Chi University of Technology",
+        "address": "Ming Chi University of Technology",
+        "city": "",
+        "countryCode": "TW",
+        "raw": "Ming Chi University of Technology",
+        "source": "openalex",
+        "sourceId": "https://openalex.org/I12213908"
+      }
+    ],
+    "authorshipMetadata": {
+      "status": "partial",
+      "lastChecked": "2026-10-23",
+      "sources": [
+        "crossref",
+        "openalex"
+      ],
+      "sourceUrls": {
+        "crossref": "https://api.crossref.org/works/10.1016%2Fj.cej.2026.183177",
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1016%2Fj.cej.2026.183177"
+      },
+      "requiresManualReview": true,
+      "missingFields": [
+        "equalContribution",
+        "affiliationAddresses"
+      ],
+      "warnings": []
+    },
+    "internationalCollaboration": {
+      "status": "international",
+      "isInternational": true,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "HK",
+        "TW"
+      ],
+      "partnerCountryCodes": [
+        "HK"
+      ],
+      "partnerInstitutions": [
+        {
+          "name": "Hong Kong Polytechnic University",
+          "countryCode": "HK",
+          "ror": ""
+        }
+      ],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-3",
+        "aff-4",
+        "aff-5"
+      ],
+      "foreignAffiliationIds": [
+        "aff-2"
+      ],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "crossref",
+        "openalex"
+      ],
+      "evidenceUrls": {
+        "crossref": "https://api.crossref.org/works/10.1016%2Fj.cej.2026.183177",
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1016%2Fj.cej.2026.183177"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-10-23",
+      "inputSignature": "569c8010c2bd628ff2b9"
+    }
+  },
+  {
     "date": "2026-07",
     "authors": [
       "Rao, Harini Srikanth",

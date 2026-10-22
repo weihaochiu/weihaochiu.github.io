@@ -460,6 +460,12 @@
     "10.1016/j.optcom.2004.10.003": {
       "category": "Other",
       "subtopics": []
+    },
+    "10.1016/j.cej.2026.183177": {
+      "category": "RFB",
+      "subtopics": [
+        "VRFB: Electrodes"
+      ]
     }
   }
 }

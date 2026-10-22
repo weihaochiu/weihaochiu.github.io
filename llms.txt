@@ -38,6 +38,7 @@
 
 ### International Journal Publications
 
+- [Coupled morphology and phase regulation of in-situ grown TiO2 nanostructures on graphite felt for enhanced redox kinetics in vanadium redox flow batteries](https://weihaochiu.github.io/publications/10-1016-j-cej-2026-183177.html) — Chemical Engineering Journal, 2026; DOI: 10.1016/j.cej.2026.183177
 - [Reliability enhancement of PVDF-HFP modified perovskite solar cells under synergistic space-relevant stress conditions](https://weihaochiu.github.io/publications/10-1016-j-cej-2026-177494.html) — Chemical Engineering Journal, 2026; DOI: 10.1016/j.cej.2026.177494
 - [2T Perovskite Tandem Solar Cells in Space: Failure Mechanisms and Design Strategies](https://weihaochiu.github.io/publications/10-1016-j-mtener-2026-102359.html) — Materials Today Energy, 2026; DOI: 10.1016/j.mtener.2026.102359
 - [Synergistic preheating and moderate temperature liquid medium annealing for high performance perovskite solar cells](https://weihaochiu.github.io/publications/10-1016-j-solener-2026-114430.html) — Solar Energy, 2026; DOI: 10.1016/j.solener.2026.114430

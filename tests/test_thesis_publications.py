@@ -58,10 +58,10 @@ class ThesisPublicationTests(unittest.TestCase):
             for row in self.publications
             if row.get("analytics", {}).get("journalMetrics") is True
         ]
-        self.assertEqual(42, len(self.publications))
-        self.assertEqual(40, len(research))
-        self.assertEqual(37, len(core))
-        self.assertEqual(37, len(journal_metrics))
+        self.assertEqual(43, len(self.publications))
+        self.assertEqual(41, len(research))
+        self.assertEqual(38, len(core))
+        self.assertEqual(38, len(journal_metrics))
         self.assertEqual(2, len(self.theses))
 
     def test_theses_are_protected_doi_less_display_records(self):

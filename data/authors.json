@@ -4145,5 +4145,41 @@
       "https://www.linkedin.com/in/alexhsulove/"
     ],
     "contributionTypes": ["patent-inventor"]
+  },
+  {
+    "id": "gokulkumar-kumar",
+    "name": "GokulKumar, Kumar",
+    "displayName": "GokulKumar, Kumar",
+    "nameZh": "",
+    "aliases": [],
+    "role": "",
+    "currentPosition": "",
+    "affiliation": "",
+    "affiliationZh": "",
+    "email": [],
+    "telephone": "",
+    "orcid": "",
+    "links": {},
+    "status": "pending",
+    "lastVerified": "",
+    "sources": []
+  },
+  {
+    "id": "varatharajan-p",
+    "name": "Varatharajan, P.",
+    "displayName": "Varatharajan, P.",
+    "nameZh": "",
+    "aliases": [],
+    "role": "",
+    "currentPosition": "",
+    "affiliation": "",
+    "affiliationZh": "",
+    "email": [],
+    "telephone": "",
+    "orcid": "",
+    "links": {},
+    "status": "pending",
+    "lastVerified": "",
+    "sources": []
   }
 ]
