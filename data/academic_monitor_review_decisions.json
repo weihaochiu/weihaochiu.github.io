@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-03T18:30:12Z",
+  "updatedAt": "2026-10-22T21:49:13.769Z",
   "decisions": [
     {
       "reviewKey": "publication:title:branchedznonanowiresforenhancingenergyconversionefficiencyofdyesensitizedsolarcells",
@@ -100,6 +100,1477 @@
       "publicationTypeManuallyChanged": false,
       "publicationTypeConfidence": "high",
       "publicationTypeReason": "Journal article with Chinese title, source, or language metadata."
+    },
+    {
+      "reviewKey": "patent:number:EP3678292A1",
+      "status": "confirmed_not_mine",
+      "statusLabel": "已確認非本人的",
+      "recordType": "patent",
+      "targetFile": "data/patents.json",
+      "userNote": "",
+      "reviewedAt": "2026-10-22T21:45:12.123Z",
+      "record": {
+        "type": "patent",
+        "confidence": "possible",
+        "canonicalId": "EP3678292A1",
+        "number": "EP3678292A1",
+        "titleEn": "Magnetically pumped voltage controlled oscillator",
+        "titleZh": "",
+        "inventorsEn": [
+          "Yu-Li Hsueh",
+          "Po-Chun Huang",
+          "Ang-Sheng Lin",
+          "Wei-Hao Chiu",
+          "MediaTek Inc"
+        ],
+        "inventorsZh": "",
+        "assigneeEn": "",
+        "assigneeZh": "",
+        "jurisdiction": "European Patent Office",
+        "applicationNumber": "EP192104149A",
+        "priorityDate": "",
+        "filingDate": "2019-11-20",
+        "publicationDate": "",
+        "grantDate": "2026-05-06",
+        "documentStage": "Granted",
+        "legalStatus": "Granted",
+        "status": "Granted",
+        "abstract": "A voltage controlled oscillator includes a first inductor, a second inductor, a first metal oxide semiconductor (MOS) transistor, a second MOS transistor, and an inductor-capacitor (LC) tank circuit. A first end of the first inductor and a first end of the second inductor are coupled to a first power rail. A drain node of the first MOS transistor is coupled to a second end of the first inductor. A drain node of the second MOS transistor is coupled to a second end of the second inductor. Source nodes of the first MOS transistor and the second MOS transistor are coupled to a second power rail. The LC tank circuit is coupled to gate nodes of the first MOS transistor and the second MOS transistor, wherein energy is magnetically pumped into the LC tank circuit through the first inductor and the second inductor.",
+        "classifications": [
+          "de",
+          "fr",
+          "H",
+          "H03",
+          "H03B",
+          "H03B5/00",
+          "H03B5/08",
+          "H03B5/12",
+          "H03B5/1228",
+          "H03B5/1206",
+          "H03B5/1212",
+          "H03B5/1218",
+          "H03B5/1231",
+          "H03B5/1296",
+          "H03L",
+          "H03L7/00",
+          "H03L7/06",
+          "H03L7/08",
+          "H03L7/099"
+        ],
+        "detectionNotes": [
+          "The publication number is not an alias of a verified record in patents.json.",
+          "The exact patent page lists Wei-Hao Chiu or 邱偉豪 as an inventor.",
+          "Name matching can still include a different person with the same name; verify assignee and technical field."
+        ],
+        "sources": [
+          {
+            "name": "Google Patents exact record",
+            "url": "https://patents.google.com/patent/EP3678292A1/en"
+          },
+          {
+            "name": "Google Patents search",
+            "url": "https://patents.google.com/?q=inventor%3D%22Wei-Hao+Chiu%22"
+          },
+          {
+            "name": "TIPO search",
+            "url": "https://twpat1.tipo.gov.tw/twpatc/twpatkm"
+          },
+          {
+            "name": "Espacenet",
+            "url": "https://worldwide.espacenet.com/"
+          },
+          {
+            "name": "WIPO PATENTSCOPE",
+            "url": "https://patentscope.wipo.int/search/en/search.jsf"
+          }
+        ],
+        "reviewKey": "patent:number:EP3678292A1"
+      }
+    },
+    {
+      "reviewKey": "patent:number:EP3910799B1",
+      "status": "confirmed_not_mine",
+      "statusLabel": "已確認非本人的",
+      "recordType": "patent",
+      "targetFile": "data/patents.json",
+      "userNote": "",
+      "reviewedAt": "2026-10-22T21:45:20.202Z",
+      "record": {
+        "type": "patent",
+        "confidence": "possible",
+        "canonicalId": "EP3910799B1",
+        "number": "EP3910799B1",
+        "titleEn": "Phase-locked loop circuit and digital-to-time convertor error cancelation method thereof",
+        "titleZh": "",
+        "inventorsEn": [
+          "Wei-Hao Chiu",
+          "Ang-Sheng Lin",
+          "Tzu-Chan Chueh",
+          "MediaTek Inc"
+        ],
+        "inventorsZh": "",
+        "assigneeEn": "",
+        "assigneeZh": "",
+        "jurisdiction": "European Patent Office",
+        "applicationNumber": "EP211737622A",
+        "priorityDate": "",
+        "filingDate": "2021-05-13",
+        "publicationDate": "",
+        "grantDate": "2025-11-12",
+        "documentStage": "Granted",
+        "legalStatus": "Active",
+        "status": "Granted",
+        "abstract": "",
+        "classifications": [
+          "de",
+          "fr",
+          "H",
+          "H03",
+          "H03L",
+          "H03L7/00",
+          "H03L7/06",
+          "H03L7/08",
+          "H03L7/085",
+          "H03L7/087",
+          "G",
+          "G04",
+          "G04F",
+          "G04F10/00",
+          "G04F10/005",
+          "H03L7/081"
+        ],
+        "detectionNotes": [
+          "The publication number is not an alias of a verified record in patents.json.",
+          "The exact patent page lists Wei-Hao Chiu or 邱偉豪 as an inventor.",
+          "Name matching can still include a different person with the same name; verify assignee and technical field."
+        ],
+        "sources": [
+          {
+            "name": "Google Patents exact record",
+            "url": "https://patents.google.com/patent/EP3910799B1/en"
+          },
+          {
+            "name": "Google Patents search",
+            "url": "https://patents.google.com/?q=inventor%3D%22Wei-Hao+Chiu%22"
+          },
+          {
+            "name": "TIPO search",
+            "url": "https://twpat1.tipo.gov.tw/twpatc/twpatkm"
+          },
+          {
+            "name": "Espacenet",
+            "url": "https://worldwide.espacenet.com/"
+          },
+          {
+            "name": "WIPO PATENTSCOPE",
+            "url": "https://patentscope.wipo.int/search/en/search.jsf"
+          }
+        ],
+        "reviewKey": "patent:number:EP3910799B1"
+      }
+    },
+    {
+      "reviewKey": "patent:number:TWI884762B",
+      "status": "confirmed_not_mine",
+      "statusLabel": "已確認非本人的",
+      "recordType": "patent",
+      "targetFile": "data/patents.json",
+      "userNote": "",
+      "reviewedAt": "2026-10-22T21:45:26.468Z",
+      "record": {
+        "type": "patent",
+        "confidence": "possible",
+        "canonicalId": "TWI884762B",
+        "number": "TWI884762B",
+        "titleEn": "Switch matching lighting control system and switch matching method",
+        "titleZh": "",
+        "inventorsEn": [
+          "邱偉豪",
+          "李泌翰",
+          "旭谷科技有限公司"
+        ],
+        "inventorsZh": "",
+        "assigneeEn": "",
+        "assigneeZh": "",
+        "jurisdiction": "Taiwan",
+        "applicationNumber": "TW113113761A",
+        "priorityDate": "",
+        "filingDate": "2024-04-12",
+        "publicationDate": "",
+        "grantDate": "2025-05-21",
+        "documentStage": "Granted",
+        "legalStatus": "",
+        "status": "Granted",
+        "abstract": "A switch pairing lighting control system and a switch pairing method are provided. The switch pairing method is executed in a microcontroller unit, and the microcontroller unit is electrically connected to a pairing key. The switch pairing method includes: determining whether the pairing key is pressed; when determining that the pairing key is pressed, the microcontroller unit enters a pairing mode, and in the pairing mode, the microcontroller unit receives at least one selection key number from another microcontroller unit, and receives at least one key number from another microcontroller unit to establish pairing information of the at least one selection key number and the at least one key number; wherein each selection key number corresponds to a lamp, and each key number corresponds to a key on a switch panel.",
+        "classifications": [
+          "zh"
+        ],
+        "detectionNotes": [
+          "The publication number is not an alias of a verified record in patents.json.",
+          "The exact patent page lists Wei-Hao Chiu or 邱偉豪 as an inventor.",
+          "Name matching can still include a different person with the same name; verify assignee and technical field."
+        ],
+        "sources": [
+          {
+            "name": "Google Patents exact record",
+            "url": "https://patents.google.com/patent/TWI884762B/en"
+          },
+          {
+            "name": "Google Patents search",
+            "url": "https://patents.google.com/?q=inventor%3D%22%E9%82%B1%E5%81%89%E8%B1%AA%22"
+          },
+          {
+            "name": "TIPO search",
+            "url": "https://twpat1.tipo.gov.tw/twpatc/twpatkm"
+          },
+          {
+            "name": "Espacenet",
+            "url": "https://worldwide.espacenet.com/"
+          },
+          {
+            "name": "WIPO PATENTSCOPE",
+            "url": "https://patentscope.wipo.int/search/en/search.jsf"
+          }
+        ],
+        "reviewKey": "patent:number:TWI884762B"
+      }
+    },
+    {
+      "reviewKey": "patent:number:TW202341510A",
+      "status": "confirmed_mine",
+      "statusLabel": "已確認是本人的",
+      "recordType": "patent",
+      "targetFile": "data/patents.json",
+      "userNote": "",
+      "reviewedAt": "2026-10-22T21:45:35.233Z",
+      "record": {
+        "type": "patent",
+        "confidence": "possible",
+        "canonicalId": "TW202341510A",
+        "number": "TW202341510A",
+        "titleEn": "Solar cell module having groove structure and manufacturing method thereof",
+        "titleZh": "",
+        "inventorsEn": [
+          "李坤穆",
+          "邱偉豪",
+          "賴朝松",
+          "長庚大學"
+        ],
+        "inventorsZh": "",
+        "assigneeEn": "",
+        "assigneeZh": "",
+        "jurisdiction": "Taiwan",
+        "applicationNumber": "TW111113520A",
+        "priorityDate": "",
+        "filingDate": "2022-04-08",
+        "publicationDate": "",
+        "grantDate": "2024-08-11",
+        "documentStage": "Granted",
+        "legalStatus": "",
+        "status": "Granted",
+        "abstract": "The present invention discloses a solar cell module having groove structure and manufacturing method thereof. The groove structure of the solar cell module sinks into the substrate. The groove structure may be filled with the electrode which is regarded as the bottom wire embedded inside the substrate. Therefore, the solar cell layer and the top wire layer of the solar cell module having groove structure of the present invention may be directly manufactured on the entire surface of the transparent conductive layer, significantly increasing the energy conversion space and energy conversion efficiency.",
+        "classifications": [
+          "zh"
+        ],
+        "detectionNotes": [
+          "The publication number is not an alias of a verified record in patents.json.",
+          "The exact patent page lists Wei-Hao Chiu or 邱偉豪 as an inventor.",
+          "Name matching can still include a different person with the same name; verify assignee and technical field."
+        ],
+        "sources": [
+          {
+            "name": "Google Patents exact record",
+            "url": "https://patents.google.com/patent/TW202341510A/en"
+          },
+          {
+            "name": "Google Patents search",
+            "url": "https://patents.google.com/?q=inventor%3D%22%E9%82%B1%E5%81%89%E8%B1%AA%22"
+          },
+          {
+            "name": "TIPO search",
+            "url": "https://twpat1.tipo.gov.tw/twpatc/twpatkm"
+          },
+          {
+            "name": "Espacenet",
+            "url": "https://worldwide.espacenet.com/"
+          },
+          {
+            "name": "WIPO PATENTSCOPE",
+            "url": "https://patentscope.wipo.int/search/en/search.jsf"
+          }
+        ],
+        "reviewKey": "patent:number:TW202341510A"
+      }
+    },
+    {
+      "reviewKey": "patent:number:EP3893389A1",
+      "status": "confirmed_not_mine",
+      "statusLabel": "已確認非本人的",
+      "recordType": "patent",
+      "targetFile": "data/patents.json",
+      "userNote": "",
+      "reviewedAt": "2026-10-22T21:45:40.053Z",
+      "record": {
+        "type": "patent",
+        "confidence": "possible",
+        "canonicalId": "EP3893389A1",
+        "number": "EP3893389A1",
+        "titleEn": "Inductor-capacitor oscillator with embedded second harmonic filter and associated dual core oscillator",
+        "titleZh": "",
+        "inventorsEn": [
+          "Hao-Wei Huang",
+          "Ang-Sheng Lin",
+          "Wei-Hao Chiu",
+          "MediaTek Inc"
+        ],
+        "inventorsZh": "",
+        "assigneeEn": "",
+        "assigneeZh": "",
+        "jurisdiction": "European Patent Office",
+        "applicationNumber": "EP202164232A",
+        "priorityDate": "",
+        "filingDate": "2020-12-22",
+        "publicationDate": "",
+        "grantDate": "2024-05-29",
+        "documentStage": "Granted",
+        "legalStatus": "Granted",
+        "status": "Granted",
+        "abstract": "An inductor-capacitor (LC) oscillator with an embedded second harmonic filter and an associated dual core oscillator are provided. The LC oscillator includes a first transistor, a second transistor, a first part-one inductor, a second part-one inductor, a part-one capacitor, a part-two inductor and at least one part-two capacitor. A first end of the first part-one inductor and a first end of the second part-one inductor are coupled to gate terminals of the second transistor and the first transistor, respectively. The part-one capacitor is coupled between the first end of the first part-one inductor and the first end of the second part-one inductor. The part-two inductor is coupled between a second end of the first part-one inductor and a second end of the second part-one inductor. The at least one part-two capacitor is coupled to drain terminals of the first transistor and the second transistor.",
+        "classifications": [
+          "de",
+          "fr",
+          "H",
+          "H03",
+          "H03B",
+          "H03B5/00",
+          "H03B5/08",
+          "H03B5/12",
+          "H03B5/1206",
+          "H03B5/1212",
+          "H03B5/1228",
+          "H03B5/02",
+          "H03B5/04",
+          "H03B1/00",
+          "H03B1/04",
+          "H03B2200/00",
+          "H03B2200/006",
+          "H03B2200/007",
+          "H03B2200/0076",
+          "H03B2200/0088",
+          "H03B2200/009",
+          "H03B2202/00",
+          "H03B2202/05"
+        ],
+        "detectionNotes": [
+          "The publication number is not an alias of a verified record in patents.json.",
+          "The exact patent page lists Wei-Hao Chiu or 邱偉豪 as an inventor.",
+          "Name matching can still include a different person with the same name; verify assignee and technical field."
+        ],
+        "sources": [
+          {
+            "name": "Google Patents exact record",
+            "url": "https://patents.google.com/patent/EP3893389A1/en"
+          },
+          {
+            "name": "Google Patents search",
+            "url": "https://patents.google.com/?q=inventor%3D%22Wei-Hao+Chiu%22"
+          },
+          {
+            "name": "TIPO search",
+            "url": "https://twpat1.tipo.gov.tw/twpatc/twpatkm"
+          },
+          {
+            "name": "Espacenet",
+            "url": "https://worldwide.espacenet.com/"
+          },
+          {
+            "name": "WIPO PATENTSCOPE",
+            "url": "https://patentscope.wipo.int/search/en/search.jsf"
+          }
+        ],
+        "reviewKey": "patent:number:EP3893389A1"
+      }
+    },
+    {
+      "reviewKey": "patent:number:US10425038B2",
+      "status": "confirmed_not_mine",
+      "statusLabel": "已確認非本人的",
+      "recordType": "patent",
+      "targetFile": "data/patents.json",
+      "userNote": "",
+      "reviewedAt": "2026-10-22T21:45:43.927Z",
+      "record": {
+        "type": "patent",
+        "confidence": "possible",
+        "canonicalId": "US10425038B2",
+        "number": "US10425038B2",
+        "titleEn": "LC-tank oscillator having intrinsic low-pass filter",
+        "titleZh": "",
+        "inventorsEn": [
+          "Wei-Hao Chiu",
+          "Tzu-Chan Chueh",
+          "Ang-Sheng Lin",
+          "MediaTek Inc"
+        ],
+        "inventorsZh": "",
+        "assigneeEn": "",
+        "assigneeZh": "",
+        "jurisdiction": "United States",
+        "applicationNumber": "US15262003",
+        "priorityDate": "",
+        "filingDate": "2016-09-11",
+        "publicationDate": "",
+        "grantDate": "2019-09-24",
+        "documentStage": "Granted",
+        "legalStatus": "Active",
+        "status": "Granted",
+        "abstract": "An oscillator for generating oscillation signals at two output terminals includes an inductor coupled between the two output terminals, a capacitor coupled between the two output terminals, two P-type transistors and two N-type transistors. Source electrodes of the two P-type transistors are coupled to a supply voltage, and gate electrodes of the two P-type transistors are coupled to the two output terminals, respectively. Source electrodes of the two N-type transistors are coupled to a supply voltage, gate electrodes of the two N-type transistors are coupled to the two output terminals, respectively, and drain electrodes of the two N-type transistors are coupled to drain electrodes of the two P-type transistors, respectively. In addition, the drain electrodes of the two N-type transistors are coupled to two internal nodes of the inductor.",
+        "classifications": [
+          "H",
+          "H03",
+          "H03B",
+          "H03B5/00",
+          "H03B5/08",
+          "H03B5/12",
+          "H03B5/1206",
+          "H03B5/1212",
+          "H03B5/1228",
+          "H03B5/1237",
+          "H03B5/1262",
+          "H03B5/1268",
+          "H03B2200/00",
+          "H03B2200/006",
+          "H03B2200/0082"
+        ],
+        "detectionNotes": [
+          "The publication number is not an alias of a verified record in patents.json.",
+          "The exact patent page lists Wei-Hao Chiu or 邱偉豪 as an inventor.",
+          "Name matching can still include a different person with the same name; verify assignee and technical field."
+        ],
+        "sources": [
+          {
+            "name": "Google Patents exact record",
+            "url": "https://patents.google.com/patent/US10425038B2/en"
+          },
+          {
+            "name": "Google Patents search",
+            "url": "https://patents.google.com/?q=inventor%3D%22Wei-Hao+Chiu%22"
+          },
+          {
+            "name": "TIPO search",
+            "url": "https://twpat1.tipo.gov.tw/twpatc/twpatkm"
+          },
+          {
+            "name": "Espacenet",
+            "url": "https://worldwide.espacenet.com/"
+          },
+          {
+            "name": "WIPO PATENTSCOPE",
+            "url": "https://patentscope.wipo.int/search/en/search.jsf"
+          }
+        ],
+        "reviewKey": "patent:number:US10425038B2"
+      }
+    },
+    {
+      "reviewKey": "patent:number:US9948265B2",
+      "status": "confirmed_not_mine",
+      "statusLabel": "已確認非本人的",
+      "recordType": "patent",
+      "targetFile": "data/patents.json",
+      "userNote": "",
+      "reviewedAt": "2026-10-22T21:45:48.671Z",
+      "record": {
+        "type": "patent",
+        "confidence": "possible",
+        "canonicalId": "US9948265B2",
+        "number": "US9948265B2",
+        "titleEn": "Inductor capacitor tank for resonator",
+        "titleZh": "",
+        "inventorsEn": [
+          "Kun-Yin WANG",
+          "Wei-Hao Chiu",
+          "Ang-Sheng Lin",
+          "MediaTek Inc"
+        ],
+        "inventorsZh": "",
+        "assigneeEn": "",
+        "assigneeZh": "",
+        "jurisdiction": "United States",
+        "applicationNumber": "US15050436",
+        "priorityDate": "",
+        "filingDate": "2016-02-22",
+        "publicationDate": "",
+        "grantDate": "2018-04-17",
+        "documentStage": "Granted",
+        "legalStatus": "Active",
+        "status": "Granted",
+        "abstract": "An inductor capacitor (LC) tank includes a first inductor and a first tunable capacitive array. The first inductor has a first terminal and a second terminal, and the first tunable capacitive array has a first terminal and a second terminal. The first tunable capacitive array is at a path branching from a first point between the first terminal and the second terminal of the first inductor, the first terminal of the first tunable capacitive array is coupled to the first point, and the second terminal of the first tunable capacitive array and the second terminal of the first inductor are coupled to a reference voltage.",
+        "classifications": [
+          "H",
+          "H03",
+          "H03B",
+          "H03B5/00",
+          "H03B5/18",
+          "H03H",
+          "H03H7/00",
+          "H03H7/01",
+          "H03H7/0115",
+          "H03H5/00",
+          "H03H5/12",
+          "H01",
+          "H01F",
+          "H01F17/00",
+          "H01F17/0006",
+          "H01F2017/0073"
+        ],
+        "detectionNotes": [
+          "The publication number is not an alias of a verified record in patents.json.",
+          "The exact patent page lists Wei-Hao Chiu or 邱偉豪 as an inventor.",
+          "Name matching can still include a different person with the same name; verify assignee and technical field."
+        ],
+        "sources": [
+          {
+            "name": "Google Patents exact record",
+            "url": "https://patents.google.com/patent/US9948265B2/en"
+          },
+          {
+            "name": "Google Patents search",
+            "url": "https://patents.google.com/?q=inventor%3D%22Wei-Hao+Chiu%22"
+          },
+          {
+            "name": "TIPO search",
+            "url": "https://twpat1.tipo.gov.tw/twpatc/twpatkm"
+          },
+          {
+            "name": "Espacenet",
+            "url": "https://worldwide.espacenet.com/"
+          },
+          {
+            "name": "WIPO PATENTSCOPE",
+            "url": "https://patentscope.wipo.int/search/en/search.jsf"
+          }
+        ],
+        "reviewKey": "patent:number:US9948265B2"
+      }
+    },
+    {
+      "reviewKey": "patent:number:TWI592090B",
+      "status": "confirmed_not_mine",
+      "statusLabel": "已確認非本人的",
+      "recordType": "patent",
+      "targetFile": "data/patents.json",
+      "userNote": "",
+      "reviewedAt": "2026-10-22T21:45:58.821Z",
+      "record": {
+        "type": "patent",
+        "confidence": "possible",
+        "canonicalId": "TWI592090B",
+        "number": "TWI592090B",
+        "titleEn": "Plant harvesting method, plant harvesting system and plant harvesting device",
+        "titleZh": "",
+        "inventorsEn": [
+          "邱偉豪",
+          "陳柏翰",
+          "金寶生物科技股份有限公司"
+        ],
+        "inventorsZh": "",
+        "assigneeEn": "",
+        "assigneeZh": "",
+        "jurisdiction": "Taiwan",
+        "applicationNumber": "TW104139599A",
+        "priorityDate": "",
+        "filingDate": "2015-11-27",
+        "publicationDate": "",
+        "grantDate": "2017-07-21",
+        "documentStage": "Granted",
+        "legalStatus": "",
+        "status": "Granted",
+        "abstract": "",
+        "classifications": [
+          "zh"
+        ],
+        "detectionNotes": [
+          "The publication number is not an alias of a verified record in patents.json.",
+          "The exact patent page lists Wei-Hao Chiu or 邱偉豪 as an inventor.",
+          "Name matching can still include a different person with the same name; verify assignee and technical field."
+        ],
+        "sources": [
+          {
+            "name": "Google Patents exact record",
+            "url": "https://patents.google.com/patent/TWI592090B/en"
+          },
+          {
+            "name": "Google Patents search",
+            "url": "https://patents.google.com/?q=inventor%3D%22%E9%82%B1%E5%81%89%E8%B1%AA%22"
+          },
+          {
+            "name": "TIPO search",
+            "url": "https://twpat1.tipo.gov.tw/twpatc/twpatkm"
+          },
+          {
+            "name": "Espacenet",
+            "url": "https://worldwide.espacenet.com/"
+          },
+          {
+            "name": "WIPO PATENTSCOPE",
+            "url": "https://patentscope.wipo.int/search/en/search.jsf"
+          }
+        ],
+        "reviewKey": "patent:number:TWI592090B"
+      }
+    },
+    {
+      "reviewKey": "patent:number:EP2947775B1",
+      "status": "confirmed_not_mine",
+      "statusLabel": "已確認非本人的",
+      "recordType": "patent",
+      "targetFile": "data/patents.json",
+      "userNote": "",
+      "reviewedAt": "2026-10-22T21:46:03.045Z",
+      "record": {
+        "type": "patent",
+        "confidence": "possible",
+        "canonicalId": "EP2947775B1",
+        "number": "EP2947775B1",
+        "titleEn": "Charge pump with wide operating range",
+        "titleZh": "",
+        "inventorsEn": [
+          "Wei-Hao Chiu",
+          "Ang-Sheng Lin",
+          "MediaTek Inc"
+        ],
+        "inventorsZh": "",
+        "assigneeEn": "",
+        "assigneeZh": "",
+        "jurisdiction": "European Patent Office",
+        "applicationNumber": "EP151588589A",
+        "priorityDate": "",
+        "filingDate": "2015-03-12",
+        "publicationDate": "",
+        "grantDate": "2016-09-21",
+        "documentStage": "Granted",
+        "legalStatus": "Active",
+        "status": "Granted",
+        "abstract": "",
+        "classifications": [
+          "de",
+          "fr",
+          "H",
+          "H03",
+          "H03L",
+          "H03L7/00",
+          "H03L7/06",
+          "H03L7/08",
+          "H03L7/085",
+          "H03L7/089",
+          "H03L7/0891",
+          "H03L7/0895",
+          "H02",
+          "H02M",
+          "H02M3/00",
+          "H02M3/02",
+          "H02M3/04",
+          "H02M3/06",
+          "H02M3/07",
+          "H03L7/0896",
+          "H02M1/00",
+          "H02M1/0003",
+          "H02M1/0025"
+        ],
+        "detectionNotes": [
+          "The publication number is not an alias of a verified record in patents.json.",
+          "The exact patent page lists Wei-Hao Chiu or 邱偉豪 as an inventor.",
+          "Name matching can still include a different person with the same name; verify assignee and technical field."
+        ],
+        "sources": [
+          {
+            "name": "Google Patents exact record",
+            "url": "https://patents.google.com/patent/EP2947775B1/en"
+          },
+          {
+            "name": "Google Patents search",
+            "url": "https://patents.google.com/?q=inventor%3D%22Wei-Hao+Chiu%22"
+          },
+          {
+            "name": "TIPO search",
+            "url": "https://twpat1.tipo.gov.tw/twpatc/twpatkm"
+          },
+          {
+            "name": "Espacenet",
+            "url": "https://worldwide.espacenet.com/"
+          },
+          {
+            "name": "WIPO PATENTSCOPE",
+            "url": "https://patentscope.wipo.int/search/en/search.jsf"
+          }
+        ],
+        "reviewKey": "patent:number:EP2947775B1"
+      }
+    },
+    {
+      "reviewKey": "patent:number:TWI531307B",
+      "status": "confirmed_not_mine",
+      "statusLabel": "已確認非本人的",
+      "recordType": "patent",
+      "targetFile": "data/patents.json",
+      "userNote": "",
+      "reviewedAt": "2026-10-22T21:46:08.544Z",
+      "record": {
+        "type": "patent",
+        "confidence": "possible",
+        "canonicalId": "TWI531307B",
+        "number": "TWI531307B",
+        "titleEn": "Water-level adjusting method, a water-level adjusting apparatus and a plant cultivating apparatus",
+        "titleZh": "",
+        "inventorsEn": [
+          "邱偉豪",
+          "金寶生物科技股份有限公司"
+        ],
+        "inventorsZh": "",
+        "assigneeEn": "",
+        "assigneeZh": "",
+        "jurisdiction": "Taiwan",
+        "applicationNumber": "TW104131439A",
+        "priorityDate": "",
+        "filingDate": "2015-09-23",
+        "publicationDate": "",
+        "grantDate": "2016-05-01",
+        "documentStage": "Granted",
+        "legalStatus": "",
+        "status": "Granted",
+        "abstract": "",
+        "classifications": [
+          "zh",
+          "Y",
+          "Y02",
+          "Y02P",
+          "Y02P60/00",
+          "Y02P60/20",
+          "Y02P60/21"
+        ],
+        "detectionNotes": [
+          "The publication number is not an alias of a verified record in patents.json.",
+          "The exact patent page lists Wei-Hao Chiu or 邱偉豪 as an inventor.",
+          "Name matching can still include a different person with the same name; verify assignee and technical field."
+        ],
+        "sources": [
+          {
+            "name": "Google Patents exact record",
+            "url": "https://patents.google.com/patent/TWI531307B/en"
+          },
+          {
+            "name": "Google Patents search",
+            "url": "https://patents.google.com/?q=inventor%3D%22%E9%82%B1%E5%81%89%E8%B1%AA%22"
+          },
+          {
+            "name": "TIPO search",
+            "url": "https://twpat1.tipo.gov.tw/twpatc/twpatkm"
+          },
+          {
+            "name": "Espacenet",
+            "url": "https://worldwide.espacenet.com/"
+          },
+          {
+            "name": "WIPO PATENTSCOPE",
+            "url": "https://patentscope.wipo.int/search/en/search.jsf"
+          }
+        ],
+        "reviewKey": "patent:number:TWI531307B"
+      }
+    },
+    {
+      "reviewKey": "patent:number:US8437441B2",
+      "status": "confirmed_not_mine",
+      "statusLabel": "已確認非本人的",
+      "recordType": "patent",
+      "targetFile": "data/patents.json",
+      "userNote": "",
+      "reviewedAt": "2026-10-22T21:46:12.067Z",
+      "record": {
+        "type": "patent",
+        "confidence": "possible",
+        "canonicalId": "US8437441B2",
+        "number": "US8437441B2",
+        "titleEn": "Phase locked loop capable of fast locking",
+        "titleZh": "",
+        "inventorsEn": [
+          "Tsung-Hsien Lin",
+          "Wei-Hao Chiu",
+          "Yu-Hsiang Huang",
+          "National Taiwan University"
+        ],
+        "inventorsZh": "",
+        "assigneeEn": "",
+        "assigneeZh": "",
+        "jurisdiction": "United States",
+        "applicationNumber": "US12506023",
+        "priorityDate": "",
+        "filingDate": "2009-07-20",
+        "publicationDate": "",
+        "grantDate": "2013-05-07",
+        "documentStage": "Granted",
+        "legalStatus": "Active",
+        "status": "Granted",
+        "abstract": "A phase locked loop includes a voltage controlled oscillator operable to generate an output signal corresponding to a reference signal in response to a control voltage signal outputted by a filter in response to a current signal, and a variable frequency divider operable to perform frequency division on the output signal using a variable divisor so as to generate a divided feedback signal. A charge pump outputs the current signal in response to a phase detecting output from a phase/frequency detector indicating phases of the divided feedback signal and the reference signal. A phase error comparator outputs, in accordance with the phase detecting output, a digital output indicating whether the divided feedback signal lags or leads the reference signal and further indicating a phase difference between the divided feedback signal and the reference signal. The variable frequency divider determines a value of the variable divisor in accordance with the digital output to reduce the phase difference between the divided feedback signal and the reference signal.",
+        "classifications": [
+          "H",
+          "H03",
+          "H03L",
+          "H03L7/00",
+          "H03L7/06",
+          "H03L7/08",
+          "H03L7/085",
+          "H03L7/081",
+          "H03L7/089",
+          "H03L7/0891",
+          "H03L7/0893",
+          "H03L7/10",
+          "H03L7/107",
+          "H03L7/1075",
+          "H03L2207/00",
+          "H03L2207/06"
+        ],
+        "detectionNotes": [
+          "The publication number is not an alias of a verified record in patents.json.",
+          "The exact patent page lists Wei-Hao Chiu or 邱偉豪 as an inventor.",
+          "Name matching can still include a different person with the same name; verify assignee and technical field."
+        ],
+        "sources": [
+          {
+            "name": "Google Patents exact record",
+            "url": "https://patents.google.com/patent/US8437441B2/en"
+          },
+          {
+            "name": "Google Patents search",
+            "url": "https://patents.google.com/?q=inventor%3D%22Wei-Hao+Chiu%22"
+          },
+          {
+            "name": "TIPO search",
+            "url": "https://twpat1.tipo.gov.tw/twpatc/twpatkm"
+          },
+          {
+            "name": "Espacenet",
+            "url": "https://worldwide.espacenet.com/"
+          },
+          {
+            "name": "WIPO PATENTSCOPE",
+            "url": "https://patentscope.wipo.int/search/en/search.jsf"
+          }
+        ],
+        "reviewKey": "patent:number:US8437441B2"
+      }
+    },
+    {
+      "reviewKey": "patent:number:US7916064B2",
+      "status": "confirmed_not_mine",
+      "statusLabel": "已確認非本人的",
+      "recordType": "patent",
+      "targetFile": "data/patents.json",
+      "userNote": "",
+      "reviewedAt": "2026-10-22T21:46:15.169Z",
+      "record": {
+        "type": "patent",
+        "confidence": "possible",
+        "canonicalId": "US7916064B2",
+        "number": "US7916064B2",
+        "titleEn": "Voltage-to-time converter, and voltage-to-digital converting device having the same",
+        "titleZh": "",
+        "inventorsEn": [
+          "Tsung-Hsien Lin",
+          "Chung-Hsing Yang",
+          "Wei-Hao Chiu",
+          "National Taiwan University"
+        ],
+        "inventorsZh": "",
+        "assigneeEn": "",
+        "assigneeZh": "",
+        "jurisdiction": "United States",
+        "applicationNumber": "US12469749",
+        "priorityDate": "",
+        "filingDate": "2009-05-21",
+        "publicationDate": "",
+        "grantDate": "2011-03-29",
+        "documentStage": "Granted",
+        "legalStatus": "Active",
+        "status": "Granted",
+        "abstract": "A voltage-to-digital converting device includes a first voltage-to-time converter outputting a first delay clock having a first time delay relative to a reference clock in response to an input voltage, and a second voltage-to-time converter outputting a second delay clock having a second time delay relative to the reference clock in response to a feedback voltage. The first and second time delays correspond respectively to the input and feedback voltages. A time-to-digital converting circuit receives the first and second delay clocks from the first and second voltage-to-time converters, compares phases of the first and second delay clocks, generates the feedback voltage based on result of phase comparison made thereby, and outputs a digital signal upon detecting that the phases of the first and second delay clocks are in-phase.",
+        "classifications": [
+          "H",
+          "H03",
+          "H03M",
+          "H03M1/00",
+          "H03M1/12",
+          "H03M1/50"
+        ],
+        "detectionNotes": [
+          "The publication number is not an alias of a verified record in patents.json.",
+          "The exact patent page lists Wei-Hao Chiu or 邱偉豪 as an inventor.",
+          "Name matching can still include a different person with the same name; verify assignee and technical field."
+        ],
+        "sources": [
+          {
+            "name": "Google Patents exact record",
+            "url": "https://patents.google.com/patent/US7916064B2/en"
+          },
+          {
+            "name": "Google Patents search",
+            "url": "https://patents.google.com/?q=inventor%3D%22Wei-Hao+Chiu%22"
+          },
+          {
+            "name": "TIPO search",
+            "url": "https://twpat1.tipo.gov.tw/twpatc/twpatkm"
+          },
+          {
+            "name": "Espacenet",
+            "url": "https://worldwide.espacenet.com/"
+          },
+          {
+            "name": "WIPO PATENTSCOPE",
+            "url": "https://patentscope.wipo.int/search/en/search.jsf"
+          }
+        ],
+        "reviewKey": "patent:number:US7916064B2"
+      }
+    },
+    {
+      "reviewKey": "patent:number:TWM504415U",
+      "status": "confirmed_not_mine",
+      "statusLabel": "已確認非本人的",
+      "recordType": "patent",
+      "targetFile": "data/patents.json",
+      "userNote": "",
+      "reviewedAt": "2026-10-22T21:46:17.396Z",
+      "record": {
+        "type": "patent",
+        "confidence": "possible",
+        "canonicalId": "TWM504415U",
+        "number": "TWM504415U",
+        "titleEn": "Back chamber expanded type stereo array mems mic chip scale package",
+        "titleZh": "",
+        "inventorsEn": [
+          "戴宏德",
+          "賴政斌",
+          "許中信",
+          "林志祥",
+          "李昌儒",
+          "邱偉豪",
+          "力成科技股份有限公司"
+        ],
+        "inventorsZh": "",
+        "assigneeEn": "",
+        "assigneeZh": "",
+        "jurisdiction": "Taiwan",
+        "applicationNumber": "TW104205786U",
+        "priorityDate": "",
+        "filingDate": "2015-04-17",
+        "publicationDate": "",
+        "grantDate": "",
+        "documentStage": "Published application",
+        "legalStatus": "",
+        "status": "Published application",
+        "abstract": "",
+        "classifications": [
+          "zh"
+        ],
+        "detectionNotes": [
+          "The publication number is not an alias of a verified record in patents.json.",
+          "The exact patent page lists Wei-Hao Chiu or 邱偉豪 as an inventor.",
+          "Name matching can still include a different person with the same name; verify assignee and technical field."
+        ],
+        "sources": [
+          {
+            "name": "Google Patents exact record",
+            "url": "https://patents.google.com/patent/TWM504415U/en"
+          },
+          {
+            "name": "Google Patents search",
+            "url": "https://patents.google.com/?q=inventor%3D%22%E9%82%B1%E5%81%89%E8%B1%AA%22"
+          },
+          {
+            "name": "TIPO search",
+            "url": "https://twpat1.tipo.gov.tw/twpatc/twpatkm"
+          },
+          {
+            "name": "Espacenet",
+            "url": "https://worldwide.espacenet.com/"
+          },
+          {
+            "name": "WIPO PATENTSCOPE",
+            "url": "https://patentscope.wipo.int/search/en/search.jsf"
+          }
+        ],
+        "reviewKey": "patent:number:TWM504415U"
+      }
+    },
+    {
+      "reviewKey": "patent:number:TW202222029A",
+      "status": "confirmed_not_mine",
+      "statusLabel": "已確認非本人的",
+      "recordType": "patent",
+      "targetFile": "data/patents.json",
+      "userNote": "",
+      "reviewedAt": "2026-10-22T21:46:21.475Z",
+      "record": {
+        "type": "patent",
+        "confidence": "possible",
+        "canonicalId": "TW202222029A",
+        "number": "TW202222029A",
+        "titleEn": "Frame unit and frame assembly for solar cells",
+        "titleZh": "",
+        "inventorsEn": [
+          "陳正宏",
+          "邱偉豪",
+          "陳建均",
+          "劉修宏",
+          "聯合再生能源股份有限公司"
+        ],
+        "inventorsZh": "",
+        "assigneeEn": "",
+        "assigneeZh": "",
+        "jurisdiction": "Taiwan",
+        "applicationNumber": "TW109141663A",
+        "priorityDate": "",
+        "filingDate": "2020-11-26",
+        "publicationDate": "",
+        "grantDate": "",
+        "documentStage": "Published application",
+        "legalStatus": "",
+        "status": "Published application",
+        "abstract": "A frame unit and frame assembly for solar cells are disclosed. The frame unit includes a first combination rim and a second combination rim parallel with the first combination rim. The first combination rim includes a first upper portion and a first lower portion. The first upper portion includes a first recess and a first snapping portion, an opening of the first recess faces a first direction, and the first snapping portion protrudes toward a second direction which is opposite to the first direction. The first lower portion includes a first supporting portion. The second combination rim includes a second upper portion and a second lower portion. The second upper portion includes a second recess and a second snapping portion, an opening of the second recess faces the second direction, and the second snapping portion protrudes toward the first direction. The second lower portion includes a second supporting portion. The second snapping portion is capable of snapping with a first snapping portion of another frame unit.",
+        "classifications": [
+          "zh"
+        ],
+        "detectionNotes": [
+          "The publication number is not an alias of a verified record in patents.json.",
+          "The exact patent page lists Wei-Hao Chiu or 邱偉豪 as an inventor.",
+          "Name matching can still include a different person with the same name; verify assignee and technical field."
+        ],
+        "sources": [
+          {
+            "name": "Google Patents exact record",
+            "url": "https://patents.google.com/patent/TW202222029A/en"
+          },
+          {
+            "name": "Google Patents search",
+            "url": "https://patents.google.com/?q=inventor%3D%22%E9%82%B1%E5%81%89%E8%B1%AA%22"
+          },
+          {
+            "name": "TIPO search",
+            "url": "https://twpat1.tipo.gov.tw/twpatc/twpatkm"
+          },
+          {
+            "name": "Espacenet",
+            "url": "https://worldwide.espacenet.com/"
+          },
+          {
+            "name": "WIPO PATENTSCOPE",
+            "url": "https://patentscope.wipo.int/search/en/search.jsf"
+          }
+        ],
+        "reviewKey": "patent:number:TW202222029A"
+      }
+    },
+    {
+      "reviewKey": "patent:number:TW201622557A",
+      "status": "confirmed_not_mine",
+      "statusLabel": "已確認非本人的",
+      "recordType": "patent",
+      "targetFile": "data/patents.json",
+      "userNote": "",
+      "reviewedAt": "2026-10-22T21:46:23.557Z",
+      "record": {
+        "type": "patent",
+        "confidence": "possible",
+        "canonicalId": "TW201622557A",
+        "number": "TW201622557A",
+        "titleEn": "Plant cultivation device",
+        "titleZh": "",
+        "inventorsEn": [
+          "邱偉豪",
+          "黃修騏",
+          "金寶生物科技股份有限公司"
+        ],
+        "inventorsZh": "",
+        "assigneeEn": "",
+        "assigneeZh": "",
+        "jurisdiction": "Taiwan",
+        "applicationNumber": "TW103145867A",
+        "priorityDate": "",
+        "filingDate": "2014-12-26",
+        "publicationDate": "",
+        "grantDate": "",
+        "documentStage": "Published application",
+        "legalStatus": "",
+        "status": "Published application",
+        "abstract": "A plant cultivation device for fixing and planting a plant seed is provided in the present disclosure. The plant cultivation device is included of an elastic supporting structure and a capillary absorbent structure. The plant seed is embraced by the capillary absorbent structure. The capillary absorbent structure is embraced by the elastic supporting structure, and a part of the capillary absorbent structure exposes the elastic supporting structure. Thereby, the plant cultivation device is easy for package, transport and using.",
+        "classifications": [
+          "zh",
+          "A",
+          "A01",
+          "A01G",
+          "A01G24/00",
+          "A01G24/40",
+          "A01G24/48",
+          "A01G24/44"
+        ],
+        "detectionNotes": [
+          "The publication number is not an alias of a verified record in patents.json.",
+          "The exact patent page lists Wei-Hao Chiu or 邱偉豪 as an inventor.",
+          "Name matching can still include a different person with the same name; verify assignee and technical field."
+        ],
+        "sources": [
+          {
+            "name": "Google Patents exact record",
+            "url": "https://patents.google.com/patent/TW201622557A/en"
+          },
+          {
+            "name": "Google Patents search",
+            "url": "https://patents.google.com/?q=inventor%3D%22%E9%82%B1%E5%81%89%E8%B1%AA%22"
+          },
+          {
+            "name": "TIPO search",
+            "url": "https://twpat1.tipo.gov.tw/twpatc/twpatkm"
+          },
+          {
+            "name": "Espacenet",
+            "url": "https://worldwide.espacenet.com/"
+          },
+          {
+            "name": "WIPO PATENTSCOPE",
+            "url": "https://patentscope.wipo.int/search/en/search.jsf"
+          }
+        ],
+        "reviewKey": "patent:number:TW201622557A"
+      }
+    },
+    {
+      "reviewKey": "patent:number:TW201620377A",
+      "status": "confirmed_not_mine",
+      "statusLabel": "已確認非本人的",
+      "recordType": "patent",
+      "targetFile": "data/patents.json",
+      "userNote": "",
+      "reviewedAt": "2026-10-22T21:46:26.291Z",
+      "record": {
+        "type": "patent",
+        "confidence": "possible",
+        "canonicalId": "TW201620377A",
+        "number": "TW201620377A",
+        "titleEn": "Plant growth system and optical radiation control method of light source for plant growth",
+        "titleZh": "",
+        "inventorsEn": [
+          "邱偉豪",
+          "金寶電子工業股份有限公司"
+        ],
+        "inventorsZh": "",
+        "assigneeEn": "",
+        "assigneeZh": "",
+        "jurisdiction": "Taiwan",
+        "applicationNumber": "TW103143107A",
+        "priorityDate": "",
+        "filingDate": "2014-12-10",
+        "publicationDate": "",
+        "grantDate": "",
+        "documentStage": "Published application",
+        "legalStatus": "",
+        "status": "Published application",
+        "abstract": "The present invention provides a plant growth system and an optical radiation control method of light source for plant growth. The plant culture system includes a container with at least one plant grows therein, arranged in a growing space; a light source for plant growth arranged above the container by a light intensity adjusting apparatus; a sensor and a processer, wherein the sensor arranges in the growing space and electrically connects to the processer, and wherein the processer further electrically connects to the light intensity adjusting apparatus. Specially, the sensor is configured to detect the vertical distance between the light source and an upper leaf of the plant, and the processer is configured to control the light intensity adjusting apparatus to change the light projection angle of the light source.",
+        "classifications": [
+          "zh"
+        ],
+        "detectionNotes": [
+          "The publication number is not an alias of a verified record in patents.json.",
+          "The exact patent page lists Wei-Hao Chiu or 邱偉豪 as an inventor.",
+          "Name matching can still include a different person with the same name; verify assignee and technical field."
+        ],
+        "sources": [
+          {
+            "name": "Google Patents exact record",
+            "url": "https://patents.google.com/patent/TW201620377A/en"
+          },
+          {
+            "name": "Google Patents search",
+            "url": "https://patents.google.com/?q=inventor%3D%22%E9%82%B1%E5%81%89%E8%B1%AA%22"
+          },
+          {
+            "name": "TIPO search",
+            "url": "https://twpat1.tipo.gov.tw/twpatc/twpatkm"
+          },
+          {
+            "name": "Espacenet",
+            "url": "https://worldwide.espacenet.com/"
+          },
+          {
+            "name": "WIPO PATENTSCOPE",
+            "url": "https://patentscope.wipo.int/search/en/search.jsf"
+          }
+        ],
+        "reviewKey": "patent:number:TW201620377A"
+      }
+    },
+    {
+      "reviewKey": "patent:number:JP2016123404A",
+      "status": "confirmed_not_mine",
+      "statusLabel": "已確認非本人的",
+      "recordType": "patent",
+      "targetFile": "data/patents.json",
+      "userNote": "",
+      "reviewedAt": "2026-10-22T21:46:28.821Z",
+      "record": {
+        "type": "patent",
+        "confidence": "possible",
+        "canonicalId": "JP2016123404A",
+        "number": "JP2016123404A",
+        "titleEn": "Plant cultivation device",
+        "titleZh": "",
+        "inventorsEn": [
+          "偉豪 邱",
+          "Wei-Hao Chiu",
+          "偉豪 邱",
+          "修騏 黄",
+          "Hsiu-Chi Huang",
+          "修騏 黄",
+          "Cal-Comp Biotech Co Ltd"
+        ],
+        "inventorsZh": "",
+        "assigneeEn": "",
+        "assigneeZh": "",
+        "jurisdiction": "Japan",
+        "applicationNumber": "JP2015063183A",
+        "priorityDate": "",
+        "filingDate": "2015-03-25",
+        "publicationDate": "",
+        "grantDate": "",
+        "documentStage": "Published application",
+        "legalStatus": "Pending",
+        "status": "Published application",
+        "abstract": "PROBLEM TO BE SOLVED: To provide a plant cultivation device that allows easy packaging and transportation, and easy usage.SOLUTION: A plant cultivation device for planting and securing a plant seed (10) is provided. The plant cultivation device includes an elastic support structure (100) and a capillary absorbent structure (200). The capillary absorbent structure (200) encloses the plant seed (10). The capillary absorbent structure (200) is enclosed by the elastic support structure (100), and a portion of the capillary absorbent structure (200) is exposed from the elastic support structure (100).SELECTED DRAWING: Figure 1",
+        "classifications": [
+          "ja",
+          "A",
+          "A01",
+          "A01G",
+          "A01G24/00",
+          "A01G24/40",
+          "A01G24/48",
+          "A01G24/44"
+        ],
+        "detectionNotes": [
+          "The publication number is not an alias of a verified record in patents.json.",
+          "The exact patent page lists Wei-Hao Chiu or 邱偉豪 as an inventor.",
+          "Name matching can still include a different person with the same name; verify assignee and technical field."
+        ],
+        "sources": [
+          {
+            "name": "Google Patents exact record",
+            "url": "https://patents.google.com/patent/JP2016123404A/en"
+          },
+          {
+            "name": "Google Patents search",
+            "url": "https://patents.google.com/?q=inventor%3D%22Wei-Hao+Chiu%22"
+          },
+          {
+            "name": "TIPO search",
+            "url": "https://twpat1.tipo.gov.tw/twpatc/twpatkm"
+          },
+          {
+            "name": "Espacenet",
+            "url": "https://worldwide.espacenet.com/"
+          },
+          {
+            "name": "WIPO PATENTSCOPE",
+            "url": "https://patentscope.wipo.int/search/en/search.jsf"
+          }
+        ],
+        "reviewKey": "patent:number:JP2016123404A"
+      }
+    },
+    {
+      "reviewKey": "publication:doi:10.1002/advs.77623",
+      "status": "confirmed_mine",
+      "statusLabel": "已確認是本人的",
+      "recordType": "publication",
+      "targetFile": "data/publications.json",
+      "userNote": "",
+      "reviewedAt": "2026-10-22T21:47:32.403Z",
+      "record": {
+        "type": "publication",
+        "confidence": "high",
+        "detectionNotes": [
+          "ORCID work is not present in the current publications JSON.",
+          "Please verify authorship and publication status before adding."
+        ],
+        "sources": [
+          {
+            "name": "ORCID",
+            "url": "https://orcid.org/0000-0003-4484-3117"
+          },
+          {
+            "name": "DOI",
+            "url": "https://doi.org/10.1002/advs.77623"
+          },
+          {
+            "name": "Crossref",
+            "url": "https://api.crossref.org/works/10.1002%2Fadvs.77623"
+          },
+          {
+            "name": "OpenAlex search",
+            "url": "https://openalex.org/works?filter=doi%3Ahttps%3A%2F%2Fdoi.org%2F10.1002%2Fadvs.77623"
+          }
+        ],
+        "doi": "10.1002/advs.77623",
+        "title": "Asymmetric Fluorinated Spiro Hole‐Transport Materials Enabled by a Rapid Core‐Forming Strategy for Blade‐Coated Perovskite Solar Cells",
+        "journal": "Advanced Science",
+        "publicationDate": "2026-09-08",
+        "authors": [
+          "Lee, Kun‐Mu",
+          "Lin, Xiu‐Ping",
+          "Chang, Ya‐Ho",
+          "Tsai, Cheng‐Ting",
+          "Chu, Pei‐Chen",
+          "Chen, Yu‐Hsun",
+          "Chiu, Wei‐Hao",
+          "Lin, Yu‐Che",
+          "Li, Sie‐Rong",
+          "Hsieh, Hsiao‐Chi",
+          "Liau, Kang‐Ling",
+          "Lu, Shih‐I.",
+          "Wang, Chih‐Min",
+          "Lin, Yan‐Duo"
+        ],
+        "publisher": "Wiley",
+        "volume": "",
+        "issue": "",
+        "pages": "e77623",
+        "abstract": "<jats:title>ABSTRACT</jats:title>\n                  <jats:p>\n                    Developing hole‐transporting materials (HTMs) that simultaneously enable high efficiency, stability, and scalable processing remains a key challenge for perovskite solar cells (PSCs). Here, we report the facile synthesis of asymmetric fluorinated spiro‐type HTMs that integrate molecular design with scalable fabrication. The controlled incorporation and positioning of fluorine within a common asymmetric molecular framework tune the energy levels, solid‐state organization, and interfacial interactions of the HTMs. Coupling these materials with a fully blade‐coating–based fabrication process and vacuum‐assisted crystallization enables controlled film formation, yielding uniform, compact films with reduced defect density. As a result, PSCs based on the optimized HTM achieve a PCE of 24.49%, maintaining 23.28% for large‐area (1.00 cm\n                    <jats:sup>2</jats:sup>\n                    ) devices with excellent operational stability. This work establishes a synergistic molecular–processing engineering strategy toward high‐performance and manufacturable PSCs.\n                  </jats:p>",
+        "keywords": [],
+        "repositoryUrl": "https://pure.lib.cgu.edu.tw/en/publications/9b5fb949-9dcf-4063-b21e-e953e34c45fc",
+        "sourceDocumentType": "journal-article",
+        "language": "en",
+        "suggestedPublicationType": "international-journal",
+        "publicationTypeConfidence": "high",
+        "publicationTypeReason": "Journal article with non-Chinese title and source metadata.",
+        "reviewKey": "publication:doi:10.1002/advs.77623"
+      },
+      "suggestedPublicationType": "international-journal",
+      "selectedPublicationType": "international-journal",
+      "publicationTypeManuallyChanged": false,
+      "publicationTypeConfidence": "high",
+      "publicationTypeReason": "Journal article with non-Chinese title and source metadata."
+    },
+    {
+      "reviewKey": "publication:doi:10.21203/rs.3.rs-9068209/v1",
+      "status": "confirmed_mine",
+      "statusLabel": "已確認是本人的",
+      "recordType": "publication",
+      "targetFile": "data/publications.json",
+      "userNote": "",
+      "reviewedAt": "2026-10-22T21:47:39.066Z",
+      "record": {
+        "type": "publication",
+        "confidence": "high",
+        "detectionNotes": [
+          "ORCID work is not present in the current publications JSON.",
+          "Please verify authorship and publication status before adding."
+        ],
+        "sources": [
+          {
+            "name": "ORCID",
+            "url": "https://orcid.org/0000-0003-4484-3117"
+          },
+          {
+            "name": "DOI",
+            "url": "https://doi.org/10.21203/rs.3.rs-9068209/v1"
+          },
+          {
+            "name": "Crossref",
+            "url": "https://api.crossref.org/works/10.21203%2Frs.3.rs-9068209%2Fv1"
+          },
+          {
+            "name": "OpenAlex search",
+            "url": "https://openalex.org/works?filter=doi%3Ahttps%3A%2F%2Fdoi.org%2F10.21203%2Frs.3.rs-9068209%2Fv1"
+          }
+        ],
+        "doi": "10.21203/rs.3.rs-9068209/v1",
+        "title": "Bifunctional Multidentate Linker Tailoring Interfacial Dipole and Residual Stress to Enhance Photovoltaic Performance",
+        "journal": "",
+        "publicationDate": "2026-03-23",
+        "authors": [
+          "Lin, Hong-Yi",
+          "Hsiao, Kai-Chi",
+          "Lin, Ting-Han",
+          "Chang, Jia-Mao",
+          "Chu, Wei-Chen",
+          "Chiu, Wei-Hao",
+          "Lee, Kun-Mu",
+          "Wu, Ming-Chung"
+        ],
+        "publisher": "Springer Science and Business Media LLC",
+        "volume": "",
+        "issue": "",
+        "pages": "",
+        "abstract": "<title>Abstract</title>\n                <p>\n                  Buried layer crystallization at an electron transport layer interface is seldom discussed but crucial for obtaining a high-quality perovskite layer. This study demonstrates a novel interfacial engineering concept by using 2-aminoethylphosphonic acid (APA) to bridge the mechanical and electronic disparities at the SnO\n                  <sub>2</sub>\n                  /perovskite interface. The bifunctional synergy of the APA molecule, which serves as both an electronic dipole and a mechanical geometrical tuner. The flexible backbone of APA renders it to alleviate the strain by over 20% through releasing residual compressive stress. The electron-withdrawing phosphonate and electron-donating amino headgroups anchor preferred-orientationally onto SnO\n                  <sub>2</sub>\n                  and perovskite terminal facets. The directional dipole and releasing stress help expand the quasi-Fermi level splitting and accelerate electron transfer from the perovskite layer to the electron transport layer of SnO\n                  <sub>2</sub>\n                  . The champion device can achieve power conversion efficiency of 22.92% with over 1,500 h stability in air without encapsulation. By harmonizing molecular orientation with mechanical stress relief, this study establishes a new paradigm for high-performance and durable perovskite photovoltaics.\n                </p>",
+        "keywords": [],
+        "repositoryUrl": "http://dx.doi.org/10.21203/rs.3.rs-9068209/v1",
+        "sourceDocumentType": "posted-content",
+        "language": "",
+        "suggestedPublicationType": "other",
+        "publicationTypeConfidence": "high",
+        "publicationTypeReason": "Source document type: posted-content.",
+        "reviewKey": "publication:doi:10.21203/rs.3.rs-9068209/v1"
+      },
+      "suggestedPublicationType": "other",
+      "selectedPublicationType": "international-journal",
+      "publicationTypeManuallyChanged": true,
+      "publicationTypeConfidence": "high",
+      "publicationTypeReason": "Source document type: posted-content."
+    },
+    {
+      "reviewKey": "publication:title:fluorinationofstarshapedcyclopenta21b34b0dithiophenederivativesanditsapplicationasholetransportingmaterialsinscalableperovskitesolarcellfabricationbybarcoating",
+      "status": "confirmed_mine",
+      "statusLabel": "已確認是本人的",
+      "recordType": "publication",
+      "targetFile": "data/publications.json",
+      "userNote": "",
+      "reviewedAt": "2026-10-22T21:47:53.876Z",
+      "record": {
+        "type": "publication",
+        "confidence": "possible",
+        "detectionNotes": [
+          "ORCID work is not present in the current publications JSON.",
+          "Please verify authorship and publication status before adding."
+        ],
+        "sources": [
+          {
+            "name": "ORCID",
+            "url": "https://orcid.org/0000-0003-4484-3117"
+          }
+        ],
+        "doi": "",
+        "title": "Fluorination of Star-Shaped Cyclopenta[2,1-b;3,4-b 0]dithiophene Derivatives and Its Application as Hole-Transporting Materials in Scalable Perovskite Solar Cell Fabrication by Bar Coating",
+        "journal": "Solar RRL",
+        "publicationDate": "",
+        "authors": [],
+        "publisher": "",
+        "volume": "",
+        "issue": "",
+        "pages": "",
+        "abstract": "",
+        "keywords": [],
+        "repositoryUrl": "https://pure.lib.cgu.edu.tw/en/publications/817ed756-1d9d-4eca-8be1-9cc8997becac",
+        "sourceDocumentType": "journal-article",
+        "language": "",
+        "suggestedPublicationType": "international-journal",
+        "publicationTypeConfidence": "medium",
+        "publicationTypeReason": "Journal article with non-Chinese title and source metadata.",
+        "reviewKey": "publication:title:fluorinationofstarshapedcyclopenta21b34b0dithiophenederivativesanditsapplicationasholetransportingmaterialsinscalableperovskitesolarcellfabricationbybarcoating"
+      },
+      "suggestedPublicationType": "international-journal",
+      "selectedPublicationType": "international-journal",
+      "publicationTypeManuallyChanged": false,
+      "publicationTypeConfidence": "medium",
+      "publicationTypeReason": "Journal article with non-Chinese title and source metadata."
     }
   ]
 }
