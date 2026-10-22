@@ -37,6 +37,9 @@ class NewsTests(unittest.TestCase):
             self.assertEqual(home.count(news.START), 1)
             self.assertIn('id="combinedYearChart"', home)
             self.assertIn('data-output-count="awards">11', home)
+            self.assertIn(news.STYLE_URL, home)
+            story = (root / 'news/sdse-2026-poster-award.html').read_text(encoding='utf-8')
+            self.assertIn('../' + news.STYLE_URL, story)
 
     def test_photo_assets_and_award_identity(self):
         item = json.loads((ROOT / 'data/news.json').read_text(encoding='utf-8'))[0]

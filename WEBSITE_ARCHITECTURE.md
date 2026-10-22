@@ -415,6 +415,7 @@ flowchart TD
 ## News pagination and thumbnails — 23 October 2026
 
 - Homepage shows the latest three summaries with optional 140 px desktop / 88 px mobile uncropped thumbnails. `assets/images/news/sdse-2026-poster-thumb.webp` is a dedicated small WebP; list views never reference full-size image resources. Items without an image use text-only layout.
+- Homepage and generated News pages use a versioned stylesheet URL maintained by the news generator so cached CSS cannot leave new thumbnail markup in the old stacked layout after deployment.
 - `news.html` is the latest-summary index, at most 10 items. Additional pages are `news/page-2.html`, etc. Annual archives use `news/2026.html` and, when needed, `news/2026-page-2.html`. Year navigation and Previous/Next are ordinary static links; browsers never fetch the complete news JSON.
 - Each full article is `news/<id>.html` with distinct title, description and canonical metadata. Only story pages load the display photograph; the full-size file loads on click. Root `news.html#<id>` historical links redirect by URL-safe ID, including older entries beyond page one.
 - The news generator returns its generated URL list to `build_seo.py` for sitemap inclusion. It only removes obsolete direct `news/*.html` files bearing its generated-file marker; manually maintained files are preserved. Reserved `page-<number>` story IDs are rejected to prevent pagination collisions.
