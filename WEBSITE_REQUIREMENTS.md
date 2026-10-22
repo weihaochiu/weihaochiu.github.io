@@ -114,7 +114,14 @@ Verified collection files in `data/` remain authoritative. Do not replace them w
 
 ## Curated academic news — 23 October 2026
 
-- Homepage Latest News shows up to three manually curated updates, newest first, after metrics. View all news opens `news.html`; each complete entry has a stable anchor. Preserve the existing primary navigation.
+- Homepage Latest News shows up to three manually curated updates, newest first, after metrics. View all news opens `news.html`; each complete entry has a stable story URL and historical hash-link compatibility. Preserve the existing primary navigation.
 - News source is `data/news.json`; rebuild through the SEO generator rather than editing generated news HTML. News does not add scholarly outputs or awards to analytics.
 - The SDSE 2026 Honorable Mention poster award is recorded in Awards (11 total), with a separate News entry and the user-provided poster-side group photograph. Publish neither certificate nor award-announcement slide. Preserve the full photograph composition and provide a compressed lazy-loaded preview, accessible caption and full-size link.
 - Display 14–16 October 2026 explicitly as conference dates. Preserve certificate author order; do not infer photo identities, a ceremony date, unverified translations or a DOI.
+
+## News archive performance and tone — 23 October 2026
+
+- Award announcements use natural congratulatory language rather than certificate-verification prose. Preserve verified award names and collaborators; do not invent personal roles or identities.
+- Homepage retains only the latest three summaries. Optional thumbnail links sit beside the text (140 px on desktop/tablet, 88 px on mobile), preserve the complete image composition and use a separate small WebP asset. Photo-free entries have no empty placeholder.
+- Latest and annual archive pages contain at most 10 summaries each, with static Previous/Next links and year navigation. Full article text and display photos belong to individual story pages. Do not load all historical news JSON in the browser or implement pagination by hiding already-downloaded full stories.
+- Preserve `news.html#<id>` links and existing navigation, analytics, award counts and SEO; include generated news URLs in the sitemap.

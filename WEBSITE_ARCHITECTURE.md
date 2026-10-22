@@ -405,9 +405,18 @@ flowchart TD
 
 ## Curated News — 23 October 2026
 
-- `data/news.json` is the manually curated source for academic updates. Stable IDs become `news.html#<id>` anchors; `sortDate` determines newest-first order, while `dateLabel` explicitly distinguishes conference periods from award dates.
-- `scripts/build_news.py`, called by `scripts/build_seo.py`, generates the marked Latest News block (up to three entries) in `index.html` and the complete `news.html` archive. It also derives homepage award fallback counts from `data/awards.json`. News uses the existing About head, header and footer for consistent SEO, GA4 and mobile navigation. The SEO generator preserves News in sitemap and llms listings.
+- `data/news.json` is the manually curated source for academic updates. Stable IDs become `news/<id>.html` story URLs; historical `news.html#<id>` links redirect to the story; `sortDate` determines newest-first order, while `dateLabel` explicitly distinguishes conference periods from award dates.
+- `scripts/build_news.py`, called by `scripts/build_seo.py`, generates the marked Latest News block (up to three entries) in `index.html` and bounded `news.html` / `news/*.html` lists and stories. It also derives homepage award fallback counts from `data/awards.json`. News uses the existing About head, header and footer for consistent SEO, GA4 and mobile navigation. The SEO generator includes every generated news page in the sitemap and the News entry in llms listings.
 - Homepage Latest News appears after metrics and before the About preview. The archive is reached through View all news; primary navigation stays unchanged.
-- Optional image metadata stores display/full paths, dimensions, alt text and caption. `assets/images/news/sdse-2026-poster.webp` is the lazy-loaded, uncropped display image; `sdse-2026-poster-full.jpg` opens at full size. Neither includes embedded EXIF metadata. No certificate or announcement image is published.
+- Optional image metadata stores thumbnail/display/full paths, dimensions, alt text and caption. `assets/images/news/sdse-2026-poster.webp` is the lazy-loaded, uncropped display image; `sdse-2026-poster-full.jpg` opens at full size. Neither includes embedded EXIF metadata. No certificate or announcement image is published.
 - News is separate from scholarly outputs and awards and never feeds research analytics or output counts. Awards remain text-only records.
 - `build-seo.yml` watches news source, award source and news generator changes; its existing generated-HTML commit step includes the archive and homepage.
+
+## News pagination and thumbnails — 23 October 2026
+
+- Homepage shows the latest three summaries with optional 140 px desktop / 88 px mobile uncropped thumbnails. `assets/images/news/sdse-2026-poster-thumb.webp` is a dedicated small WebP; list views never reference full-size image resources. Items without an image use text-only layout.
+- `news.html` is the latest-summary index, at most 10 items. Additional pages are `news/page-2.html`, etc. Annual archives use `news/2026.html` and, when needed, `news/2026-page-2.html`. Year navigation and Previous/Next are ordinary static links; browsers never fetch the complete news JSON.
+- Each full article is `news/<id>.html` with distinct title, description and canonical metadata. Only story pages load the display photograph; the full-size file loads on click. Root `news.html#<id>` historical links redirect by URL-safe ID, including older entries beyond page one.
+- The news generator returns its generated URL list to `build_seo.py` for sitemap inclusion. It only removes obsolete direct `news/*.html` files bearing its generated-file marker; manually maintained files are preserved. Reserved `page-<number>` story IDs are rejected to prevent pagination collisions.
+- `relatedUrl` optionally links a story to its award record; ordinary news has no mandatory award link. The SDSE story uses the approved congratulatory copy and preserves the ordered collaborators.
+- `tests/test_news.py` covers 24 synthetic entries across two years, bounded pages, navigation paths, thumbnails, text-only fallback, repeatable builds, stale generated-file cleanup, manual-file preservation and reserved IDs.

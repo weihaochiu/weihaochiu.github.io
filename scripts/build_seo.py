@@ -522,7 +522,7 @@ def publication_page(p, openalex_record=None, unpaywall_record=None, crossref_re
 
 def main():
   global AUTHOR_MAP
-  build_news()
+  news_urls=build_news()
   sitemap_path=ROOT/'sitemap.xml'
   existing_sitemap=sitemap_path.read_text(encoding='utf-8') if sitemap_path.exists() else ''
   patent_urls=[url.removeprefix(SITE_URL+'/') for url in re.findall(r'<loc>(https://weihaochiu\.github\.io/patents/[^<]+)</loc>',existing_sitemap)]
@@ -586,7 +586,7 @@ def main():
   js=re.sub(r'function publicationShareUrl\(anchor\)\{.*?\n\}', "function publicationShareUrl(anchor){\n  const slug=String(anchor||'').replace(/^pub-/,'');\n  return new URL(`publications/${slug}.html`,window.location.href).toString();\n}", js, count=1, flags=re.S)
   app.write_text(js,encoding='utf-8')
   (ROOT/'robots.txt').write_text(robots_text(),encoding='utf-8')
-  urls=['','about.html','research.html','publications.html','patents.html','projects.html','news.html','llms.txt']+['publications/'+publication_slug(p)+'.html' for p in pubs]+patent_urls
+  urls=['','about.html','research.html','publications.html','patents.html','projects.html','news.html','llms.txt']+['publications/'+publication_slug(p)+'.html' for p in pubs]+patent_urls+news_urls
   urls=list(dict.fromkeys(urls))
   rows='\n'.join('  <url><loc>'+SITE_URL+'/'+esc(u)+'</loc><lastmod>'+TODAY+'</lastmod></url>' for u in urls)
   sitemap_path.write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+rows+'\n</urlset>\n',encoding='utf-8')
