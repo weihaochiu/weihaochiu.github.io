@@ -134,5 +134,5 @@ Verified collection files in `data/` remain authoritative. Do not replace them w
 ## CSET award reporting — 23 October 2026
 
 - Include the official CSET 2023 Taiwan Innotech Bronze Medal report as news; label 28 December 2023 as the report publication date. Reuse the existing award without increasing counts.
-- The existing TwIChE 2025 story includes the work title 《鈣鈦礦太陽能電池於太空應用的研究與展望》 and links the CSET announcement dated 18 September 2025; preserve the separately confirmed November conference dates and photographs.
+- The TwIChE 2025 story uses the user-selected two-paragraph celebratory copy beginning “A happy milestone for our team”. Keep the CSET source label dated 18 September 2025, the TwIChE official recipient-list link, November conference dates and photographs. The award record retains the work title.
 - News page headers show the title without the generic research-updates subtitle; retain descriptive SEO metadata.
