@@ -128,7 +128,7 @@ function setNavigation(){
   const nav=$('.site-nav');if(!nav)return;
   const links=[['about.html','About'],['research.html','Research'],['publications.html','Publications'],['patents.html','Patents'],['projects.html','Projects']];
   const p=(location.pathname.split('/').pop()||'index.html').toLowerCase();
-  const detailSection=location.pathname.toLowerCase().match(/\/(publications|patents)\//)?.[1]||'';
+  const detailSection=location.pathname.toLowerCase().match(/\/(publications|patents|news)\//)?.[1]||'';
   const prefix=detailSection?'../':'';
   const aboutPages=new Set(['about.html','experience.html','education.html','awards.html']);
   nav.innerHTML=links.map(([href,label])=>{const active=(href===p)||(href===`${detailSection}.html`)||(href==='about.html'&&aboutPages.has(p));return `<a ${active?'aria-current="page" ':''}href="${prefix}${href}">${label}</a>`}).join('');

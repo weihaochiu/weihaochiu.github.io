@@ -107,3 +107,16 @@ class NewsTests(unittest.TestCase):
             (root / 'data/news.json').write_text(json.dumps([{**item, 'id': 'page-2'}]), encoding='utf-8')
             with patch.object(news, 'ROOT', root), self.assertRaises(ValueError):
                 news.main()
+
+    def test_additional_photos_stay_out_of_list_payload(self):
+        items = json.loads((ROOT / 'data/news.json').read_text(encoding='utf-8'))
+        item = next(row for row in items if row['id'] == 'twiche-2025-masterpiece-award')
+        story = news.render([item], full=True, prefix='../')
+        self.assertEqual(story.count('<figure'), 2)
+        preview = news.render([item])
+        self.assertIn(item['image']['thumbnail'], preview)
+        for photo in item['additionalImages']:
+            self.assertNotIn(photo['src'], preview)
+            for key in ('src', 'full'):
+                self.assertTrue((ROOT / photo[key]).is_file())
+        self.assertIn('彥璋', story)

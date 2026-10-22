@@ -125,3 +125,8 @@ Verified collection files in `data/` remain authoritative. Do not replace them w
 - Homepage retains only the latest three summaries. Optional thumbnail links sit beside the text (140 px on desktop/tablet, 88 px on mobile), preserve the complete image composition and use a separate small WebP asset. Photo-free entries have no empty placeholder.
 - Latest and annual archive pages contain at most 10 summaries each, with static Previous/Next links and year navigation. Full article text and display photos belong to individual story pages. Do not load all historical news JSON in the browser or implement pagination by hiding already-downloaded full stories.
 - Preserve `news.html#<id>` links and existing navigation, analytics, award counts and SEO; include generated news URLs in the sitemap.
+
+## TwIChE 2025 news — 23 October 2026
+
+- Publish the user-confirmed 29–30 November 2025 Frontier Group visit to the 72nd TwIChE annual meeting at NCKU in Tainan and congratulate Kun-Mu Lee and Wei-Hao Chiu on their Chemical Engineering Masterpiece Award. Preserve supplied attendee names without inventing English spellings.
+- Use the conference group photo as the primary thumbnail, with both group and award-presentation photos on the full story. Optional additional photographs must not increase list-page image payloads. Reuse the existing award record without incrementing the award total.

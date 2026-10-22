@@ -26,10 +26,11 @@ def render(items, full=False, limit=3, prefix=''):
         url = prefix + 'news/' + item['id'] + '.html'
         body = ''.join(f'<p>{esc(p)}</p>' for p in item['paragraphs']) if full else f'<p>{esc(item["summary"])}</p>'
         image, thumbnail = item.get('image'), ''
-        if full and image:
-            body += (f'<figure class="news-photo"><a href="{esc(prefix + image["full"])}" target="_blank" rel="noopener" aria-label="Open full-size photograph">'
-                     f'<img src="{esc(prefix + image["src"])}" width="{image["width"]}" height="{image["height"]}" loading="lazy" decoding="async" alt="{esc(image["alt"])}"/></a>'
-                     f'<figcaption>{esc(image["caption"])}</figcaption></figure>')
+        if full:
+            for photo in ([image] if image else []) + item.get('additionalImages', []):
+                body += (f'<figure class="news-photo"><a href="{esc(prefix + photo["full"])}" target="_blank" rel="noopener" aria-label="Open full-size photograph">'
+                         f'<img src="{esc(prefix + photo["src"])}" width="{photo["width"]}" height="{photo["height"]}" loading="lazy" decoding="async" alt="{esc(photo["alt"])}"/></a>'
+                         f'<figcaption>{esc(photo["caption"])}</figcaption></figure>')
         elif image and image.get('thumbnail'):
             thumbnail = (f'<a class="news-thumbnail" href="{esc(url)}" aria-label="Read: {title}">'
                          f'<img src="{esc(prefix + image["thumbnail"])}" width="{image["thumbnailWidth"]}" height="{image["thumbnailHeight"]}" loading="lazy" decoding="async" alt="{esc(image["alt"])}"/></a>')
@@ -91,7 +92,7 @@ def main():
         head = base_head.replace('About | Wei-Hao Chiu', esc(title) + ' | Wei-Hao Chiu').replace(SITE + 'about.html', SITE + path).replace('Professional experience, education, theses and awards of Wei-Hao Chiu.', esc(description))
         # Old news.html#<id> URLs continue to reach stories beyond list page one.
         redirect = '''<script>const newsId=location.hash.slice(1);if(/^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$/.test(newsId)){location.replace('news/'+newsId+'.html');}</script>''' if legacy else ''
-        shell = head + '</head><body>' + header + '<section class="page-header"><div class="shell"><h1>' + esc('News' if story else title) + '</h1><p>' + esc('Research updates, conference activities and recognitions.' if story else description) + '</p></div></section><main class="content shell news-archive">NEWS_BODY</main>' + footer + '<script src="assets/js/app.js"></script>' + redirect + '</body></html>\n'
+        shell = head + '</head><body>' + header + '<section class="page-header"><div class="shell"><h1>' + esc('News' if story else title) + '</h1><p>' + esc('Research updates, conference activities and recognitions.' if story else description) + '</p></div></section><main class="content shell news-archive">NEWS_BODY</main>' + footer + '<script src="assets/js/app.js?v=news-20261023-3"></script>' + redirect + '</body></html>\n'
         generated[path] = GENERATED + '\n' + relative_assets(shell, prefix).replace('NEWS_BODY', body)
 
     years = sorted({item['sortDate'][:4] for item in items}, reverse=True)

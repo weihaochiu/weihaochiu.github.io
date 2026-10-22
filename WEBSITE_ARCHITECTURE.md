@@ -421,3 +421,10 @@ flowchart TD
 - The news generator returns its generated URL list to `build_seo.py` for sitemap inclusion. It only removes obsolete direct `news/*.html` files bearing its generated-file marker; manually maintained files are preserved. Reserved `page-<number>` story IDs are rejected to prevent pagination collisions.
 - `relatedUrl` optionally links a story to its award record; ordinary news has no mandatory award link. The SDSE story uses the approved congratulatory copy and preserves the ordered collaborators.
 - `tests/test_news.py` covers 24 synthetic entries across two years, bounded pages, navigation paths, thumbnails, text-only fallback, repeatable builds, stale generated-file cleanup, manual-file preservation and reserved IDs.
+
+## TwIChE 2025 news — 23 October 2026
+
+- Added the user-provided 29–30 November 2025 conference and Chemical Engineering Masterpiece Award story to `data/news.json`; it generates `news/twiche-2025-masterpiece-award.html` and the new `news/2025.html` archive. The existing award record is reused, preserving 11 awards.
+- Optional `additionalImages` contains further photo metadata using the same display/full path, dimensions, alt text and caption fields as the primary image. Only story pages render these lazy-loaded figures; homepage/list thumbnails still use the primary image only.
+- Five `assets/images/news/twiche-2025-*` assets provide two metadata-free display/full photo pairs and one group thumbnail. User-supplied Chinese given names without verified English forms remain in Chinese.
+- Shared `app.js` navigation recognizes nested `/news/` pages alongside publication/patent pages, preserving root-relative destinations after JavaScript rebuilds the menu. Generated news pages version their app script reference to refresh cached navigation code.
