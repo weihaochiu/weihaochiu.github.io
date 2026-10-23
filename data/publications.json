@@ -15235,11 +15235,12 @@
       "startDate": "2025-10-15",
       "endDate": "2025-10-17",
       "location": "New Taipei City, Taiwan",
-      "url": "https://2025.sdsemcut.com/",
+      "url": "https://biomed.mcut.edu.tw/p/406-1055-74478%2Cr1770.php?Lang=zh-tw",
       "documentType": "conference-abstract",
       "presentationType": "",
       "acceptanceStatus": "",
-      "abstractNumber": ""
+      "abstractNumber": "",
+      "urlType": "organizer-page"
     },
     "analytics": {
       "coreJournalCount": false,
@@ -15438,7 +15439,8 @@
       "acceptanceStatus": "Accepted",
       "abstractNumber": "00145",
       "presentingAuthor": "Wei-Hao Chiu",
-      "acceptanceEvidence": "User-provided SDSE abstract-status screenshot"
+      "acceptanceEvidence": "User-provided SDSE abstract-status screenshot",
+      "urlType": "conference-site"
     },
     "analytics": {
       "coreJournalCount": false,
@@ -15699,7 +15701,8 @@
       "documentType": "conference-abstract",
       "presentationType": "",
       "acceptanceStatus": "",
-      "abstractNumber": ""
+      "abstractNumber": "",
+      "urlType": "conference-site"
     },
     "analytics": {
       "coreJournalCount": false,
@@ -15961,7 +15964,8 @@
       "documentType": "conference-full-paper",
       "presentationType": "",
       "acceptanceStatus": "",
-      "abstractNumber": ""
+      "abstractNumber": "",
+      "urlType": "conference-site"
     },
     "analytics": {
       "coreJournalCount": false,
@@ -16223,11 +16227,12 @@
       "startDate": "2025-11-29",
       "endDate": "2025-11-30",
       "location": "Tainan, Taiwan",
-      "url": "",
+      "url": "https://www.twiche.org.tw/zh-hant/news/779",
       "documentType": "conference-abstract",
       "presentationType": "",
       "acceptanceStatus": "",
-      "abstractNumber": ""
+      "abstractNumber": "",
+      "urlType": "organizer-page"
     },
     "analytics": {
       "coreJournalCount": false,
@@ -16460,7 +16465,8 @@
       "documentType": "conference-abstract",
       "presentationType": "",
       "acceptanceStatus": "",
-      "abstractNumber": ""
+      "abstractNumber": "",
+      "urlType": "conference-site"
     },
     "analytics": {
       "coreJournalCount": false,
@@ -16668,13 +16674,14 @@
       "startDate": "2023-06-09",
       "endDate": "2023-06-09",
       "location": "New Taipei City, Taiwan",
-      "url": "https://iucc.mcut.edu.tw/p/406-1016-60038%2Cr11.php?Lang=zh-tw",
+      "url": "https://iucc.mcut.edu.tw/p/406-1016-60038,r11.php?Lang=zh-tw",
       "documentType": "conference-full-paper",
       "presentationType": "",
       "acceptanceStatus": "",
       "abstractNumber": "",
       "nameZh": "第18屆台塑企業應用技術研討會",
-      "nameEn": "18th Formosa Plastics Group Applied Technology Seminar"
+      "nameEn": "18th Formosa Plastics Group Applied Technology Seminar",
+      "urlType": "organizer-page"
     },
     "analytics": {
       "coreJournalCount": false,
@@ -16858,7 +16865,8 @@
       "documentType": "conference-abstract",
       "presentationType": "",
       "acceptanceStatus": "",
-      "abstractNumber": ""
+      "abstractNumber": "",
+      "urlType": "organizer-page"
     },
     "analytics": {
       "coreJournalCount": false,
@@ -17071,7 +17079,8 @@
       "documentType": "conference-abstract",
       "presentationType": "",
       "acceptanceStatus": "",
-      "abstractNumber": ""
+      "abstractNumber": "",
+      "urlType": "organizer-page"
     },
     "analytics": {
       "coreJournalCount": false,
@@ -17309,7 +17318,8 @@
       "documentType": "conference-abstract",
       "presentationType": "",
       "acceptanceStatus": "",
-      "abstractNumber": ""
+      "abstractNumber": "",
+      "urlType": "conference-site"
     },
     "analytics": {
       "coreJournalCount": false,
@@ -17499,7 +17509,8 @@
       "documentType": "conference-abstract",
       "presentationType": "",
       "acceptanceStatus": "",
-      "abstractNumber": ""
+      "abstractNumber": "",
+      "urlType": "conference-site"
     },
     "analytics": {
       "coreJournalCount": false,
@@ -17686,11 +17697,12 @@
       "startDate": "2023-10-19",
       "endDate": "2023-10-20",
       "location": "Kaohsiung, Taiwan",
-      "url": "https://iedms2023.nsysu.edu.tw/",
+      "url": "https://moes.nsysu.edu.tw/p/406-1206-319085,r4857.php?Lang=zh-tw",
       "documentType": "conference-full-paper",
       "presentationType": "",
       "acceptanceStatus": "",
-      "abstractNumber": ""
+      "abstractNumber": "",
+      "urlType": "organizer-page"
     },
     "analytics": {
       "coreJournalCount": false,
@@ -17914,11 +17926,12 @@
       "startDate": "2023-10-19",
       "endDate": "2023-10-20",
       "location": "Kaohsiung, Taiwan",
-      "url": "https://iedms2023.nsysu.edu.tw/",
+      "url": "https://moes.nsysu.edu.tw/p/406-1206-319085,r4857.php?Lang=zh-tw",
       "documentType": "conference-full-paper",
       "presentationType": "",
       "acceptanceStatus": "",
-      "abstractNumber": ""
+      "abstractNumber": "",
+      "urlType": "organizer-page"
     },
     "analytics": {
       "coreJournalCount": false,
@@ -18142,11 +18155,13 @@
       "startDate": "2021-11-18",
       "endDate": "2021-11-19",
       "location": "Tainan, Taiwan",
-      "url": "https://www.electrochem.org/ecsnews/focus-issue-on-selected-papers-from-the-international-electron-devices-and-materials-symposium-2021-iedms-2021",
+      "url": "",
       "documentType": "conference-full-paper",
       "presentationType": "",
       "acceptanceStatus": "",
-      "abstractNumber": ""
+      "abstractNumber": "",
+      "urlType": "unavailable",
+      "websiteNote": "Official conference website is currently unavailable."
     },
     "analytics": {
       "coreJournalCount": false,
@@ -18364,11 +18379,13 @@
       "startDate": "2021-11-18",
       "endDate": "2021-11-19",
       "location": "Tainan, Taiwan",
-      "url": "https://www.electrochem.org/ecsnews/focus-issue-on-selected-papers-from-the-international-electron-devices-and-materials-symposium-2021-iedms-2021",
+      "url": "",
       "documentType": "conference-full-paper",
       "presentationType": "",
       "acceptanceStatus": "",
-      "abstractNumber": ""
+      "abstractNumber": "",
+      "urlType": "unavailable",
+      "websiteNote": "Official conference website is currently unavailable."
     },
     "analytics": {
       "coreJournalCount": false,
@@ -18561,7 +18578,8 @@
       "documentType": "conference-abstract",
       "presentationType": "",
       "acceptanceStatus": "",
-      "abstractNumber": ""
+      "abstractNumber": "",
+      "urlType": "organizer-page"
     },
     "analytics": {
       "coreJournalCount": false,
@@ -18784,7 +18802,8 @@
       "documentType": "conference-abstract",
       "presentationType": "",
       "acceptanceStatus": "",
-      "abstractNumber": ""
+      "abstractNumber": "",
+      "urlType": "organizer-page"
     },
     "analytics": {
       "coreJournalCount": false,
@@ -18975,11 +18994,13 @@
       "startDate": "2023-10-31",
       "endDate": "2023-11-03",
       "location": "Taipei, Taiwan",
-      "url": "https://www.a-coe2023.com/",
+      "url": "",
       "documentType": "conference-abstract",
       "presentationType": "",
       "acceptanceStatus": "",
-      "abstractNumber": ""
+      "abstractNumber": "",
+      "urlType": "unavailable",
+      "websiteNote": "Official conference website is currently unavailable."
     },
     "analytics": {
       "coreJournalCount": false,
@@ -19173,11 +19194,13 @@
       "startDate": "2023-10-31",
       "endDate": "2023-11-03",
       "location": "Taipei, Taiwan",
-      "url": "https://www.a-coe2023.com/",
+      "url": "",
       "documentType": "conference-abstract",
       "presentationType": "",
       "acceptanceStatus": "",
-      "abstractNumber": ""
+      "abstractNumber": "",
+      "urlType": "unavailable",
+      "websiteNote": "Official conference website is currently unavailable."
     },
     "analytics": {
       "coreJournalCount": false,
@@ -19398,7 +19421,8 @@
       "documentType": "conference-abstract",
       "presentationType": "",
       "acceptanceStatus": "",
-      "abstractNumber": ""
+      "abstractNumber": "",
+      "urlType": "conference-site"
     },
     "analytics": {
       "coreJournalCount": false,
@@ -19574,7 +19598,8 @@
       "documentType": "conference-abstract",
       "presentationType": "",
       "acceptanceStatus": "",
-      "abstractNumber": ""
+      "abstractNumber": "",
+      "urlType": "conference-site"
     },
     "analytics": {
       "coreJournalCount": false,
@@ -19802,7 +19827,8 @@
       "acceptanceStatus": "",
       "abstractNumber": "",
       "nameZh": "第19屆台塑企業應用技術研討會",
-      "nameEn": "19th Formosa Plastics Group Applied Technology Seminar"
+      "nameEn": "19th Formosa Plastics Group Applied Technology Seminar",
+      "urlType": "organizer-page"
     },
     "analytics": {
       "coreJournalCount": false,
@@ -20008,13 +20034,14 @@
       "startDate": "2025-06-06",
       "endDate": "2025-06-06",
       "location": "New Taipei City, Taiwan",
-      "url": "https://iucc.mcut.edu.tw/p/406-1016-73617%2Cr11.php?Lang=zh-tw",
+      "url": "https://iucc.mcut.edu.tw/p/406-1016-73617,r11.php?Lang=zh-tw",
       "documentType": "conference-full-paper",
       "presentationType": "",
       "acceptanceStatus": "",
       "abstractNumber": "",
       "nameZh": "第20屆台塑企業應用技術研討會",
-      "nameEn": "20th Formosa Plastics Group Applied Technology Seminar"
+      "nameEn": "20th Formosa Plastics Group Applied Technology Seminar",
+      "urlType": "organizer-page"
     },
     "analytics": {
       "coreJournalCount": false,
@@ -20238,13 +20265,14 @@
       "startDate": "2025-06-06",
       "endDate": "2025-06-06",
       "location": "New Taipei City, Taiwan",
-      "url": "https://iucc.mcut.edu.tw/p/406-1016-73617%2Cr11.php?Lang=zh-tw",
+      "url": "https://iucc.mcut.edu.tw/p/406-1016-73617,r11.php?Lang=zh-tw",
       "documentType": "conference-full-paper",
       "presentationType": "",
       "acceptanceStatus": "",
       "abstractNumber": "",
       "nameZh": "第20屆台塑企業應用技術研討會",
-      "nameEn": "20th Formosa Plastics Group Applied Technology Seminar"
+      "nameEn": "20th Formosa Plastics Group Applied Technology Seminar",
+      "urlType": "organizer-page"
     },
     "analytics": {
       "coreJournalCount": false,
@@ -20455,7 +20483,8 @@
       "documentType": "conference-abstract",
       "presentationType": "",
       "acceptanceStatus": "",
-      "abstractNumber": ""
+      "abstractNumber": "",
+      "urlType": "organizer-page"
     },
     "analytics": {
       "coreJournalCount": false,
@@ -20740,7 +20769,8 @@
       "documentType": "conference-abstract",
       "presentationType": "",
       "acceptanceStatus": "",
-      "abstractNumber": ""
+      "abstractNumber": "",
+      "urlType": "organizer-page"
     },
     "analytics": {
       "coreJournalCount": false,
@@ -21002,11 +21032,12 @@
       "startDate": "2024-09-30",
       "endDate": "2024-10-02",
       "location": "Berlin, Germany",
-      "url": "https://pure.lib.cgu.edu.tw/zh/publications/comprehensive-study-of-pvdf-hfp-in-perovskite-solar-cells-for-enh/",
+      "url": "https://www.helmholtz-berlin.de/events/isos-15/index_en.html",
       "documentType": "proceedings-paper",
       "presentationType": "",
       "acceptanceStatus": "",
-      "abstractNumber": ""
+      "abstractNumber": "",
+      "urlType": "conference-site"
     },
     "analytics": {
       "coreJournalCount": false,
@@ -21163,11 +21194,12 @@
       "startDate": "2025-09-22",
       "endDate": "2025-09-26",
       "location": "Bilbao, Spain",
-      "url": "https://pure.lib.cgu.edu.tw/en/publications/advanced-additives-for-space-missions-pvdf-hfps-impact-on-perovsk/",
+      "url": "https://www.eupvsec.org/images/2025/conference/EUPVSEC2025_ConferenceProgram_web_v3.pdf",
       "documentType": "proceedings-paper",
       "presentationType": "",
       "acceptanceStatus": "",
-      "abstractNumber": ""
+      "abstractNumber": "",
+      "urlType": "official-program"
     },
     "analytics": {
       "coreJournalCount": false,

@@ -492,3 +492,8 @@ The widget module listens for mobile breakpoint changes to update PlumX popup di
 - PVSEC-35 records likewise use the user-supplied original `assets/images/institutions/pvsec-35.png` logo in publication cards and generated detail pages.
 
 - ISOS 15 uses the user-approved white-background `assets/images/institutions/isos-15.png` logo in shared publication cards and generated detail pages, preserving proportions, responsive sizing and accessible alt text.
+
+## Conference link audit — 23 October 2026
+
+- Conference URLs must identify the correct edition on an official conference or organizer site; publication repositories and journal special-issue calls are not conference websites. `conference.urlType` distinguishes `conference-site`, `organizer-page`, `official-program`, and `unavailable`; optional `websiteNote` explains an unavailable official website. Shared browser cards and SEO-generated pages use matching labels; no URL means no external conference button. Preserve publication/source URLs and all scholarly metadata.
+- See `CONFERENCE_LINK_AUDIT.md` for the audit of all 29 conference records (18 event groups), verified destinations and unavailable sites. Do not restore failed/repurposed historical domains without rechecking their live content and edition.

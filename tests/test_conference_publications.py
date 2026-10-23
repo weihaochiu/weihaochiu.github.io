@@ -87,3 +87,30 @@ class ConferencePublicationTests(unittest.TestCase):
         self.assertIn('長庚大學化工與材料學系', chinese_page)
         self.assertEqual(self.records['sdse-2023-pentafulvalene-htm']['authors'][-1], 'Yan-Duo Lin')
 
+
+    def test_audited_conference_links_use_official_destinations_and_honest_labels(self):
+        from html import unescape
+        labels = {'conference-site': 'Conference website',
+                  'organizer-page': 'Official organizer page',
+                  'official-program': 'Official conference program (PDF)'}
+        for row in self.rows:
+            conference = row.get('conference')
+            if row.get('publicationType') != 'conference' or not conference:
+                continue
+            with self.subTest(identity=row['id']):
+                page = (ROOT / 'publications' / (row['id'] + '.html')).read_text(encoding='utf-8')
+                block = re.search(r'<div class="conference-meta">(.*?)</div>', page).group(1)
+                url = conference.get('url', '')
+                self.assertNotIn('pure.lib.cgu.edu.tw', url)
+                self.assertNotIn('electrochem.org/ecsnews', url)
+                if conference['urlType'] == 'unavailable':
+                    self.assertEqual(url, '')
+                    self.assertIn(conference['websiteNote'], block)
+                    self.assertNotIn('<a ', block)
+                else:
+                    self.assertTrue(url.startswith('https://'))
+                    self.assertIn('href="' + url + '"', unescape(block))
+                    self.assertIn(labels[conference['urlType']], block)
+        self.assertEqual(self.records['iedms-2021-csi-two-step']['conference']['url'], '')
+        self.assertIn('helmholtz-berlin.de/events/isos-15/',
+                      self.records['isos-15-2024-pvdf-hfp-space-reliability']['conference']['url'])
