@@ -20959,5 +20959,311 @@
       "lastEvaluated": "2026-10-23",
       "inputSignature": "25aba6d059441db0e1a0"
     }
+  },
+  {
+    "id": "isos-15-2024-pvdf-hfp-space-reliability",
+    "publicationType": "conference",
+    "documentType": "proceedings-paper",
+    "language": "en",
+    "peerReviewStatus": "unverified",
+    "date": "2024",
+    "year": 2024,
+    "month": null,
+    "title": "Comprehensive Study of PVDF-HFP in Perovskite Solar Cells for Enhanced Space Mission Reliability",
+    "authors": [
+      "Wei-Hao Chiu",
+      "Kun-Mu Lee",
+      "Wei-Chen Chu",
+      "Seoungjun Ahn"
+    ],
+    "journal": "2024 International Summit on Organic and Hybrid Photovoltaics Stability (ISOS 15)",
+    "publisher": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "doi": "",
+    "doiUrl": "",
+    "publicationUrl": "https://pure.lib.cgu.edu.tw/zh/publications/comprehensive-study-of-pvdf-hfp-in-perovskite-solar-cells-for-enh/",
+    "abstract": "",
+    "highlights": [],
+    "keywords": [],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "authorOrder": 1,
+    "role": "First author",
+    "topic": "Perovskite Solar Cells",
+    "tags": [
+      "ISOS 15",
+      "Conference paper"
+    ],
+    "conference": {
+      "name": "2024 International Summit on Organic and Hybrid Photovoltaics Stability (ISOS 15)",
+      "acronym": "ISOS 15",
+      "startDate": "2024-09-30",
+      "endDate": "2024-10-02",
+      "location": "Berlin, Germany",
+      "url": "https://pure.lib.cgu.edu.tw/zh/publications/comprehensive-study-of-pvdf-hfp-in-perovskite-solar-cells-for-enh/",
+      "documentType": "proceedings-paper",
+      "presentationType": "",
+      "acceptanceStatus": "",
+      "abstractNumber": ""
+    },
+    "analytics": {
+      "coreJournalCount": false,
+      "journalMetrics": false,
+      "fwci": false,
+      "citationMetrics": false
+    },
+    "affiliations": [],
+    "authorships": [
+      {
+        "name": "Wei-Hao Chiu",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "https://pure.lib.cgu.edu.tw/zh/publications/comprehensive-study-of-pvdf-hfp-in-perovskite-solar-cells-for-enh/"
+        ]
+      },
+      {
+        "name": "Kun-Mu Lee",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "https://pure.lib.cgu.edu.tw/zh/publications/comprehensive-study-of-pvdf-hfp-in-perovskite-solar-cells-for-enh/"
+        ]
+      },
+      {
+        "name": "Wei-Chen Chu",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "https://pure.lib.cgu.edu.tw/zh/publications/comprehensive-study-of-pvdf-hfp-in-perovskite-solar-cells-for-enh/"
+        ]
+      },
+      {
+        "name": "Seoungjun Ahn",
+        "authorOrder": 4,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "https://pure.lib.cgu.edu.tw/zh/publications/comprehensive-study-of-pvdf-hfp-in-perovskite-solar-cells-for-enh/"
+        ]
+      }
+    ],
+    "authorshipMetadata": {
+      "status": "partial",
+      "manualAffiliations": true,
+      "lastChecked": "2026-10-23",
+      "sources": [
+        "https://pure.lib.cgu.edu.tw/zh/publications/comprehensive-study-of-pvdf-hfp-in-perovskite-solar-cells-for-enh/"
+      ],
+      "sourceUrls": {
+        "institutionalRepository": "https://pure.lib.cgu.edu.tw/zh/publications/comprehensive-study-of-pvdf-hfp-in-perovskite-solar-cells-for-enh/"
+      },
+      "requiresManualReview": true,
+      "missingFields": [
+        "author-affiliation links",
+        "corresponding author",
+        "equal contribution"
+      ],
+      "warnings": [
+        "Institutional record lists research units without per-author affiliation links."
+      ]
+    },
+    "metadataSource": "manual_verified",
+    "automationProtection": {
+      "protected": true,
+      "reason": "Manually verified CGU Pure conference record; preserve source-specific author order and metadata."
+    },
+    "contentStatus": {
+      "abstract": "not-available",
+      "highlights": "not-available",
+      "keywords": "not-available",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-10-23",
+      "verifiedSource": "https://pure.lib.cgu.edu.tw/zh/publications/comprehensive-study-of-pvdf-hfp-in-perovskite-solar-cells-for-enh/"
+    },
+    "citation": "Wei-Hao Chiu, Kun-Mu Lee, Wei-Chen Chu, Seoungjun Ahn. Comprehensive Study of PVDF-HFP in Perovskite Solar Cells for Enhanced Space Mission Reliability. 2024 International Summit on Organic and Hybrid Photovoltaics Stability (ISOS 15) (2024).",
+    "internationalCollaboration": {
+      "status": "needs-review",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "sources": [
+        "https://pure.lib.cgu.edu.tw/zh/publications/comprehensive-study-of-pvdf-hfp-in-perovskite-solar-cells-for-enh/"
+      ],
+      "warnings": [
+        "Per-author affiliations unavailable; conference location does not establish international collaboration."
+      ],
+      "manualOverride": false,
+      "requiresManualReview": true
+    }
+  },
+  {
+    "id": "eu-pvsec-2025-pvdf-hfp-space-reliability",
+    "publicationType": "conference",
+    "documentType": "proceedings-paper",
+    "language": "en",
+    "peerReviewStatus": "unverified",
+    "date": "2025",
+    "year": 2025,
+    "month": null,
+    "title": "Advanced Additives for Space Missions: PVDF-HFP's Impact on Perovskite Solar Cell Reliability",
+    "authors": [
+      "Kun-Mu Lee",
+      "Seoungjun Ahn",
+      "Wei-Hao Chiu"
+    ],
+    "journal": "The 42nd European Photovoltaic Solar Energy Conference and Exhibition (EU PVSEC 2025)",
+    "publisher": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "doi": "",
+    "doiUrl": "",
+    "publicationUrl": "https://pure.lib.cgu.edu.tw/en/publications/advanced-additives-for-space-missions-pvdf-hfps-impact-on-perovsk/",
+    "abstract": "",
+    "highlights": [],
+    "keywords": [],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "authorOrder": 3,
+    "role": "Co-author",
+    "topic": "Perovskite Solar Cells",
+    "tags": [
+      "EU PVSEC 2025",
+      "Conference paper"
+    ],
+    "conference": {
+      "name": "The 42nd European Photovoltaic Solar Energy Conference and Exhibition (EU PVSEC 2025)",
+      "acronym": "EU PVSEC 2025",
+      "startDate": "2025-09-22",
+      "endDate": "2025-09-26",
+      "location": "Bilbao, Spain",
+      "url": "https://pure.lib.cgu.edu.tw/en/publications/advanced-additives-for-space-missions-pvdf-hfps-impact-on-perovsk/",
+      "documentType": "proceedings-paper",
+      "presentationType": "",
+      "acceptanceStatus": "",
+      "abstractNumber": ""
+    },
+    "analytics": {
+      "coreJournalCount": false,
+      "journalMetrics": false,
+      "fwci": false,
+      "citationMetrics": false
+    },
+    "affiliations": [],
+    "authorships": [
+      {
+        "name": "Kun-Mu Lee",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "https://pure.lib.cgu.edu.tw/en/publications/advanced-additives-for-space-missions-pvdf-hfps-impact-on-perovsk/"
+        ]
+      },
+      {
+        "name": "Seoungjun Ahn",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "https://pure.lib.cgu.edu.tw/en/publications/advanced-additives-for-space-missions-pvdf-hfps-impact-on-perovsk/"
+        ]
+      },
+      {
+        "name": "Wei-Hao Chiu",
+        "authorOrder": 3,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "https://pure.lib.cgu.edu.tw/en/publications/advanced-additives-for-space-missions-pvdf-hfps-impact-on-perovsk/"
+        ]
+      }
+    ],
+    "authorshipMetadata": {
+      "status": "partial",
+      "manualAffiliations": true,
+      "lastChecked": "2026-10-23",
+      "sources": [
+        "https://pure.lib.cgu.edu.tw/en/publications/advanced-additives-for-space-missions-pvdf-hfps-impact-on-perovsk/"
+      ],
+      "sourceUrls": {
+        "institutionalRepository": "https://pure.lib.cgu.edu.tw/en/publications/advanced-additives-for-space-missions-pvdf-hfps-impact-on-perovsk/"
+      },
+      "requiresManualReview": true,
+      "missingFields": [
+        "author-affiliation links",
+        "corresponding author",
+        "equal contribution"
+      ],
+      "warnings": [
+        "Institutional record lists research units without per-author affiliation links."
+      ]
+    },
+    "metadataSource": "manual_verified",
+    "automationProtection": {
+      "protected": true,
+      "reason": "Manually verified CGU Pure conference record; preserve source-specific author order and metadata."
+    },
+    "contentStatus": {
+      "abstract": "not-available",
+      "highlights": "not-available",
+      "keywords": "not-available",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-10-23",
+      "verifiedSource": "https://pure.lib.cgu.edu.tw/en/publications/advanced-additives-for-space-missions-pvdf-hfps-impact-on-perovsk/"
+    },
+    "citation": "Kun-Mu Lee, Seoungjun Ahn, Wei-Hao Chiu. Advanced Additives for Space Missions: PVDF-HFP's Impact on Perovskite Solar Cell Reliability. The 42nd European Photovoltaic Solar Energy Conference and Exhibition (EU PVSEC 2025) (2025).",
+    "internationalCollaboration": {
+      "status": "needs-review",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "sources": [
+        "https://pure.lib.cgu.edu.tw/en/publications/advanced-additives-for-space-missions-pvdf-hfps-impact-on-perovsk/"
+      ],
+      "warnings": [
+        "Per-author affiliations unavailable; conference location does not establish international collaboration."
+      ],
+      "manualOverride": false,
+      "requiresManualReview": true
+    }
   }
 ]

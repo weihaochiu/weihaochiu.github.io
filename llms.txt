@@ -115,6 +115,8 @@
 - [石墨相氮化碳修飾石墨氈應用於全釩液流電池](https://weihaochiu.github.io/publications/fpg-2025-c3n4-graphite-felt.html) — 20th Formosa Plastics Group Applied Technology Seminar / 第20屆台塑企業應用技術研討會, 2025
 - [Coordination Dynamics of Green Solvents Tailor Solubility and Crystallization in Wide-Bandgap Perovskite Solar Cells](https://weihaochiu.github.io/publications/wcpec-9-2026-green-solvents.html) — 9th World Conference on Photovoltaic Energy Conversion (WCPEC-9), 2026
 - [Performance and Stability of PVDF-HFP-Modified Perovskite Solar Cells under Space-Relevant Coupled Vacuum, Illumination, and Thermal Stress](https://weihaochiu.github.io/publications/wcpec-9-2026-pvdf-hfp-space-reliability.html) — 9th World Conference on Photovoltaic Energy Conversion (WCPEC-9), 2026
+- [Comprehensive Study of PVDF-HFP in Perovskite Solar Cells for Enhanced Space Mission Reliability](https://weihaochiu.github.io/publications/isos-15-2024-pvdf-hfp-space-reliability.html) — 2024 International Summit on Organic and Hybrid Photovoltaics Stability (ISOS 15), 2024
+- [Advanced Additives for Space Missions: PVDF-HFP's Impact on Perovskite Solar Cell Reliability](https://weihaochiu.github.io/publications/eu-pvsec-2025-pvdf-hfp-space-reliability.html) — The 42nd European Photovoltaic Solar Energy Conference and Exhibition (EU PVSEC 2025), 2025
 
 ### Theses & Dissertations
 

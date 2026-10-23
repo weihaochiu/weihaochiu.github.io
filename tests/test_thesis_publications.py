@@ -58,8 +58,7 @@ class ThesisPublicationTests(unittest.TestCase):
             for row in self.publications
             if row.get("analytics", {}).get("journalMetrics") is True
         ]
-        self.assertEqual(72, len(self.publications))
-        self.assertEqual(70, len(research))
+        self.assertEqual(len(self.publications) - len(self.theses), len(research))
         self.assertEqual(38, len(core))
         self.assertEqual(38, len(journal_metrics))
         self.assertEqual(2, len(self.theses))

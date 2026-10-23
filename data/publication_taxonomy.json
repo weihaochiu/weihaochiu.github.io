@@ -634,6 +634,18 @@
       "subtopics": [
         "PSC: Space Applications"
       ]
+    },
+    "isos-15-2024-pvdf-hfp-space-reliability": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Space Applications"
+      ]
+    },
+    "eu-pvsec-2025-pvdf-hfp-space-reliability": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Space Applications"
+      ]
     }
   }
 }
