@@ -2,10 +2,10 @@
   "schemaVersion": 2,
   "source": "OpenAlex Works API",
   "status": "success",
-  "publicationCount": 41,
-  "verifiedCount": 39,
+  "publicationCount": 42,
+  "verifiedCount": 40,
   "notFoundCount": 2,
-  "lastSuccessfulUpdate": "2026-10-23T13:10:57Z",
+  "lastSuccessfulUpdate": "2026-10-23T13:40:57Z",
   "records": {
     "10.1016/j.cej.2026.183177": {
       "status": "verified",
@@ -521,6 +521,19 @@
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-10-14T16:39:01.820549"
+    },
+    "10.1002/advs.77623": {
+      "status": "verified",
+      "doi": "10.1002/advs.77623",
+      "title": "Asymmetric Fluorinated Spiro Hole‐Transport Materials Enabled by a Rapid Core‐Forming Strategy for Blade‐Coated Perovskite Solar Cells",
+      "openAlexId": "W7212081566",
+      "url": "https://openalex.org/W7212081566",
+      "citationCount": 0,
+      "fwci": 0.0,
+      "citationPercentile": 0.60484807,
+      "isTop1Percent": false,
+      "isTop10Percent": false,
+      "openAlexUpdatedDate": "2026-10-22T18:32:59.640997"
     }
   }
 }
