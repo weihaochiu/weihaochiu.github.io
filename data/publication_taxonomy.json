@@ -646,6 +646,127 @@
       "subtopics": [
         "PSC: Space Applications"
       ]
+    },
+    "sdse-2026-pvdf-hfp-reliability": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Space Applications"
+      ]
+    },
+    "aepa-2026-pvdf-hfp-space": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Space Applications"
+      ]
+    },
+    "sdse-2025-blade-coating": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Scalable Processing"
+      ]
+    },
+    "mc17-2025-sn-o2-mesoporous-ti-o2": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Interface Engineering"
+      ]
+    },
+    "agem-2025-blade-coating": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Scalable Processing"
+      ]
+    },
+    "agem-2025-pvdf-hfp-space": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Space Applications"
+      ]
+    },
+    "segt-2024-pvdf-hfp-space": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Space Applications"
+      ]
+    },
+    "sdse-2024-laser-cu-niox": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Interface Engineering"
+      ]
+    },
+    "ic-med-2024-pvdf-hfp-space": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Space Applications"
+      ]
+    },
+    "pvsec-33-2022-csi-two-step": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Interface Engineering"
+      ]
+    },
+    "iedms-2022-csi-two-step": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Interface Engineering"
+      ]
+    },
+    "fpg-2026-perovskite-topcon-tandem": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Tandem Solar Cells"
+      ]
+    },
+    "fpg-2026-laser-crystallization": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Scalable Processing"
+      ]
+    },
+    "fpg-2026-blade-coating": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Scalable Processing"
+      ]
+    },
+    "fpg-2026-snox-tin-lead": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Interface Engineering"
+      ]
+    },
+    "fpg-2024-pvdf-hfp-space": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Space Applications"
+      ]
+    },
+    "fpg-2024-blade-slot-die": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Scalable Processing"
+      ]
+    },
+    "mcut-2023-csi-two-step": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Interface Engineering"
+      ]
+    },
+    "mcut-2023-blade-slot-die": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Scalable Processing"
+      ]
+    },
+    "10.1002/advs.77623": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Hole-Transporting Materials",
+        "PSC: Scalable Processing"
+      ]
     }
   }
 }

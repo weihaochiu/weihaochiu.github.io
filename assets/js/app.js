@@ -348,14 +348,14 @@ function conferenceInfo(p){
   const url=normalizeExternalUrl(c.url);
   const urlLabel=({'organizer-page':'Official organizer page','official-program':'Official conference program (PDF)'})[c.urlType]||'Conference website';
   const names=[['nameEn','en','Conference'],['nameZh','zh-Hant','會議名稱']].filter(([key])=>c[key]).map(([key,lang,label])=>`<p lang="${lang}"><strong>${label}:</strong> ${esc(c[key])}</p>`).join('');
-  return `<div class="conference-meta">${artwork}<p>${({'conference-full-paper':'Full conference manuscript','proceedings-paper':'Conference paper','conference-extended-abstract':'Conference extended abstract'}[p.documentType]||'Conference abstract')}</p>${names}${fields.map(([label,value])=>`<p><strong>${label}:</strong> ${esc(value)}</p>`).join('')}${c.websiteNote?`<p>${esc(c.websiteNote)}</p>`:''}${url?`<p><a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${urlLabel} ↗</a></p>`:''}</div>`;
+  return `<div class="conference-meta">${artwork}<p>${({'conference-full-paper':'Full conference manuscript','proceedings-paper':'Conference paper','conference-extended-abstract':'Conference extended abstract','other':'Conference contribution (bibliographic record)'}[p.documentType]||'Conference abstract')}</p>${names}${fields.map(([label,value])=>`<p><strong>${label}:</strong> ${esc(value)}</p>`).join('')}${c.websiteNote?`<p>${esc(c.websiteNote)}</p>`:''}${url?`<p><a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${urlLabel} ↗</a></p>`:''}</div>`;
 }
 function publicationCard(p){
   if(p.publicationType==='thesis')return thesisPublicationCard(p);
   const authors=(p.authors||[]).map(renderAuthor).join(', ');
   const n=Number(p.citationCount||0);
   const scholarUrl=normalizeScholarUrl(p.scholarCitedByUrl)||normalizeScholarUrl(p.citedByUrl);
-  const cited=p.analytics?.citationMetrics===false?'':n>0&&scholarUrl
+  const cited=p.analytics?.citationMetrics===false||p.citationCount==null||p.citationCount===''?'':n>0&&scholarUrl
     ?`<a class="action" href="${esc(scholarUrl)}" target="_blank" rel="noopener noreferrer">${n} Google Scholar citation${n===1?'':'s'} ↗</a>`
     :`<span class="action">${n} Google Scholar citation${n===1?'':'s'}</span>`;
   const openalex=p.openalex||{};
@@ -818,7 +818,10 @@ function navigationInteractions(){
   document.addEventListener('keydown',e=>{if(e.key==='Escape'){nav?.classList.remove('open');toggle?.setAttribute('aria-expanded','false')}});
 }
 
+let resolvePublicationCollection;
+window.publicationCollectionReady = new Promise(resolve => { resolvePublicationCollection = resolve; });
 document.addEventListener('DOMContentLoaded',async()=>{
+  try {
   setNavigation();
   navigationInteractions();
   publicationInteractions();
@@ -830,7 +833,9 @@ document.addEventListener('DOMContentLoaded',async()=>{
   buildAuthorDirectory(authors);
   buildPatentContributions(patents);
   initAuthorPopover();
-  initCollection().catch(console.error);
+  await initCollection();
+  } catch (error) { console.error(error); }
+  finally { resolvePublicationCollection(); }
 });
 
 /* PUBLICATION_AUTHORSHIP_APP_START */
@@ -984,7 +989,7 @@ document.addEventListener('DOMContentLoaded',async()=>{
   const source = document.currentScript?.src;
   if (!source) return;
   const script = document.createElement('script');
-  script.src = new URL('publication-attention.js?v=20261023-3', source).href;
+  script.src = new URL('publication-attention.js?v=20261023-4', source).href;
   script.defer = true;
   document.head.appendChild(script);
 })();

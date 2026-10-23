@@ -217,7 +217,7 @@ def conference_info_html(p, prefix=''):
   logo=('sdse.png',1291,437) if acronym.startswith('SDSE') else ('twiche.png',967,180) if acronym.startswith('TwIChE') else ('wcpec-9.png',357,357) if acronym=='WCPEC-9' else ('pvsec-35.png',692,182) if acronym=='PVSEC-35' else ('isos-15.png',2170,725) if acronym=='ISOS 15' else None
   artwork=('<img class="conference-logo" src="'+prefix+'assets/images/institutions/'+logo[0]+'" width="'+str(logo[1])+'" height="'+str(logo[2])+'" alt="'+esc('Smart Devices and Sustainable Energy' if acronym.startswith('SDSE') else '9th World Conference on Photovoltaic Energy Conversion (WCPEC-9)' if acronym=='WCPEC-9' else '35th International Photovoltaic Science and Engineering Conference (PVSEC-35)' if acronym=='PVSEC-35' else 'International Summit on Organic & Hybrid Photovoltaics Stability (ISOS-15)' if acronym=='ISOS 15' else 'Taiwan Institute of Chemical Engineers')+'" loading="lazy" decoding="async"/>') if logo else ''
   dates=c.get('startDate','')+(' – '+c['endDate'] if c.get('endDate') and c['endDate']!=c.get('startDate') else '')
-  label={'conference-full-paper':'Full conference manuscript','proceedings-paper':'Conference paper','conference-extended-abstract':'Conference extended abstract'}.get(p.get('documentType'),'Conference abstract')
+  label={'conference-full-paper':'Full conference manuscript','proceedings-paper':'Conference paper','conference-extended-abstract':'Conference extended abstract','other':'Conference contribution (bibliographic record)'}.get(p.get('documentType'),'Conference abstract')
   lines=['<p>'+label+'</p>']
   for key,lang,title in [('nameEn','en','Conference'),('nameZh','zh-Hant','會議名稱')]:
     if c.get(key): lines.append('<p lang="'+lang+'"><strong>'+title+':</strong> '+esc(c[key])+'</p>')
@@ -249,7 +249,7 @@ def static_card(p, openalex_record=None):
   openalex_record = openalex_record or {}
   impact_html = ''.join(openalex_impact_actions(openalex_record)) if p.get('analytics',{}).get('fwci') is True and openalex_record.get('status') == 'verified' else ''
   doi_html='<a class="action" href="'+esc(p.get('doiUrl'))+'" target="_blank" rel="noopener">DOI ↗</a>' if p.get('doiUrl') else ''
-  scholar_html='' if p.get('analytics',{}).get('citationMetrics') is False else '<span class="action">'+str(n)+' Google Scholar citation'+('s' if n!=1 else '')+'</span>'
+  scholar_html='' if p.get('analytics',{}).get('citationMetrics') is False or p.get('citationCount') in (None,'') else '<span class="action">'+str(n)+' Google Scholar citation'+('s' if n!=1 else '')+'</span>'
   identifier=doi or p.get('id','')
   return '<article class="collection-card publication-card seo-static-card" id="pub-'+slug+'" itemscope itemtype="https://schema.org/ScholarlyArticle"><meta itemprop="identifier" content="'+esc(identifier)+'"/><div class="card-heading"><h4 itemprop="headline"><a href="'+esc(local)+'">'+esc(p.get('title'))+'</a></h4><span class="date-badge" itemprop="datePublished">'+esc(p.get('date'))+'</span></div><p class="authors publication-authors" itemprop="author">'+authors+'</p>'+publication_affiliations_html(p,details=False)+'<p class="journal" itemprop="isPartOf">'+journal+'</p>'+conference_info_html(p)+'<div class="card-labels">'+labels_html+'</div><div class="card-actions">'+doi_html+'<a class="action" href="'+esc(local)+'">Publication details →</a>'+scholar_html+impact_html+'</div></article>'
 
@@ -522,7 +522,7 @@ def publication_page(p, openalex_record=None, unpaywall_record=None, crossref_re
   if unpaywall_record.get('isOa') and unpaywall_record.get('urlForPdf'):
     actions.append('<a class="action oa-action" href="'+esc(unpaywall_record.get('urlForPdf'))+'" target="_blank" rel="noopener noreferrer">Open Access PDF ↗</a>')
   scholar_url = p.get('citedByUrl') or p.get('scholarProfileUrl')
-  if scholar_url:
+  if scholar_url and p.get('citationCount') not in (None,'') and p.get('analytics',{}).get('citationMetrics') is not False:
     scholar_count = int(p.get('citationCount') or 0)
     actions.append('<a class="action" href="'+esc(scholar_url)+'" target="_blank" rel="noopener noreferrer">'+f'{scholar_count:,}'+' Google Scholar citation'+('' if scholar_count == 1 else 's')+' ↗</a>')
   if openalex_record.get('status') == 'verified' and openalex_record.get('url'):
@@ -547,7 +547,7 @@ def publication_page(p, openalex_record=None, unpaywall_record=None, crossref_re
   if p.get('conference'):
     page=page.replace('../assets/css/styles.css','../assets/css/styles.css?v=conferences-20261023').replace('../assets/js/app.js?v=nav-news-20261023','../assets/js/app.js?v=conference-links-20261023')
   if doi:
-    page=re.sub(r'(assets/js/app\.js)(?:\?[^"\s]*)?', r'\1?v=publication-attention-20261023-3', page)
+    page=re.sub(r'(assets/js/app\.js)(?:\?[^"\s]*)?', r'\1?v=publication-attention-20261023-4', page)
   return page
 
 def main():
@@ -597,7 +597,7 @@ def main():
   text=re.sub(r'\s*</head>', '\n</head>', text, count=1)
   citation_block = CITATION_META_START+'\n'+'\n'.join(citation_meta(p) for p in pubs)+'\n'+CITATION_META_END
   text=text.replace('</head>',citation_block+'\n'+schema+'\n</head>',1)
-  text=re.sub(r'(assets/js/app\.js)(?:\?[^"\s]*)?', r'\1?v=publication-attention-20261023-3', text)
+  text=re.sub(r'(assets/js/app\.js)(?:\?[^"\s]*)?', r'\1?v=publication-attention-20261023-4', text)
   pubpath.write_text(text,encoding='utf-8')
   pdir=ROOT/'publications'; pdir.mkdir(exist_ok=True)
   for name in before_files:
@@ -638,6 +638,13 @@ def main():
   core_count=sum(p.get('analytics',{}).get('coreJournalCount') is True for p in pubs)
   research_count=sum(is_research_publication(p) for p in pubs)
   thesis_count=sum(is_thesis(p) for p in pubs)
+  # Keep the initial/no-JavaScript homepage totals aligned with the same sources.
+  home_path=ROOT/'index.html'
+  home=home_path.read_text(encoding='utf-8')
+  patent_count=len(json.loads((ROOT/'data/patents.json').read_text(encoding='utf-8')))
+  for key,count in [('publications',core_count),('scholarly-outputs',research_count),('patents',patent_count)]:
+    home=re.sub(r'(data-output-count="'+key+r'">)\d+',lambda match:match[1]+str(count),home)
+  home_path.write_text(home,encoding='utf-8')
   mp=ROOT/'data/site_meta.json'; meta=json.loads(mp.read_text(encoding='utf-8')); meta.update({'version':'v26','lastUpdated':TODAY,'coreJournalPublications':core_count,'scholarlyOutputs':research_count,'thesesAndDissertations':thesis_count,'notes':f'V26 displays {thesis_count} theses and dissertations separately while retaining {research_count} research publications and {core_count} core international journal publications for publication analytics.'}); mp.write_text(json.dumps(meta,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 
 if __name__=='__main__': main()

@@ -1,8 +1,8 @@
 {
   "version": "v26",
   "lastUpdated": "2026-10-23",
-  "notes": "V26 displays 2 theses and dissertations separately while retaining 72 research publications and 38 core international journal publications for publication analytics.",
-  "coreJournalPublications": 38,
-  "scholarlyOutputs": 72,
+  "notes": "V26 displays 2 theses and dissertations separately while retaining 92 research publications and 39 core international journal publications for publication analytics.",
+  "coreJournalPublications": 39,
+  "scholarlyOutputs": 92,
   "thesesAndDissertations": 2
 }

@@ -32,12 +32,34 @@
       const rail = document.createElement('aside');
       rail.className = 'publication-attention';
       rail.setAttribute('aria-label', 'Research attention: PlumX and Altmetric');
-      const plum = document.createElement('plumx-widget');
+      let plum = document.createElement('plumx-widget');
       Object.entries({type:'artifact', 'identifier-type':'doi', identifier:doi, display:'plumprint', config:plumConfig()}).forEach(([key,value]) => plum.setAttribute(key,value));
-      plum.addEventListener('plumx:load', () => card.classList.add('has-attention'));
-      const hidePlum = () => { plum.hidden = true; };
-      plum.addEventListener('plumx:empty', hidePlum);
-      plum.addEventListener('plumx:error', hidePlum);
+      let retries = 0;
+      const bindPlum = () => {
+        plum.addEventListener('plumx:load', () => {
+          plum.hidden = false;
+          card.classList.add('has-attention');
+        });
+        plum.addEventListener('plumx:empty', () => { plum.hidden = true; });
+        plum.addEventListener('plumx:error', event => {
+          plum.hidden = true;
+          // The provider caches aborted/failed requests for five seconds. A list
+          // filter can disconnect a pending widget; remount after that cache expires.
+          if (event.detail?.code === 'ARTIFACT_NOT_FOUND' || retries++ >= 1) return;
+          setTimeout(() => {
+            if (!plum.isConnected) return;
+            const replacement = document.createElement('plumx-widget');
+            for (const attribute of plum.attributes) {
+              if (attribute.name !== 'hidden') replacement.setAttribute(attribute.name, attribute.value);
+            }
+            const previous = plum;
+            plum = replacement;
+            bindPlum();
+            previous.replaceWith(plum);
+          }, 5500);
+        });
+      };
+      bindPlum();
       const alt = document.createElement('div');
       alt.className = 'altmetric-embed';
       Object.entries({doi, 'badge-type':'donut', 'badge-popover':'top', 'hide-no-mentions':'true', 'link-target':'_blank'}).forEach(([key,value]) => alt.setAttribute('data-'+key,value));
@@ -69,7 +91,9 @@
     queued = true;
     requestAnimationFrame(() => { queued = false; enhance(); });
   });
-  function start() {
+  async function start() {
+    // Do not start provider requests on static cards that initCollection replaces.
+    await window.publicationCollectionReady;
     enhance();
     observer.observe(document.body, {childList:true,subtree:true});
   }

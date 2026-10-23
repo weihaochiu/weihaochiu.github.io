@@ -3,8 +3,8 @@
   "source": "Google Patents exact record pages",
   "lastAttempt": "2026-10-01T07:31:45Z",
   "lastSuccessfulUpdate": "2026-10-01T07:31:45Z",
-  "recordCount": 14,
-  "verifiedCount": 14,
+  "recordCount": 16,
+  "verifiedCount": 16,
   "records": {
     "TWI851990B": {
       "canonicalId": "TWI851990B",
@@ -371,6 +371,30 @@
         "Y02E10/50"
       ],
       "abstract": "This creation proposes a solar cell module suitable for the roof of a farm shed, which includes an outer frame, a plurality of solar cell units, and at least one light-transmitting plate. An inner area surrounded by the outer frame includes a solar cell configuration area and a battery-free area. The ratio of the area ratio between the solar cell configuration area and the battery-free area is in the range of 0.6 to 2.0. The plurality of solar battery cells are arranged in the solar battery arrangement area of the inner area of the outer frame, and the light-transmitting plate is arranged in the battery-free area. The roof of the farm shed laid by the solar cell module of this creation can allow a large amount of sunlight to penetrate, increase the illuminance inside the farm, and reduce the solar power required for the farm during the day."
+    },
+    "US20120055796A1": {
+      "canonicalId": "US20120055796A1",
+      "source": "Google Patents",
+      "sourceUrl": "https://patents.google.com/patent/US20120055796A1/en",
+      "status": "verified",
+      "updatedAt": "2026-10-23T00:00:00Z",
+      "applicationNumber": "US13/085,452",
+      "filingDate": "2011-04-12",
+      "jurisdictionCode": "US",
+      "classifications": [],
+      "abstract": ""
+    },
+    "TW201216482A": {
+      "canonicalId": "TW201216482A",
+      "source": "Google Patents",
+      "sourceUrl": "https://patents.google.com/patent/TW201216482A/zh",
+      "status": "verified",
+      "updatedAt": "2026-10-23T00:00:00Z",
+      "applicationNumber": "TW99133827A",
+      "filingDate": "2010-10-05",
+      "jurisdictionCode": "TW",
+      "classifications": [],
+      "abstract": ""
     }
   },
   "errors": []

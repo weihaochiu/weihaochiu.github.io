@@ -146,11 +146,11 @@
   },
   {
     "canonicalId": "CN102456480A",
-    "aliases": ["CN102456480A"],
+    "aliases": ["CN102456480A", "201010522938.1"],
     "familyId": "solar-cell-structure",
     "jurisdiction": "China",
     "number": "CN102456480A",
-    "applicationNumber": "",
+    "applicationNumber": "CN2010105229381A",
     "titleEn": "Solar Cell Structure",
     "titleZh": "太阳电池结构",
     "inventors": [
@@ -175,11 +175,11 @@
   },
   {
     "canonicalId": "CN102456482B",
-    "aliases": ["CN102456482B"],
+    "aliases": ["CN102456482B", "201010532040.2"],
     "familyId": "substrate-electrode-structures",
     "jurisdiction": "China",
     "number": "CN102456482B",
-    "applicationNumber": "",
+    "applicationNumber": "CN201010532040.2A",
     "titleEn": "Method for Manufacturing a Substrate Electrode Structure",
     "titleZh": "基板电极结构的制造方法",
     "inventors": [
@@ -403,5 +403,99 @@
     "url": "https://patents.google.com/patent/TWM611184U/en",
     "year": 2021,
     "sortDate": "2021-05-01"
+  },
+  {
+    "canonicalId": "US20120055796A1",
+    "aliases": [
+      "US20120055796A1"
+    ],
+    "familyId": "substrate-electrode-structures",
+    "jurisdiction": "United States",
+    "number": "US20120055796A1",
+    "applicationNumber": "US13/085,452",
+    "titleEn": "Method of Fabricating Electrode Structures on Substrate",
+    "titleZh": "",
+    "inventors": [
+      {
+        "personId": "kun-mu-lee",
+        "nameEn": "Kun-Mu Lee",
+        "nameZh": "李坤穆"
+      },
+      {
+        "personId": "sz-ping-fu",
+        "nameEn": "Sz-Ping Fu",
+        "nameZh": "傅思萍"
+      },
+      {
+        "personId": "wei-hao-chiu",
+        "nameEn": "Wei-Hao Chiu",
+        "nameZh": "邱偉豪"
+      },
+      {
+        "personId": "chuan-ya-hung",
+        "nameEn": "Chuan-Ya Hung",
+        "nameZh": "洪詮雅"
+      }
+    ],
+    "assigneeEn": "Industrial Technology Research Institute",
+    "assigneeZh": "財團法人工業技術研究院",
+    "date": "2012-03-08",
+    "priorityDate": "2010-09-08",
+    "filingDate": "2011-04-12",
+    "publicationDate": "2012-03-08",
+    "grantDate": "",
+    "documentStage": "Published application",
+    "patentType": "Patent application",
+    "status": "Published application",
+    "url": "https://patents.google.com/patent/US20120055796A1/en",
+    "year": 2012,
+    "sortDate": "2012-03-08"
+  },
+  {
+    "canonicalId": "TW201216482A",
+    "aliases": [
+      "TW201216482A"
+    ],
+    "familyId": "solar-cell-structure",
+    "jurisdiction": "Taiwan",
+    "number": "TW201216482A",
+    "applicationNumber": "TW99133827A",
+    "titleEn": "Solar Cell Structure",
+    "titleZh": "太陽電池結構",
+    "inventors": [
+      {
+        "personId": "kun-mu-lee",
+        "nameEn": "Kun-Mu Lee",
+        "nameZh": "李坤穆"
+      },
+      {
+        "personId": "lee-chia-hua",
+        "nameEn": "Chia-Hua Lee",
+        "nameZh": "李佳樺"
+      },
+      {
+        "personId": "wei-hao-chiu",
+        "nameEn": "Wei-Hao Chiu",
+        "nameZh": "邱偉豪"
+      },
+      {
+        "personId": "chuan-ya-hung",
+        "nameEn": "Chuan-Ya Hung",
+        "nameZh": "洪詮雅"
+      }
+    ],
+    "assigneeEn": "Industrial Technology Research Institute",
+    "assigneeZh": "財團法人工業技術研究院",
+    "date": "2012-04-16",
+    "priorityDate": "2010-10-05",
+    "filingDate": "2010-10-05",
+    "publicationDate": "2012-04-16",
+    "grantDate": "",
+    "documentStage": "Published application",
+    "patentType": "Patent application",
+    "status": "Published application",
+    "url": "https://patents.google.com/patent/TW201216482A/zh",
+    "year": 2012,
+    "sortDate": "2012-04-16"
   }
 ]

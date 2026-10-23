@@ -21301,5 +21301,3456 @@
       "taiwanAffiliationIds": [],
       "foreignAffiliationIds": []
     }
+  },
+  {
+    "id": "sdse-2026-pvdf-hfp-reliability",
+    "publicationType": "conference",
+    "documentType": "other",
+    "language": "en",
+    "peerReviewStatus": "unverified",
+    "date": "2026-10-14",
+    "year": 2026,
+    "month": 10,
+    "title": "Reliability Enhancement of PVDF-HFP Modified Perovskite Solar Cells under Synergistic Space-Relevant Stress Conditions",
+    "authors": [
+      "Harini Srikanth Rao",
+      "Seoungjun Ahn",
+      "Wei-Hao Chiu",
+      "Wei-Chen Chu",
+      "Yi-Wen Sung",
+      "Kun-Mu Lee"
+    ],
+    "journal": "4th International Conference on Smart Devices and Sustainable Energy (SDSE 2026)",
+    "publisher": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "doi": "",
+    "doiUrl": "",
+    "publicationUrl": "",
+    "abstract": "",
+    "highlights": [],
+    "keywords": [],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "authorOrder": 3,
+    "role": "Co-author",
+    "topic": "Perovskite Solar Cells",
+    "tags": [
+      "SDSE 2026",
+      "Conference contribution"
+    ],
+    "conference": {
+      "name": "4th International Conference on Smart Devices and Sustainable Energy (SDSE 2026)",
+      "acronym": "SDSE 2026",
+      "startDate": "2026-10-14",
+      "endDate": "2026-10-16",
+      "location": "New Taipei, Taiwan",
+      "url": "https://2026.sdsemcut.com/site/mypage.aspx?lang=en&pid=25&sid=1708",
+      "urlType": "conference-site",
+      "documentType": "other",
+      "presentationType": "",
+      "acceptanceStatus": "",
+      "abstractNumber": ""
+    },
+    "analytics": {
+      "coreJournalCount": false,
+      "journalMetrics": false,
+      "fwci": false,
+      "citationMetrics": false
+    },
+    "affiliations": [],
+    "authorships": [
+      {
+        "name": "Harini Srikanth Rao",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-International Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "Seoungjun Ahn",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-International Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "Wei-Hao Chiu",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-International Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "Wei-Chen Chu",
+        "authorOrder": 4,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-International Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "Yi-Wen Sung",
+        "authorOrder": 5,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-International Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "Kun-Mu Lee",
+        "authorOrder": 6,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-International Conference Paper.pdf"
+        ]
+      }
+    ],
+    "authorshipMetadata": {
+      "status": "partial",
+      "manualAffiliations": true,
+      "lastChecked": "2026-10-23",
+      "sources": [
+        "WHChiu-International Conference Paper.pdf"
+      ],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "author-affiliation links",
+        "corresponding author",
+        "equal contribution"
+      ],
+      "warnings": [
+        "User-provided bibliography only; no full manuscript or asterisk legend supplied."
+      ]
+    },
+    "metadataSource": "manual_verified",
+    "automationProtection": {
+      "protected": true,
+      "reason": "User-provided PDF bibliography; preserve manually curated source-specific metadata."
+    },
+    "contentStatus": {
+      "abstract": "not-available",
+      "highlights": "not-available",
+      "keywords": "not-available",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-10-23",
+      "verifiedSource": "WHChiu-International Conference Paper.pdf"
+    },
+    "citation": "Harini Srikanth Rao, Seoungjun Ahn, Wei-Hao Chiu, Wei-Chen Chu, Yi-Wen Sung, Kun-Mu Lee. Reliability Enhancement of PVDF-HFP Modified Perovskite Solar Cells under Synergistic Space-Relevant Stress Conditions. 4th International Conference on Smart Devices and Sustainable Energy (SDSE 2026) (2026).",
+    "internationalCollaboration": {
+      "status": "needs-review",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "sources": [
+        "WHChiu-International Conference Paper.pdf"
+      ],
+      "warnings": [
+        "Affiliations unavailable; conference location does not establish international collaboration."
+      ],
+      "manualOverride": false,
+      "requiresManualReview": true,
+      "taiwanAffiliationIds": [],
+      "foreignAffiliationIds": []
+    },
+    "sourceDocument": "WHChiu-International Conference Paper.pdf"
+  },
+  {
+    "id": "aepa-2026-pvdf-hfp-space",
+    "publicationType": "conference",
+    "documentType": "other",
+    "language": "en",
+    "peerReviewStatus": "unverified",
+    "date": "2026-02-01",
+    "year": 2026,
+    "month": 2,
+    "title": "Add PVDF-HFP in Perovskite for Improve Reliability of Perovskite Photovoltaic for Space Application",
+    "authors": [
+      "Kun-Mu Lee",
+      "Seoungjun Ahn",
+      "Wei-Hao Chiu"
+    ],
+    "journal": "16th Asia-Pacific Symposium on Engineering Plasticity and Its Applications (AEPA 2026)",
+    "publisher": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "doi": "",
+    "doiUrl": "",
+    "publicationUrl": "",
+    "abstract": "",
+    "highlights": [],
+    "keywords": [],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "authorOrder": 3,
+    "role": "Co-author",
+    "topic": "Perovskite Solar Cells",
+    "tags": [
+      "AEPA 2026",
+      "Conference contribution"
+    ],
+    "conference": {
+      "name": "16th Asia-Pacific Symposium on Engineering Plasticity and Its Applications (AEPA 2026)",
+      "acronym": "AEPA 2026",
+      "startDate": "2026-02-01",
+      "endDate": "2026-02-06",
+      "location": "Auckland, New Zealand",
+      "url": "https://aepa2026.org/",
+      "urlType": "conference-site",
+      "documentType": "other",
+      "presentationType": "",
+      "acceptanceStatus": "",
+      "abstractNumber": ""
+    },
+    "analytics": {
+      "coreJournalCount": false,
+      "journalMetrics": false,
+      "fwci": false,
+      "citationMetrics": false
+    },
+    "affiliations": [],
+    "authorships": [
+      {
+        "name": "Kun-Mu Lee",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-International Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "Seoungjun Ahn",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-International Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "Wei-Hao Chiu",
+        "authorOrder": 3,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-International Conference Paper.pdf"
+        ]
+      }
+    ],
+    "authorshipMetadata": {
+      "status": "partial",
+      "manualAffiliations": true,
+      "lastChecked": "2026-10-23",
+      "sources": [
+        "WHChiu-International Conference Paper.pdf"
+      ],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "author-affiliation links",
+        "corresponding author",
+        "equal contribution"
+      ],
+      "warnings": [
+        "User-provided bibliography only; no full manuscript or asterisk legend supplied."
+      ]
+    },
+    "metadataSource": "manual_verified",
+    "automationProtection": {
+      "protected": true,
+      "reason": "User-provided PDF bibliography; preserve manually curated source-specific metadata."
+    },
+    "contentStatus": {
+      "abstract": "not-available",
+      "highlights": "not-available",
+      "keywords": "not-available",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-10-23",
+      "verifiedSource": "WHChiu-International Conference Paper.pdf"
+    },
+    "citation": "Kun-Mu Lee, Seoungjun Ahn, Wei-Hao Chiu. Add PVDF-HFP in Perovskite for Improve Reliability of Perovskite Photovoltaic for Space Application. 16th Asia-Pacific Symposium on Engineering Plasticity and Its Applications (AEPA 2026) (2026).",
+    "internationalCollaboration": {
+      "status": "needs-review",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "sources": [
+        "WHChiu-International Conference Paper.pdf"
+      ],
+      "warnings": [
+        "Affiliations unavailable; conference location does not establish international collaboration."
+      ],
+      "manualOverride": false,
+      "requiresManualReview": true,
+      "taiwanAffiliationIds": [],
+      "foreignAffiliationIds": []
+    },
+    "sourceDocument": "WHChiu-International Conference Paper.pdf"
+  },
+  {
+    "id": "sdse-2025-blade-coating",
+    "publicationType": "conference",
+    "documentType": "other",
+    "language": "en",
+    "peerReviewStatus": "unverified",
+    "date": "2025-10-15",
+    "year": 2025,
+    "month": 10,
+    "title": "Blade Coating Strategies for Morphology -Controlled Perovskite Solar Cells with High Performance",
+    "authors": [
+      "Wei-Chen Chu",
+      "Wei-Hao Chiu",
+      "Kun-Mu Lee"
+    ],
+    "journal": "3rd International Conference on Smart Devices and Sustainable Energy (SDSE 2025)",
+    "publisher": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "doi": "",
+    "doiUrl": "",
+    "publicationUrl": "",
+    "abstract": "",
+    "highlights": [],
+    "keywords": [],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "authorOrder": 2,
+    "role": "Co-author",
+    "topic": "Perovskite Solar Cells",
+    "tags": [
+      "SDSE 2025",
+      "Conference contribution"
+    ],
+    "conference": {
+      "name": "3rd International Conference on Smart Devices and Sustainable Energy (SDSE 2025)",
+      "acronym": "SDSE 2025",
+      "startDate": "2025-10-15",
+      "endDate": "2025-10-17",
+      "location": "New Taipei, Taiwan",
+      "url": "https://2025.sdsemcut.com/",
+      "urlType": "conference-site",
+      "documentType": "other",
+      "presentationType": "",
+      "acceptanceStatus": "",
+      "abstractNumber": ""
+    },
+    "analytics": {
+      "coreJournalCount": false,
+      "journalMetrics": false,
+      "fwci": false,
+      "citationMetrics": false
+    },
+    "affiliations": [],
+    "authorships": [
+      {
+        "name": "Wei-Chen Chu",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-International Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "Wei-Hao Chiu",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-International Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "Kun-Mu Lee",
+        "authorOrder": 3,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-International Conference Paper.pdf"
+        ]
+      }
+    ],
+    "authorshipMetadata": {
+      "status": "partial",
+      "manualAffiliations": true,
+      "lastChecked": "2026-10-23",
+      "sources": [
+        "WHChiu-International Conference Paper.pdf"
+      ],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "author-affiliation links",
+        "corresponding author",
+        "equal contribution"
+      ],
+      "warnings": [
+        "User-provided bibliography only; no full manuscript or asterisk legend supplied.",
+        "Conference PDF repeats Wei-Hao Chiu; ordered authors follow the matching Award PDF and existing verified award record."
+      ]
+    },
+    "metadataSource": "manual_verified",
+    "automationProtection": {
+      "protected": true,
+      "reason": "User-provided PDF bibliography; preserve manually curated source-specific metadata."
+    },
+    "contentStatus": {
+      "abstract": "not-available",
+      "highlights": "not-available",
+      "keywords": "not-available",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-10-23",
+      "verifiedSource": "WHChiu-International Conference Paper.pdf"
+    },
+    "citation": "Wei-Chen Chu, Wei-Hao Chiu, Kun-Mu Lee. Blade Coating Strategies for Morphology -Controlled Perovskite Solar Cells with High Performance. 3rd International Conference on Smart Devices and Sustainable Energy (SDSE 2025) (2025).",
+    "internationalCollaboration": {
+      "status": "needs-review",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "sources": [
+        "WHChiu-International Conference Paper.pdf"
+      ],
+      "warnings": [
+        "Affiliations unavailable; conference location does not establish international collaboration."
+      ],
+      "manualOverride": false,
+      "requiresManualReview": true,
+      "taiwanAffiliationIds": [],
+      "foreignAffiliationIds": []
+    },
+    "sourceDocument": "WHChiu-International Conference Paper.pdf"
+  },
+  {
+    "id": "mc17-2025-sn-o2-mesoporous-ti-o2",
+    "publicationType": "conference",
+    "documentType": "other",
+    "language": "en",
+    "peerReviewStatus": "unverified",
+    "date": "2025-07-07",
+    "year": 2025,
+    "month": 7,
+    "title": "Enhancing Perovskite Solar Cell Performance through Chemical Bath Deposition of SnO2 on Mesoporous TiO 2 Electrodes",
+    "authors": [
+      "Wei-Hao Chiu",
+      "Ying-Kai Huang",
+      "Kun-Mu Lee"
+    ],
+    "journal": "17th International Conference on Materials Chemistry (MC17)",
+    "publisher": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "doi": "",
+    "doiUrl": "",
+    "publicationUrl": "",
+    "abstract": "",
+    "highlights": [],
+    "keywords": [],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "authorOrder": 1,
+    "role": "Co-author",
+    "topic": "Perovskite Solar Cells",
+    "tags": [
+      "MC17 2025",
+      "Conference contribution"
+    ],
+    "conference": {
+      "name": "17th International Conference on Materials Chemistry (MC17)",
+      "acronym": "MC17 2025",
+      "startDate": "2025-07-07",
+      "endDate": "2025-07-10",
+      "location": "Edinburgh, United Kingdom",
+      "url": "https://www.rsc.org/events/detail/77989/17th-international-conference-on-materials-chemistry-mc17",
+      "urlType": "organizer-page",
+      "documentType": "other",
+      "presentationType": "",
+      "acceptanceStatus": "",
+      "abstractNumber": ""
+    },
+    "analytics": {
+      "coreJournalCount": false,
+      "journalMetrics": false,
+      "fwci": false,
+      "citationMetrics": false
+    },
+    "affiliations": [],
+    "authorships": [
+      {
+        "name": "Wei-Hao Chiu",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-International Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "Ying-Kai Huang",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-International Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "Kun-Mu Lee",
+        "authorOrder": 3,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-International Conference Paper.pdf"
+        ]
+      }
+    ],
+    "authorshipMetadata": {
+      "status": "partial",
+      "manualAffiliations": true,
+      "lastChecked": "2026-10-23",
+      "sources": [
+        "WHChiu-International Conference Paper.pdf"
+      ],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "author-affiliation links",
+        "corresponding author",
+        "equal contribution"
+      ],
+      "warnings": [
+        "User-provided bibliography only; no full manuscript or asterisk legend supplied."
+      ]
+    },
+    "metadataSource": "manual_verified",
+    "automationProtection": {
+      "protected": true,
+      "reason": "User-provided PDF bibliography; preserve manually curated source-specific metadata."
+    },
+    "contentStatus": {
+      "abstract": "not-available",
+      "highlights": "not-available",
+      "keywords": "not-available",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-10-23",
+      "verifiedSource": "WHChiu-International Conference Paper.pdf"
+    },
+    "citation": "Wei-Hao Chiu, Ying-Kai Huang, Kun-Mu Lee. Enhancing Perovskite Solar Cell Performance through Chemical Bath Deposition of SnO2 on Mesoporous TiO 2 Electrodes. 17th International Conference on Materials Chemistry (MC17) (2025).",
+    "internationalCollaboration": {
+      "status": "needs-review",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "sources": [
+        "WHChiu-International Conference Paper.pdf"
+      ],
+      "warnings": [
+        "Affiliations unavailable; conference location does not establish international collaboration."
+      ],
+      "manualOverride": false,
+      "requiresManualReview": true,
+      "taiwanAffiliationIds": [],
+      "foreignAffiliationIds": []
+    },
+    "sourceDocument": "WHChiu-International Conference Paper.pdf"
+  },
+  {
+    "id": "agem-2025-blade-coating",
+    "publicationType": "conference",
+    "documentType": "other",
+    "language": "en",
+    "peerReviewStatus": "unverified",
+    "date": "2025-01-15",
+    "year": 2025,
+    "month": 1,
+    "title": "Enhancing Perovskite Solar Cell Efficiency by Controlling Active Layer Morphology with Blade Coating",
+    "authors": [
+      "Wei-Chen Chu",
+      "Seoungjun Ahn",
+      "Wei-Hao Chiu",
+      "Kun-Mu Lee"
+    ],
+    "journal": "2025 International Conference on Advanced Green-Energy Materials",
+    "publisher": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "doi": "",
+    "doiUrl": "",
+    "publicationUrl": "",
+    "abstract": "",
+    "highlights": [],
+    "keywords": [],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "authorOrder": 3,
+    "role": "Co-author",
+    "topic": "Perovskite Solar Cells",
+    "tags": [
+      "AGEM 2025",
+      "Conference contribution"
+    ],
+    "conference": {
+      "name": "2025 International Conference on Advanced Green-Energy Materials",
+      "acronym": "AGEM 2025",
+      "startDate": "2025-01-15",
+      "endDate": "2025-01-17",
+      "location": "Tainan, Taiwan",
+      "url": "https://higem.ncku.edu.tw/index.php?id=577&index=1&lang=en&option=module&task=pageinfo",
+      "urlType": "organizer-page",
+      "documentType": "other",
+      "presentationType": "",
+      "acceptanceStatus": "",
+      "abstractNumber": ""
+    },
+    "analytics": {
+      "coreJournalCount": false,
+      "journalMetrics": false,
+      "fwci": false,
+      "citationMetrics": false
+    },
+    "affiliations": [],
+    "authorships": [
+      {
+        "name": "Wei-Chen Chu",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-International Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "Seoungjun Ahn",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-International Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "Wei-Hao Chiu",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-International Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "Kun-Mu Lee",
+        "authorOrder": 4,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-International Conference Paper.pdf"
+        ]
+      }
+    ],
+    "authorshipMetadata": {
+      "status": "partial",
+      "manualAffiliations": true,
+      "lastChecked": "2026-10-23",
+      "sources": [
+        "WHChiu-International Conference Paper.pdf"
+      ],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "author-affiliation links",
+        "corresponding author",
+        "equal contribution"
+      ],
+      "warnings": [
+        "User-provided bibliography only; no full manuscript or asterisk legend supplied.",
+        "PDF and CGU attendance record give 15–17 January; organizer announcement gives 16–17 January. Retain source bibliography range; exact session date unknown."
+      ]
+    },
+    "metadataSource": "manual_verified",
+    "automationProtection": {
+      "protected": true,
+      "reason": "User-provided PDF bibliography; preserve manually curated source-specific metadata."
+    },
+    "contentStatus": {
+      "abstract": "not-available",
+      "highlights": "not-available",
+      "keywords": "not-available",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-10-23",
+      "verifiedSource": "WHChiu-International Conference Paper.pdf"
+    },
+    "citation": "Wei-Chen Chu, Seoungjun Ahn, Wei-Hao Chiu, Kun-Mu Lee. Enhancing Perovskite Solar Cell Efficiency by Controlling Active Layer Morphology with Blade Coating. 2025 International Conference on Advanced Green-Energy Materials (2025).",
+    "internationalCollaboration": {
+      "status": "needs-review",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "sources": [
+        "WHChiu-International Conference Paper.pdf"
+      ],
+      "warnings": [
+        "Affiliations unavailable; conference location does not establish international collaboration."
+      ],
+      "manualOverride": false,
+      "requiresManualReview": true,
+      "taiwanAffiliationIds": [],
+      "foreignAffiliationIds": []
+    },
+    "sourceDocument": "WHChiu-International Conference Paper.pdf"
+  },
+  {
+    "id": "agem-2025-pvdf-hfp-space",
+    "publicationType": "conference",
+    "documentType": "other",
+    "language": "en",
+    "peerReviewStatus": "unverified",
+    "date": "2025-01-15",
+    "year": 2025,
+    "month": 1,
+    "title": "Exploring PVDF -HFP Additives in Perovskite Solar Cells: Advancements for Enhanced Space Mission Durability",
+    "authors": [
+      "Seoungjun Ahn",
+      "Wei-Chen Chu",
+      "Wei-Hao Chiu",
+      "Kun-Mu Lee"
+    ],
+    "journal": "2025 International Conference on Advanced Green-Energy Materials",
+    "publisher": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "doi": "",
+    "doiUrl": "",
+    "publicationUrl": "",
+    "abstract": "",
+    "highlights": [],
+    "keywords": [],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "authorOrder": 3,
+    "role": "Co-author",
+    "topic": "Perovskite Solar Cells",
+    "tags": [
+      "AGEM 2025",
+      "Conference contribution"
+    ],
+    "conference": {
+      "name": "2025 International Conference on Advanced Green-Energy Materials",
+      "acronym": "AGEM 2025",
+      "startDate": "2025-01-15",
+      "endDate": "2025-01-17",
+      "location": "Tainan, Taiwan",
+      "url": "https://higem.ncku.edu.tw/index.php?id=577&index=1&lang=en&option=module&task=pageinfo",
+      "urlType": "organizer-page",
+      "documentType": "other",
+      "presentationType": "",
+      "acceptanceStatus": "",
+      "abstractNumber": ""
+    },
+    "analytics": {
+      "coreJournalCount": false,
+      "journalMetrics": false,
+      "fwci": false,
+      "citationMetrics": false
+    },
+    "affiliations": [],
+    "authorships": [
+      {
+        "name": "Seoungjun Ahn",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-International Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "Wei-Chen Chu",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-International Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "Wei-Hao Chiu",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-International Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "Kun-Mu Lee",
+        "authorOrder": 4,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-International Conference Paper.pdf"
+        ]
+      }
+    ],
+    "authorshipMetadata": {
+      "status": "partial",
+      "manualAffiliations": true,
+      "lastChecked": "2026-10-23",
+      "sources": [
+        "WHChiu-International Conference Paper.pdf"
+      ],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "author-affiliation links",
+        "corresponding author",
+        "equal contribution"
+      ],
+      "warnings": [
+        "User-provided bibliography only; no full manuscript or asterisk legend supplied.",
+        "PDF and CGU attendance record give 15–17 January; organizer announcement gives 16–17 January. Retain source bibliography range; exact session date unknown."
+      ]
+    },
+    "metadataSource": "manual_verified",
+    "automationProtection": {
+      "protected": true,
+      "reason": "User-provided PDF bibliography; preserve manually curated source-specific metadata."
+    },
+    "contentStatus": {
+      "abstract": "not-available",
+      "highlights": "not-available",
+      "keywords": "not-available",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-10-23",
+      "verifiedSource": "WHChiu-International Conference Paper.pdf"
+    },
+    "citation": "Seoungjun Ahn, Wei-Chen Chu, Wei-Hao Chiu, Kun-Mu Lee. Exploring PVDF -HFP Additives in Perovskite Solar Cells: Advancements for Enhanced Space Mission Durability. 2025 International Conference on Advanced Green-Energy Materials (2025).",
+    "internationalCollaboration": {
+      "status": "needs-review",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "sources": [
+        "WHChiu-International Conference Paper.pdf"
+      ],
+      "warnings": [
+        "Affiliations unavailable; conference location does not establish international collaboration."
+      ],
+      "manualOverride": false,
+      "requiresManualReview": true,
+      "taiwanAffiliationIds": [],
+      "foreignAffiliationIds": []
+    },
+    "sourceDocument": "WHChiu-International Conference Paper.pdf"
+  },
+  {
+    "id": "segt-2024-pvdf-hfp-space",
+    "publicationType": "conference",
+    "documentType": "other",
+    "language": "en",
+    "peerReviewStatus": "unverified",
+    "date": "2024-12-15",
+    "year": 2024,
+    "month": 12,
+    "title": "Optimizing PVDF-HFP Additives in Perovskite Solar Cells for Improving Space Mission Durability",
+    "authors": [
+      "Seoungjun Ahn",
+      "Wei-Hao Chiu",
+      "Wei-Chen Chu",
+      "Kun-Mu Lee"
+    ],
+    "journal": "International Conference on Sustainable Energy and Green Technology (SEGT 2024)",
+    "publisher": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "doi": "",
+    "doiUrl": "",
+    "publicationUrl": "",
+    "abstract": "",
+    "highlights": [],
+    "keywords": [],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "authorOrder": 2,
+    "role": "Co-author",
+    "topic": "Perovskite Solar Cells",
+    "tags": [
+      "SEGT 2024",
+      "Conference contribution"
+    ],
+    "conference": {
+      "name": "International Conference on Sustainable Energy and Green Technology (SEGT 2024)",
+      "acronym": "SEGT 2024",
+      "startDate": "2024-12-15",
+      "endDate": "2024-12-18",
+      "location": "Bangkok, Thailand",
+      "url": "",
+      "urlType": "unavailable",
+      "documentType": "other",
+      "presentationType": "",
+      "acceptanceStatus": "",
+      "abstractNumber": "",
+      "websiteNote": "Official conference website has not been verified."
+    },
+    "analytics": {
+      "coreJournalCount": false,
+      "journalMetrics": false,
+      "fwci": false,
+      "citationMetrics": false
+    },
+    "affiliations": [],
+    "authorships": [
+      {
+        "name": "Seoungjun Ahn",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-International Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "Wei-Hao Chiu",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-International Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "Wei-Chen Chu",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-International Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "Kun-Mu Lee",
+        "authorOrder": 4,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-International Conference Paper.pdf"
+        ]
+      }
+    ],
+    "authorshipMetadata": {
+      "status": "partial",
+      "manualAffiliations": true,
+      "lastChecked": "2026-10-23",
+      "sources": [
+        "WHChiu-International Conference Paper.pdf"
+      ],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "author-affiliation links",
+        "corresponding author",
+        "equal contribution"
+      ],
+      "warnings": [
+        "User-provided bibliography only; no full manuscript or asterisk legend supplied."
+      ]
+    },
+    "metadataSource": "manual_verified",
+    "automationProtection": {
+      "protected": true,
+      "reason": "User-provided PDF bibliography; preserve manually curated source-specific metadata."
+    },
+    "contentStatus": {
+      "abstract": "not-available",
+      "highlights": "not-available",
+      "keywords": "not-available",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-10-23",
+      "verifiedSource": "WHChiu-International Conference Paper.pdf"
+    },
+    "citation": "Seoungjun Ahn, Wei-Hao Chiu, Wei-Chen Chu, Kun-Mu Lee. Optimizing PVDF-HFP Additives in Perovskite Solar Cells for Improving Space Mission Durability. International Conference on Sustainable Energy and Green Technology (SEGT 2024) (2024).",
+    "internationalCollaboration": {
+      "status": "needs-review",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "sources": [
+        "WHChiu-International Conference Paper.pdf"
+      ],
+      "warnings": [
+        "Affiliations unavailable; conference location does not establish international collaboration."
+      ],
+      "manualOverride": false,
+      "requiresManualReview": true,
+      "taiwanAffiliationIds": [],
+      "foreignAffiliationIds": []
+    },
+    "sourceDocument": "WHChiu-International Conference Paper.pdf"
+  },
+  {
+    "id": "sdse-2024-laser-cu-niox",
+    "publicationType": "conference",
+    "documentType": "other",
+    "language": "en",
+    "peerReviewStatus": "unverified",
+    "date": "2024-10-16",
+    "year": 2024,
+    "month": 10,
+    "title": "Rapid Laser Annealing of Cu -Doped NiOx for Improved Efficiency in Perovskite Solar Calle",
+    "authors": [
+      "Wei-Hao Chiu",
+      "Si-Yu Chen",
+      "Kun-Mu Lee"
+    ],
+    "journal": "2nd International Conference on Smart Devices and Sustainable Energy (SDSE 2024)",
+    "publisher": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "doi": "",
+    "doiUrl": "",
+    "publicationUrl": "",
+    "abstract": "",
+    "highlights": [],
+    "keywords": [],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "authorOrder": 1,
+    "role": "Co-author",
+    "topic": "Perovskite Solar Cells",
+    "tags": [
+      "SDSE 2024",
+      "Conference contribution"
+    ],
+    "conference": {
+      "name": "2nd International Conference on Smart Devices and Sustainable Energy (SDSE 2024)",
+      "acronym": "SDSE 2024",
+      "startDate": "2024-10-16",
+      "endDate": "2024-10-18",
+      "location": "New Taipei, Taiwan",
+      "url": "",
+      "urlType": "unavailable",
+      "documentType": "other",
+      "presentationType": "",
+      "acceptanceStatus": "",
+      "abstractNumber": "",
+      "websiteNote": "Official conference website has not been verified."
+    },
+    "analytics": {
+      "coreJournalCount": false,
+      "journalMetrics": false,
+      "fwci": false,
+      "citationMetrics": false
+    },
+    "affiliations": [],
+    "authorships": [
+      {
+        "name": "Wei-Hao Chiu",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-International Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "Si-Yu Chen",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-International Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "Kun-Mu Lee",
+        "authorOrder": 3,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-International Conference Paper.pdf"
+        ]
+      }
+    ],
+    "authorshipMetadata": {
+      "status": "partial",
+      "manualAffiliations": true,
+      "lastChecked": "2026-10-23",
+      "sources": [
+        "WHChiu-International Conference Paper.pdf"
+      ],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "author-affiliation links",
+        "corresponding author",
+        "equal contribution"
+      ],
+      "warnings": [
+        "User-provided bibliography only; no full manuscript or asterisk legend supplied.",
+        "Title preserves source wording “Solar Calle”; no corrected manuscript supplied."
+      ]
+    },
+    "metadataSource": "manual_verified",
+    "automationProtection": {
+      "protected": true,
+      "reason": "User-provided PDF bibliography; preserve manually curated source-specific metadata."
+    },
+    "contentStatus": {
+      "abstract": "not-available",
+      "highlights": "not-available",
+      "keywords": "not-available",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-10-23",
+      "verifiedSource": "WHChiu-International Conference Paper.pdf"
+    },
+    "citation": "Wei-Hao Chiu, Si-Yu Chen, Kun-Mu Lee. Rapid Laser Annealing of Cu -Doped NiOx for Improved Efficiency in Perovskite Solar Calle. 2nd International Conference on Smart Devices and Sustainable Energy (SDSE 2024) (2024).",
+    "internationalCollaboration": {
+      "status": "needs-review",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "sources": [
+        "WHChiu-International Conference Paper.pdf"
+      ],
+      "warnings": [
+        "Affiliations unavailable; conference location does not establish international collaboration."
+      ],
+      "manualOverride": false,
+      "requiresManualReview": true,
+      "taiwanAffiliationIds": [],
+      "foreignAffiliationIds": []
+    },
+    "sourceDocument": "WHChiu-International Conference Paper.pdf"
+  },
+  {
+    "id": "ic-med-2024-pvdf-hfp-space",
+    "publicationType": "conference",
+    "documentType": "other",
+    "language": "en",
+    "peerReviewStatus": "unverified",
+    "date": "2024-05-09",
+    "year": 2024,
+    "month": 5,
+    "title": "Optimizing Space Mission Reliability via Comprehensive Investigation of PVDF-HFP in Perovskite Solar Cells",
+    "authors": [
+      "Seoungjun Ahn",
+      "Wei-Hao Chiu",
+      "Kun-Mu Lee"
+    ],
+    "journal": "34th International Conference on Molecular Electronics and Devices (IC ME&D 2024)",
+    "publisher": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "doi": "",
+    "doiUrl": "",
+    "publicationUrl": "",
+    "abstract": "",
+    "highlights": [],
+    "keywords": [],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "authorOrder": 2,
+    "role": "Co-author",
+    "topic": "Perovskite Solar Cells",
+    "tags": [
+      "IC ME&D 2024",
+      "Conference contribution"
+    ],
+    "conference": {
+      "name": "34th International Conference on Molecular Electronics and Devices (IC ME&D 2024)",
+      "acronym": "IC ME&D 2024",
+      "startDate": "2024-05-09",
+      "endDate": "2024-05-10",
+      "location": "Pohang, Korea",
+      "url": "",
+      "urlType": "unavailable",
+      "documentType": "other",
+      "presentationType": "",
+      "acceptanceStatus": "",
+      "abstractNumber": "",
+      "websiteNote": "Official conference website has not been verified."
+    },
+    "analytics": {
+      "coreJournalCount": false,
+      "journalMetrics": false,
+      "fwci": false,
+      "citationMetrics": false
+    },
+    "affiliations": [],
+    "authorships": [
+      {
+        "name": "Seoungjun Ahn",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-International Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "Wei-Hao Chiu",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-International Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "Kun-Mu Lee",
+        "authorOrder": 3,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-International Conference Paper.pdf"
+        ]
+      }
+    ],
+    "authorshipMetadata": {
+      "status": "partial",
+      "manualAffiliations": true,
+      "lastChecked": "2026-10-23",
+      "sources": [
+        "WHChiu-International Conference Paper.pdf"
+      ],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "author-affiliation links",
+        "corresponding author",
+        "equal contribution"
+      ],
+      "warnings": [
+        "User-provided bibliography only; no full manuscript or asterisk legend supplied."
+      ]
+    },
+    "metadataSource": "manual_verified",
+    "automationProtection": {
+      "protected": true,
+      "reason": "User-provided PDF bibliography; preserve manually curated source-specific metadata."
+    },
+    "contentStatus": {
+      "abstract": "not-available",
+      "highlights": "not-available",
+      "keywords": "not-available",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-10-23",
+      "verifiedSource": "WHChiu-International Conference Paper.pdf"
+    },
+    "citation": "Seoungjun Ahn, Wei-Hao Chiu, Kun-Mu Lee. Optimizing Space Mission Reliability via Comprehensive Investigation of PVDF-HFP in Perovskite Solar Cells. 34th International Conference on Molecular Electronics and Devices (IC ME&D 2024) (2024).",
+    "internationalCollaboration": {
+      "status": "needs-review",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "sources": [
+        "WHChiu-International Conference Paper.pdf"
+      ],
+      "warnings": [
+        "Affiliations unavailable; conference location does not establish international collaboration."
+      ],
+      "manualOverride": false,
+      "requiresManualReview": true,
+      "taiwanAffiliationIds": [],
+      "foreignAffiliationIds": []
+    },
+    "sourceDocument": "WHChiu-International Conference Paper.pdf"
+  },
+  {
+    "id": "pvsec-33-2022-csi-two-step",
+    "publicationType": "conference",
+    "documentType": "other",
+    "language": "en",
+    "peerReviewStatus": "unverified",
+    "date": "2022-11-13",
+    "year": 2022,
+    "month": 11,
+    "title": "Toward High Efficiency Perovskite Solar Cells by Doping Cesium Iodide into PbI 2 Film via Two-Step Deposition Method",
+    "authors": [
+      "Seoungjun Ahn",
+      "Kun-Mu Lee",
+      "Wei-Hao Chiu"
+    ],
+    "journal": "33rd International Photovoltaic Science and Engineering Conference (PVSEC-33)",
+    "publisher": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "doi": "",
+    "doiUrl": "",
+    "publicationUrl": "",
+    "abstract": "",
+    "highlights": [],
+    "keywords": [],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "authorOrder": 3,
+    "role": "Co-author",
+    "topic": "Perovskite Solar Cells",
+    "tags": [
+      "PVSEC-33 2022",
+      "Conference contribution"
+    ],
+    "conference": {
+      "name": "33rd International Photovoltaic Science and Engineering Conference (PVSEC-33)",
+      "acronym": "PVSEC-33 2022",
+      "startDate": "2022-11-13",
+      "endDate": "2022-11-17",
+      "location": "Nagoya, Japan",
+      "url": "",
+      "urlType": "unavailable",
+      "documentType": "other",
+      "presentationType": "",
+      "acceptanceStatus": "",
+      "abstractNumber": "",
+      "websiteNote": "Official conference website has not been verified."
+    },
+    "analytics": {
+      "coreJournalCount": false,
+      "journalMetrics": false,
+      "fwci": false,
+      "citationMetrics": false
+    },
+    "affiliations": [],
+    "authorships": [
+      {
+        "name": "Seoungjun Ahn",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-International Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "Kun-Mu Lee",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-International Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "Wei-Hao Chiu",
+        "authorOrder": 3,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-International Conference Paper.pdf"
+        ]
+      }
+    ],
+    "authorshipMetadata": {
+      "status": "partial",
+      "manualAffiliations": true,
+      "lastChecked": "2026-10-23",
+      "sources": [
+        "WHChiu-International Conference Paper.pdf"
+      ],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "author-affiliation links",
+        "corresponding author",
+        "equal contribution"
+      ],
+      "warnings": [
+        "User-provided bibliography only; no full manuscript or asterisk legend supplied."
+      ]
+    },
+    "metadataSource": "manual_verified",
+    "automationProtection": {
+      "protected": true,
+      "reason": "User-provided PDF bibliography; preserve manually curated source-specific metadata."
+    },
+    "contentStatus": {
+      "abstract": "not-available",
+      "highlights": "not-available",
+      "keywords": "not-available",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-10-23",
+      "verifiedSource": "WHChiu-International Conference Paper.pdf"
+    },
+    "citation": "Seoungjun Ahn, Kun-Mu Lee, Wei-Hao Chiu. Toward High Efficiency Perovskite Solar Cells by Doping Cesium Iodide into PbI 2 Film via Two-Step Deposition Method. 33rd International Photovoltaic Science and Engineering Conference (PVSEC-33) (2022).",
+    "internationalCollaboration": {
+      "status": "needs-review",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "sources": [
+        "WHChiu-International Conference Paper.pdf"
+      ],
+      "warnings": [
+        "Affiliations unavailable; conference location does not establish international collaboration."
+      ],
+      "manualOverride": false,
+      "requiresManualReview": true,
+      "taiwanAffiliationIds": [],
+      "foreignAffiliationIds": []
+    },
+    "sourceDocument": "WHChiu-International Conference Paper.pdf"
+  },
+  {
+    "id": "iedms-2022-csi-two-step",
+    "publicationType": "conference",
+    "documentType": "other",
+    "language": "en",
+    "peerReviewStatus": "unverified",
+    "date": "2022-10-27",
+    "year": 2022,
+    "month": 10,
+    "title": "High Efficiency Perovskite Solar Cells by Incorporating Cesium into PbI 2 Solution via Two-Step Deposition Method",
+    "authors": [
+      "Seoungjun Ahn",
+      "Kun-Mu Lee",
+      "Wei-Hao Chiu"
+    ],
+    "journal": "27th International Electron Devices and Materials Symposium (IEDMS 2022)",
+    "publisher": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "doi": "",
+    "doiUrl": "",
+    "publicationUrl": "",
+    "abstract": "",
+    "highlights": [],
+    "keywords": [],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "authorOrder": 3,
+    "role": "Co-author",
+    "topic": "Perovskite Solar Cells",
+    "tags": [
+      "IEDMS 2022",
+      "Conference contribution"
+    ],
+    "conference": {
+      "name": "27th International Electron Devices and Materials Symposium (IEDMS 2022)",
+      "acronym": "IEDMS 2022",
+      "startDate": "2022-10-27",
+      "endDate": "2022-10-28",
+      "location": "Nantou, Taiwan",
+      "url": "",
+      "urlType": "unavailable",
+      "documentType": "other",
+      "presentationType": "Oral",
+      "acceptanceStatus": "",
+      "abstractNumber": "",
+      "websiteNote": "Official conference website has not been verified."
+    },
+    "analytics": {
+      "coreJournalCount": false,
+      "journalMetrics": false,
+      "fwci": false,
+      "citationMetrics": false
+    },
+    "affiliations": [],
+    "authorships": [
+      {
+        "name": "Seoungjun Ahn",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-International Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "Kun-Mu Lee",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-International Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "Wei-Hao Chiu",
+        "authorOrder": 3,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-International Conference Paper.pdf"
+        ]
+      }
+    ],
+    "authorshipMetadata": {
+      "status": "partial",
+      "manualAffiliations": true,
+      "lastChecked": "2026-10-23",
+      "sources": [
+        "WHChiu-International Conference Paper.pdf"
+      ],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "author-affiliation links",
+        "corresponding author",
+        "equal contribution"
+      ],
+      "warnings": [
+        "User-provided bibliography only; no full manuscript or asterisk legend supplied."
+      ]
+    },
+    "metadataSource": "manual_verified",
+    "automationProtection": {
+      "protected": true,
+      "reason": "User-provided PDF bibliography; preserve manually curated source-specific metadata."
+    },
+    "contentStatus": {
+      "abstract": "not-available",
+      "highlights": "not-available",
+      "keywords": "not-available",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-10-23",
+      "verifiedSource": "WHChiu-International Conference Paper.pdf"
+    },
+    "citation": "Seoungjun Ahn, Kun-Mu Lee, Wei-Hao Chiu. High Efficiency Perovskite Solar Cells by Incorporating Cesium into PbI 2 Solution via Two-Step Deposition Method. 27th International Electron Devices and Materials Symposium (IEDMS 2022) (2022).",
+    "internationalCollaboration": {
+      "status": "needs-review",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "sources": [
+        "WHChiu-International Conference Paper.pdf"
+      ],
+      "warnings": [
+        "Affiliations unavailable; conference location does not establish international collaboration."
+      ],
+      "manualOverride": false,
+      "requiresManualReview": true,
+      "taiwanAffiliationIds": [],
+      "foreignAffiliationIds": []
+    },
+    "sourceDocument": "WHChiu-International Conference Paper.pdf"
+  },
+  {
+    "id": "fpg-2026-perovskite-topcon-tandem",
+    "publicationType": "conference",
+    "documentType": "other",
+    "language": "zh-Hant",
+    "peerReviewStatus": "unverified",
+    "date": "2026-06-05",
+    "year": 2026,
+    "month": 6,
+    "title": "介面調控抑制濺鍍損傷與光學結構優化於鈣鈦礦 / TOPCon 二接點堆疊太陽能電池應用",
+    "authors": [
+      "李坤穆",
+      "楊家明",
+      "陳世軒",
+      "邱偉豪",
+      "劉青原"
+    ],
+    "journal": "21st Formosa Plastics Group Applied Technology Seminar / 第21屆台塑關係企業應用技術研討會",
+    "publisher": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "doi": "",
+    "doiUrl": "",
+    "publicationUrl": "",
+    "abstract": "",
+    "highlights": [],
+    "keywords": [],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "authorOrder": 4,
+    "role": "Co-author",
+    "topic": "Perovskite Solar Cells",
+    "tags": [
+      "FPG 2026",
+      "Conference contribution"
+    ],
+    "conference": {
+      "name": "21st Formosa Plastics Group Applied Technology Seminar / 第21屆台塑關係企業應用技術研討會",
+      "acronym": "FPG 2026",
+      "startDate": "2026-06-05",
+      "endDate": "2026-06-05",
+      "location": "Taoyuan, Chang Gung University, Taiwan",
+      "url": "",
+      "urlType": "unavailable",
+      "documentType": "other",
+      "presentationType": "",
+      "acceptanceStatus": "",
+      "abstractNumber": "",
+      "websiteNote": "Official conference website has not been verified.",
+      "nameEn": "21st Formosa Plastics Group Applied Technology Seminar",
+      "nameZh": "第21屆台塑關係企業應用技術研討會"
+    },
+    "analytics": {
+      "coreJournalCount": false,
+      "journalMetrics": false,
+      "fwci": false,
+      "citationMetrics": false
+    },
+    "affiliations": [],
+    "authorships": [
+      {
+        "name": "李坤穆",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-Domestie Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "楊家明",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-Domestie Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "陳世軒",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-Domestie Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "邱偉豪",
+        "authorOrder": 4,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-Domestie Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "劉青原",
+        "authorOrder": 5,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-Domestie Conference Paper.pdf"
+        ]
+      }
+    ],
+    "authorshipMetadata": {
+      "status": "partial",
+      "manualAffiliations": true,
+      "lastChecked": "2026-10-23",
+      "sources": [
+        "WHChiu-Domestie Conference Paper.pdf"
+      ],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "author-affiliation links",
+        "corresponding author",
+        "equal contribution"
+      ],
+      "warnings": [
+        "User-provided bibliography only; no full manuscript or asterisk legend supplied."
+      ]
+    },
+    "metadataSource": "manual_verified",
+    "automationProtection": {
+      "protected": true,
+      "reason": "User-provided PDF bibliography; preserve manually curated source-specific metadata."
+    },
+    "contentStatus": {
+      "abstract": "not-available",
+      "highlights": "not-available",
+      "keywords": "not-available",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-10-23",
+      "verifiedSource": "WHChiu-Domestie Conference Paper.pdf"
+    },
+    "citation": "李坤穆, 楊家明, 陳世軒, 邱偉豪, 劉青原. 介面調控抑制濺鍍損傷與光學結構優化於鈣鈦礦 / TOPCon 二接點堆疊太陽能電池應用. 21st Formosa Plastics Group Applied Technology Seminar / 第21屆台塑關係企業應用技術研討會 (2026).",
+    "internationalCollaboration": {
+      "status": "needs-review",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "sources": [
+        "WHChiu-Domestie Conference Paper.pdf"
+      ],
+      "warnings": [
+        "Affiliations unavailable; conference location does not establish international collaboration."
+      ],
+      "manualOverride": false,
+      "requiresManualReview": true,
+      "taiwanAffiliationIds": [],
+      "foreignAffiliationIds": []
+    },
+    "sourceDocument": "WHChiu-Domestie Conference Paper.pdf"
+  },
+  {
+    "id": "fpg-2026-laser-crystallization",
+    "publicationType": "conference",
+    "documentType": "other",
+    "language": "zh-Hant",
+    "peerReviewStatus": "unverified",
+    "date": "2026-06-05",
+    "year": 2026,
+    "month": 6,
+    "title": "整合雷射誘發結晶與直寫技術於高效鈣鈦礦太陽能電池",
+    "authors": [
+      "邱偉豪",
+      "陳思羽",
+      "李坤穆"
+    ],
+    "journal": "21st Formosa Plastics Group Applied Technology Seminar / 第21屆台塑關係企業應用技術研討會",
+    "publisher": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "doi": "",
+    "doiUrl": "",
+    "publicationUrl": "",
+    "abstract": "",
+    "highlights": [],
+    "keywords": [],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "authorOrder": 1,
+    "role": "Co-author",
+    "topic": "Perovskite Solar Cells",
+    "tags": [
+      "FPG 2026",
+      "Conference contribution"
+    ],
+    "conference": {
+      "name": "21st Formosa Plastics Group Applied Technology Seminar / 第21屆台塑關係企業應用技術研討會",
+      "acronym": "FPG 2026",
+      "startDate": "2026-06-05",
+      "endDate": "2026-06-05",
+      "location": "Taoyuan, Chang Gung University, Taiwan",
+      "url": "",
+      "urlType": "unavailable",
+      "documentType": "other",
+      "presentationType": "",
+      "acceptanceStatus": "",
+      "abstractNumber": "",
+      "websiteNote": "Official conference website has not been verified.",
+      "nameEn": "21st Formosa Plastics Group Applied Technology Seminar",
+      "nameZh": "第21屆台塑關係企業應用技術研討會"
+    },
+    "analytics": {
+      "coreJournalCount": false,
+      "journalMetrics": false,
+      "fwci": false,
+      "citationMetrics": false
+    },
+    "affiliations": [],
+    "authorships": [
+      {
+        "name": "邱偉豪",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-Domestie Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "陳思羽",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-Domestie Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "李坤穆",
+        "authorOrder": 3,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-Domestie Conference Paper.pdf"
+        ]
+      }
+    ],
+    "authorshipMetadata": {
+      "status": "partial",
+      "manualAffiliations": true,
+      "lastChecked": "2026-10-23",
+      "sources": [
+        "WHChiu-Domestie Conference Paper.pdf"
+      ],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "author-affiliation links",
+        "corresponding author",
+        "equal contribution"
+      ],
+      "warnings": [
+        "User-provided bibliography only; no full manuscript or asterisk legend supplied."
+      ]
+    },
+    "metadataSource": "manual_verified",
+    "automationProtection": {
+      "protected": true,
+      "reason": "User-provided PDF bibliography; preserve manually curated source-specific metadata."
+    },
+    "contentStatus": {
+      "abstract": "not-available",
+      "highlights": "not-available",
+      "keywords": "not-available",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-10-23",
+      "verifiedSource": "WHChiu-Domestie Conference Paper.pdf"
+    },
+    "citation": "邱偉豪, 陳思羽, 李坤穆. 整合雷射誘發結晶與直寫技術於高效鈣鈦礦太陽能電池. 21st Formosa Plastics Group Applied Technology Seminar / 第21屆台塑關係企業應用技術研討會 (2026).",
+    "internationalCollaboration": {
+      "status": "needs-review",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "sources": [
+        "WHChiu-Domestie Conference Paper.pdf"
+      ],
+      "warnings": [
+        "Affiliations unavailable; conference location does not establish international collaboration."
+      ],
+      "manualOverride": false,
+      "requiresManualReview": true,
+      "taiwanAffiliationIds": [],
+      "foreignAffiliationIds": []
+    },
+    "sourceDocument": "WHChiu-Domestie Conference Paper.pdf"
+  },
+  {
+    "id": "fpg-2026-blade-coating",
+    "publicationType": "conference",
+    "documentType": "other",
+    "language": "zh-Hant",
+    "peerReviewStatus": "unverified",
+    "date": "2026-06-05",
+    "year": 2026,
+    "month": 6,
+    "title": "藉由刮塗誘導形貌調控實現高效鈣鈦礦太陽能電池",
+    "authors": [
+      "祝維呈",
+      "邱偉豪",
+      "李坤穆"
+    ],
+    "journal": "21st Formosa Plastics Group Applied Technology Seminar / 第21屆台塑關係企業應用技術研討會",
+    "publisher": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "doi": "",
+    "doiUrl": "",
+    "publicationUrl": "",
+    "abstract": "",
+    "highlights": [],
+    "keywords": [],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "authorOrder": 2,
+    "role": "Co-author",
+    "topic": "Perovskite Solar Cells",
+    "tags": [
+      "FPG 2026",
+      "Conference contribution"
+    ],
+    "conference": {
+      "name": "21st Formosa Plastics Group Applied Technology Seminar / 第21屆台塑關係企業應用技術研討會",
+      "acronym": "FPG 2026",
+      "startDate": "2026-06-05",
+      "endDate": "2026-06-05",
+      "location": "Taoyuan, Chang Gung University, Taiwan",
+      "url": "",
+      "urlType": "unavailable",
+      "documentType": "other",
+      "presentationType": "",
+      "acceptanceStatus": "",
+      "abstractNumber": "",
+      "websiteNote": "Official conference website has not been verified.",
+      "nameEn": "21st Formosa Plastics Group Applied Technology Seminar",
+      "nameZh": "第21屆台塑關係企業應用技術研討會"
+    },
+    "analytics": {
+      "coreJournalCount": false,
+      "journalMetrics": false,
+      "fwci": false,
+      "citationMetrics": false
+    },
+    "affiliations": [],
+    "authorships": [
+      {
+        "name": "祝維呈",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-Domestie Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "邱偉豪",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-Domestie Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "李坤穆",
+        "authorOrder": 3,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-Domestie Conference Paper.pdf"
+        ]
+      }
+    ],
+    "authorshipMetadata": {
+      "status": "partial",
+      "manualAffiliations": true,
+      "lastChecked": "2026-10-23",
+      "sources": [
+        "WHChiu-Domestie Conference Paper.pdf"
+      ],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "author-affiliation links",
+        "corresponding author",
+        "equal contribution"
+      ],
+      "warnings": [
+        "User-provided bibliography only; no full manuscript or asterisk legend supplied."
+      ]
+    },
+    "metadataSource": "manual_verified",
+    "automationProtection": {
+      "protected": true,
+      "reason": "User-provided PDF bibliography; preserve manually curated source-specific metadata."
+    },
+    "contentStatus": {
+      "abstract": "not-available",
+      "highlights": "not-available",
+      "keywords": "not-available",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-10-23",
+      "verifiedSource": "WHChiu-Domestie Conference Paper.pdf"
+    },
+    "citation": "祝維呈, 邱偉豪, 李坤穆. 藉由刮塗誘導形貌調控實現高效鈣鈦礦太陽能電池. 21st Formosa Plastics Group Applied Technology Seminar / 第21屆台塑關係企業應用技術研討會 (2026).",
+    "internationalCollaboration": {
+      "status": "needs-review",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "sources": [
+        "WHChiu-Domestie Conference Paper.pdf"
+      ],
+      "warnings": [
+        "Affiliations unavailable; conference location does not establish international collaboration."
+      ],
+      "manualOverride": false,
+      "requiresManualReview": true,
+      "taiwanAffiliationIds": [],
+      "foreignAffiliationIds": []
+    },
+    "sourceDocument": "WHChiu-Domestie Conference Paper.pdf"
+  },
+  {
+    "id": "fpg-2026-snox-tin-lead",
+    "publicationType": "conference",
+    "documentType": "other",
+    "language": "zh-Hant",
+    "peerReviewStatus": "unverified",
+    "date": "2026-06-05",
+    "year": 2026,
+    "month": 6,
+    "title": "調控錫氧化態之 p 型 SnOx 電洞傳輸層於高效穩定錫鉛鈣鈦 礦太陽能電池",
+    "authors": [
+      "曹心瑜",
+      "陳世軒",
+      "邱偉豪",
+      "李坤穆"
+    ],
+    "journal": "21st Formosa Plastics Group Applied Technology Seminar / 第21屆台塑關係企業應用技術研討會",
+    "publisher": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "doi": "",
+    "doiUrl": "",
+    "publicationUrl": "",
+    "abstract": "",
+    "highlights": [],
+    "keywords": [],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "authorOrder": 3,
+    "role": "Co-author",
+    "topic": "Perovskite Solar Cells",
+    "tags": [
+      "FPG 2026",
+      "Conference contribution"
+    ],
+    "conference": {
+      "name": "21st Formosa Plastics Group Applied Technology Seminar / 第21屆台塑關係企業應用技術研討會",
+      "acronym": "FPG 2026",
+      "startDate": "2026-06-05",
+      "endDate": "2026-06-05",
+      "location": "Taoyuan, Chang Gung University, Taiwan",
+      "url": "",
+      "urlType": "unavailable",
+      "documentType": "other",
+      "presentationType": "",
+      "acceptanceStatus": "",
+      "abstractNumber": "",
+      "websiteNote": "Official conference website has not been verified.",
+      "nameEn": "21st Formosa Plastics Group Applied Technology Seminar",
+      "nameZh": "第21屆台塑關係企業應用技術研討會"
+    },
+    "analytics": {
+      "coreJournalCount": false,
+      "journalMetrics": false,
+      "fwci": false,
+      "citationMetrics": false
+    },
+    "affiliations": [],
+    "authorships": [
+      {
+        "name": "曹心瑜",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-Domestie Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "陳世軒",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-Domestie Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "邱偉豪",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-Domestie Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "李坤穆",
+        "authorOrder": 4,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-Domestie Conference Paper.pdf"
+        ]
+      }
+    ],
+    "authorshipMetadata": {
+      "status": "partial",
+      "manualAffiliations": true,
+      "lastChecked": "2026-10-23",
+      "sources": [
+        "WHChiu-Domestie Conference Paper.pdf"
+      ],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "author-affiliation links",
+        "corresponding author",
+        "equal contribution"
+      ],
+      "warnings": [
+        "User-provided bibliography only; no full manuscript or asterisk legend supplied."
+      ]
+    },
+    "metadataSource": "manual_verified",
+    "automationProtection": {
+      "protected": true,
+      "reason": "User-provided PDF bibliography; preserve manually curated source-specific metadata."
+    },
+    "contentStatus": {
+      "abstract": "not-available",
+      "highlights": "not-available",
+      "keywords": "not-available",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-10-23",
+      "verifiedSource": "WHChiu-Domestie Conference Paper.pdf"
+    },
+    "citation": "曹心瑜, 陳世軒, 邱偉豪, 李坤穆. 調控錫氧化態之 p 型 SnOx 電洞傳輸層於高效穩定錫鉛鈣鈦 礦太陽能電池. 21st Formosa Plastics Group Applied Technology Seminar / 第21屆台塑關係企業應用技術研討會 (2026).",
+    "internationalCollaboration": {
+      "status": "needs-review",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "sources": [
+        "WHChiu-Domestie Conference Paper.pdf"
+      ],
+      "warnings": [
+        "Affiliations unavailable; conference location does not establish international collaboration."
+      ],
+      "manualOverride": false,
+      "requiresManualReview": true,
+      "taiwanAffiliationIds": [],
+      "foreignAffiliationIds": []
+    },
+    "sourceDocument": "WHChiu-Domestie Conference Paper.pdf"
+  },
+  {
+    "id": "fpg-2024-pvdf-hfp-space",
+    "publicationType": "conference",
+    "documentType": "other",
+    "language": "zh-Hant",
+    "peerReviewStatus": "unverified",
+    "date": "2024-06-14",
+    "year": 2024,
+    "month": 6,
+    "title": "利用 PVDF-HFP 在鈣太礦太陽能電池中以提高太 空 應用可靠度之系統性研究",
+    "authors": [
+      "安盛浚",
+      "祝維呈",
+      "陳珮瑜",
+      "邱偉豪",
+      "李坤穆"
+    ],
+    "journal": "19th Formosa Plastics Group Applied Technology Seminar / 第19屆台塑關係企業應用技術研討會",
+    "publisher": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "doi": "",
+    "doiUrl": "",
+    "publicationUrl": "",
+    "abstract": "",
+    "highlights": [],
+    "keywords": [],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "authorOrder": 4,
+    "role": "Co-author",
+    "topic": "Perovskite Solar Cells",
+    "tags": [
+      "FPG 2024",
+      "Conference contribution"
+    ],
+    "conference": {
+      "name": "19th Formosa Plastics Group Applied Technology Seminar / 第19屆台塑關係企業應用技術研討會",
+      "acronym": "FPG 2024",
+      "startDate": "2024-06-14",
+      "endDate": "2024-06-14",
+      "location": "Taoyuan, Chang Gung University, Taiwan",
+      "url": "",
+      "urlType": "unavailable",
+      "documentType": "other",
+      "presentationType": "",
+      "acceptanceStatus": "",
+      "abstractNumber": "",
+      "websiteNote": "Official conference website has not been verified.",
+      "nameEn": "19th Formosa Plastics Group Applied Technology Seminar",
+      "nameZh": "第19屆台塑關係企業應用技術研討會"
+    },
+    "analytics": {
+      "coreJournalCount": false,
+      "journalMetrics": false,
+      "fwci": false,
+      "citationMetrics": false
+    },
+    "affiliations": [],
+    "authorships": [
+      {
+        "name": "安盛浚",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-Domestie Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "祝維呈",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-Domestie Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "陳珮瑜",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-Domestie Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "邱偉豪",
+        "authorOrder": 4,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-Domestie Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "李坤穆",
+        "authorOrder": 5,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-Domestie Conference Paper.pdf"
+        ]
+      }
+    ],
+    "authorshipMetadata": {
+      "status": "partial",
+      "manualAffiliations": true,
+      "lastChecked": "2026-10-23",
+      "sources": [
+        "WHChiu-Domestie Conference Paper.pdf"
+      ],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "author-affiliation links",
+        "corresponding author",
+        "equal contribution"
+      ],
+      "warnings": [
+        "User-provided bibliography only; no full manuscript or asterisk legend supplied."
+      ]
+    },
+    "metadataSource": "manual_verified",
+    "automationProtection": {
+      "protected": true,
+      "reason": "User-provided PDF bibliography; preserve manually curated source-specific metadata."
+    },
+    "contentStatus": {
+      "abstract": "not-available",
+      "highlights": "not-available",
+      "keywords": "not-available",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-10-23",
+      "verifiedSource": "WHChiu-Domestie Conference Paper.pdf"
+    },
+    "citation": "安盛浚, 祝維呈, 陳珮瑜, 邱偉豪, 李坤穆. 利用 PVDF-HFP 在鈣太礦太陽能電池中以提高太 空 應用可靠度之系統性研究. 19th Formosa Plastics Group Applied Technology Seminar / 第19屆台塑關係企業應用技術研討會 (2024).",
+    "internationalCollaboration": {
+      "status": "needs-review",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "sources": [
+        "WHChiu-Domestie Conference Paper.pdf"
+      ],
+      "warnings": [
+        "Affiliations unavailable; conference location does not establish international collaboration."
+      ],
+      "manualOverride": false,
+      "requiresManualReview": true,
+      "taiwanAffiliationIds": [],
+      "foreignAffiliationIds": []
+    },
+    "sourceDocument": "WHChiu-Domestie Conference Paper.pdf"
+  },
+  {
+    "id": "fpg-2024-blade-slot-die",
+    "publicationType": "conference",
+    "documentType": "other",
+    "language": "en",
+    "peerReviewStatus": "unverified",
+    "date": "2024-06-14",
+    "year": 2024,
+    "month": 6,
+    "title": "Highly Efficient Perovskite Solar Cells Are Achieved by Controlling Active Layer Morphology Using Blade And Slot Die Coating",
+    "authors": [
+      "祝維呈",
+      "安盛浚",
+      "邱偉豪",
+      "李坤穆"
+    ],
+    "journal": "19th Formosa Plastics Group Applied Technology Seminar / 第19屆台塑關係企業應用技術研討會",
+    "publisher": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "doi": "",
+    "doiUrl": "",
+    "publicationUrl": "",
+    "abstract": "",
+    "highlights": [],
+    "keywords": [],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "authorOrder": 3,
+    "role": "Co-author",
+    "topic": "Perovskite Solar Cells",
+    "tags": [
+      "FPG 2024",
+      "Conference contribution"
+    ],
+    "conference": {
+      "name": "19th Formosa Plastics Group Applied Technology Seminar / 第19屆台塑關係企業應用技術研討會",
+      "acronym": "FPG 2024",
+      "startDate": "2024-06-14",
+      "endDate": "2024-06-14",
+      "location": "Taoyuan, Chang Gung University, Taiwan",
+      "url": "",
+      "urlType": "unavailable",
+      "documentType": "other",
+      "presentationType": "",
+      "acceptanceStatus": "",
+      "abstractNumber": "",
+      "websiteNote": "Official conference website has not been verified.",
+      "nameEn": "19th Formosa Plastics Group Applied Technology Seminar",
+      "nameZh": "第19屆台塑關係企業應用技術研討會"
+    },
+    "analytics": {
+      "coreJournalCount": false,
+      "journalMetrics": false,
+      "fwci": false,
+      "citationMetrics": false
+    },
+    "affiliations": [],
+    "authorships": [
+      {
+        "name": "祝維呈",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-Domestie Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "安盛浚",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-Domestie Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "邱偉豪",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-Domestie Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "李坤穆",
+        "authorOrder": 4,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-Domestie Conference Paper.pdf"
+        ]
+      }
+    ],
+    "authorshipMetadata": {
+      "status": "partial",
+      "manualAffiliations": true,
+      "lastChecked": "2026-10-23",
+      "sources": [
+        "WHChiu-Domestie Conference Paper.pdf"
+      ],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "author-affiliation links",
+        "corresponding author",
+        "equal contribution"
+      ],
+      "warnings": [
+        "User-provided bibliography only; no full manuscript or asterisk legend supplied.",
+        "Adjacent Chinese entry may describe the same contribution; not added separately without manuscript evidence."
+      ]
+    },
+    "metadataSource": "manual_verified",
+    "automationProtection": {
+      "protected": true,
+      "reason": "User-provided PDF bibliography; preserve manually curated source-specific metadata."
+    },
+    "contentStatus": {
+      "abstract": "not-available",
+      "highlights": "not-available",
+      "keywords": "not-available",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-10-23",
+      "verifiedSource": "WHChiu-Domestie Conference Paper.pdf"
+    },
+    "citation": "祝維呈, 安盛浚, 邱偉豪, 李坤穆. Highly Efficient Perovskite Solar Cells Are Achieved by Controlling Active Layer Morphology Using Blade And Slot Die Coating. 19th Formosa Plastics Group Applied Technology Seminar / 第19屆台塑關係企業應用技術研討會 (2024).",
+    "internationalCollaboration": {
+      "status": "needs-review",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "sources": [
+        "WHChiu-Domestie Conference Paper.pdf"
+      ],
+      "warnings": [
+        "Affiliations unavailable; conference location does not establish international collaboration."
+      ],
+      "manualOverride": false,
+      "requiresManualReview": true,
+      "taiwanAffiliationIds": [],
+      "foreignAffiliationIds": []
+    },
+    "sourceDocument": "WHChiu-Domestie Conference Paper.pdf"
+  },
+  {
+    "id": "mcut-2023-csi-two-step",
+    "publicationType": "conference",
+    "documentType": "other",
+    "language": "en",
+    "peerReviewStatus": "unverified",
+    "date": "2023-04-06",
+    "year": 2023,
+    "month": 4,
+    "title": "Toward High Efficiency Perovskite Solar Cells by Doping Cesium Iodide into PbI2 Film via Two-Step Deposition Method",
+    "authors": [
+      "Ahn Seoungjun",
+      "Wei-Hao Chiu",
+      "Kun-Mu Lee"
+    ],
+    "journal": "2023 明志科技大學綠色能源電池研討會暨成果海報競賽",
+    "publisher": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "doi": "",
+    "doiUrl": "",
+    "publicationUrl": "",
+    "abstract": "",
+    "highlights": [],
+    "keywords": [],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "authorOrder": 2,
+    "role": "Co-author",
+    "topic": "Perovskite Solar Cells",
+    "tags": [
+      "MCUT 2023",
+      "Conference contribution"
+    ],
+    "conference": {
+      "name": "2023 明志科技大學綠色能源電池研討會暨成果海報競賽",
+      "acronym": "MCUT 2023",
+      "startDate": "2023-04-06",
+      "endDate": "2023-04-06",
+      "location": "Ming Chi University of Technology, Taiwan",
+      "url": "",
+      "urlType": "unavailable",
+      "documentType": "other",
+      "presentationType": "",
+      "acceptanceStatus": "",
+      "abstractNumber": "",
+      "websiteNote": "Official conference website has not been verified."
+    },
+    "analytics": {
+      "coreJournalCount": false,
+      "journalMetrics": false,
+      "fwci": false,
+      "citationMetrics": false
+    },
+    "affiliations": [],
+    "authorships": [
+      {
+        "name": "Ahn Seoungjun",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-Domestie Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "Wei-Hao Chiu",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-Domestie Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "Kun-Mu Lee",
+        "authorOrder": 3,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-Domestie Conference Paper.pdf"
+        ]
+      }
+    ],
+    "authorshipMetadata": {
+      "status": "partial",
+      "manualAffiliations": true,
+      "lastChecked": "2026-10-23",
+      "sources": [
+        "WHChiu-Domestie Conference Paper.pdf"
+      ],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "author-affiliation links",
+        "corresponding author",
+        "equal contribution"
+      ],
+      "warnings": [
+        "User-provided bibliography only; no full manuscript or asterisk legend supplied."
+      ]
+    },
+    "metadataSource": "manual_verified",
+    "automationProtection": {
+      "protected": true,
+      "reason": "User-provided PDF bibliography; preserve manually curated source-specific metadata."
+    },
+    "contentStatus": {
+      "abstract": "not-available",
+      "highlights": "not-available",
+      "keywords": "not-available",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-10-23",
+      "verifiedSource": "WHChiu-Domestie Conference Paper.pdf"
+    },
+    "citation": "Ahn Seoungjun, Wei-Hao Chiu, Kun-Mu Lee. Toward High Efficiency Perovskite Solar Cells by Doping Cesium Iodide into PbI2 Film via Two-Step Deposition Method. 2023 明志科技大學綠色能源電池研討會暨成果海報競賽 (2023).",
+    "internationalCollaboration": {
+      "status": "needs-review",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "sources": [
+        "WHChiu-Domestie Conference Paper.pdf"
+      ],
+      "warnings": [
+        "Affiliations unavailable; conference location does not establish international collaboration."
+      ],
+      "manualOverride": false,
+      "requiresManualReview": true,
+      "taiwanAffiliationIds": [],
+      "foreignAffiliationIds": []
+    },
+    "sourceDocument": "WHChiu-Domestie Conference Paper.pdf"
+  },
+  {
+    "id": "mcut-2023-blade-slot-die",
+    "publicationType": "conference",
+    "documentType": "other",
+    "language": "en",
+    "peerReviewStatus": "unverified",
+    "date": "2023-04-06",
+    "year": 2023,
+    "month": 4,
+    "title": "Highly Efficient Perovskite Solar Cells with Morphology Control of Active Layer Fabricated by Blade Coating and Slot Die Coating",
+    "authors": [
+      "Wei-Hao Chiu",
+      "Ahn Seoungjun",
+      "Kun-Mu Lee"
+    ],
+    "journal": "2023 明志科技大學綠色能源電池研討會暨成果海報競賽",
+    "publisher": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "doi": "",
+    "doiUrl": "",
+    "publicationUrl": "",
+    "abstract": "",
+    "highlights": [],
+    "keywords": [],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "authorOrder": 1,
+    "role": "Co-author",
+    "topic": "Perovskite Solar Cells",
+    "tags": [
+      "MCUT 2023",
+      "Conference contribution"
+    ],
+    "conference": {
+      "name": "2023 明志科技大學綠色能源電池研討會暨成果海報競賽",
+      "acronym": "MCUT 2023",
+      "startDate": "2023-04-06",
+      "endDate": "2023-04-06",
+      "location": "Ming Chi University of Technology, Taiwan",
+      "url": "",
+      "urlType": "unavailable",
+      "documentType": "other",
+      "presentationType": "",
+      "acceptanceStatus": "",
+      "abstractNumber": "",
+      "websiteNote": "Official conference website has not been verified."
+    },
+    "analytics": {
+      "coreJournalCount": false,
+      "journalMetrics": false,
+      "fwci": false,
+      "citationMetrics": false
+    },
+    "affiliations": [],
+    "authorships": [
+      {
+        "name": "Wei-Hao Chiu",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-Domestie Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "Ahn Seoungjun",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-Domestie Conference Paper.pdf"
+        ]
+      },
+      {
+        "name": "Kun-Mu Lee",
+        "authorOrder": 3,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "WHChiu-Domestie Conference Paper.pdf"
+        ]
+      }
+    ],
+    "authorshipMetadata": {
+      "status": "partial",
+      "manualAffiliations": true,
+      "lastChecked": "2026-10-23",
+      "sources": [
+        "WHChiu-Domestie Conference Paper.pdf"
+      ],
+      "sourceUrls": {},
+      "requiresManualReview": true,
+      "missingFields": [
+        "author-affiliation links",
+        "corresponding author",
+        "equal contribution"
+      ],
+      "warnings": [
+        "User-provided bibliography only; no full manuscript or asterisk legend supplied."
+      ]
+    },
+    "metadataSource": "manual_verified",
+    "automationProtection": {
+      "protected": true,
+      "reason": "User-provided PDF bibliography; preserve manually curated source-specific metadata."
+    },
+    "contentStatus": {
+      "abstract": "not-available",
+      "highlights": "not-available",
+      "keywords": "not-available",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-10-23",
+      "verifiedSource": "WHChiu-Domestie Conference Paper.pdf"
+    },
+    "citation": "Wei-Hao Chiu, Ahn Seoungjun, Kun-Mu Lee. Highly Efficient Perovskite Solar Cells with Morphology Control of Active Layer Fabricated by Blade Coating and Slot Die Coating. 2023 明志科技大學綠色能源電池研討會暨成果海報競賽 (2023).",
+    "internationalCollaboration": {
+      "status": "needs-review",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "sources": [
+        "WHChiu-Domestie Conference Paper.pdf"
+      ],
+      "warnings": [
+        "Affiliations unavailable; conference location does not establish international collaboration."
+      ],
+      "manualOverride": false,
+      "requiresManualReview": true,
+      "taiwanAffiliationIds": [],
+      "foreignAffiliationIds": []
+    },
+    "sourceDocument": "WHChiu-Domestie Conference Paper.pdf"
+  },
+  {
+    "id": "10.1002/advs.77623",
+    "publicationType": "international-journal",
+    "documentType": "journal-article",
+    "language": "en",
+    "peerReviewStatus": "peer-reviewed",
+    "date": "2026-09-08",
+    "year": 2026,
+    "month": 9,
+    "title": "Asymmetric Fluorinated Spiro Hole-Transport Materials Enabled by a Rapid Core-Forming Strategy for Blade-Coated Perovskite Solar Cells",
+    "authors": [
+      "Kun-Mu Lee",
+      "Xiu-Ping Lin",
+      "Ya-Ho Chang",
+      "Cheng-Ting Tsai",
+      "Pei-Chen Chu",
+      "Yu-Hsun Chen",
+      "Wei-Hao Chiu",
+      "Yu-Che Lin",
+      "Sie-Rong Li",
+      "Hsiao-Chi Hsieh",
+      "Kang-Ling Liau",
+      "Shih-I. Lu",
+      "Chih-Min Wang",
+      "Yan-Duo Lin"
+    ],
+    "journal": "Advanced Science",
+    "publisher": "Wiley",
+    "volume": "",
+    "issue": "",
+    "pages": "e77623",
+    "doi": "10.1002/advs.77623",
+    "doiUrl": "https://doi.org/10.1002/advs.77623",
+    "publicationUrl": "https://doi.org/10.1002/advs.77623",
+    "abstract": "",
+    "highlights": [],
+    "keywords": [],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "authorOrder": 7,
+    "role": "Co-author",
+    "topic": "Perovskite Solar Cells",
+    "tags": [
+      "Perovskite Solar Cells",
+      "Hole-Transporting Materials"
+    ],
+    "analytics": {
+      "coreJournalCount": true,
+      "journalMetrics": true,
+      "fwci": true,
+      "citationMetrics": true
+    },
+    "affiliations": [
+      {
+        "id": "aff1",
+        "raw": "Department of Chemical and Materials Engineering Chang Gung University  Taoyuan Taiwan",
+        "institution": "",
+        "department": "",
+        "address": "",
+        "city": "",
+        "countryCode": "TW",
+        "sources": [
+          "https://api.crossref.org/works/10.1002/advs.77623"
+        ]
+      },
+      {
+        "id": "aff2",
+        "raw": "Center For Sustainability and Energy Technologies Chang Gung University  Taoyuan Taiwan",
+        "institution": "",
+        "department": "",
+        "address": "",
+        "city": "",
+        "countryCode": "TW",
+        "sources": [
+          "https://api.crossref.org/works/10.1002/advs.77623"
+        ]
+      },
+      {
+        "id": "aff3",
+        "raw": "Division of Neonatology Department of Pediatrics Chang Gung Memorial Hospital  Linkou Taoyuan Taiwan",
+        "institution": "",
+        "department": "",
+        "address": "",
+        "city": "",
+        "countryCode": "TW",
+        "sources": [
+          "https://api.crossref.org/works/10.1002/advs.77623"
+        ]
+      },
+      {
+        "id": "aff4",
+        "raw": "College of Environment and Resources Ming Chi University of Technology  New Taipei City Taiwan",
+        "institution": "",
+        "department": "",
+        "address": "",
+        "city": "",
+        "countryCode": "TW",
+        "sources": [
+          "https://api.crossref.org/works/10.1002/advs.77623"
+        ]
+      },
+      {
+        "id": "aff5",
+        "raw": "Department of Chemistry Soochow University  Taipei Taiwan",
+        "institution": "",
+        "department": "",
+        "address": "",
+        "city": "",
+        "countryCode": "TW",
+        "sources": [
+          "https://api.crossref.org/works/10.1002/advs.77623"
+        ]
+      },
+      {
+        "id": "aff6",
+        "raw": "Department of Bioscience and Biotechnology National Taiwan Ocean University  Keelung Taiwan",
+        "institution": "",
+        "department": "",
+        "address": "",
+        "city": "",
+        "countryCode": "TW",
+        "sources": [
+          "https://api.crossref.org/works/10.1002/advs.77623"
+        ]
+      },
+      {
+        "id": "aff7",
+        "raw": "Institute of Chemistry Academia Sinica  Taipei Taiwan",
+        "institution": "",
+        "department": "",
+        "address": "",
+        "city": "",
+        "countryCode": "TW",
+        "sources": [
+          "https://api.crossref.org/works/10.1002/advs.77623"
+        ]
+      },
+      {
+        "id": "aff8",
+        "raw": "Department of Chemical and Materials Engineering Tamkang University  New Taipei City Taiwan",
+        "institution": "",
+        "department": "",
+        "address": "",
+        "city": "",
+        "countryCode": "TW",
+        "sources": [
+          "https://api.crossref.org/works/10.1002/advs.77623"
+        ]
+      },
+      {
+        "id": "aff9",
+        "raw": "Department of Chemistry National Central University  Taoyuan Taiwan",
+        "institution": "",
+        "department": "",
+        "address": "",
+        "city": "",
+        "countryCode": "TW",
+        "sources": [
+          "https://api.crossref.org/works/10.1002/advs.77623"
+        ]
+      }
+    ],
+    "authorships": [
+      {
+        "name": "Kun-Mu Lee",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [
+          "aff1",
+          "aff2",
+          "aff3",
+          "aff4"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "https://api.crossref.org/works/10.1002/advs.77623"
+        ]
+      },
+      {
+        "name": "Xiu-Ping Lin",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff5"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "https://api.crossref.org/works/10.1002/advs.77623"
+        ]
+      },
+      {
+        "name": "Ya-Ho Chang",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff6"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "https://api.crossref.org/works/10.1002/advs.77623"
+        ]
+      },
+      {
+        "name": "Cheng-Ting Tsai",
+        "authorOrder": 4,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff5"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "https://api.crossref.org/works/10.1002/advs.77623"
+        ]
+      },
+      {
+        "name": "Pei-Chen Chu",
+        "authorOrder": 5,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff5"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "https://api.crossref.org/works/10.1002/advs.77623"
+        ]
+      },
+      {
+        "name": "Yu-Hsun Chen",
+        "authorOrder": 6,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff5"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "https://api.crossref.org/works/10.1002/advs.77623"
+        ]
+      },
+      {
+        "name": "Wei-Hao Chiu",
+        "authorOrder": 7,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff2"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "https://api.crossref.org/works/10.1002/advs.77623"
+        ]
+      },
+      {
+        "name": "Yu-Che Lin",
+        "authorOrder": 8,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff5"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "https://api.crossref.org/works/10.1002/advs.77623"
+        ]
+      },
+      {
+        "name": "Sie-Rong Li",
+        "authorOrder": 9,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff7"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "https://api.crossref.org/works/10.1002/advs.77623"
+        ]
+      },
+      {
+        "name": "Hsiao-Chi Hsieh",
+        "authorOrder": 10,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff8"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "https://api.crossref.org/works/10.1002/advs.77623"
+        ]
+      },
+      {
+        "name": "Kang-Ling Liau",
+        "authorOrder": 11,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff9"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "https://api.crossref.org/works/10.1002/advs.77623"
+        ]
+      },
+      {
+        "name": "Shih-I. Lu",
+        "authorOrder": 12,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff5"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "https://api.crossref.org/works/10.1002/advs.77623"
+        ]
+      },
+      {
+        "name": "Chih-Min Wang",
+        "authorOrder": 13,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff6"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "https://api.crossref.org/works/10.1002/advs.77623"
+        ]
+      },
+      {
+        "name": "Yan-Duo Lin",
+        "authorOrder": 14,
+        "authorPosition": "last",
+        "affiliationIds": [
+          "aff5"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "https://api.crossref.org/works/10.1002/advs.77623"
+        ]
+      }
+    ],
+    "authorshipMetadata": {
+      "status": "partial",
+      "manualAffiliations": true,
+      "lastChecked": "2026-10-23",
+      "sources": [
+        "WHChiu-Journal Papers.pdf",
+        "https://api.crossref.org/works/10.1002/advs.77623"
+      ],
+      "sourceUrls": {
+        "crossref": "https://api.crossref.org/works/10.1002/advs.77623"
+      },
+      "requiresManualReview": true,
+      "missingFields": [
+        "corresponding author",
+        "equal contribution"
+      ],
+      "warnings": [
+        "Asterisks in bibliography have no explicit correspondence legend; roles remain unknown."
+      ]
+    },
+    "metadataSource": "manual_verified",
+    "automationProtection": {
+      "protected": true,
+      "reason": "User-provided bibliography and Crossref metadata; preserve verified ordered authors and affiliations."
+    },
+    "contentStatus": {
+      "abstract": "not-available",
+      "highlights": "not-available",
+      "keywords": "not-available",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-10-23",
+      "verifiedSource": "WHChiu-Journal Papers.pdf"
+    },
+    "citation": "Kun-Mu Lee, Xiu-Ping Lin, Ya-Ho Chang, Cheng-Ting Tsai, Pei-Chen Chu, Yu-Hsun Chen, Wei-Hao Chiu, Yu-Che Lin, Sie-Rong Li, Hsiao-Chi Hsieh, Kang-Ling Liau, Shih-I. Lu, Chih-Min Wang, Yan-Duo Lin. Asymmetric Fluorinated Spiro Hole-Transport Materials Enabled by a Rapid Core-Forming Strategy for Blade-Coated Perovskite Solar Cells. Advanced Science, e77623 (2026). https://doi.org/10.1002/advs.77623",
+    "internationalCollaboration": {
+      "status": "domestic",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "TW"
+      ],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "sources": [
+        "https://api.crossref.org/works/10.1002/advs.77623"
+      ],
+      "warnings": [],
+      "manualOverride": true,
+      "requiresManualReview": false,
+      "taiwanAffiliationIds": [
+        "aff1",
+        "aff2",
+        "aff3",
+        "aff4",
+        "aff5",
+        "aff6",
+        "aff7",
+        "aff8",
+        "aff9"
+      ],
+      "foreignAffiliationIds": []
+    },
+    "sourceDocument": "WHChiu-Journal Papers.pdf"
   }
 ]

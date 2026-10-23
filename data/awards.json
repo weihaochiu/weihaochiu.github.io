@@ -163,5 +163,35 @@
     "type": "Student Paper Award",
     "url": "https://doi.org/10.1021/jp805239k",
     "year": 2008
+  },
+  {
+    "date": "15–17 Jan. 2025",
+    "sortDate": "2025-01-17",
+    "year": 2025,
+    "titleEn": "Best Poster Presentation Award",
+    "titleZh": "",
+    "organizationEn": "2025 International Conference on Advanced Green-Energy Materials",
+    "organizationZh": "",
+    "workEn": "Enhancing Perovskite Solar Cell Efficiency by Controlling Active Layer Morphology with Blade Coating",
+    "workZh": "",
+    "recipientsEn": "Wei-Chen Chu, Seoungjun Ahn, Wei-Hao Chiu, and Kun-Mu Lee",
+    "recipientsZh": "",
+    "type": "Poster Award",
+    "url": "https://www.frontiergroup.tw/news"
+  },
+  {
+    "date": "14 Jun. 2024",
+    "sortDate": "2024-06-14",
+    "year": 2024,
+    "titleEn": "",
+    "titleZh": "研發論文暨海報競賽優勝",
+    "organizationEn": "19th Formosa Plastics Group Applied Technology Seminar",
+    "organizationZh": "第19屆台塑關係企業應用技術研討會",
+    "workEn": "",
+    "workZh": "利用 PVDF-HFP 在鈣太礦太陽能電池中以提高太 空 應用可靠度之系統性研究",
+    "recipientsEn": "",
+    "recipientsZh": "安盛浚、祝維呈、陳珮瑜、邱偉豪、李坤穆",
+    "type": "Poster Award",
+    "url": ""
   }
 ]
