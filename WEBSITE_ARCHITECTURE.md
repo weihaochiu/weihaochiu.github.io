@@ -487,3 +487,6 @@ On independent publication pages, the enhancer groups the existing bibliographic
 The authorship enhancer removes any existing affiliation block within the card, including the nested detail overview, before rendering its replacement. This prevents duplicate affiliations when attention and authorship initialization complete in either order.
 
 The widget module listens for mobile breakpoint changes to update PlumX popup direction (top on mobile, left on desktop). Altmetric uses top popovers; mobile centers the rail to keep popovers inside the viewport.
+
+- WCPEC-9 conference records use the user-supplied original `assets/images/institutions/wcpec-9.png` logo in both `app.js` publication cards and `build_seo.py` detail pages, with proportional responsive sizing and descriptive alt text.
+- PVSEC-35 records likewise use the user-supplied original `assets/images/institutions/pvsec-35.png` logo in publication cards and generated detail pages.

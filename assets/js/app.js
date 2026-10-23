@@ -340,7 +340,7 @@ function thesisPublicationCard(p){
 function conferenceInfo(p){
   const c=p.conference;if(p.publicationType!=='conference'||!c)return '';
   const acronym=c.acronym||'';
-  const logo=acronym.startsWith('SDSE')?['sdse.png','Smart Devices and Sustainable Energy',1291,437]:acronym.startsWith('TwIChE')?['twiche.png','Taiwan Institute of Chemical Engineers',967,180]:null;
+  const logo=acronym.startsWith('SDSE')?['sdse.png','Smart Devices and Sustainable Energy',1291,437]:acronym.startsWith('TwIChE')?['twiche.png','Taiwan Institute of Chemical Engineers',967,180]:acronym==='WCPEC-9'?['wcpec-9.png','9th World Conference on Photovoltaic Energy Conversion (WCPEC-9)',357,357]:acronym==='PVSEC-35'?['pvsec-35.png','35th International Photovoltaic Science and Engineering Conference (PVSEC-35)',692,182]:null;
   const prefix=/\/(publications|patents|news)\//.test(location.pathname)?'../':'';
   const artwork=logo?`<img class="conference-logo" src="${prefix}assets/images/institutions/${logo[0]}" alt="${logo[1]}" width="${logo[2]}" height="${logo[3]}" loading="lazy" decoding="async"/>`:'';
   const dates=[c.startDate,c.endDate!==c.startDate?c.endDate:''].filter(Boolean).join(' – ');

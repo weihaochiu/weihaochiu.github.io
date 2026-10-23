@@ -190,3 +190,6 @@ Independent DOI-bearing article pages must also show both attention widgets besi
 Attention widgets and author metadata must initialize in either order without duplicating the author-affiliation block.
 
 Mobile centers the widget pair and opens PlumX popovers above the graphic; Altmetric popovers open above the donut. Desktop PlumX popovers open left. Resize updates the PlumX direction to avoid clipping on narrow screens.
+
+- WCPEC-9 conference records use the user-supplied original `assets/images/institutions/wcpec-9.png` logo in both `app.js` publication cards and `build_seo.py` detail pages, with proportional responsive sizing and descriptive alt text.
+- PVSEC-35 records likewise use the user-supplied original `assets/images/institutions/pvsec-35.png` logo in publication cards and generated detail pages.
