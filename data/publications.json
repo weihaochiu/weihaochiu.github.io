@@ -14738,5 +14738,454 @@
       "manualOverride": true,
       "lastEvaluated": "2026-08-13"
     }
+  },
+  {
+    "date": "2022-10-31",
+    "authors": [
+      "Chiu, Wei-Hao",
+      "方元雋",
+      "Lee, Kun-Mu"
+    ],
+    "title": "鈣鈦礦太陽能電池之電子傳輸層介紹及未來展望(上)",
+    "journal": "材料世界網（材料最前線）",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "year": 2022,
+    "month": 10,
+    "publisher": "",
+    "doi": "",
+    "abstract": "",
+    "highlights": [],
+    "keywords": [],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "contentStatus": {
+      "abstract": "pending",
+      "highlights": "not-available",
+      "keywords": "pending",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-10-23",
+      "verifiedSource": "https://www.materialsnet.com.tw/DocView.aspx?id=51511"
+    },
+    "authorOrder": 1,
+    "topic": "Perovskite Solar Cells",
+    "tags": [
+      "Perovskite",
+      "Chinese publication"
+    ],
+    "role": "First author",
+    "doiUrl": "",
+    "publicationUrl": "https://www.materialsnet.com.tw/DocView.aspx?id=51511",
+    "citation": "邱偉豪、方元雋、李坤穆。鈣鈦礦太陽能電池之電子傳輸層介紹及未來展望(上)。材料世界網（材料最前線）（2022）。https://www.materialsnet.com.tw/DocView.aspx?id=51511",
+    "authorships": [
+      {
+        "name": "Chiu, Wei-Hao",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "https://www.materialsnet.com.tw/DocView.aspx?id=51511"
+        ]
+      },
+      {
+        "name": "方元雋",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "https://www.materialsnet.com.tw/DocView.aspx?id=51511"
+        ]
+      },
+      {
+        "name": "Lee, Kun-Mu",
+        "authorOrder": 3,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "https://www.materialsnet.com.tw/DocView.aspx?id=51511"
+        ]
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "partial",
+      "lastChecked": "2026-10-23",
+      "sources": [
+        "Materialsnet"
+      ],
+      "sourceUrls": {
+        "bibliographic": "https://www.materialsnet.com.tw/DocView.aspx?id=51511"
+      },
+      "requiresManualReview": true,
+      "missingFields": [
+        "affiliations",
+        "correspondingAuthor"
+      ],
+      "warnings": [
+        "Preserve source author order; unverified English names, DOI and citation counts are not supplied."
+      ]
+    },
+    "id": "materialsnet-51511",
+    "publicationType": "chinese-journal",
+    "documentType": "professional-review",
+    "language": "zh-TW",
+    "peerReviewStatus": "unverified",
+    "analytics": {
+      "coreJournalCount": false,
+      "journalMetrics": false,
+      "fwci": false,
+      "citationMetrics": false
+    },
+    "internationalCollaboration": {
+      "status": "needs-review",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "incomplete",
+      "sources": [
+        "Materialsnet"
+      ],
+      "evidenceUrls": {
+        "bibliographic": "https://www.materialsnet.com.tw/DocView.aspx?id=51511"
+      },
+      "requiresManualReview": true,
+      "warnings": [
+        "Source does not establish complete country-qualified author affiliations."
+      ],
+      "manualOverride": false,
+      "lastEvaluated": "2026-10-23",
+      "inputSignature": ""
+    },
+    "metadataSource": "source_verified",
+    "automationProtection": {
+      "protected": true,
+      "reason": "Bibliographic metadata verified from the user-provided source; preserve author order and source fields."
+    }
+  },
+  {
+    "date": "2022-11-02",
+    "authors": [
+      "Chiu, Wei-Hao",
+      "方元雋",
+      "Lee, Kun-Mu"
+    ],
+    "title": "鈣鈦礦太陽能電池之電子傳輸層介紹及未來展望(下)",
+    "journal": "材料世界網（材料最前線）",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "year": 2022,
+    "month": 11,
+    "publisher": "",
+    "doi": "",
+    "abstract": "",
+    "highlights": [],
+    "keywords": [],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "contentStatus": {
+      "abstract": "pending",
+      "highlights": "not-available",
+      "keywords": "pending",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-10-23",
+      "verifiedSource": "https://www.materialsnet.com.tw/DocView.aspx?id=51512"
+    },
+    "authorOrder": 1,
+    "topic": "Perovskite Solar Cells",
+    "tags": [
+      "Perovskite",
+      "Chinese publication"
+    ],
+    "role": "First author",
+    "doiUrl": "",
+    "publicationUrl": "https://www.materialsnet.com.tw/DocView.aspx?id=51512",
+    "citation": "邱偉豪、方元雋、李坤穆。鈣鈦礦太陽能電池之電子傳輸層介紹及未來展望(下)。材料世界網（材料最前線）（2022）。https://www.materialsnet.com.tw/DocView.aspx?id=51512",
+    "authorships": [
+      {
+        "name": "Chiu, Wei-Hao",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "https://www.materialsnet.com.tw/DocView.aspx?id=51512"
+        ]
+      },
+      {
+        "name": "方元雋",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "https://www.materialsnet.com.tw/DocView.aspx?id=51512"
+        ]
+      },
+      {
+        "name": "Lee, Kun-Mu",
+        "authorOrder": 3,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "https://www.materialsnet.com.tw/DocView.aspx?id=51512"
+        ]
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "partial",
+      "lastChecked": "2026-10-23",
+      "sources": [
+        "Materialsnet"
+      ],
+      "sourceUrls": {
+        "bibliographic": "https://www.materialsnet.com.tw/DocView.aspx?id=51512"
+      },
+      "requiresManualReview": true,
+      "missingFields": [
+        "affiliations",
+        "correspondingAuthor"
+      ],
+      "warnings": [
+        "Preserve source author order; unverified English names, DOI and citation counts are not supplied."
+      ]
+    },
+    "id": "materialsnet-51512",
+    "publicationType": "chinese-journal",
+    "documentType": "professional-review",
+    "language": "zh-TW",
+    "peerReviewStatus": "unverified",
+    "analytics": {
+      "coreJournalCount": false,
+      "journalMetrics": false,
+      "fwci": false,
+      "citationMetrics": false
+    },
+    "internationalCollaboration": {
+      "status": "needs-review",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "incomplete",
+      "sources": [
+        "Materialsnet"
+      ],
+      "evidenceUrls": {
+        "bibliographic": "https://www.materialsnet.com.tw/DocView.aspx?id=51512"
+      },
+      "requiresManualReview": true,
+      "warnings": [
+        "Source does not establish complete country-qualified author affiliations."
+      ],
+      "manualOverride": false,
+      "lastEvaluated": "2026-10-23",
+      "inputSignature": ""
+    },
+    "metadataSource": "source_verified",
+    "automationProtection": {
+      "protected": true,
+      "reason": "Bibliographic metadata verified from the user-provided source; preserve author order and source fields."
+    }
+  },
+  {
+    "date": "2021-06",
+    "authors": [
+      "蔡嘉豪",
+      "Chiu, Wei-Hao",
+      "楊東妮",
+      "Lee, Kun-Mu"
+    ],
+    "title": "金屬有機框架材料於鈣鈦礦太陽能電池發展與展望",
+    "journal": "真空科技",
+    "volume": "34",
+    "issue": "2",
+    "pages": "27",
+    "year": 2021,
+    "month": 6,
+    "publisher": "台灣真空學會",
+    "doi": "",
+    "abstract": "",
+    "highlights": [],
+    "keywords": [
+      "鈣鈦礦太陽能電池",
+      "金屬有機框架材料",
+      "穩定性",
+      "Perovskite solar cells",
+      "Metal-organic framework",
+      "Stability"
+    ],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "contentStatus": {
+      "abstract": "pending",
+      "highlights": "not-available",
+      "keywords": "available",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-10-23",
+      "verifiedSource": "https://lawdata.com.tw/tw/detail.aspx?no=537187"
+    },
+    "authorOrder": 2,
+    "topic": "Perovskite Solar Cells",
+    "tags": [
+      "Perovskite",
+      "Chinese publication"
+    ],
+    "role": "",
+    "doiUrl": "",
+    "publicationUrl": "https://lawdata.com.tw/tw/detail.aspx?no=537187",
+    "citation": "蔡嘉豪、邱偉豪、楊東妮、李坤穆。金屬有機框架材料於鈣鈦礦太陽能電池發展與展望。真空科技（2021）。https://lawdata.com.tw/tw/detail.aspx?no=537187",
+    "authorships": [
+      {
+        "name": "蔡嘉豪",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "https://lawdata.com.tw/tw/detail.aspx?no=537187"
+        ]
+      },
+      {
+        "name": "Chiu, Wei-Hao",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "https://lawdata.com.tw/tw/detail.aspx?no=537187"
+        ]
+      },
+      {
+        "name": "楊東妮",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "https://lawdata.com.tw/tw/detail.aspx?no=537187"
+        ]
+      },
+      {
+        "name": "Lee, Kun-Mu",
+        "authorOrder": 4,
+        "authorPosition": "last",
+        "affiliationIds": [],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "https://lawdata.com.tw/tw/detail.aspx?no=537187"
+        ]
+      }
+    ],
+    "affiliations": [],
+    "authorshipMetadata": {
+      "status": "partial",
+      "lastChecked": "2026-10-23",
+      "sources": [
+        "Lawdata"
+      ],
+      "sourceUrls": {
+        "bibliographic": "https://lawdata.com.tw/tw/detail.aspx?no=537187"
+      },
+      "requiresManualReview": true,
+      "missingFields": [
+        "affiliations",
+        "correspondingAuthor"
+      ],
+      "warnings": [
+        "Preserve source author order; unverified English names, DOI and citation counts are not supplied.",
+        "Lawdata reports pages 27–27; stored as page 27 without inferring an ending page."
+      ]
+    },
+    "id": "vacuum-technology-2021-mof-perovskite",
+    "publicationType": "chinese-journal",
+    "documentType": "professional-review",
+    "language": "zh-TW",
+    "peerReviewStatus": "unverified",
+    "analytics": {
+      "coreJournalCount": false,
+      "journalMetrics": false,
+      "fwci": false,
+      "citationMetrics": false
+    },
+    "internationalCollaboration": {
+      "status": "needs-review",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "incomplete",
+      "sources": [
+        "Lawdata"
+      ],
+      "evidenceUrls": {
+        "bibliographic": "https://lawdata.com.tw/tw/detail.aspx?no=537187"
+      },
+      "requiresManualReview": true,
+      "warnings": [
+        "Source does not establish complete country-qualified author affiliations."
+      ],
+      "manualOverride": false,
+      "lastEvaluated": "2026-10-23",
+      "inputSignature": ""
+    },
+    "metadataSource": "source_verified",
+    "titleEn": "Development and prospect of metal-organic framework (MOF) materials in perovskite solar cells",
+    "automationProtection": {
+      "protected": true,
+      "reason": "Bibliographic metadata verified from the user-provided source; preserve author order and source fields."
+    }
   }
 ]

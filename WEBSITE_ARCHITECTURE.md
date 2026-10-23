@@ -452,3 +452,8 @@ flowchart TD
 
 - `app.js` maps the existing agency/organization names to local logos without changing academic JSON: NSTC for two NSTC projects, TwIChE for the two chemical-engineering society awards, and the user-supplied year-neutral TIE logo for the 2023/2025 Innotech awards. Unmatched records retain their text layout. Logo images preserve proportions and accessible names on desktop/mobile; About and Projects version their CSS/JS URLs.
 - NSTC artwork is the complete original header SVG from https://www.nstc.gov.tw/folksonomy/detail/95e64744-1e2e-42ed-8a16-1b95c91f21d5?l=ch (only `viewBox` attribute casing normalized); TwIChE artwork is https://www.twiche.org.tw/sites/default/files/logo-h.png, linked by https://www.twiche.org.tw/zh-hant. TIE artwork was supplied by the user. All assets reside in `assets/images/institutions/`.
+
+## Chinese publication additions — 23 October 2026
+
+- Add Materialsnet articles 51511 and 51512 as separately dated Chinese professional-review installments (2022-10-31 and 2022-11-02), and the Lawdata 537187 Vacuum Technology review (2021-06, 34(2), source-reported page 27). Preserve Chinese author names where verified English forms are unavailable; missing DOI/citation data stay empty. No full article text is republished.
+- The supplied Airiti 2021 module-review URL already belongs to `10.29803/ce.202108_68(4).0006` and is not duplicated. Total outputs/research outputs become 46/44; core journal and journal-metric counts remain 38, and the two theses remain excluded. New Chinese records have all four bibliometric analytics flags false. Existing records and manual decisions are preserved.

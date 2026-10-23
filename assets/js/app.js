@@ -342,7 +342,7 @@ function publicationCard(p){
   const authors=(p.authors||[]).map(renderAuthor).join(', ');
   const n=Number(p.citationCount||0);
   const scholarUrl=normalizeScholarUrl(p.scholarCitedByUrl)||normalizeScholarUrl(p.citedByUrl);
-  const cited=n>0&&scholarUrl
+  const cited=p.analytics?.citationMetrics===false?'':n>0&&scholarUrl
     ?`<a class="action" href="${esc(scholarUrl)}" target="_blank" rel="noopener noreferrer">${n} Google Scholar citation${n===1?'':'s'} ↗</a>`
     :`<span class="action">${n} Google Scholar citation${n===1?'':'s'}</span>`;
   const openalex=p.openalex||{};

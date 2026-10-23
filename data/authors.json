@@ -3895,7 +3895,9 @@
       "https://patents.google.com/patent/TWI816357B/zh",
       "https://orcid.org/0000-0002-2069-7533"
     ],
-    "contributionTypes": ["patent-inventor"]
+    "contributionTypes": [
+      "patent-inventor"
+    ]
   },
   {
     "id": "cheng-hung-chen",
@@ -3918,7 +3920,9 @@
       "https://patents.google.com/patent/TWM612985U/en",
       "https://patents.google.com/patent/TWM611184U/en"
     ],
-    "contributionTypes": ["patent-inventor"]
+    "contributionTypes": [
+      "patent-inventor"
+    ]
   },
   {
     "id": "chien-chun-chen",
@@ -3944,7 +3948,9 @@
       "https://patents.google.com/patent/TWM611184U/en",
       "https://www.linkedin.com/in/james-pvsg/"
     ],
-    "contributionTypes": ["patent-inventor"]
+    "contributionTypes": [
+      "patent-inventor"
+    ]
   },
   {
     "id": "hsiu-hung-liu",
@@ -3967,7 +3973,9 @@
       "https://patents.google.com/patent/TWM612985U/en",
       "https://patents.google.com/patent/TWM611184U/en"
     ],
-    "contributionTypes": ["patent-inventor"]
+    "contributionTypes": [
+      "patent-inventor"
+    ]
   },
   {
     "id": "sz-ping-fu",
@@ -3991,14 +3999,18 @@
       "https://patents.google.com/patent/CN102456482B/en",
       "https://patents.google.com/patent/TWI407579B/en"
     ],
-    "contributionTypes": ["patent-inventor"]
+    "contributionTypes": [
+      "patent-inventor"
+    ]
   },
   {
     "id": "chuan-ya-hung",
     "name": "Chuan-Ya Hung",
     "displayName": "Chuan-Ya Hung",
     "nameZh": "洪詮雅",
-    "aliases": ["洪诠雅"],
+    "aliases": [
+      "洪诠雅"
+    ],
     "role": "",
     "currentPosition": "",
     "affiliation": "",
@@ -4016,7 +4028,9 @@
       "https://patents.google.com/patent/CN102456482B/en",
       "https://patents.google.com/patent/TWI407579B/en"
     ],
-    "contributionTypes": ["patent-inventor"]
+    "contributionTypes": [
+      "patent-inventor"
+    ]
   },
   {
     "id": "je-wei-lin",
@@ -4040,7 +4054,9 @@
       "https://patents.google.com/patent/CN206236681U/en",
       "https://patents.google.com/patent/TWM539701U/en"
     ],
-    "contributionTypes": ["patent-inventor"]
+    "contributionTypes": [
+      "patent-inventor"
+    ]
   },
   {
     "id": "wei-ming-chen",
@@ -4064,7 +4080,9 @@
       "https://patents.google.com/patent/CN206236681U/en",
       "https://patents.google.com/patent/TWM539701U/en"
     ],
-    "contributionTypes": ["patent-inventor"]
+    "contributionTypes": [
+      "patent-inventor"
+    ]
   },
   {
     "id": "chie-sheng-liu",
@@ -4091,7 +4109,9 @@
       "https://patents.google.com/patent/TWM539701U/en",
       "https://www.linkedin.com/in/chie-sheng-liu-62485330/"
     ],
-    "contributionTypes": ["patent-inventor"]
+    "contributionTypes": [
+      "patent-inventor"
+    ]
   },
   {
     "id": "shan-chuang-pei",
@@ -4115,14 +4135,18 @@
       "https://patents.google.com/patent/CN206236681U/en",
       "https://patents.google.com/patent/TWM539701U/en"
     ],
-    "contributionTypes": ["patent-inventor"]
+    "contributionTypes": [
+      "patent-inventor"
+    ]
   },
   {
     "id": "wei-chih-hsu",
     "name": "Wei-Chih Hsu",
     "displayName": "Wei-Chih Hsu",
     "nameZh": "徐偉智",
-    "aliases": ["徐伟智"],
+    "aliases": [
+      "徐伟智"
+    ],
     "role": "",
     "currentPosition": "",
     "affiliation": "",
@@ -4144,7 +4168,9 @@
       "https://patents.google.com/patent/TWM551346U/en",
       "https://www.linkedin.com/in/alexhsulove/"
     ],
-    "contributionTypes": ["patent-inventor"]
+    "contributionTypes": [
+      "patent-inventor"
+    ]
   },
   {
     "id": "gokulkumar-kumar",
@@ -4168,6 +4194,60 @@
     "id": "varatharajan-p",
     "name": "Varatharajan, P.",
     "displayName": "Varatharajan, P.",
+    "nameZh": "",
+    "aliases": [],
+    "role": "",
+    "currentPosition": "",
+    "affiliation": "",
+    "affiliationZh": "",
+    "email": [],
+    "telephone": "",
+    "orcid": "",
+    "links": {},
+    "status": "pending",
+    "lastVerified": "",
+    "sources": []
+  },
+  {
+    "id": "author-67ac8581d0",
+    "name": "方元雋",
+    "displayName": "方元雋",
+    "nameZh": "",
+    "aliases": [],
+    "role": "",
+    "currentPosition": "",
+    "affiliation": "",
+    "affiliationZh": "",
+    "email": [],
+    "telephone": "",
+    "orcid": "",
+    "links": {},
+    "status": "pending",
+    "lastVerified": "",
+    "sources": []
+  },
+  {
+    "id": "author-07c0152f46",
+    "name": "蔡嘉豪",
+    "displayName": "蔡嘉豪",
+    "nameZh": "",
+    "aliases": [],
+    "role": "",
+    "currentPosition": "",
+    "affiliation": "",
+    "affiliationZh": "",
+    "email": [],
+    "telephone": "",
+    "orcid": "",
+    "links": {},
+    "status": "pending",
+    "lastVerified": "",
+    "sources": []
+  },
+  {
+    "id": "author-3006713388",
+    "name": "楊東妮",
+    "displayName": "楊東妮",
     "nameZh": "",
     "aliases": [],
     "role": "",
