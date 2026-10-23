@@ -16637,7 +16637,7 @@
       "Wei-Hao Chiu",
       "Kun-Mu Lee"
     ],
-    "journal": "第18屆台塑企業應用技術研討會",
+    "journal": "18th Formosa Plastics Group Applied Technology Seminar / 第18屆台塑企業應用技術研討會",
     "publisher": "",
     "volume": "",
     "issue": "",
@@ -16663,7 +16663,7 @@
       "Conference paper"
     ],
     "conference": {
-      "name": "第18屆台塑企業應用技術研討會",
+      "name": "18th Formosa Plastics Group Applied Technology Seminar / 第18屆台塑企業應用技術研討會",
       "acronym": "第18屆台塑企業應用技術研討會",
       "startDate": "2023-06-09",
       "endDate": "2023-06-09",
@@ -16672,7 +16672,9 @@
       "documentType": "conference-full-paper",
       "presentationType": "",
       "acceptanceStatus": "",
-      "abstractNumber": ""
+      "abstractNumber": "",
+      "nameZh": "第18屆台塑企業應用技術研討會",
+      "nameEn": "18th Formosa Plastics Group Applied Technology Seminar"
     },
     "analytics": {
       "coreJournalCount": false,
@@ -16775,7 +16777,7 @@
       "verifiedDate": "2026-10-23",
       "verifiedSource": "User-provided conference manuscript"
     },
-    "citation": "陳思羽, Wei-Hao Chiu, Kun-Mu Lee. 結合雷射誘發結晶與雷射直寫系統製作高效率鈣鈦礦太陽能電池. 第18屆台塑企業應用技術研討會 (2023).",
+    "citation": "陳思羽, Wei-Hao Chiu, Kun-Mu Lee. 結合雷射誘發結晶與雷射直寫系統製作高效率鈣鈦礦太陽能電池. 18th Formosa Plastics Group Applied Technology Seminar / 第18屆台塑企業應用技術研討會 (2023).",
     "internationalCollaboration": {
       "status": "domestic",
       "isInternational": false,
@@ -18092,6 +18094,2870 @@
       "manualOverride": false,
       "lastEvaluated": "2026-10-23",
       "inputSignature": "70b4657b3ca1a266b16e"
+    }
+  },
+  {
+    "id": "iedms-2021-dopant-free-blade-coating",
+    "publicationType": "conference",
+    "documentType": "conference-full-paper",
+    "language": "en",
+    "peerReviewStatus": "unverified",
+    "date": "2021-11-18",
+    "year": 2021,
+    "month": 11,
+    "title": "Achieving >21% Perovskite Solar Cells with Dopant-Free HTM by Thermal-Assisted Blade-Coating Method",
+    "authors": [
+      "Kun-Mu Lee",
+      "Wei-Hao Chiu",
+      "Bo-Yang Chen",
+      "Yan-Duo Lin"
+    ],
+    "journal": "26th International Electron Devices and Materials Symposium (IEDMS 2021)",
+    "publisher": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "doi": "",
+    "doiUrl": "",
+    "publicationUrl": "",
+    "abstract": "As the performance in terms of efficiency and device stability of perovskite solar cells (PSCs) has made rapid progress in a short period of time, the upscaling of PSCs becomes an important issue for massive commercial applications, where the cost of device manufacturing is a determining factor for wide spread uses. In this work, A new dopant-free HTM, namely CB, was synthesized and employed in PSCs by all thermal-assisted blade-coating (TABC) method. The devices with an area of 10 cm x 10 cm except for electrode with an PCE of 21.09%. Their long term stability retain >94% PCE after 500 h under a relative humidity of ~50%. This result demonstrated that the newly developed CB is a promising candidate HTM for high-performance fully TABC PSCs.",
+    "highlights": [],
+    "keywords": [
+      "dopant-free hole-transporting material",
+      "fully printed perovskite solar cell",
+      "thermal-assisted blade-coating"
+    ],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "authorOrder": 2,
+    "role": "Co-author",
+    "topic": "Perovskite Solar Cells",
+    "tags": [
+      "IEDMS 2021",
+      "Conference paper"
+    ],
+    "conference": {
+      "name": "26th International Electron Devices and Materials Symposium (IEDMS 2021)",
+      "acronym": "IEDMS 2021",
+      "startDate": "2021-11-18",
+      "endDate": "2021-11-19",
+      "location": "Tainan, Taiwan",
+      "url": "https://www.electrochem.org/ecsnews/focus-issue-on-selected-papers-from-the-international-electron-devices-and-materials-symposium-2021-iedms-2021",
+      "documentType": "conference-full-paper",
+      "presentationType": "",
+      "acceptanceStatus": "",
+      "abstractNumber": ""
+    },
+    "analytics": {
+      "coreJournalCount": false,
+      "journalMetrics": false,
+      "fwci": false,
+      "citationMetrics": false
+    },
+    "affiliations": [
+      {
+        "id": "aff-1",
+        "label": "1",
+        "department": "",
+        "institution": "Chang Gung University",
+        "address": "Department of Chemical and Materials Engineering, Chang Gung University, Taoyuan 33302, Taiwan,",
+        "raw": "Department of Chemical and Materials Engineering, Chang Gung University, Taoyuan 33302, Taiwan,",
+        "city": "",
+        "country": "Taiwan",
+        "countryCode": "TW",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "id": "aff-2",
+        "label": "2",
+        "department": "",
+        "institution": "Chang Gung University",
+        "address": "Center for Green Technology, Chang Gung University, Taoyuan 33302, Taiwan",
+        "raw": "Center for Green Technology, Chang Gung University, Taoyuan 33302, Taiwan",
+        "city": "",
+        "country": "Taiwan",
+        "countryCode": "TW",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "id": "aff-3",
+        "label": "3",
+        "department": "",
+        "institution": "Soochow University",
+        "address": "Department of Chemistry, Soochow University, Taipei 11102, Taiwan",
+        "raw": "Department of Chemistry, Soochow University, Taipei 11102, Taiwan",
+        "city": "",
+        "country": "Taiwan",
+        "countryCode": "TW",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      }
+    ],
+    "authorships": [
+      {
+        "name": "Kun-Mu Lee",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [
+          "aff-1",
+          "aff-2"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "name": "Wei-Hao Chiu",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff-2"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "name": "Bo-Yang Chen",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff-1"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "name": "Yan-Duo Lin",
+        "authorOrder": 4,
+        "authorPosition": "last",
+        "affiliationIds": [
+          "aff-3"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      }
+    ],
+    "authorshipMetadata": {
+      "status": "manual",
+      "manualAffiliations": true,
+      "lastChecked": "2026-10-23",
+      "sources": [
+        "user-provided manuscript"
+      ],
+      "sourceUrls": {
+        "conference": "https://www.electrochem.org/ecsnews/focus-issue-on-selected-papers-from-the-international-electron-devices-and-materials-symposium-2021-iedms-2021"
+      },
+      "requiresManualReview": true,
+      "missingFields": [],
+      "warnings": [
+        "Corresponding-author asterisk has no explicit legend in the supplied manuscript."
+      ]
+    },
+    "metadataSource": "manual_verified",
+    "automationProtection": {
+      "protected": true,
+      "reason": "User-selected conference manuscript; preserve event-specific author order, affiliations and content."
+    },
+    "sourceDocument": "Achieving 21% Perovskite Solar Cells with Dopant-Free HTM by Thermal-Assisted Blade-Coating.docx",
+    "contentStatus": {
+      "abstract": "available",
+      "highlights": "not-available",
+      "keywords": "available",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-10-23",
+      "verifiedSource": "User-selected conference manuscript"
+    },
+    "citation": "Kun-Mu Lee, Wei-Hao Chiu, Bo-Yang Chen, Yan-Duo Lin. Achieving >21% Perovskite Solar Cells with Dopant-Free HTM by Thermal-Assisted Blade-Coating Method. 26th International Electron Devices and Materials Symposium (IEDMS 2021) (2021).",
+    "internationalCollaboration": {
+      "status": "domestic",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "TW"
+      ],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2",
+        "aff-3"
+      ],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "user-provided manuscript"
+      ],
+      "evidenceUrls": {
+        "conference": "https://www.electrochem.org/ecsnews/focus-issue-on-selected-papers-from-the-international-electron-devices-and-materials-symposium-2021-iedms-2021"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-10-23",
+      "inputSignature": "0d08322ba5a8de2ac565"
+    }
+  },
+  {
+    "id": "iedms-2021-csi-two-step",
+    "publicationType": "conference",
+    "documentType": "conference-full-paper",
+    "language": "en",
+    "peerReviewStatus": "unverified",
+    "date": "2021-11-18",
+    "year": 2021,
+    "month": 11,
+    "title": "Effect of Cesium iodide dopant for high-efficiency perovskite solar cells via two-step deposition method",
+    "authors": [
+      "Seoungjun Ahn",
+      "Wei-Hao Chiu",
+      "Kun-Mu Lee"
+    ],
+    "journal": "26th International Electron Devices and Materials Symposium (IEDMS 2021)",
+    "publisher": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "doi": "",
+    "doiUrl": "",
+    "publicationUrl": "",
+    "abstract": "In recent years, the perovskite solar cell achieves over 25% of power conversion efficiency. One-step spin coating, which is now mostly used, is known to have difficulty controlling perovskite films. To improve this problem, perovskite films were produced by using two-step spin coating. These effects of doping Cesium iodide on PbI2 solutions are studied. The doped CsI in PbI2 film was rougher than the pristine PbI2 film to easily absorb the second step solution. And a smoother and flatter perovskite film can be produced. So, it can improve the crystallinity, grain size, and morphology of perovskite film when doping halogen cation in PbI2. And the photovoltaic performance of the device with halogen-dopant is also expected to be improved. Finally, the power conversion efficiency of the solar cell by doping 0.10M CsI in PbI2 increases from 17.4% to 18.96%, compared to pristine device.",
+    "highlights": [],
+    "keywords": [],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "authorOrder": 2,
+    "role": "Co-author",
+    "topic": "Perovskite Solar Cells",
+    "tags": [
+      "IEDMS 2021",
+      "Conference paper"
+    ],
+    "conference": {
+      "name": "26th International Electron Devices and Materials Symposium (IEDMS 2021)",
+      "acronym": "IEDMS 2021",
+      "startDate": "2021-11-18",
+      "endDate": "2021-11-19",
+      "location": "Tainan, Taiwan",
+      "url": "https://www.electrochem.org/ecsnews/focus-issue-on-selected-papers-from-the-international-electron-devices-and-materials-symposium-2021-iedms-2021",
+      "documentType": "conference-full-paper",
+      "presentationType": "",
+      "acceptanceStatus": "",
+      "abstractNumber": ""
+    },
+    "analytics": {
+      "coreJournalCount": false,
+      "journalMetrics": false,
+      "fwci": false,
+      "citationMetrics": false
+    },
+    "affiliations": [
+      {
+        "id": "aff-1",
+        "label": "1",
+        "department": "",
+        "institution": "Chang Gung University",
+        "address": "Department of Chemical and Materials Engineering, Chang Gung University, Taoyuan 33302, Taiwan",
+        "raw": "Department of Chemical and Materials Engineering, Chang Gung University, Taoyuan 33302, Taiwan",
+        "city": "",
+        "country": "Taiwan",
+        "countryCode": "TW",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "id": "aff-2",
+        "label": "2",
+        "department": "",
+        "institution": "Chang Gung University",
+        "address": "Center for Green Technology, Chang Gung University, Taoyuan 33302, Taiwan",
+        "raw": "Center for Green Technology, Chang Gung University, Taoyuan 33302, Taiwan",
+        "city": "",
+        "country": "Taiwan",
+        "countryCode": "TW",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      }
+    ],
+    "authorships": [
+      {
+        "name": "Seoungjun Ahn",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [
+          "aff-1"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "name": "Wei-Hao Chiu",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff-2"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "name": "Kun-Mu Lee",
+        "authorOrder": 3,
+        "authorPosition": "last",
+        "affiliationIds": [
+          "aff-1",
+          "aff-2"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      }
+    ],
+    "authorshipMetadata": {
+      "status": "manual",
+      "manualAffiliations": true,
+      "lastChecked": "2026-10-23",
+      "sources": [
+        "user-provided manuscript"
+      ],
+      "sourceUrls": {
+        "conference": "https://www.electrochem.org/ecsnews/focus-issue-on-selected-papers-from-the-international-electron-devices-and-materials-symposium-2021-iedms-2021"
+      },
+      "requiresManualReview": true,
+      "missingFields": [],
+      "warnings": [
+        "Corresponding-author asterisk has no explicit legend in the supplied manuscript."
+      ]
+    },
+    "metadataSource": "manual_verified",
+    "automationProtection": {
+      "protected": true,
+      "reason": "User-selected conference manuscript; preserve event-specific author order, affiliations and content."
+    },
+    "sourceDocument": "2021-IEDMS-Submission-Ahn _ reviewed by Chiu_20210828.docx",
+    "contentStatus": {
+      "abstract": "available",
+      "highlights": "not-available",
+      "keywords": "not-available",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-10-23",
+      "verifiedSource": "User-selected conference manuscript"
+    },
+    "citation": "Seoungjun Ahn, Wei-Hao Chiu, Kun-Mu Lee. Effect of Cesium iodide dopant for high-efficiency perovskite solar cells via two-step deposition method. 26th International Electron Devices and Materials Symposium (IEDMS 2021) (2021).",
+    "internationalCollaboration": {
+      "status": "domestic",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "TW"
+      ],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2"
+      ],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "user-provided manuscript"
+      ],
+      "evidenceUrls": {
+        "conference": "https://www.electrochem.org/ecsnews/focus-issue-on-selected-papers-from-the-international-electron-devices-and-materials-symposium-2021-iedms-2021"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-10-23",
+      "inputSignature": "96d01f39342e877ddad4"
+    }
+  },
+  {
+    "id": "twiche-2021-dopant-free-blade-coating",
+    "publicationType": "conference",
+    "documentType": "conference-abstract",
+    "language": "en",
+    "peerReviewStatus": "unverified",
+    "date": "2022-01-06",
+    "year": 2022,
+    "month": 1,
+    "title": "Preparing High Performance Perovskite Solar Cells with Dopant-Free HTM by Thermal-Assisted Blade Coating Method",
+    "authors": [
+      "Kun-Mu Lee",
+      "Wei-Hao Chiu",
+      "Bo-Yang Chen",
+      "Yan-Duo Lin"
+    ],
+    "journal": "台灣化學工程學會68週年年會（2021 TwIChE）",
+    "publisher": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "doi": "",
+    "doiUrl": "",
+    "publicationUrl": "",
+    "abstract": "Perovskite solar cells (PSCs) emerging as a promising photovoltaic technology with high efficiency and low manufacturing cost are paid attention from all over the world. However, the upscaling of PSCs becomes an important issue for commercial applications. Currently, different deposition techniques, such as slot die [1], inkjet printing [2], blade-coating [3], and roll-to-roll printing [4], were developed and drew considerable research attention. Among these techniques, blade-coating method is a simple, low-cost and effective material-usage technique. On the other hands, very few alternative small molecules can replace the benchmark spiro-OMeTAD in a fully printed n-i-p PSCs. And there is a strong need in developing compatible dopant-free HTM for high-efficiency printed PSCs. In this work, we demonstrate the fabrication of PSCs devices based on a donor–acceptor-donor (D-A-D) doping-free HTM, namely CB. The films in perovskite solar cell are all formed by TABC (thermal-assisted blade coating) processes. The PSCs fabricated by dopant-free CB as HTM exhibited an impressive efficiency of 21.09%, which is higher than that with spiro-OMeTAD (14.28%). The TABC-based dopant-free CB-based PSCs exhibited significantly improved long-term stability, retaining more than 94% efficiency after 500 hours compared to that using doped spiro-OMeTAD under a relative humidity of ~50%. This result demonstrated that the newly developed CB is a promising candidate HTM for high performance fully printable PSCs.",
+    "highlights": [],
+    "keywords": [],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "authorOrder": 2,
+    "role": "Co-author",
+    "topic": "Perovskite Solar Cells",
+    "tags": [
+      "TwIChE 2021",
+      "Conference paper"
+    ],
+    "conference": {
+      "name": "台灣化學工程學會68週年年會（2021 TwIChE）",
+      "acronym": "TwIChE 2021",
+      "startDate": "2022-01-06",
+      "endDate": "2022-01-07",
+      "location": "Kaohsiung, Taiwan",
+      "url": "https://www.twiche.org.tw/zh-hant/news/504",
+      "documentType": "conference-abstract",
+      "presentationType": "",
+      "acceptanceStatus": "",
+      "abstractNumber": ""
+    },
+    "analytics": {
+      "coreJournalCount": false,
+      "journalMetrics": false,
+      "fwci": false,
+      "citationMetrics": false
+    },
+    "affiliations": [
+      {
+        "id": "aff-1",
+        "label": "1",
+        "department": "",
+        "institution": "Chang Gung University",
+        "address": "Department of Chemical and Materials Engineering, Chang Gung University, Taoyuan 33302, Taiwan",
+        "raw": "Department of Chemical and Materials Engineering, Chang Gung University, Taoyuan 33302, Taiwan",
+        "city": "",
+        "country": "Taiwan",
+        "countryCode": "TW",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "id": "aff-2",
+        "label": "2",
+        "department": "",
+        "institution": "Chang Gung University",
+        "address": "Center for Green Technology, Chang Gung University, Taoyuan 33302, Taiwan",
+        "raw": "Center for Green Technology, Chang Gung University, Taoyuan 33302, Taiwan",
+        "city": "",
+        "country": "Taiwan",
+        "countryCode": "TW",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "id": "aff-3",
+        "label": "3",
+        "department": "",
+        "institution": "Soochow University",
+        "address": "Department of Chemistry, Soochow University, Taipei 11102, Taiwan",
+        "raw": "Department of Chemistry, Soochow University, Taipei 11102, Taiwan",
+        "city": "",
+        "country": "Taiwan",
+        "countryCode": "TW",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      }
+    ],
+    "authorships": [
+      {
+        "name": "Kun-Mu Lee",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [
+          "aff-1",
+          "aff-2"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": true,
+        "correspondingEmail": "kmlee@mail.cgu.edu.tw",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "name": "Wei-Hao Chiu",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff-2"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "name": "Bo-Yang Chen",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff-1"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "name": "Yan-Duo Lin",
+        "authorOrder": 4,
+        "authorPosition": "last",
+        "affiliationIds": [
+          "aff-3"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      }
+    ],
+    "authorshipMetadata": {
+      "status": "manual",
+      "manualAffiliations": true,
+      "lastChecked": "2026-10-23",
+      "sources": [
+        "user-provided manuscript"
+      ],
+      "sourceUrls": {
+        "conference": "https://www.twiche.org.tw/zh-hant/news/504"
+      },
+      "requiresManualReview": true,
+      "missingFields": [],
+      "warnings": [
+        "Local manuscript versions differ in the inclusion of Bo-Yang Chen. This record preserves the four-author manuscript; final submitted author list requires confirmation.",
+        "The asterisk on Yan-Duo Lin has no corresponding email in this manuscript."
+      ]
+    },
+    "metadataSource": "manual_verified",
+    "automationProtection": {
+      "protected": true,
+      "reason": "User-selected conference manuscript; preserve event-specific author order, affiliations and content."
+    },
+    "sourceDocument": "Preparing High Performance Perovskite Solar Cells with Dopant-Free HTM by Thermal-Assisted Blade Coating Method.docx",
+    "contentStatus": {
+      "abstract": "available",
+      "highlights": "not-available",
+      "keywords": "not-available",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-10-23",
+      "verifiedSource": "User-selected conference manuscript"
+    },
+    "citation": "Kun-Mu Lee, Wei-Hao Chiu, Bo-Yang Chen, Yan-Duo Lin. Preparing High Performance Perovskite Solar Cells with Dopant-Free HTM by Thermal-Assisted Blade Coating Method. 台灣化學工程學會68週年年會（2021 TwIChE） (2022).",
+    "internationalCollaboration": {
+      "status": "domestic",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "TW"
+      ],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2",
+        "aff-3"
+      ],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "user-provided manuscript"
+      ],
+      "evidenceUrls": {
+        "conference": "https://www.twiche.org.tw/zh-hant/news/504"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-10-23",
+      "inputSignature": "1de919b846c13df8aead"
+    }
+  },
+  {
+    "id": "twiche-2021-csi-two-step",
+    "publicationType": "conference",
+    "documentType": "conference-abstract",
+    "language": "en",
+    "peerReviewStatus": "unverified",
+    "date": "2022-01-06",
+    "year": 2022,
+    "month": 1,
+    "title": "Toward high efficiency perovskite solar cells by doping cesium iodide into PbI2 film via two-step deposition method",
+    "authors": [
+      "Seoungjun Ahn",
+      "Wei-Hao Chiu",
+      "Kun-Mu Lee"
+    ],
+    "journal": "台灣化學工程學會68週年年會（2021 TwIChE）",
+    "publisher": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "doi": "",
+    "doiUrl": "",
+    "publicationUrl": "",
+    "abstract": "Perovskite solar cells are already well known due to the advantages of easy manufacturing and low cost [1] Therefore, it has made radical progress over the past 20 years, recording an efficiency of 3.8% [2] to 25%. There are many methods to make perovskite films, but among them, spin-coating is the most popular way to make perovskite films [1]. It has been pointed out that, by using one step method, it is difficult to obtain uniform perovskite films with well surface coverage. This problem is the main reason for the degradation of perovskite solar cells. The two-step method is approached to reduce the degradation.  [3]. And in the two-step method, the rough surface of PbI2 allows for a flatter and smoother perovskite surface. Therefore, in this study, we will discuss the effect of doping Ceisum iodide (CsI) in the PbI2 to produce rough surface. Doping CsI helps to obtain a slightly flatter and softer perovskite film. Improvements on surface coverage result in high Voc. It also records high Jsc due to a decrease in pinholes, and FF is also improved. The red-shift effect of cesium leads to absorb a wider wavelength of light. Device with doping 0.10M CsI achieves efficiency of 18.96%  that is better than that of 17.48% of the pristine one.",
+    "highlights": [],
+    "keywords": [],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "authorOrder": 2,
+    "role": "Co-author",
+    "topic": "Perovskite Solar Cells",
+    "tags": [
+      "TwIChE 2021",
+      "Conference paper"
+    ],
+    "conference": {
+      "name": "台灣化學工程學會68週年年會（2021 TwIChE）",
+      "acronym": "TwIChE 2021",
+      "startDate": "2022-01-06",
+      "endDate": "2022-01-07",
+      "location": "Kaohsiung, Taiwan",
+      "url": "https://www.twiche.org.tw/zh-hant/news/504",
+      "documentType": "conference-abstract",
+      "presentationType": "",
+      "acceptanceStatus": "",
+      "abstractNumber": ""
+    },
+    "analytics": {
+      "coreJournalCount": false,
+      "journalMetrics": false,
+      "fwci": false,
+      "citationMetrics": false
+    },
+    "affiliations": [
+      {
+        "id": "aff-1",
+        "label": "1",
+        "department": "",
+        "institution": "Chang Gung University",
+        "address": "Department of Chemical and Materials Engineering, Chang Gung University, Taoyuan 33302, Taiwan",
+        "raw": "Department of Chemical and Materials Engineering, Chang Gung University, Taoyuan 33302, Taiwan",
+        "city": "",
+        "country": "Taiwan",
+        "countryCode": "TW",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "id": "aff-2",
+        "label": "2",
+        "department": "",
+        "institution": "Chang Gung University",
+        "address": "Center for Green Technology, Chang Gung University, Taoyuan 33302, Taiwan",
+        "raw": "Center for Green Technology, Chang Gung University, Taoyuan 33302, Taiwan",
+        "city": "",
+        "country": "Taiwan",
+        "countryCode": "TW",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      }
+    ],
+    "authorships": [
+      {
+        "name": "Seoungjun Ahn",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [
+          "aff-1"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "name": "Wei-Hao Chiu",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff-2"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "name": "Kun-Mu Lee",
+        "authorOrder": 3,
+        "authorPosition": "last",
+        "affiliationIds": [
+          "aff-1",
+          "aff-2"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": true,
+        "correspondingEmail": "kmlee@mail.cgu.edu.tw",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      }
+    ],
+    "authorshipMetadata": {
+      "status": "manual",
+      "manualAffiliations": true,
+      "lastChecked": "2026-10-23",
+      "sources": [
+        "user-provided manuscript"
+      ],
+      "sourceUrls": {
+        "conference": "https://www.twiche.org.tw/zh-hant/news/504"
+      },
+      "requiresManualReview": false,
+      "missingFields": [],
+      "warnings": []
+    },
+    "metadataSource": "manual_verified",
+    "automationProtection": {
+      "protected": true,
+      "reason": "User-selected conference manuscript; preserve event-specific author order, affiliations and content."
+    },
+    "sourceDocument": "2021twiche_Ahn seoungjun_revised WH Chiu_20211021.docx",
+    "contentStatus": {
+      "abstract": "available",
+      "highlights": "not-available",
+      "keywords": "not-available",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-10-23",
+      "verifiedSource": "User-selected conference manuscript"
+    },
+    "citation": "Seoungjun Ahn, Wei-Hao Chiu, Kun-Mu Lee. Toward high efficiency perovskite solar cells by doping cesium iodide into PbI2 film via two-step deposition method. 台灣化學工程學會68週年年會（2021 TwIChE） (2022).",
+    "internationalCollaboration": {
+      "status": "domestic",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "TW"
+      ],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2"
+      ],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "user-provided manuscript"
+      ],
+      "evidenceUrls": {
+        "conference": "https://www.twiche.org.tw/zh-hant/news/504"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-10-23",
+      "inputSignature": "96d01f39342e877ddad4"
+    }
+  },
+  {
+    "id": "acoe-2023-cesium-halides",
+    "publicationType": "conference",
+    "documentType": "conference-abstract",
+    "language": "en",
+    "peerReviewStatus": "unverified",
+    "date": "2023-10-31",
+    "year": 2023,
+    "month": 10,
+    "title": "Improving Perovskite Solar Cell Performance using a Two-Step Deposition Technique with Cesium Halides in PbI2 Precursor",
+    "authors": [
+      "Wei-Hao Chiu",
+      "Seoungjun Ahn",
+      "Kun-Mu Lee"
+    ],
+    "journal": "15th Asian Conference on Organic Electronics (A-COE 2023)",
+    "publisher": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "doi": "",
+    "doiUrl": "",
+    "publicationUrl": "",
+    "abstract": "In the realm of optimizing perovskite solar cells (PSCs), the quality of perovskite films stands paramount. Recognizing this, our research has explored the incorporation of specific cesium halides—CsCl, CsBr, and CsI—into the primary PbI2 precursor to refine the crystallization process of these films. Among the halides tested, CsI emerged as a standout modulator. Its introduction resulted in the generation of perovskite films that were dense, homogeneous, and boasted of heightened crystallinity. These films were also marked by a preferential orientation and an undiluted black perovskite phase. Beyond just the structural advantages, the films augmented with CsI showcased a significant leap in their carrier lifetime. This was attributed to a marked reduction in nonradiative recombination events within the film. In tangible terms, when these enhanced films were integrated into PSCs, the power conversion efficiency (PCE) experienced a notable uplift, moving from a baseline of 17.45% to an impressive 20.29%. In the context of real-world applicability, the stability of these devices was put to the test. The results were encouraging, with the CsI-augmented PSC retaining three-quarters of its initial PCE even after being subjected to 350 hours of continuous light exposure.",
+    "highlights": [],
+    "keywords": [
+      "Two-step deposition method",
+      "Cesium halides",
+      "Spin-coating",
+      "Planar perovskite solar cell"
+    ],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "authorOrder": 1,
+    "role": "First author",
+    "topic": "Perovskite Solar Cells",
+    "tags": [
+      "A-COE 2023",
+      "Conference paper"
+    ],
+    "conference": {
+      "name": "15th Asian Conference on Organic Electronics (A-COE 2023)",
+      "acronym": "A-COE 2023",
+      "startDate": "2023-10-31",
+      "endDate": "2023-11-03",
+      "location": "Taipei, Taiwan",
+      "url": "https://www.a-coe2023.com/",
+      "documentType": "conference-abstract",
+      "presentationType": "",
+      "acceptanceStatus": "",
+      "abstractNumber": ""
+    },
+    "analytics": {
+      "coreJournalCount": false,
+      "journalMetrics": false,
+      "fwci": false,
+      "citationMetrics": false
+    },
+    "affiliations": [
+      {
+        "id": "aff-1",
+        "label": "1",
+        "department": "",
+        "institution": "Chang Gung University",
+        "address": "Center for Green Technology, Chang Gung University, Taoyuan, 33302, Taiwan.",
+        "raw": "Center for Green Technology, Chang Gung University, Taoyuan, 33302, Taiwan.",
+        "city": "",
+        "country": "Taiwan",
+        "countryCode": "TW",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "id": "aff-2",
+        "label": "2",
+        "department": "",
+        "institution": "Chang Gung University",
+        "address": "Department of Chemical and Materials Engineering, Chang Gung University, Taoyuan, 33302, Taiwan",
+        "raw": "Department of Chemical and Materials Engineering, Chang Gung University, Taoyuan, 33302, Taiwan",
+        "city": "",
+        "country": "Taiwan",
+        "countryCode": "TW",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      }
+    ],
+    "authorships": [
+      {
+        "name": "Wei-Hao Chiu",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [
+          "aff-1"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "name": "Seoungjun Ahn",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff-2"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "name": "Kun-Mu Lee",
+        "authorOrder": 3,
+        "authorPosition": "last",
+        "affiliationIds": [
+          "aff-1",
+          "aff-2"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": true,
+        "correspondingEmail": "kmlee@mail.cgu.edu.tw",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      }
+    ],
+    "authorshipMetadata": {
+      "status": "manual",
+      "manualAffiliations": true,
+      "lastChecked": "2026-10-23",
+      "sources": [
+        "user-provided manuscript"
+      ],
+      "sourceUrls": {
+        "conference": "https://www.a-coe2023.com/"
+      },
+      "requiresManualReview": true,
+      "missingFields": [],
+      "warnings": [
+        "The local poster adds Ming-Chung Wu; this record preserves the supplied abstract author list."
+      ]
+    },
+    "metadataSource": "manual_verified",
+    "automationProtection": {
+      "protected": true,
+      "reason": "User-selected conference manuscript; preserve event-specific author order, affiliations and content."
+    },
+    "sourceDocument": "2023 A-COE-CsI.docx",
+    "contentStatus": {
+      "abstract": "available",
+      "highlights": "not-available",
+      "keywords": "available",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-10-23",
+      "verifiedSource": "User-selected conference manuscript"
+    },
+    "citation": "Wei-Hao Chiu, Seoungjun Ahn, Kun-Mu Lee. Improving Perovskite Solar Cell Performance using a Two-Step Deposition Technique with Cesium Halides in PbI2 Precursor. 15th Asian Conference on Organic Electronics (A-COE 2023) (2023).",
+    "internationalCollaboration": {
+      "status": "domestic",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "TW"
+      ],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2"
+      ],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "user-provided manuscript"
+      ],
+      "evidenceUrls": {
+        "conference": "https://www.a-coe2023.com/"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-10-23",
+      "inputSignature": "b15a805715dfe6fe78d2"
+    }
+  },
+  {
+    "id": "acoe-2023-pentafulvalene-htm",
+    "publicationType": "conference",
+    "documentType": "conference-abstract",
+    "language": "en",
+    "peerReviewStatus": "unverified",
+    "date": "2023-10-31",
+    "year": 2023,
+    "month": 10,
+    "title": "Fluorinated Pentafulvalene-Infused Hole-Transporting Material Elevates Perovskite Solar Cell Efficiency Over 23%",
+    "authors": [
+      "Kun-Mu Lee",
+      "Wei-Hao Chiu",
+      "Ying-Kai Huang",
+      "Yan-Duo Lin"
+    ],
+    "journal": "15th Asian Conference on Organic Electronics (A-COE 2023)",
+    "publisher": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "doi": "",
+    "doiUrl": "",
+    "publicationUrl": "",
+    "abstract": "This study presents the design, synthesis, and application of a series of novel two-dimensional pentafulvalene-fused derivatives—YSH-oF, YSH-mF, and YSH-H—as hole-transporting materials (HTMs) in the fabrication of high-performance perovskite solar cells (PSCs). The fluorinated derivatives, YSH-oF and YSH-mF, distinguished themselves by demonstrating higher hole mobility and improved charge extraction at the perovskite/HTM interface compared to their non-fluorinated counterpart, YSH-H. These attributes are attributed to the closer intermolecular π–π packing interactions facilitated by the planar π-conjugated framework and the strong electron-withdrawing effect of the fluorine substituents, which leads to favorable energy-level alignment. As a result, small-area (0.09 cm²) PSCs constructed with YSH-oF and YSH-mF achieved impressive power conversion efficiencies (PCEs) of 23.59% and 22.76%, respectively, significantly outperforming the YSH-H-based devices (20.57% PCE). Notably, large-area (1.00 cm²) devices employing YSH-oF attained a PCE of 21.92%. Beyond efficiency, fluorinated HTMs YSH-oF and YSH-mF exhibited remarkable long-term stability, retaining over 85% of their initial PCE after 1000 h of ambient exposure, or over 78% after aging at 85°C for 200 h. These results highlight the potential of fluorinated pentafulvalene-fused organic small molecules as low-cost, efficient, and stable HTMs for next-generation PSCs.",
+    "highlights": [],
+    "keywords": [
+      "Pentafulvalene-Fused Derivatives",
+      "Hole-Transporting Materials (HTMs)",
+      "Perovskite Solar Cells (PSCs)",
+      "Long-Term Stability"
+    ],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "authorOrder": 2,
+    "role": "Co-author",
+    "topic": "Perovskite Solar Cells",
+    "tags": [
+      "A-COE 2023",
+      "Conference paper"
+    ],
+    "conference": {
+      "name": "15th Asian Conference on Organic Electronics (A-COE 2023)",
+      "acronym": "A-COE 2023",
+      "startDate": "2023-10-31",
+      "endDate": "2023-11-03",
+      "location": "Taipei, Taiwan",
+      "url": "https://www.a-coe2023.com/",
+      "documentType": "conference-abstract",
+      "presentationType": "",
+      "acceptanceStatus": "",
+      "abstractNumber": ""
+    },
+    "analytics": {
+      "coreJournalCount": false,
+      "journalMetrics": false,
+      "fwci": false,
+      "citationMetrics": false
+    },
+    "affiliations": [
+      {
+        "id": "aff-1",
+        "label": "1",
+        "department": "",
+        "institution": "Chang Gung University",
+        "address": "Department of Chemical and Materials Engineering, Chang Gung University, Taoyuan 33302, Taiwan.",
+        "raw": "Department of Chemical and Materials Engineering, Chang Gung University, Taoyuan 33302, Taiwan.",
+        "city": "",
+        "country": "Taiwan",
+        "countryCode": "TW",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "id": "aff-2",
+        "label": "2",
+        "department": "",
+        "institution": "Chang Gung University",
+        "address": "Center for Green Technology, Chang Gung University, Taoyuan 33302, Taiwan.",
+        "raw": "Center for Green Technology, Chang Gung University, Taoyuan 33302, Taiwan.",
+        "city": "",
+        "country": "Taiwan",
+        "countryCode": "TW",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "id": "aff-3",
+        "label": "3",
+        "department": "",
+        "institution": "Soochow University",
+        "address": "Department of Chemistry, Soochow University, Taipei 11102, Taiwan",
+        "raw": "Department of Chemistry, Soochow University, Taipei 11102, Taiwan",
+        "city": "",
+        "country": "Taiwan",
+        "countryCode": "TW",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      }
+    ],
+    "authorships": [
+      {
+        "name": "Kun-Mu Lee",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [
+          "aff-1",
+          "aff-2"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": true,
+        "correspondingEmail": "kmlee@mail.cgu.edu.tw",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "name": "Wei-Hao Chiu",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff-2"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "name": "Ying-Kai Huang",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff-1"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "name": "Yan-Duo Lin",
+        "authorOrder": 4,
+        "authorPosition": "last",
+        "affiliationIds": [
+          "aff-3"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      }
+    ],
+    "authorshipMetadata": {
+      "status": "manual",
+      "manualAffiliations": true,
+      "lastChecked": "2026-10-23",
+      "sources": [
+        "user-provided manuscript"
+      ],
+      "sourceUrls": {
+        "conference": "https://www.a-coe2023.com/"
+      },
+      "requiresManualReview": true,
+      "missingFields": [],
+      "warnings": [
+        "Yan-Duo Lin is marked with the same correspondence symbol, but only Kun-Mu Lee has an explicit corresponding email."
+      ]
+    },
+    "metadataSource": "manual_verified",
+    "automationProtection": {
+      "protected": true,
+      "reason": "User-selected conference manuscript; preserve event-specific author order, affiliations and content."
+    },
+    "sourceDocument": "2023 A-COE-Fluorinated.docx",
+    "contentStatus": {
+      "abstract": "available",
+      "highlights": "not-available",
+      "keywords": "available",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-10-23",
+      "verifiedSource": "User-selected conference manuscript"
+    },
+    "citation": "Kun-Mu Lee, Wei-Hao Chiu, Ying-Kai Huang, Yan-Duo Lin. Fluorinated Pentafulvalene-Infused Hole-Transporting Material Elevates Perovskite Solar Cell Efficiency Over 23%. 15th Asian Conference on Organic Electronics (A-COE 2023) (2023).",
+    "internationalCollaboration": {
+      "status": "domestic",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "TW"
+      ],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2",
+        "aff-3"
+      ],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "user-provided manuscript"
+      ],
+      "evidenceUrls": {
+        "conference": "https://www.a-coe2023.com/"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-10-23",
+      "inputSignature": "b6901204b5ee67263cdc"
+    }
+  },
+  {
+    "id": "pvsec-35-2024-sn-o2-mesoporous-ti-o2",
+    "publicationType": "conference",
+    "documentType": "conference-abstract",
+    "language": "en",
+    "peerReviewStatus": "unverified",
+    "date": "2024-11-10",
+    "year": 2024,
+    "month": 11,
+    "title": "Enhancing Perovskite Solar Cell Performance through Chemical Bath Deposition of SnO2 on Mesoporous TiO2 Electrodes",
+    "authors": [
+      "Wei-Hao Chiu",
+      "Kun-Mu Lee"
+    ],
+    "journal": "35th International Photovoltaic Science and Engineering Conference (PVSEC-35)",
+    "publisher": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "doi": "",
+    "doiUrl": "",
+    "publicationUrl": "",
+    "abstract": "In this research, we introduce an innovative method to boost the performance of perovskite solar cells (PSCs) by utilizing Chemical Bath Deposited (CBD) SnO2 on mesoporous TiO2 (m-TiO2) for the electron transport layer (ETL), eliminating the need for the traditional compact TiO2 (c-TiO2) layer. Our findings demonstrate that this technique markedly enhances carrier dynamics, as shown by shorter time constants in comparison with conventional ETLs. The CBD SnO2 enhances electron mobility and significantly decreases defect density in m-TiO2 films. These improvements lead to better photovoltaic parameters, including increased open-circuit voltage (VOC), short-circuit current (JSC), fill factor (FF), and a notable power conversion efficiency (PCE) of over 23.62%. The research also highlights the potential for scaling up this method, emphasizing the progress in screen printing and chemical bath deposition processes essential for large-scale PSC fabrication. The consistent PCE across large areas verifies the effectiveness and uniformity of this method, offering a novel and universal approach for producing high-efficiency PSCs.",
+    "highlights": [],
+    "keywords": [],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "authorOrder": 1,
+    "role": "First author",
+    "topic": "Perovskite Solar Cells",
+    "tags": [
+      "PVSEC-35",
+      "Conference paper"
+    ],
+    "conference": {
+      "name": "35th International Photovoltaic Science and Engineering Conference (PVSEC-35)",
+      "acronym": "PVSEC-35",
+      "startDate": "2024-11-10",
+      "endDate": "2024-11-15",
+      "location": "Numazu, Japan",
+      "url": "https://www.pvsec.org/pvsec35/index.html",
+      "documentType": "conference-abstract",
+      "presentationType": "",
+      "acceptanceStatus": "",
+      "abstractNumber": ""
+    },
+    "analytics": {
+      "coreJournalCount": false,
+      "journalMetrics": false,
+      "fwci": false,
+      "citationMetrics": false
+    },
+    "affiliations": [
+      {
+        "id": "aff-1",
+        "label": "1",
+        "department": "",
+        "institution": "Chang Gung University",
+        "address": "Center for Sustainability and Energy Technologies, Chang Gung University, Taoyuan 33302, Taiwan",
+        "raw": "Center for Sustainability and Energy Technologies, Chang Gung University, Taoyuan 33302, Taiwan",
+        "city": "",
+        "country": "Taiwan",
+        "countryCode": "TW",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "id": "aff-2",
+        "label": "2",
+        "department": "",
+        "institution": "Chang Gung University",
+        "address": "Department of Chemical and Materials Engineering, Chang Gung University, Taoyuan 33302, Taiwan",
+        "raw": "Department of Chemical and Materials Engineering, Chang Gung University, Taoyuan 33302, Taiwan",
+        "city": "",
+        "country": "Taiwan",
+        "countryCode": "TW",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      }
+    ],
+    "authorships": [
+      {
+        "name": "Wei-Hao Chiu",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [
+          "aff-1"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "name": "Kun-Mu Lee",
+        "authorOrder": 2,
+        "authorPosition": "last",
+        "affiliationIds": [
+          "aff-1",
+          "aff-2"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": true,
+        "correspondingEmail": "kmlee@mail.cgu.edu.tw",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      }
+    ],
+    "authorshipMetadata": {
+      "status": "manual",
+      "manualAffiliations": true,
+      "lastChecked": "2026-10-23",
+      "sources": [
+        "user-provided manuscript"
+      ],
+      "sourceUrls": {
+        "conference": "https://www.pvsec.org/pvsec35/index.html"
+      },
+      "requiresManualReview": false,
+      "missingFields": [],
+      "warnings": []
+    },
+    "metadataSource": "manual_verified",
+    "automationProtection": {
+      "protected": true,
+      "reason": "User-selected conference manuscript; preserve event-specific author order, affiliations and content."
+    },
+    "sourceDocument": "PVSEC-35_Enhancing Perovskite Solar Cell Performance through Chemical Bath Deposition of SnO2 on Mesoporous TiO2 Electrodes.docx",
+    "contentStatus": {
+      "abstract": "available",
+      "highlights": "not-available",
+      "keywords": "not-available",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-10-23",
+      "verifiedSource": "User-selected conference manuscript"
+    },
+    "citation": "Wei-Hao Chiu, Kun-Mu Lee. Enhancing Perovskite Solar Cell Performance through Chemical Bath Deposition of SnO2 on Mesoporous TiO2 Electrodes. 35th International Photovoltaic Science and Engineering Conference (PVSEC-35) (2024).",
+    "internationalCollaboration": {
+      "status": "domestic",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "TW"
+      ],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2"
+      ],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "user-provided manuscript"
+      ],
+      "evidenceUrls": {
+        "conference": "https://www.pvsec.org/pvsec35/index.html"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-10-23",
+      "inputSignature": "1a373b0da8f5b83709d4"
+    }
+  },
+  {
+    "id": "pvsec-35-2024-pentafulvalene-htm",
+    "publicationType": "conference",
+    "documentType": "conference-abstract",
+    "language": "en",
+    "peerReviewStatus": "unverified",
+    "date": "2024-11-10",
+    "year": 2024,
+    "month": 11,
+    "title": "Pentafulvalene-Fused Fluorinated Compound Boosts Perovskite Solar Cell Performance to Surpass 23% Efficiency",
+    "authors": [
+      "Kun-Mu Lee",
+      "Yao-Shen Huang",
+      "Wei-Hao Chiu",
+      "Yan-Duo Lin"
+    ],
+    "journal": "35th International Photovoltaic Science and Engineering Conference (PVSEC-35)",
+    "publisher": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "doi": "",
+    "doiUrl": "",
+    "publicationUrl": "",
+    "abstract": "Exploring the potential of organic small molecule materials in perovskite solar cells (PSCs), this research focuses on the use of coplanar π-conjugated systems as effective hole-transporting materials (HTMs). Three innovative pentafulvalene derivatives, namely YSH-oF, YSH-mF, and YSH-H, varying in fluorination, were synthesized and integrated into PSCs as HTMs. The study revealed that fluorine-incorporated derivatives, YSH-oF and YSH-mF, outperformed their non-fluorinated counterpart, YSH-H, in terms of hole mobility and charge extraction efficiency, likely due to improved π–π intermolecular packing. This led to small-area PSCs using YSH-oF and YSH-mF achieving high power conversion efficiencies of 23.59% and 22.76%, respectively, and a notable efficiency of 21.92% for large-area PSCs using YSH-oF. Additionally, the fluorinated HTMs showed enhanced long-term stability in PSCs, possibly due to their greater hydrophobicity. This research highlights the efficacy of fluorinated pentafulvalene-fused materials as cost-effective and robust HTMs for advancing the performance and durability of PSCs.",
+    "highlights": [],
+    "keywords": [],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "authorOrder": 3,
+    "role": "Co-author",
+    "topic": "Perovskite Solar Cells",
+    "tags": [
+      "PVSEC-35",
+      "Conference paper"
+    ],
+    "conference": {
+      "name": "35th International Photovoltaic Science and Engineering Conference (PVSEC-35)",
+      "acronym": "PVSEC-35",
+      "startDate": "2024-11-10",
+      "endDate": "2024-11-15",
+      "location": "Numazu, Japan",
+      "url": "https://www.pvsec.org/pvsec35/index.html",
+      "documentType": "conference-abstract",
+      "presentationType": "",
+      "acceptanceStatus": "",
+      "abstractNumber": ""
+    },
+    "analytics": {
+      "coreJournalCount": false,
+      "journalMetrics": false,
+      "fwci": false,
+      "citationMetrics": false
+    },
+    "affiliations": [
+      {
+        "id": "aff-1",
+        "label": "1",
+        "department": "",
+        "institution": "Chang Gung University",
+        "address": "Department of Chemical and Materials Engineering, Chang Gung University, Taoyuan 33302, Taiwan",
+        "raw": "Department of Chemical and Materials Engineering, Chang Gung University, Taoyuan 33302, Taiwan",
+        "city": "",
+        "country": "Taiwan",
+        "countryCode": "TW",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "id": "aff-2",
+        "label": "2",
+        "department": "",
+        "institution": "Chang Gung University",
+        "address": "Center for Sustainability and Energy Technologies, Chang Gung University, Taoyuan 33302, Taiwan",
+        "raw": "Center for Sustainability and Energy Technologies, Chang Gung University, Taoyuan 33302, Taiwan",
+        "city": "",
+        "country": "Taiwan",
+        "countryCode": "TW",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "id": "aff-3",
+        "label": "3",
+        "department": "",
+        "institution": "Soochow University",
+        "address": "Department of Chemistry, Soochow University, Taipei 11102, Taiwan",
+        "raw": "Department of Chemistry, Soochow University, Taipei 11102, Taiwan",
+        "city": "",
+        "country": "Taiwan",
+        "countryCode": "TW",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      }
+    ],
+    "authorships": [
+      {
+        "name": "Kun-Mu Lee",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [
+          "aff-1",
+          "aff-2"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": true,
+        "correspondingEmail": "kmlee@mail.cgu.edu.tw",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "name": "Yao-Shen Huang",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff-3"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "name": "Wei-Hao Chiu",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff-2"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "name": "Yan-Duo Lin",
+        "authorOrder": 4,
+        "authorPosition": "last",
+        "affiliationIds": [
+          "aff-3"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      }
+    ],
+    "authorshipMetadata": {
+      "status": "manual",
+      "manualAffiliations": true,
+      "lastChecked": "2026-10-23",
+      "sources": [
+        "user-provided manuscript"
+      ],
+      "sourceUrls": {
+        "conference": "https://www.pvsec.org/pvsec35/index.html"
+      },
+      "requiresManualReview": false,
+      "missingFields": [],
+      "warnings": []
+    },
+    "metadataSource": "manual_verified",
+    "automationProtection": {
+      "protected": true,
+      "reason": "User-selected conference manuscript; preserve event-specific author order, affiliations and content."
+    },
+    "sourceDocument": "PVSEC-35_Pentafulvalene-Fused Fluorinated Compound Boosts Perovskite Solar Cell Performance to Surpass 23% Efficiency.docx",
+    "contentStatus": {
+      "abstract": "available",
+      "highlights": "not-available",
+      "keywords": "not-available",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-10-23",
+      "verifiedSource": "User-selected conference manuscript"
+    },
+    "citation": "Kun-Mu Lee, Yao-Shen Huang, Wei-Hao Chiu, Yan-Duo Lin. Pentafulvalene-Fused Fluorinated Compound Boosts Perovskite Solar Cell Performance to Surpass 23% Efficiency. 35th International Photovoltaic Science and Engineering Conference (PVSEC-35) (2024).",
+    "internationalCollaboration": {
+      "status": "domestic",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "TW"
+      ],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2",
+        "aff-3"
+      ],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "user-provided manuscript"
+      ],
+      "evidenceUrls": {
+        "conference": "https://www.pvsec.org/pvsec35/index.html"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-10-23",
+      "inputSignature": "c8ee27d0ce5815530d5e"
+    }
+  },
+  {
+    "id": "fpg-2024-tio2-nanorods-graphite-felt",
+    "publicationType": "conference",
+    "documentType": "conference-full-paper",
+    "language": "zh-Hant",
+    "peerReviewStatus": "unverified",
+    "date": "2024-06-14",
+    "year": 2024,
+    "month": 6,
+    "title": "二氧化鈦奈米棒改質石墨氈應用於全釩液流電池",
+    "authors": [
+      "李昱憲",
+      "林廷翰",
+      "Wei-Hao Chiu",
+      "李坤穆"
+    ],
+    "journal": "19th Formosa Plastics Group Applied Technology Seminar / 第19屆台塑企業應用技術研討會",
+    "publisher": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "doi": "",
+    "doiUrl": "",
+    "publicationUrl": "",
+    "abstract": "在本研究中，我們創新性地將二氧化鈦奈米棒（nanorods, NRs）嫁接到石墨氈（graphite felt, GF）上，提出了一種用於全釩液流電池的創新電極。這一創新只在克服原始GF的固有限制，即其電化學活性不足和表面積受限。通過一步驟水熱法合成了TiO2 NRs/GF複合材料，使用了不同濃度的鈦酸正丁酯(C16H36O4Ti)前驅物溶液。發現高品質二氧化鈦奈米棒均勻分散在GF表面上。經電化學測試，包括循環伏安法（cyclic voltammetry, CV）和電化學阻抗譜（electrochemical impedance spectroscopy,EIS），顯示TiO2 NRs/GF電極在V4+/V5+氧化還原反應中展現出比原始GF更強的電化學響應性。具體來說，峰分離電位(ΔE)的變小電化學的可逆性反應增加，增加系統效率，並提升能量輸出的穩定性。此外，EIS分析強調了TiO2 NRs/GF電極的電荷傳遞阻抗（RCT）大幅降低，從原始GF的6.3 Ω降至3.5 Ω。TiO2 NRs/GF電極在V4+/V5+氧化還原反應中顯著的電化學行為可歸因於GF中碳奈米棒網絡的高導電性以及高品質TiO2 NRs的電催化優點的協同效應。這些進步表明了在釩液流電池（vanadium redox flow battery, VRFB）的能量儲存能力中潛在的增強。",
+    "highlights": [],
+    "keywords": [
+      "石墨氈",
+      "二氧化鈦",
+      "電極改質",
+      "全釩液流電池"
+    ],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "authorOrder": 3,
+    "role": "Co-author",
+    "topic": "Redox Flow Batteries",
+    "tags": [
+      "FPG 2024",
+      "Conference paper"
+    ],
+    "conference": {
+      "name": "19th Formosa Plastics Group Applied Technology Seminar / 第19屆台塑企業應用技術研討會",
+      "acronym": "FPG 2024",
+      "startDate": "2024-06-14",
+      "endDate": "2024-06-14",
+      "location": "Taoyuan, Taiwan",
+      "url": "https://ord.mcut.edu.tw/p/406-1010-64658%2Cr1795.php?Lang=zh-tw",
+      "documentType": "conference-full-paper",
+      "presentationType": "",
+      "acceptanceStatus": "",
+      "abstractNumber": "",
+      "nameZh": "第19屆台塑企業應用技術研討會",
+      "nameEn": "19th Formosa Plastics Group Applied Technology Seminar"
+    },
+    "analytics": {
+      "coreJournalCount": false,
+      "journalMetrics": false,
+      "fwci": false,
+      "citationMetrics": false
+    },
+    "affiliations": [
+      {
+        "id": "aff-1",
+        "label": "1",
+        "department": "",
+        "institution": "長庚大學",
+        "address": "長庚大學化工與材料工程學系",
+        "raw": "長庚大學化工與材料工程學系",
+        "city": "",
+        "country": "Taiwan",
+        "countryCode": "TW",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "id": "aff-2",
+        "label": "2",
+        "department": "",
+        "institution": "長庚大學",
+        "address": "長庚大學永續發展與能源科技研究中心",
+        "raw": "長庚大學永續發展與能源科技研究中心",
+        "city": "",
+        "country": "Taiwan",
+        "countryCode": "TW",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      }
+    ],
+    "authorships": [
+      {
+        "name": "李昱憲",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [
+          "aff-1"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "name": "林廷翰",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff-1"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "name": "Wei-Hao Chiu",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff-2"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "name": "李坤穆",
+        "authorOrder": 4,
+        "authorPosition": "last",
+        "affiliationIds": [
+          "aff-1",
+          "aff-2"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      }
+    ],
+    "authorshipMetadata": {
+      "status": "manual",
+      "manualAffiliations": true,
+      "lastChecked": "2026-10-23",
+      "sources": [
+        "user-provided manuscript"
+      ],
+      "sourceUrls": {
+        "conference": "https://ord.mcut.edu.tw/p/406-1010-64658%2Cr1795.php?Lang=zh-tw"
+      },
+      "requiresManualReview": false,
+      "missingFields": [],
+      "warnings": []
+    },
+    "metadataSource": "manual_verified",
+    "automationProtection": {
+      "protected": true,
+      "reason": "User-selected conference manuscript; preserve event-specific author order, affiliations and content."
+    },
+    "sourceDocument": "台塑論文-李昱憲-0409_revised 20240409.docx",
+    "contentStatus": {
+      "abstract": "available",
+      "highlights": "not-available",
+      "keywords": "available",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-10-23",
+      "verifiedSource": "User-selected conference manuscript"
+    },
+    "citation": "李昱憲, 林廷翰, Wei-Hao Chiu, 李坤穆. 二氧化鈦奈米棒改質石墨氈應用於全釩液流電池. 19th Formosa Plastics Group Applied Technology Seminar / 第19屆台塑企業應用技術研討會 (2024).",
+    "internationalCollaboration": {
+      "status": "domestic",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "TW"
+      ],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2"
+      ],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "user-provided manuscript"
+      ],
+      "evidenceUrls": {
+        "conference": "https://ord.mcut.edu.tw/p/406-1010-64658%2Cr1795.php?Lang=zh-tw"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-10-23",
+      "inputSignature": "0001304c843448e2d41c"
+    }
+  },
+  {
+    "id": "fpg-2025-tin-lead-quasi-2d",
+    "publicationType": "conference",
+    "documentType": "conference-full-paper",
+    "language": "zh-Hant",
+    "peerReviewStatus": "unverified",
+    "date": "2025-06-06",
+    "year": 2025,
+    "month": 6,
+    "title": "類二維鈣鈦礦在錫鉛混合鈣鈦礦電池中的性能優化研究",
+    "authors": [
+      "Wei-Hao Chiu",
+      "林宜璇",
+      "劉清源",
+      "李坤穆"
+    ],
+    "journal": "20th Formosa Plastics Group Applied Technology Seminar / 第20屆台塑企業應用技術研討會",
+    "publisher": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "doi": "",
+    "doiUrl": "",
+    "publicationUrl": "",
+    "abstract": "混合錫鉛鈣鈦礦因其優異的帶隙調節能力展現出高性能潛力。本研究通過二個方面系統探討其性能提升：首先，針對界面缺陷引起的非輻射複合問題，系統比較添加劑2-噻吩乙基氯化銨（TEACl）和碘化苯乙胺（PEAI）的鈍化效果。結果顯示，0.50 mg/mL TEACl的鈣鈦礦界面缺陷鈍化效果最佳，經光致發光（PL）和空間電荷限制電流（SCLC）測試驗證，其顯著降低非輻射複合，提升載子壽命和遷移率，使PCE從18.286%提升至20.283%。接著，引入類二維結構（PEAI+GASCN）進一步修復薄膜內部及晶界缺陷，抑制非輻射複合，結合GASCN的缺陷修復作用，PCE達21.602%，開路電壓（Voc）和填充因子（FF）均顯著提升，已實現高效之鈣鈦礦太陽能電池。",
+    "highlights": [],
+    "keywords": [
+      "錫鉛鈣鈦礦太陽能電池",
+      "界面工程",
+      "類二維結構"
+    ],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "authorOrder": 1,
+    "role": "First author",
+    "topic": "Perovskite Solar Cells",
+    "tags": [
+      "FPG 2025",
+      "Conference paper"
+    ],
+    "conference": {
+      "name": "20th Formosa Plastics Group Applied Technology Seminar / 第20屆台塑企業應用技術研討會",
+      "acronym": "FPG 2025",
+      "startDate": "2025-06-06",
+      "endDate": "2025-06-06",
+      "location": "New Taipei City, Taiwan",
+      "url": "https://iucc.mcut.edu.tw/p/406-1016-73617%2Cr11.php?Lang=zh-tw",
+      "documentType": "conference-full-paper",
+      "presentationType": "",
+      "acceptanceStatus": "",
+      "abstractNumber": "",
+      "nameZh": "第20屆台塑企業應用技術研討會",
+      "nameEn": "20th Formosa Plastics Group Applied Technology Seminar"
+    },
+    "analytics": {
+      "coreJournalCount": false,
+      "journalMetrics": false,
+      "fwci": false,
+      "citationMetrics": false
+    },
+    "affiliations": [
+      {
+        "id": "aff-1",
+        "label": "1",
+        "department": "",
+        "institution": "長庚大學",
+        "address": "長庚大學永續發展與能源科技研究中心",
+        "raw": "長庚大學永續發展與能源科技研究中心",
+        "city": "",
+        "country": "Taiwan",
+        "countryCode": "TW",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "id": "aff-2",
+        "label": "2",
+        "department": "",
+        "institution": "國立中央大學",
+        "address": "國立中央大學化學工程與材料工程學系",
+        "raw": "國立中央大學化學工程與材料工程學系",
+        "city": "",
+        "country": "Taiwan",
+        "countryCode": "TW",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "id": "aff-3",
+        "label": "3",
+        "department": "",
+        "institution": "長庚大學",
+        "address": "長庚大學化工與材料工程學系",
+        "raw": "長庚大學化工與材料工程學系",
+        "city": "",
+        "country": "Taiwan",
+        "countryCode": "TW",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      }
+    ],
+    "authorships": [
+      {
+        "name": "Wei-Hao Chiu",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [
+          "aff-1"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "name": "林宜璇",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff-2"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "name": "劉清源",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff-2"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "name": "李坤穆",
+        "authorOrder": 4,
+        "authorPosition": "last",
+        "affiliationIds": [
+          "aff-1",
+          "aff-3"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      }
+    ],
+    "authorshipMetadata": {
+      "status": "manual",
+      "manualAffiliations": true,
+      "lastChecked": "2026-10-23",
+      "sources": [
+        "user-provided manuscript"
+      ],
+      "sourceUrls": {
+        "conference": "https://iucc.mcut.edu.tw/p/406-1016-73617%2Cr11.php?Lang=zh-tw"
+      },
+      "requiresManualReview": true,
+      "missingFields": [],
+      "warnings": [
+        "The poster spells the third author as 劉清原; this record preserves 劉清源 from the manuscript."
+      ]
+    },
+    "metadataSource": "manual_verified",
+    "automationProtection": {
+      "protected": true,
+      "reason": "User-selected conference manuscript; preserve event-specific author order, affiliations and content."
+    },
+    "sourceDocument": "20th台塑研討會-宜璇.docx",
+    "contentStatus": {
+      "abstract": "available",
+      "highlights": "not-available",
+      "keywords": "available",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-10-23",
+      "verifiedSource": "User-selected conference manuscript"
+    },
+    "citation": "Wei-Hao Chiu, 林宜璇, 劉清源, 李坤穆. 類二維鈣鈦礦在錫鉛混合鈣鈦礦電池中的性能優化研究. 20th Formosa Plastics Group Applied Technology Seminar / 第20屆台塑企業應用技術研討會 (2025).",
+    "internationalCollaboration": {
+      "status": "domestic",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "TW"
+      ],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2",
+        "aff-3"
+      ],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "user-provided manuscript"
+      ],
+      "evidenceUrls": {
+        "conference": "https://iucc.mcut.edu.tw/p/406-1016-73617%2Cr11.php?Lang=zh-tw"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-10-23",
+      "inputSignature": "2c6bc4f15db319991994"
+    }
+  },
+  {
+    "id": "fpg-2025-c3n4-graphite-felt",
+    "publicationType": "conference",
+    "documentType": "conference-full-paper",
+    "language": "zh-Hant",
+    "peerReviewStatus": "unverified",
+    "date": "2025-06-06",
+    "year": 2025,
+    "month": 6,
+    "title": "石墨相氮化碳修飾石墨氈應用於全釩液流電池",
+    "authors": [
+      "李昱憲",
+      "陳世軒",
+      "Wei-Hao Chiu",
+      "李坤穆"
+    ],
+    "journal": "20th Formosa Plastics Group Applied Technology Seminar / 第20屆台塑企業應用技術研討會",
+    "publisher": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "doi": "",
+    "doiUrl": "",
+    "publicationUrl": "",
+    "abstract": "隨著全球對綠色能源的重視日益增加，電池相關的儲能技術也逐漸受到關注，導致儲能系統的需求大幅提升，在眾多大型儲能系統中，全釩液流電池（vanadium redox flow battery, VRFB）因具備多項優勢，近年來受到廣泛關注與研究。本研究對全釩液流電池中電極材料的性能改善進行探討，由於常使用的石墨氈作為電極時具有電化學活性低與可逆性差的問題，限制了在儲能系統中的應用表現，因此本研究以石墨相氮化碳（g-C₃N₄）修飾石墨氈，透過熱聚合反應將g-C₃N₄層狀結構堆疊於石墨氈表面，以增加石墨氈的比表面積與電解液接觸面，進一步改善石墨氈的疏水性與電化學性能，以提升全釩液流電池的單電池效能。在不同電流密度下進行單電池的充放電測試結果顯示，經g-C₃N₄修飾後的石墨氈電極能有效提升能量效率。當電流密度達到100 mA/cm²時，未修飾石墨氈的能量效率為71.81%；而經過石墨相氮化碳修飾後，能量效率提升至81.96%，增加了10.15%。",
+    "highlights": [],
+    "keywords": [
+      "石墨氈",
+      "石墨相氮化碳",
+      "修飾電極",
+      "全釩液流電池"
+    ],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "authorOrder": 3,
+    "role": "Co-author",
+    "topic": "Redox Flow Batteries",
+    "tags": [
+      "FPG 2025",
+      "Conference paper"
+    ],
+    "conference": {
+      "name": "20th Formosa Plastics Group Applied Technology Seminar / 第20屆台塑企業應用技術研討會",
+      "acronym": "FPG 2025",
+      "startDate": "2025-06-06",
+      "endDate": "2025-06-06",
+      "location": "New Taipei City, Taiwan",
+      "url": "https://iucc.mcut.edu.tw/p/406-1016-73617%2Cr11.php?Lang=zh-tw",
+      "documentType": "conference-full-paper",
+      "presentationType": "",
+      "acceptanceStatus": "",
+      "abstractNumber": "",
+      "nameZh": "第20屆台塑企業應用技術研討會",
+      "nameEn": "20th Formosa Plastics Group Applied Technology Seminar"
+    },
+    "analytics": {
+      "coreJournalCount": false,
+      "journalMetrics": false,
+      "fwci": false,
+      "citationMetrics": false
+    },
+    "affiliations": [
+      {
+        "id": "aff-1",
+        "label": "1",
+        "department": "",
+        "institution": "長庚大學",
+        "address": "長庚大學化工與材料工程學系",
+        "raw": "長庚大學化工與材料工程學系",
+        "city": "",
+        "country": "Taiwan",
+        "countryCode": "TW",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "id": "aff-2",
+        "label": "2",
+        "department": "",
+        "institution": "長庚大學",
+        "address": "長庚大學永續發展與能源科技研究中心",
+        "raw": "長庚大學永續發展與能源科技研究中心",
+        "city": "",
+        "country": "Taiwan",
+        "countryCode": "TW",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      }
+    ],
+    "authorships": [
+      {
+        "name": "李昱憲",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [
+          "aff-1"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "name": "陳世軒",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff-2"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "name": "Wei-Hao Chiu",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff-2"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "name": "李坤穆",
+        "authorOrder": 4,
+        "authorPosition": "last",
+        "affiliationIds": [
+          "aff-1",
+          "aff-2"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      }
+    ],
+    "authorshipMetadata": {
+      "status": "manual",
+      "manualAffiliations": true,
+      "lastChecked": "2026-10-23",
+      "sources": [
+        "user-provided manuscript"
+      ],
+      "sourceUrls": {
+        "conference": "https://iucc.mcut.edu.tw/p/406-1016-73617%2Cr11.php?Lang=zh-tw"
+      },
+      "requiresManualReview": true,
+      "missingFields": [],
+      "warnings": [
+        "The poster includes Ting-Han Lin and Iqra Shaheen; this record preserves the four-author manuscript."
+      ]
+    },
+    "metadataSource": "manual_verified",
+    "automationProtection": {
+      "protected": true,
+      "reason": "User-selected conference manuscript; preserve event-specific author order, affiliations and content."
+    },
+    "sourceDocument": "20th台塑研討會-李昱憲_revised WHChiu 20250417.docx",
+    "contentStatus": {
+      "abstract": "available",
+      "highlights": "not-available",
+      "keywords": "available",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-10-23",
+      "verifiedSource": "User-selected conference manuscript"
+    },
+    "citation": "李昱憲, 陳世軒, Wei-Hao Chiu, 李坤穆. 石墨相氮化碳修飾石墨氈應用於全釩液流電池. 20th Formosa Plastics Group Applied Technology Seminar / 第20屆台塑企業應用技術研討會 (2025).",
+    "internationalCollaboration": {
+      "status": "domestic",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "TW"
+      ],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2"
+      ],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "user-provided manuscript"
+      ],
+      "evidenceUrls": {
+        "conference": "https://iucc.mcut.edu.tw/p/406-1016-73617%2Cr11.php?Lang=zh-tw"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-10-23",
+      "inputSignature": "2af39d670b4c459f3e25"
+    }
+  },
+  {
+    "id": "wcpec-9-2026-green-solvents",
+    "publicationType": "conference",
+    "documentType": "conference-abstract",
+    "language": "en",
+    "peerReviewStatus": "unverified",
+    "date": "2026-11-15",
+    "year": 2026,
+    "month": 11,
+    "title": "Coordination Dynamics of Green Solvents Tailor Solubility and Crystallization in Wide-Bandgap Perovskite Solar Cells",
+    "authors": [
+      "Shih-Hsuan Chen",
+      "Yu-Sheng Lin",
+      "Wei-Hao Chiu",
+      "Min-An Tsai",
+      "Yean-San Long",
+      "Chih-Hung Lin",
+      "Kun-Mu Lee"
+    ],
+    "journal": "9th World Conference on Photovoltaic Energy Conversion (WCPEC-9)",
+    "publisher": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "doi": "",
+    "doiUrl": "",
+    "publicationUrl": "",
+    "abstract": "Perovskite solar cells are promising candidates for next-generation sustainable photovoltaics, yet single-junction devices are limited by the Shockley–Queisser efficiency ceiling. Tandem architectures incorporating wide-bandgap (WBG) absorbers offer a viable pathway to surpass this limit, but the fabrication of high-quality WBG perovskite films critically depends on precursor solubility and crystallization, which are governed by solvent coordination dynamics. Conventional solvents such as dimethylformamide (DMF) and dimethyl sulfoxide (DMSO) provide strong coordination with Pb²⁺ but suffer from toxicity and poor scalability. Here, we propose a green mixed-solvent system based on γ-valerolactone (GVL) and 2-methyltetrahydrofuran (2-MeTHF), which balances polarity, donor number, and boiling point to achieve favorable precursor solubility and controlled crystallization kinetics. This strategy yields uniform films with enlarged grain sizes (from 240 to 280 nm), enhanced open-circuit voltage (from 1.174 to 1.290 V), and improved power conversion efficiency (from 13.07% to 15.70%). These findings underscore the crucial role of solvent–precursor interactions in film formation and provide a sustainable route toward scalable, high-efficiency WBG perovskite solar cells.",
+    "highlights": [],
+    "keywords": [],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "authorOrder": 3,
+    "role": "Co-author",
+    "topic": "Perovskite Solar Cells",
+    "tags": [
+      "WCPEC-9",
+      "Conference paper"
+    ],
+    "conference": {
+      "name": "9th World Conference on Photovoltaic Energy Conversion (WCPEC-9)",
+      "acronym": "WCPEC-9",
+      "startDate": "2026-11-15",
+      "endDate": "2026-11-20",
+      "location": "Daejeon, South Korea",
+      "url": "https://www.pvsec.org/conference/future-conference.html",
+      "documentType": "conference-abstract",
+      "presentationType": "",
+      "acceptanceStatus": "",
+      "abstractNumber": ""
+    },
+    "analytics": {
+      "coreJournalCount": false,
+      "journalMetrics": false,
+      "fwci": false,
+      "citationMetrics": false
+    },
+    "affiliations": [
+      {
+        "id": "aff-1",
+        "label": "1",
+        "department": "",
+        "institution": "Chang Gung University",
+        "address": "Department of Chemical and Materials Engineering, Chang Gung University, Taoyuan, Taiwan",
+        "raw": "Department of Chemical and Materials Engineering, Chang Gung University, Taoyuan, Taiwan",
+        "city": "",
+        "country": "Taiwan",
+        "countryCode": "TW",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "id": "aff-2",
+        "label": "2",
+        "department": "",
+        "institution": "Industrial Technology Research Institute",
+        "address": "Center for Measurement Standards, Industrial Technology Research Institute, Hsinchu, 310, Taiwan, ROC",
+        "raw": "Center for Measurement Standards, Industrial Technology Research Institute, Hsinchu, 310, Taiwan, ROC",
+        "city": "",
+        "country": "Taiwan",
+        "countryCode": "TW",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "id": "aff-3",
+        "label": "3",
+        "department": "",
+        "institution": "Chang Gung University",
+        "address": "Center for Sustainability and Energy Technologies, Chang Gung University, Taoyuan, Taiwan",
+        "raw": "Center for Sustainability and Energy Technologies, Chang Gung University, Taoyuan, Taiwan",
+        "city": "",
+        "country": "Taiwan",
+        "countryCode": "TW",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "id": "aff-4",
+        "label": "4",
+        "department": "",
+        "institution": "Chang Gung Memorial Hospital",
+        "address": "Division of Neonatology, Department of Pediatrics, Chang Gung Memorial Hospital, Linkou, Taoyuan, Taiwan",
+        "raw": "Division of Neonatology, Department of Pediatrics, Chang Gung Memorial Hospital, Linkou, Taoyuan, Taiwan",
+        "city": "",
+        "country": "Taiwan",
+        "countryCode": "TW",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      }
+    ],
+    "authorships": [
+      {
+        "name": "Shih-Hsuan Chen",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [
+          "aff-1"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "name": "Yu-Sheng Lin",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff-1"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "name": "Wei-Hao Chiu",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff-3"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "name": "Min-An Tsai",
+        "authorOrder": 4,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff-2"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "name": "Yean-San Long",
+        "authorOrder": 5,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff-2"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "name": "Chih-Hung Lin",
+        "authorOrder": 6,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff-2"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "name": "Kun-Mu Lee",
+        "authorOrder": 7,
+        "authorPosition": "last",
+        "affiliationIds": [
+          "aff-1",
+          "aff-3",
+          "aff-4"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": true,
+        "correspondingEmail": "kmlee@mail.cgu.edu.tw",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      }
+    ],
+    "authorshipMetadata": {
+      "status": "manual",
+      "manualAffiliations": true,
+      "lastChecked": "2026-10-23",
+      "sources": [
+        "user-provided manuscript"
+      ],
+      "sourceUrls": {
+        "conference": "https://www.pvsec.org/conference/future-conference.html"
+      },
+      "requiresManualReview": false,
+      "missingFields": [],
+      "warnings": []
+    },
+    "metadataSource": "manual_verified",
+    "automationProtection": {
+      "protected": true,
+      "reason": "User-selected conference manuscript; preserve event-specific author order, affiliations and content."
+    },
+    "sourceDocument": "摘要-Coordination Dynamics of Green Solvents Tailor Solubility and Crystallization in Wide_KMLee.docx",
+    "contentStatus": {
+      "abstract": "available",
+      "highlights": "not-available",
+      "keywords": "not-available",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-10-23",
+      "verifiedSource": "User-selected conference manuscript"
+    },
+    "citation": "Shih-Hsuan Chen, Yu-Sheng Lin, Wei-Hao Chiu, Min-An Tsai, Yean-San Long, Chih-Hung Lin, Kun-Mu Lee. Coordination Dynamics of Green Solvents Tailor Solubility and Crystallization in Wide-Bandgap Perovskite Solar Cells. 9th World Conference on Photovoltaic Energy Conversion (WCPEC-9) (2026).",
+    "internationalCollaboration": {
+      "status": "domestic",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "TW"
+      ],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-3",
+        "aff-2",
+        "aff-4"
+      ],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "user-provided manuscript"
+      ],
+      "evidenceUrls": {
+        "conference": "https://www.pvsec.org/conference/future-conference.html"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-10-23",
+      "inputSignature": "7971c52745f89decdf14"
+    }
+  },
+  {
+    "id": "wcpec-9-2026-pvdf-hfp-space-reliability",
+    "publicationType": "conference",
+    "documentType": "conference-abstract",
+    "language": "en",
+    "peerReviewStatus": "unverified",
+    "date": "2026-11-15",
+    "year": 2026,
+    "month": 11,
+    "title": "Performance and Stability of PVDF-HFP-Modified Perovskite Solar Cells under Space-Relevant Coupled Vacuum, Illumination, and Thermal Stress",
+    "authors": [
+      "Wei-Hao Chiu",
+      "Harini Srikanth Rao",
+      "Seoungjun Ahn",
+      "Min-An Tsai",
+      "Yean-San Long",
+      "Chih-Hung Lin",
+      "Kun-Mu Lee"
+    ],
+    "journal": "9th World Conference on Photovoltaic Energy Conversion (WCPEC-9)",
+    "publisher": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "doi": "",
+    "doiUrl": "",
+    "publicationUrl": "",
+    "abstract": "This study investigates PVDF-HFP-modified p–i–n perovskite solar cells (PSCs) under space-relevant coupled vacuum, light, and thermal stress conditions. Under combined vacuum and light (V+L) stress, PVDF-HFP-modified devices retain 85.1% of their initial power conversion efficiency (PCE) after 1000 h, compared with 74.6% for pristine devices. Under vacuum and heat (V+H) stress, PVDF-HFP effectively suppresses phase degradation and mitigates electronic disorder. Interface-resolved analysis further identifies the perovskite/PCBM (PVSK/PCBM) junction as the primary site of thermally induced failure. Weibull-Arrhenius analysis reveals that PVDF-HFP-modified devices exhibit a higher activation energy than pristine devices (0.95 eV vs 0.83 eV), together with a longer predicted room-temperature lifetime (2491 h vs 1444 h). These results demonstrate that PVDF-HFP is an effective strategy for enhancing the reliability of PSCs under coupled space-relevant stress conditions.",
+    "highlights": [],
+    "keywords": [],
+    "graphicalAbstract": "",
+    "graphicalAbstractAlt": "",
+    "authorOrder": 1,
+    "role": "First author",
+    "topic": "Perovskite Solar Cells",
+    "tags": [
+      "WCPEC-9",
+      "Conference paper"
+    ],
+    "conference": {
+      "name": "9th World Conference on Photovoltaic Energy Conversion (WCPEC-9)",
+      "acronym": "WCPEC-9",
+      "startDate": "2026-11-15",
+      "endDate": "2026-11-20",
+      "location": "Daejeon, South Korea",
+      "url": "https://www.pvsec.org/conference/future-conference.html",
+      "documentType": "conference-abstract",
+      "presentationType": "",
+      "acceptanceStatus": "",
+      "abstractNumber": ""
+    },
+    "analytics": {
+      "coreJournalCount": false,
+      "journalMetrics": false,
+      "fwci": false,
+      "citationMetrics": false
+    },
+    "affiliations": [
+      {
+        "id": "aff-1",
+        "label": "1",
+        "department": "",
+        "institution": "Chang Gung University",
+        "address": "Center for Sustainability and Energy Technologies, Chang Gung University, Taoyuan 33302, Taiwan",
+        "raw": "Center for Sustainability and Energy Technologies, Chang Gung University, Taoyuan 33302, Taiwan",
+        "city": "",
+        "country": "Taiwan",
+        "countryCode": "TW",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "id": "aff-2",
+        "label": "2",
+        "department": "",
+        "institution": "Chang Gung University",
+        "address": "Department of Chemical and Materials Engineering, Chang Gung University, Taoyuan 33302, Taiwan",
+        "raw": "Department of Chemical and Materials Engineering, Chang Gung University, Taoyuan 33302, Taiwan",
+        "city": "",
+        "country": "Taiwan",
+        "countryCode": "TW",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "id": "aff-3",
+        "label": "3",
+        "department": "",
+        "institution": "Industrial Technology Research Institute",
+        "address": "Industrial Technology Research Institute, Hsinchu 310, Taiwan",
+        "raw": "Industrial Technology Research Institute, Hsinchu 310, Taiwan",
+        "city": "",
+        "country": "Taiwan",
+        "countryCode": "TW",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      }
+    ],
+    "authorships": [
+      {
+        "name": "Wei-Hao Chiu",
+        "authorOrder": 1,
+        "authorPosition": "first",
+        "affiliationIds": [
+          "aff-1"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "name": "Harini Srikanth Rao",
+        "authorOrder": 2,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff-2"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "name": "Seoungjun Ahn",
+        "authorOrder": 3,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff-2"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "name": "Min-An Tsai",
+        "authorOrder": 4,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff-3"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "name": "Yean-San Long",
+        "authorOrder": 5,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff-3"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "name": "Chih-Hung Lin",
+        "authorOrder": 6,
+        "authorPosition": "middle",
+        "affiliationIds": [
+          "aff-3"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": null,
+        "correspondingEmail": "",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      },
+      {
+        "name": "Kun-Mu Lee",
+        "authorOrder": 7,
+        "authorPosition": "last",
+        "affiliationIds": [
+          "aff-1",
+          "aff-2"
+        ],
+        "isEqualContributor": null,
+        "equalContributionGroup": "",
+        "isCorresponding": true,
+        "correspondingEmail": "kmlee@mail.cgu.edu.tw",
+        "sources": [
+          "user-provided manuscript"
+        ]
+      }
+    ],
+    "authorshipMetadata": {
+      "status": "manual",
+      "manualAffiliations": true,
+      "lastChecked": "2026-10-23",
+      "sources": [
+        "user-provided manuscript"
+      ],
+      "sourceUrls": {
+        "conference": "https://www.pvsec.org/conference/future-conference.html"
+      },
+      "requiresManualReview": false,
+      "missingFields": [],
+      "warnings": []
+    },
+    "metadataSource": "manual_verified",
+    "automationProtection": {
+      "protected": true,
+      "reason": "User-selected conference manuscript; preserve event-specific author order, affiliations and content."
+    },
+    "sourceDocument": "摘要-Performance and Stability of PVDF-HFP-Modified Perovskite Solar Cells under Space-Relevant Coupled Vacuum, Illumination, and Thermal Stress_WHChiu.docx",
+    "contentStatus": {
+      "abstract": "available",
+      "highlights": "not-available",
+      "keywords": "not-available",
+      "graphicalAbstract": "not-available",
+      "verifiedDate": "2026-10-23",
+      "verifiedSource": "User-selected conference manuscript"
+    },
+    "citation": "Wei-Hao Chiu, Harini Srikanth Rao, Seoungjun Ahn, Min-An Tsai, Yean-San Long, Chih-Hung Lin, Kun-Mu Lee. Performance and Stability of PVDF-HFP-Modified Perovskite Solar Cells under Space-Relevant Coupled Vacuum, Illumination, and Thermal Stress. 9th World Conference on Photovoltaic Energy Conversion (WCPEC-9) (2026).",
+    "internationalCollaboration": {
+      "status": "domestic",
+      "isInternational": false,
+      "homeCountryCode": "TW",
+      "countryCodes": [
+        "TW"
+      ],
+      "partnerCountryCodes": [],
+      "partnerInstitutions": [],
+      "taiwanAffiliationIds": [
+        "aff-1",
+        "aff-2",
+        "aff-3"
+      ],
+      "foreignAffiliationIds": [],
+      "hasDualAffiliation": false,
+      "determinationMethod": "author-affiliation-address",
+      "confidence": "verified",
+      "sources": [
+        "user-provided manuscript"
+      ],
+      "evidenceUrls": {
+        "conference": "https://www.pvsec.org/conference/future-conference.html"
+      },
+      "requiresManualReview": false,
+      "warnings": [],
+      "manualOverride": false,
+      "lastEvaluated": "2026-10-23",
+      "inputSignature": "25aba6d059441db0e1a0"
     }
   }
 ]

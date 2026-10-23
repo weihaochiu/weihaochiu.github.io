@@ -346,7 +346,8 @@ function conferenceInfo(p){
   const dates=[c.startDate,c.endDate!==c.startDate?c.endDate:''].filter(Boolean).join(' – ');
   const fields=[['Conference dates',dates],['Location',c.location],['Presentation',c.presentationType],['Status',c.acceptanceStatus],['Abstract no.',c.abstractNumber],['Presenting author',c.presentingAuthor]].filter(([,value])=>value);
   const url=normalizeExternalUrl(c.url);
-  return `<div class="conference-meta">${artwork}<p>${p.documentType==='conference-full-paper'?'Full conference manuscript':'Conference abstract'}</p>${fields.map(([label,value])=>`<p><strong>${label}:</strong> ${esc(value)}</p>`).join('')}${url?`<p><a href="${esc(url)}" target="_blank" rel="noopener noreferrer">Conference website ↗</a></p>`:''}</div>`;
+  const names=[['nameEn','en','Conference'],['nameZh','zh-Hant','會議名稱']].filter(([key])=>c[key]).map(([key,lang,label])=>`<p lang="${lang}"><strong>${label}:</strong> ${esc(c[key])}</p>`).join('');
+  return `<div class="conference-meta">${artwork}<p>${p.documentType==='conference-full-paper'?'Full conference manuscript':'Conference abstract'}</p>${names}${fields.map(([label,value])=>`<p><strong>${label}:</strong> ${esc(value)}</p>`).join('')}${url?`<p><a href="${esc(url)}" target="_blank" rel="noopener noreferrer">Conference website ↗</a></p>`:''}</div>`;
 }
 function publicationCard(p){
   if(p.publicationType==='thesis')return thesisPublicationCard(p);

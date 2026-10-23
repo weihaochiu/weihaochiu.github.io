@@ -556,6 +556,84 @@
       "subtopics": [
         "PSC: Scalable Processing"
       ]
+    },
+    "iedms-2021-dopant-free-blade-coating": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Scalable Processing"
+      ]
+    },
+    "iedms-2021-csi-two-step": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Interface Engineering"
+      ]
+    },
+    "twiche-2021-dopant-free-blade-coating": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Scalable Processing"
+      ]
+    },
+    "twiche-2021-csi-two-step": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Interface Engineering"
+      ]
+    },
+    "acoe-2023-cesium-halides": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Interface Engineering"
+      ]
+    },
+    "acoe-2023-pentafulvalene-htm": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Interface Engineering"
+      ]
+    },
+    "pvsec-35-2024-sn-o2-mesoporous-ti-o2": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Interface Engineering"
+      ]
+    },
+    "pvsec-35-2024-pentafulvalene-htm": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Interface Engineering"
+      ]
+    },
+    "fpg-2024-tio2-nanorods-graphite-felt": {
+      "category": "RFB",
+      "subtopics": [
+        "VRFB: Electrodes"
+      ]
+    },
+    "fpg-2025-tin-lead-quasi-2d": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Interface Engineering"
+      ]
+    },
+    "fpg-2025-c3n4-graphite-felt": {
+      "category": "RFB",
+      "subtopics": [
+        "VRFB: Electrodes"
+      ]
+    },
+    "wcpec-9-2026-green-solvents": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Scalable Processing"
+      ]
+    },
+    "wcpec-9-2026-pvdf-hfp-space-reliability": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Space Applications"
+      ]
     }
   }
 }

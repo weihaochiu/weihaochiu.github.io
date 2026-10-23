@@ -12,6 +12,13 @@ IDENTIFIERS = (
     'sdse-2023-pentafulvalene-htm', 'twiche-2023-blade-slot-die',
     'twiche-2023-csi-two-step', 'iedms-2023-csi-two-step',
     'iedms-2023-blade-slot-die',
+    'iedms-2021-dopant-free-blade-coating', 'iedms-2021-csi-two-step',
+    'twiche-2021-dopant-free-blade-coating', 'twiche-2021-csi-two-step',
+    'acoe-2023-cesium-halides', 'acoe-2023-pentafulvalene-htm',
+    'pvsec-35-2024-sn-o2-mesoporous-ti-o2', 'pvsec-35-2024-pentafulvalene-htm',
+    'fpg-2024-tio2-nanorods-graphite-felt', 'fpg-2025-tin-lead-quasi-2d',
+    'fpg-2025-c3n4-graphite-felt', 'wcpec-9-2026-green-solvents',
+    'wcpec-9-2026-pvdf-hfp-space-reliability',
 )
 
 
@@ -20,6 +27,22 @@ class ConferencePublicationTests(unittest.TestCase):
     def setUpClass(cls):
         cls.rows = json.loads((ROOT / 'data/publications.json').read_text(encoding='utf-8'))
         cls.records = {row['id']: row for row in cls.rows}
+
+    def test_bilingual_fpg_names_and_event_identity(self):
+        for identity, ordinal in [('fpg-2023-laser-crystallization', 18),
+                                  ('fpg-2024-tio2-nanorods-graphite-felt', 19),
+                                  ('fpg-2025-tin-lead-quasi-2d', 20),
+                                  ('fpg-2025-c3n4-graphite-felt', 20)]:
+            row = self.records[identity]
+            self.assertEqual(row['conference']['nameEn'], f'{ordinal}th Formosa Plastics Group Applied Technology Seminar')
+            for path in [ROOT / 'publications.html', ROOT / 'publications' / (identity + '.html')]:
+                html = path.read_text(encoding='utf-8')
+                self.assertIn(row['conference']['nameEn'], html)
+                self.assertIn(row['conference']['nameZh'], html)
+                self.assertIn('lang="zh-Hant"', html)
+        self.assertEqual(self.records['twiche-2021-csi-two-step']['date'], '2022-01-06')
+        self.assertEqual(len(self.records['acoe-2023-cesium-halides']['authors']), 3)
+        self.assertEqual(len(self.records['sdse-2023-cesium-halides']['authors']), 4)
 
     def test_manuscripts_preserve_identity_and_avoid_inferred_bibliometrics(self):
         for identity in IDENTIFIERS:

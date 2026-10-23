@@ -218,7 +218,11 @@ def conference_info_html(p, prefix=''):
   artwork=('<img class="conference-logo" src="'+prefix+'assets/images/institutions/'+logo[0]+'" width="'+str(logo[1])+'" height="'+str(logo[2])+'" alt="'+esc('Smart Devices and Sustainable Energy' if acronym.startswith('SDSE') else 'Taiwan Institute of Chemical Engineers')+'" loading="lazy" decoding="async"/>') if logo else ''
   dates=c.get('startDate','')+(' – '+c['endDate'] if c.get('endDate') and c['endDate']!=c.get('startDate') else '')
   label='Full conference manuscript' if p.get('documentType')=='conference-full-paper' else 'Conference abstract'
-  lines=['<p>'+label+'</p>','<p><strong>Conference dates:</strong> '+esc(dates)+'</p>','<p>'+esc(c.get('location',''))+'</p>']
+  lines=['<p>'+label+'</p>']
+  for key,lang,title in [('nameEn','en','Conference'),('nameZh','zh-Hant','會議名稱')]:
+    if c.get(key): lines.append('<p lang="'+lang+'"><strong>'+title+':</strong> '+esc(c[key])+'</p>')
+  if dates: lines.append('<p><strong>Conference dates:</strong> '+esc(dates)+'</p>')
+  if c.get('location'): lines.append('<p>'+esc(c['location'])+'</p>')
   for key,label in [('presentationType','Presentation'),('acceptanceStatus','Status'),('abstractNumber','Abstract no.'),('presentingAuthor','Presenting author')]:
     if c.get(key):lines.append('<p><strong>'+label+':</strong> '+esc(c[key])+'</p>')
   if c.get('url'):lines.append('<p><a href="'+esc(c['url'])+'" target="_blank" rel="noopener noreferrer">Conference website ↗</a></p>')
