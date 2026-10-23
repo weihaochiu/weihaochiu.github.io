@@ -490,3 +490,5 @@ The widget module listens for mobile breakpoint changes to update PlumX popup di
 
 - WCPEC-9 conference records use the user-supplied original `assets/images/institutions/wcpec-9.png` logo in both `app.js` publication cards and `build_seo.py` detail pages, with proportional responsive sizing and descriptive alt text.
 - PVSEC-35 records likewise use the user-supplied original `assets/images/institutions/pvsec-35.png` logo in publication cards and generated detail pages.
+
+- ISOS 15 uses the user-approved white-background `assets/images/institutions/isos-15.png` logo in shared publication cards and generated detail pages, preserving proportions, responsive sizing and accessible alt text.
