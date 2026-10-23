@@ -437,3 +437,11 @@ flowchart TD
 ## CSET news sources — 23 October 2026
 
 - News entries optionally store `sources` (HTTPS `url` and `label`); `build_news.py` renders clickable citations on full stories only. The 2023 Innotech story adds a 2023 annual archive through the existing SEO build.
+
+## Experience and Education logos — 23 October 2026
+
+- About institution artwork is stored unchanged under `assets/images/institutions/`. Static `about.html` maps each logo to its career or education record; CSS clips surrounding whitespace while retaining the complete mark and original aspect ratio. Education keeps its department destination links.
+
+- The user-supplied FMRG logo appears on the existing Frontier Materials Research Group service card in Experience.
+
+- Both Energies Guest Editor cards display the user-supplied Energies and MDPI logos; the wide Energies source uses the same whitespace-only CSS crop.

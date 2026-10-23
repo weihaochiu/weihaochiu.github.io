@@ -136,3 +136,11 @@ Verified collection files in `data/` remain authoritative. Do not replace them w
 - Include the official CSET 2023 Taiwan Innotech Bronze Medal report as news; label 28 December 2023 as the report publication date. Reuse the existing award without increasing counts.
 - The TwIChE 2025 story uses the user-selected two-paragraph celebratory copy beginning “A happy milestone for our team”. Keep the CSET source label dated 18 September 2025, the TwIChE official recipient-list link, November conference dates and photographs. The award record retains the work title.
 - News page headers show the title without the generic research-updates subtitle; retain descriptive SEO metadata.
+
+## Experience and Education logos — 23 October 2026
+
+- Experience and Education show the eight user-supplied institution/company logos beside their corresponding records. Preserve original artwork, clip only surrounding whitespace, provide descriptive alt text, and keep marks proportional and readable on desktop/tablet/mobile. The NSP/URECO career record shows both company logos.
+
+- The user-supplied FMRG logo appears on the existing Frontier Materials Research Group service card in Experience.
+
+- Both Energies Guest Editor cards display the user-supplied Energies and MDPI logos; the wide Energies source uses the same whitespace-only CSS crop.
