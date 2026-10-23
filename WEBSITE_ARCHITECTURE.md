@@ -447,3 +447,8 @@ flowchart TD
 - Both Energies Guest Editor cards display the user-supplied Energies and MDPI logos; the wide Energies source uses the same whitespace-only CSS crop.
 
 - About logo pairing audit: all three Chang Gung University career entries show its university logo, with the supplied CSET/CRST center logo where available. Each degree shows both its university and original department logo within the existing department link. NSP/URECO and both Energies/MDPI pairs remain present; FMRG and ITRI retain their own marks. No unprovided center or award logo is inferred.
+
+## Funding and award logos — 23 October 2026
+
+- `app.js` maps the existing agency/organization names to local logos without changing academic JSON: NSTC for two NSTC projects, TwIChE for the two chemical-engineering society awards, and the user-supplied year-neutral TIE logo for the 2023/2025 Innotech awards. Unmatched records retain their text layout. Logo images preserve proportions and accessible names on desktop/mobile; About and Projects version their CSS/JS URLs.
+- NSTC artwork is the complete original header SVG from https://www.nstc.gov.tw/folksonomy/detail/95e64744-1e2e-42ed-8a16-1b95c91f21d5?l=ch (only `viewBox` attribute casing normalized); TwIChE artwork is https://www.twiche.org.tw/sites/default/files/logo-h.png, linked by https://www.twiche.org.tw/zh-hant. TIE artwork was supplied by the user. All assets reside in `assets/images/institutions/`.
