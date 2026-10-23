@@ -483,3 +483,7 @@ flowchart TD
 The shared app.js loads assets/js/publication-attention.js, which discovers DOI links in publication cards (including generator-owned detail pages), adds official PlumX custom elements and Altmetric donut badges, and observes filtered/replaced cards. assets/css/publication-attention.css positions widgets at the right on desktop and below content on mobile. Providers supply live metrics directly; no JSON, generator, Actions or analytics values are changed.
 
 On independent publication pages, the enhancer groups the existing bibliographic header in .publication-detail-overview with a right-hand widget rail; abstract, highlights, graphical abstract and citation sections retain the full article width. The generated HTML remains authoritative and is not edited by hand.
+
+The authorship enhancer removes any existing affiliation block within the card, including the nested detail overview, before rendering its replacement. This prevents duplicate affiliations when attention and authorship initialization complete in either order.
+
+The widget module listens for mobile breakpoint changes to update PlumX popup direction (top on mobile, left on desktop). Altmetric uses top popovers; mobile centers the rail to keep popovers inside the viewport.

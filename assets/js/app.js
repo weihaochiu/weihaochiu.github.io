@@ -935,7 +935,7 @@ document.addEventListener('DOMContentLoaded',async()=>{
     if (card.dataset.authorshipSignature === signature) return;
     authors.classList.add('publication-authors');
     authors.innerHTML = renderAuthors(publication);
-    card.querySelector(':scope > .publication-affiliations')?.remove();
+    card.querySelectorAll('.publication-affiliations').forEach(block => block.remove());
     const detail = card.classList.contains('publication-detail');
     const wrapper = document.createElement('div');
     wrapper.innerHTML = renderAffiliations(publication, detail);
@@ -983,7 +983,7 @@ document.addEventListener('DOMContentLoaded',async()=>{
   const source = document.currentScript?.src;
   if (!source) return;
   const script = document.createElement('script');
-  script.src = new URL('publication-attention.js?v=20261023', source).href;
+  script.src = new URL('publication-attention.js?v=20261023-3', source).href;
   script.defer = true;
   document.head.appendChild(script);
 })();

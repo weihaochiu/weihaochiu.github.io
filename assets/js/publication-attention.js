@@ -4,8 +4,13 @@
   const source = document.currentScript.src;
   const css = document.createElement('link');
   css.rel = 'stylesheet';
-  css.href = new URL('../css/publication-attention.css?v=20261023-2', source).href;
+  css.href = new URL('../css/publication-attention.css?v=20261023-3', source).href;
   document.head.appendChild(css);
+  const mobile = window.matchMedia('(max-width:760px)');
+  const plumConfig = () => JSON.stringify({printSize:'medium', popupDirection:mobile.matches ? 'top' : 'left', hideWhenEmpty:true});
+  mobile.addEventListener('change', () => {
+    document.querySelectorAll('.publication-attention plumx-widget').forEach(widget => widget.setAttribute('config', plumConfig()));
+  });
   let started = false;
   function loadScript(src, onload) {
     const script = document.createElement('script');
@@ -28,14 +33,14 @@
       rail.className = 'publication-attention';
       rail.setAttribute('aria-label', 'Research attention: PlumX and Altmetric');
       const plum = document.createElement('plumx-widget');
-      Object.entries({type:'artifact', 'identifier-type':'doi', identifier:doi, display:'plumprint', config:JSON.stringify({printSize:'medium',popupDirection:'left',hideWhenEmpty:true})}).forEach(([key,value]) => plum.setAttribute(key,value));
+      Object.entries({type:'artifact', 'identifier-type':'doi', identifier:doi, display:'plumprint', config:plumConfig()}).forEach(([key,value]) => plum.setAttribute(key,value));
       plum.addEventListener('plumx:load', () => card.classList.add('has-attention'));
       const hidePlum = () => { plum.hidden = true; };
       plum.addEventListener('plumx:empty', hidePlum);
       plum.addEventListener('plumx:error', hidePlum);
       const alt = document.createElement('div');
       alt.className = 'altmetric-embed';
-      Object.entries({doi, 'badge-type':'donut', 'badge-popover':'left', 'hide-no-mentions':'true', 'link-target':'_blank'}).forEach(([key,value]) => alt.setAttribute('data-'+key,value));
+      Object.entries({doi, 'badge-type':'donut', 'badge-popover':'top', 'hide-no-mentions':'true', 'link-target':'_blank'}).forEach(([key,value]) => alt.setAttribute('data-'+key,value));
       rail.append(plum, alt);
       if (card.classList.contains('publication-detail')) {
         const overview = document.createElement('div');

@@ -183,6 +183,10 @@ Verified collection files in `data/` remain authoritative. Do not replace them w
 
 ## Publication attention widgets — 23 October 2026
 
-DOI-bearing research outputs display official PlumX PlumPrint and Altmetric donut widgets at the right of each article, with left-opening provider popovers and clickable details. DOI-less outputs and theses are excluded. Empty PlumX data and Altmetric records without mentions are hidden. DOI presence does not guarantee provider coverage. Preserve official metric values, labels and artwork, including available X-user counts, patent references and Mendeley readers. Mobile places widgets below article content; external service failures must leave publication content usable.
+DOI-bearing research outputs display official PlumX PlumPrint and Altmetric donut widgets at the right of each article, with provider popovers and clickable details. DOI-less outputs and theses are excluded. Empty PlumX data and Altmetric records without mentions are hidden. DOI presence does not guarantee provider coverage. Preserve official metric values, labels and artwork, including available X-user counts, patent references and Mendeley readers. Mobile places widgets below article content; external service failures must leave publication content usable.
 
 Independent DOI-bearing article pages must also show both attention widgets beside the bibliographic overview. Keep the abstract, highlights, graphical abstract and citation history at full width; stack widgets after the overview on mobile.
+
+Attention widgets and author metadata must initialize in either order without duplicating the author-affiliation block.
+
+Mobile centers the widget pair and opens PlumX popovers above the graphic; Altmetric popovers open above the donut. Desktop PlumX popovers open left. Resize updates the PlumX direction to avoid clipping on narrow screens.

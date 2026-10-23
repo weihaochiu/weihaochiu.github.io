@@ -544,6 +544,8 @@ def publication_page(p, openalex_record=None, unpaywall_record=None, crossref_re
 
   if p.get('conference'):
     page=page.replace('../assets/css/styles.css','../assets/css/styles.css?v=conferences-20261023').replace('../assets/js/app.js?v=nav-news-20261023','../assets/js/app.js?v=conferences-20261023-2')
+  if doi:
+    page=re.sub(r'(assets/js/app\.js)(?:\?[^"\s]*)?', r'\1?v=publication-attention-20261023-3', page)
   return page
 
 def main():
@@ -593,6 +595,7 @@ def main():
   text=re.sub(r'\s*</head>', '\n</head>', text, count=1)
   citation_block = CITATION_META_START+'\n'+'\n'.join(citation_meta(p) for p in pubs)+'\n'+CITATION_META_END
   text=text.replace('</head>',citation_block+'\n'+schema+'\n</head>',1)
+  text=re.sub(r'(assets/js/app\.js)(?:\?[^"\s]*)?', r'\1?v=publication-attention-20261023-3', text)
   pubpath.write_text(text,encoding='utf-8')
   pdir=ROOT/'publications'; pdir.mkdir(exist_ok=True)
   for name in before_files:

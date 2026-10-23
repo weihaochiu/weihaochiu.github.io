@@ -13,5 +13,5 @@
 @media(max-width:760px){
   .publication-card:not(.publication-detail).has-attention,.publication-card:not(.publication-detail):has(.altmetric-embed img){padding-right:0;min-height:0}
   .publication-detail.has-attention .publication-detail-overview,.publication-detail-overview:has(.altmetric-embed img){grid-template-columns:minmax(0,1fr)}
-  .publication-card .publication-attention{position:static;transform:none;width:auto;justify-content:flex-end;margin-top:18px}
+  .publication-card .publication-attention{position:static;transform:none;width:auto;justify-content:center;margin-top:18px}
 }
