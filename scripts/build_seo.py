@@ -85,7 +85,7 @@ def publication_affiliation_map(p):
   return {str(row.get('id') or ''):row for row in (p.get('affiliations') or []) if isinstance(row,dict)}
 
 def publication_affiliation_text(row):
-  if 'user-provided manuscript' in (row.get('sources') or []) and row.get('raw'):
+  if (row.get('source') == 'publisher-verified' or 'user-provided manuscript' in (row.get('sources') or [])) and row.get('raw'):
     return re.sub(r'\s+',' ',str(row['raw'])).strip(' ,;')
   address=row.get('address') or row.get('raw')
   values=[row.get('department'),row.get('institution'),address]
@@ -546,8 +546,7 @@ def publication_page(p, openalex_record=None, unpaywall_record=None, crossref_re
 
   if p.get('conference'):
     page=page.replace('../assets/css/styles.css','../assets/css/styles.css?v=conferences-20261023').replace('../assets/js/app.js?v=nav-news-20261023','../assets/js/app.js?v=conference-links-20261023')
-  if doi:
-    page=re.sub(r'(assets/js/app\.js)(?:\?[^"\s]*)?', r'\1?v=publication-attention-20261023-4', page)
+  page=re.sub(r'(assets/js/app\.js)(?:\?[^"\s]*)?', r'\1?v=publication-attention-20261023-5', page)
   return page
 
 def main():
@@ -597,7 +596,7 @@ def main():
   text=re.sub(r'\s*</head>', '\n</head>', text, count=1)
   citation_block = CITATION_META_START+'\n'+'\n'.join(citation_meta(p) for p in pubs)+'\n'+CITATION_META_END
   text=text.replace('</head>',citation_block+'\n'+schema+'\n</head>',1)
-  text=re.sub(r'(assets/js/app\.js)(?:\?[^"\s]*)?', r'\1?v=publication-attention-20261023-4', text)
+  text=re.sub(r'(assets/js/app\.js)(?:\?[^"\s]*)?', r'\1?v=publication-attention-20261023-5', text)
   pubpath.write_text(text,encoding='utf-8')
   pdir=ROOT/'publications'; pdir.mkdir(exist_ok=True)
   for name in before_files:

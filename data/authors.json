@@ -4711,5 +4711,23 @@
     "status": "pending",
     "lastVerified": "",
     "sources": []
+  },
+  {
+    "id": "huang-chun-cheng",
+    "name": "Huang, Chun-Cheng",
+    "displayName": "Huang, Chun-Cheng",
+    "nameZh": "",
+    "aliases": [],
+    "role": "",
+    "currentPosition": "",
+    "affiliation": "",
+    "affiliationZh": "",
+    "email": [],
+    "telephone": "",
+    "orcid": "",
+    "links": {},
+    "status": "pending",
+    "lastVerified": "",
+    "sources": []
   }
 ]

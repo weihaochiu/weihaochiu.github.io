@@ -465,15 +465,65 @@ def first_descendant(element: ET.Element, name: str) -> ET.Element | None:
 
 def parse_jats(xml_text: str, source_url: str) -> SourceResult:
     root = ET.fromstring(xml_text)
-    affiliation_nodes = {node.get("id", ""): node for node in find_descendants(root, "aff") if node.get("id")}
-    correspondence_nodes = {node.get("id", ""): node for node in find_descendants(root, "corresp") if node.get("id")}
+    article_meta = first_descendant(root, "article-meta")
+    scope = article_meta if article_meta is not None else root
+    parents = {child: parent for parent in scope.iter() for child in parent}
+    affiliation_nodes = {node.get("id", ""): node for node in find_descendants(scope, "aff") if node.get("id")}
+    notes = {node.get("id", ""): node for node in scope.iter()
+             if strip_namespace(node.tag) in {"fn", "corresp"} and node.get("id")}
+    correspondence_nodes = {key: node for key, node in notes.items()
+                            if strip_namespace(node.tag) == "corresp"
+                            or node.get("fn-type") == "corresp"
+                            or re.search(r"\bcorrespond(?:ence|ing author)\b", element_text(node), re.I)}
+    equal_nodes = {key: node for key, node in notes.items()
+                   if node.get("fn-type") == "equal"
+                   or re.search(r"contribut\w*\s+equally|equal\s+contribut", element_text(node), re.I)}
+
+    def affiliation_text(node: ET.Element) -> str:
+        # A numeric label is a reference, not part of the department/address.
+        clone = copy.deepcopy(node)
+        for child in list(clone):
+            if strip_namespace(child.tag) == "label":
+                tail = child.tail or ""
+                clone.remove(child)
+                clone.text = (clone.text or "") + tail
+        return clean_space(element_text(clone).split(";", 1)[0])
+
+    def is_author(node: ET.Element) -> bool:
+        if str(node.get("contrib-type") or "author").lower() != "author":
+            return False
+        parent = parents.get(node)
+        while parent is not None:
+            if strip_namespace(parent.tag) == "contrib-group" and parent.get("content-type") == "editor":
+                return False
+            parent = parents.get(parent)
+        return not any("editor" in element_text(role).lower() for role in find_descendants(node, "role"))
+
+    def correspondence_email(node: ET.Element, referenced: list[ET.Element], given: str, surname: str) -> str:
+        direct = [element_text(email) for email in find_descendants(node, "email")]
+        if direct:
+            return direct[0]
+        initials = normalize_text("".join(part[0] for part in re.findall(r"[^\W\d_]+", given)) + surname[:1])
+        candidates = []
+        for note in referenced:
+            emails = find_descendants(note, "email")
+            for email in emails:
+                value = element_text(email)
+                match = re.match(r"\s*\(([^)]+)\)", email.tail or "")
+                if match and normalize_text(match[1]) == initials:
+                    return value
+                candidates.append(value)
+        # Shared notes can contain several correspondents. Never assign the first
+        # email to every author when the initials cannot be matched.
+        return candidates[0] if len(set(candidates)) == 1 else ""
     authors: list[AuthorCandidate] = []
     explicit_equal = False
     explicit_correspondence = False
 
-    for contrib in find_descendants(root, "contrib"):
-        if str(contrib.get("contrib-type") or "author").lower() != "author":
+    for contrib in find_descendants(scope, "contrib"):
+        if not is_author(contrib):
             continue
+        given = surname = ""
         name_node = first_descendant(contrib, "name")
         if name_node is not None:
             given = element_text(first_descendant(name_node, "given-names"))
@@ -490,29 +540,28 @@ def parse_jats(xml_text: str, source_url: str) -> SourceResult:
                 break
         affs: list[AffiliationCandidate] = []
         corresp_ids: list[str] = []
+        equal_ids: list[str] = []
         for xref in find_descendants(contrib, "xref"):
             ref_type = str(xref.get("ref-type") or "").lower()
             rid_values = str(xref.get("rid") or "").split()
             if ref_type == "aff":
                 for rid in rid_values:
-                    text = element_text(affiliation_nodes.get(rid))
+                    node = affiliation_nodes.get(rid)
+                    text = affiliation_text(node) if node is not None else ""
                     if text:
                         affs.append(AffiliationCandidate(text=text, institution=text, source="europe-pmc", source_id=rid))
             if ref_type in {"corresp", "author-notes", "fn"}:
-                corresp_ids.extend(rid_values)
+                corresp_ids.extend(rid for rid in rid_values if rid in correspondence_nodes)
+                equal_ids.extend(rid for rid in rid_values if rid in equal_nodes)
         equal_attr = str(contrib.get("equal-contrib") or contrib.get("equal_contrib") or "").lower()
         equal: bool | None = None
-        if equal_attr in {"yes", "true", "y", "1"}:
+        if equal_attr in {"yes", "true", "y", "1"} or equal_ids:
             equal = True
             explicit_equal = True
-        corresponding = bool(corresp_ids)
+        corresponding = bool(corresp_ids) or str(contrib.get("corresp") or "").lower() in {"yes", "true", "1"}
         if corresponding:
             explicit_correspondence = True
-        emails = []
-        for rid in corresp_ids:
-            node = correspondence_nodes.get(rid)
-            if node is not None:
-                emails.extend(element_text(email) for email in find_descendants(node, "email"))
+        email = correspondence_email(contrib, [correspondence_nodes[rid] for rid in corresp_ids], given, surname) if corresponding else ""
         authors.append(
             AuthorCandidate(
                 name=name,
@@ -521,7 +570,7 @@ def parse_jats(xml_text: str, source_url: str) -> SourceResult:
                 author_position="first" if not authors else "middle",
                 is_corresponding=corresponding if explicit_correspondence or corresponding else None,
                 is_equal_contributor=equal,
-                corresponding_email=next((email for email in emails if email), ""),
+                corresponding_email=email,
                 affiliations=affs,
                 sources=["europe-pmc"],
             )
@@ -749,6 +798,11 @@ def merge_publication(publication: dict[str, Any], results: list[SourceResult]) 
     if not isinstance(existing_rows, list):
         existing_rows = []
     manual = is_manual_metadata(output)
+    locked_fields = set((output.get("authorshipMetadata") or {}).get("lockedFields") or [])
+    if manual and {"authorships", "affiliations"}.issubset(locked_fields):
+        # A reviewed original can deliberately leave an unstated role/email unknown.
+        # Do not refill it from aggregators or discard its per-article provenance.
+        return original, False
 
     aligned_by_source = {result.source: align_source(names, result, existing_rows) for result in results if result.authors}
     if not aligned_by_source and len(existing_rows) == len(names):
