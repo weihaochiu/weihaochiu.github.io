@@ -478,6 +478,84 @@
     "vacuum-technology-2021-mof-perovskite": {
       "category": "PSC",
       "subtopics": []
+    },
+    "sdse-2025-sn-o2-mesoporous-ti-o2": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Interface Engineering"
+      ]
+    },
+    "sdse-2026-preheating-lma": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Scalable Processing"
+      ]
+    },
+    "sdse-2026-c3n4-graphite-felt": {
+      "category": "RFB",
+      "subtopics": [
+        "VRFB: Electrodes"
+      ]
+    },
+    "pesi-2026-pvdf-hfp-space-reliability": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Space Applications"
+      ]
+    },
+    "twiche-2025-tin-lead-quasi-2d": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Device Engineering"
+      ]
+    },
+    "twiche-2023-tio2-graphite-felt": {
+      "category": "RFB",
+      "subtopics": [
+        "VRFB: Electrodes"
+      ]
+    },
+    "fpg-2023-laser-crystallization": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Scalable Processing"
+      ]
+    },
+    "sdse-2023-cesium-halides": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Device Engineering"
+      ]
+    },
+    "sdse-2023-pentafulvalene-htm": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Hole-Transporting Materials"
+      ]
+    },
+    "twiche-2023-blade-slot-die": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Scalable Processing"
+      ]
+    },
+    "twiche-2023-csi-two-step": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Device Engineering"
+      ]
+    },
+    "iedms-2023-csi-two-step": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Device Engineering"
+      ]
+    },
+    "iedms-2023-blade-slot-die": {
+      "category": "PSC",
+      "subtopics": [
+        "PSC: Scalable Processing"
+      ]
     }
   }
 }

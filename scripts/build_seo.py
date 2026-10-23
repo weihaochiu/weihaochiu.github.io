@@ -91,7 +91,7 @@ def publication_affiliation_text(row):
   output=[]; seen=set()
   for value in values:
     value=re.sub(r'\s+',' ',html.unescape(str(value or ''))).strip(' ,;')
-    key=normalize_author_name(value)
+    key=normalize_author_name(value) or value.casefold()
     if value and key and key not in seen:
       seen.add(key); output.append(value)
   return ', '.join(output)
@@ -208,6 +208,20 @@ def replace_emails(text):
   text=text.replace('weihchiu@mail.cgu.edu.tw','weihao.chiu@gmail.com')
   return text
 
+def conference_info_html(p, prefix=''):
+  c=p.get('conference') or {}
+  if p.get('publicationType')!='conference' or not c: return ''
+  acronym=c.get('acronym','')
+  logo=('sdse.png',1291,437) if acronym.startswith('SDSE') else ('twiche.png',967,180) if acronym.startswith('TwIChE') else None
+  artwork=('<img class="conference-logo" src="'+prefix+'assets/images/institutions/'+logo[0]+'" width="'+str(logo[1])+'" height="'+str(logo[2])+'" alt="'+esc('Smart Devices and Sustainable Energy' if acronym.startswith('SDSE') else 'Taiwan Institute of Chemical Engineers')+'" loading="lazy" decoding="async"/>') if logo else ''
+  dates=c.get('startDate','')+(' – '+c['endDate'] if c.get('endDate') and c['endDate']!=c.get('startDate') else '')
+  label='Full conference manuscript' if p.get('documentType')=='conference-full-paper' else 'Conference abstract'
+  lines=['<p>'+label+'</p>','<p><strong>Conference dates:</strong> '+esc(dates)+'</p>','<p>'+esc(c.get('location',''))+'</p>']
+  for key,label in [('presentationType','Presentation'),('acceptanceStatus','Status'),('abstractNumber','Abstract no.'),('presentingAuthor','Presenting author')]:
+    if c.get(key):lines.append('<p><strong>'+label+':</strong> '+esc(c[key])+'</p>')
+  if c.get('url'):lines.append('<p><a href="'+esc(c['url'])+'" target="_blank" rel="noopener noreferrer">Conference website ↗</a></p>')
+  return '<div class="conference-meta">'+artwork+''.join(lines)+'</div>'
+
 def static_card(p, openalex_record=None):
   doi=p.get('doi',''); slug=publication_slug(p); local='publications/'+slug+'.html'
   authors=publication_authors_html(p)
@@ -229,7 +243,7 @@ def static_card(p, openalex_record=None):
   doi_html='<a class="action" href="'+esc(p.get('doiUrl'))+'" target="_blank" rel="noopener">DOI ↗</a>' if p.get('doiUrl') else ''
   scholar_html='' if p.get('analytics',{}).get('citationMetrics') is False else '<span class="action">'+str(n)+' Google Scholar citation'+('s' if n!=1 else '')+'</span>'
   identifier=doi or p.get('id','')
-  return '<article class="collection-card publication-card seo-static-card" id="pub-'+slug+'" itemscope itemtype="https://schema.org/ScholarlyArticle"><meta itemprop="identifier" content="'+esc(identifier)+'"/><div class="card-heading"><h4 itemprop="headline"><a href="'+esc(local)+'">'+esc(p.get('title'))+'</a></h4><span class="date-badge" itemprop="datePublished">'+esc(p.get('date'))+'</span></div><p class="authors publication-authors" itemprop="author">'+authors+'</p>'+publication_affiliations_html(p,details=False)+'<p class="journal" itemprop="isPartOf">'+journal+'</p><div class="card-labels">'+labels_html+'</div><div class="card-actions">'+doi_html+'<a class="action" href="'+esc(local)+'">Publication details →</a>'+scholar_html+impact_html+'</div></article>'
+  return '<article class="collection-card publication-card seo-static-card" id="pub-'+slug+'" itemscope itemtype="https://schema.org/ScholarlyArticle"><meta itemprop="identifier" content="'+esc(identifier)+'"/><div class="card-heading"><h4 itemprop="headline"><a href="'+esc(local)+'">'+esc(p.get('title'))+'</a></h4><span class="date-badge" itemprop="datePublished">'+esc(p.get('date'))+'</span></div><p class="authors publication-authors" itemprop="author">'+authors+'</p>'+publication_affiliations_html(p,details=False)+'<p class="journal" itemprop="isPartOf">'+journal+'</p>'+conference_info_html(p)+'<div class="card-labels">'+labels_html+'</div><div class="card-actions">'+doi_html+'<a class="action" href="'+esc(local)+'">Publication details →</a>'+scholar_html+impact_html+'</div></article>'
 
 def static_publication_sections(pubs,openalex_records):
   types=[
@@ -480,6 +494,7 @@ def publication_page(p, openalex_record=None, unpaywall_record=None, crossref_re
   crossref_record = crossref_record or {}
   mendeley_record = mendeley_record or {}
   detail_sections = []
+  if p.get('conference'): detail_sections.append('<section class="publication-detail-section"><h2>Conference information</h2>'+conference_info_html(p,'../')+'</section>')
   if abstract:
     detail_sections.append('<section class="publication-detail-section"><h2>Abstract</h2><p itemprop="abstract">'+esc(abstract)+'</p></section>')
   if highlights:
@@ -519,7 +534,11 @@ def publication_page(p, openalex_record=None, unpaywall_record=None, crossref_re
   actions.append('<span class="share-wrap"><button class="action action-button share-trigger" type="button" aria-haspopup="menu" aria-expanded="false" data-share-title="'+title+'" data-share-text="'+title+'" data-share-url="'+esc(url)+'">Share</button><span class="share-menu" role="menu" hidden><button type="button" role="menuitem" data-copy-share-url="'+esc(url)+'">Copy link</button><a role="menuitem" href="'+esc(email_url)+'">Email</a><a role="menuitem" href="https://www.linkedin.com/sharing/share-offsite/?url='+quote(url, safe='')+'" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></span></span>')
   actions_html = '<div class="card-actions publication-detail-actions">'+''.join(actions)+'</div>'
   citation_sections=citation_history_html(p,openalex_record,history_record)+citing_articles_html(openalex_record,history_record)
-  return '''<!DOCTYPE html><html lang="{language}"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>{title} | Wei-Hao Chiu</title><meta name="description" content="{desc}"/><link rel="canonical" href="{url}"/><meta property="og:type" content="article"/><meta property="og:title" content="{title}"/><meta property="og:description" content="{desc}"/><meta property="og:url" content="{url}"/><meta property="og:image" content="{site}/assets/images/og-profile.jpg"/><meta property="article:published_time" content="{date}"/><meta property="article:author" content="{site}/"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="{title}"/><meta name="twitter:description" content="{desc}"/><meta name="twitter:image" content="{site}/assets/images/og-profile.jpg"/>{ga}{citation}<script type="application/ld+json">{schema}</script><link href="../assets/css/styles.css" rel="stylesheet"/></head><body><header class="site-header"><div class="shell nav-shell"><a class="brand" href="../index.html"><span>Wei-Hao Chiu</span><small>Academic Profile</small></a><nav aria-label="Main navigation" class="site-nav"><a href="../about.html">About</a><a href="../news.html">News</a><a href="../research.html">Research</a><a href="../publications.html">Publications</a><a href="../patents.html">Patents</a><a href="../projects.html">Projects</a></nav></div></header><main class="content shell"><article class="collection-card publication-card publication-detail" itemscope itemtype="https://schema.org/ScholarlyArticle"><p class="kicker">{publication_type}</p><h1 itemprop="headline">{title}</h1><p class="authors publication-authors" itemprop="author">{authors}</p>{author_info}<p class="journal"><em>{journal}</em>{vol}{pages} ({year}).</p><p><strong>Research topic:</strong> {topic}</p>{details}{actions}{citation_sections}<a class="action publication-return" href="../publications.html#pub-{slug}">← Return to publications</a></article></main><footer class="site-footer"><div class="shell footer-grid"><div><strong>Wei-Hao Chiu, Ph.D.</strong><p>Associate Researcher<br/>Center for Sustainability and Energy Technologies<br/>Chang Gung University</p></div><div class="footer-links">{emails}</div></div></footer><script src="../assets/js/app.js?v=nav-news-20261023"></script></body></html>'''.format(language=esc(p.get('language') or 'en'),publication_type=esc(publication_type_label(p)),title=title,desc=desc,url=url,site=SITE_URL,date=esc(p.get('date')),ga=GA_TAG,citation=citation_meta(p),schema=json.dumps(graph,ensure_ascii=False,separators=(',',':')),authors=authors,author_info=author_info,journal=esc(p.get('journal')),vol=vol,pages=pages,year=esc(p.get('year')),topic=esc(p.get('topic')),details=details,actions=actions_html,citation_sections=citation_sections,slug=slug,emails=EMAIL_LINKS)
+  page = '''<!DOCTYPE html><html lang="{language}"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>{title} | Wei-Hao Chiu</title><meta name="description" content="{desc}"/><link rel="canonical" href="{url}"/><meta property="og:type" content="article"/><meta property="og:title" content="{title}"/><meta property="og:description" content="{desc}"/><meta property="og:url" content="{url}"/><meta property="og:image" content="{site}/assets/images/og-profile.jpg"/><meta property="article:published_time" content="{date}"/><meta property="article:author" content="{site}/"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="{title}"/><meta name="twitter:description" content="{desc}"/><meta name="twitter:image" content="{site}/assets/images/og-profile.jpg"/>{ga}{citation}<script type="application/ld+json">{schema}</script><link href="../assets/css/styles.css" rel="stylesheet"/></head><body><header class="site-header"><div class="shell nav-shell"><a class="brand" href="../index.html"><span>Wei-Hao Chiu</span><small>Academic Profile</small></a><nav aria-label="Main navigation" class="site-nav"><a href="../about.html">About</a><a href="../news.html">News</a><a href="../research.html">Research</a><a href="../publications.html">Publications</a><a href="../patents.html">Patents</a><a href="../projects.html">Projects</a></nav></div></header><main class="content shell"><article class="collection-card publication-card publication-detail" itemscope itemtype="https://schema.org/ScholarlyArticle"><p class="kicker">{publication_type}</p><h1 itemprop="headline">{title}</h1><p class="authors publication-authors" itemprop="author">{authors}</p>{author_info}<p class="journal"><em>{journal}</em>{vol}{pages} ({year}).</p><p><strong>Research topic:</strong> {topic}</p>{details}{actions}{citation_sections}<a class="action publication-return" href="../publications.html#pub-{slug}">← Return to publications</a></article></main><footer class="site-footer"><div class="shell footer-grid"><div><strong>Wei-Hao Chiu, Ph.D.</strong><p>Associate Researcher<br/>Center for Sustainability and Energy Technologies<br/>Chang Gung University</p></div><div class="footer-links">{emails}</div></div></footer><script src="../assets/js/app.js?v=nav-news-20261023"></script></body></html>'''.format(language=esc(p.get('language') or 'en'),publication_type=esc(publication_type_label(p)),title=title,desc=desc,url=url,site=SITE_URL,date=esc(p.get('date')),ga=GA_TAG,citation=citation_meta(p),schema=json.dumps(graph,ensure_ascii=False,separators=(',',':')),authors=authors,author_info=author_info,journal=esc(p.get('journal')),vol=vol,pages=pages,year=esc(p.get('year')),topic=esc(p.get('topic')),details=details,actions=actions_html,citation_sections=citation_sections,slug=slug,emails=EMAIL_LINKS)
+
+  if p.get('conference'):
+    page=page.replace('../assets/css/styles.css','../assets/css/styles.css?v=conferences-20261023').replace('../assets/js/app.js?v=nav-news-20261023','../assets/js/app.js?v=conferences-20261023')
+  return page
 
 def main():
   global AUTHOR_MAP

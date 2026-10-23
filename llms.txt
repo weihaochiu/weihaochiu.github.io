@@ -89,6 +89,19 @@
 ### Conference Publications
 
 - [Branched ZnO nanowires for enhancing energy conversion efficiency of dye-sensitized solar cells](https://weihaochiu.github.io/publications/10-1557-proc-1121-n14-01.html) — Next-Generation and Nano-Architectured Photovoltaics, 2008; DOI: 10.1557/proc-1121-n14-01
+- [Enhancing the Efficiency of Perovskite Solar Cells via Chemical Bath Deposition of SnO₂ on Mesoporous TiO₂ Electrodes](https://weihaochiu.github.io/publications/sdse-2025-sn-o2-mesoporous-ti-o2.html) — 3rd International Conference on Smart Devices and Sustainable Energy (SDSE 2025), 2025
+- [Rapid Preheating-Assisted Liquid-Medium Annealing for Efficient and Stable Perovskite Solar Cells](https://weihaochiu.github.io/publications/sdse-2026-preheating-lma.html) — 4th International Conference on Smart Devices and Sustainable Energy (SDSE 2026), 2026
+- [Nanostructured g-C3N4-Decorated Graphite Felt Electrodes for Enhanced Redox Kinetics in Vanadium Redox Flow Batteries](https://weihaochiu.github.io/publications/sdse-2026-c3n4-graphite-felt.html) — 4th International Conference on Smart Devices and Sustainable Energy (SDSE 2026), 2026
+- [PVDF-HFP-Modified Perovskite Solar Cells under Space-Relevant Coupled Vacuum, Light, and Thermal Stress Conditions](https://weihaochiu.github.io/publications/pesi-2026-pvdf-hfp-space-reliability.html) — Polymer Engineering & Sciences International (PESI) Conference 2026, 2026
+- [Surface Defect Passivation and Quasi-2D Engineering for High-Efficiency Tin-Lead Perovskite Solar Cells](https://weihaochiu.github.io/publications/twiche-2025-tin-lead-quasi-2d.html) — 台灣化學工程學會72週年年會, 2025
+- [Enhancing Electrochemical Activity in Vanadium Redox Flow Batteries using TiO2 NPs-Modified Graphite Felt](https://weihaochiu.github.io/publications/twiche-2023-tio2-graphite-felt.html) — 台灣化學工程學會70週年年會暨國科會化學工程學門成果發表會／國際分子與生醫工程研討會, 2023
+- [結合雷射誘發結晶與雷射直寫系統製作高效率鈣鈦礦太陽能電池](https://weihaochiu.github.io/publications/fpg-2023-laser-crystallization.html) — 第18屆台塑企業應用技術研討會, 2023
+- [Improving Perovskite Solar Cell Performance using a Two-Step Deposition Technique with Cesium Halides in PbI2 Precursor](https://weihaochiu.github.io/publications/sdse-2023-cesium-halides.html) — International Conference on Smart Devices and Sustainable Energy (SDSE 2023), 2023
+- [Fluorinated Pentafulvalene-Infused Hole-Transporting Material Elevates Perovskite Solar Cell Efficiency Over 23%](https://weihaochiu.github.io/publications/sdse-2023-pentafulvalene-htm.html) — International Conference on Smart Devices and Sustainable Energy (SDSE 2023), 2023
+- [Optimizing the Structure of Perovskite Films Manufactured Using Blade and Slot Die Coating Techniques to Enhance Photovoltaic Module Efficiency](https://weihaochiu.github.io/publications/twiche-2023-blade-slot-die.html) — 台灣化學工程學會70週年年會暨國科會化學工程學門成果發表會／國際分子與生醫工程研討會, 2023
+- [Augmenting the performance and stability of perovskite solar cells by introducing cesium iodide doping into the PbI2 film via a two-step deposition method](https://weihaochiu.github.io/publications/twiche-2023-csi-two-step.html) — 台灣化學工程學會70週年年會暨國科會化學工程學門成果發表會／國際分子與生醫工程研討會, 2023
+- [Augmenting the performance and stability of perovskite solar cells by introducing cesium iodide doping into the PbI2 film via a two-step deposition method](https://weihaochiu.github.io/publications/iedms-2023-csi-two-step.html) — 28th International Electron Devices and Materials Symposium (IEDMS 2023), 2023
+- [Controlling the Morphology of Perovskite Layers Produced via Blade and Slot Die Coating for Efficient PV Module](https://weihaochiu.github.io/publications/iedms-2023-blade-slot-die.html) — 28th International Electron Devices and Materials Symposium (IEDMS 2023), 2023
 
 ### Theses & Dissertations
 

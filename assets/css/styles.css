@@ -238,3 +238,6 @@
 
 .record-organization-logo{display:flex;align-items:center;min-height:44px;margin:0 0 16px}.record-organization-logo img{display:block;width:auto;height:auto;max-width:min(100%,320px);max-height:64px;object-fit:contain}
 @media(max-width:760px){.record-organization-logo img{max-width:min(100%,280px);max-height:56px}}
+
+.conference-meta{margin:14px 0;padding:12px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.78rem}.conference-meta p{margin:4px 0}.conference-logo{display:block;width:auto;height:auto;max-width:min(100%,300px);max-height:76px;object-fit:contain;margin:0 0 12px}.conference-meta a{color:var(--brand)}
+@media(max-width:760px){.conference-logo{max-width:min(100%,250px);max-height:68px}}

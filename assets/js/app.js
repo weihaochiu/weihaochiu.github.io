@@ -337,6 +337,17 @@ function thesisPublicationCard(p){
   return `<article class="collection-card publication-card thesis-publication-card" id="${esc(anchor)}"><div class="card-heading"><h4><a href="${esc(detailUrl)}">${esc(p.title)}</a></h4><span class="date-badge">${esc(p.year)}</span></div>${p.titleZh?`<p class="local-title thesis-title-zh" lang="zh-Hant">${esc(p.titleZh)}</p>`:''}<p class="authors">${authors}</p><p class="thesis-meta">${esc(p.institution)} · ${esc(p.department)}<br>Advisor: ${esc(p.advisor)}</p><div class="card-labels"><span class="card-label publication-type-label">${esc(degree)}</span></div><div class="card-actions"><a class="action publication-detail-link" href="${esc(detailUrl)}">Details →</a>${repositoryAction}${share}</div></article>`;
 }
 
+function conferenceInfo(p){
+  const c=p.conference;if(p.publicationType!=='conference'||!c)return '';
+  const acronym=c.acronym||'';
+  const logo=acronym.startsWith('SDSE')?['sdse.png','Smart Devices and Sustainable Energy',1291,437]:acronym.startsWith('TwIChE')?['twiche.png','Taiwan Institute of Chemical Engineers',967,180]:null;
+  const prefix=/\/(publications|patents|news)\//.test(location.pathname)?'../':'';
+  const artwork=logo?`<img class="conference-logo" src="${prefix}assets/images/institutions/${logo[0]}" alt="${logo[1]}" width="${logo[2]}" height="${logo[3]}" loading="lazy" decoding="async"/>`:'';
+  const dates=[c.startDate,c.endDate!==c.startDate?c.endDate:''].filter(Boolean).join(' – ');
+  const fields=[['Conference dates',dates],['Location',c.location],['Presentation',c.presentationType],['Status',c.acceptanceStatus],['Abstract no.',c.abstractNumber],['Presenting author',c.presentingAuthor]].filter(([,value])=>value);
+  const url=normalizeExternalUrl(c.url);
+  return `<div class="conference-meta">${artwork}<p>${p.documentType==='conference-full-paper'?'Full conference manuscript':'Conference abstract'}</p>${fields.map(([label,value])=>`<p><strong>${label}:</strong> ${esc(value)}</p>`).join('')}${url?`<p><a href="${esc(url)}" target="_blank" rel="noopener noreferrer">Conference website ↗</a></p>`:''}</div>`;
+}
 function publicationCard(p){
   if(p.publicationType==='thesis')return thesisPublicationCard(p);
   const authors=(p.authors||[]).map(renderAuthor).join(', ');
@@ -384,7 +395,7 @@ function publicationCard(p){
   const shareMenuId=`share-menu-${anchor}`;
   const share=`<span class="share-wrap"><button class="action action-button share-trigger" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="${esc(shareMenuId)}" data-share-title="${esc(p.title)}" data-share-text="${esc(shareText)}" data-share-url="${esc(shareUrl)}">${SHARE_ICON}<span>Share</span></button><span class="share-menu" id="${esc(shareMenuId)}" role="menu" hidden><button type="button" role="menuitem" data-copy-share-url="${esc(shareUrl)}">Copy link</button><a role="menuitem" href="${esc(emailUrl)}">Email</a><a role="menuitem" href="${esc(linkedinUrl)}" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a role="menuitem" href="${esc(xUrl)}" target="_blank" rel="noopener noreferrer">X (Twitter) ↗</a><a role="menuitem" href="${esc(facebookUrl)}" target="_blank" rel="noopener noreferrer">Facebook ↗</a></span></span>`;
   const doiAction=p.doiUrl?`<a class="action" href="${esc(p.doiUrl)}" target="_blank" rel="noopener">DOI ↗</a>`:'';
-  return `<article class="collection-card publication-card" id="${esc(anchor)}"><div class="card-heading"><h4><a href="${esc(shareUrl)}">${esc(p.title)}</a></h4><span class="date-badge">${esc(p.date)}</span></div><p class="authors">${authors}</p><p class="journal"><em>${esc(p.journal)}</em>${p.volume?`, ${esc(p.volume)}`:''}${p.issue?`(${esc(p.issue)})`:''}${p.pages?`, ${esc(p.pages)}`:''} (${p.year}).</p><div class="card-labels">${labels.map((label,index)=>`<span class="card-label${index===0?' publication-type-label':''}">${esc(label)}</span>`).join('')}</div><div class="card-actions">${detailAction}${doiAction}${oaAction}${cited}${openalexAction}${openalexImpact}${crossrefAction}${readers}${share}</div></article>`;
+  return `<article class="collection-card publication-card" id="${esc(anchor)}"><div class="card-heading"><h4><a href="${esc(shareUrl)}">${esc(p.title)}</a></h4><span class="date-badge">${esc(p.date)}</span></div><p class="authors">${authors}</p><p class="journal"><em>${esc(p.journal)}</em>${p.volume?`, ${esc(p.volume)}`:''}${p.issue?`(${esc(p.issue)})`:''}${p.pages?`, ${esc(p.pages)}`:''} (${p.year}).</p><div class="card-labels">${labels.map((label,index)=>`<span class="card-label${index===0?' publication-type-label':''}">${esc(label)}</span>`).join('')}</div>${conferenceInfo(p)}<div class="card-actions">${detailAction}${doiAction}${oaAction}${cited}${openalexAction}${openalexImpact}${crossrefAction}${readers}${share}</div></article>`;
 }
 function patentSlug(p){return String(p.canonicalId||p.number||'patent').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')}
 function enrichPatents(rows,metadata={},families=[]){
@@ -514,6 +525,7 @@ function recordOrganizationLogo(name, kind){
   let logo;
   if(kind==='project' && text==='National Science and Technology Council, Taiwan')logo=['nstc.svg','National Science and Technology Council',362,55];
   if(kind==='award' && /Taiwan Institute of Chemical Engineers/.test(text))logo=['twiche.png','Taiwan Institute of Chemical Engineers',967,180];
+  if(kind==='award' && /Smart Devices and Sustainable Energy/.test(text))logo=['sdse.png','Smart Devices and Sustainable Energy',1291,437];
   if(kind==='award' && /^20[0-9]{2} Taiwan Innotech Expo/.test(text))logo=['tie.png','Taiwan Innotech Expo',300,55];
   if(!logo)return '';
   const [file,alt,width,height]=logo;
@@ -842,7 +854,7 @@ document.addEventListener('DOMContentLoaded',async()=>{
       .filter(Boolean);
     const seen = new Set();
     return values.filter(value => {
-      const key = normalize(value);
+      const key = normalize(value) || value.toLocaleLowerCase();
       if (!key || seen.has(key)) return false;
       seen.add(key);
       return true;
