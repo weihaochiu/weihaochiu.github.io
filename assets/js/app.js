@@ -848,6 +848,7 @@ document.addEventListener('DOMContentLoaded',async()=>{
   let bySlug = new Map();
 
   function affiliationText(row) {
+    if(row?.sources?.includes('user-provided manuscript') && row.raw)return String(row.raw).replace(/\s+/g,' ').trim();
     const address = row?.address || row?.raw;
     const values = [row?.department, row?.institution, address, ...(!address ? [row?.city, row?.countryCode] : [])]
       .map(value => String(value || '').trim())

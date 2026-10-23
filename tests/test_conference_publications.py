@@ -40,6 +40,8 @@ class ConferencePublicationTests(unittest.TestCase):
                 self.assertIn(row['conference']['startDate'], page)
                 self.assertNotIn('Google Scholar citation', page)
                 self.assertNotIn('圖二的scale bar', page)
+                for aff in row['affiliations']:
+                    self.assertNotIn(aff['department'] + ', ' + aff['institution'] + ', ' + aff['raw'], page) if aff['department'] else None
                 for image in re.findall(r'<img[^>]+src="([^"]+)"', page):
                     self.assertTrue((ROOT / 'publications' / image).is_file(), image)
 
