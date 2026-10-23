@@ -29,7 +29,7 @@ Scope: publication-specific names/order, affiliation links, correspondence and e
 | 10.1016/j.jpowsour.2025.239216 | Original verified: 6 authors, 4 units | [Original evidence](https://www.frontiergroup.tw/_files/ugd/00bbe1_a905f50aca3246668b1b1e78a9e42576.pdf) |
 | 10.1016/j.solmat.2025.114015 | Original verified: 5 authors, 5 units | [Original evidence](https://www.frontiergroup.tw/_files/ugd/00bbe1_211ed88305e14fd493cfa4c98ee31657.pdf) |
 | 10.1002/asia.70245 | Original verified: 6 authors, 5 units | [Original evidence](https://www.frontiergroup.tw/_files/ugd/00bbe1_842ffa99c7314e7189d6a92baf7359c2.pdf) |
-| 10.1016/j.seppur.2025.134157 | Pending: publisher access blocked; insufficient original affiliation/role evidence | [Publisher attempted](https://linkinghub.elsevier.com/retrieve/pii/S1383586625027546) |
+| 10.1016/j.seppur.2025.134157 | Updated 24 October: publisher corrected proof verifies 4 authors, 4 distinct units (a/b/c/d); only Kun-Mu Lee corresponding | Local original: `pagination_SEPPUR_134157.pdf`, p. 1; [article DOI](https://doi.org/10.1016/j.seppur.2025.134157) |
 | 10.1002/solr.202500538 | Original verified: 51 authors, 22 units | [Original evidence](https://www.frontiergroup.tw/_files/ugd/00bbe1_d7328876f08241a3af97f218cd864df1.pdf) |
 | 10.1002/asia.202500719 | Original verified: 20 authors, 11 units | [Original evidence](https://www.frontiergroup.tw/_files/ugd/00bbe1_986e14ad8c4f4d8a8009fe061a741b9c.pdf) |
 | 10.1002/advs.202410666 | Original verified: 19 authors, 9 units | [Original evidence](https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11744647/fullTextXML) |
@@ -125,3 +125,7 @@ Scope: publication-specific names/order, affiliation links, correspondence and e
 ## Data and rendering ownership
 
 `data/publications.json` owns the publication authors and units. `sync_publication_authors.py` adds a missing name as a pending global profile without inferring current employment. `app.js` and `build_seo.py` render the same verified original affiliation text without repeating department/institution/address. Static publication cards, per-article HTML, structured author data and copyable citations are regenerated through the existing SEO generator. No citation counts, analytics inputs, patent data or workflows are changed.
+
+## Follow-up — 24 October 2026
+
+The SEPPUR record above previously contained institution-only OpenAlex data and was one of the five held international journals. The locally available publisher **corrected proof** `pagination_SEPPUR_134157.pdf` (page 1, matching title/DOI/authors) now supplies the precise departments/centers, addresses, author superscripts and correspondence. It is a proof, not a verified visit to the final publisher page. No full text or local personal path is uploaded. Iqra Shaheen and Shih-Hsuan Chen use a (CGU Chemical and Materials Engineering); Wei-Hao Chiu uses b (CGU Center for Sustainability and Energy Technologies); Kun-Mu Lee uses a,b,c,d, including MCUT Environment and Resources and CGMH Neonatology/Pediatrics, Linkou, and is the sole correspondent. Equal contribution remains unstated. This raises original/proof-based international-journal affiliation checks to 35 of 39 (34 published originals plus this corrected proof); 4 remain pending. Locked manual metadata protects the distinction between departments at the same institution.

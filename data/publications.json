@@ -2512,7 +2512,7 @@
         "authorOrder": 1,
         "authorPosition": "first",
         "affiliationIds": [
-          "aff-1"
+          "publisher-aff-a"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -2520,7 +2520,8 @@
         "correspondingEmail": "",
         "sources": [
           "crossref",
-          "openalex"
+          "openalex",
+          "https://doi.org/10.1016/j.seppur.2025.134157"
         ]
       },
       {
@@ -2530,7 +2531,7 @@
         "authorOrder": 2,
         "authorPosition": "middle",
         "affiliationIds": [
-          "aff-1"
+          "publisher-aff-b"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -2538,7 +2539,8 @@
         "correspondingEmail": "",
         "sources": [
           "crossref",
-          "openalex"
+          "openalex",
+          "https://doi.org/10.1016/j.seppur.2025.134157"
         ]
       },
       {
@@ -2548,7 +2550,7 @@
         "authorOrder": 3,
         "authorPosition": "middle",
         "affiliationIds": [
-          "aff-1"
+          "publisher-aff-a"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
@@ -2556,7 +2558,8 @@
         "correspondingEmail": "",
         "sources": [
           "crossref",
-          "openalex"
+          "openalex",
+          "https://doi.org/10.1016/j.seppur.2025.134157"
         ]
       },
       {
@@ -2566,93 +2569,122 @@
         "authorOrder": 4,
         "authorPosition": "last",
         "affiliationIds": [
-          "aff-2",
-          "aff-1",
-          "aff-3",
-          "aff-4"
+          "publisher-aff-a",
+          "publisher-aff-b",
+          "publisher-aff-c",
+          "publisher-aff-d"
         ],
         "isEqualContributor": null,
         "equalContributionGroup": "",
         "isCorresponding": true,
-        "correspondingEmail": "",
+        "correspondingEmail": "kmlee@mail.cgu.edu.tw",
         "sources": [
           "crossref",
-          "openalex"
+          "openalex",
+          "https://doi.org/10.1016/j.seppur.2025.134157"
         ]
       }
     ],
     "affiliations": [
       {
-        "id": "aff-1",
+        "id": "publisher-aff-a",
         "label": "a",
-        "department": "",
+        "department": "Department of Chemical and Materials Engineering",
         "institution": "Chang Gung University",
-        "address": "Chang Gung University",
-        "city": "",
+        "city": "Taoyuan",
         "countryCode": "TW",
-        "ror": "https://ror.org/00d80zx46",
-        "raw": "Chang Gung University",
-        "source": "openalex",
-        "sourceId": "https://openalex.org/I173093425"
+        "address": "Department of Chemical and Materials Engineering, Chang Gung University, Taoyuan 33302, Taiwan",
+        "raw": "Department of Chemical and Materials Engineering, Chang Gung University, Taoyuan 33302, Taiwan",
+        "source": "publisher-verified",
+        "sources": [
+          "https://doi.org/10.1016/j.seppur.2025.134157"
+        ]
       },
       {
-        "id": "aff-2",
+        "id": "publisher-aff-b",
         "label": "b",
-        "department": "",
-        "institution": "Chang Gung Memorial Hospital",
-        "address": "Chang Gung Memorial Hospital",
-        "city": "",
+        "department": "Center for Sustainability and Energy Technologies",
+        "institution": "Chang Gung University",
+        "city": "Taoyuan",
         "countryCode": "TW",
-        "ror": "https://ror.org/02verss31",
-        "raw": "Chang Gung Memorial Hospital",
-        "source": "openalex",
-        "sourceId": "https://openalex.org/I3020100970"
+        "address": "Center for Sustainability and Energy Technologies, Chang Gung University, Taoyuan 33302, Taiwan",
+        "raw": "Center for Sustainability and Energy Technologies, Chang Gung University, Taoyuan 33302, Taiwan",
+        "source": "publisher-verified",
+        "sources": [
+          "https://doi.org/10.1016/j.seppur.2025.134157"
+        ]
       },
       {
-        "id": "aff-3",
+        "id": "publisher-aff-c",
         "label": "c",
-        "department": "",
+        "department": "College of Environment and Resources",
         "institution": "Ming Chi University of Technology",
-        "address": "Ming Chi University of Technology",
-        "city": "",
+        "city": "New Taipei City",
         "countryCode": "TW",
-        "ror": "https://ror.org/04xgh4d03",
-        "raw": "Ming Chi University of Technology",
-        "source": "openalex",
-        "sourceId": "https://openalex.org/I12213908"
+        "address": "College of Environment and Resources, Ming Chi University of Technology, New Taipei City 24301, Taiwan",
+        "raw": "College of Environment and Resources, Ming Chi University of Technology, New Taipei City 24301, Taiwan",
+        "source": "publisher-verified",
+        "sources": [
+          "https://doi.org/10.1016/j.seppur.2025.134157"
+        ]
       },
       {
-        "id": "aff-4",
+        "id": "publisher-aff-d",
         "label": "d",
-        "department": "",
-        "institution": "Linkou Chang Gung Memorial Hospital",
-        "address": "Linkou Chang Gung Memorial Hospital",
-        "city": "",
+        "department": "Division of Neonatology, Department of Pediatrics",
+        "institution": "Chang Gung Memorial Hospital",
+        "city": "Taoyuan",
         "countryCode": "TW",
-        "raw": "Linkou Chang Gung Memorial Hospital",
-        "source": "openalex",
-        "sourceId": "https://openalex.org/I4210116208"
+        "address": "Division of Neonatology, Department of Pediatrics, Chang Gung Memorial Hospital, Linkou, Taoyuan 33305, Taiwan",
+        "raw": "Division of Neonatology, Department of Pediatrics, Chang Gung Memorial Hospital, Linkou, Taoyuan 33305, Taiwan",
+        "source": "publisher-verified",
+        "sources": [
+          "https://doi.org/10.1016/j.seppur.2025.134157"
+        ]
       }
     ],
     "authorshipMetadata": {
-      "status": "partial",
-      "lastChecked": "2026-10-23",
+      "status": "manual",
+      "lastChecked": "2026-10-24",
       "sources": [
         "crossref",
-        "openalex"
+        "openalex",
+        "publisher-corrected-proof"
       ],
       "sourceUrls": {
         "crossref": "https://api.crossref.org/works/10.1016%2Fj.seppur.2025.134157",
-        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1016%2Fj.seppur.2025.134157"
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1016%2Fj.seppur.2025.134157",
+        "publisher": "https://doi.org/10.1016/j.seppur.2025.134157"
       },
       "requiresManualReview": true,
       "missingFields": [
-        "equalContribution",
-        "affiliationAddresses"
+        "equalContribution"
       ],
       "warnings": [
-        "europe-pmc: No DOI match"
-      ]
+        "Publisher corrected proof does not explicitly state equal contribution; leave it unknown."
+      ],
+      "manualOverride": true,
+      "manualAffiliations": true,
+      "lockedFields": [
+        "authors",
+        "authorships",
+        "affiliations",
+        "correspondingAuthor",
+        "equalContribution"
+      ],
+      "sourceDocuments": [
+        "pagination_SEPPUR_134157.pdf"
+      ],
+      "publisherVerification": {
+        "checkedAt": "2026-10-24",
+        "publisherAccess": "blocked",
+        "evidenceType": "publisher-corrected-proof-local-copy",
+        "sourceUrl": "https://doi.org/10.1016/j.seppur.2025.134157",
+        "sourceDocument": "pagination_SEPPUR_134157.pdf",
+        "authorOrderVerified": true,
+        "affiliationLinksVerified": true,
+        "correspondenceVerified": true
+      }
     },
     "id": "10.1016/j.seppur.2025.134157",
     "publicationType": "international-journal",
@@ -2675,28 +2707,28 @@
       "partnerCountryCodes": [],
       "partnerInstitutions": [],
       "taiwanAffiliationIds": [
-        "aff-1",
-        "aff-2",
-        "aff-3",
-        "aff-4"
+        "publisher-aff-a",
+        "publisher-aff-b",
+        "publisher-aff-c",
+        "publisher-aff-d"
       ],
       "foreignAffiliationIds": [],
       "hasDualAffiliation": false,
       "determinationMethod": "author-affiliation-address",
       "confidence": "verified",
       "sources": [
-        "crossref",
-        "openalex"
+        "https://doi.org/10.1016/j.seppur.2025.134157"
       ],
       "evidenceUrls": {
         "crossref": "https://api.crossref.org/works/10.1016%2Fj.seppur.2025.134157",
-        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1016%2Fj.seppur.2025.134157"
+        "openalex": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1016%2Fj.seppur.2025.134157",
+        "publisher": "https://doi.org/10.1016/j.seppur.2025.134157"
       },
       "requiresManualReview": false,
       "warnings": [],
-      "manualOverride": false,
-      "lastEvaluated": "2026-10-23",
-      "inputSignature": "78392786f08da6c7f58d"
+      "manualOverride": true,
+      "lastEvaluated": "2026-10-24",
+      "inputSignature": "a3ce1ccedf568d73f8bd"
     }
   },
   {
