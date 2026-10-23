@@ -217,7 +217,7 @@ def conference_info_html(p, prefix=''):
   logo=('sdse.png',1291,437) if acronym.startswith('SDSE') else ('twiche.png',967,180) if acronym.startswith('TwIChE') else None
   artwork=('<img class="conference-logo" src="'+prefix+'assets/images/institutions/'+logo[0]+'" width="'+str(logo[1])+'" height="'+str(logo[2])+'" alt="'+esc('Smart Devices and Sustainable Energy' if acronym.startswith('SDSE') else 'Taiwan Institute of Chemical Engineers')+'" loading="lazy" decoding="async"/>') if logo else ''
   dates=c.get('startDate','')+(' – '+c['endDate'] if c.get('endDate') and c['endDate']!=c.get('startDate') else '')
-  label='Full conference manuscript' if p.get('documentType')=='conference-full-paper' else 'Conference abstract'
+  label={'conference-full-paper':'Full conference manuscript','proceedings-paper':'Conference paper','conference-extended-abstract':'Conference extended abstract'}.get(p.get('documentType'),'Conference abstract')
   lines=['<p>'+label+'</p>']
   for key,lang,title in [('nameEn','en','Conference'),('nameZh','zh-Hant','會議名稱')]:
     if c.get(key): lines.append('<p lang="'+lang+'"><strong>'+title+':</strong> '+esc(c[key])+'</p>')

@@ -21117,7 +21117,9 @@
         "Per-author affiliations unavailable; conference location does not establish international collaboration."
       ],
       "manualOverride": false,
-      "requiresManualReview": true
+      "requiresManualReview": true,
+      "taiwanAffiliationIds": [],
+      "foreignAffiliationIds": []
     }
   },
   {
@@ -21263,7 +21265,9 @@
         "Per-author affiliations unavailable; conference location does not establish international collaboration."
       ],
       "manualOverride": false,
-      "requiresManualReview": true
+      "requiresManualReview": true,
+      "taiwanAffiliationIds": [],
+      "foreignAffiliationIds": []
     }
   }
 ]

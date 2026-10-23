@@ -347,7 +347,7 @@ function conferenceInfo(p){
   const fields=[['Conference dates',dates],['Location',c.location],['Presentation',c.presentationType],['Status',c.acceptanceStatus],['Abstract no.',c.abstractNumber],['Presenting author',c.presentingAuthor]].filter(([,value])=>value);
   const url=normalizeExternalUrl(c.url);
   const names=[['nameEn','en','Conference'],['nameZh','zh-Hant','會議名稱']].filter(([key])=>c[key]).map(([key,lang,label])=>`<p lang="${lang}"><strong>${label}:</strong> ${esc(c[key])}</p>`).join('');
-  return `<div class="conference-meta">${artwork}<p>${p.documentType==='conference-full-paper'?'Full conference manuscript':'Conference abstract'}</p>${names}${fields.map(([label,value])=>`<p><strong>${label}:</strong> ${esc(value)}</p>`).join('')}${url?`<p><a href="${esc(url)}" target="_blank" rel="noopener noreferrer">Conference website ↗</a></p>`:''}</div>`;
+  return `<div class="conference-meta">${artwork}<p>${({'conference-full-paper':'Full conference manuscript','proceedings-paper':'Conference paper','conference-extended-abstract':'Conference extended abstract'}[p.documentType]||'Conference abstract')}</p>${names}${fields.map(([label,value])=>`<p><strong>${label}:</strong> ${esc(value)}</p>`).join('')}${url?`<p><a href="${esc(url)}" target="_blank" rel="noopener noreferrer">Conference website ↗</a></p>`:''}</div>`;
 }
 function publicationCard(p){
   if(p.publicationType==='thesis')return thesisPublicationCard(p);
@@ -977,3 +977,13 @@ document.addEventListener('DOMContentLoaded',async()=>{
   else load();
 })();
 /* PUBLICATION_AUTHORSHIP_APP_END */
+
+/* Official research attention widgets; shared by list and generated detail pages. */
+(() => {
+  const source = document.currentScript?.src;
+  if (!source) return;
+  const script = document.createElement('script');
+  script.src = new URL('publication-attention.js?v=20261023', source).href;
+  script.defer = true;
+  document.head.appendChild(script);
+})();

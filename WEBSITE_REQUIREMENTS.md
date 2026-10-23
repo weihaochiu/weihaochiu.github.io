@@ -178,3 +178,11 @@ Verified collection files in `data/` remain authoritative. Do not replace them w
 
 - Added two source-verified proceedings records: ISOS 15 (2024, Berlin, 30 September–2 October) and EU PVSEC 2025 (Bilbao, 22–26 September). Preserve the distinct ordered author lists and institutional source URLs. Publication year is known; event dates remain conference metadata. DOI, abstract, presentation type, correspondence and per-author affiliation links remain unknown. Both records are automation-protected and excluded from bibliometric metrics; international collaboration remains unknown.
 - Conference/overall/research-output totals are now 29/74/72; 38 core journals and two excluded theses remain unchanged. The existing generator creates `publications/isos-15-2024-pvdf-hfp-space-reliability.html` and `publications/eu-pvsec-2025-pvdf-hfp-space-reliability.html`, listing and discovery entries from the authoritative JSON and taxonomy.
+- Static and browser conference labels distinguish proceedings papers, full manuscripts, extended abstracts and abstracts using the existing document type.
+
+
+## Publication attention widgets — 23 October 2026
+
+DOI-bearing research outputs display official PlumX PlumPrint and Altmetric donut widgets at the right of each article, with left-opening provider popovers and clickable details. DOI-less outputs and theses are excluded. Empty PlumX data and Altmetric records without mentions are hidden. DOI presence does not guarantee provider coverage. Preserve official metric values, labels and artwork, including available X-user counts, patent references and Mendeley readers. Mobile places widgets below article content; external service failures must leave publication content usable.
+
+Independent DOI-bearing article pages must also show both attention widgets beside the bibliographic overview. Keep the abstract, highlights, graphical abstract and citation history at full width; stack widgets after the overview on mobile.

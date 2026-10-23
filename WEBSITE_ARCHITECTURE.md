@@ -475,3 +475,11 @@ flowchart TD
 
 - Added two source-verified proceedings records: ISOS 15 (2024, Berlin, 30 September–2 October) and EU PVSEC 2025 (Bilbao, 22–26 September). Preserve the distinct ordered author lists and institutional source URLs. Publication year is known; event dates remain conference metadata. DOI, abstract, presentation type, correspondence and per-author affiliation links remain unknown. Both records are automation-protected and excluded from bibliometric metrics; international collaboration remains unknown.
 - Conference/overall/research-output totals are now 29/74/72; 38 core journals and two excluded theses remain unchanged. The existing generator creates `publications/isos-15-2024-pvdf-hfp-space-reliability.html` and `publications/eu-pvsec-2025-pvdf-hfp-space-reliability.html`, listing and discovery entries from the authoritative JSON and taxonomy.
+- Static and browser conference labels distinguish proceedings papers, full manuscripts, extended abstracts and abstracts using the existing document type.
+
+
+## Publication attention widgets — 23 October 2026
+
+The shared app.js loads assets/js/publication-attention.js, which discovers DOI links in publication cards (including generator-owned detail pages), adds official PlumX custom elements and Altmetric donut badges, and observes filtered/replaced cards. assets/css/publication-attention.css positions widgets at the right on desktop and below content on mobile. Providers supply live metrics directly; no JSON, generator, Actions or analytics values are changed.
+
+On independent publication pages, the enhancer groups the existing bibliographic header in .publication-detail-overview with a right-hand widget rail; abstract, highlights, graphical abstract and citation sections retain the full article width. The generated HTML remains authoritative and is not edited by hand.

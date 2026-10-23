@@ -1,0 +1,17 @@
+/* Keep official widget graphics and popovers intact; style only their rail. */
+.publication-card{position:relative}
+.publication-attention{display:none;align-items:center;justify-content:flex-end;gap:18px;margin-top:18px}
+.has-attention > .publication-attention,.has-attention > .publication-detail-overview > .publication-attention,.publication-attention:has(.altmetric-embed img){display:flex}
+.publication-attention plumx-widget[hidden]{display:none}
+.publication-card:not(.publication-detail).has-attention,.publication-card:not(.publication-detail):has(.altmetric-embed img){padding-right:190px;min-height:145px}
+.publication-attention{position:absolute;right:4px;top:50%;transform:translateY(-50%);margin:0;width:164px}
+.publication-detail-overview{display:grid;grid-template-columns:minmax(0,1fr);gap:24px}
+.publication-detail.has-attention .publication-detail-overview,.publication-detail-overview:has(.altmetric-embed img){grid-template-columns:minmax(0,1fr) 164px}
+.publication-detail-information{min-width:0}
+.publication-detail .publication-attention{position:static;transform:none;align-self:start;margin-top:38px}
+.publication-detail-overview + .publication-detail-section{margin-top:24px}
+@media(max-width:760px){
+  .publication-card:not(.publication-detail).has-attention,.publication-card:not(.publication-detail):has(.altmetric-embed img){padding-right:0;min-height:0}
+  .publication-detail.has-attention .publication-detail-overview,.publication-detail-overview:has(.altmetric-embed img){grid-template-columns:minmax(0,1fr)}
+  .publication-card .publication-attention{position:static;transform:none;width:auto;justify-content:flex-end;margin-top:18px}
+}
