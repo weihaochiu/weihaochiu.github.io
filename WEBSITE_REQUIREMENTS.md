@@ -2,7 +2,7 @@
 
 ## V20 approved information architecture
 
-- Primary navigation: About, Research, Publications, Patents, Projects.
+- Primary navigation: About, News, Research, Publications, Patents, Projects.
 - The site name links to the homepage; Home is not repeated in the navigation.
 - About consolidates Experience, Education and Awards.
 - Publications, Patents and Projects retain dedicated searchable pages.
@@ -114,7 +114,7 @@ Verified collection files in `data/` remain authoritative. Do not replace them w
 
 ## Curated academic news — 23 October 2026
 
-- Homepage Latest News shows up to three manually curated updates, newest first, after metrics. View all news opens `news.html`; each complete entry has a stable story URL and historical hash-link compatibility. Preserve the existing primary navigation.
+- Homepage Latest News shows up to three manually curated updates, newest first, after metrics. View all news opens `news.html`; each complete entry has a stable story URL and historical hash-link compatibility. Primary navigation includes News between About and Research, linking to `news.html`.
 - News source is `data/news.json`; rebuild through the SEO generator rather than editing generated news HTML. News does not add scholarly outputs or awards to analytics.
 - The SDSE 2026 Honorable Mention poster award is recorded in Awards (11 total), with a separate News entry and the user-provided poster-side group photograph. Publish neither certificate nor award-announcement slide. Preserve the full photograph composition and provide a compressed lazy-loaded preview, accessible caption and full-size link.
 - Display 14–16 October 2026 explicitly as conference dates. Preserve certificate author order; do not infer photo identities, a ceremony date, unverified translations or a DOI.

@@ -98,7 +98,7 @@ def main():
         head = base_head.replace('About | Wei-Hao Chiu', esc(title) + ' | Wei-Hao Chiu').replace(SITE + 'about.html', SITE + path).replace('Professional experience, education, theses and awards of Wei-Hao Chiu.', esc(description))
         # Old news.html#<id> URLs continue to reach stories beyond list page one.
         redirect = '''<script>const newsId=location.hash.slice(1);if(/^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$/.test(newsId)){location.replace('news/'+newsId+'.html');}</script>''' if legacy else ''
-        shell = head + '</head><body>' + header + '<section class="page-header"><div class="shell"><h1>' + esc('News' if story else title) + '</h1></div></section><main class="content shell news-archive">NEWS_BODY</main>' + footer + '<script src="assets/js/app.js?v=news-20261023-3"></script>' + redirect + '</body></html>\n'
+        shell = head + '</head><body>' + header + '<section class="page-header"><div class="shell"><h1>' + esc('News' if story else title) + '</h1></div></section><main class="content shell news-archive">NEWS_BODY</main>' + footer + '<script src="assets/js/app.js?v=nav-news-20261023"></script>' + redirect + '</body></html>\n'
         generated[path] = GENERATED + '\n' + relative_assets(shell, prefix).replace('NEWS_BODY', body)
 
     years = sorted({item['sortDate'][:4] for item in items}, reverse=True)

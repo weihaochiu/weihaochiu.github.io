@@ -126,7 +126,7 @@ function formatDate(x){
 
 function setNavigation(){
   const nav=$('.site-nav');if(!nav)return;
-  const links=[['about.html','About'],['research.html','Research'],['publications.html','Publications'],['patents.html','Patents'],['projects.html','Projects']];
+  const links=[['about.html','About'],['news.html','News'],['research.html','Research'],['publications.html','Publications'],['patents.html','Patents'],['projects.html','Projects']];
   const p=(location.pathname.split('/').pop()||'index.html').toLowerCase();
   const detailSection=location.pathname.toLowerCase().match(/\/(publications|patents|news)\//)?.[1]||'';
   const prefix=detailSection?'../':'';

@@ -115,7 +115,7 @@ class ThesisPublicationTests(unittest.TestCase):
             page = (ROOT / "publications" / f"{slug}.html").read_text(encoding="utf-8")
             self.assertIn('class="author-trigger me"', page)
             self.assertIn('data-author-name="Wei-Hao Chiu"', page)
-            self.assertIn('<script src="../assets/js/app.js"></script>', page)
+            self.assertRegex(page, r'<script src="\.\./assets/js/app\.js(?:\?[^"]*)?"></script>')
 
         app_js = (ROOT / "assets" / "js" / "app.js").read_text(encoding="utf-8")
         self.assertIn("loadData('authors')", app_js)

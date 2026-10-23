@@ -42,7 +42,7 @@ flowchart TD
 | `experience.html` | `/experience.html` | 舊入口，重新導向 `about.html#experience` | redirect/noindex 頁 |
 | `404.html` | 不存在的路徑 | GitHub Pages 找不到頁面時的引導頁 | `styles.css` |
 
-固定主導覽連結為 `About`、`Research`、`Publications`、`Patents`、`Projects`。修改任何頁面時，必須確認桌面與行動版導覽一致，且 publication 子頁使用正確的 `../` 相對路徑。
+固定主導覽連結為 `About`、`News`、`Research`、`Publications`、`Patents`、`Projects`。修改任何頁面時，必須確認桌面與行動版導覽一致，且 publication 子頁使用正確的 `../` 相對路徑。
 
 ## 3. 非公開導覽的分析頁面
 
