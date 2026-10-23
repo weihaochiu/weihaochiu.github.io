@@ -445,3 +445,5 @@ flowchart TD
 - The user-supplied FMRG logo appears on the existing Frontier Materials Research Group service card in Experience.
 
 - Both Energies Guest Editor cards display the user-supplied Energies and MDPI logos; the wide Energies source uses the same whitespace-only CSS crop.
+
+- About logo pairing audit: all three Chang Gung University career entries show its university logo, with the supplied CSET/CRST center logo where available. Each degree shows both its university and original department logo within the existing department link. NSP/URECO and both Energies/MDPI pairs remain present; FMRG and ITRI retain their own marks. No unprovided center or award logo is inferred.

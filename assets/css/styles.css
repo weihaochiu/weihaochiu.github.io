@@ -231,3 +231,7 @@
 .group-logo{margin-bottom:16px}
 
 .editor-logos{display:flex;align-items:center;flex-wrap:wrap;gap:18px;margin-bottom:16px}
+
+/* Pair the parent institution with its department, keeping both marks complete. */
+.education-logo{height:100px;gap:14px}.education-logo .institution-mark{width:min(65%,250px);flex-shrink:1}.education-logo img.department-logo{position:static;display:block;width:76px;height:76px;max-width:27%;max-height:76px;object-fit:contain;flex-shrink:0}.education-logo:hover img.department-logo,.education-logo:focus-visible img.department-logo{transform:none;filter:none}
+@media(max-width:760px){.education-logo{min-height:90px;gap:12px}.education-logo .institution-mark{margin:0}}
