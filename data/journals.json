@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-10-22T22:26:32.439433Z",
+  "lastUpdated": "2026-10-23T13:38:51.647282Z",
   "journalCount": 22,
   "activeJournalCount": 22,
   "sourcePolicy": {
@@ -737,12 +737,13 @@
         "hIndex": 284,
         "i10Index": 10762
       },
-      "publicationCount": 1,
+      "publicationCount": 2,
       "publicationYears": [
-        2025
+        2025,
+        2026
       ],
       "firstPublicationYear": 2025,
-      "latestPublicationYear": 2025,
+      "latestPublicationYear": 2026,
       "sampleDoi": "10.1002/advs.202410666",
       "sources": {
         "crossref": {
