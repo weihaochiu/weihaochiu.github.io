@@ -316,7 +316,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-22",
+      "lastChecked": "2026-10-23",
       "sources": [
         "crossref",
         "openalex"
@@ -375,7 +375,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-22",
+      "lastEvaluated": "2026-10-23",
       "inputSignature": "569c8010c2bd628ff2b9"
     }
   },
@@ -636,7 +636,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-22",
+      "lastChecked": "2026-10-23",
       "sources": [
         "crossref",
         "openalex"
@@ -706,7 +706,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-22",
+      "lastEvaluated": "2026-10-23",
       "inputSignature": "646ca79f7ebf968f83b2"
     }
   },
@@ -913,7 +913,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-22",
+      "lastChecked": "2026-10-23",
       "sources": [
         "crossref",
         "openalex"
@@ -973,7 +973,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-22",
+      "lastEvaluated": "2026-10-23",
       "inputSignature": "52f4ffd9b0292de7aa1b"
     }
   },
@@ -1266,7 +1266,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-22",
+      "lastChecked": "2026-10-23",
       "sources": [
         "crossref",
         "openalex"
@@ -1339,7 +1339,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-22",
+      "lastEvaluated": "2026-10-23",
       "inputSignature": "c5afb4c81365ab7107d1"
     }
   },
@@ -1578,7 +1578,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-22",
+      "lastChecked": "2026-10-23",
       "sources": [
         "crossref",
         "openalex",
@@ -1640,7 +1640,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-22",
+      "lastEvaluated": "2026-10-23",
       "inputSignature": "60961575a5969faaef99"
     }
   },
@@ -1851,7 +1851,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-22",
+      "lastChecked": "2026-10-23",
       "sources": [
         "crossref",
         "openalex"
@@ -1911,7 +1911,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-22",
+      "lastEvaluated": "2026-10-23",
       "inputSignature": "130000780973f627940b"
     }
   },
@@ -2409,7 +2409,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-22",
+      "lastChecked": "2026-10-23",
       "sources": [
         "crossref",
         "openalex"
@@ -2468,7 +2468,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-22",
+      "lastEvaluated": "2026-10-23",
       "inputSignature": "78392786f08da6c7f58d"
     }
   },
@@ -4577,7 +4577,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-22",
+      "lastChecked": "2026-10-23",
       "sources": [
         "crossref",
         "openalex"
@@ -4654,7 +4654,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-22",
+      "lastEvaluated": "2026-10-23",
       "inputSignature": "ac01121f0be4cc735bc0"
     }
   },
@@ -5223,7 +5223,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-22",
+      "lastChecked": "2026-10-23",
       "sources": [
         "europe-pmc",
         "crossref",
@@ -5290,7 +5290,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-22",
+      "lastEvaluated": "2026-10-23",
       "inputSignature": "0de4c62d16a6122ef70d"
     }
   },
@@ -5536,7 +5536,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-22",
+      "lastChecked": "2026-10-23",
       "sources": [
         "crossref",
         "openalex"
@@ -5606,7 +5606,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-22",
+      "lastEvaluated": "2026-10-23",
       "inputSignature": "bb699c1ef6c43cc852c1"
     }
   },
@@ -5829,7 +5829,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-22",
+      "lastChecked": "2026-10-23",
       "sources": [
         "crossref",
         "openalex"
@@ -5888,7 +5888,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-22",
+      "lastEvaluated": "2026-10-23",
       "inputSignature": "27b5c18232cd0f089fd1"
     }
   },
@@ -6142,7 +6142,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-22",
+      "lastChecked": "2026-10-23",
       "sources": [
         "crossref",
         "openalex"
@@ -6202,7 +6202,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-22",
+      "lastEvaluated": "2026-10-23",
       "inputSignature": "15ed5f505925a5c4e786"
     }
   },
@@ -6689,7 +6689,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-22",
+      "lastChecked": "2026-10-23",
       "sources": [
         "crossref",
         "openalex"
@@ -6755,7 +6755,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-22",
+      "lastEvaluated": "2026-10-23",
       "inputSignature": "a9841c5bb06133633d00"
     }
   },
@@ -7099,7 +7099,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-22",
+      "lastChecked": "2026-10-23",
       "sources": [
         "crossref",
         "openalex"
@@ -7163,7 +7163,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-22",
+      "lastEvaluated": "2026-10-23",
       "inputSignature": "d6f9f4a79e1143bf8c99"
     }
   },
@@ -7496,7 +7496,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-22",
+      "lastChecked": "2026-10-23",
       "sources": [
         "crossref",
         "openalex"
@@ -7559,7 +7559,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-22",
+      "lastEvaluated": "2026-10-23",
       "inputSignature": "af2cbcf67e50692be8e8"
     }
   },
@@ -7780,7 +7780,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-22",
+      "lastChecked": "2026-10-23",
       "sources": [
         "crossref",
         "openalex"
@@ -7839,7 +7839,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-22",
+      "lastEvaluated": "2026-10-23",
       "inputSignature": "b3bd572def205f68c298"
     }
   },
@@ -8152,7 +8152,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-22",
+      "lastChecked": "2026-10-23",
       "sources": [
         "crossref",
         "openalex"
@@ -8237,7 +8237,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-22",
+      "lastEvaluated": "2026-10-23",
       "inputSignature": "1780d94c5a2cf0b6c734"
     }
   },
@@ -8610,7 +8610,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-22",
+      "lastChecked": "2026-10-23",
       "sources": [
         "crossref",
         "openalex"
@@ -8684,7 +8684,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-22",
+      "lastEvaluated": "2026-10-23",
       "inputSignature": "42b492786e4167b4b5e5"
     }
   },
@@ -9002,7 +9002,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-22",
+      "lastChecked": "2026-10-23",
       "sources": [
         "crossref",
         "openalex"
@@ -9064,7 +9064,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-22",
+      "lastEvaluated": "2026-10-23",
       "inputSignature": "aa10e25f73eacc12448e"
     }
   },
@@ -9413,7 +9413,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-22",
+      "lastChecked": "2026-10-23",
       "sources": [
         "europe-pmc",
         "crossref",
@@ -9488,7 +9488,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-22",
+      "lastEvaluated": "2026-10-23",
       "inputSignature": "ff4e4808014a5d4d1218"
     }
   },
@@ -9769,7 +9769,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-22",
+      "lastChecked": "2026-10-23",
       "sources": [
         "europe-pmc",
         "crossref",
@@ -9834,7 +9834,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-22",
+      "lastEvaluated": "2026-10-23",
       "inputSignature": "1eb8f7abb7ce03c819ce"
     }
   },
@@ -10101,7 +10101,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-22",
+      "lastChecked": "2026-10-23",
       "sources": [
         "crossref",
         "openalex"
@@ -10163,7 +10163,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-22",
+      "lastEvaluated": "2026-10-23",
       "inputSignature": "baa72db8a2261f36f9dc"
     }
   },
@@ -10425,7 +10425,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-22",
+      "lastChecked": "2026-10-23",
       "sources": [
         "europe-pmc",
         "crossref",
@@ -10490,7 +10490,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-22",
+      "lastEvaluated": "2026-10-23",
       "inputSignature": "9a08c1d2203e0e0e3444"
     }
   },
@@ -10747,7 +10747,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-22",
+      "lastChecked": "2026-10-23",
       "sources": [
         "europe-pmc",
         "crossref",
@@ -10823,7 +10823,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-22",
+      "lastEvaluated": "2026-10-23",
       "inputSignature": "62652eea6294099833c3"
     }
   },
@@ -11171,7 +11171,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-22",
+      "lastChecked": "2026-10-23",
       "sources": [
         "europe-pmc",
         "crossref",
@@ -11246,7 +11246,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-22",
+      "lastEvaluated": "2026-10-23",
       "inputSignature": "9e77cdddc63f2eb96c79"
     }
   },
@@ -11400,7 +11400,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-22",
+      "lastChecked": "2026-10-23",
       "sources": [
         "crossref",
         "openalex"
@@ -11467,7 +11467,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-22",
+      "lastEvaluated": "2026-10-23",
       "inputSignature": "cb9b786771da7e1909e8"
     }
   },
@@ -11685,7 +11685,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-22",
+      "lastChecked": "2026-10-23",
       "sources": [
         "crossref",
         "openalex"
@@ -11744,7 +11744,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-22",
+      "lastEvaluated": "2026-10-23",
       "inputSignature": "4d4599af6b4adf921fda"
     }
   },
@@ -11912,7 +11912,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-22",
+      "lastChecked": "2026-10-23",
       "sources": [
         "crossref",
         "openalex"
@@ -11970,7 +11970,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-22",
+      "lastEvaluated": "2026-10-23",
       "inputSignature": "b8839a489b614cca19c1"
     }
   },
@@ -12119,7 +12119,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-22",
+      "lastChecked": "2026-10-23",
       "sources": [
         "crossref",
         "openalex"
@@ -12177,7 +12177,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-22",
+      "lastEvaluated": "2026-10-23",
       "inputSignature": "b04f3d7f64ab5607593b"
     }
   },
@@ -12659,7 +12659,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-22",
+      "lastChecked": "2026-10-23",
       "sources": [
         "crossref",
         "openalex"
@@ -12718,7 +12718,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-22",
+      "lastEvaluated": "2026-10-23",
       "inputSignature": "7a8110569239686bcb7b"
     }
   },
@@ -12954,7 +12954,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-22",
+      "lastChecked": "2026-10-23",
       "sources": [
         "crossref",
         "openalex"
@@ -13023,7 +13023,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-22",
+      "lastEvaluated": "2026-10-23",
       "inputSignature": "0c9eb1fab311e5c1a508"
     }
   },
@@ -13246,7 +13246,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-22",
+      "lastChecked": "2026-10-23",
       "sources": [
         "crossref",
         "openalex"
@@ -13304,7 +13304,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-22",
+      "lastEvaluated": "2026-10-23",
       "inputSignature": "f5018d2affca6a20b0fb"
     }
   },
@@ -13957,7 +13957,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-22",
+      "lastChecked": "2026-10-23",
       "sources": [
         "crossref",
         "openalex"
@@ -14014,7 +14014,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-22",
+      "lastEvaluated": "2026-10-23",
       "inputSignature": "513bac3036da26f159e9"
     }
   },
@@ -14433,7 +14433,7 @@
     "affiliations": [],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-22",
+      "lastChecked": "2026-10-23",
       "sources": [
         "Crossref",
         "OpenAlex",
@@ -14497,7 +14497,7 @@
         "No usable author-address country data"
       ],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-22",
+      "lastEvaluated": "2026-10-23",
       "inputSignature": "de4bab5ed0b91be06006"
     }
   },
