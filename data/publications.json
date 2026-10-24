@@ -12170,7 +12170,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-23",
+      "lastChecked": "2026-10-24",
       "sources": [
         "crossref",
         "openalex"
@@ -12185,7 +12185,8 @@
         "affiliationAddresses"
       ],
       "warnings": [
-        "europe-pmc: No DOI match"
+        "europe-pmc: No DOI match",
+        "europe-pmc: Unable to fetch https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016/j.jpowsour.2012.12.094%22&format=json&pageSize=5: HTTP Error 503:"
       ]
     },
     "id": "10.1016/j.jpowsour.2012.12.094",
@@ -12237,7 +12238,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-23",
+      "lastEvaluated": "2026-10-24",
       "inputSignature": "cb9b786771da7e1909e8"
     }
   },
@@ -12455,7 +12456,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-23",
+      "lastChecked": "2026-10-24",
       "sources": [
         "crossref",
         "openalex"
@@ -12470,7 +12471,8 @@
         "affiliationAddresses"
       ],
       "warnings": [
-        "europe-pmc: No DOI match"
+        "europe-pmc: No DOI match",
+        "europe-pmc: Unable to fetch https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016/j.jpowsour.2012.05.079%22&format=json&pageSize=5: HTTP Error 503:"
       ]
     },
     "id": "10.1016/j.jpowsour.2012.05.079",
@@ -12514,7 +12516,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-23",
+      "lastEvaluated": "2026-10-24",
       "inputSignature": "4d4599af6b4adf921fda"
     }
   },
@@ -13503,7 +13505,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-23",
+      "lastChecked": "2026-10-24",
       "sources": [
         "crossref",
         "openalex"
@@ -13518,7 +13520,8 @@
         "affiliationAddresses"
       ],
       "warnings": [
-        "europe-pmc: No DOI match"
+        "europe-pmc: No DOI match",
+        "europe-pmc: Unable to fetch https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016/j.electacta.2010.07.061%22&format=json&pageSize=5: HTTP Error 503:"
       ]
     },
     "id": "10.1016/j.electacta.2010.07.061",
@@ -13562,7 +13565,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-23",
+      "lastEvaluated": "2026-10-24",
       "inputSignature": "7a8110569239686bcb7b"
     }
   },
@@ -14136,7 +14139,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-23",
+      "lastChecked": "2026-10-24",
       "sources": [
         "crossref",
         "openalex"
@@ -14151,7 +14154,8 @@
         "affiliationAddresses"
       ],
       "warnings": [
-        "europe-pmc: No DOI match"
+        "europe-pmc: No DOI match",
+        "europe-pmc: Unable to fetch https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016/j.solmat.2009.07.017%22&format=json&pageSize=5: HTTP Error 503:"
       ]
     },
     "id": "10.1016/j.solmat.2009.07.017",
@@ -14194,7 +14198,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-23",
+      "lastEvaluated": "2026-10-24",
       "inputSignature": "f5018d2affca6a20b0fb"
     }
   },
@@ -15425,7 +15429,7 @@
     "affiliations": [],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-23",
+      "lastChecked": "2026-10-24",
       "sources": [
         "Crossref",
         "OpenAlex",
@@ -15443,7 +15447,8 @@
       ],
       "warnings": [
         "Crossref and OpenAlex identify publication year 2008, while the Chang Gung University Pure record identifies 2009; the DOI registration year 2008 is used.",
-        "europe-pmc: No DOI match"
+        "europe-pmc: No DOI match",
+        "europe-pmc: Unable to fetch https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1557/proc-1121-n14-01%22&format=json&pageSize=5: HTTP Error 503:"
       ]
     },
     "id": "10.1557/proc-1121-n14-01",
@@ -15489,7 +15494,7 @@
         "No usable author-address country data"
       ],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-23",
+      "lastEvaluated": "2026-10-24",
       "inputSignature": "de4bab5ed0b91be06006"
     }
   },
