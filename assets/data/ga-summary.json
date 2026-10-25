@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-24T05:55:25Z",
+  "generatedAt": "2026-10-25T06:09:27Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 305,
-    "activeUsers": 89,
-    "sessions": 107,
-    "engagementRate": 0.308411214953271
+    "pageViews": 307,
+    "activeUsers": 88,
+    "sessions": 108,
+    "engagementRate": 0.3148148148148148
   },
   "monthlyTrend": [
     {
@@ -29,7 +29,7 @@
     },
     {
       "month": "2026-10",
-      "pageViews": 295,
+      "pageViews": 298,
       "activeUsers": 79
     }
   ],
@@ -38,12 +38,12 @@
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
       "pageViews": 69,
-      "activeUsers": 31
+      "activeUsers": 30
     },
     {
       "title": "Publications | Wei-Hao Chiu",
       "path": "/publications.html",
-      "pageViews": 38,
+      "pageViews": 39,
       "activeUsers": 4
     },
     {
@@ -119,21 +119,21 @@
       "activeUsers": 1
     },
     {
-      "title": "Reliability enhancement of PVDF-HFP modified perovskite solar cells under synergistic space-relevant stress conditions | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-cej-2026-177494.html",
+      "title": "MOF-& COF-integrated composite separators/membranes: innovations for sustainable and high-performance redox flow batteries | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-seppur-2025-134157.html",
       "pageViews": 3,
-      "activeUsers": 3
+      "activeUsers": 2
     }
   ],
   "trafficChannels": [
     {
       "channel": "Direct",
       "sessions": 89,
-      "activeUsers": 80
+      "activeUsers": 79
     },
     {
       "channel": "Organic Search",
-      "sessions": 15,
+      "sessions": 16,
       "activeUsers": 7
     },
     {
@@ -152,12 +152,12 @@
       "source": "(direct)",
       "medium": "(none)",
       "sessions": 89,
-      "activeUsers": 80
+      "activeUsers": 79
     },
     {
       "source": "google",
       "medium": "organic",
-      "sessions": 9,
+      "sessions": 10,
       "activeUsers": 2
     },
     {
@@ -192,13 +192,13 @@
     },
     {
       "country": "China",
-      "activeUsers": 16,
-      "pageViews": 16
+      "activeUsers": 15,
+      "pageViews": 15
     },
     {
       "country": "Taiwan",
       "activeUsers": 6,
-      "pageViews": 219
+      "pageViews": 222
     },
     {
       "country": "Japan",
@@ -209,7 +209,7 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 84
+      "activeUsers": 83
     },
     {
       "device": "mobile",
