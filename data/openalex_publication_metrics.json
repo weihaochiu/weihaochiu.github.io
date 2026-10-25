@@ -5,7 +5,7 @@
   "publicationCount": 42,
   "verifiedCount": 40,
   "notFoundCount": 2,
-  "lastSuccessfulUpdate": "2026-10-24T07:21:48Z",
+  "lastSuccessfulUpdate": "2026-10-25T07:38:15Z",
   "records": {
     "10.1016/j.cej.2026.183177": {
       "status": "verified",
@@ -338,12 +338,12 @@
       "title": "Controlled Photoanode Properties for Large-Area Efficient and Stable Dye-Sensitized Photovoltaic Modules",
       "openAlexId": "W3195032786",
       "url": "https://openalex.org/W3195032786",
-      "citationCount": 11,
-      "fwci": 0.3144,
-      "citationPercentile": 0.44288821,
+      "citationCount": 12,
+      "fwci": 0.3155,
+      "citationPercentile": 0.43970417,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-09-27T08:07:27.782135"
+      "openAlexUpdatedDate": "2026-10-24T09:50:30.924529"
     },
     "10.3390/nano11061607": {
       "status": "verified",
@@ -530,7 +530,7 @@
       "url": "https://openalex.org/W7212081566",
       "citationCount": 0,
       "fwci": 0.0,
-      "citationPercentile": 0.60484807,
+      "citationPercentile": 0.60059945,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-10-22T18:32:59.640997"
