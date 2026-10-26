@@ -2,12 +2,12 @@
   "schemaVersion": 3,
   "source": "OpenAlex Works API",
   "status": "success_with_exclusions",
-  "lastSuccessfulUpdate": "2026-10-19T09:32:26.109655Z",
-  "workCount": 38,
+  "lastSuccessfulUpdate": "2026-10-26T09:36:49.020470Z",
+  "workCount": 40,
   "missingPublicationYearCount": 0,
-  "totalCitationsFromPublicationMetrics": 1007,
-  "rawTotalCitationsFromHistory": 1007,
-  "totalCitationsIncludedInAnnualChart": 1001,
+  "totalCitationsFromPublicationMetrics": 1011,
+  "rawTotalCitationsFromHistory": 1011,
+  "totalCitationsIncludedInAnnualChart": 1005,
   "rawValidationDifference": 0,
   "unassignedCitationCount": 0,
   "excludedInvalidCitationCount": 6,
@@ -137,7 +137,7 @@
     },
     {
       "year": 2026,
-      "citations": 73
+      "citations": 77
     }
   ],
   "works": {
@@ -15791,7 +15791,7 @@
       "doi": "10.1016/j.cej.2021.131609",
       "title": "High-performance perovskite solar cells based on dopant-free hole-transporting material fabricated by a thermal-assisted blade-coating method with efficiency exceeding 21%",
       "publicationYear": 2022,
-      "currentCitationCount": 62,
+      "currentCitationCount": 63,
       "sourceUrl": "https://api.openalex.org/works?filter=cites:W3187467581",
       "citationsByYear": [
         {
@@ -15812,7 +15812,7 @@
         },
         {
           "year": 2026,
-          "citations": 6
+          "citations": 7
         }
       ],
       "rawCitationsByYear": [
@@ -15838,11 +15838,11 @@
         },
         {
           "year": 2026,
-          "citations": 6
+          "citations": 7
         }
       ],
-      "historyTotal": 60,
-      "rawHistoryTotal": 62,
+      "historyTotal": 61,
+      "rawHistoryTotal": 63,
       "excludedInvalidCitationCount": 2,
       "excludedInvalidCitations": [
         {
@@ -15853,9 +15853,32 @@
         }
       ],
       "unassignedCitationCount": 0,
-      "citingWorkCount": 62,
-      "citingArticlesWithDoiCount": 60,
+      "citingWorkCount": 63,
+      "citingArticlesWithDoiCount": 61,
       "citingArticlesWithDoi": [
+        {
+          "openAlexId": "W7223455708",
+          "doi": "10.1002/ente.70699",
+          "doiUrl": "https://doi.org/10.1002/ente.70699",
+          "title": "Bifunctional Central Acceptor Engineering of Tetrathiafulvalene‐Based Dopant‐Free Hole Transport Materials for Perovskite Solar Cells: Density Functional Theory/Time‐Dependent Density Functional Theory Investigation",
+          "authors": [
+            "Shanza Hameed",
+            "Ali Raza Ayub",
+            "Shumaila Shaheen",
+            "Mubashar Ilyas",
+            "Muhammad Waqas",
+            "Sahar Javaid Akram",
+            "Ijaz Ahmad Bhatti",
+            "Shaukat Ali"
+          ],
+          "journal": "Energy Technology",
+          "publicationYear": 2026,
+          "publicationDate": "2026-10-01",
+          "volume": "14",
+          "issue": "10",
+          "pages": "",
+          "type": "article"
+        },
         {
           "openAlexId": "W7214965081",
           "doi": "10.1002/smll.75949",
@@ -17268,7 +17291,7 @@
       "doi": "10.3390/nano11082125",
       "title": "Controlled Photoanode Properties for Large-Area Efficient and Stable Dye-Sensitized Photovoltaic Modules",
       "publicationYear": 2021,
-      "currentCitationCount": 11,
+      "currentCitationCount": 12,
       "sourceUrl": "https://api.openalex.org/works?filter=cites:W3195032786",
       "citationsByYear": [
         {
@@ -17289,7 +17312,7 @@
         },
         {
           "year": 2026,
-          "citations": 2
+          "citations": 3
         }
       ],
       "rawCitationsByYear": [
@@ -17311,17 +17334,39 @@
         },
         {
           "year": 2026,
-          "citations": 2
+          "citations": 3
         }
       ],
-      "historyTotal": 11,
-      "rawHistoryTotal": 11,
+      "historyTotal": 12,
+      "rawHistoryTotal": 12,
       "excludedInvalidCitationCount": 0,
       "excludedInvalidCitations": [],
       "unassignedCitationCount": 0,
-      "citingWorkCount": 11,
-      "citingArticlesWithDoiCount": 11,
+      "citingWorkCount": 12,
+      "citingArticlesWithDoiCount": 12,
       "citingArticlesWithDoi": [
+        {
+          "openAlexId": "W7223272281",
+          "doi": "10.1002/solr.202500883",
+          "doiUrl": "https://doi.org/10.1002/solr.202500883",
+          "title": "Challenges and Perspectives for an Extended Use of the Dye‐Sensitized Solar Cells",
+          "authors": [
+            "Danilo Dini",
+            "Paolo Mariani",
+            "Erica Magliano",
+            "Daniele Franchi",
+            "Lorenzo Baldini",
+            "Marina Freitag",
+            "Marilena Carbone"
+          ],
+          "journal": "Solar RRL",
+          "publicationYear": 2026,
+          "publicationDate": "2026-10-23",
+          "volume": "10",
+          "issue": "20",
+          "pages": "",
+          "type": "article"
+        },
         {
           "openAlexId": "W7165870918",
           "doi": "10.1016/j.enbuild.2026.117866",
@@ -18078,7 +18123,7 @@
       "doi": "10.3390/nano12152651",
       "title": "Surfactant Tween 20 Controlled Perovskite Film Fabricated by Thermal Blade Coating for Efficient Perovskite Solar Cells",
       "publicationYear": 2022,
-      "currentCitationCount": 10,
+      "currentCitationCount": 11,
       "sourceUrl": "https://api.openalex.org/works?filter=cites:W4289524742",
       "citationsByYear": [
         {
@@ -18092,6 +18137,10 @@
         {
           "year": 2025,
           "citations": 3
+        },
+        {
+          "year": 2026,
+          "citations": 1
         }
       ],
       "rawCitationsByYear": [
@@ -18106,16 +18155,46 @@
         {
           "year": 2025,
           "citations": 3
+        },
+        {
+          "year": 2026,
+          "citations": 1
         }
       ],
-      "historyTotal": 10,
-      "rawHistoryTotal": 10,
+      "historyTotal": 11,
+      "rawHistoryTotal": 11,
       "excludedInvalidCitationCount": 0,
       "excludedInvalidCitations": [],
       "unassignedCitationCount": 0,
-      "citingWorkCount": 10,
-      "citingArticlesWithDoiCount": 10,
+      "citingWorkCount": 11,
+      "citingArticlesWithDoiCount": 11,
       "citingArticlesWithDoi": [
+        {
+          "openAlexId": "W7222925536",
+          "doi": "10.1021/acs.jpclett.6c02871",
+          "doiUrl": "https://doi.org/10.1021/acs.jpclett.6c02871",
+          "title": "Synergistic Dimensional and Passivation Engineering via Blade Coating Enables Efficient and Stable Perovskite Solar Cells",
+          "authors": [
+            "Junhao Geng",
+            "Yulu Liu",
+            "Xiao Zhou",
+            "Liu Yang",
+            "Shuang Li",
+            "Hongmei Zhan",
+            "Helong Zhu",
+            "Dezhong Zhang",
+            "Hui Tong",
+            "Zhipeng Wei",
+            "Chuanjiang Qin"
+          ],
+          "journal": "The Journal of Physical Chemistry Letters",
+          "publicationYear": 2026,
+          "publicationDate": "2026-10-20",
+          "volume": "",
+          "issue": "",
+          "pages": "",
+          "type": "article"
+        },
         {
           "openAlexId": "W4413444362",
           "doi": "10.1016/j.renene.2025.124243",
@@ -18341,7 +18420,7 @@
       "doi": "10.1016/j.cej.2022.139926",
       "title": "Facile Synthesis of Spiro-Core-Based Hole-Transporting Material for High-Performance and Stable Perovskite Solar Cells",
       "publicationYear": 2023,
-      "currentCitationCount": 34,
+      "currentCitationCount": 35,
       "sourceUrl": "https://api.openalex.org/works?filter=cites:W4308038509",
       "citationsByYear": [
         {
@@ -18358,7 +18437,7 @@
         },
         {
           "year": 2026,
-          "citations": 6
+          "citations": 7
         }
       ],
       "rawCitationsByYear": [
@@ -18380,11 +18459,11 @@
         },
         {
           "year": 2026,
-          "citations": 6
+          "citations": 7
         }
       ],
-      "historyTotal": 33,
-      "rawHistoryTotal": 34,
+      "historyTotal": 34,
+      "rawHistoryTotal": 35,
       "excludedInvalidCitationCount": 1,
       "excludedInvalidCitations": [
         {
@@ -18395,9 +18474,30 @@
         }
       ],
       "unassignedCitationCount": 0,
-      "citingWorkCount": 34,
-      "citingArticlesWithDoiCount": 33,
+      "citingWorkCount": 35,
+      "citingArticlesWithDoiCount": 34,
       "citingArticlesWithDoi": [
+        {
+          "openAlexId": "W7222935469",
+          "doi": "10.1038/s41578-026-00973-9",
+          "doiUrl": "https://doi.org/10.1038/s41578-026-00973-9",
+          "title": "Cost-driven strategies towards industrially manufacturable perovskite photovoltaics",
+          "authors": [
+            "Ziyang Zhang",
+            "Yingming Liu",
+            "Zhenzhen Qin",
+            "Mengjiong Chen",
+            "Yanbo Wang",
+            "Liyuan Han"
+          ],
+          "journal": "Nature Reviews Materials",
+          "publicationYear": 2026,
+          "publicationDate": "2026-10-19",
+          "volume": "",
+          "issue": "",
+          "pages": "",
+          "type": "review"
+        },
         {
           "openAlexId": "W7212081566",
           "doi": "10.1002/advs.77623",
@@ -18513,10 +18613,10 @@
             "Shang‐Gen Yang",
             "Jian Chen",
             "Dian Wang",
-            "Jun‐Jie Zhang",
+            "Junjie Zhang",
             "Zu-Kun Zhou",
             "Jing Xiao",
-            "Long Jiang",
+            "Jiang Long",
             "Zhi‐Zheng Wu",
             "Hiroyuki Kanda",
             "Hua Yang",
@@ -21250,10 +21350,10 @@
             "Shang‐Gen Yang",
             "Jian Chen",
             "Dian Wang",
-            "Jun‐Jie Zhang",
+            "Junjie Zhang",
             "Zu-Kun Zhou",
             "Jing Xiao",
-            "Long Jiang",
+            "Jiang Long",
             "Zhi‐Zheng Wu",
             "Hiroyuki Kanda",
             "Hua Yang",
@@ -22114,10 +22214,10 @@
             "Shang‐Gen Yang",
             "Jian Chen",
             "Dian Wang",
-            "Jun‐Jie Zhang",
+            "Junjie Zhang",
             "Zu-Kun Zhou",
             "Jing Xiao",
-            "Long Jiang",
+            "Jiang Long",
             "Zhi‐Zheng Wu",
             "Hiroyuki Kanda",
             "Hua Yang",
@@ -23161,6 +23261,40 @@
       "publicationYear": 2026,
       "currentCitationCount": 0,
       "sourceUrl": "https://api.openalex.org/works?filter=cites:W7168190148",
+      "citationsByYear": [],
+      "rawCitationsByYear": [],
+      "historyTotal": 0,
+      "rawHistoryTotal": 0,
+      "excludedInvalidCitationCount": 0,
+      "excludedInvalidCitations": [],
+      "unassignedCitationCount": 0,
+      "citingWorkCount": 0,
+      "citingArticlesWithDoiCount": 0,
+      "citingArticlesWithDoi": []
+    },
+    "W7212081566": {
+      "doi": "10.1002/advs.77623",
+      "title": "Asymmetric Fluorinated Spiro Hole‐Transport Materials Enabled by a Rapid Core‐Forming Strategy for Blade‐Coated Perovskite Solar Cells",
+      "publicationYear": 2026,
+      "currentCitationCount": 0,
+      "sourceUrl": "https://api.openalex.org/works?filter=cites:W7212081566",
+      "citationsByYear": [],
+      "rawCitationsByYear": [],
+      "historyTotal": 0,
+      "rawHistoryTotal": 0,
+      "excludedInvalidCitationCount": 0,
+      "excludedInvalidCitations": [],
+      "unassignedCitationCount": 0,
+      "citingWorkCount": 0,
+      "citingArticlesWithDoiCount": 0,
+      "citingArticlesWithDoi": []
+    },
+    "W7222468352": {
+      "doi": "10.1016/j.cej.2026.183177",
+      "title": "Coupled morphology and phase regulation of in-situ grown TiO2 nanostructures on graphite felt for enhanced redox kinetics in vanadium redox flow batteries",
+      "publicationYear": 2026,
+      "currentCitationCount": 0,
+      "sourceUrl": "https://api.openalex.org/works?filter=cites:W7222468352",
       "citationsByYear": [],
       "rawCitationsByYear": [],
       "historyTotal": 0,

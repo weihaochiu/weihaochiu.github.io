@@ -4,8 +4,8 @@
   "status": "success",
   "profileId": "ZYbNQb8AAAAJ",
   "profileUrl": "https://scholar.google.com/citations?user=ZYbNQb8AAAAJ&hl=en",
-  "lastSuccessfulUpdate": "2026-10-19T09:31:44.814639Z",
-  "totalCitations": 1228,
+  "lastSuccessfulUpdate": "2026-10-26T09:36:09.356034Z",
+  "totalCitations": 1232,
   "hIndex": 15,
   "i10Index": 25,
   "citationsByYear": [
@@ -31,7 +31,7 @@
     },
     {
       "year": 2013,
-      "citations": 122
+      "citations": 123
     },
     {
       "year": 2014,
@@ -67,15 +67,15 @@
     },
     {
       "year": 2022,
-      "citations": 56
+      "citations": 54
     },
     {
       "year": 2023,
-      "citations": 76
+      "citations": 78
     },
     {
       "year": 2024,
-      "citations": 68
+      "citations": 69
     },
     {
       "year": 2025,
@@ -83,7 +83,7 @@
     },
     {
       "year": 2026,
-      "citations": 97
+      "citations": 99
     }
   ]
 }
