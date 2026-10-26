@@ -5,7 +5,7 @@
   "publicationCount": 42,
   "verifiedCount": 40,
   "notFoundCount": 2,
-  "lastSuccessfulUpdate": "2026-10-25T07:38:15Z",
+  "lastSuccessfulUpdate": "2026-10-26T07:51:46Z",
   "records": {
     "10.1016/j.cej.2026.183177": {
       "status": "verified",
@@ -15,10 +15,10 @@
       "url": "https://openalex.org/W7222468352",
       "citationCount": 0,
       "fwci": 0.0,
-      "citationPercentile": 0.75871763,
+      "citationPercentile": 0.73698462,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-10-18T09:31:52.927876"
+      "openAlexUpdatedDate": "2026-10-25T09:29:13.331239"
     },
     "10.1016/j.cej.2026.177494": {
       "status": "verified",
@@ -312,12 +312,12 @@
       "title": "High-performance perovskite solar cells based on dopant-free hole-transporting material fabricated by a thermal-assisted blade-coating method with efficiency exceeding 21%",
       "openAlexId": "W3187467581",
       "url": "https://openalex.org/W3187467581",
-      "citationCount": 62,
-      "fwci": 3.311,
-      "citationPercentile": 0.93399717,
+      "citationCount": 63,
+      "fwci": 3.3122,
+      "citationPercentile": 0.93402115,
       "isTop1Percent": false,
       "isTop10Percent": true,
-      "openAlexUpdatedDate": "2026-10-16T09:59:22.235173"
+      "openAlexUpdatedDate": "2026-10-25T09:29:13.331239"
     },
     "10.3390/polym13234246": {
       "status": "verified",
@@ -339,8 +339,8 @@
       "openAlexId": "W3195032786",
       "url": "https://openalex.org/W3195032786",
       "citationCount": 12,
-      "fwci": 0.3155,
-      "citationPercentile": 0.43970417,
+      "fwci": 0.3156,
+      "citationPercentile": 0.43973141,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-10-24T09:50:30.924529"
@@ -530,10 +530,10 @@
       "url": "https://openalex.org/W7212081566",
       "citationCount": 0,
       "fwci": 0.0,
-      "citationPercentile": 0.60059945,
+      "citationPercentile": 0.59813417,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-10-22T18:32:59.640997"
+      "openAlexUpdatedDate": "2026-10-25T09:29:13.331239"
     }
   }
 }
