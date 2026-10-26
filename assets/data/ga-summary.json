@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-25T06:09:27Z",
+  "generatedAt": "2026-10-26T06:16:14Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
@@ -29,8 +29,8 @@
     },
     {
       "month": "2026-10",
-      "pageViews": 298,
-      "activeUsers": 79
+      "pageViews": 299,
+      "activeUsers": 80
     }
   ],
   "topPages": [
@@ -128,13 +128,13 @@
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 89,
-      "activeUsers": 79
+      "sessions": 88,
+      "activeUsers": 78
     },
     {
       "channel": "Organic Search",
-      "sessions": 16,
-      "activeUsers": 7
+      "sessions": 17,
+      "activeUsers": 8
     },
     {
       "channel": "Referral",
@@ -151,14 +151,14 @@
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 89,
-      "activeUsers": 79
+      "sessions": 88,
+      "activeUsers": 78
     },
     {
       "source": "google",
       "medium": "organic",
-      "sessions": 10,
-      "activeUsers": 2
+      "sessions": 11,
+      "activeUsers": 3
     },
     {
       "source": "bing",
@@ -182,8 +182,8 @@
   "topCountries": [
     {
       "country": "Singapore",
-      "activeUsers": 47,
-      "pageViews": 47
+      "activeUsers": 46,
+      "pageViews": 46
     },
     {
       "country": "United States",
@@ -197,8 +197,8 @@
     },
     {
       "country": "Taiwan",
-      "activeUsers": 6,
-      "pageViews": 222
+      "activeUsers": 7,
+      "pageViews": 223
     },
     {
       "country": "Japan",
@@ -209,11 +209,11 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 83
+      "activeUsers": 82
     },
     {
       "device": "mobile",
-      "activeUsers": 5
+      "activeUsers": 6
     }
   ],
   "academicEvents": [
