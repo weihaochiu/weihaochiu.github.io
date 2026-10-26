@@ -522,17 +522,6 @@ function projectResearchDetails(p){
   const source=sourceUrl?`<p class="project-detail-source">Source: <a href="${esc(sourceUrl)}" target="_blank" rel="noopener noreferrer">Government Research Bulletin (GRB) ↗</a></p>`:'<p class="project-detail-source">Source: Government Research Bulletin (GRB)</p>';
   return `<details class="project-research-details"><summary>Project abstracts and keywords <span lang="zh-Hant">／計畫摘要與關鍵字</span></summary><div class="project-detail-body">${sections.join('')}${source}</div></details>`;
 }
-function recordOrganizationLogo(name, kind){
-  const text=String(name||'');
-  let logo;
-  if(kind==='project' && text==='National Science and Technology Council, Taiwan')logo=['nstc.svg','National Science and Technology Council',362,55];
-  if(kind==='award' && /Taiwan Institute of Chemical Engineers/.test(text))logo=['twiche.png','Taiwan Institute of Chemical Engineers',967,180];
-  if(kind==='award' && /Smart Devices and Sustainable Energy/.test(text))logo=['sdse.png','Smart Devices and Sustainable Energy',1291,437];
-  if(kind==='award' && /^20[0-9]{2} Taiwan Innotech Expo/.test(text))logo=['tie.png','Taiwan Innotech Expo',300,55];
-  if(!logo)return '';
-  const [file,alt,width,height]=logo;
-  return `<div class="record-organization-logo"><img src="${/\/(publications|patents|news)\//.test(location.pathname)?'../':''}assets/images/institutions/${file}" alt="${alt}" width="${width}" height="${height}" loading="lazy" decoding="async"/></div>`;
-}
 function projectCard(p){
   const funding=formatProjectFunding(p);
   const fundingRow=funding?`<p class="meta-row"><strong>GRB-reported funding:</strong> ${esc(funding)}${p.fundingAmountK?` <span lang="zh-Hant">（本期經費 ${esc(Number(p.fundingAmountK).toLocaleString())} 千元）</span>`:''}</p>`:'';
@@ -540,7 +529,7 @@ function projectCard(p){
   const summary=p.scopeEn?`<p class="summary">${esc(p.scopeEn)}</p>`:'';
   const autoAdded=p.autoAddedFromGRB?'<span class="card-label">GRB auto-synced</span>':'';
   const details=projectResearchDetails(p);
-  return `<article class="collection-card project-card">${recordOrganizationLogo(agency,'project')}<div class="card-heading"><h4>${p.url?`<a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.titleEn||p.titleZh)}</a>`:esc(p.titleEn||p.titleZh)}</h4><span class="date-badge">${esc(p.period||p.startYear)}</span></div>${p.titleZh?`<div class="local-title" lang="zh-Hant">${esc(p.titleZh)}</div>`:''}<div class="card-labels"><span class="card-label">${esc(p.status)}</span><span class="card-label">${esc(p.role)} · ${esc(p.roleZh)}</span>${p.number?`<span class="card-label">${esc(p.number)}</span>`:''}${autoAdded}</div>${agency?`<p>${esc(agency)}</p>`:''}${fundingRow}${summary}${details}${p.url?`<div class="card-actions"><a class="action" href="${esc(p.url)}" target="_blank" rel="noopener">Project record ↗</a></div>`:''}</article>`;
+  return `<article class="collection-card project-card"><div class="card-heading"><h4>${p.url?`<a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.titleEn||p.titleZh)}</a>`:esc(p.titleEn||p.titleZh)}</h4><span class="date-badge">${esc(p.period||p.startYear)}</span></div>${p.titleZh?`<div class="local-title" lang="zh-Hant">${esc(p.titleZh)}</div>`:''}<div class="card-labels"><span class="card-label">${esc(p.status)}</span><span class="card-label">${esc(p.role)} · ${esc(p.roleZh)}</span>${p.number?`<span class="card-label">${esc(p.number)}</span>`:''}${autoAdded}</div>${agency?`<p>${esc(agency)}</p>`:''}${fundingRow}${summary}${details}${p.url?`<div class="card-actions"><a class="action" href="${esc(p.url)}" target="_blank" rel="noopener">Project record ↗</a></div>`:''}</article>`;
 }
 /* GRB_PROJECT_FUNDING_END */
 function awardCard(a){return `<article class="collection-card">${recordOrganizationLogo(a.organizationEn,'award')}<div class="card-heading"><h4>${esc(a.titleEn)}</h4><span class="date-badge">${esc(a.date)}</span></div>${a.titleZh?`<div class="award-title-zh" lang="zh-Hant">${esc(a.titleZh)}</div>`:''}<p><strong>${esc(a.organizationEn)}</strong></p><p>${esc(a.workEn)}</p><p>${esc(a.recipientsEn)}</p><div class="card-labels"><span class="award-type">${esc(a.type)}</span></div>${a.url?`<div class="card-actions"><a class="action" href="${esc(a.url)}" target="_blank" rel="noopener">Award record ↗</a></div>`:''}</article>`}
