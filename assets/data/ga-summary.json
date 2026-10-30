@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-29T07:07:43Z",
+  "generatedAt": "2026-10-30T07:08:26Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 307,
-    "activeUsers": 87,
-    "sessions": 109,
-    "engagementRate": 0.3302752293577982
+    "pageViews": 270,
+    "activeUsers": 49,
+    "sessions": 71,
+    "engagementRate": 0.5492957746478874
   },
   "monthlyTrend": [
     {
@@ -29,16 +29,16 @@
     },
     {
       "month": "2026-10",
-      "pageViews": 307,
-      "activeUsers": 87
+      "pageViews": 313,
+      "activeUsers": 92
     }
   ],
   "topPages": [
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 72,
-      "activeUsers": 32
+      "pageViews": 75,
+      "activeUsers": 35
     },
     {
       "title": "Publications | Wei-Hao Chiu",
@@ -83,12 +83,6 @@
       "activeUsers": 1
     },
     {
-      "title": "Microstructure and Biological Properties of Electrospun In Situ Polymerization of Polycaprolactone-Graft-Polyacrylic Acid Nanofibers and Its Composite Nanofiber Dressings | Wei-Hao Chiu",
-      "path": "/publications/10-3390-polym13234246.html",
-      "pageViews": 5,
-      "activeUsers": 3
-    },
-    {
       "title": "Patents | Wei-Hao Chiu",
       "path": "/patents.html",
       "pageViews": 5,
@@ -101,16 +95,16 @@
       "activeUsers": 2
     },
     {
-      "title": "Research Projects | Wei-Hao Chiu",
-      "path": "/projects.html",
+      "title": "Microstructure and Biological Properties of Electrospun In Situ Polymerization of Polycaprolactone-Graft-Polyacrylic Acid Nanofibers and Its Composite Nanofiber Dressings | Wei-Hao Chiu",
+      "path": "/publications/10-3390-polym13234246.html",
       "pageViews": 4,
       "activeUsers": 2
     },
     {
-      "title": "2T Perovskite Tandem Solar Cells in Space: Failure Mechanisms and Design Strategies | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-mtener-2026-102359.html",
-      "pageViews": 3,
-      "activeUsers": 3
+      "title": "Research Projects | Wei-Hao Chiu",
+      "path": "/projects.html",
+      "pageViews": 4,
+      "activeUsers": 2
     },
     {
       "title": "Asymmetric Fluorinated Spiro Hole-Transport Materials Enabled by a Rapid Core-Forming Strategy for Blade-Coated Perovskite Solar Cells | Wei-Hao Chiu",
@@ -123,27 +117,33 @@
       "path": "/publications/isos-15-2024-pvdf-hfp-space-reliability.html",
       "pageViews": 3,
       "activeUsers": 1
+    },
+    {
+      "title": "2T Perovskite Tandem Solar Cells in Space: Failure Mechanisms and Design Strategies | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-mtener-2026-102359.html",
+      "pageViews": 2,
+      "activeUsers": 2
     }
   ],
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 86,
-      "activeUsers": 76
+      "sessions": 45,
+      "activeUsers": 35
     },
     {
       "channel": "Organic Search",
-      "sessions": 20,
-      "activeUsers": 9
+      "sessions": 22,
+      "activeUsers": 11
+    },
+    {
+      "channel": "AI Assistant",
+      "sessions": 2,
+      "activeUsers": 2
     },
     {
       "channel": "Referral",
       "sessions": 2,
-      "activeUsers": 1
-    },
-    {
-      "channel": "AI Assistant",
-      "sessions": 1,
       "activeUsers": 1
     }
   ],
@@ -151,14 +151,14 @@
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 86,
-      "activeUsers": 76
+      "sessions": 45,
+      "activeUsers": 35
     },
     {
       "source": "google",
       "medium": "organic",
-      "sessions": 13,
-      "activeUsers": 3
+      "sessions": 14,
+      "activeUsers": 4
     },
     {
       "source": "bing",
@@ -175,16 +175,17 @@
     {
       "source": "chatgpt.com",
       "medium": "ai-assistant",
+      "sessions": 2,
+      "activeUsers": 2
+    },
+    {
+      "source": "cn.bing.com",
+      "medium": "referral",
       "sessions": 1,
       "activeUsers": 1
     }
   ],
   "topCountries": [
-    {
-      "country": "Singapore",
-      "activeUsers": 43,
-      "pageViews": 43
-    },
     {
       "country": "United States",
       "activeUsers": 22,
@@ -193,15 +194,25 @@
     {
       "country": "China",
       "activeUsers": 13,
-      "pageViews": 13
+      "pageViews": 14
     },
     {
       "country": "Taiwan",
-      "activeUsers": 7,
-      "pageViews": 224
+      "activeUsers": 10,
+      "pageViews": 227
+    },
+    {
+      "country": "India",
+      "activeUsers": 1,
+      "pageViews": 1
     },
     {
       "country": "Japan",
+      "activeUsers": 1,
+      "pageViews": 1
+    },
+    {
+      "country": "Singapore",
       "activeUsers": 1,
       "pageViews": 1
     },
@@ -214,7 +225,7 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 81
+      "activeUsers": 43
     },
     {
       "device": "mobile",
@@ -235,15 +246,15 @@
       "eventCount": 3
     },
     {
+      "eventName": "orcid_click",
+      "eventCount": 2
+    },
+    {
       "eventName": "scholar_click",
       "eventCount": 2
     },
     {
       "eventName": "email_click",
-      "eventCount": 1
-    },
-    {
-      "eventName": "orcid_click",
       "eventCount": 1
     },
     {
