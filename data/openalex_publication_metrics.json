@@ -5,7 +5,7 @@
   "publicationCount": 42,
   "verifiedCount": 40,
   "notFoundCount": 2,
-  "lastSuccessfulUpdate": "2026-10-30T08:42:42Z",
+  "lastSuccessfulUpdate": "2026-10-31T08:29:19Z",
   "records": {
     "10.1016/j.cej.2026.183177": {
       "status": "verified",
@@ -93,10 +93,10 @@
       "url": "https://openalex.org/W4413117344",
       "citationCount": 0,
       "fwci": 0.0,
-      "citationPercentile": 0.10242877,
+      "citationPercentile": 0.10223059,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-10-28T10:33:24.094632"
+      "openAlexUpdatedDate": "2026-10-30T12:39:25.321706"
     },
     "10.1016/j.seppur.2025.134157": {
       "status": "verified",
@@ -117,12 +117,12 @@
       "title": "Round‐Robin Interlaboratory Comparison of Large‐Area Organic Thin‐Film and Perovskite Solar Cells",
       "openAlexId": "W4415028078",
       "url": "https://openalex.org/W4415028078",
-      "citationCount": 1,
-      "fwci": 0.2252,
-      "citationPercentile": 0.46105196,
+      "citationCount": 2,
+      "fwci": 0.4475,
+      "citationPercentile": 0.57200303,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-10-12T09:40:04.860316"
+      "openAlexUpdatedDate": "2026-10-30T12:39:25.321706"
     },
     "10.1002/asia.202500719": {
       "status": "verified",
@@ -144,8 +144,8 @@
       "openAlexId": "W4404830134",
       "url": "https://openalex.org/W4404830134",
       "citationCount": 15,
-      "fwci": 1.5535,
-      "citationPercentile": 0.82438357,
+      "fwci": 1.5515,
+      "citationPercentile": 0.82409451,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-10-29T09:56:32.521200"
@@ -196,11 +196,11 @@
       "openAlexId": "W4391230843",
       "url": "https://openalex.org/W4391230843",
       "citationCount": 11,
-      "fwci": 1.141,
-      "citationPercentile": 0.73994267,
+      "fwci": 1.1378,
+      "citationPercentile": 0.73926466,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-09-26T08:19:03.415552"
+      "openAlexUpdatedDate": "2026-10-30T12:39:25.321706"
     },
     "10.1039/d3cc04699k": {
       "status": "verified",
@@ -235,11 +235,11 @@
       "openAlexId": "W4386592311",
       "url": "https://openalex.org/W4386592311",
       "citationCount": 1,
-      "fwci": 0.0744,
-      "citationPercentile": 0.29700524,
+      "fwci": 0.0743,
+      "citationPercentile": 0.29690666,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-10-14T16:39:01.820549"
+      "openAlexUpdatedDate": "2026-10-30T12:39:25.321706"
     },
     "10.1016/j.orgel.2023.106847": {
       "status": "verified",
@@ -261,11 +261,11 @@
       "openAlexId": "W4385381207",
       "url": "https://openalex.org/W4385381207",
       "citationCount": 39,
-      "fwci": 2.9022,
-      "citationPercentile": 0.92259115,
+      "fwci": 2.8971,
+      "citationPercentile": 0.92237243,
       "isTop1Percent": false,
       "isTop10Percent": true,
-      "openAlexUpdatedDate": "2026-10-14T16:39:01.820549"
+      "openAlexUpdatedDate": "2026-10-30T12:39:25.321706"
     },
     "10.1016/j.cej.2022.139926": {
       "status": "verified",
@@ -288,7 +288,7 @@
       "url": "https://openalex.org/W4289524742",
       "citationCount": 11,
       "fwci": 0.6848,
-      "citationPercentile": 0.62163839,
+      "citationPercentile": 0.62162388,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-10-28T10:33:24.094632"
@@ -301,7 +301,7 @@
       "url": "https://openalex.org/W4224023899",
       "citationCount": 3,
       "fwci": 0.137,
-      "citationPercentile": 0.29890979,
+      "citationPercentile": 0.29894586,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-10-28T10:33:24.094632"
@@ -326,8 +326,8 @@
       "openAlexId": "W4200568401",
       "url": "https://openalex.org/W4200568401",
       "citationCount": 17,
-      "fwci": 0.9146,
-      "citationPercentile": 0.65924789,
+      "fwci": 0.9148,
+      "citationPercentile": 0.65924588,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-10-28T10:33:24.094632"
@@ -340,7 +340,7 @@
       "url": "https://openalex.org/W3195032786",
       "citationCount": 12,
       "fwci": 0.3284,
-      "citationPercentile": 0.44482075,
+      "citationPercentile": 0.44486523,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-10-28T10:33:24.094632"
@@ -352,8 +352,8 @@
       "openAlexId": "W3174093177",
       "url": "https://openalex.org/W3174093177",
       "citationCount": 8,
-      "fwci": 0.5148,
-      "citationPercentile": 0.56917709,
+      "fwci": 0.5147,
+      "citationPercentile": 0.56914297,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-10-28T10:33:24.094632"
@@ -404,11 +404,11 @@
       "openAlexId": "W2053567920",
       "url": "https://openalex.org/W2053567920",
       "citationCount": 72,
-      "fwci": 2.8386,
-      "citationPercentile": 0.90181453,
+      "fwci": 2.8486,
+      "citationPercentile": 0.90187691,
       "isTop1Percent": false,
       "isTop10Percent": true,
-      "openAlexUpdatedDate": "2026-08-21T09:56:20.448147"
+      "openAlexUpdatedDate": "2026-10-30T12:39:25.321706"
     },
     "10.1039/c0jm04099a": {
       "status": "verified",
@@ -456,11 +456,11 @@
       "openAlexId": "W2053005710",
       "url": "https://openalex.org/W2053005710",
       "citationCount": 40,
-      "fwci": 2.503,
-      "citationPercentile": 0.8877341,
+      "fwci": 2.5032,
+      "citationPercentile": 0.88771677,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-08-21T09:56:20.448147"
+      "openAlexUpdatedDate": "2026-10-30T12:39:25.321706"
     },
     "10.1039/b902595m": {
       "status": "verified",
@@ -469,11 +469,11 @@
       "openAlexId": "W2145010429",
       "url": "https://openalex.org/W2145010429",
       "citationCount": 81,
-      "fwci": 5.3188,
-      "citationPercentile": 0.95858201,
+      "fwci": 5.3192,
+      "citationPercentile": 0.95862708,
       "isTop1Percent": false,
       "isTop10Percent": true,
-      "openAlexUpdatedDate": "2026-10-14T16:39:01.820549"
+      "openAlexUpdatedDate": "2026-10-30T12:39:25.321706"
     },
     "10.1021/jp805239k": {
       "status": "verified",
@@ -530,7 +530,7 @@
       "url": "https://openalex.org/W7212081566",
       "citationCount": 0,
       "fwci": 0.0,
-      "citationPercentile": 0.58650417,
+      "citationPercentile": 0.58201293,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-10-29T09:56:32.521200"
