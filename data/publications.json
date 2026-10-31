@@ -12170,7 +12170,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-24",
+      "lastChecked": "2026-10-31",
       "sources": [
         "crossref",
         "openalex"
@@ -12238,7 +12238,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-24",
+      "lastEvaluated": "2026-10-31",
       "inputSignature": "cb9b786771da7e1909e8"
     }
   },
@@ -12456,7 +12456,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-24",
+      "lastChecked": "2026-10-31",
       "sources": [
         "crossref",
         "openalex"
@@ -12516,7 +12516,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-24",
+      "lastEvaluated": "2026-10-31",
       "inputSignature": "4d4599af6b4adf921fda"
     }
   },
@@ -13505,7 +13505,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-24",
+      "lastChecked": "2026-10-31",
       "sources": [
         "crossref",
         "openalex"
@@ -13565,7 +13565,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-24",
+      "lastEvaluated": "2026-10-31",
       "inputSignature": "7a8110569239686bcb7b"
     }
   },
@@ -14139,7 +14139,7 @@
     ],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-24",
+      "lastChecked": "2026-10-31",
       "sources": [
         "crossref",
         "openalex"
@@ -14198,7 +14198,7 @@
       "requiresManualReview": false,
       "warnings": [],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-24",
+      "lastEvaluated": "2026-10-31",
       "inputSignature": "f5018d2affca6a20b0fb"
     }
   },
@@ -15429,7 +15429,7 @@
     "affiliations": [],
     "authorshipMetadata": {
       "status": "partial",
-      "lastChecked": "2026-10-24",
+      "lastChecked": "2026-10-31",
       "sources": [
         "Crossref",
         "OpenAlex",
@@ -15494,7 +15494,7 @@
         "No usable author-address country data"
       ],
       "manualOverride": false,
-      "lastEvaluated": "2026-10-24",
+      "lastEvaluated": "2026-10-31",
       "inputSignature": "de4bab5ed0b91be06006"
     }
   },
