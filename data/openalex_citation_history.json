@@ -2,12 +2,12 @@
   "schemaVersion": 3,
   "source": "OpenAlex Works API",
   "status": "success_with_exclusions",
-  "lastSuccessfulUpdate": "2026-10-26T09:36:49.020470Z",
+  "lastSuccessfulUpdate": "2026-11-02T11:58:19.620508Z",
   "workCount": 40,
   "missingPublicationYearCount": 0,
-  "totalCitationsFromPublicationMetrics": 1011,
-  "rawTotalCitationsFromHistory": 1011,
-  "totalCitationsIncludedInAnnualChart": 1005,
+  "totalCitationsFromPublicationMetrics": 1012,
+  "rawTotalCitationsFromHistory": 1012,
+  "totalCitationsIncludedInAnnualChart": 1006,
   "rawValidationDifference": 0,
   "unassignedCitationCount": 0,
   "excludedInvalidCitationCount": 6,
@@ -137,7 +137,7 @@
     },
     {
       "year": 2026,
-      "citations": 77
+      "citations": 78
     }
   ],
   "works": {
@@ -292,7 +292,7 @@
           "volume": "7",
           "issue": "8",
           "pages": "5107-5120",
-          "type": "article"
+          "type": "review"
         },
         {
           "openAlexId": "W4382583776",
@@ -345,7 +345,7 @@
             "Abdilla Sani Mohd. Najib",
             "Norhuda Hidayah Nordin"
           ],
-          "journal": "",
+          "journal": "International Conference on Industrial Engineering and Operations Management (IEOM)",
           "publicationYear": 2023,
           "publicationDate": "2023-05-10",
           "volume": "",
@@ -1536,7 +1536,7 @@
           "volume": "7",
           "issue": "2",
           "pages": "336-360",
-          "type": "article"
+          "type": "review"
         }
       ]
     },
@@ -2267,7 +2267,7 @@
           "authors": [
             "Kuppuswamy Kalyanasundaram"
           ],
-          "journal": "Photochemistry",
+          "journal": "Royal Society of Chemistry eBooks",
           "publicationYear": 2011,
           "publicationDate": "2011-09-05",
           "volume": "",
@@ -3818,7 +3818,6 @@
             "Xue-Long He",
             "Sheng-Qiang Fan",
             "Cheng‐Xin Li",
-            "Chang‐Jiu Li",
             "Chang-Jiu Li"
           ],
           "journal": "Electrochimica Acta",
@@ -4839,7 +4838,7 @@
           "volume": "20",
           "issue": "3",
           "pages": "209-229",
-          "type": "article"
+          "type": "review"
         },
         {
           "openAlexId": "W2965091352",
@@ -4881,7 +4880,7 @@
           "volume": "30",
           "issue": "39",
           "pages": "392001",
-          "type": "article"
+          "type": "review"
         },
         {
           "openAlexId": "W2953541865",
@@ -4992,7 +4991,7 @@
           "volume": "31",
           "issue": "11",
           "pages": "e1805132",
-          "type": "article"
+          "type": "review"
         },
         {
           "openAlexId": "W2950194610",
@@ -5517,7 +5516,7 @@
           "volume": "4",
           "issue": "1",
           "pages": "1600152",
-          "type": "article"
+          "type": "review"
         },
         {
           "openAlexId": "W2523288667",
@@ -9647,7 +9646,7 @@
           "volume": "17",
           "issue": "24",
           "pages": "3331",
-          "type": "article"
+          "type": "review"
         },
         {
           "openAlexId": "W4411398656",
@@ -9767,7 +9766,7 @@
           "volume": "13",
           "issue": "18",
           "pages": "12309-12319",
-          "type": "article"
+          "type": "review"
         },
         {
           "openAlexId": "W4213023847",
@@ -9904,7 +9903,7 @@
           "volume": "13",
           "issue": "12",
           "pages": "2779",
-          "type": "article"
+          "type": "review"
         },
         {
           "openAlexId": "W2999792929",
@@ -10003,7 +10002,7 @@
           "volume": "11",
           "issue": "1",
           "pages": "143",
-          "type": "article"
+          "type": "review"
         },
         {
           "openAlexId": "W2907476457",
@@ -10960,7 +10959,6 @@
           "title": "Preparation of a working electrode with a conducting PEDOT:PSS film and its applications in a dye-sensitized solar cell",
           "authors": [
             "Chuen‐Shii Chou",
-            "Chuen-Shii Chou",
             "Chuen-Shyong Chou",
             "Yi-Ting Kuo",
             "Chun-Po Wang"
@@ -13492,7 +13490,7 @@
             "Yen-Ming Peng",
             "C.W. Lan"
           ],
-          "journal": "",
+          "journal": "IEEE International Nanoelectronics Conference",
           "publicationYear": 2011,
           "publicationDate": "2011-06-01",
           "volume": "45",
@@ -15410,7 +15408,7 @@
           "volume": "99",
           "issue": "11",
           "pages": "4545-4557",
-          "type": "article"
+          "type": "review"
         },
         {
           "openAlexId": "W2045646654",
@@ -15902,7 +15900,7 @@
           "volume": "",
           "issue": "",
           "pages": "e75949",
-          "type": "article"
+          "type": "review"
         },
         {
           "openAlexId": "W7212081566",
@@ -16365,7 +16363,7 @@
           "volume": "10",
           "issue": "20",
           "pages": "e39141",
-          "type": "article"
+          "type": "review"
         },
         {
           "openAlexId": "W4402883453",
@@ -16842,7 +16840,7 @@
           "volume": "5",
           "issue": "15",
           "pages": "3803-3833",
-          "type": "article"
+          "type": "review"
         },
         {
           "openAlexId": "W4388655704",
@@ -16946,7 +16944,7 @@
           "volume": "19",
           "issue": "11",
           "pages": "e2205926",
-          "type": "article"
+          "type": "review"
         },
         {
           "openAlexId": "W4311148324",
@@ -17215,7 +17213,7 @@
           "volume": "12",
           "issue": "10",
           "pages": "1651",
-          "type": "article"
+          "type": "review"
         },
         {
           "openAlexId": "W4220953042",
@@ -17238,7 +17236,7 @@
           "volume": "9",
           "issue": "14",
           "pages": "e2200308",
-          "type": "article"
+          "type": "review"
         },
         {
           "openAlexId": "W4210736044",
@@ -17395,9 +17393,9 @@
           "title": "Photoanode Design for Dye-Sensitized Solar Cells: Advancements in Metal Oxides, Nanostructures, and Hybrid Composites",
           "authors": [
             "Aqsa Memon",
-            "Ali Bux Dahri",
+            "Ali Bux",
             "Naveed Mengal",
-            "Iftikhar Ali Sahito",
+            "Samander Ali Malik",
             "Anam Ali Memon"
           ],
           "journal": "Journal of Electronic Materials",
@@ -17708,7 +17706,7 @@
           "volume": "15",
           "issue": "12",
           "pages": "909",
-          "type": "article"
+          "type": "review"
         },
         {
           "openAlexId": "W4405825464",
@@ -17967,7 +17965,7 @@
           "volume": "151",
           "issue": "",
           "pages": "1-44",
-          "type": "article"
+          "type": "review"
         },
         {
           "openAlexId": "W4280570412",
@@ -18189,10 +18187,10 @@
           ],
           "journal": "The Journal of Physical Chemistry Letters",
           "publicationYear": 2026,
-          "publicationDate": "2026-10-20",
-          "volume": "",
-          "issue": "",
-          "pages": "",
+          "publicationDate": "2026-10-19",
+          "volume": "17",
+          "issue": "43",
+          "pages": "12491-12497",
           "type": "article"
         },
         {
@@ -18221,10 +18219,10 @@
           "authors": [
             "Huizhen Ke",
             "Qinyi Zhang",
+            "Jiawei Zhan",
             "Ying Zhang",
             "Shuyu Zhang",
-            "Minglin Zhang",
-            "Pengyun Zhang"
+            "Minglin Zhang"
           ],
           "journal": "Solar Energy",
           "publicationYear": 2025,
@@ -18319,7 +18317,7 @@
           "volume": "10",
           "issue": "20",
           "pages": "e39141",
-          "type": "article"
+          "type": "review"
         },
         {
           "openAlexId": "W4402918694",
@@ -19061,7 +19059,6 @@
             "Tai‐Sing Wu",
             "Rong Ying Huang",
             "Yude D. Wang",
-            "Yude Wang",
             "Yong Hua"
           ],
           "journal": "Advanced Functional Materials",
@@ -19854,7 +19851,7 @@
           "volume": "37",
           "issue": "47",
           "pages": "e13270",
-          "type": "article"
+          "type": "review"
         },
         {
           "openAlexId": "W4413117344",
@@ -21825,7 +21822,7 @@
           "volume": "46",
           "issue": "18",
           "pages": "e00287",
-          "type": "article"
+          "type": "review"
         },
         {
           "openAlexId": "W4415028918",
@@ -22743,7 +22740,7 @@
             "Ting Zhang",
             "Lili Lin",
             "Huanxi Liao",
-            "Yu Peng Gao",
+            "Gao Yu",
             "Xin Wang",
             "Lijing Wang",
             "Yang Liu",
@@ -22802,27 +22799,27 @@
       "doi": "10.1002/solr.202500538",
       "title": "Round‐Robin Interlaboratory Comparison of Large‐Area Organic Thin‐Film and Perovskite Solar Cells",
       "publicationYear": 2025,
-      "currentCitationCount": 1,
+      "currentCitationCount": 2,
       "sourceUrl": "https://api.openalex.org/works?filter=cites:W4415028078",
       "citationsByYear": [
         {
           "year": 2026,
-          "citations": 1
+          "citations": 2
         }
       ],
       "rawCitationsByYear": [
         {
           "year": 2026,
-          "citations": 1
+          "citations": 2
         }
       ],
-      "historyTotal": 1,
-      "rawHistoryTotal": 1,
+      "historyTotal": 2,
+      "rawHistoryTotal": 2,
       "excludedInvalidCitationCount": 0,
       "excludedInvalidCitations": [],
       "unassignedCitationCount": 0,
-      "citingWorkCount": 1,
-      "citingArticlesWithDoiCount": 1,
+      "citingWorkCount": 2,
+      "citingArticlesWithDoiCount": 2,
       "citingArticlesWithDoi": [
         {
           "openAlexId": "W7130653516",
@@ -22842,6 +22839,29 @@
           "publicationDate": "2026-02-20",
           "volume": "8",
           "issue": "4",
+          "pages": "",
+          "type": "article"
+        },
+        {
+          "openAlexId": "W7224453273",
+          "doi": "10.1039/d6ta05855h",
+          "doiUrl": "https://doi.org/10.1039/d6ta05855h",
+          "title": "Surface redox regulation of commercial NiO x by aqueous ammonia for durable inverted perovskite solar cells",
+          "authors": [
+            "Yu Jiang",
+            "Kuina Yuan",
+            "张喜生 ZHANG Xisheng",
+            "Fanyue Kong",
+            "Jiawei Wang",
+            "Jiaqi Du",
+            "Yongqi Yin",
+            "Yusuke Yamauchi"
+          ],
+          "journal": "Journal of Materials Chemistry A",
+          "publicationYear": 2026,
+          "publicationDate": "2026-01-01",
+          "volume": "",
+          "issue": "",
           "pages": "",
           "type": "article"
         }
