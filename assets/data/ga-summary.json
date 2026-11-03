@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-02T07:41:24Z",
+  "generatedAt": "2026-11-03T07:56:12Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 270,
+    "pageViews": 271,
     "activeUsers": 49,
     "sessions": 71,
-    "engagementRate": 0.5492957746478874
+    "engagementRate": 0.5633802816901409
   },
   "monthlyTrend": [
     {
@@ -31,14 +31,19 @@
       "month": "2026-10",
       "pageViews": 314,
       "activeUsers": 93
+    },
+    {
+      "month": "2026-11",
+      "pageViews": 2,
+      "activeUsers": 1
     }
   ],
   "topPages": [
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 75,
-      "activeUsers": 35
+      "pageViews": 76,
+      "activeUsers": 36
     },
     {
       "title": "Publications | Wei-Hao Chiu",
@@ -49,8 +54,8 @@
     {
       "title": "About | Wei-Hao Chiu",
       "path": "/about.html",
-      "pageViews": 33,
-      "activeUsers": 3
+      "pageViews": 34,
+      "activeUsers": 4
     },
     {
       "title": "News | Wei-Hao Chiu",
@@ -193,13 +198,13 @@
     },
     {
       "country": "China",
-      "activeUsers": 14,
-      "pageViews": 15
+      "activeUsers": 13,
+      "pageViews": 14
     },
     {
       "country": "Taiwan",
-      "activeUsers": 10,
-      "pageViews": 227
+      "activeUsers": 11,
+      "pageViews": 229
     },
     {
       "country": "India",
@@ -246,11 +251,11 @@
       "eventCount": 3
     },
     {
-      "eventName": "orcid_click",
-      "eventCount": 2
+      "eventName": "scholar_click",
+      "eventCount": 3
     },
     {
-      "eventName": "scholar_click",
+      "eventName": "orcid_click",
       "eventCount": 2
     },
     {
