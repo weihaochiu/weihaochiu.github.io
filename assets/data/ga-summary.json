@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-03T07:56:12Z",
+  "generatedAt": "2026-11-04T07:30:20Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 271,
-    "activeUsers": 49,
-    "sessions": 71,
-    "engagementRate": 0.5633802816901409
+    "pageViews": 270,
+    "activeUsers": 48,
+    "sessions": 70,
+    "engagementRate": 0.5714285714285714
   },
   "monthlyTrend": [
     {
@@ -34,16 +34,16 @@
     },
     {
       "month": "2026-11",
-      "pageViews": 2,
-      "activeUsers": 1
+      "pageViews": 3,
+      "activeUsers": 2
     }
   ],
   "topPages": [
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 76,
-      "activeUsers": 36
+      "pageViews": 75,
+      "activeUsers": 35
     },
     {
       "title": "Publications | Wei-Hao Chiu",
@@ -133,13 +133,13 @@
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 45,
-      "activeUsers": 35
+      "sessions": 43,
+      "activeUsers": 33
     },
     {
       "channel": "Organic Search",
-      "sessions": 22,
-      "activeUsers": 11
+      "sessions": 23,
+      "activeUsers": 12
     },
     {
       "channel": "AI Assistant",
@@ -156,14 +156,14 @@
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 45,
-      "activeUsers": 35
+      "sessions": 43,
+      "activeUsers": 33
     },
     {
       "source": "google",
       "medium": "organic",
-      "sessions": 14,
-      "activeUsers": 4
+      "sessions": 15,
+      "activeUsers": 5
     },
     {
       "source": "bing",
@@ -193,18 +193,18 @@
   "topCountries": [
     {
       "country": "United States",
-      "activeUsers": 21,
-      "pageViews": 24
+      "activeUsers": 20,
+      "pageViews": 23
     },
     {
       "country": "China",
-      "activeUsers": 13,
-      "pageViews": 14
+      "activeUsers": 12,
+      "pageViews": 13
     },
     {
       "country": "Taiwan",
-      "activeUsers": 11,
-      "pageViews": 229
+      "activeUsers": 12,
+      "pageViews": 230
     },
     {
       "country": "India",
@@ -230,7 +230,7 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 43
+      "activeUsers": 42
     },
     {
       "device": "mobile",
