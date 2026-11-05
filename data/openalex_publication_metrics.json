@@ -5,7 +5,7 @@
   "publicationCount": 42,
   "verifiedCount": 40,
   "notFoundCount": 2,
-  "lastSuccessfulUpdate": "2026-11-04T09:23:08Z",
+  "lastSuccessfulUpdate": "2026-11-05T09:33:55Z",
   "records": {
     "10.1016/j.cej.2026.183177": {
       "status": "verified",
@@ -15,10 +15,10 @@
       "url": "https://openalex.org/W7222468352",
       "citationCount": 0,
       "fwci": 0.0,
-      "citationPercentile": 0.72704667,
+      "citationPercentile": 0.68716605,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-10-25T09:29:13.331239"
+      "openAlexUpdatedDate": "2026-11-04T10:54:05.112534"
     },
     "10.1016/j.cej.2026.177494": {
       "status": "verified",
@@ -66,11 +66,11 @@
       "openAlexId": "W7118007754",
       "url": "https://openalex.org/W7118007754",
       "citationCount": 5,
-      "fwci": 8.1508,
-      "citationPercentile": 0.97020031,
+      "fwci": 7.3358,
+      "citationPercentile": 0.96620739,
       "isTop1Percent": false,
       "isTop10Percent": true,
-      "openAlexUpdatedDate": "2026-10-17T09:40:24.721904"
+      "openAlexUpdatedDate": "2026-11-04T10:54:05.112534"
     },
     "10.1016/j.solmat.2025.114015": {
       "status": "verified",
@@ -78,12 +78,12 @@
       "title": "Impact of proton radiation on the performance of single-junction perovskite solar cells for space applications",
       "openAlexId": "W4415443362",
       "url": "https://openalex.org/W4415443362",
-      "citationCount": 10,
-      "fwci": 2.2517,
-      "citationPercentile": 0.88758523,
+      "citationCount": 12,
+      "fwci": 2.5301,
+      "citationPercentile": 0.90509297,
       "isTop1Percent": false,
-      "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-10-14T16:39:01.820549"
+      "isTop10Percent": true,
+      "openAlexUpdatedDate": "2026-11-04T10:54:05.112534"
     },
     "10.1002/asia.70245": {
       "status": "verified",
@@ -105,11 +105,11 @@
       "openAlexId": "W4411847970",
       "url": "https://openalex.org/W4411847970",
       "citationCount": 7,
-      "fwci": 1.5762,
-      "citationPercentile": 0.82312802,
+      "fwci": 1.4759,
+      "citationPercentile": 0.81120685,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-10-17T09:40:24.721904"
+      "openAlexUpdatedDate": "2026-11-04T10:54:05.112534"
     },
     "10.1002/solr.202500538": {
       "status": "verified",
@@ -182,12 +182,12 @@
       "title": "Additive-free electroless deposition on graphene/copper foil: Photo-induced and defect-assisted approach for environmentally friendly plating",
       "openAlexId": "W4389856655",
       "url": "https://openalex.org/W4389856655",
-      "citationCount": 1,
-      "fwci": 0.0744,
-      "citationPercentile": 0.31522485,
+      "citationCount": 2,
+      "fwci": 0.1444,
+      "citationPercentile": 0.35931198,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-10-12T09:40:04.860316"
+      "openAlexUpdatedDate": "2026-11-04T10:54:05.112534"
     },
     "10.1002/solr.202300988": {
       "status": "verified",
@@ -222,8 +222,8 @@
       "openAlexId": "W4385773304",
       "url": "https://openalex.org/W4385773304",
       "citationCount": 9,
-      "fwci": 0.6664,
-      "citationPercentile": 0.62063661,
+      "fwci": 0.6499,
+      "citationPercentile": 0.61222405,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-11-03T10:50:19.383937"
@@ -286,12 +286,12 @@
       "title": "Surfactant Tween 20 Controlled Perovskite Film Fabricated by Thermal Blade Coating for Efficient Perovskite Solar Cells",
       "openAlexId": "W4289524742",
       "url": "https://openalex.org/W4289524742",
-      "citationCount": 11,
-      "fwci": 0.6848,
-      "citationPercentile": 0.62162388,
+      "citationCount": 12,
+      "fwci": 0.742,
+      "citationPercentile": 0.63917358,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-10-28T10:33:24.094632"
+      "openAlexUpdatedDate": "2026-11-04T10:54:05.112534"
     },
     "10.3390/polym14081580": {
       "status": "verified",
@@ -390,12 +390,12 @@
       "title": "Improvement on the long-term stability of flexible plastic dye-sensitized solar cells",
       "openAlexId": "W1970095316",
       "url": "https://openalex.org/W1970095316",
-      "citationCount": 38,
-      "fwci": 1.7292,
-      "citationPercentile": 0.83421062,
+      "citationCount": 37,
+      "fwci": 1.6222,
+      "citationPercentile": 0.82316125,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-08-21T09:56:20.448147"
+      "openAlexUpdatedDate": "2026-11-04T10:54:05.112534"
     },
     "10.1016/j.jpowsour.2010.12.063": {
       "status": "verified",
@@ -404,11 +404,11 @@
       "openAlexId": "W2053567920",
       "url": "https://openalex.org/W2053567920",
       "citationCount": 72,
-      "fwci": 2.8376,
-      "citationPercentile": 0.90158549,
+      "fwci": 2.687,
+      "citationPercentile": 0.89591894,
       "isTop1Percent": false,
-      "isTop10Percent": true,
-      "openAlexUpdatedDate": "2026-10-30T12:39:25.321706"
+      "isTop10Percent": false,
+      "openAlexUpdatedDate": "2026-11-04T10:54:05.112534"
     },
     "10.1039/c0jm04099a": {
       "status": "verified",
@@ -443,11 +443,11 @@
       "openAlexId": "W2055510369",
       "url": "https://openalex.org/W2055510369",
       "citationCount": 88,
-      "fwci": 3.2851,
-      "citationPercentile": 0.91881045,
+      "fwci": 3.085,
+      "citationPercentile": 0.91335282,
       "isTop1Percent": false,
       "isTop10Percent": true,
-      "openAlexUpdatedDate": "2026-09-29T14:09:16.559479"
+      "openAlexUpdatedDate": "2026-11-04T10:54:05.112534"
     },
     "10.1016/j.solmat.2009.07.017": {
       "status": "verified",
@@ -469,11 +469,11 @@
       "openAlexId": "W2145010429",
       "url": "https://openalex.org/W2145010429",
       "citationCount": 81,
-      "fwci": 5.3059,
-      "citationPercentile": 0.95851607,
+      "fwci": 4.9947,
+      "citationPercentile": 0.95582152,
       "isTop1Percent": false,
       "isTop10Percent": true,
-      "openAlexUpdatedDate": "2026-10-30T12:39:25.321706"
+      "openAlexUpdatedDate": "2026-11-04T10:54:05.112534"
     },
     "10.1021/jp805239k": {
       "status": "verified",
@@ -530,10 +530,10 @@
       "url": "https://openalex.org/W7212081566",
       "citationCount": 0,
       "fwci": 0.0,
-      "citationPercentile": 0.57771053,
+      "citationPercentile": 0.5548095,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-10-29T09:56:32.521200"
+      "openAlexUpdatedDate": "2026-11-04T10:54:05.112534"
     }
   }
 }
