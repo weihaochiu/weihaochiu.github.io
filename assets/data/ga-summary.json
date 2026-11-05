@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-04T07:30:20Z",
+  "generatedAt": "2026-11-05T07:55:18Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 270,
-    "activeUsers": 48,
-    "sessions": 70,
-    "engagementRate": 0.5714285714285714
+    "pageViews": 264,
+    "activeUsers": 40,
+    "sessions": 66,
+    "engagementRate": 0.5606060606060606
   },
   "monthlyTrend": [
     {
@@ -34,22 +34,22 @@
     },
     {
       "month": "2026-11",
-      "pageViews": 3,
-      "activeUsers": 2
+      "pageViews": 6,
+      "activeUsers": 3
     }
   ],
   "topPages": [
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 75,
-      "activeUsers": 35
+      "pageViews": 70,
+      "activeUsers": 27
     },
     {
       "title": "Publications | Wei-Hao Chiu",
       "path": "/publications.html",
-      "pageViews": 39,
-      "activeUsers": 4
+      "pageViews": 38,
+      "activeUsers": 3
     },
     {
       "title": "About | Wei-Hao Chiu",
@@ -133,13 +133,13 @@
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 43,
-      "activeUsers": 33
+      "sessions": 40,
+      "activeUsers": 27
     },
     {
       "channel": "Organic Search",
-      "sessions": 23,
-      "activeUsers": 12
+      "sessions": 22,
+      "activeUsers": 10
     },
     {
       "channel": "AI Assistant",
@@ -156,20 +156,20 @@
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 43,
-      "activeUsers": 33
+      "sessions": 40,
+      "activeUsers": 27
     },
     {
       "source": "google",
       "medium": "organic",
       "sessions": 15,
-      "activeUsers": 5
+      "activeUsers": 4
     },
     {
       "source": "bing",
       "medium": "organic",
-      "sessions": 7,
-      "activeUsers": 6
+      "sessions": 6,
+      "activeUsers": 5
     },
     {
       "source": "cgu.edu.tw",
@@ -192,11 +192,6 @@
   ],
   "topCountries": [
     {
-      "country": "United States",
-      "activeUsers": 20,
-      "pageViews": 23
-    },
-    {
       "country": "China",
       "activeUsers": 12,
       "pageViews": 13
@@ -204,7 +199,12 @@
     {
       "country": "Taiwan",
       "activeUsers": 12,
-      "pageViews": 230
+      "pageViews": 233
+    },
+    {
+      "country": "United States",
+      "activeUsers": 12,
+      "pageViews": 14
     },
     {
       "country": "India",
@@ -230,11 +230,11 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 42
+      "activeUsers": 36
     },
     {
       "device": "mobile",
-      "activeUsers": 6
+      "activeUsers": 4
     }
   ],
   "academicEvents": [
@@ -244,7 +244,7 @@
     },
     {
       "eventName": "openalex_click",
-      "eventCount": 5
+      "eventCount": 3
     },
     {
       "eventName": "patent_click",
