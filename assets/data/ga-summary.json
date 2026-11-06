@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-05T07:55:18Z",
+  "generatedAt": "2026-11-06T07:56:12Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 264,
-    "activeUsers": 40,
-    "sessions": 66,
-    "engagementRate": 0.5606060606060606
+    "pageViews": 267,
+    "activeUsers": 41,
+    "sessions": 68,
+    "engagementRate": 0.5588235294117647
   },
   "monthlyTrend": [
     {
@@ -34,16 +34,16 @@
     },
     {
       "month": "2026-11",
-      "pageViews": 6,
-      "activeUsers": 3
+      "pageViews": 9,
+      "activeUsers": 4
     }
   ],
   "topPages": [
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 70,
-      "activeUsers": 27
+      "pageViews": 72,
+      "activeUsers": 28
     },
     {
       "title": "Publications | Wei-Hao Chiu",
@@ -76,16 +76,16 @@
       "activeUsers": 4
     },
     {
+      "title": "Research | Wei-Hao Chiu",
+      "path": "/research.html",
+      "pageViews": 7,
+      "activeUsers": 2
+    },
+    {
       "title": "Congratulations to the SDSE 2026 Poster Award Team! | Wei-Hao Chiu",
       "path": "/news/sdse-2026-poster-award.html",
       "pageViews": 6,
       "activeUsers": 3
-    },
-    {
-      "title": "Research | Wei-Hao Chiu",
-      "path": "/research.html",
-      "pageViews": 6,
-      "activeUsers": 1
     },
     {
       "title": "Patents | Wei-Hao Chiu",
@@ -138,18 +138,18 @@
     },
     {
       "channel": "Organic Search",
-      "sessions": 22,
+      "sessions": 23,
       "activeUsers": 10
+    },
+    {
+      "channel": "Referral",
+      "sessions": 3,
+      "activeUsers": 2
     },
     {
       "channel": "AI Assistant",
       "sessions": 2,
       "activeUsers": 2
-    },
-    {
-      "channel": "Referral",
-      "sessions": 2,
-      "activeUsers": 1
     }
   ],
   "trafficSources": [
@@ -162,7 +162,7 @@
     {
       "source": "google",
       "medium": "organic",
-      "sessions": 15,
+      "sessions": 16,
       "activeUsers": 4
     },
     {
@@ -174,8 +174,8 @@
     {
       "source": "cgu.edu.tw",
       "medium": "referral",
-      "sessions": 2,
-      "activeUsers": 1
+      "sessions": 3,
+      "activeUsers": 2
     },
     {
       "source": "chatgpt.com",
@@ -199,7 +199,7 @@
     {
       "country": "Taiwan",
       "activeUsers": 12,
-      "pageViews": 233
+      "pageViews": 234
     },
     {
       "country": "United States",
@@ -208,8 +208,8 @@
     },
     {
       "country": "India",
-      "activeUsers": 1,
-      "pageViews": 1
+      "activeUsers": 2,
+      "pageViews": 3
     },
     {
       "country": "Japan",
@@ -230,7 +230,7 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 36
+      "activeUsers": 37
     },
     {
       "device": "mobile",
