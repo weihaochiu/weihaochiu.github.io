@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-06T07:56:12Z",
+  "generatedAt": "2026-11-07T07:11:45Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 267,
-    "activeUsers": 41,
-    "sessions": 68,
-    "engagementRate": 0.5588235294117647
+    "pageViews": 268,
+    "activeUsers": 42,
+    "sessions": 69,
+    "engagementRate": 0.5217391304347826
   },
   "monthlyTrend": [
     {
@@ -34,16 +34,16 @@
     },
     {
       "month": "2026-11",
-      "pageViews": 9,
-      "activeUsers": 4
+      "pageViews": 14,
+      "activeUsers": 9
     }
   ],
   "topPages": [
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 72,
-      "activeUsers": 28
+      "pageViews": 68,
+      "activeUsers": 24
     },
     {
       "title": "Publications | Wei-Hao Chiu",
@@ -124,22 +124,22 @@
       "activeUsers": 1
     },
     {
-      "title": "2T Perovskite Tandem Solar Cells in Space: Failure Mechanisms and Design Strategies | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-mtener-2026-102359.html",
-      "pageViews": 2,
+      "title": "MOF-& COF-integrated composite separators/membranes: innovations for sustainable and high-performance redox flow batteries | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-seppur-2025-134157.html",
+      "pageViews": 3,
       "activeUsers": 2
     }
   ],
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 40,
-      "activeUsers": 27
+      "sessions": 42,
+      "activeUsers": 29
     },
     {
       "channel": "Organic Search",
-      "sessions": 23,
-      "activeUsers": 10
+      "sessions": 22,
+      "activeUsers": 9
     },
     {
       "channel": "Referral",
@@ -156,8 +156,8 @@
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 40,
-      "activeUsers": 27
+      "sessions": 42,
+      "activeUsers": 29
     },
     {
       "source": "google",
@@ -168,8 +168,8 @@
     {
       "source": "bing",
       "medium": "organic",
-      "sessions": 6,
-      "activeUsers": 5
+      "sessions": 5,
+      "activeUsers": 4
     },
     {
       "source": "cgu.edu.tw",
@@ -192,6 +192,11 @@
   ],
   "topCountries": [
     {
+      "country": "United States",
+      "activeUsers": 13,
+      "pageViews": 15
+    },
+    {
       "country": "China",
       "activeUsers": 12,
       "pageViews": 13
@@ -200,11 +205,6 @@
       "country": "Taiwan",
       "activeUsers": 12,
       "pageViews": 234
-    },
-    {
-      "country": "United States",
-      "activeUsers": 12,
-      "pageViews": 14
     },
     {
       "country": "India",
@@ -230,7 +230,7 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 37
+      "activeUsers": 38
     },
     {
       "device": "mobile",
@@ -241,10 +241,6 @@
     {
       "eventName": "doi_click",
       "eventCount": 6
-    },
-    {
-      "eventName": "openalex_click",
-      "eventCount": 3
     },
     {
       "eventName": "patent_click",
@@ -260,6 +256,10 @@
     },
     {
       "eventName": "email_click",
+      "eventCount": 1
+    },
+    {
+      "eventName": "openalex_click",
       "eventCount": 1
     },
     {
