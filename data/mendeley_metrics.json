@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "source": "Mendeley Catalog API",
   "status": "success",
-  "lastAttemptedUpdate": "2026-11-02T12:30:27Z",
-  "lastSuccessfulUpdate": "2026-11-02T12:30:27Z",
-  "totalReaders": 970,
+  "lastAttemptedUpdate": "2026-11-09T12:57:14Z",
+  "lastSuccessfulUpdate": "2026-11-09T12:57:14Z",
+  "totalReaders": 973,
   "publicationCount": 42,
   "matchedPublications": 40,
   "freshPublications": 40,
@@ -22,7 +22,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-11-02T12:30:27Z",
+      "updatedAt": "2026-11-09T12:57:14Z",
       "stale": false
     },
     "10.1002/advs.202410666": {
@@ -34,7 +34,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-11-02T12:30:27Z",
+      "updatedAt": "2026-11-09T12:57:14Z",
       "stale": false
     },
     "10.1002/advs.77623": {
@@ -46,7 +46,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-11-02T12:30:27Z",
+      "updatedAt": "2026-11-09T12:57:14Z",
       "stale": false
     },
     "10.1002/asia.202300681": {
@@ -58,7 +58,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-11-02T12:30:27Z",
+      "updatedAt": "2026-11-09T12:57:14Z",
       "stale": false
     },
     "10.1002/asia.202500719": {
@@ -70,19 +70,19 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-11-02T12:30:27Z",
+      "updatedAt": "2026-11-09T12:57:14Z",
       "stale": false
     },
     "10.1002/asia.70245": {
       "status": "verified",
       "title": "Fused Dithienoheterocycle-Based Hole-Transporting Materials for Efficient Perovskite Solar Cells",
-      "readerCount": 1,
+      "readerCount": 3,
       "documentId": "d00784b0-89f2-3bd8-a1a3-c597f2cffacf",
       "url": "https://www.mendeley.com/catalogue/d00784b0-89f2-3bd8-a1a3-c597f2cffacf/",
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-11-02T12:30:27Z",
+      "updatedAt": "2026-11-09T12:57:14Z",
       "stale": false
     },
     "10.1002/solr.202300988": {
@@ -94,19 +94,19 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-11-02T12:30:27Z",
+      "updatedAt": "2026-11-09T12:57:14Z",
       "stale": false
     },
     "10.1002/solr.202500538": {
       "status": "verified",
       "title": "Round-Robin Interlaboratory Comparison of Large-Area Organic Thin-Film and Perovskite Solar Cells",
-      "readerCount": 6,
+      "readerCount": 5,
       "documentId": "bf4e9baa-5251-362b-992d-3e7b2ad25993",
       "url": "https://www.mendeley.com/catalogue/bf4e9baa-5251-362b-992d-3e7b2ad25993/",
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-11-02T12:30:27Z",
+      "updatedAt": "2026-11-09T12:57:14Z",
       "stale": false
     },
     "10.1016/j.cej.2021.131609": {
@@ -118,7 +118,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-11-02T12:30:27Z",
+      "updatedAt": "2026-11-09T12:57:14Z",
       "stale": false
     },
     "10.1016/j.cej.2022.139926": {
@@ -130,31 +130,31 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-11-02T12:30:27Z",
+      "updatedAt": "2026-11-09T12:57:14Z",
       "stale": false
     },
     "10.1016/j.cej.2024.153974": {
       "status": "verified",
       "title": "A systematic investigation of PVDF-HFP in perovskite solar cells for improved space mission reliability",
-      "readerCount": 21,
+      "readerCount": 22,
       "documentId": "b0f1cbcd-ffd5-33e7-82f3-e6206023e83c",
       "url": "https://www.mendeley.com/catalogue/b0f1cbcd-ffd5-33e7-82f3-e6206023e83c/",
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-11-02T12:30:27Z",
+      "updatedAt": "2026-11-09T12:57:14Z",
       "stale": false
     },
     "10.1016/j.cej.2026.177494": {
       "status": "verified",
       "title": "Reliability enhancement of PVDF-HFP modified perovskite solar cells under synergistic space-relevant stress conditions",
-      "readerCount": 2,
+      "readerCount": 3,
       "documentId": "2cf94f88-9d18-390b-aea4-2514edf6f5ef",
       "url": "https://www.mendeley.com/catalogue/2cf94f88-9d18-390b-aea4-2514edf6f5ef/",
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-11-02T12:30:27Z",
+      "updatedAt": "2026-11-09T12:57:14Z",
       "stale": false
     },
     "10.1016/j.cej.2026.183177": {
@@ -166,7 +166,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-11-02T12:30:27Z",
+      "updatedAt": "2026-11-09T12:57:14Z",
       "stale": false
     },
     "10.1016/j.electacta.2010.07.061": {
@@ -178,7 +178,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-11-02T12:30:27Z",
+      "updatedAt": "2026-11-09T12:57:14Z",
       "stale": false
     },
     "10.1016/j.jece.2023.111741": {
@@ -190,7 +190,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-11-02T12:30:27Z",
+      "updatedAt": "2026-11-09T12:57:14Z",
       "stale": false
     },
     "10.1016/j.jpowsour.2010.12.063": {
@@ -202,7 +202,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-11-02T12:30:27Z",
+      "updatedAt": "2026-11-09T12:57:14Z",
       "stale": false
     },
     "10.1016/j.jpowsour.2011.06.049": {
@@ -214,7 +214,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-11-02T12:30:27Z",
+      "updatedAt": "2026-11-09T12:57:14Z",
       "stale": false
     },
     "10.1016/j.jpowsour.2012.05.079": {
@@ -226,7 +226,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-11-02T12:30:27Z",
+      "updatedAt": "2026-11-09T12:57:14Z",
       "stale": false
     },
     "10.1016/j.jpowsour.2012.12.094": {
@@ -238,7 +238,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-11-02T12:30:27Z",
+      "updatedAt": "2026-11-09T12:57:14Z",
       "stale": false
     },
     "10.1016/j.jpowsour.2023.233496": {
@@ -250,7 +250,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-11-02T12:30:27Z",
+      "updatedAt": "2026-11-09T12:57:14Z",
       "stale": false
     },
     "10.1016/j.jpowsour.2025.239216": {
@@ -262,7 +262,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-11-02T12:30:27Z",
+      "updatedAt": "2026-11-09T12:57:14Z",
       "stale": false
     },
     "10.1016/j.mtchem.2024.102329": {
@@ -274,19 +274,19 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-11-02T12:30:27Z",
+      "updatedAt": "2026-11-09T12:57:14Z",
       "stale": false
     },
     "10.1016/j.mtener.2026.102359": {
       "status": "verified",
       "title": "2T perovskite tandem solar cells in space: Failure mechanisms and design strategies",
-      "readerCount": 4,
+      "readerCount": 3,
       "documentId": "2a700488-5383-398c-a976-cfb3f31992dd",
       "url": "https://www.mendeley.com/catalogue/2a700488-5383-398c-a976-cfb3f31992dd/",
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-11-02T12:30:27Z",
+      "updatedAt": "2026-11-09T12:57:14Z",
       "stale": false
     },
     "10.1016/j.optcom.2004.10.003": {
@@ -298,7 +298,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-11-02T12:30:27Z",
+      "updatedAt": "2026-11-09T12:57:14Z",
       "stale": false
     },
     "10.1016/j.orgel.2023.106847": {
@@ -310,7 +310,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-11-02T12:30:27Z",
+      "updatedAt": "2026-11-09T12:57:14Z",
       "stale": false
     },
     "10.1016/j.seppur.2025.134157": {
@@ -322,7 +322,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-11-02T12:30:27Z",
+      "updatedAt": "2026-11-09T12:57:14Z",
       "stale": false
     },
     "10.1016/j.solener.2026.114430": {
@@ -334,7 +334,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-11-02T12:30:27Z",
+      "updatedAt": "2026-11-09T12:57:14Z",
       "stale": false
     },
     "10.1016/j.solmat.2009.07.017": {
@@ -346,19 +346,19 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-11-02T12:30:27Z",
+      "updatedAt": "2026-11-09T12:57:14Z",
       "stale": false
     },
     "10.1016/j.solmat.2025.114015": {
       "status": "verified",
       "title": "Impact of proton radiation on the performance of single-junction perovskite solar cells for space applications",
-      "readerCount": 21,
+      "readerCount": 22,
       "documentId": "4336dab2-9717-32e1-9f3a-5a890170e58a",
       "url": "https://www.mendeley.com/catalogue/4336dab2-9717-32e1-9f3a-5a890170e58a/",
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-11-02T12:30:27Z",
+      "updatedAt": "2026-11-09T12:57:14Z",
       "stale": false
     },
     "10.1016/j.tsf.2009.11.058": {
@@ -370,7 +370,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-11-02T12:30:27Z",
+      "updatedAt": "2026-11-09T12:57:14Z",
       "stale": false
     },
     "10.1021/jp805239k": {
@@ -382,7 +382,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-11-02T12:30:27Z",
+      "updatedAt": "2026-11-09T12:57:14Z",
       "stale": false
     },
     "10.1039/b902595m": {
@@ -394,7 +394,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-11-02T12:30:27Z",
+      "updatedAt": "2026-11-09T12:57:14Z",
       "stale": false
     },
     "10.1039/c0jm04099a": {
@@ -406,7 +406,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-11-02T12:30:27Z",
+      "updatedAt": "2026-11-09T12:57:14Z",
       "stale": false
     },
     "10.1039/d3cc04699k": {
@@ -418,7 +418,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-11-02T12:30:27Z",
+      "updatedAt": "2026-11-09T12:57:14Z",
       "stale": false
     },
     "10.1557/proc-1121-n14-01": {
@@ -430,18 +430,18 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-11-02T12:30:27Z",
+      "updatedAt": "2026-11-09T12:57:14Z",
       "stale": false
     },
     "10.29803/ce.202108_68(4).0006": {
       "status": "not_found",
       "title": "鈣鈦礦太陽能模組技術現況與展望",
-      "lastAttemptedUpdate": "2026-11-02T12:30:27Z"
+      "lastAttemptedUpdate": "2026-11-09T12:57:14Z"
     },
     "10.29803/ce.202402_71(1).0002": {
       "status": "not_found",
       "title": "鈣鈦礦太陽能電池於太空應用的研究與展望",
-      "lastAttemptedUpdate": "2026-11-02T12:30:27Z"
+      "lastAttemptedUpdate": "2026-11-09T12:57:14Z"
     },
     "10.3390/nano11061607": {
       "status": "verified",
@@ -452,19 +452,19 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-11-02T12:30:27Z",
+      "updatedAt": "2026-11-09T12:57:14Z",
       "stale": false
     },
     "10.3390/nano11082125": {
       "status": "verified",
       "title": "Controlled photoanode properties for large-area efficient and stable dye-sensitized photovoltaic modules",
-      "readerCount": 17,
+      "readerCount": 18,
       "documentId": "23420b7a-e735-3e6f-bfd0-b3184ae42206",
       "url": "https://www.mendeley.com/catalogue/23420b7a-e735-3e6f-bfd0-b3184ae42206/",
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-11-02T12:30:27Z",
+      "updatedAt": "2026-11-09T12:57:14Z",
       "stale": false
     },
     "10.3390/nano12152651": {
@@ -476,19 +476,19 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-11-02T12:30:27Z",
+      "updatedAt": "2026-11-09T12:57:14Z",
       "stale": false
     },
     "10.3390/polym13234246": {
       "status": "verified",
       "title": "Microstructure and biological properties of electrospun in situ polymerization of polycaprolactone-graft-polyacrylic acid nanofibers and its composite nanofiber dressings",
-      "readerCount": 27,
+      "readerCount": 26,
       "documentId": "cadfb80c-49e7-3ea4-8d72-10f9ff162b8a",
       "url": "https://www.mendeley.com/catalogue/cadfb80c-49e7-3ea4-8d72-10f9ff162b8a/",
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-11-02T12:30:27Z",
+      "updatedAt": "2026-11-09T12:57:14Z",
       "stale": false
     },
     "10.3390/polym14081580": {
@@ -500,7 +500,7 @@
       "matchedBy": "doi",
       "exactMatchCount": 1,
       "imported": true,
-      "updatedAt": "2026-11-02T12:30:27Z",
+      "updatedAt": "2026-11-09T12:57:14Z",
       "stale": false
     }
   }
