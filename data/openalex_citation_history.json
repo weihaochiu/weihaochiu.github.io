@@ -1,15 +1,15 @@
 {
   "schemaVersion": 3,
   "source": "OpenAlex Works API",
-  "status": "success_with_exclusions",
-  "lastSuccessfulUpdate": "2026-11-02T11:58:19.620508Z",
+  "status": "partial",
+  "lastSuccessfulUpdate": "2026-11-09T12:28:00.145474Z",
   "workCount": 40,
   "missingPublicationYearCount": 0,
-  "totalCitationsFromPublicationMetrics": 1012,
-  "rawTotalCitationsFromHistory": 1012,
-  "totalCitationsIncludedInAnnualChart": 1006,
-  "rawValidationDifference": 0,
-  "unassignedCitationCount": 0,
+  "totalCitationsFromPublicationMetrics": 1027,
+  "rawTotalCitationsFromHistory": 1024,
+  "totalCitationsIncludedInAnnualChart": 1018,
+  "rawValidationDifference": -3,
+  "unassignedCitationCount": 3,
   "excludedInvalidCitationCount": 6,
   "excludedInvalidCitations": [
     {
@@ -89,7 +89,7 @@
     },
     {
       "year": 2014,
-      "citations": 97
+      "citations": 99
     },
     {
       "year": 2015,
@@ -109,7 +109,7 @@
     },
     {
       "year": 2019,
-      "citations": 34
+      "citations": 36
     },
     {
       "year": 2020,
@@ -121,7 +121,7 @@
     },
     {
       "year": 2022,
-      "citations": 42
+      "citations": 43
     },
     {
       "year": 2023,
@@ -133,11 +133,11 @@
     },
     {
       "year": 2025,
-      "citations": 91
+      "citations": 93
     },
     {
       "year": 2026,
-      "citations": 78
+      "citations": 83
     }
   ],
   "works": {
@@ -170,7 +170,7 @@
         },
         {
           "year": 2017,
-          "citations": 6
+          "citations": 5
         },
         {
           "year": 2018,
@@ -178,7 +178,7 @@
         },
         {
           "year": 2019,
-          "citations": 1
+          "citations": 2
         },
         {
           "year": 2020,
@@ -220,7 +220,7 @@
         },
         {
           "year": 2017,
-          "citations": 6
+          "citations": 5
         },
         {
           "year": 2018,
@@ -228,7 +228,7 @@
         },
         {
           "year": 2019,
-          "citations": 1
+          "citations": 2
         },
         {
           "year": 2020,
@@ -253,7 +253,7 @@
       "excludedInvalidCitations": [],
       "unassignedCitationCount": 0,
       "citingWorkCount": 38,
-      "citingArticlesWithDoiCount": 38,
+      "citingArticlesWithDoiCount": 37,
       "citingArticlesWithDoi": [
         {
           "openAlexId": "W4403137332",
@@ -442,13 +442,13 @@
             "Sining Yun",
             "Peter D. Lund"
           ],
-          "journal": "",
+          "journal": "Wiley eBooks",
           "publicationYear": 2018,
           "publicationDate": "2018-09-03",
           "volume": "",
           "issue": "",
           "pages": "395-419",
-          "type": "other"
+          "type": "book-chapter"
         },
         {
           "openAlexId": "W2796123810",
@@ -548,25 +548,6 @@
           "issue": "24",
           "pages": "20454-20466",
           "type": "article"
-        },
-        {
-          "openAlexId": "W2596703612",
-          "doi": "10.48550/arxiv.1703.04084",
-          "doiUrl": "https://doi.org/10.48550/arxiv.1703.04084",
-          "title": "Two-Dimensional Transition Metal Dichalcogenides-Based Counter Electrodes for Dye-Sensitized Solar Cells",
-          "authors": [
-            "Eric J. Singh",
-            "Ki Seok Kim",
-            "Geun Young Yeom",
-            "Hari Singh Nalwa"
-          ],
-          "journal": "arXiv (Cornell University)",
-          "publicationYear": 2017,
-          "publicationDate": "2017-03-12",
-          "volume": "",
-          "issue": "",
-          "pages": "",
-          "type": "preprint"
         },
         {
           "openAlexId": "W2583320829",
@@ -1059,7 +1040,7 @@
           "doiUrl": "https://doi.org/10.1088/1555-6611/abcd3f",
           "title": "Generation of an optical beam with two-dimensional dark focus in a fractionally-degenerate cavity",
           "authors": [
-            "Михаил Валерьевич Горбунков",
+            "M. V. Gorbunkov",
             "Pavel V. Kostryukov",
             "Vladimir G. Tunkin"
           ],
@@ -1077,7 +1058,7 @@
           "doiUrl": "https://doi.org/10.1088/1555-6611/ab4649",
           "title": "Sharp focusing of superpositions of Hermite–Gaussian modes locked in fractionally degenerate cavity",
           "authors": [
-            "Михаил Валерьевич Горбунков",
+            "M. V. Gorbunkov",
             "Pavel V. Kostryukov",
             "Vladimir G. Tunkin"
           ],
@@ -1097,7 +1078,7 @@
           "authors": [
             "V V Bezotosnyĭ",
             "Evgeniy A. Cheshev",
-            "Михаил Валерьевич Горбунков",
+            "M. V. Gorbunkov",
             "Alexey L. Koromyslov",
             "Pavel V. Kostryukov",
             "M. S. Krivonos",
@@ -1120,7 +1101,7 @@
           "authors": [
             "V V Bezotosnyĭ",
             "Evgeniy A. Cheshev",
-            "Михаил Валерьевич Горбунков",
+            "M. V. Gorbunkov",
             "Pavel V. Kostryukov",
             "Vladimir G. Tunkin"
           ],
@@ -1155,7 +1136,7 @@
       "doi": "10.1016/j.jpowsour.2012.05.079",
       "title": "Ionic liquid diffusion properties in tetrapod-like ZnO photoanode for dye-sensitized solar cells",
       "publicationYear": 2012,
-      "currentCitationCount": 16,
+      "currentCitationCount": 17,
       "sourceUrl": "https://api.openalex.org/works?filter=cites:W2026340393",
       "citationsByYear": [
         {
@@ -1172,7 +1153,7 @@
         },
         {
           "year": 2017,
-          "citations": 1
+          "citations": 2
         },
         {
           "year": 2019,
@@ -1214,7 +1195,7 @@
         },
         {
           "year": 2017,
-          "citations": 1
+          "citations": 2
         },
         {
           "year": 2019,
@@ -1241,13 +1222,13 @@
           "citations": 1
         }
       ],
-      "historyTotal": 16,
-      "rawHistoryTotal": 16,
+      "historyTotal": 17,
+      "rawHistoryTotal": 17,
       "excludedInvalidCitationCount": 0,
       "excludedInvalidCitations": [],
       "unassignedCitationCount": 0,
-      "citingWorkCount": 16,
-      "citingArticlesWithDoiCount": 15,
+      "citingWorkCount": 17,
+      "citingArticlesWithDoiCount": 16,
       "citingArticlesWithDoi": [
         {
           "openAlexId": "W4400225312",
@@ -1369,6 +1350,22 @@
           "issue": "",
           "pages": "145-204",
           "type": "book-chapter"
+        },
+        {
+          "openAlexId": "W2773356805",
+          "doi": "10.70675/74be661ez495fz4d3az89e0za8240e02c51b",
+          "doiUrl": "https://doi.org/10.70675/74be661ez495fz4d3az89e0za8240e02c51b",
+          "title": "Fabrication et caractérisation avancée de cellules photovoltaïques à base de nanofils de ZnO",
+          "authors": [
+            "Claire Verrier"
+          ],
+          "journal": "theses.fr (ABES)",
+          "publicationYear": 2017,
+          "publicationDate": "2017-12-14",
+          "volume": "",
+          "issue": "",
+          "pages": "",
+          "type": "dissertation"
         },
         {
           "openAlexId": "W2771263447",
@@ -1760,13 +1757,13 @@
             "Andrea Sorrentino",
             "Sambandam Anandan"
           ],
-          "journal": "",
+          "journal": "Wiley eBooks",
           "publicationYear": 2018,
           "publicationDate": "2018-09-03",
           "volume": "",
           "issue": "",
           "pages": "121-167",
-          "type": "other"
+          "type": "book-chapter"
         },
         {
           "openAlexId": "W2888546178",
@@ -2211,7 +2208,7 @@
             "Nir Gavish",
             "Jaylan S. Jones",
             "Zhengfu Xu",
-            "Andrew  J. Christlieb",
+            "Andrew Christlieb",
             "Keith Promislow"
           ],
           "journal": "Polymers",
@@ -2568,7 +2565,7 @@
       "excludedInvalidCitations": [],
       "unassignedCitationCount": 0,
       "citingWorkCount": 72,
-      "citingArticlesWithDoiCount": 70,
+      "citingArticlesWithDoiCount": 71,
       "citingArticlesWithDoi": [
         {
           "openAlexId": "W4391238755",
@@ -2635,7 +2632,7 @@
             "Pritamkumar V. Shinde",
             "Dimple P. Dutta",
             "Nanasaheb M. Shinde",
-            "Rajaram  Sakharam Mane"
+            "Rajaram S. Mane"
           ],
           "journal": "Elsevier eBooks",
           "publicationYear": 2023,
@@ -3347,7 +3344,7 @@
             "Abhayankar Maurya",
             "Saleem Akhtar Farooqui",
             "Asim Bhaumik",
-            "Anil  Kumar Sinha"
+            "Anil K. Sinha"
           ],
           "journal": "ACS Applied Materials & Interfaces",
           "publicationYear": 2014,
@@ -3586,6 +3583,22 @@
           "type": "article"
         },
         {
+          "openAlexId": "W2538375923",
+          "doi": "10.82308/38284",
+          "doiUrl": "https://doi.org/10.82308/38284",
+          "title": "Innovations in electrophoretic deposition of nanotitania- based photoanodes for use in dye-sensitized solar cells",
+          "authors": [
+            "Nima Parsi Benehkohal"
+          ],
+          "journal": "eScholarship@McGill (McGill)",
+          "publicationYear": 2014,
+          "publicationDate": "2014-01-01",
+          "volume": "",
+          "issue": "",
+          "pages": "",
+          "type": "dissertation"
+        },
+        {
           "openAlexId": "W2149624039",
           "doi": "10.1039/c4ta00902a",
           "doiUrl": "https://doi.org/10.1039/c4ta00902a",
@@ -3688,7 +3701,7 @@
           "publicationYear": 2013,
           "publicationDate": "2013-07-05",
           "volume": "34",
-          "issue": "",
+          "issue": "34",
           "pages": "254-257",
           "type": "article"
         },
@@ -4003,7 +4016,7 @@
       "doi": "10.1021/jp805239k",
       "title": "Formation of Branched ZnO Nanowires from Solvothermal Method and Dye-Sensitized Solar Cells Applications",
       "publicationYear": 2008,
-      "currentCitationCount": 267,
+      "currentCitationCount": 271,
       "sourceUrl": "https://api.openalex.org/works?filter=cites:W2055166593",
       "citationsByYear": [
         {
@@ -4028,7 +4041,7 @@
         },
         {
           "year": 2014,
-          "citations": 29
+          "citations": 31
         },
         {
           "year": 2015,
@@ -4060,7 +4073,7 @@
         },
         {
           "year": 2022,
-          "citations": 7
+          "citations": 8
         },
         {
           "year": 2023,
@@ -4102,7 +4115,7 @@
         },
         {
           "year": 2014,
-          "citations": 29
+          "citations": 31
         },
         {
           "year": 2015,
@@ -4134,7 +4147,7 @@
         },
         {
           "year": 2022,
-          "citations": 7
+          "citations": 8
         },
         {
           "year": 2023,
@@ -4153,13 +4166,13 @@
           "citations": 2
         }
       ],
-      "historyTotal": 267,
-      "rawHistoryTotal": 267,
+      "historyTotal": 270,
+      "rawHistoryTotal": 270,
       "excludedInvalidCitationCount": 0,
       "excludedInvalidCitations": [],
-      "unassignedCitationCount": 0,
-      "citingWorkCount": 267,
-      "citingArticlesWithDoiCount": 266,
+      "unassignedCitationCount": 1,
+      "citingWorkCount": 270,
+      "citingArticlesWithDoiCount": 268,
       "citingArticlesWithDoi": [
         {
           "openAlexId": "W7213267293",
@@ -4229,13 +4242,13 @@
             "S. S. Kushwaha",
             "Sudip Mandal"
           ],
-          "journal": "",
+          "journal": "Wiley eBooks",
           "publicationYear": 2024,
           "publicationDate": "2024-09-02",
           "volume": "",
           "issue": "",
           "pages": "473-519",
-          "type": "other"
+          "type": "book-chapter"
         },
         {
           "openAlexId": "W4400948536",
@@ -4319,7 +4332,7 @@
             "Eduardo Schiavo",
             "Nadia Garino",
             "Ana Yancy Segura Zarate",
-            "Ana  Belen Muñoz-García",
+            "Ana B. Muñoz‐García",
             "Michele Pavone",
             "Claudio Gerbaldi",
             "Claudia Barolo",
@@ -4526,6 +4539,22 @@
           "issue": "4",
           "pages": "045008",
           "type": "article"
+        },
+        {
+          "openAlexId": "W7150719507",
+          "doi": "10.70675/31e93c33z0b17z466fz9d4ez83f84d848e8e",
+          "doiUrl": "https://doi.org/10.70675/31e93c33z0b17z466fz9d4ez83f84d848e8e",
+          "title": "Anti-fouling surfaces based on polymer-infiltrated ZnO nanowires via capillary rise infiltration",
+          "authors": [
+            "Hong Huy Tran"
+          ],
+          "journal": "theses.fr (ABES)",
+          "publicationYear": 2022,
+          "publicationDate": "2022-03-08",
+          "volume": "",
+          "issue": "",
+          "pages": "",
+          "type": "dissertation"
         },
         {
           "openAlexId": "W4220960556",
@@ -5055,7 +5084,7 @@
           "authors": [
             "Yogesh B. Waghadkar",
             "Manish Shinde",
-            "Sunit  Barasu Rane",
+            "Sunit Rane",
             "Suresh Gosavi",
             "Chiaki Terashima",
             "Akira Fujishima",
@@ -5591,7 +5620,7 @@
             "Alexander V. Baranov",
             "Yurii K. Gun’ko"
           ],
-          "journal": "Encyclopedia of Inorganic and Bioinorganic Chemistry",
+          "journal": "Wiley eBooks",
           "publicationYear": 2016,
           "publicationDate": "2016-06-15",
           "volume": "",
@@ -6317,6 +6346,22 @@
           "type": "book-chapter"
         },
         {
+          "openAlexId": "W760965710",
+          "doi": "10.70675/a7d9aed6z48edz488fza69bzfcc01f1e1037",
+          "doiUrl": "https://doi.org/10.70675/a7d9aed6z48edz488fza69bzfcc01f1e1037",
+          "title": "Modélisation et simulation multi échelle des effets de taille et des couplages électromécaniques dans les nanostructures",
+          "authors": [
+            "Minh Tan Hoang"
+          ],
+          "journal": "theses.fr (ABES)",
+          "publicationYear": 2014,
+          "publicationDate": "2014-10-17",
+          "volume": "",
+          "issue": "",
+          "pages": "",
+          "type": "dissertation"
+        },
+        {
           "openAlexId": "W1978090102",
           "doi": "10.1002/cphc.201402299",
           "doiUrl": "https://doi.org/10.1002/cphc.201402299",
@@ -6685,7 +6730,7 @@
           "volume": "",
           "issue": "",
           "pages": "105-166",
-          "type": "other"
+          "type": "book-chapter"
         },
         {
           "openAlexId": "W1941339151",
@@ -7006,13 +7051,13 @@
             "Seung Hwan Ko",
             "Costas P. Grigoropoulos"
           ],
-          "journal": "",
+          "journal": "Wiley eBooks",
           "publicationYear": 2013,
           "publicationDate": "2013-08-16",
           "volume": "",
           "issue": "",
           "pages": "149-154",
-          "type": "other"
+          "type": "book-chapter"
         },
         {
           "openAlexId": "W2106788832",
@@ -7925,7 +7970,7 @@
           "authors": [
             "Germain Rey"
           ],
-          "journal": "",
+          "journal": "theses.fr (ABES)",
           "publicationYear": 2012,
           "publicationDate": "2012-05-23",
           "volume": "",
@@ -9448,7 +9493,7 @@
       "doi": "10.1016/j.tsf.2009.11.058",
       "title": "Effects of mesoscopic poly(3,4-ethylenedioxythiophene) films as counter electrodes for dye-sensitized solar cells",
       "publicationYear": 2010,
-      "currentCitationCount": 88,
+      "currentCitationCount": 89,
       "sourceUrl": "https://api.openalex.org/works?filter=cites:W2055510369",
       "citationsByYear": [
         {
@@ -9586,7 +9631,7 @@
       "rawHistoryTotal": 88,
       "excludedInvalidCitationCount": 0,
       "excludedInvalidCitations": [],
-      "unassignedCitationCount": 0,
+      "unassignedCitationCount": 1,
       "citingWorkCount": 88,
       "citingArticlesWithDoiCount": 88,
       "citingArticlesWithDoi": [
@@ -10075,13 +10120,13 @@
             "L. P. Teo",
             "A.K. Arof"
           ],
-          "journal": "",
+          "journal": "Wiley eBooks",
           "publicationYear": 2018,
           "publicationDate": "2018-09-03",
           "volume": "",
           "issue": "",
           "pages": "85-119",
-          "type": "other"
+          "type": "book-chapter"
         },
         {
           "openAlexId": "W2891145330",
@@ -10093,13 +10138,13 @@
             "Samrana Kazim",
             "Shahzada Ahmad"
           ],
-          "journal": "",
+          "journal": "Wiley eBooks",
           "publicationYear": 2018,
           "publicationDate": "2018-09-03",
           "volume": "",
           "issue": "",
           "pages": "177-196",
-          "type": "other"
+          "type": "book-chapter"
         },
         {
           "openAlexId": "W2784159191",
@@ -11347,7 +11392,7 @@
       "doi": "10.1039/c0jm04099a",
       "title": "Improved performance of flexible dye-sensitized solar cells by introducing an interfacial layer on Ti substrates",
       "publicationYear": 2011,
-      "currentCitationCount": 57,
+      "currentCitationCount": 58,
       "sourceUrl": "https://api.openalex.org/works?filter=cites:W2075277742",
       "citationsByYear": [
         {
@@ -11384,7 +11429,7 @@
         },
         {
           "year": 2019,
-          "citations": 2
+          "citations": 3
         },
         {
           "year": 2020,
@@ -11442,7 +11487,7 @@
         },
         {
           "year": 2019,
-          "citations": 2
+          "citations": 3
         },
         {
           "year": 2020,
@@ -11461,8 +11506,8 @@
           "citations": 1
         }
       ],
-      "historyTotal": 56,
-      "rawHistoryTotal": 57,
+      "historyTotal": 57,
+      "rawHistoryTotal": 58,
       "excludedInvalidCitationCount": 1,
       "excludedInvalidCitations": [
         {
@@ -11473,7 +11518,7 @@
         }
       ],
       "unassignedCitationCount": 0,
-      "citingWorkCount": 57,
+      "citingWorkCount": 58,
       "citingArticlesWithDoiCount": 56,
       "citingArticlesWithDoi": [
         {
@@ -11663,8 +11708,8 @@
         },
         {
           "openAlexId": "W2733887472",
-          "doi": "10.3791/55309",
-          "doiUrl": "https://doi.org/10.3791/55309",
+          "doi": "10.3791/55309-v",
+          "doiUrl": "https://doi.org/10.3791/55309-v",
           "title": "Electrospinning of Photocatalytic Electrodes for Dye-sensitized Solar Cells",
           "authors": [
             "Nicolò Canever",
@@ -12283,7 +12328,7 @@
           "publicationYear": 2013,
           "publicationDate": "2013-07-05",
           "volume": "34",
-          "issue": "",
+          "issue": "34",
           "pages": "254-257",
           "type": "article"
         },
@@ -14191,7 +14236,7 @@
           "volume": "",
           "issue": "",
           "pages": "153-162",
-          "type": "other"
+          "type": "book-chapter"
         },
         {
           "openAlexId": "W2052996056",
@@ -15188,7 +15233,7 @@
       "doi": "10.1016/j.jpowsour.2012.12.094",
       "title": "Enhanced efficiency of bifacial and back-illuminated Ti foil based flexible dye-sensitized solar cells by decoration of mesoporous SiO2 layer on TiO2 anode",
       "publicationYear": 2013,
-      "currentCitationCount": 14,
+      "currentCitationCount": 15,
       "sourceUrl": "https://api.openalex.org/works?filter=cites:W2149766360",
       "citationsByYear": [
         {
@@ -15254,7 +15299,7 @@
       "rawHistoryTotal": 14,
       "excludedInvalidCitationCount": 0,
       "excludedInvalidCitations": [],
-      "unassignedCitationCount": 0,
+      "unassignedCitationCount": 1,
       "citingWorkCount": 14,
       "citingArticlesWithDoiCount": 14,
       "citingArticlesWithDoi": [
@@ -15568,7 +15613,7 @@
       "doi": "10.3390/nano11061607",
       "title": "Reducing Defects in Organic-Lead Halide Perovskite Film by Delayed Thermal Annealing Combined with KI/I2 for Efficient Perovskite Solar Cells",
       "publicationYear": 2021,
-      "currentCitationCount": 8,
+      "currentCitationCount": 9,
       "sourceUrl": "https://api.openalex.org/works?filter=cites:W3174093177",
       "citationsByYear": [
         {
@@ -15585,7 +15630,7 @@
         },
         {
           "year": 2026,
-          "citations": 1
+          "citations": 2
         }
       ],
       "rawCitationsByYear": [
@@ -15603,17 +15648,33 @@
         },
         {
           "year": 2026,
-          "citations": 1
+          "citations": 2
         }
       ],
-      "historyTotal": 8,
-      "rawHistoryTotal": 8,
+      "historyTotal": 9,
+      "rawHistoryTotal": 9,
       "excludedInvalidCitationCount": 0,
       "excludedInvalidCitations": [],
       "unassignedCitationCount": 0,
-      "citingWorkCount": 8,
-      "citingArticlesWithDoiCount": 8,
+      "citingWorkCount": 9,
+      "citingArticlesWithDoiCount": 9,
       "citingArticlesWithDoi": [
+        {
+          "openAlexId": "W4416260159",
+          "doi": "10.1016/j.nxener.2026.100763",
+          "doiUrl": "https://doi.org/10.1016/j.nxener.2026.100763",
+          "title": "Improving perovskite solar cell performance: Where we stand and what's next?",
+          "authors": [
+            "Nematov Dilshod Davlatshoevich"
+          ],
+          "journal": "Next Energy",
+          "publicationYear": 2026,
+          "publicationDate": "2026-07-08",
+          "volume": "13",
+          "issue": "",
+          "pages": "100763",
+          "type": "article"
+        },
         {
           "openAlexId": "W7162631289",
           "doi": "10.3390/su18115423",
@@ -15897,9 +15958,9 @@
           "journal": "Small",
           "publicationYear": 2026,
           "publicationDate": "2026-09-30",
-          "volume": "",
-          "issue": "",
-          "pages": "e75949",
+          "volume": "22",
+          "issue": "62",
+          "pages": "",
           "type": "review"
         },
         {
@@ -16917,7 +16978,7 @@
           "authors": [
             "Fatiha Bouihi"
           ],
-          "journal": "",
+          "journal": "theses.fr (ABES)",
           "publicationYear": 2022,
           "publicationDate": "2022-12-17",
           "volume": "",
@@ -17002,7 +17063,7 @@
             "Ceren Yildirim",
             "Ahmed El Hakmaoui",
             "Johann Bouclé",
-            "Mohamed Akssira A",
+            "Mohamed Akssira",
             "François Tran‐Van",
             "Mohamed Abarbri"
           ],
@@ -18121,7 +18182,7 @@
       "doi": "10.3390/nano12152651",
       "title": "Surfactant Tween 20 Controlled Perovskite Film Fabricated by Thermal Blade Coating for Efficient Perovskite Solar Cells",
       "publicationYear": 2022,
-      "currentCitationCount": 11,
+      "currentCitationCount": 12,
       "sourceUrl": "https://api.openalex.org/works?filter=cites:W4289524742",
       "citationsByYear": [
         {
@@ -18134,7 +18195,7 @@
         },
         {
           "year": 2025,
-          "citations": 3
+          "citations": 4
         },
         {
           "year": 2026,
@@ -18152,20 +18213,20 @@
         },
         {
           "year": 2025,
-          "citations": 3
+          "citations": 4
         },
         {
           "year": 2026,
           "citations": 1
         }
       ],
-      "historyTotal": 11,
-      "rawHistoryTotal": 11,
+      "historyTotal": 12,
+      "rawHistoryTotal": 12,
       "excludedInvalidCitationCount": 0,
       "excludedInvalidCitations": [],
       "unassignedCitationCount": 0,
-      "citingWorkCount": 11,
-      "citingArticlesWithDoiCount": 11,
+      "citingWorkCount": 12,
+      "citingArticlesWithDoiCount": 12,
       "citingArticlesWithDoi": [
         {
           "openAlexId": "W7222925536",
@@ -18209,6 +18270,24 @@
           "volume": "256",
           "issue": "",
           "pages": "124243",
+          "type": "article"
+        },
+        {
+          "openAlexId": "W4415325174",
+          "doi": "10.24815/jacps.v14i3.47588",
+          "doiUrl": "https://doi.org/10.24815/jacps.v14i3.47588",
+          "title": "Perovskite Solar Cell: Recent Advances in Material Structures, Optical and Electronical Properties",
+          "authors": [
+            "Auliya Rahmatul Ummah",
+            "Novita Arumsari",
+            "Dadan Hamdani"
+          ],
+          "journal": "Journal of Aceh Physics Society",
+          "publicationYear": 2025,
+          "publicationDate": "2025-07-14",
+          "volume": "14",
+          "issue": "3",
+          "pages": "1-10",
           "type": "article"
         },
         {
@@ -19466,6 +19545,25 @@
           "type": "article"
         },
         {
+          "openAlexId": "W4409922680",
+          "doi": "10.1016/j.apmt.2025.102712",
+          "doiUrl": "https://doi.org/10.1016/j.apmt.2025.102712",
+          "title": "Theoretical investigation of the role of halide alloys in the optoelectronic and stability properties of perovskites: The example of Cs 0 . 25 MA 0 . 25 FA 0 . 50 Pb ( X x ′ X 1 − x ) 3",
+          "authors": [
+            "Ramiro M. dos Santos",
+            "Iván Ornelas−Cruz",
+            "Matheus P. Lima",
+            "Juarez L. F. Da Silva"
+          ],
+          "journal": "Applied Materials Today",
+          "publicationYear": 2025,
+          "publicationDate": "2025-04-29",
+          "volume": "44",
+          "issue": "",
+          "pages": "102712",
+          "type": "article"
+        },
+        {
           "openAlexId": "W4407317858",
           "doi": "10.1016/j.nexus.2025.100400",
           "doiUrl": "https://doi.org/10.1016/j.nexus.2025.100400",
@@ -19487,25 +19585,6 @@
           "issue": "",
           "pages": "100400",
           "type": "article"
-        },
-        {
-          "openAlexId": "W4406122133",
-          "doi": "10.2139/ssrn.5070883",
-          "doiUrl": "https://doi.org/10.2139/ssrn.5070883",
-          "title": "Theoretical Investigation of the Role of Halide Alloys in the Optoelectronic and Stability Properties of Perovsites: The Example of Cs0.25MA0.25 FA0.50Pb(X ′ X X 1 – X )3",
-          "authors": [
-            "Ramiro M. dos Santos",
-            "Iván Ornelas−Cruz",
-            "Matheus  Paes Lima",
-            "Juarez L. F. Da Silva"
-          ],
-          "journal": "SSRN Electronic Journal",
-          "publicationYear": 2025,
-          "publicationDate": "2025-01-01",
-          "volume": "",
-          "issue": "",
-          "pages": "",
-          "type": "preprint"
         },
         {
           "openAlexId": "W4405702108",
@@ -20307,8 +20386,8 @@
             "Baoyi Ren",
             "Runda Guo",
             "Lei Wang",
-            "Ya‐Guang Sun",
-            "Yousheng Wang"
+            "Yousheng Wang",
+            "yaguang sun"
           ],
           "journal": "Nanomaterials",
           "publicationYear": 2024,
@@ -21190,11 +21269,15 @@
       "doi": "10.1016/j.jece.2023.111741",
       "title": "Additive-free electroless deposition on graphene/copper foil: Photo-induced and defect-assisted approach for environmentally friendly plating",
       "publicationYear": 2024,
-      "currentCitationCount": 1,
+      "currentCitationCount": 2,
       "sourceUrl": "https://api.openalex.org/works?filter=cites:W4389856655",
       "citationsByYear": [
         {
           "year": 2024,
+          "citations": 1
+        },
+        {
+          "year": 2026,
           "citations": 1
         }
       ],
@@ -21202,16 +21285,42 @@
         {
           "year": 2024,
           "citations": 1
+        },
+        {
+          "year": 2026,
+          "citations": 1
         }
       ],
-      "historyTotal": 1,
-      "rawHistoryTotal": 1,
+      "historyTotal": 2,
+      "rawHistoryTotal": 2,
       "excludedInvalidCitationCount": 0,
       "excludedInvalidCitations": [],
       "unassignedCitationCount": 0,
-      "citingWorkCount": 1,
-      "citingArticlesWithDoiCount": 1,
+      "citingWorkCount": 2,
+      "citingArticlesWithDoiCount": 2,
       "citingArticlesWithDoi": [
+        {
+          "openAlexId": "W7160410125",
+          "doi": "10.1038/s41598-026-52242-y",
+          "doiUrl": "https://doi.org/10.1038/s41598-026-52242-y",
+          "title": "Chelator-engineered nano-electroless copper coatings on epoxides: surface and electrochemical properties",
+          "authors": [
+            "Suseela Jayalakshmi",
+            "Raja Venkatesan",
+            "Sekar Surya",
+            "Palanivelu Balaramesh",
+            "Seong‐Cheol Kim",
+            "N. Saikumari",
+            "Alexandre A. Vetcher"
+          ],
+          "journal": "Scientific Reports",
+          "publicationYear": 2026,
+          "publicationDate": "2026-05-07",
+          "volume": "16",
+          "issue": "1",
+          "pages": "",
+          "type": "article"
+        },
         {
           "openAlexId": "W4402327366",
           "doi": "10.1016/j.surfcoat.2024.131339",
@@ -21575,7 +21684,7 @@
       "doi": "10.1016/j.cej.2024.153974",
       "title": "A systematic investigation of PVDF-HFP in perovskite solar cells for improved space mission reliability",
       "publicationYear": 2024,
-      "currentCitationCount": 13,
+      "currentCitationCount": 14,
       "sourceUrl": "https://api.openalex.org/works?filter=cites:W4400613411",
       "citationsByYear": [
         {
@@ -21584,7 +21693,7 @@
         },
         {
           "year": 2025,
-          "citations": 4
+          "citations": 5
         },
         {
           "year": 2026,
@@ -21598,20 +21707,20 @@
         },
         {
           "year": 2025,
-          "citations": 4
+          "citations": 5
         },
         {
           "year": 2026,
           "citations": 7
         }
       ],
-      "historyTotal": 13,
-      "rawHistoryTotal": 13,
+      "historyTotal": 14,
+      "rawHistoryTotal": 14,
       "excludedInvalidCitationCount": 0,
       "excludedInvalidCitations": [],
       "unassignedCitationCount": 0,
-      "citingWorkCount": 13,
-      "citingArticlesWithDoiCount": 13,
+      "citingWorkCount": 14,
+      "citingArticlesWithDoiCount": 14,
       "citingArticlesWithDoi": [
         {
           "openAlexId": "W7168190148",
@@ -21823,6 +21932,31 @@
           "issue": "18",
           "pages": "e00287",
           "type": "review"
+        },
+        {
+          "openAlexId": "W4413822259",
+          "doi": "10.1109/pvsc59419.2025.11132962",
+          "doiUrl": "https://doi.org/10.1109/pvsc59419.2025.11132962",
+          "title": "Reliability analysis of perovskite solar modules under space relevant conditions",
+          "authors": [
+            "Aránzazu Aguirre",
+            "Sarallah Hamtaei",
+            "Lucan Fanning",
+            "Thomas Jochmans",
+            "Tamara Merckx",
+            "Thomas Bader",
+            "Yinghuan Kuang",
+            "Tom Aernouts",
+            "Jef Poortmans",
+            "Bart Vermang"
+          ],
+          "journal": "Conference record of the IEEE Photovoltaic Specialists Conference",
+          "publicationYear": 2025,
+          "publicationDate": "2025-06-08",
+          "volume": "",
+          "issue": "",
+          "pages": "0183-0185",
+          "type": "conference-paper"
         },
         {
           "openAlexId": "W4415028918",
@@ -22118,7 +22252,7 @@
       "doi": "10.1002/advs.202410666",
       "title": "Judicious Molecular Design of 5H‑Dithieno[3,2‑b:2′,3′‑d]Pyran‐based Hole‐Transporting Materials for Highly Efficient and Stable Perovskite Solar Cells",
       "publicationYear": 2025,
-      "currentCitationCount": 15,
+      "currentCitationCount": 16,
       "sourceUrl": "https://api.openalex.org/works?filter=cites:W4404830134",
       "citationsByYear": [
         {
@@ -22127,7 +22261,7 @@
         },
         {
           "year": 2026,
-          "citations": 3
+          "citations": 4
         }
       ],
       "rawCitationsByYear": [
@@ -22137,17 +22271,35 @@
         },
         {
           "year": 2026,
-          "citations": 3
+          "citations": 4
         }
       ],
-      "historyTotal": 15,
-      "rawHistoryTotal": 15,
+      "historyTotal": 16,
+      "rawHistoryTotal": 16,
       "excludedInvalidCitationCount": 0,
       "excludedInvalidCitations": [],
       "unassignedCitationCount": 0,
-      "citingWorkCount": 15,
-      "citingArticlesWithDoiCount": 15,
+      "citingWorkCount": 16,
+      "citingArticlesWithDoiCount": 16,
       "citingArticlesWithDoi": [
+        {
+          "openAlexId": "W7225299303",
+          "doi": "10.1007/s00894-026-07032-8",
+          "doiUrl": "https://doi.org/10.1007/s00894-026-07032-8",
+          "title": "DFT and multivariate statistical analysis for the rational design of DTP-based hole transport materials",
+          "authors": [
+            "Sania Ismaeel",
+            "Sidra Manzoor",
+            "Faheem Abbas"
+          ],
+          "journal": "Journal of Molecular Modeling",
+          "publicationYear": 2026,
+          "publicationDate": "2026-11-05",
+          "volume": "32",
+          "issue": "12",
+          "pages": "",
+          "type": "article"
+        },
         {
           "openAlexId": "W7142289841",
           "doi": "10.1007/s11664-026-12807-z",
@@ -22871,12 +23023,12 @@
       "doi": "10.1016/j.solmat.2025.114015",
       "title": "Impact of proton radiation on the performance of single-junction perovskite solar cells for space applications",
       "publicationYear": 2026,
-      "currentCitationCount": 10,
+      "currentCitationCount": 12,
       "sourceUrl": "https://api.openalex.org/works?filter=cites:W4415443362",
       "citationsByYear": [
         {
           "year": 2026,
-          "citations": 9
+          "citations": 11
         }
       ],
       "rawCitationsByYear": [
@@ -22886,11 +23038,11 @@
         },
         {
           "year": 2026,
-          "citations": 9
+          "citations": 11
         }
       ],
-      "historyTotal": 9,
-      "rawHistoryTotal": 10,
+      "historyTotal": 11,
+      "rawHistoryTotal": 12,
       "excludedInvalidCitationCount": 1,
       "excludedInvalidCitations": [
         {
@@ -22901,9 +23053,25 @@
         }
       ],
       "unassignedCitationCount": 0,
-      "citingWorkCount": 10,
-      "citingArticlesWithDoiCount": 9,
+      "citingWorkCount": 12,
+      "citingArticlesWithDoiCount": 11,
       "citingArticlesWithDoi": [
+        {
+          "openAlexId": "W7204003207",
+          "doi": "10.59543/jidmis.v3.1745",
+          "doiUrl": "https://doi.org/10.59543/jidmis.v3.1745",
+          "title": "Intelligent Multi-Objective Optimization for UAV Mission Decision Support",
+          "authors": [
+            "Sulaman Rafiq"
+          ],
+          "journal": "Journal of Intelligent Decision Making and Information Science",
+          "publicationYear": 2026,
+          "publicationDate": "2026-08-21",
+          "volume": "3",
+          "issue": "2",
+          "pages": "957-980",
+          "type": "article"
+        },
         {
           "openAlexId": "W7171540118",
           "doi": "10.1016/j.mtphys.2026.102179",
@@ -22919,6 +23087,22 @@
           "volume": "66",
           "issue": "",
           "pages": "102179",
+          "type": "article"
+        },
+        {
+          "openAlexId": "W7204951564",
+          "doi": "10.70917/ijcisim-2026-3642",
+          "doiUrl": "https://doi.org/10.70917/ijcisim-2026-3642",
+          "title": "Artificial Intelligence in UAV Energy Management: Predictive Algorithms for Solar-Powered Stratospheric Flight Optimization and Autonomous Mission Persistence.",
+          "authors": [
+            "Sulaman Rafiq"
+          ],
+          "journal": "International Journal of Computer Information Systems and Industrial Management Applications",
+          "publicationYear": 2026,
+          "publicationDate": "2026-07-24",
+          "volume": "18",
+          "issue": "10s",
+          "pages": "627-643",
           "type": "article"
         },
         {
