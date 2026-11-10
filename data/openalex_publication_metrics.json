@@ -5,7 +5,7 @@
   "publicationCount": 42,
   "verifiedCount": 40,
   "notFoundCount": 2,
-  "lastSuccessfulUpdate": "2026-11-09T12:27:28Z",
+  "lastSuccessfulUpdate": "2026-11-10T09:57:08Z",
   "records": {
     "10.1016/j.cej.2026.183177": {
       "status": "verified",
@@ -187,7 +187,7 @@
       "citationPercentile": 0.33376206,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-04T10:54:05.112534"
+      "openAlexUpdatedDate": "2026-11-09T13:22:03.289127"
     },
     "10.1002/solr.202300988": {
       "status": "verified",
@@ -226,7 +226,7 @@
       "citationPercentile": 0.61480189,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-03T10:50:19.383937"
+      "openAlexUpdatedDate": "2026-11-09T13:22:03.289127"
     },
     "10.1002/asia.202300681": {
       "status": "verified",
