@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-10T08:26:07Z",
+  "generatedAt": "2026-11-11T07:45:18Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
@@ -34,16 +34,16 @@
     },
     {
       "month": "2026-11",
-      "pageViews": 23,
-      "activeUsers": 15
+      "pageViews": 24,
+      "activeUsers": 16
     }
   ],
   "topPages": [
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 73,
-      "activeUsers": 29
+      "pageViews": 74,
+      "activeUsers": 30
     },
     {
       "title": "Publications | Wei-Hao Chiu",
