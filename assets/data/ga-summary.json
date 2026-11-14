@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-13T07:59:52Z",
+  "generatedAt": "2026-11-14T07:37:13Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 270,
+    "pageViews": 268,
     "activeUsers": 44,
     "sessions": 71,
     "engagementRate": 0.4647887323943662
@@ -34,8 +34,8 @@
     },
     {
       "month": "2026-11",
-      "pageViews": 25,
-      "activeUsers": 17
+      "pageViews": 26,
+      "activeUsers": 18
     }
   ],
   "topPages": [
@@ -54,8 +54,8 @@
     {
       "title": "About | Wei-Hao Chiu",
       "path": "/about.html",
-      "pageViews": 35,
-      "activeUsers": 5
+      "pageViews": 34,
+      "activeUsers": 4
     },
     {
       "title": "News | Wei-Hao Chiu",
@@ -90,8 +90,8 @@
     {
       "title": "Patents | Wei-Hao Chiu",
       "path": "/patents.html",
-      "pageViews": 6,
-      "activeUsers": 4
+      "pageViews": 5,
+      "activeUsers": 3
     },
     {
       "title": "Coupled morphology and phase regulation of in-situ grown TiO2 nanostructures on graphite felt for enhanced redox kinetics in vanadium redox flow batteries | Wei-Hao Chiu",
@@ -194,7 +194,7 @@
     {
       "country": "Taiwan",
       "activeUsers": 14,
-      "pageViews": 238
+      "pageViews": 236
     },
     {
       "country": "United States",
@@ -243,15 +243,15 @@
       "eventCount": 11
     },
     {
-      "eventName": "patent_click",
-      "eventCount": 3
-    },
-    {
       "eventName": "scholar_click",
       "eventCount": 3
     },
     {
       "eventName": "orcid_click",
+      "eventCount": 2
+    },
+    {
+      "eventName": "patent_click",
       "eventCount": 2
     },
     {
