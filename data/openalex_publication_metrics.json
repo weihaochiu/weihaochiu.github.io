@@ -5,7 +5,7 @@
   "publicationCount": 42,
   "verifiedCount": 40,
   "notFoundCount": 2,
-  "lastSuccessfulUpdate": "2026-11-14T09:01:44Z",
+  "lastSuccessfulUpdate": "2026-11-15T09:31:40Z",
   "records": {
     "10.1016/j.cej.2026.183177": {
       "status": "verified",
@@ -70,7 +70,7 @@
       "citationPercentile": 0.96138288,
       "isTop1Percent": false,
       "isTop10Percent": true,
-      "openAlexUpdatedDate": "2026-11-04T10:54:05.112534"
+      "openAlexUpdatedDate": "2026-11-14T11:04:58.165337"
     },
     "10.1016/j.solmat.2025.114015": {
       "status": "verified",
@@ -161,7 +161,7 @@
       "citationPercentile": 0.66460955,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-10-16T09:59:22.235173"
+      "openAlexUpdatedDate": "2026-11-14T11:04:58.165337"
     },
     "10.1016/j.cej.2024.153974": {
       "status": "verified",
@@ -209,8 +209,8 @@
       "openAlexId": "W4388655704",
       "url": "https://openalex.org/W4388655704",
       "citationCount": 11,
-      "fwci": 0.7839,
-      "citationPercentile": 0.64919524,
+      "fwci": 0.7759,
+      "citationPercentile": 0.64594885,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-09-10T07:47:47.112893"
@@ -222,11 +222,11 @@
       "openAlexId": "W4385773304",
       "url": "https://openalex.org/W4385773304",
       "citationCount": 9,
-      "fwci": 0.6414,
-      "citationPercentile": 0.59613381,
+      "fwci": 0.6348,
+      "citationPercentile": 0.592331,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-09T13:22:03.289127"
+      "openAlexUpdatedDate": "2026-11-14T11:04:58.165337"
     },
     "10.1002/asia.202300681": {
       "status": "verified",
@@ -235,8 +235,8 @@
       "openAlexId": "W4386592311",
       "url": "https://openalex.org/W4386592311",
       "citationCount": 1,
-      "fwci": 0.0713,
-      "citationPercentile": 0.24223558,
+      "fwci": 0.0705,
+      "citationPercentile": 0.23723734,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-11-10T11:39:43.021295"
@@ -248,8 +248,8 @@
       "openAlexId": "W4376619834",
       "url": "https://openalex.org/W4376619834",
       "citationCount": 11,
-      "fwci": 0.7839,
-      "citationPercentile": 0.64919524,
+      "fwci": 0.7759,
+      "citationPercentile": 0.64594885,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-09-22T06:50:58.402377"
@@ -261,11 +261,11 @@
       "openAlexId": "W4385381207",
       "url": "https://openalex.org/W4385381207",
       "citationCount": 39,
-      "fwci": 2.7794,
-      "citationPercentile": 0.91634686,
+      "fwci": 2.7509,
+      "citationPercentile": 0.91530217,
       "isTop1Percent": false,
       "isTop10Percent": true,
-      "openAlexUpdatedDate": "2026-10-30T12:39:25.321706"
+      "openAlexUpdatedDate": "2026-11-14T11:04:58.165337"
     },
     "10.1016/j.cej.2022.139926": {
       "status": "verified",
@@ -382,7 +382,7 @@
       "citationPercentile": 0.69720367,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-07T11:25:07.637180"
+      "openAlexUpdatedDate": "2026-11-14T11:04:58.165337"
     },
     "10.1016/j.jpowsour.2011.06.049": {
       "status": "verified",
@@ -434,7 +434,7 @@
       "citationPercentile": 0.84584607,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-10-14T16:39:01.820549"
+      "openAlexUpdatedDate": "2026-11-14T11:04:58.165337"
     },
     "10.1016/j.tsf.2009.11.058": {
       "status": "verified",
@@ -447,7 +447,7 @@
       "citationPercentile": 0.92323448,
       "isTop1Percent": false,
       "isTop10Percent": true,
-      "openAlexUpdatedDate": "2026-11-07T11:25:07.637180"
+      "openAlexUpdatedDate": "2026-11-14T11:04:58.165337"
     },
     "10.1016/j.solmat.2009.07.017": {
       "status": "verified",
@@ -473,7 +473,7 @@
       "citationPercentile": 0.9617063,
       "isTop1Percent": false,
       "isTop10Percent": true,
-      "openAlexUpdatedDate": "2026-11-04T10:54:05.112534"
+      "openAlexUpdatedDate": "2026-11-14T11:04:58.165337"
     },
     "10.1021/jp805239k": {
       "status": "verified",
