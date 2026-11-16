@@ -2,14 +2,14 @@
   "schemaVersion": 3,
   "source": "OpenAlex Works API",
   "status": "partial",
-  "lastSuccessfulUpdate": "2026-11-09T12:28:00.145474Z",
+  "lastSuccessfulUpdate": "2026-11-16T12:23:27.227573Z",
   "workCount": 40,
   "missingPublicationYearCount": 0,
-  "totalCitationsFromPublicationMetrics": 1027,
+  "totalCitationsFromPublicationMetrics": 1029,
   "rawTotalCitationsFromHistory": 1024,
   "totalCitationsIncludedInAnnualChart": 1018,
-  "rawValidationDifference": -3,
-  "unassignedCitationCount": 3,
+  "rawValidationDifference": -5,
+  "unassignedCitationCount": 5,
   "excludedInvalidCitationCount": 6,
   "excludedInvalidCitations": [
     {
@@ -97,7 +97,7 @@
     },
     {
       "year": 2016,
-      "citations": 48
+      "citations": 47
     },
     {
       "year": 2017,
@@ -129,7 +129,7 @@
     },
     {
       "year": 2024,
-      "citations": 78
+      "citations": 77
     },
     {
       "year": 2025,
@@ -137,7 +137,7 @@
     },
     {
       "year": 2026,
-      "citations": 83
+      "citations": 85
     }
   ],
   "works": {
@@ -944,7 +944,7 @@
           "authors": [
             "S. Senthilarasu",
             "T. A. Nirmal Peiris",
-            "Jorge Garcı́a-Cañadas",
+            "Jorge García-Cañadas",
             "K. G. Upul Wijayantha"
           ],
           "journal": "The Journal of Physical Chemistry C",
@@ -1979,6 +1979,24 @@
           "type": "article"
         },
         {
+          "openAlexId": "W2108494379",
+          "doi": "10.1007/978-3-642-54160-5_5",
+          "doiUrl": "https://doi.org/10.1007/978-3-642-54160-5_5",
+          "title": "Electrospun Oxide Nanofibers for Dye-Sensitized Solar Cells",
+          "authors": [
+            "Qinghong Zhang",
+            "Yichuan Rui",
+            "Li Zhang"
+          ],
+          "journal": "Nanostructure science and technology",
+          "publicationYear": 2014,
+          "publicationDate": "2014-03-18",
+          "volume": "",
+          "issue": "",
+          "pages": "111-139",
+          "type": "book-chapter"
+        },
+        {
           "openAlexId": "W1966769369",
           "doi": "10.1007/s10008-014-2401-7",
           "doiUrl": "https://doi.org/10.1007/s10008-014-2401-7",
@@ -1995,24 +2013,6 @@
           "issue": "6",
           "pages": "1665-1671",
           "type": "article"
-        },
-        {
-          "openAlexId": "W2108494379",
-          "doi": "10.1007/978-3-642-54160-5_5",
-          "doiUrl": "https://doi.org/10.1007/978-3-642-54160-5_5",
-          "title": "Electrospun Oxide Nanofibers for Dye-Sensitized Solar Cells",
-          "authors": [
-            "Qinghong Zhang",
-            "Yichuan Rui",
-            "Li Zhang"
-          ],
-          "journal": "Nanostructure science and technology",
-          "publicationYear": 2014,
-          "publicationDate": "2014-01-01",
-          "volume": "",
-          "issue": "",
-          "pages": "111-139",
-          "type": "book-chapter"
         },
         {
           "openAlexId": "W2067518370",
@@ -2502,7 +2502,7 @@
         },
         {
           "year": 2024,
-          "citations": 2
+          "citations": 1
         }
       ],
       "rawCitationsByYear": [
@@ -2556,16 +2556,16 @@
         },
         {
           "year": 2024,
-          "citations": 2
+          "citations": 1
         }
       ],
-      "historyTotal": 72,
-      "rawHistoryTotal": 72,
+      "historyTotal": 71,
+      "rawHistoryTotal": 71,
       "excludedInvalidCitationCount": 0,
       "excludedInvalidCitations": [],
-      "unassignedCitationCount": 0,
-      "citingWorkCount": 72,
-      "citingArticlesWithDoiCount": 71,
+      "unassignedCitationCount": 1,
+      "citingWorkCount": 71,
+      "citingArticlesWithDoiCount": 70,
       "citingArticlesWithDoi": [
         {
           "openAlexId": "W4391238755",
@@ -2588,23 +2588,6 @@
           "issue": "6",
           "pages": "1245-1254",
           "type": "article"
-        },
-        {
-          "openAlexId": "W4390682278",
-          "doi": "10.1016/b978-0-323-93940-9.00121-3",
-          "doiUrl": "https://doi.org/10.1016/b978-0-323-93940-9.00121-3",
-          "title": "Flexible Polymer Dye-Sensitized Solar Cells",
-          "authors": [
-            "Duraisamy Kumaresan",
-            "Geetha Nagarajan"
-          ],
-          "journal": "Elsevier eBooks",
-          "publicationYear": 2024,
-          "publicationDate": "2024-01-01",
-          "volume": "",
-          "issue": "",
-          "pages": "881-902",
-          "type": "reference-entry"
         },
         {
           "openAlexId": "W4318189584",
@@ -3254,6 +3237,26 @@
           "type": "article"
         },
         {
+          "openAlexId": "W4299709222",
+          "doi": "10.1007/978-3-319-15207-3_7-1",
+          "doiUrl": "https://doi.org/10.1007/978-3-319-15207-3_7-1",
+          "title": "Electrophoretic Deposition (EPD): Fundamentals and Applications from Nano- to Micro-Scale Structures",
+          "authors": [
+            "Pouya Amrollahi",
+            "Jerzy S. Krasiński",
+            "Ranji K. Vaidyanathan",
+            "Lobat Tayebi",
+            "Daryoosh Vashaee"
+          ],
+          "journal": "Springer eBooks",
+          "publicationYear": 2015,
+          "publicationDate": "2015-06-12",
+          "volume": "",
+          "issue": "",
+          "pages": "1-27",
+          "type": "book-chapter"
+        },
+        {
           "openAlexId": "W1981699765",
           "doi": "10.1016/j.jpowsour.2015.01.088",
           "doiUrl": "https://doi.org/10.1016/j.jpowsour.2015.01.088",
@@ -3272,26 +3275,6 @@
           "issue": "",
           "pages": "182-189",
           "type": "article"
-        },
-        {
-          "openAlexId": "W4299709222",
-          "doi": "10.1007/978-3-319-15207-3_7-1",
-          "doiUrl": "https://doi.org/10.1007/978-3-319-15207-3_7-1",
-          "title": "Electrophoretic Deposition (EPD): Fundamentals and Applications from Nano- to Micro-Scale Structures",
-          "authors": [
-            "Pouya Amrollahi",
-            "Jerzy S. Krasiński",
-            "Ranji K. Vaidyanathan",
-            "Lobat Tayebi",
-            "Daryoosh Vashaee"
-          ],
-          "journal": "Springer eBooks",
-          "publicationYear": 2015,
-          "publicationDate": "2015-01-01",
-          "volume": "",
-          "issue": "",
-          "pages": "1-27",
-          "type": "book-chapter"
         },
         {
           "openAlexId": "W1762900798",
@@ -3706,6 +3689,28 @@
           "type": "article"
         },
         {
+          "openAlexId": "W1997755533",
+          "doi": "10.1149/2.099308jes",
+          "doiUrl": "https://doi.org/10.1149/2.099308jes",
+          "title": "One-Step Electrophoretic Deposition of Magnesium Oxide-Coated Tin Oxide Film and Its Application to Flexible Dye Sensitized Solar Cells",
+          "authors": [
+            "Shengjun Li",
+            "Zeng Chen",
+            "Zhenlong Zhang",
+            "Yanyan Wang",
+            "Binghua Xu",
+            "Tao Li",
+            "Weifeng Zhang"
+          ],
+          "journal": "Journal of The Electrochemical Society",
+          "publicationYear": 2013,
+          "publicationDate": "2013-06-07",
+          "volume": "160",
+          "issue": "8",
+          "pages": "H513-H517",
+          "type": "article"
+        },
+        {
           "openAlexId": "W1966161058",
           "doi": "10.7567/jjap.52.05db15",
           "doiUrl": "https://doi.org/10.7567/jjap.52.05db15",
@@ -3756,28 +3761,6 @@
           "volume": "3",
           "issue": "15",
           "pages": "4976",
-          "type": "article"
-        },
-        {
-          "openAlexId": "W1997755533",
-          "doi": "10.1149/2.099308jes",
-          "doiUrl": "https://doi.org/10.1149/2.099308jes",
-          "title": "One-Step Electrophoretic Deposition of Magnesium Oxide-Coated Tin Oxide Film and Its Application to Flexible Dye Sensitized Solar Cells",
-          "authors": [
-            "Shengjun Li",
-            "Zeng Chen",
-            "Zhenlong Zhang",
-            "Yanyan Wang",
-            "Binghua Xu",
-            "Tao Li",
-            "Weifeng Zhang"
-          ],
-          "journal": "Journal of The Electrochemical Society",
-          "publicationYear": 2013,
-          "publicationDate": "2013-01-01",
-          "volume": "160",
-          "issue": "8",
-          "pages": "H513-H517",
           "type": "article"
         },
         {
@@ -4049,7 +4032,7 @@
         },
         {
           "year": 2016,
-          "citations": 20
+          "citations": 19
         },
         {
           "year": 2017,
@@ -4123,7 +4106,7 @@
         },
         {
           "year": 2016,
-          "citations": 20
+          "citations": 19
         },
         {
           "year": 2017,
@@ -4166,13 +4149,13 @@
           "citations": 2
         }
       ],
-      "historyTotal": 270,
-      "rawHistoryTotal": 270,
+      "historyTotal": 269,
+      "rawHistoryTotal": 269,
       "excludedInvalidCitationCount": 0,
       "excludedInvalidCitations": [],
-      "unassignedCitationCount": 1,
-      "citingWorkCount": 270,
-      "citingArticlesWithDoiCount": 268,
+      "unassignedCitationCount": 2,
+      "citingWorkCount": 269,
+      "citingArticlesWithDoiCount": 267,
       "citingArticlesWithDoi": [
         {
           "openAlexId": "W7213267293",
@@ -4205,7 +4188,7 @@
           ],
           "journal": "Springer eBooks",
           "publicationYear": 2026,
-          "publicationDate": "2026-01-01",
+          "publicationDate": "2026-05-01",
           "volume": "",
           "issue": "",
           "pages": "279-297",
@@ -4524,6 +4507,26 @@
           "type": "article"
         },
         {
+          "openAlexId": "W4285219590",
+          "doi": "10.1007/978-981-19-0553-7_6",
+          "doiUrl": "https://doi.org/10.1007/978-981-19-0553-7_6",
+          "title": "Zinc Oxide: A Fascinating Material for Photovoltaic Applications",
+          "authors": [
+            "Premshila Kumari",
+            "Avritti Srivastava",
+            "Ruchi K. Sharma",
+            "Deepak Sharma",
+            "Sanjay Kumar Srivastava"
+          ],
+          "journal": "Materials horizons",
+          "publicationYear": 2022,
+          "publicationDate": "2022-05-24",
+          "volume": "",
+          "issue": "",
+          "pages": "173-241",
+          "type": "book-chapter"
+        },
+        {
           "openAlexId": "W4223952349",
           "doi": "10.1088/2053-1591/ac6794",
           "doiUrl": "https://doi.org/10.1088/2053-1591/ac6794",
@@ -4595,26 +4598,6 @@
           "issue": "",
           "pages": "112691",
           "type": "article"
-        },
-        {
-          "openAlexId": "W4285219590",
-          "doi": "10.1007/978-981-19-0553-7_6",
-          "doiUrl": "https://doi.org/10.1007/978-981-19-0553-7_6",
-          "title": "Zinc Oxide: A Fascinating Material for Photovoltaic Applications",
-          "authors": [
-            "Premshila Kumari",
-            "Avritti Srivastava",
-            "Ruchi K. Sharma",
-            "Deepak Sharma",
-            "Sanjay Kumar Srivastava"
-          ],
-          "journal": "Materials horizons",
-          "publicationYear": 2022,
-          "publicationDate": "2022-01-01",
-          "volume": "",
-          "issue": "",
-          "pages": "173-241",
-          "type": "book-chapter"
         },
         {
           "openAlexId": "W3177037556",
@@ -5376,6 +5359,28 @@
           "type": "dissertation"
         },
         {
+          "openAlexId": "W2589068896",
+          "doi": "10.1149/2.1071704jes",
+          "doiUrl": "https://doi.org/10.1149/2.1071704jes",
+          "title": "Gold Electroplating as a Tool for Assessing the Conductivity of InP Nanostructures Fabricated by Anodic Etching of Crystalline Substrates",
+          "authors": [
+            "Eduard Monaico",
+            "I. M. Tiginyanu",
+            "V. V. Ursaki",
+            "Kornelius Nielsch",
+            "Dimple Balan",
+            "Mariana Prodana",
+            "Marius Enăchescu"
+          ],
+          "journal": "Journal of The Electrochemical Society",
+          "publicationYear": 2017,
+          "publicationDate": "2017-02-14",
+          "volume": "164",
+          "issue": "4",
+          "pages": "D179-D183",
+          "type": "article"
+        },
+        {
           "openAlexId": "W2580237822",
           "doi": "10.1109/jsen.2017.2657552",
           "doiUrl": "https://doi.org/10.1109/jsen.2017.2657552",
@@ -5438,28 +5443,6 @@
           "volume": "5",
           "issue": "16",
           "pages": "7516-7522",
-          "type": "article"
-        },
-        {
-          "openAlexId": "W2589068896",
-          "doi": "10.1149/2.1071704jes",
-          "doiUrl": "https://doi.org/10.1149/2.1071704jes",
-          "title": "Gold Electroplating as a Tool for Assessing the Conductivity of InP Nanostructures Fabricated by Anodic Etching of Crystalline Substrates",
-          "authors": [
-            "Eduard Monaico",
-            "I. M. Tiginyanu",
-            "V. V. Ursaki",
-            "Kornelius Nielsch",
-            "Dimple Balan",
-            "Mariana Prodana",
-            "Marius Enăchescu"
-          ],
-          "journal": "Journal of The Electrochemical Society",
-          "publicationYear": 2017,
-          "publicationDate": "2017-01-01",
-          "volume": "164",
-          "issue": "4",
-          "pages": "D179-D183",
           "type": "article"
         },
         {
@@ -5607,26 +5590,6 @@
           "issue": "",
           "pages": "365-374",
           "type": "article"
-        },
-        {
-          "openAlexId": "W2520444745",
-          "doi": "10.1002/9781119951438.eibc2455",
-          "doiUrl": "https://doi.org/10.1002/9781119951438.eibc2455",
-          "title": "Anisotropic 3D Colloidal Quantum Nanostructures",
-          "authors": [
-            "Joseph Edward Govan",
-            "Igor G. Spiridonov",
-            "Федоров Анатолий Валентинович",
-            "Alexander V. Baranov",
-            "Yurii K. Gun’ko"
-          ],
-          "journal": "Wiley eBooks",
-          "publicationYear": 2016,
-          "publicationDate": "2016-06-15",
-          "volume": "",
-          "issue": "",
-          "pages": "1-24",
-          "type": "reference-entry"
         },
         {
           "openAlexId": "W2408828443",
@@ -6964,6 +6927,24 @@
           "type": "article"
         },
         {
+          "openAlexId": "W42898080",
+          "doi": "10.1007/978-1-4614-8169-0_9",
+          "doiUrl": "https://doi.org/10.1007/978-1-4614-8169-0_9",
+          "title": "Catalyst-Free Chemical Vapor Deposition for Synthesis of SiC Nanowires with Controlled Morphology",
+          "authors": [
+            "Jyoti Prakash",
+            "Sunil K. Ghosh",
+            "Dakshinamoorthy Sathiyamoorthy"
+          ],
+          "journal": "Springer series in materials science",
+          "publicationYear": 2013,
+          "publicationDate": "2013-10-01",
+          "volume": "",
+          "issue": "",
+          "pages": "179-213",
+          "type": "book-chapter"
+        },
+        {
           "openAlexId": "W2141391078",
           "doi": "10.1007/s11814-013-0151-3",
           "doiUrl": "https://doi.org/10.1007/s11814-013-0151-3",
@@ -7107,7 +7088,7 @@
             "Eneko Azaceta",
             "Alberto Vega-Poot",
             "Jesús Idígoras",
-            "J. Echeberrı́a",
+            "J. Echeberría",
             "Juan A. Anta",
             "Ramón Tena‐Zaera"
           ],
@@ -7391,24 +7372,6 @@
           "issue": "",
           "pages": "1-7",
           "type": "article"
-        },
-        {
-          "openAlexId": "W42898080",
-          "doi": "10.1007/978-1-4614-8169-0_9",
-          "doiUrl": "https://doi.org/10.1007/978-1-4614-8169-0_9",
-          "title": "Catalyst-Free Chemical Vapor Deposition for Synthesis of SiC Nanowires with Controlled Morphology",
-          "authors": [
-            "Jyoti Prakash",
-            "Sunil K. Ghosh",
-            "Dakshinamoorthy Sathiyamoorthy"
-          ],
-          "journal": "Springer series in materials science",
-          "publicationYear": 2013,
-          "publicationDate": "2013-01-01",
-          "volume": "",
-          "issue": "",
-          "pages": "179-213",
-          "type": "book-chapter"
         },
         {
           "openAlexId": "W1983316589",
@@ -8389,6 +8352,22 @@
           "type": "article"
         },
         {
+          "openAlexId": "W93713982",
+          "doi": "10.1007/978-0-85729-638-2_7",
+          "doiUrl": "https://doi.org/10.1007/978-0-85729-638-2_7",
+          "title": "Nanoarchitectured Electrodes for Enhanced Electron Transport in Dye-Sensitized Solar Cells",
+          "authors": [
+            "Tao Xu"
+          ],
+          "journal": "Green energy and technology",
+          "publicationYear": 2011,
+          "publicationDate": "2011-09-04",
+          "volume": "",
+          "issue": "",
+          "pages": "271-298",
+          "type": "book-chapter"
+        },
+        {
           "openAlexId": "W2134343887",
           "doi": "10.1049/mnl.2011.0225",
           "doiUrl": "https://doi.org/10.1049/mnl.2011.0225",
@@ -8764,22 +8743,6 @@
           "issue": "24",
           "pages": "8709",
           "type": "article"
-        },
-        {
-          "openAlexId": "W93713982",
-          "doi": "10.1007/978-0-85729-638-2_7",
-          "doiUrl": "https://doi.org/10.1007/978-0-85729-638-2_7",
-          "title": "Nanoarchitectured Electrodes for Enhanced Electron Transport in Dye-Sensitized Solar Cells",
-          "authors": [
-            "Tao Xu"
-          ],
-          "journal": "Green energy and technology",
-          "publicationYear": 2011,
-          "publicationDate": "2011-01-01",
-          "volume": "",
-          "issue": "",
-          "pages": "271-298",
-          "type": "book-chapter"
         },
         {
           "openAlexId": "W2065842205",
@@ -10711,7 +10674,7 @@
           "authors": [
             "Jun Jie Teh"
           ],
-          "journal": "",
+          "journal": "DR-NTU (Nanyang Technological University)",
           "publicationYear": 2014,
           "publicationDate": "2014-01-01",
           "volume": "",
@@ -11113,7 +11076,7 @@
             "Shahzada Ahmad",
             "Livain Breau",
             "Mohammad Khaja Nazeeruddin",
-            "Benoı̂t Marsan",
+            "Benoît Marsan",
             "Shaik Mohammed Zakeeruddin",
             "Michaël Grätzel"
           ],
@@ -12153,6 +12116,25 @@
           "type": "article"
         },
         {
+          "openAlexId": "W2094110021",
+          "doi": "10.1149/2.020404jes",
+          "doiUrl": "https://doi.org/10.1149/2.020404jes",
+          "title": "Morphology Control of Pt Counter Electrodes Using a Pt Precursor Solution with H2PtCl6·xH2O for Highly Efficient Dye-Sensitized Solar Cells",
+          "authors": [
+            "Than-Tung Duong",
+            "Jin-Seok Choi",
+            "Anh‐Tuan Le",
+            "Soon‐Gil Yoon"
+          ],
+          "journal": "Journal of The Electrochemical Society",
+          "publicationYear": 2014,
+          "publicationDate": "2014-01-24",
+          "volume": "161",
+          "issue": "4",
+          "pages": "H166-H171",
+          "type": "article"
+        },
+        {
           "openAlexId": "W2010151741",
           "doi": "10.1021/jp4116782",
           "doiUrl": "https://doi.org/10.1021/jp4116782",
@@ -12188,25 +12170,6 @@
           "volume": "591",
           "issue": "",
           "pages": "1-5",
-          "type": "article"
-        },
-        {
-          "openAlexId": "W2094110021",
-          "doi": "10.1149/2.020404jes",
-          "doiUrl": "https://doi.org/10.1149/2.020404jes",
-          "title": "Morphology Control of Pt Counter Electrodes Using a Pt Precursor Solution with H2PtCl6·xH2O for Highly Efficient Dye-Sensitized Solar Cells",
-          "authors": [
-            "Than-Tung Duong",
-            "Jin-Seok Choi",
-            "Anh‐Tuan Le",
-            "Soon‐Gil Yoon"
-          ],
-          "journal": "Journal of The Electrochemical Society",
-          "publicationYear": 2014,
-          "publicationDate": "2014-01-01",
-          "volume": "161",
-          "issue": "4",
-          "pages": "H166-H171",
           "type": "article"
         },
         {
@@ -13717,6 +13680,24 @@
           "type": "article"
         },
         {
+          "openAlexId": "W4376478768",
+          "doi": "10.1007/978-981-99-1905-5_12",
+          "doiUrl": "https://doi.org/10.1007/978-981-99-1905-5_12",
+          "title": "The Possibility of Using Wood Peeler Core as The Dye-Sensitized Solar Cells",
+          "authors": [
+            "Norul Hisham Hamid",
+            "Norasikin Ahmad Ludin",
+            "Nur Ezyanie Safie"
+          ],
+          "journal": "Sustainable materials and technology",
+          "publicationYear": 2023,
+          "publicationDate": "2023-05-12",
+          "volume": "",
+          "issue": "",
+          "pages": "155-186",
+          "type": "book-chapter"
+        },
+        {
           "openAlexId": "W4319783533",
           "doi": "10.1016/b978-0-12-822837-1.00007-1",
           "doiUrl": "https://doi.org/10.1016/b978-0-12-822837-1.00007-1",
@@ -13731,24 +13712,6 @@
           "volume": "",
           "issue": "",
           "pages": "41-74",
-          "type": "book-chapter"
-        },
-        {
-          "openAlexId": "W4376478768",
-          "doi": "10.1007/978-981-99-1905-5_12",
-          "doiUrl": "https://doi.org/10.1007/978-981-99-1905-5_12",
-          "title": "The Possibility of Using Wood Peeler Core as The Dye-Sensitized Solar Cells",
-          "authors": [
-            "Norul Hisham Hamid",
-            "Norasikin Ahmad Ludin",
-            "Nur Ezyanie Safie"
-          ],
-          "journal": "Sustainable materials and technology",
-          "publicationYear": 2023,
-          "publicationDate": "2023-01-01",
-          "volume": "",
-          "issue": "",
-          "pages": "155-186",
           "type": "book-chapter"
         },
         {
@@ -13837,7 +13800,7 @@
           ],
           "journal": "Materials horizons",
           "publicationYear": 2020,
-          "publicationDate": "2020-01-01",
+          "publicationDate": "2020-04-16",
           "volume": "",
           "issue": "",
           "pages": "177-210",
@@ -14316,7 +14279,7 @@
           "openAlexId": "W2481861655",
           "doi": "10.1201/b15633-2",
           "doiUrl": "https://doi.org/10.1201/b15633-2",
-          "title": "Metal Oxide Nanomaterials",
+          "title": "Metal Oxide Nanomaterials: An Overview",
           "authors": [
             "Kajal Kumar Dey"
           ],
@@ -14339,7 +14302,7 @@
             "Elena Guillén",
             "Mohammad Khaja Nazeeruddin",
             "Michaël Grätzel",
-            "Agustı́n R. González-Elipe",
+            "Agustín R. González-Elipe",
             "Shahzada Ahmad"
           ],
           "journal": "ChemPhysChem",
@@ -14489,6 +14452,24 @@
           "type": "article"
         },
         {
+          "openAlexId": "W1585293243",
+          "doi": "10.1007/978-90-481-3830-2_7",
+          "doiUrl": "https://doi.org/10.1007/978-90-481-3830-2_7",
+          "title": "Solar Energy Conversion",
+          "authors": [
+            "Luís G. Arnaut",
+            "Mónica Barroso",
+            "Carlos Serpa"
+          ],
+          "journal": "Springer eBooks",
+          "publicationYear": 2013,
+          "publicationDate": "2013-05-01",
+          "volume": "",
+          "issue": "",
+          "pages": "267-304",
+          "type": "book-chapter"
+        },
+        {
           "openAlexId": "W2036697090",
           "doi": "10.1002/cphc.201300066",
           "doiUrl": "https://doi.org/10.1002/cphc.201300066",
@@ -14545,24 +14526,6 @@
           "issue": "22",
           "pages": "8480",
           "type": "article"
-        },
-        {
-          "openAlexId": "W1585293243",
-          "doi": "10.1007/978-90-481-3830-2_7",
-          "doiUrl": "https://doi.org/10.1007/978-90-481-3830-2_7",
-          "title": "Solar Energy Conversion",
-          "authors": [
-            "Luı́s G. Arnaut",
-            "Mónica Barroso",
-            "Carlos Serpa"
-          ],
-          "journal": "Springer eBooks",
-          "publicationYear": 2013,
-          "publicationDate": "2013-01-01",
-          "volume": "",
-          "issue": "",
-          "pages": "267-304",
-          "type": "book-chapter"
         },
         {
           "openAlexId": "W2041985439",
@@ -15368,7 +15331,7 @@
           ],
           "journal": "Journal of The Electrochemical Society",
           "publicationYear": 2018,
-          "publicationDate": "2018-01-01",
+          "publicationDate": "2018-01-04",
           "volume": "165",
           "issue": "2",
           "pages": "F1-F6",
@@ -17350,7 +17313,7 @@
       "doi": "10.3390/nano11082125",
       "title": "Controlled Photoanode Properties for Large-Area Efficient and Stable Dye-Sensitized Photovoltaic Modules",
       "publicationYear": 2021,
-      "currentCitationCount": 12,
+      "currentCitationCount": 13,
       "sourceUrl": "https://api.openalex.org/works?filter=cites:W3195032786",
       "citationsByYear": [
         {
@@ -17371,7 +17334,7 @@
         },
         {
           "year": 2026,
-          "citations": 3
+          "citations": 4
         }
       ],
       "rawCitationsByYear": [
@@ -17393,17 +17356,35 @@
         },
         {
           "year": 2026,
-          "citations": 3
+          "citations": 4
         }
       ],
-      "historyTotal": 12,
-      "rawHistoryTotal": 12,
+      "historyTotal": 13,
+      "rawHistoryTotal": 13,
       "excludedInvalidCitationCount": 0,
       "excludedInvalidCitations": [],
       "unassignedCitationCount": 0,
-      "citingWorkCount": 12,
-      "citingArticlesWithDoiCount": 12,
+      "citingWorkCount": 13,
+      "citingArticlesWithDoiCount": 13,
       "citingArticlesWithDoi": [
+        {
+          "openAlexId": "W7230749191",
+          "doi": "10.1002/cnma.70398",
+          "doiUrl": "https://doi.org/10.1002/cnma.70398",
+          "title": "Toward Stable and Sustainable Perovskite Solar Cells: Degradation Pathways, Mitigation Strategies, and a Roadmap for Next‐Generation Photovoltaics",
+          "authors": [
+            "Shama Rafiq",
+            "Nimra Sultan",
+            "Muhammad Ramzan Saeed Ashraf Janjua"
+          ],
+          "journal": "ChemNanoMat",
+          "publicationYear": 2026,
+          "publicationDate": "2026-11-01",
+          "volume": "12",
+          "issue": "11",
+          "pages": "",
+          "type": "article"
+        },
         {
           "openAlexId": "W7223272281",
           "doi": "10.1002/solr.202500883",
@@ -17790,6 +17771,29 @@
           "type": "article"
         },
         {
+          "openAlexId": "W4405028785",
+          "doi": "10.17179/excli2024-7783",
+          "doiUrl": "https://doi.org/10.17179/excli2024-7783",
+          "title": "Enhancing cancer care with improved checkpoint inhibitors: a focus on PD-1/PD-L1",
+          "authors": [
+            "Vickram A S",
+            "Shofia Saghya Infant",
+            "Arivudainambi Saravanan",
+            "Vidhya Lakshmi Sivakumar",
+            "P. Thamarai",
+            "Sivasubramanian Manikandan",
+            "Shivani Chopra",
+            "Hitesh Chopra"
+          ],
+          "journal": "EXCLI journal",
+          "publicationYear": 2024,
+          "publicationDate": "2024-10-29",
+          "volume": "23",
+          "issue": "",
+          "pages": "1303-1326",
+          "type": "article"
+        },
+        {
           "openAlexId": "W4403032018",
           "doi": "10.1007/s10853-024-10243-0",
           "doiUrl": "https://doi.org/10.1007/s10853-024-10243-0",
@@ -17808,29 +17812,6 @@
           "volume": "59",
           "issue": "39",
           "pages": "18316-18337",
-          "type": "article"
-        },
-        {
-          "openAlexId": "W4405028785",
-          "doi": "10.17179/excli2024-7783",
-          "doiUrl": "https://doi.org/10.17179/excli2024-7783",
-          "title": "Enhancing cancer care with improved checkpoint inhibitors: a focus on PD-1/PD-L1",
-          "authors": [
-            "A S, Vickram",
-            "Shofia Saghya Infant",
-            "Arivudainambi Saravanan",
-            "Vidhya Lakshmi Sivakumar",
-            "P. Thamarai",
-            "Sivasubramanian Manikandan",
-            "Shivani Chopra",
-            "Hitesh Chopra"
-          ],
-          "journal": "EXCLI journal",
-          "publicationYear": 2024,
-          "publicationDate": "2024-08-28",
-          "volume": "23",
-          "issue": "",
-          "pages": "1303-1326",
           "type": "article"
         },
         {
@@ -18657,7 +18638,7 @@
             "Shang‐Gen Yang",
             "Jian Chen",
             "Dian Wang",
-            "Jun‐Jie Zhang",
+            "Junjie Zhang",
             "Zu-Kun Zhou",
             "Jing Xiao",
             "Long Jiang",
@@ -21423,7 +21404,7 @@
             "Shang‐Gen Yang",
             "Jian Chen",
             "Dian Wang",
-            "Jun‐Jie Zhang",
+            "Junjie Zhang",
             "Zu-Kun Zhou",
             "Jing Xiao",
             "Long Jiang",
@@ -21763,6 +21744,42 @@
           "type": "article"
         },
         {
+          "openAlexId": "W7162253342",
+          "doi": "10.1007/978-981-95-6718-8_3",
+          "doiUrl": "https://doi.org/10.1007/978-981-95-6718-8_3",
+          "title": "PVDF as a Flexible Photovoltaic Material",
+          "authors": [
+            "Poonam Subudhi",
+            "Praveena Balasubramaniyan",
+            "Rahul Narasimhan Arunagirinathan",
+            "Maimur Hossain"
+          ],
+          "journal": "Engineering materials",
+          "publicationYear": 2026,
+          "publicationDate": "2026-05-24",
+          "volume": "",
+          "issue": "",
+          "pages": "75-109",
+          "type": "book-chapter"
+        },
+        {
+          "openAlexId": "W7162254858",
+          "doi": "10.1007/978-981-95-6718-8_9",
+          "doiUrl": "https://doi.org/10.1007/978-981-95-6718-8_9",
+          "title": "PVDF Nanocomposites for Advanced Functional Applications",
+          "authors": [
+            "Bharat Bhushan Bhatt",
+            "Dipti Gupta"
+          ],
+          "journal": "Engineering materials",
+          "publicationYear": 2026,
+          "publicationDate": "2026-05-24",
+          "volume": "",
+          "issue": "",
+          "pages": "287-328",
+          "type": "book-chapter"
+        },
+        {
           "openAlexId": "W7161569160",
           "doi": "10.1016/j.cej.2026.177494",
           "doiUrl": "https://doi.org/10.1016/j.cej.2026.177494",
@@ -21824,42 +21841,6 @@
           "issue": "2",
           "pages": "101131",
           "type": "article"
-        },
-        {
-          "openAlexId": "W7162253342",
-          "doi": "10.1007/978-981-95-6718-8_3",
-          "doiUrl": "https://doi.org/10.1007/978-981-95-6718-8_3",
-          "title": "PVDF as a Flexible Photovoltaic Material",
-          "authors": [
-            "Poonam Subudhi",
-            "Praveena Balasubramaniyan",
-            "Rahul Narasimhan Arunagirinathan",
-            "Maimur Hossain"
-          ],
-          "journal": "Engineering materials",
-          "publicationYear": 2026,
-          "publicationDate": "2026-01-01",
-          "volume": "",
-          "issue": "",
-          "pages": "75-109",
-          "type": "book-chapter"
-        },
-        {
-          "openAlexId": "W7162254858",
-          "doi": "10.1007/978-981-95-6718-8_9",
-          "doiUrl": "https://doi.org/10.1007/978-981-95-6718-8_9",
-          "title": "PVDF Nanocomposites for Advanced Functional Applications",
-          "authors": [
-            "Bharat Bhushan Bhatt",
-            "Dipti Gupta"
-          ],
-          "journal": "Engineering materials",
-          "publicationYear": 2026,
-          "publicationDate": "2026-01-01",
-          "volume": "",
-          "issue": "",
-          "pages": "287-328",
-          "type": "book-chapter"
         },
         {
           "openAlexId": "W4415976887",
@@ -22330,7 +22311,7 @@
             "Shang‐Gen Yang",
             "Jian Chen",
             "Dian Wang",
-            "Jun‐Jie Zhang",
+            "Junjie Zhang",
             "Zu-Kun Zhou",
             "Jing Xiao",
             "Long Jiang",
@@ -23023,12 +23004,12 @@
       "doi": "10.1016/j.solmat.2025.114015",
       "title": "Impact of proton radiation on the performance of single-junction perovskite solar cells for space applications",
       "publicationYear": 2026,
-      "currentCitationCount": 12,
+      "currentCitationCount": 13,
       "sourceUrl": "https://api.openalex.org/works?filter=cites:W4415443362",
       "citationsByYear": [
         {
           "year": 2026,
-          "citations": 11
+          "citations": 12
         }
       ],
       "rawCitationsByYear": [
@@ -23038,11 +23019,11 @@
         },
         {
           "year": 2026,
-          "citations": 11
+          "citations": 12
         }
       ],
-      "historyTotal": 11,
-      "rawHistoryTotal": 12,
+      "historyTotal": 12,
+      "rawHistoryTotal": 13,
       "excludedInvalidCitationCount": 1,
       "excludedInvalidCitations": [
         {
@@ -23053,9 +23034,34 @@
         }
       ],
       "unassignedCitationCount": 0,
-      "citingWorkCount": 12,
-      "citingArticlesWithDoiCount": 11,
+      "citingWorkCount": 13,
+      "citingArticlesWithDoiCount": 12,
       "citingArticlesWithDoi": [
+        {
+          "openAlexId": "W7224948203",
+          "doi": "10.1088/2515-7655/aebbf3",
+          "doiUrl": "https://doi.org/10.1088/2515-7655/aebbf3",
+          "title": "Recovering power after severe space degradation: annealing time effects on the resilience of CIGS solar cells",
+          "authors": [
+            "Pedro T. Patrício",
+            "T V Fernandes",
+            "I Morais",
+            "Bruno Poças Falcão",
+            "A.F. da Cunha",
+            "M. Peres",
+            "Katharina Lorenz",
+            "Jennifer Passos Teixeira",
+            "P.M.P. Salomé",
+            "Joaquim P. Leitão"
+          ],
+          "journal": "Journal of Physics Energy",
+          "publicationYear": 2026,
+          "publicationDate": "2026-10-30",
+          "volume": "8",
+          "issue": "4",
+          "pages": "045010",
+          "type": "article"
+        },
         {
           "openAlexId": "W7204003207",
           "doi": "10.59543/jidmis.v3.1745",
