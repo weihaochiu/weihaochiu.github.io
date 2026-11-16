@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-15T07:52:48Z",
+  "generatedAt": "2026-11-16T08:00:09Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 269,
-    "activeUsers": 45,
-    "sessions": 72,
-    "engagementRate": 0.4583333333333333
+    "pageViews": 270,
+    "activeUsers": 46,
+    "sessions": 73,
+    "engagementRate": 0.4520547945205479
   },
   "monthlyTrend": [
     {
@@ -34,8 +34,8 @@
     },
     {
       "month": "2026-11",
-      "pageViews": 27,
-      "activeUsers": 19
+      "pageViews": 28,
+      "activeUsers": 20
     }
   ],
   "topPages": [
@@ -48,8 +48,8 @@
     {
       "title": "Publications | Wei-Hao Chiu",
       "path": "/publications.html",
-      "pageViews": 38,
-      "activeUsers": 3
+      "pageViews": 39,
+      "activeUsers": 4
     },
     {
       "title": "About | Wei-Hao Chiu",
@@ -133,8 +133,8 @@
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 44,
-      "activeUsers": 30
+      "sessions": 45,
+      "activeUsers": 31
     },
     {
       "channel": "Organic Search",
@@ -156,8 +156,8 @@
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 44,
-      "activeUsers": 30
+      "sessions": 45,
+      "activeUsers": 31
     },
     {
       "source": "google",
@@ -212,12 +212,12 @@
       "pageViews": 3
     },
     {
-      "country": "Japan",
-      "activeUsers": 1,
-      "pageViews": 1
+      "country": "Singapore",
+      "activeUsers": 2,
+      "pageViews": 2
     },
     {
-      "country": "Singapore",
+      "country": "Japan",
       "activeUsers": 1,
       "pageViews": 1
     },
@@ -230,7 +230,7 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 42
+      "activeUsers": 43
     },
     {
       "device": "mobile",
