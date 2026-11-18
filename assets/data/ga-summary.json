@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-17T09:13:59Z",
+  "generatedAt": "2026-11-18T08:33:36Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 270,
-    "activeUsers": 46,
-    "sessions": 73,
-    "engagementRate": 0.4520547945205479
+    "pageViews": 276,
+    "activeUsers": 50,
+    "sessions": 77,
+    "engagementRate": 0.44155844155844154
   },
   "monthlyTrend": [
     {
@@ -34,22 +34,22 @@
     },
     {
       "month": "2026-11",
-      "pageViews": 28,
-      "activeUsers": 20
+      "pageViews": 35,
+      "activeUsers": 25
     }
   ],
   "topPages": [
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 70,
-      "activeUsers": 29
+      "pageViews": 73,
+      "activeUsers": 32
     },
     {
       "title": "Publications | Wei-Hao Chiu",
       "path": "/publications.html",
-      "pageViews": 39,
-      "activeUsers": 4
+      "pageViews": 40,
+      "activeUsers": 5
     },
     {
       "title": "About | Wei-Hao Chiu",
@@ -124,8 +124,8 @@
       "activeUsers": 1
     },
     {
-      "title": "MOF-& COF-integrated composite separators/membranes: innovations for sustainable and high-performance redox flow batteries | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-seppur-2025-134157.html",
+      "title": "Coordination Dynamics of Green Solvents Tailor Solubility and Crystallization in Wide-Bandgap Perovskite Solar Cells | Wei-Hao Chiu",
+      "path": "/publications/wcpec-9-2026-green-solvents.html",
       "pageViews": 3,
       "activeUsers": 2
     }
@@ -133,8 +133,8 @@
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 45,
-      "activeUsers": 31
+      "sessions": 50,
+      "activeUsers": 36
     },
     {
       "channel": "Organic Search",
@@ -148,16 +148,16 @@
     },
     {
       "channel": "Referral",
-      "sessions": 2,
-      "activeUsers": 2
+      "sessions": 1,
+      "activeUsers": 1
     }
   ],
   "trafficSources": [
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 45,
-      "activeUsers": 31
+      "sessions": 50,
+      "activeUsers": 36
     },
     {
       "source": "google",
@@ -172,16 +172,16 @@
       "activeUsers": 5
     },
     {
-      "source": "cgu.edu.tw",
-      "medium": "referral",
-      "sessions": 2,
-      "activeUsers": 2
-    },
-    {
       "source": "chatgpt.com",
       "medium": "ai-assistant",
       "sessions": 2,
       "activeUsers": 2
+    },
+    {
+      "source": "cgu.edu.tw",
+      "medium": "referral",
+      "sessions": 1,
+      "activeUsers": 1
     },
     {
       "source": "cn.bing.com",
@@ -192,19 +192,19 @@
   ],
   "topCountries": [
     {
-      "country": "Taiwan",
-      "activeUsers": 15,
-      "pageViews": 237
+      "country": "United States",
+      "activeUsers": 17,
+      "pageViews": 18
     },
     {
-      "country": "United States",
+      "country": "Taiwan",
       "activeUsers": 14,
-      "pageViews": 14
+      "pageViews": 236
     },
     {
       "country": "China",
-      "activeUsers": 11,
-      "pageViews": 12
+      "activeUsers": 12,
+      "pageViews": 13
     },
     {
       "country": "India",
@@ -212,14 +212,14 @@
       "pageViews": 3
     },
     {
+      "country": "Japan",
+      "activeUsers": 2,
+      "pageViews": 3
+    },
+    {
       "country": "Singapore",
       "activeUsers": 2,
       "pageViews": 2
-    },
-    {
-      "country": "Japan",
-      "activeUsers": 1,
-      "pageViews": 1
     },
     {
       "country": "Vietnam",
@@ -230,11 +230,11 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 43
+      "activeUsers": 48
     },
     {
       "device": "mobile",
-      "activeUsers": 3
+      "activeUsers": 2
     }
   ],
   "academicEvents": [
@@ -253,10 +253,6 @@
     {
       "eventName": "patent_click",
       "eventCount": 2
-    },
-    {
-      "eventName": "email_click",
-      "eventCount": 1
     },
     {
       "eventName": "openalex_click",
