@@ -5,7 +5,7 @@
   "publicationCount": 42,
   "verifiedCount": 40,
   "notFoundCount": 2,
-  "lastSuccessfulUpdate": "2026-11-17T10:47:46Z",
+  "lastSuccessfulUpdate": "2026-11-18T10:15:47Z",
   "records": {
     "10.1016/j.cej.2026.183177": {
       "status": "verified",
@@ -174,7 +174,7 @@
       "citationPercentile": 0.78023845,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-16T12:05:36.265796"
+      "openAlexUpdatedDate": "2026-11-17T12:49:18.490984"
     },
     "10.1016/j.jece.2023.111741": {
       "status": "verified",
@@ -183,8 +183,8 @@
       "openAlexId": "W4389856655",
       "url": "https://openalex.org/W4389856655",
       "citationCount": 3,
-      "fwci": 0.1644,
-      "citationPercentile": 0.27978552,
+      "fwci": 0.2322,
+      "citationPercentile": 0.3200302,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-11-16T12:05:36.265796"
@@ -300,8 +300,8 @@
       "openAlexId": "W4224023899",
       "url": "https://openalex.org/W4224023899",
       "citationCount": 4,
-      "fwci": 0.1361,
-      "citationPercentile": 0.27783859,
+      "fwci": 0.1936,
+      "citationPercentile": 0.31549555,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-11-16T12:05:36.265796"
@@ -395,7 +395,7 @@
       "citationPercentile": 0.84067861,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-16T12:05:36.265796"
+      "openAlexUpdatedDate": "2026-11-17T12:49:18.490984"
     },
     "10.1016/j.jpowsour.2010.12.063": {
       "status": "verified",
