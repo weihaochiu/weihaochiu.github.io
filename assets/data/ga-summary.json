@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-18T08:33:36Z",
+  "generatedAt": "2026-11-19T08:49:35Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 276,
-    "activeUsers": 50,
-    "sessions": 77,
-    "engagementRate": 0.44155844155844154
+    "pageViews": 271,
+    "activeUsers": 45,
+    "sessions": 71,
+    "engagementRate": 0.4647887323943662
   },
   "monthlyTrend": [
     {
@@ -42,8 +42,8 @@
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 73,
-      "activeUsers": 32
+      "pageViews": 70,
+      "activeUsers": 29
     },
     {
       "title": "Publications | Wei-Hao Chiu",
@@ -133,13 +133,13 @@
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 50,
-      "activeUsers": 36
+      "sessions": 48,
+      "activeUsers": 34
     },
     {
       "channel": "Organic Search",
-      "sessions": 24,
-      "activeUsers": 11
+      "sessions": 20,
+      "activeUsers": 8
     },
     {
       "channel": "AI Assistant",
@@ -156,8 +156,8 @@
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 50,
-      "activeUsers": 36
+      "sessions": 48,
+      "activeUsers": 34
     },
     {
       "source": "google",
@@ -168,8 +168,8 @@
     {
       "source": "bing",
       "medium": "organic",
-      "sessions": 6,
-      "activeUsers": 5
+      "sessions": 2,
+      "activeUsers": 2
     },
     {
       "source": "chatgpt.com",
@@ -193,18 +193,18 @@
   "topCountries": [
     {
       "country": "United States",
-      "activeUsers": 17,
-      "pageViews": 18
+      "activeUsers": 14,
+      "pageViews": 15
     },
     {
       "country": "Taiwan",
-      "activeUsers": 14,
-      "pageViews": 236
+      "activeUsers": 13,
+      "pageViews": 235
     },
     {
       "country": "China",
-      "activeUsers": 12,
-      "pageViews": 13
+      "activeUsers": 11,
+      "pageViews": 12
     },
     {
       "country": "India",
@@ -230,7 +230,7 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 48
+      "activeUsers": 43
     },
     {
       "device": "mobile",
@@ -240,7 +240,7 @@
   "academicEvents": [
     {
       "eventName": "doi_click",
-      "eventCount": 11
+      "eventCount": 10
     },
     {
       "eventName": "scholar_click",
