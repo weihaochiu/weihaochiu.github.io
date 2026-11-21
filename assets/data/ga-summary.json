@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-20T08:34:10Z",
+  "generatedAt": "2026-11-21T08:17:47Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 276,
-    "activeUsers": 50,
-    "sessions": 76,
-    "engagementRate": 0.47368421052631576
+    "pageViews": 67,
+    "activeUsers": 52,
+    "sessions": 61,
+    "engagementRate": 0.29508196721311475
   },
   "monthlyTrend": [
     {
@@ -34,111 +34,111 @@
     },
     {
       "month": "2026-11",
-      "pageViews": 40,
-      "activeUsers": 30
+      "pageViews": 48,
+      "activeUsers": 38
     }
   ],
   "topPages": [
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 74,
-      "activeUsers": 33
+      "pageViews": 34,
+      "activeUsers": 29
     },
     {
       "title": "Publications | Wei-Hao Chiu",
       "path": "/publications.html",
-      "pageViews": 40,
-      "activeUsers": 5
+      "pageViews": 4,
+      "activeUsers": 4
     },
     {
       "title": "About | Wei-Hao Chiu",
       "path": "/about.html",
-      "pageViews": 34,
-      "activeUsers": 4
-    },
-    {
-      "title": "News | Wei-Hao Chiu",
-      "path": "/news.html",
-      "pageViews": 18,
-      "activeUsers": 3
-    },
-    {
-      "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
-      "path": "/index.html",
-      "pageViews": 18,
-      "activeUsers": 2
-    },
-    {
-      "title": "Congratulations to Prof. Kun-Mu Lee and Dr. Wei-Hao Chiu on the Chemical Engineering Masterpiece Award! | Wei-Hao Chiu",
-      "path": "/news/twiche-2025-masterpiece-award.html",
-      "pageViews": 14,
-      "activeUsers": 4
-    },
-    {
-      "title": "Research | Wei-Hao Chiu",
-      "path": "/research.html",
-      "pageViews": 8,
+      "pageViews": 3,
       "activeUsers": 3
     },
     {
       "title": "Congratulations to the SDSE 2026 Poster Award Team! | Wei-Hao Chiu",
       "path": "/news/sdse-2026-poster-award.html",
-      "pageViews": 7,
-      "activeUsers": 4
-    },
-    {
-      "title": "Patents | Wei-Hao Chiu",
-      "path": "/patents.html",
-      "pageViews": 5,
-      "activeUsers": 3
-    },
-    {
-      "title": "Coupled morphology and phase regulation of in-situ grown TiO2 nanostructures on graphite felt for enhanced redox kinetics in vanadium redox flow batteries | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-cej-2026-183177.html",
-      "pageViews": 4,
-      "activeUsers": 2
-    },
-    {
-      "title": "Microstructure and Biological Properties of Electrospun In Situ Polymerization of Polycaprolactone-Graft-Polyacrylic Acid Nanofibers and Its Composite Nanofiber Dressings | Wei-Hao Chiu",
-      "path": "/publications/10-3390-polym13234246.html",
-      "pageViews": 4,
-      "activeUsers": 2
-    },
-    {
-      "title": "Research Projects | Wei-Hao Chiu",
-      "path": "/projects.html",
-      "pageViews": 4,
-      "activeUsers": 2
-    },
-    {
-      "title": "Asymmetric Fluorinated Spiro Hole-Transport Materials Enabled by a Rapid Core-Forming Strategy for Blade-Coated Perovskite Solar Cells | Wei-Hao Chiu",
-      "path": "/publications/10-1002-advs-77623.html",
       "pageViews": 3,
       "activeUsers": 3
     },
     {
-      "title": "Comprehensive Study of PVDF-HFP in Perovskite Solar Cells for Enhanced Space Mission Reliability | Wei-Hao Chiu",
-      "path": "/publications/isos-15-2024-pvdf-hfp-space-reliability.html",
+      "title": "Research | Wei-Hao Chiu",
+      "path": "/research.html",
       "pageViews": 3,
-      "activeUsers": 1
+      "activeUsers": 3
+    },
+    {
+      "title": "Congratulations on the Bronze Medal at the 2023 Taiwan Innotech Expo! | Wei-Hao Chiu",
+      "path": "/news/taiwan-innotech-2023-bronze-award.html",
+      "pageViews": 2,
+      "activeUsers": 2
     },
     {
       "title": "Coordination Dynamics of Green Solvents Tailor Solubility and Crystallization in Wide-Bandgap Perovskite Solar Cells | Wei-Hao Chiu",
       "path": "/publications/wcpec-9-2026-green-solvents.html",
-      "pageViews": 3,
+      "pageViews": 2,
+      "activeUsers": 1
+    },
+    {
+      "title": "Effects of mesoscopic poly (3, 4-ethylenedioxythiophene) films as counter electrodes for dye-sensitized solar cells | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-tsf-2009-11-058.html",
+      "pageViews": 2,
       "activeUsers": 2
+    },
+    {
+      "title": "MOF-& COF-integrated composite separators/membranes: innovations for sustainable and high-performance redox flow batteries | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-seppur-2025-134157.html",
+      "pageViews": 2,
+      "activeUsers": 1
+    },
+    {
+      "title": "Modified Spontaneous Emission in a Tightly Pumped Nd:YVO4 Laser with Degenerate Resonator | Wei-Hao Chiu",
+      "path": "/publications/ms-thesis-2005.html",
+      "pageViews": 2,
+      "activeUsers": 1
+    },
+    {
+      "title": "Patents | Wei-Hao Chiu",
+      "path": "/patents.html",
+      "pageViews": 2,
+      "activeUsers": 2
+    },
+    {
+      "title": "2T Perovskite Tandem Solar Cells in Space: Failure Mechanisms and Design Strategies | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-mtener-2026-102359.html",
+      "pageViews": 1,
+      "activeUsers": 1
+    },
+    {
+      "title": "Exploring PVDF -HFP Additives in Perovskite Solar Cells: Advancements for Enhanced Space Mission Durability | Wei-Hao Chiu",
+      "path": "/publications/agem-2025-pvdf-hfp-space.html",
+      "pageViews": 1,
+      "activeUsers": 1
+    },
+    {
+      "title": "Exploring the efficiency enhancement of perovskite solar cells by chemical bath depositing SnO2 on mesoporous TiO2 electrode | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-mtchem-2024-102329.html",
+      "pageViews": 1,
+      "activeUsers": 1
+    },
+    {
+      "title": "Facile synthesis of spiro-core-based hole-transporting material for high-performance and stable perovskite solar cells | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-cej-2022-139926.html",
+      "pageViews": 1,
+      "activeUsers": 1
     }
   ],
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 53,
-      "activeUsers": 39
+      "sessions": 46,
+      "activeUsers": 41
     },
     {
       "channel": "Organic Search",
-      "sessions": 20,
+      "sessions": 12,
       "activeUsers": 8
     },
     {
@@ -156,13 +156,13 @@
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 53,
-      "activeUsers": 39
+      "sessions": 46,
+      "activeUsers": 41
     },
     {
       "source": "google",
       "medium": "organic",
-      "sessions": 17,
+      "sessions": 9,
       "activeUsers": 5
     },
     {
@@ -192,24 +192,19 @@
   ],
   "topCountries": [
     {
-      "country": "Taiwan",
-      "activeUsers": 14,
-      "pageViews": 236
-    },
-    {
       "country": "United States",
       "activeUsers": 14,
       "pageViews": 15
     },
     {
-      "country": "China",
-      "activeUsers": 13,
-      "pageViews": 14
+      "country": "Taiwan",
+      "activeUsers": 12,
+      "pageViews": 23
     },
     {
-      "country": "Japan",
-      "activeUsers": 3,
-      "pageViews": 4
+      "country": "China",
+      "activeUsers": 10,
+      "pageViews": 11
     },
     {
       "country": "Singapore",
@@ -222,12 +217,52 @@
       "pageViews": 3
     },
     {
+      "country": "Japan",
+      "activeUsers": 2,
+      "pageViews": 3
+    },
+    {
+      "country": "Australia",
+      "activeUsers": 1,
+      "pageViews": 1
+    },
+    {
+      "country": "Bangladesh",
+      "activeUsers": 1,
+      "pageViews": 1
+    },
+    {
       "country": "Germany",
       "activeUsers": 1,
       "pageViews": 0
     },
     {
-      "country": "Vietnam",
+      "country": "Israel",
+      "activeUsers": 1,
+      "pageViews": 1
+    },
+    {
+      "country": "Italy",
+      "activeUsers": 1,
+      "pageViews": 1
+    },
+    {
+      "country": "Mexico",
+      "activeUsers": 1,
+      "pageViews": 1
+    },
+    {
+      "country": "Romania",
+      "activeUsers": 1,
+      "pageViews": 1
+    },
+    {
+      "country": "Thailand",
+      "activeUsers": 1,
+      "pageViews": 1
+    },
+    {
+      "country": "Türkiye",
       "activeUsers": 1,
       "pageViews": 1
     }
@@ -235,7 +270,7 @@
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 48
+      "activeUsers": 50
     },
     {
       "device": "mobile",
@@ -245,26 +280,18 @@
   "academicEvents": [
     {
       "eventName": "doi_click",
-      "eventCount": 10
-    },
-    {
-      "eventName": "scholar_click",
-      "eventCount": 3
-    },
-    {
-      "eventName": "orcid_click",
-      "eventCount": 2
-    },
-    {
-      "eventName": "patent_click",
-      "eventCount": 2
+      "eventCount": 5
     },
     {
       "eventName": "openalex_click",
       "eventCount": 1
     },
     {
-      "eventName": "share_action",
+      "eventName": "orcid_click",
+      "eventCount": 1
+    },
+    {
+      "eventName": "scholar_click",
       "eventCount": 1
     }
   ]
