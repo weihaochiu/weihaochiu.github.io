@@ -5,7 +5,7 @@
   "publicationCount": 42,
   "verifiedCount": 40,
   "notFoundCount": 2,
-  "lastSuccessfulUpdate": "2026-11-22T09:51:47Z",
+  "lastSuccessfulUpdate": "2026-11-23T10:51:35Z",
   "records": {
     "10.1016/j.cej.2026.183177": {
       "status": "verified",
@@ -18,7 +18,7 @@
       "citationPercentile": 0.0,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-21T10:27:49.728292"
+      "openAlexUpdatedDate": "2026-11-22T12:46:00.618207"
     },
     "10.1016/j.cej.2026.177494": {
       "status": "verified",
@@ -31,7 +31,7 @@
       "citationPercentile": 0.0,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-16T12:05:36.265796"
+      "openAlexUpdatedDate": "2026-11-22T12:46:00.618207"
     },
     "10.1016/j.mtener.2026.102359": {
       "status": "verified",
@@ -44,7 +44,7 @@
       "citationPercentile": 0.0,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-16T12:05:36.265796"
+      "openAlexUpdatedDate": "2026-11-22T12:46:00.618207"
     },
     "10.1016/j.solener.2026.114430": {
       "status": "verified",
@@ -57,7 +57,7 @@
       "citationPercentile": 0.0,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-16T12:05:36.265796"
+      "openAlexUpdatedDate": "2026-11-22T12:46:00.618207"
     },
     "10.1016/j.jpowsour.2025.239216": {
       "status": "verified",
@@ -70,7 +70,7 @@
       "citationPercentile": 0.96086636,
       "isTop1Percent": false,
       "isTop10Percent": true,
-      "openAlexUpdatedDate": "2026-11-16T12:05:36.265796"
+      "openAlexUpdatedDate": "2026-11-22T12:46:00.618207"
     },
     "10.1016/j.solmat.2025.114015": {
       "status": "verified",
@@ -83,7 +83,7 @@
       "citationPercentile": 0.87623581,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-16T12:05:36.265796"
+      "openAlexUpdatedDate": "2026-11-22T12:46:00.618207"
     },
     "10.1002/asia.70245": {
       "status": "verified",
@@ -109,7 +109,7 @@
       "citationPercentile": 0.78293393,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-16T12:05:36.265796"
+      "openAlexUpdatedDate": "2026-11-22T12:46:00.618207"
     },
     "10.1002/solr.202500538": {
       "status": "verified",
@@ -148,7 +148,7 @@
       "citationPercentile": 0.80467361,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-21T10:27:49.728292"
+      "openAlexUpdatedDate": "2026-11-22T12:46:00.618207"
     },
     "10.1016/j.mtchem.2024.102329": {
       "status": "verified",
@@ -161,7 +161,7 @@
       "citationPercentile": 0.71975571,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-16T12:05:36.265796"
+      "openAlexUpdatedDate": "2026-11-22T12:46:00.618207"
     },
     "10.1016/j.cej.2024.153974": {
       "status": "verified",
@@ -174,7 +174,7 @@
       "citationPercentile": 0.7906659,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-20T13:11:24.684918"
+      "openAlexUpdatedDate": "2026-11-22T12:46:00.618207"
     },
     "10.1016/j.jece.2023.111741": {
       "status": "verified",
@@ -187,7 +187,7 @@
       "citationPercentile": 0.3200302,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-21T10:27:49.728292"
+      "openAlexUpdatedDate": "2026-11-22T12:46:00.618207"
     },
     "10.1002/solr.202300988": {
       "status": "verified",
@@ -226,7 +226,7 @@
       "citationPercentile": 0.592331,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-16T12:05:36.265796"
+      "openAlexUpdatedDate": "2026-11-22T12:46:00.618207"
     },
     "10.1002/asia.202300681": {
       "status": "verified",
@@ -252,7 +252,7 @@
       "citationPercentile": 0.62602097,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-16T12:05:36.265796"
+      "openAlexUpdatedDate": "2026-11-22T12:46:00.618207"
     },
     "10.1002/adfm.202306367": {
       "status": "verified",
@@ -278,7 +278,7 @@
       "citationPercentile": 0.84775775,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-21T10:27:49.728292"
+      "openAlexUpdatedDate": "2026-11-22T12:46:00.618207"
     },
     "10.3390/nano12152651": {
       "status": "verified",
@@ -291,7 +291,7 @@
       "citationPercentile": 0.61580956,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-20T13:11:24.684918"
+      "openAlexUpdatedDate": "2026-11-22T12:46:00.618207"
     },
     "10.3390/polym14081580": {
       "status": "verified",
@@ -304,7 +304,7 @@
       "citationPercentile": 0.31549555,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-20T13:11:24.684918"
+      "openAlexUpdatedDate": "2026-11-22T12:46:00.618207"
     },
     "10.1016/j.cej.2021.131609": {
       "status": "verified",
@@ -317,7 +317,7 @@
       "citationPercentile": 0.929822,
       "isTop1Percent": false,
       "isTop10Percent": true,
-      "openAlexUpdatedDate": "2026-11-21T10:27:49.728292"
+      "openAlexUpdatedDate": "2026-11-22T12:46:00.618207"
     },
     "10.3390/polym13234246": {
       "status": "verified",
@@ -343,7 +343,7 @@
       "citationPercentile": 0.42099308,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-20T13:11:24.684918"
+      "openAlexUpdatedDate": "2026-11-22T12:46:00.618207"
     },
     "10.3390/nano11061607": {
       "status": "verified",
@@ -356,7 +356,7 @@
       "citationPercentile": 0.52843053,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-20T13:11:24.684918"
+      "openAlexUpdatedDate": "2026-11-22T12:46:00.618207"
     },
     "10.1016/j.jpowsour.2012.12.094": {
       "status": "verified",
@@ -408,7 +408,7 @@
       "citationPercentile": 0.89445658,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-21T10:27:49.728292"
+      "openAlexUpdatedDate": "2026-11-22T12:46:00.618207"
     },
     "10.1039/c0jm04099a": {
       "status": "verified",
@@ -434,7 +434,7 @@
       "citationPercentile": 0.8328264,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-20T13:11:24.684918"
+      "openAlexUpdatedDate": "2026-11-22T12:46:00.618207"
     },
     "10.1016/j.tsf.2009.11.058": {
       "status": "verified",
@@ -460,7 +460,7 @@
       "citationPercentile": 0.88258379,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-21T10:27:49.728292"
+      "openAlexUpdatedDate": "2026-11-22T12:46:00.618207"
     },
     "10.1039/b902595m": {
       "status": "verified",
@@ -468,12 +468,12 @@
       "title": "Efficient electron transport in tetrapod-like ZnO metal-free dye-sensitized solar cells",
       "openAlexId": "W2145010429",
       "url": "https://openalex.org/W2145010429",
-      "citationCount": 85,
+      "citationCount": 86,
       "fwci": 5.4357,
       "citationPercentile": 0.95838051,
       "isTop1Percent": false,
       "isTop10Percent": true,
-      "openAlexUpdatedDate": "2026-11-20T13:11:24.684918"
+      "openAlexUpdatedDate": "2026-11-22T12:46:00.618207"
     },
     "10.1021/jp805239k": {
       "status": "verified",
