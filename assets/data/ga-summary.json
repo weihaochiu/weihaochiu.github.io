@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-23T09:07:40Z",
+  "generatedAt": "2026-11-24T10:57:01Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 67,
-    "activeUsers": 55,
-    "sessions": 62,
-    "engagementRate": 0.2903225806451613
+    "pageViews": 70,
+    "activeUsers": 58,
+    "sessions": 65,
+    "engagementRate": 0.27692307692307694
   },
   "monthlyTrend": [
     {
@@ -34,22 +34,22 @@
     },
     {
       "month": "2026-11",
-      "pageViews": 52,
-      "activeUsers": 42
+      "pageViews": 56,
+      "activeUsers": 46
     }
   ],
   "topPages": [
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 35,
-      "activeUsers": 31
+      "pageViews": 37,
+      "activeUsers": 33
     },
     {
       "title": "About | Wei-Hao Chiu",
       "path": "/about.html",
-      "pageViews": 3,
-      "activeUsers": 3
+      "pageViews": 4,
+      "activeUsers": 4
     },
     {
       "title": "Congratulations to the SDSE 2026 Poster Award Team! | Wei-Hao Chiu",
@@ -68,12 +68,6 @@
       "path": "/research.html",
       "pageViews": 3,
       "activeUsers": 3
-    },
-    {
-      "title": "Congratulations on the Bronze Medal at the 2023 Taiwan Innotech Expo! | Wei-Hao Chiu",
-      "path": "/news/taiwan-innotech-2023-bronze-award.html",
-      "pageViews": 2,
-      "activeUsers": 2
     },
     {
       "title": "Coordination Dynamics of Green Solvents Tailor Solubility and Crystallization in Wide-Bandgap Perovskite Solar Cells | Wei-Hao Chiu",
@@ -106,6 +100,12 @@
       "activeUsers": 1
     },
     {
+      "title": "Congratulations on the Bronze Medal at the 2023 Taiwan Innotech Expo! | Wei-Hao Chiu",
+      "path": "/news/taiwan-innotech-2023-bronze-award.html",
+      "pageViews": 1,
+      "activeUsers": 1
+    },
+    {
       "title": "Congratulations to Prof. Kun-Mu Lee and Dr. Wei-Hao Chiu on the Chemical Engineering Masterpiece Award! | Wei-Hao Chiu",
       "path": "/news/twiche-2025-masterpiece-award.html",
       "pageViews": 1,
@@ -133,8 +133,8 @@
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 49,
-      "activeUsers": 45
+      "sessions": 52,
+      "activeUsers": 48
     },
     {
       "channel": "Organic Search",
@@ -156,8 +156,8 @@
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 49,
-      "activeUsers": 45
+      "sessions": 52,
+      "activeUsers": 48
     },
     {
       "source": "google",
@@ -203,17 +203,17 @@
     },
     {
       "country": "China",
-      "activeUsers": 10,
-      "pageViews": 11
+      "activeUsers": 9,
+      "pageViews": 10
+    },
+    {
+      "country": "India",
+      "activeUsers": 3,
+      "pageViews": 4
     },
     {
       "country": "Singapore",
       "activeUsers": 3,
-      "pageViews": 3
-    },
-    {
-      "country": "India",
-      "activeUsers": 2,
       "pageViews": 3
     },
     {
@@ -222,12 +222,27 @@
       "pageViews": 3
     },
     {
+      "country": "Türkiye",
+      "activeUsers": 2,
+      "pageViews": 2
+    },
+    {
       "country": "Australia",
       "activeUsers": 1,
       "pageViews": 1
     },
     {
       "country": "Bangladesh",
+      "activeUsers": 1,
+      "pageViews": 1
+    },
+    {
+      "country": "Brazil",
+      "activeUsers": 1,
+      "pageViews": 1
+    },
+    {
+      "country": "Canada",
       "activeUsers": 1,
       "pageViews": 1
     },
@@ -250,27 +265,12 @@
       "country": "Italy",
       "activeUsers": 1,
       "pageViews": 1
-    },
-    {
-      "country": "Mexico",
-      "activeUsers": 1,
-      "pageViews": 1
-    },
-    {
-      "country": "Romania",
-      "activeUsers": 1,
-      "pageViews": 1
-    },
-    {
-      "country": "Spain",
-      "activeUsers": 1,
-      "pageViews": 1
     }
   ],
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 53
+      "activeUsers": 56
     },
     {
       "device": "mobile",
