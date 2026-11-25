@@ -5,7 +5,7 @@
   "publicationCount": 42,
   "verifiedCount": 40,
   "notFoundCount": 2,
-  "lastSuccessfulUpdate": "2026-11-24T12:34:43Z",
+  "lastSuccessfulUpdate": "2026-11-25T11:23:47Z",
   "records": {
     "10.1016/j.cej.2026.183177": {
       "status": "verified",
@@ -18,7 +18,7 @@
       "citationPercentile": 0.0,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-22T12:46:00.618207"
+      "openAlexUpdatedDate": "2026-11-24T14:10:38.155754"
     },
     "10.1016/j.cej.2026.177494": {
       "status": "verified",
@@ -83,7 +83,7 @@
       "citationPercentile": 0.87623581,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-22T12:46:00.618207"
+      "openAlexUpdatedDate": "2026-11-24T14:10:38.155754"
     },
     "10.1002/asia.70245": {
       "status": "verified",
@@ -343,7 +343,7 @@
       "citationPercentile": 0.42099308,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-22T12:46:00.618207"
+      "openAlexUpdatedDate": "2026-11-24T14:10:38.155754"
     },
     "10.3390/nano11061607": {
       "status": "verified",
@@ -365,11 +365,11 @@
       "openAlexId": "W2149766360",
       "url": "https://openalex.org/W2149766360",
       "citationCount": 15,
-      "fwci": 1.1393,
-      "citationPercentile": 0.75512164,
+      "fwci": 1.1013,
+      "citationPercentile": 0.74715055,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-07T11:25:07.637180"
+      "openAlexUpdatedDate": "2026-11-24T14:10:38.155754"
     },
     "10.1016/j.jpowsour.2012.05.079": {
       "status": "verified",
@@ -390,12 +390,12 @@
       "title": "Improvement on the long-term stability of flexible plastic dye-sensitized solar cells",
       "openAlexId": "W1970095316",
       "url": "https://openalex.org/W1970095316",
-      "citationCount": 41,
-      "fwci": 1.7547,
-      "citationPercentile": 0.83346747,
+      "citationCount": 42,
+      "fwci": 1.8726,
+      "citationPercentile": 0.84315959,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-21T10:27:49.728292"
+      "openAlexUpdatedDate": "2026-11-24T14:10:38.155754"
     },
     "10.1016/j.jpowsour.2010.12.063": {
       "status": "verified",
@@ -403,12 +403,12 @@
       "title": "High efficiency flexible dye-sensitized solar cells by multiple electrophoretic depositions",
       "openAlexId": "W2053567920",
       "url": "https://openalex.org/W2053567920",
-      "citationCount": 78,
+      "citationCount": 79,
       "fwci": 2.6893,
       "citationPercentile": 0.89017804,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-22T12:46:00.618207"
+      "openAlexUpdatedDate": "2026-11-24T14:10:38.155754"
     },
     "10.1039/c0jm04099a": {
       "status": "verified",
@@ -421,7 +421,7 @@
       "citationPercentile": 0.93382639,
       "isTop1Percent": false,
       "isTop10Percent": true,
-      "openAlexUpdatedDate": "2026-11-21T10:27:49.728292"
+      "openAlexUpdatedDate": "2026-11-24T14:10:38.155754"
     },
     "10.1016/j.electacta.2010.07.061": {
       "status": "verified",
@@ -442,12 +442,12 @@
       "title": "Effects of mesoscopic poly(3,4-ethylenedioxythiophene) films as counter electrodes for dye-sensitized solar cells",
       "openAlexId": "W2055510369",
       "url": "https://openalex.org/W2055510369",
-      "citationCount": 96,
-      "fwci": 3.3874,
-      "citationPercentile": 0.91966602,
+      "citationCount": 97,
+      "fwci": 3.5135,
+      "citationPercentile": 0.92343234,
       "isTop1Percent": false,
       "isTop10Percent": true,
-      "openAlexUpdatedDate": "2026-11-20T13:11:24.684918"
+      "openAlexUpdatedDate": "2026-11-24T14:10:38.155754"
     },
     "10.1016/j.solmat.2009.07.017": {
       "status": "verified",
@@ -460,7 +460,7 @@
       "citationPercentile": 0.87589037,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-22T12:46:00.618207"
+      "openAlexUpdatedDate": "2026-11-24T14:10:38.155754"
     },
     "10.1039/b902595m": {
       "status": "verified",
@@ -468,12 +468,12 @@
       "title": "Efficient electron transport in tetrapod-like ZnO metal-free dye-sensitized solar cells",
       "openAlexId": "W2145010429",
       "url": "https://openalex.org/W2145010429",
-      "citationCount": 86,
-      "fwci": 5.1547,
-      "citationPercentile": 0.95613001,
+      "citationCount": 88,
+      "fwci": 5.4167,
+      "citationPercentile": 0.95898161,
       "isTop1Percent": false,
       "isTop10Percent": true,
-      "openAlexUpdatedDate": "2026-11-22T12:46:00.618207"
+      "openAlexUpdatedDate": "2026-11-24T14:10:38.155754"
     },
     "10.1021/jp805239k": {
       "status": "verified",
@@ -486,7 +486,7 @@
       "citationPercentile": 0.9888359,
       "isTop1Percent": false,
       "isTop10Percent": true,
-      "openAlexUpdatedDate": "2026-11-23T12:01:36.302904"
+      "openAlexUpdatedDate": "2026-11-24T14:10:38.155754"
     },
     "10.1016/j.optcom.2004.10.003": {
       "status": "verified",
