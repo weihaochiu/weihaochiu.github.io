@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-24T10:57:01Z",
+  "generatedAt": "2026-11-25T09:52:32Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 70,
-    "activeUsers": 58,
-    "sessions": 65,
-    "engagementRate": 0.27692307692307694
+    "pageViews": 77,
+    "activeUsers": 64,
+    "sessions": 71,
+    "engagementRate": 0.2535211267605634
   },
   "monthlyTrend": [
     {
@@ -34,20 +34,32 @@
     },
     {
       "month": "2026-11",
-      "pageViews": 56,
-      "activeUsers": 46
+      "pageViews": 69,
+      "activeUsers": 58
     }
   ],
   "topPages": [
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 37,
-      "activeUsers": 33
+      "pageViews": 38,
+      "activeUsers": 34
     },
     {
       "title": "About | Wei-Hao Chiu",
       "path": "/about.html",
+      "pageViews": 4,
+      "activeUsers": 4
+    },
+    {
+      "title": "Publications | Wei-Hao Chiu",
+      "path": "/publications.html",
+      "pageViews": 4,
+      "activeUsers": 4
+    },
+    {
+      "title": "Research | Wei-Hao Chiu",
+      "path": "/research.html",
       "pageViews": 4,
       "activeUsers": 4
     },
@@ -58,16 +70,16 @@
       "activeUsers": 3
     },
     {
-      "title": "Publications | Wei-Hao Chiu",
-      "path": "/publications.html",
+      "title": "Patents | Wei-Hao Chiu",
+      "path": "/patents.html",
       "pageViews": 3,
       "activeUsers": 3
     },
     {
-      "title": "Research | Wei-Hao Chiu",
-      "path": "/research.html",
-      "pageViews": 3,
-      "activeUsers": 3
+      "title": "Congratulations on the Bronze Medal at the 2023 Taiwan Innotech Expo! | Wei-Hao Chiu",
+      "path": "/news/taiwan-innotech-2023-bronze-award.html",
+      "pageViews": 2,
+      "activeUsers": 2
     },
     {
       "title": "Coordination Dynamics of Green Solvents Tailor Solubility and Crystallization in Wide-Bandgap Perovskite Solar Cells | Wei-Hao Chiu",
@@ -88,20 +100,20 @@
       "activeUsers": 1
     },
     {
-      "title": "Patents | Wei-Hao Chiu",
-      "path": "/patents.html",
+      "title": "Performance and Stability of PVDF-HFP-Modified Perovskite Solar Cells under Space-Relevant Coupled Vacuum, Illumination, and Thermal Stress | Wei-Hao Chiu",
+      "path": "/publications/wcpec-9-2026-pvdf-hfp-space-reliability.html",
+      "pageViews": 2,
+      "activeUsers": 1
+    },
+    {
+      "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
+      "path": "/index.html",
       "pageViews": 2,
       "activeUsers": 2
     },
     {
       "title": "2T Perovskite Tandem Solar Cells in Space: Failure Mechanisms and Design Strategies | Wei-Hao Chiu",
       "path": "/publications/10-1016-j-mtener-2026-102359.html",
-      "pageViews": 1,
-      "activeUsers": 1
-    },
-    {
-      "title": "Congratulations on the Bronze Medal at the 2023 Taiwan Innotech Expo! | Wei-Hao Chiu",
-      "path": "/news/taiwan-innotech-2023-bronze-award.html",
       "pageViews": 1,
       "activeUsers": 1
     },
@@ -116,30 +128,18 @@
       "path": "/publications/agem-2025-pvdf-hfp-space.html",
       "pageViews": 1,
       "activeUsers": 1
-    },
-    {
-      "title": "Exploring the efficiency enhancement of perovskite solar cells by chemical bath depositing SnO2 on mesoporous TiO2 electrode | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-mtchem-2024-102329.html",
-      "pageViews": 1,
-      "activeUsers": 1
-    },
-    {
-      "title": "Facile synthesis of spiro-core-based hole-transporting material for high-performance and stable perovskite solar cells | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-cej-2022-139926.html",
-      "pageViews": 1,
-      "activeUsers": 1
     }
   ],
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 52,
-      "activeUsers": 48
+      "sessions": 59,
+      "activeUsers": 55
     },
     {
       "channel": "Organic Search",
-      "sessions": 10,
-      "activeUsers": 7
+      "sessions": 9,
+      "activeUsers": 6
     },
     {
       "channel": "AI Assistant",
@@ -156,14 +156,14 @@
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 52,
-      "activeUsers": 48
+      "sessions": 59,
+      "activeUsers": 55
     },
     {
       "source": "google",
       "medium": "organic",
-      "sessions": 7,
-      "activeUsers": 4
+      "sessions": 6,
+      "activeUsers": 3
     },
     {
       "source": "bing",
@@ -198,18 +198,28 @@
     },
     {
       "country": "Taiwan",
-      "activeUsers": 12,
-      "pageViews": 20
+      "activeUsers": 11,
+      "pageViews": 19
     },
     {
       "country": "China",
-      "activeUsers": 9,
-      "pageViews": 10
+      "activeUsers": 8,
+      "pageViews": 9
     },
     {
       "country": "India",
+      "activeUsers": 5,
+      "pageViews": 6
+    },
+    {
+      "country": "Japan",
       "activeUsers": 3,
-      "pageViews": 4
+      "pageViews": 5
+    },
+    {
+      "country": "Mexico",
+      "activeUsers": 3,
+      "pageViews": 3
     },
     {
       "country": "Singapore",
@@ -217,9 +227,9 @@
       "pageViews": 3
     },
     {
-      "country": "Japan",
+      "country": "Brazil",
       "activeUsers": 2,
-      "pageViews": 3
+      "pageViews": 2
     },
     {
       "country": "Türkiye",
@@ -233,11 +243,6 @@
     },
     {
       "country": "Bangladesh",
-      "activeUsers": 1,
-      "pageViews": 1
-    },
-    {
-      "country": "Brazil",
       "activeUsers": 1,
       "pageViews": 1
     },
@@ -260,17 +265,12 @@
       "country": "Israel",
       "activeUsers": 1,
       "pageViews": 1
-    },
-    {
-      "country": "Italy",
-      "activeUsers": 1,
-      "pageViews": 1
     }
   ],
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 56
+      "activeUsers": 62
     },
     {
       "device": "mobile",
@@ -281,10 +281,6 @@
     {
       "eventName": "doi_click",
       "eventCount": 5
-    },
-    {
-      "eventName": "openalex_click",
-      "eventCount": 1
     },
     {
       "eventName": "orcid_click",
