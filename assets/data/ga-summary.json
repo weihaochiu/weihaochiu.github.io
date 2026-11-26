@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-25T09:52:32Z",
+  "generatedAt": "2026-11-26T09:32:20Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 77,
-    "activeUsers": 64,
-    "sessions": 71,
-    "engagementRate": 0.2535211267605634
+    "pageViews": 83,
+    "activeUsers": 68,
+    "sessions": 74,
+    "engagementRate": 0.25675675675675674
   },
   "monthlyTrend": [
     {
@@ -34,22 +34,22 @@
     },
     {
       "month": "2026-11",
-      "pageViews": 69,
-      "activeUsers": 58
+      "pageViews": 76,
+      "activeUsers": 63
     }
   ],
   "topPages": [
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 38,
-      "activeUsers": 34
+      "pageViews": 44,
+      "activeUsers": 39
     },
     {
       "title": "About | Wei-Hao Chiu",
       "path": "/about.html",
-      "pageViews": 4,
-      "activeUsers": 4
+      "pageViews": 5,
+      "activeUsers": 5
     },
     {
       "title": "Publications | Wei-Hao Chiu",
@@ -112,12 +112,6 @@
       "activeUsers": 2
     },
     {
-      "title": "2T Perovskite Tandem Solar Cells in Space: Failure Mechanisms and Design Strategies | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-mtener-2026-102359.html",
-      "pageViews": 1,
-      "activeUsers": 1
-    },
-    {
       "title": "Congratulations to Prof. Kun-Mu Lee and Dr. Wei-Hao Chiu on the Chemical Engineering Masterpiece Award! | Wei-Hao Chiu",
       "path": "/news/twiche-2025-masterpiece-award.html",
       "pageViews": 1,
@@ -128,17 +122,23 @@
       "path": "/publications/agem-2025-pvdf-hfp-space.html",
       "pageViews": 1,
       "activeUsers": 1
+    },
+    {
+      "title": "Exploring the efficiency enhancement of perovskite solar cells by chemical bath depositing SnO2 on mesoporous TiO2 electrode | Wei-Hao Chiu",
+      "path": "/publications/10-1016-j-mtchem-2024-102329.html",
+      "pageViews": 1,
+      "activeUsers": 1
     }
   ],
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 59,
-      "activeUsers": 55
+      "sessions": 63,
+      "activeUsers": 59
     },
     {
       "channel": "Organic Search",
-      "sessions": 9,
+      "sessions": 8,
       "activeUsers": 6
     },
     {
@@ -156,13 +156,13 @@
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 59,
-      "activeUsers": 55
+      "sessions": 63,
+      "activeUsers": 59
     },
     {
       "source": "google",
       "medium": "organic",
-      "sessions": 6,
+      "sessions": 5,
       "activeUsers": 3
     },
     {
@@ -193,13 +193,13 @@
   "topCountries": [
     {
       "country": "United States",
-      "activeUsers": 15,
-      "pageViews": 16
+      "activeUsers": 16,
+      "pageViews": 17
     },
     {
       "country": "Taiwan",
-      "activeUsers": 11,
-      "pageViews": 19
+      "activeUsers": 12,
+      "pageViews": 22
     },
     {
       "country": "China",
@@ -208,8 +208,8 @@
     },
     {
       "country": "India",
-      "activeUsers": 5,
-      "pageViews": 6
+      "activeUsers": 6,
+      "pageViews": 7
     },
     {
       "country": "Japan",
@@ -228,6 +228,11 @@
     },
     {
       "country": "Brazil",
+      "activeUsers": 2,
+      "pageViews": 2
+    },
+    {
+      "country": "Thailand",
       "activeUsers": 2,
       "pageViews": 2
     },
@@ -260,17 +265,12 @@
       "country": "Germany",
       "activeUsers": 1,
       "pageViews": 0
-    },
-    {
-      "country": "Israel",
-      "activeUsers": 1,
-      "pageViews": 1
     }
   ],
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 62
+      "activeUsers": 66
     },
     {
       "device": "mobile",
