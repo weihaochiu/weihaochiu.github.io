@@ -5,7 +5,7 @@
   "publicationCount": 42,
   "verifiedCount": 40,
   "notFoundCount": 2,
-  "lastSuccessfulUpdate": "2026-11-25T11:23:47Z",
+  "lastSuccessfulUpdate": "2026-11-26T10:59:03Z",
   "records": {
     "10.1016/j.cej.2026.183177": {
       "status": "verified",
@@ -44,7 +44,7 @@
       "citationPercentile": 0.0,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-22T12:46:00.618207"
+      "openAlexUpdatedDate": "2026-11-25T09:40:18.809321"
     },
     "10.1016/j.solener.2026.114430": {
       "status": "verified",
@@ -83,7 +83,7 @@
       "citationPercentile": 0.87623581,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-24T14:10:38.155754"
+      "openAlexUpdatedDate": "2026-11-25T09:40:18.809321"
     },
     "10.1002/asia.70245": {
       "status": "verified",
@@ -96,7 +96,7 @@
       "citationPercentile": 0.0,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-10-30T12:39:25.321706"
+      "openAlexUpdatedDate": "2026-11-25T09:40:18.809321"
     },
     "10.1016/j.seppur.2025.134157": {
       "status": "verified",
@@ -109,7 +109,7 @@
       "citationPercentile": 0.78293393,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-22T12:46:00.618207"
+      "openAlexUpdatedDate": "2026-11-25T09:40:18.809321"
     },
     "10.1002/solr.202500538": {
       "status": "verified",
@@ -122,7 +122,7 @@
       "citationPercentile": 0.42828053,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-20T13:11:24.684918"
+      "openAlexUpdatedDate": "2026-11-25T09:40:18.809321"
     },
     "10.1002/asia.202500719": {
       "status": "verified",
@@ -148,7 +148,7 @@
       "citationPercentile": 0.80467361,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-22T12:46:00.618207"
+      "openAlexUpdatedDate": "2026-11-25T09:40:18.809321"
     },
     "10.1016/j.mtchem.2024.102329": {
       "status": "verified",
@@ -213,7 +213,7 @@
       "citationPercentile": 0.62602097,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-20T13:11:24.684918"
+      "openAlexUpdatedDate": "2026-11-25T09:40:18.809321"
     },
     "10.1016/j.jpowsour.2023.233496": {
       "status": "verified",
@@ -226,7 +226,7 @@
       "citationPercentile": 0.592331,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-22T12:46:00.618207"
+      "openAlexUpdatedDate": "2026-11-25T09:40:18.809321"
     },
     "10.1002/asia.202300681": {
       "status": "verified",
@@ -273,12 +273,12 @@
       "title": "Facile Synthesis of Spiro-Core-Based Hole-Transporting Material for High-Performance and Stable Perovskite Solar Cells",
       "openAlexId": "W4308038509",
       "url": "https://openalex.org/W4308038509",
-      "citationCount": 35,
+      "citationCount": 36,
       "fwci": 1.8031,
       "citationPercentile": 0.84775775,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-23T12:01:36.302904"
+      "openAlexUpdatedDate": "2026-11-25T09:40:18.809321"
     },
     "10.3390/nano12152651": {
       "status": "verified",
@@ -304,7 +304,7 @@
       "citationPercentile": 0.31549555,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-22T12:46:00.618207"
+      "openAlexUpdatedDate": "2026-11-25T09:40:18.809321"
     },
     "10.1016/j.cej.2021.131609": {
       "status": "verified",
@@ -317,7 +317,7 @@
       "citationPercentile": 0.929822,
       "isTop1Percent": false,
       "isTop10Percent": true,
-      "openAlexUpdatedDate": "2026-11-22T12:46:00.618207"
+      "openAlexUpdatedDate": "2026-11-25T09:40:18.809321"
     },
     "10.3390/polym13234246": {
       "status": "verified",
@@ -382,7 +382,7 @@
       "citationPercentile": 0.66698179,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-21T10:27:49.728292"
+      "openAlexUpdatedDate": "2026-11-25T09:40:18.809321"
     },
     "10.1016/j.jpowsour.2011.06.049": {
       "status": "verified",
@@ -429,12 +429,12 @@
       "title": "The influence of tetrapod-like ZnO morphology and electrolytes on energy conversion efficiency of dye-sensitized solar cells",
       "openAlexId": "W2088552273",
       "url": "https://openalex.org/W2088552273",
-      "citationCount": 41,
+      "citationCount": 40,
       "fwci": 1.6985,
       "citationPercentile": 0.82732547,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-22T12:46:00.618207"
+      "openAlexUpdatedDate": "2026-11-25T09:40:18.809321"
     },
     "10.1016/j.tsf.2009.11.058": {
       "status": "verified",
@@ -468,12 +468,12 @@
       "title": "Efficient electron transport in tetrapod-like ZnO metal-free dye-sensitized solar cells",
       "openAlexId": "W2145010429",
       "url": "https://openalex.org/W2145010429",
-      "citationCount": 88,
+      "citationCount": 86,
       "fwci": 5.4167,
       "citationPercentile": 0.95898161,
       "isTop1Percent": false,
       "isTop10Percent": true,
-      "openAlexUpdatedDate": "2026-11-24T14:10:38.155754"
+      "openAlexUpdatedDate": "2026-11-25T09:40:18.809321"
     },
     "10.1021/jp805239k": {
       "status": "verified",
@@ -481,12 +481,12 @@
       "title": "Formation of Branched ZnO Nanowires from Solvothermal Method and Dye-Sensitized Solar Cells Applications",
       "openAlexId": "W2055166593",
       "url": "https://openalex.org/W2055166593",
-      "citationCount": 294,
+      "citationCount": 292,
       "fwci": 10.9374,
       "citationPercentile": 0.9888359,
       "isTop1Percent": false,
       "isTop10Percent": true,
-      "openAlexUpdatedDate": "2026-11-24T14:10:38.155754"
+      "openAlexUpdatedDate": "2026-11-25T09:40:18.809321"
     },
     "10.1016/j.optcom.2004.10.003": {
       "status": "verified",
@@ -533,7 +533,7 @@
       "citationPercentile": 0.0,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-21T10:27:49.728292"
+      "openAlexUpdatedDate": "2026-11-25T09:40:18.809321"
     }
   }
 }
