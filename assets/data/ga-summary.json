@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-27T09:41:43Z",
+  "generatedAt": "2026-11-28T08:55:38Z",
   "period": {
     "overview": "28daysAgo to yesterday",
     "trend": "365daysAgo to yesterday"
   },
   "overview": {
-    "pageViews": 80,
-    "activeUsers": 67,
-    "sessions": 72,
-    "engagementRate": 0.2222222222222222
+    "pageViews": 88,
+    "activeUsers": 74,
+    "sessions": 79,
+    "engagementRate": 0.21518987341772153
   },
   "monthlyTrend": [
     {
@@ -34,22 +34,22 @@
     },
     {
       "month": "2026-11",
-      "pageViews": 79,
-      "activeUsers": 66
+      "pageViews": 87,
+      "activeUsers": 73
     }
   ],
   "topPages": [
     {
       "title": "Wei-Hao Chiu, Ph.D. | Academic Profile",
       "path": "/",
-      "pageViews": 44,
-      "activeUsers": 40
+      "pageViews": 50,
+      "activeUsers": 46
     },
     {
       "title": "About | Wei-Hao Chiu",
       "path": "/about.html",
-      "pageViews": 5,
-      "activeUsers": 5
+      "pageViews": 6,
+      "activeUsers": 6
     },
     {
       "title": "Publications | Wei-Hao Chiu",
@@ -112,6 +112,12 @@
       "activeUsers": 1
     },
     {
+      "title": "Efficient electron transport in tetrapod-like ZnO metal-free dye-sensitized solar cells | Wei-Hao Chiu",
+      "path": "/publications/10-1039-b902595m.html",
+      "pageViews": 1,
+      "activeUsers": 1
+    },
+    {
       "title": "Exploring PVDF -HFP Additives in Perovskite Solar Cells: Advancements for Enhanced Space Mission Durability | Wei-Hao Chiu",
       "path": "/publications/agem-2025-pvdf-hfp-space.html",
       "pageViews": 1,
@@ -122,19 +128,13 @@
       "path": "/publications/10-1016-j-mtchem-2024-102329.html",
       "pageViews": 1,
       "activeUsers": 1
-    },
-    {
-      "title": "MOF-& COF-integrated composite separators/membranes: innovations for sustainable and high-performance redox flow batteries | Wei-Hao Chiu",
-      "path": "/publications/10-1016-j-seppur-2025-134157.html",
-      "pageViews": 1,
-      "activeUsers": 1
     }
   ],
   "trafficChannels": [
     {
       "channel": "Direct",
-      "sessions": 64,
-      "activeUsers": 61
+      "sessions": 71,
+      "activeUsers": 68
     },
     {
       "channel": "Organic Search",
@@ -156,8 +156,8 @@
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 64,
-      "activeUsers": 61
+      "sessions": 71,
+      "activeUsers": 68
     },
     {
       "source": "google",
@@ -187,13 +187,13 @@
   "topCountries": [
     {
       "country": "United States",
-      "activeUsers": 17,
-      "pageViews": 18
+      "activeUsers": 19,
+      "pageViews": 20
     },
     {
       "country": "Taiwan",
-      "activeUsers": 10,
-      "pageViews": 19
+      "activeUsers": 11,
+      "pageViews": 21
     },
     {
       "country": "China",
@@ -206,14 +206,19 @@
       "pageViews": 6
     },
     {
+      "country": "Japan",
+      "activeUsers": 4,
+      "pageViews": 6
+    },
+    {
       "country": "Singapore",
       "activeUsers": 4,
       "pageViews": 4
     },
     {
-      "country": "Japan",
+      "country": "Brazil",
       "activeUsers": 3,
-      "pageViews": 5
+      "pageViews": 3
     },
     {
       "country": "Mexico",
@@ -226,7 +231,12 @@
       "pageViews": 2
     },
     {
-      "country": "Brazil",
+      "country": "Peru",
+      "activeUsers": 2,
+      "pageViews": 2
+    },
+    {
+      "country": "Romania",
       "activeUsers": 2,
       "pageViews": 2
     },
@@ -249,26 +259,16 @@
       "country": "Canada",
       "activeUsers": 1,
       "pageViews": 1
-    },
-    {
-      "country": "Colombia",
-      "activeUsers": 1,
-      "pageViews": 1
-    },
-    {
-      "country": "Germany",
-      "activeUsers": 1,
-      "pageViews": 0
     }
   ],
   "devices": [
     {
       "device": "desktop",
-      "activeUsers": 65
+      "activeUsers": 71
     },
     {
       "device": "mobile",
-      "activeUsers": 2
+      "activeUsers": 3
     }
   ],
   "academicEvents": [
