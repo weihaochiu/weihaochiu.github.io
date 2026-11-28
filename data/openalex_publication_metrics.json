@@ -5,7 +5,7 @@
   "publicationCount": 42,
   "verifiedCount": 40,
   "notFoundCount": 2,
-  "lastSuccessfulUpdate": "2026-11-27T10:57:17Z",
+  "lastSuccessfulUpdate": "2026-11-28T10:32:45Z",
   "records": {
     "10.1016/j.cej.2026.183177": {
       "status": "verified",
@@ -79,8 +79,8 @@
       "openAlexId": "W4415443362",
       "url": "https://openalex.org/W4415443362",
       "citationCount": 13,
-      "fwci": 2.1535,
-      "citationPercentile": 0.87388939,
+      "fwci": 2.136,
+      "citationPercentile": 0.87257861,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-11-25T09:40:18.809321"
@@ -105,8 +105,8 @@
       "openAlexId": "W4411847970",
       "url": "https://openalex.org/W4411847970",
       "citationCount": 8,
-      "fwci": 1.3252,
-      "citationPercentile": 0.77797644,
+      "fwci": 1.3144,
+      "citationPercentile": 0.77609065,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-11-25T09:40:18.809321"
@@ -118,8 +118,8 @@
       "openAlexId": "W4415028078",
       "url": "https://openalex.org/W4415028078",
       "citationCount": 2,
-      "fwci": 0.3313,
-      "citationPercentile": 0.42281114,
+      "fwci": 0.3286,
+      "citationPercentile": 0.42067168,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-11-25T09:40:18.809321"
@@ -183,8 +183,8 @@
       "openAlexId": "W4389856655",
       "url": "https://openalex.org/W4389856655",
       "citationCount": 3,
-      "fwci": 0.2299,
-      "citationPercentile": 0.31698113,
+      "fwci": 0.2282,
+      "citationPercentile": 0.31339894,
       "isTop1Percent": false,
       "isTop10Percent": false,
       "openAlexUpdatedDate": "2026-11-22T12:46:00.618207"
@@ -533,7 +533,7 @@
       "citationPercentile": 0.0,
       "isTop1Percent": false,
       "isTop10Percent": false,
-      "openAlexUpdatedDate": "2026-11-26T09:34:50.682384"
+      "openAlexUpdatedDate": "2026-11-27T09:11:17.138145"
     }
   }
 }
